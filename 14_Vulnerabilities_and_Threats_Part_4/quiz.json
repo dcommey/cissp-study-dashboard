@@ -2,7 +2,7 @@
   {
     "question": "A logistics company implements a Bring Your Own Device (BYOD) acceptable-use policy, prompting employees to enroll their personal smartphones. The security team wants to ensure that corporate emails and documents cannot be copied or shared to personal applications (like social media) while also protecting employee privacy by ensuring personal photos and messages are not visible to corporate IT. Which deployment design is most appropriate?",
     "options": [
-      "Implement full-disk encryption (FTE) and block all third-party app stores using a UEM platform.",
+      "Implement full-disk encryption (FDE) and block all third-party app stores using a UEM platform.",
       "Enforce storage segmentation through MDM/MAM containerization, isolating work applications from personal space and restricting clipboard functions between them.",
       "Enforce COPE (Corporate-Owned, Personally Enabled) policies and disable GPS location tracking.",
       "Install a hardware security module (HSM) micro-SD card in every user's device and disable NFC."

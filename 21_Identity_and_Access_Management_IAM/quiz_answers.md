@@ -4,7 +4,7 @@
 **Correct Answer: A**
 
 ### Explanation:
-*   **[A] is correct.** The Crossover Error Rate (CER) — also known as the Equal Error Rate (ERR) — is the point where the False Acceptance Rate (FAR) and the False Rejection Rate (FRR) intersect. It is the primary metric used to compare biometric device accuracy. A lower CER/ERR indicates a more accurate system that minimizes both false rejections and false acceptances, balancing security and convenience.
+*   **[A] is correct.** The Crossover Error Rate (CER) — also known as the Equal Error Rate (EER) — is the point where the False Acceptance Rate (FAR) and the False Rejection Rate (FRR) intersect. It is the primary metric used to compare biometric device accuracy. A lower CER/EER indicates a more accurate system that minimizes both false rejections and false acceptances, balancing security and convenience.
 *   **[B] is incorrect.** False Acceptance Rate (FAR) represents the rate of false acceptance, where unauthorized users are mistakenly granted access. A lower (not higher) FAR is desired to maintain security.
 *   **[C] is incorrect.** False Rejection Rate (FRR) represents the rate of false rejection, where legitimate users are blocked. A lower (not higher) FRR is desired for convenience.
 *   **[D] is incorrect.** Standard deviation is a statistical concept representing variation, but it is not the standard metric for comparing biometric device accuracy.

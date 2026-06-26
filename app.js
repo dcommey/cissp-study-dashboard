@@ -51,13 +51,14 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
-// Render markdown to sanitized HTML (falls back gracefully if libs missing)
+// Render markdown to sanitized HTML. If the sanitizer is unavailable, render
+// escaped plain text instead of failing open with raw HTML.
 function renderMarkdown(md) {
-  const rawHtml = (typeof marked !== "undefined") ? marked.parse(md) : escapeHtml(md);
-  if (typeof DOMPurify !== "undefined") {
-    return DOMPurify.sanitize(rawHtml);
+  const source = String(md == null ? "" : md);
+  if (typeof marked === "undefined" || typeof DOMPurify === "undefined") {
+    return escapeHtml(source).replace(/\n/g, "<br>");
   }
-  return rawHtml;
+  return DOMPurify.sanitize(marked.parse(source));
 }
 
 // Typeset LaTeX math inside an element using KaTeX auto-render.

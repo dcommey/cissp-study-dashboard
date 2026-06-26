@@ -3,7 +3,7 @@
 ## Question 1
 A logistics company implements a Bring Your Own Device (BYOD) acceptable-use policy, prompting employees to enroll their personal smartphones. The security team wants to ensure that corporate emails and documents cannot be copied or shared to personal applications (like social media) while also protecting employee privacy by ensuring personal photos and messages are not visible to corporate IT. Which deployment design is most appropriate?
 
-- A. Implement full-disk encryption (FTE) and block all third-party app stores using a UEM platform.
+- A. Implement full-disk encryption (FDE) and block all third-party app stores using a UEM platform.
 - B. Enforce storage segmentation through MDM/MAM containerization, isolating work applications from personal space and restricting clipboard functions between them.
 - C. Enforce COPE (Corporate-Owned, Personally Enabled) policies and disable GPS location tracking.
 - D. Install a hardware security module (HSM) micro-SD card in every user's device and disable NFC.
@@ -16,7 +16,7 @@ During a routine audit, a security analyst notices corporate laptops connecting 
 - A. The threat of configuration drift in the laptop's BIOS; enforce Measured Boot via the TPM.
 - B. Network traffic bypasses corporate perimeter defenses (IDS/IPS, firewall, DLP, and URL filtering); use MDM policies to disable Wi-Fi/cellular tethering capabilities on corporate-owned devices.
 - C. Interception of GPS geotagging coordinates over Bluetooth; restrict all devices to COBO deployment.
-- D. Exposure of local DLLs (DLS) to rootkit injections; implement File Integrity Monitoring (FIM).
+- D. Exposure of local DLLs to rootkit injections; implement File Integrity Monitoring (FIM).
 
 ---
 
@@ -24,7 +24,7 @@ During a routine audit, a security analyst notices corporate laptops connecting 
 A critical database server is suspected of being compromised by a kernel-level rootkit. Standard security tools and commands show no signs of infection. As the CISSP, which method is most effective for detecting this type of deep OS compromise, and what is the necessary recovery action?
 
 - A. Execute an application block-list check; recover by rolling back the database schema via IaC templates.
-- B. Perform File Integrity Monitoring (FIM) to detect changes in system driver and DLL (DLS) hashes, and perform a complete system wipe and rebuild from known-clean media.
+- B. Perform File Integrity Monitoring (FIM) to detect changes in system driver and DLL hashes, and perform a complete system wipe and rebuild from known-clean media.
 - C. Implement a Wireless Positioning System (WIPS) to trace cell tower signals, and degauss the storage drives.
 - D. Deploy a declarative ARM template to force the operating system into Ring 3 problem state.
 

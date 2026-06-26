@@ -4,7 +4,7 @@
 **Correct Answer: B**
 
 **Explanation:**
-*   **A is incorrect.** Full-disk encryption (FTE/FDE) protects data at rest in case of physical theft but does not isolate apps or manage copy/paste clipboard operations at runtime.
+*   **A is incorrect.** Full-disk encryption (FDE) protects data at rest in case of physical theft but does not isolate apps or manage copy/paste clipboard operations at runtime.
 *   **B is correct.** Storage segmentation (enforced via MAM/MDM solutions) creates secure containers on the device. IT admins can apply strict security policies within the work container—such as disabling copy/paste to personal apps and enforcing selective corporate wipes—without visibility or access to the employee's personal container, maintaining user privacy.
 *   **C is incorrect.** COPE means the company owns the device; this does not address storage isolation on employee-owned (BYOD) phones.
 *   **D is incorrect.** An HSM micro-SD card acts as a secure keystore for authentication but does not prevent copy/paste operations between applications or enforce storage containers.
@@ -27,7 +27,7 @@
 
 **Explanation:**
 *   **A is incorrect.** Application block-lists do not detect kernel-level rootkits. Databases are application-level data and are not where rootkits hide.
-*   **B is correct.** Rootkits modify the OS kernel or device drivers to control execution, and they intercept API calls to hide their processes and files from standard commands (like `ls` or file managers). File Integrity Monitoring (FIM) detects modifications by comparing file sizes and cryptographic hashes of DLLs (DLS) and drivers against a baseline. If infected, the only secure recovery is wiping the storage and reinstalling from trusted sources.
+*   **B is correct.** Rootkits modify the OS kernel or device drivers to control execution, and they intercept API calls to hide their processes and files from standard commands (like `ls` or file managers). File Integrity Monitoring (FIM) detects modifications by comparing file sizes and cryptographic hashes of DLLs and drivers against a baseline. If infected, the only secure recovery is wiping the storage and reinstalling from trusted sources.
 *   **C is incorrect.** WIPS locates wireless devices; it cannot detect a rootkit in a server's OS. Degaussing destroys magnetic drives physically, which is not required unless decommissioning.
 *   **D is incorrect.** ARM templates deploy resources; they cannot force a running OS into a hardware protection ring state like Ring 3.
 

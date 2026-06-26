@@ -47,7 +47,7 @@ Authentication systems utilize Multi-Factor Authentication (**MFA**) by combinin
     *   *Biometric Error Metrics*:
         *   **FRR**: False Rejection Rate (**FRR**) is the rate of false **rejection**, where authorized users are denied access.
         *   **FAR**: False Acceptance Rate (**FAR**) is the rate of false **acceptance**, where unauthorized users are granted access.
-        *   **CER / ERR**: Crossover Error Rate (**CER**), also known as the Equal Error Rate (**ERR**), is the point where **FRR** and **FAR** are equal. The lower the **CER**, the more accurate the device.
+        *   **CER / EER**: Crossover Error Rate (**CER**), also known as the Equal Error Rate (**EER**), is the point where **FRR** and **FAR** are equal. The lower the **CER**/**EER**, the more accurate the device.
 4.  *Alternative Attributes*: Context-aware factors such as location (e.g., inside the corporate network vs. a **VPN**), time of day, or device fingerprinting.
 
 ---

@@ -2,7 +2,7 @@
 
 ## Question 1
 A library manager is evaluating biometric access control systems for a new high-security research laboratory. The manager wants to select a system that provides the best balance between security (preventing unauthorized access) and user convenience (minimizing the rate at which authorized employees are incorrectly blocked). Which biometric metric should the manager prioritize, and what value indicates the highest quality device?
-- [A] Crossover Error Rate (CER) / Equal Error Rate (ERR); a lower value represents a more accurate device.
+- [A] Crossover Error Rate (CER) / Equal Error Rate (EER); a lower value represents a more accurate device.
 - [B] False Acceptance Rate (FAR); a higher value represents a more secure device.
 - [C] False Rejection Rate (FRR); a higher value represents a more convenient device.
 - [D] Biometric standard deviation; a value closest to 1.0 represents the highest quality.

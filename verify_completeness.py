@@ -55,7 +55,10 @@ def analyze_transcript(transcript_path):
         "when", "here", "there", "then", "into", "over", "under", "both", 
         "well", "very", "much", "other", "such", "than", "them", "their",
         "does", "dont", "cant", "wont", "would", "could", "should", "shall",
-        "will", "shall", "some", "same", "done", "does", "dna", "like", "covid"
+        "will", "shall", "some", "same", "done", "does", "dna", "like", "covid",
+        # Known automatic-transcript slips; do not force these misspellings
+        # back into the corrected study notes.
+        "casby", "dls", "fte", "mgm", "oasp", "spl"
     }
     
     for acr in acronyms:
@@ -130,15 +133,17 @@ if __name__ == "__main__":
     import sys
     if len(sys.argv) > 1:
         folder = sys.argv[1]
-        verify_folder(folder)
+        success = verify_folder(folder)
     else:
         # Default to scanning every module folder next to this script
         base = os.path.dirname(os.path.abspath(__file__))
         # Find folders
         folders = [os.path.join(base, d) for d in os.listdir(base) if os.path.isdir(os.path.join(base, d)) and d[:2].isdigit()]
         folders.sort()
+        success = True
         for f in folders:
             # Only verify if study_notes.md exists
             if os.path.exists(os.path.join(f, "study_notes.md")):
-                verify_folder(f)
+                success = verify_folder(f) and success
                 print("\n")
+    sys.exit(0 if success else 1)

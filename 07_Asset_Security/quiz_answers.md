@@ -32,7 +32,7 @@ Here are the correct answers and detailed explanations for the Video 7 quiz.
 *   **Explanation**: Host-based (endpoint) DLP systems run as software agents directly on client systems. This allows them to monitor file operations and inspect data in clear text before the host operating system encrypts it for transmission (e.g., via HTTPS or VPN). Network-based DLPs cannot decrypt proprietary VPN tunnels or encrypted web traffic without a complex SSL interception proxy.
 *   **Why others are incorrect**:
     *   *A is incorrect* because network-based DLP cannot read encrypted traffic traversing VPNs or HTTPS without decrypting it, which is difficult at the network boundary for end-to-end VPNs.
-    *   *C is incorrect* because a CASBY is a cloud-focused gatekeeper, not a general host monitoring agent.
+    *   *C is incorrect* because a CASB is a cloud-focused gatekeeper, not a general host monitoring agent.
     *   *D is incorrect* because network proxies cannot decrypt third-party VPN headers without the corresponding decryption keys.
 
 ---

@@ -103,3 +103,4 @@ Symmetric ciphers use the same secret key for both encryption and decryption. Th
     *   *Software*: Key files stored on disk (cheap but vulnerable to hacking).
     *   *Hardware*: Keys stored on physical tokens (smart cards, **USB** drives) or Hardware Security Modules (HSMs).
 *   *Rule*: Never store the encryption key on the same server or location as the encrypted data.
+*   *Authorization*: Cryptographic testing, decryption, and key recovery activities should be performed only with explicit legal or management authorization.

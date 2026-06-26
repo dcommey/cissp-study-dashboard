@@ -27,10 +27,10 @@ D. The CMO is the system owner, and the DBA is the data administrator.
 ### Question 3
 A security architect wants to implement a Data Loss Prevention (DLP) system that can inspect outbound data transfers even when employees use encrypted VPN tunnels or HTTPS websites to upload files from their laptops. Which type of DLP system should the architect implement?
 
-A. A network-based DLP, because it monitors all traffic at the company's internet edge.  
-B. An endpoint-based (host-based) DLP, because it resides on the client device and can inspect data in clear text before it is encrypted and sent over the network.  
-C. A CASBY gateway, because it acts as a firewall between the user and all cloud services.  
-D. A pattern-matching network proxy, because it can decrypt VPN headers at the packet level.  
+- A. A network-based DLP, because it monitors all traffic at the company's internet edge.
+- B. An endpoint-based (host-based) DLP, because it resides on the client device and can inspect data in clear text before it is encrypted and sent over the network.
+- C. A CASB gateway, because it acts as a firewall between the user and all cloud services.
+- D. A pattern-matching network proxy, because it can decrypt VPN headers at the packet level.
 
 ---
 

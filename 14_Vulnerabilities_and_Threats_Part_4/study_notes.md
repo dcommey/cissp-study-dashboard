@@ -11,7 +11,7 @@ Mobile devices (phones, tablets, smartwatches) represent a massive security **th
 
 ## Enterprise Mobile Management (MDM, MAM, and UEM)
 Organizations manage mobile assets using centralized **technical** control suites:
-*   **MDM** / **MGM**: Mobile Device Management (referred to as MDM, or **MGM** in some legacy contexts) manages enrollment, device lockouts, and remote wipe capabilities.
+*   **MDM**: Mobile Device Management manages enrollment, device lockouts, and remote wipe capabilities.
 *   **MAM**: Mobile Application Management controls only corporate apps and their associated data.
 *   **UEM**: Unified Endpoint Management integrates MDM, MAM, and PC management (laptops, desktops, and IoT endpoints) into a single console.
 *   **Storage Segmentation**: Dividing device memory into personal and work compartments. This allows the organization to execute a remote wipe on corporate data without deleting the **user**'s personal files (such as family photos stored on local or **NAS** - Network Attached Storage - systems). It also prevents copying and pasting between secure and insecure apps.
@@ -22,8 +22,8 @@ Organizations manage mobile assets using centralized **technical** control suite
 Senior **management** must establish a clear acceptable-use **policy** and security **standard** baseline for mobile deployments.
 *   **BYOD** (Bring Your Own Device / "Bring Your Own Disaster"): Employees use personal devices for work. It is cost-effective but increases legal **liability** and data leakage risks.
 *   **COPE** (Corporate-Owned, Personally Enabled): The company provides the device and permits personal use.
-*   **cyod**: Choose Your Own Device (combining choose/CYOD and the transcript representation of **yod**). The employee selects from an approved vendor list.
-*   COBO / **coms**: Corporate-Owned, Business Only (referred to as COBO or **coms** - Corporate-Owned Mobile Strategy). Strictly prohibits personal use.
+*   **CYOD**: Choose Your Own Device. The employee selects from an approved vendor list.
+*   **COBO** / **COMS**: Corporate-Owned, Business Only (sometimes described as Corporate-Owned Mobile Strategy). Strictly prohibits personal use.
 *   *Governance Considerations*: Policies must outline onboarding/offboarding steps, data ownership, patch management, privacy monitoring, and forensic readiness (e.g., confiscation protocols in the event of a data **breach**).
 
 ---
@@ -45,13 +45,13 @@ Senior **management** must establish a clear acceptable-use **policy** and secur
     *   *Block-listing*: Allow by default, block by exception. Ineffective against zero-day threats.
 *   **Software Flaws**:
     *   *Intentional Flaws*: Backdoors and maintenance hooks left behind by developers.
-    *   *Unintentional Flaws*: Input validation failures leading to **SPL** (SQL) injection and cross-site scripting (XSS).
-    *   *Standards*: The **oasp** (OWASP) Top 10 provides guidance on secure coding and vulnerability mitigation.
+    *   *Unintentional Flaws*: Input validation failures leading to **SQL** injection and cross-site scripting (XSS).
+    *   *Standards*: The **OWASP** Top 10 provides guidance on secure coding and vulnerability mitigation.
 
 ---
 
 ## Advanced Malware and Data Manipulation
-*   **Rootkits**: Deep-system malware that modifies the kernel or device drivers to hide its presence. It can be detected using **FIM** (File Integrity Monitoring) tools that audit the size and hashes of critical system files, including **DLS** (DLLs - Dynamic Link Libraries) and system drivers. A complete system wipe and reload from clean backups is the only reliable way to clean a rootkit.
+*   **Rootkits**: Deep-system malware that modifies the kernel or device drivers to hide its presence. It can be detected using **FIM** (File Integrity Monitoring) tools that audit the size and hashes of critical system files, including **DLLs** (Dynamic Link Libraries) and system drivers. A complete system wipe and reload from clean backups is the only reliable way to clean a rootkit.
 *   **Data Diddling**: Small, unauthorized, incremental changes to data (e.g., modifying bank balances or grades) to alter **integrity** without raising alarms.
 *   **Salami Attack**: Stealing tiny, fractional amounts of assets (like rounding errors in financial transactions) over a long period. Prevented by strict separation of duties, code audits, and regular reconciliation.
 
@@ -60,4 +60,4 @@ Senior **management** must establish a clear acceptable-use **policy** and secur
 ## CISSP Exam Tips: The Manager's Perspective
 *   **Responsibility**: Senior leadership is **responsible** for defining mobile security policies and aligning them with corporate risk tolerance.
 *   **Control Typology**: Balance **technical** controls (MDM/MFA/FDE) with **physical** controls (restricting cameras on-premises) and **administrative** controls (policies and audits) to ensure the **confidentiality**, **integrity**, and **availability** of corporate data.
-*   **MFA and Encryption**: Enforce multi-factor authentication (**MFA**) and full-disk encryption (**FDE** / **FTE**) on all endpoints to prevent data leakage in the event of theft. Enforce proper **authorization** policies so users only access data they are cleared to see.
+*   **MFA and Encryption**: Enforce multi-factor authentication (**MFA**) and full-disk encryption (**FDE**) on all endpoints to prevent data leakage in the event of theft. Enforce proper **authorization** policies so users only access data they are cleared to see.
