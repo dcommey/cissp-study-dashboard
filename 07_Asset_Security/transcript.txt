@@ -1,0 +1,1355 @@
+[00:08] All right, welcome back everyone. Today
+[00:10] we're going to talk about asset
+[00:11] security. And since a very important
+[00:14] asset when it comes to information
+[00:17] security is the actual data. Well, in
+[00:19] this domain, our main goal is to see how
+[00:21] to collect, handle, and protect
+[00:24] information throughout its entire
+[00:25] lifetime or journey. So let's break it
+[00:28] down into simple steps and understand
+[00:30] how we can keep our company data safe.
+[00:32] First, we start by classifying
+[00:34] information. This means sorting it based
+[00:37] on whatever criteria you decide to be
+[00:39] relevant. But this should at least
+[00:41] include how important each piece of data
+[00:43] is to your company. We want to make sure
+[00:45] that we focus our efforts on protecting
+[00:47] the most valuable and sensitive
+[00:49] information first. It doesn't mean that
+[00:50] the rest don't get protection, but
+[00:52] they'll get it later. Now once the
+[00:54] information is classified, we take
+[00:56] action based on its classification. For
+[00:58] highly classified data, which includes
+[01:00] very important and sensitive
+[01:02] information, we implement strict
+[01:04] security controls. We use things like
+[01:05] advanced encryption, strong passwords,
+[01:08] multiffactor authentication, limited
+[01:10] access to ensure only the right people
+[01:13] can access and use that data. Now, on
+[01:15] the other hand, for unclassified data,
+[01:17] which includes less sensitive
+[01:18] information, we used fewer security
+[01:20] controls. We still take precautions to
+[01:22] keep it safe, but we don't need to go
+[01:24] overboard, right? It's it's like, you
+[01:26] know, securing your everyday things like
+[01:28] your keys, your notepads. You're not
+[01:30] storing them in a super secure safe, but
+[01:32] you still put them in a drawer so that
+[01:33] they're not really in plain sight,
+[01:35] right? So, let's see what asset security
+[01:37] is all about. As we said, classifying
+[01:40] data is the first step to determine what
+[01:42] data needs to be protected and what data
+[01:44] is relevant to us. Now according to the
+[01:46] National Institute of Standards and
+[01:48] Technology, NIST, uh special publication
+[01:50] 800-122,
+[01:53] personally identifiable information,
+[01:55] which is PII, is defined as any
+[01:58] information about an individual that is
+[01:59] maintained by someone. The official term
+[02:02] of someone is an agency in the official
+[02:06] uh document. Uh this includes details
+[02:08] that can be used to trace a person's
+[02:10] identity such as obviously their name,
+[02:13] social security number. This one is
+[02:15] obvious only if you live in the US. Date
+[02:17] and place of birth, mother's maiden
+[02:19] name, or even their biometric records.
+[02:22] It also covers any other information
+[02:24] that is linked or linkable to an
+[02:26] individual like their medical records,
+[02:29] educational records, financial records,
+[02:31] IP address, connectivity, and this is
+[02:34] the IP as an internet protocol, not
+[02:36] intellectual property, and even
+[02:38] employment records. So, it's all about
+[02:40] those personal bits and pieces that make
+[02:42] up a person's identity. who they really
+[02:44] are. Now, here's a real problem.
+[02:47] Companies have a responsibility to
+[02:48] protect PII. This means that they must
+[02:51] take measures to keep this sensitive
+[02:53] information safe and secure. In fact,
+[02:55] there are laws that require companies to
+[02:56] inform individuals if there's a data
+[02:58] breach that compromises their PII. It's
+[03:01] a way of ensuring transparency and
+[03:04] giving people the chance to take
+[03:05] necessary steps to protect themselves as
+[03:08] much as they can when a data breach
+[03:10] happens. So it's not just good a good
+[03:12] good idea. It's actually the law.
+[03:15] Protected health information, PHI,
+[03:18] refers to any health related information
+[03:20] that can be linked to a specific person.
+[03:22] It's your digital medical file that
+[03:25] contains details about your health,
+[03:26] previous doctor appointments,
+[03:28] diagnostics, treatments, and so on.
+[03:31] According to the HIPPA, the Health
+[03:32] Insurance Portability and Accountability
+[03:34] Act, health information can come in
+[03:36] various forms. It can even cover
+[03:38] something your doctor tells you during a
+[03:40] checkup. It covers information created
+[03:43] or received by different entities like
+[03:45] healthcare providers, health plans, uh
+[03:48] employers, schools, health and life
+[03:50] insurance companies and more. If it
+[03:53] relates to someone's physical or mental
+[03:55] health, the provision of health care or
+[03:57] even the payment for health care
+[03:59] services. Yes, the medical bill is also
+[04:02] protected by this because it says right
+[04:04] there next to the price what they did to
+[04:07] you right medically. So, it is a
+[04:10] reflection of your health and it falls
+[04:11] under the umbrella of PHI.
+[04:14] Uh proprietary data, it's probably the
+[04:17] simplest one. It's about various types
+[04:19] of valuable information that uh give
+[04:22] your company that extra special
+[04:23] something. We've previously talked about
+[04:25] this as IP, intellectual property. Uh it
+[04:28] could be software code you developed,
+[04:30] technical plans for your amazing
+[04:32] products, internal processes, recipes,
+[04:34] anything that's intellectual property.
+[04:36] Now, if your competitors get their hands
+[04:38] on your proprietary data, it can
+[04:40] seriously jeopardize your primary
+[04:42] mission because you might be losing your
+[04:44] competitive edge in an instant or the
+[04:47] source code of the product or game that
+[04:49] you're charging a lot of money for. We
+[04:52] definitely don't want that to happen. In
+[04:54] a security policy or data policy, you'll
+[04:56] find different data classifications. As
+[04:58] we said before, these classifications
+[05:00] tell us how valuable the data is to the
+[05:02] company. For instance, in government
+[05:04] settings, data classification includes
+[05:07] top secret, secret, confidential, and
+[05:09] unclassified. Each of these has
+[05:11] different values and levels of
+[05:12] sensitivity. The US government provides
+[05:15] clear definitions for these
+[05:16] classifications. And because it's the
+[05:18] government, there's not a lot of wiggle
+[05:19] room. The top secret classification is
+[05:22] used for information that if it's
+[05:23] disclosed without authorization could
+[05:25] reasonably expect to cause, I quote,
+[05:28] exceptionally grave damage, that's the
+[05:30] exact official wording, to national
+[05:32] security.
+[05:33] Secret is for information that could
+[05:35] reasonably be expected to cause serious
+[05:38] damage, while confidential is for
+[05:40] information that could reasonably be
+[05:41] expected to cause just well damage. So
+[05:45] you can see each classification has its
+[05:47] own specific purpose even though they
+[05:49] might seem terribly subjective. Of
+[05:51] course the there are additional
+[05:53] procedures for deciding which is which.
+[05:56] Now when it comes to unclassified data
+[05:58] this includes any data that doesn't fall
+[06:00] under the top secret secret or
+[06:01] confidential descriptions. In the United
+[06:04] States, uh, unclassified data is
+[06:06] generally available to anyone, although
+[06:08] there may be certain procedures to
+[06:09] request that information like the, uh,
+[06:12] Freedom of Information Act, FOIA A.
+[06:15] However, even within unclassified data,
+[06:18] there are additional subclassifications
+[06:20] such as for official use only, FO, and
+[06:24] sensitive but unclassified, SBU, tax
+[06:28] records, for example, for under this
+[06:30] category. Private organizations on the
+[06:32] other hand can use any classification
+[06:34] scheme they desire. There is no
+[06:35] classification police out there. They do
+[06:38] what they want. There is no standard
+[06:40] here but generally we will identify
+[06:42] labels as follows. Confidential or
+[06:45] proprietary label. This is the top tier
+[06:47] of classified data. The kind that needs
+[06:49] extra special protection. A breach of
+[06:51] this data would cause major damage to
+[06:52] the company's mission. Just imagine a
+[06:54] chaos when attackers targeted Sony and
+[06:57] leaked the unreleased movies. Right? The
+[07:00] impact was significant as millions of
+[07:02] people downloaded pirated versions
+[07:04] instead of going to the theaters. The
+[07:06] same applies to most intellectual
+[07:07] property information. Next, we have
+[07:10] private label. This refers to data that
+[07:12] should stay within the company but
+[07:13] doesn't reach the level of being
+[07:15] confidential or proprietary. A breach of
+[07:18] this data would still cause serious
+[07:19] damage. For example, think of uh
+[07:21] sensitive employee information or
+[07:23] payroll data. The payroll department has
+[07:25] access to it. They need that access but
+[07:28] regular employees shouldn't have access.
+[07:30] Keeping this private ensures that the
+[07:32] right people have access and protects
+[07:33] the company mission integrity and keeps
+[07:36] the employees motivated to still show up
+[07:38] for their jobs the next day. Moving on,
+[07:41] we have sensitive data which is similar
+[07:43] to confidential data. Uh think of the
+[07:45] valuable information IT personnel hold
+[07:47] about the internal network. If attackers
+[07:49] get their hands on it, it becomes easier
+[07:51] for them to launch attacks. management
+[07:53] might decide to label it as sensitive
+[07:55] and restrict public access to maintain
+[07:57] security. Lastly, we have public data
+[07:59] which is on the unclassified data. It's
+[08:01] information that's available to the
+[08:03] public like website content or
+[08:05] brochures. While the company doesn't
+[08:07] protect confidentiality for this kind of
+[08:08] data, it does take steps to protect its
+[08:11] integrity. They want to ensure the
+[08:14] information remains accurate and
+[08:15] unaltered even though anyone can view
+[08:17] it. If it's public, it only means that
+[08:19] you can access it. It doesn't mean that
+[08:21] anyone can delete it or change it.
+[08:22] That's why websites are public, but
+[08:25] website defacement is considered an
+[08:27] attack. Data security needs to happen at
+[08:29] all times. It doesn't matter what's
+[08:30] going on with the data, whether it's at
+[08:33] rest, in motion, or in use. Just to keep
+[08:36] things clear, data at rest refers to
+[08:38] data stored on media such as hard
+[08:40] drives, SSDs, uh USB flash drives, any
+[08:43] storage that might be inside a storage
+[08:45] area network or SAN, backup tapes, and
+[08:48] even paper, right? uh strong symmetric
+[08:51] encryption is used to protect data at
+[08:53] rest except paper perhaps and access
+[08:56] controls to restrict access to it even
+[08:58] if it's encrypted. Data in transit
+[09:01] refers to any data transmitted over a
+[09:03] network. This includes data traveling
+[09:04] over wired or wireless internal networks
+[09:06] and data transmitted over public
+[09:08] networks such as the internet. Now a
+[09:10] combination of symmetric and asymmetric
+[09:12] encryption is used to protect data in
+[09:14] transit. We use a combination because
+[09:16] asymmetric encryption allows us to
+[09:18] better authenticate the peers who
+[09:20] communicate and symmetric encryption is
+[09:22] used for the bulk encryption of data
+[09:24] because it's it's much faster and it's
+[09:26] much better suited for this use case.
+[09:29] Data in use refers to data in memory or
+[09:32] temporary storage buffers while an
+[09:34] application is using it. Application
+[09:36] often if not always decrypt encrypted
+[09:39] data before placing it in memory. This
+[09:42] allows the application to work with the
+[09:43] actual data, but it's important to flush
+[09:45] these buffers when the data is no longer
+[09:47] needed. Now, there are methods for
+[09:49] almost working with purely encrypted
+[09:51] data and they have been developed by CPU
+[09:53] manufacturers such as Intel and AMD. Uh,
+[09:57] still your main focus should not be on
+[09:59] what the CPU is doing to your data, how
+[10:02] it how it is handling it, but more on
+[10:04] the level of how your application is
+[10:06] handling the data. DLP systems or data
+[10:09] loss prevention systems and sometimes
+[10:11] called data leak prevention systems are
+[10:14] those systems that monitor outgoing
+[10:16] communications from your computer or
+[10:18] your entire network and try to intercept
+[10:21] files by blocking or simply alerting
+[10:23] when someone or some device in your
+[10:25] company attempts to send confidential
+[10:27] document or a document with some
+[10:29] sensitive information in it to some
+[10:32] destination outside of the company.
+[10:34] Because just like the name says, it's a
+[10:36] solution against accidental or
+[10:37] intentional data leakage. As you can
+[10:40] probably guess, this is a very
+[10:41] complicated endeavor. It needs to cover
+[10:43] a lot of scenarios because information
+[10:45] can get out in a lot of ways and
+[10:48] information can be hidden in a lot of
+[10:50] places. And people who really want to
+[10:52] exfiltrate data can be very creative.
+[10:55] email attachments, chat attachments, VPN
+[10:58] tunnels, encrypted communications with
+[11:00] online services, file synchronization
+[11:02] services, personal email, USB drives,
+[11:07] even screenshots and screen photos made
+[11:10] with your smartphone. These are all
+[11:12] methods for grabbing and potentially
+[11:13] stealing data. Not to mention a whole
+[11:16] lot of other problems related to to how
+[11:18] we know what is confidential or
+[11:20] sensitive and what isn't. And employees
+[11:23] are resourceful. they will find ways to
+[11:25] avoid these obstacles and still
+[11:27] excfiltrate data when they really want
+[11:29] to. So DLPs need to be equipped first
+[11:31] with smart scanning capabilities so
+[11:33] nothing is going to slip through their
+[11:35] fingers. In their simplest form, they
+[11:37] can just scan unencrypted network
+[11:39] traffic at the network level or files
+[11:42] that you're attempting to attach to an
+[11:44] email at the host level and search for
+[11:46] specific keywords and patterns in order
+[11:48] to determine if you're trying to
+[11:49] exfiltrate something sensitive. Now,
+[11:51] unfortunately, if you live in the
+[11:53] present and you only look at the
+[11:55] unencrypted traffic, you won't see much
+[11:57] and you won't be able to block much as a
+[12:00] DLP. So, if you have a data
+[12:02] classification scheme in place, we could
+[12:04] theoretically program the DLP system to
+[12:07] look for those exact labels like secret,
+[12:09] top secret, confidential, and so on,
+[12:12] which makes the life of the DLP system
+[12:14] so much easier. But it makes the lives
+[12:16] of the data classification systems and
+[12:18] employees a hell because you need to
+[12:21] have every single piece of information,
+[12:23] every file, every email properly
+[12:26] classified with the correct labels
+[12:27] attached to it. And if you're not
+[12:28] working in the military, then you're
+[12:30] probably not doing that or at least not
+[12:32] thoroughly and responsibly. We also have
+[12:34] pattern matching DLP systems that search
+[12:37] for specific data patterns. For example,
+[12:39] we can identify patterns like the US
+[12:41] social security numbers with their
+[12:43] distinct structure or credit card
+[12:45] numbers or anything that looks like a
+[12:46] phone number and an address to protect
+[12:48] PII. For example, if we spot any
+[12:51] matches, we know that we have some
+[12:52] sensitive data on our hands. There are
+[12:55] two primary types of DLP systems.
+[12:58] Network-based DLPs and endpoint based
+[13:00] DLPs. The network-based ones scan
+[13:04] outgoing data at the network edge on
+[13:06] critical uplinks in the network. exactly
+[13:08] where the excfiltrated file should be
+[13:10] seen if it's on its merry way to leave
+[13:13] the company network. If someone tries to
+[13:15] send out sensitive information, the DLP
+[13:17] should catch it because it is monitoring
+[13:19] the only link in the entire company that
+[13:22] is used to talk to the internet and take
+[13:24] action. Now, what action it depends on
+[13:26] how the DLP is configured and what kind
+[13:28] of product it is. It could just be a
+[13:31] simple alert. It could reset the
+[13:33] connection, which is another way of
+[13:34] saying that it blocks and breaks the
+[13:36] transfer. It could replace a sensitive
+[13:39] file with another placeholder saying
+[13:41] something like this was supposed to be a
+[13:43] sensitive file which was restricted from
+[13:45] sharing. This is called a tombstone by
+[13:48] the way in quotes of course. Or it could
+[13:51] even completely quarantine the sensitive
+[13:53] file and restrict any further access to
+[13:55] it unless manual intervention is
+[13:57] executed. This sounds a bit like
+[13:58] overkill, but if you if some clear
+[14:00] exfiltration attempt is detected, it
+[14:03] might actually be better to completely
+[14:04] cut access to the sensitive data until
+[14:06] you get a chance to understand why and
+[14:08] how it happened and who was responsible
+[14:10] for it. Normally with well-trained
+[14:12] users, DLP systems should not have very
+[14:14] busy days and should not interfere with
+[14:16] your daily business too much. If they
+[14:18] do, there's something fishy going on. Or
+[14:21] a badly configured DLP, that's also an
+[14:24] option, of course. The other type is
+[14:26] endpoint based DLP or hostbased DLP
+[14:28] which scans files stored on systems
+[14:31] including your workstation and even
+[14:33] those sent to external devices like
+[14:34] printers and USB drives. As a personal
+[14:37] note here, a hostbased DLP system is
+[14:39] much more efficient uh simply because it
+[14:41] doesn't need to deal with all the hassle
+[14:43] of intercepting network traffic,
+[14:45] figuring out who it belongs to,
+[14:47] monitoring traffic aggregation links,
+[14:49] dealing with encrypted traffic and so
+[14:51] on. Being just a software process, a
+[14:54] service installed on the host where the
+[14:56] actual data excfiltration can happen
+[14:58] makes it so much easier to block the
+[15:00] unauthorized files and also gets
+[15:02] unencrypted access to all the data since
+[15:04] it's running on your own system an
+[15:06] endpoint. So any encrypted VPN
+[15:09] connections or HTTPS transfers are
+[15:12] available in plain text simply because
+[15:14] your endpoint is well the end point for
+[15:18] the encrypted communication no matter
+[15:20] the type. The actual data that you're
+[15:23] sending over that connection and that
+[15:25] you're receiving from it is available to
+[15:27] your local applications and the OS the
+[15:30] operating system in clear text. Great
+[15:32] opportunity for the DLP solution to have
+[15:34] a peak. Now the keyword in DLP is
+[15:37] prevention. That's the end purpose of
+[15:39] the solution. But in some cases, it can
+[15:41] also be used for discovery of sensitive
+[15:44] but unprotected data. For example, if
+[15:46] unencrypted credit card numbers are
+[15:48] found on fileshare, the DLP system can
+[15:50] make sure that those files are treated
+[15:52] as sensitive files, even if nobody ever
+[15:54] explicitly assigned a sensitive tag to
+[15:56] them. Now, having a DLP system only for
+[15:58] this classification purpose is most
+[16:00] often overkill. But if you happen to
+[16:02] already have one in place with very
+[16:04] strict rules about what is and what
+[16:06] isn't sensitive according to your own
+[16:08] definitions, let's say, then why not use
+[16:10] it for this as well? Use it from time to
+[16:12] time to scan your own file shares or
+[16:14] local files for potentially risky
+[16:16] information that should not be shared
+[16:18] outside of the company. As we said
+[16:20] before, one way to protect sensitive
+[16:22] information is to first mark it with
+[16:24] labels that indicate its classification
+[16:27] level or how valuable and confidential
+[16:29] the data is and then how it should be
+[16:31] handled. Now, very important for a lot
+[16:33] of use cases that involve access to data
+[16:35] and handling data, not just for DLP
+[16:38] systems. Marking can be done in physical
+[16:41] or digital ways. Physical marking means
+[16:43] attaching labels to media or systems
+[16:45] like entire computers, hard drives, USB
+[16:47] drives, storage arrays, and so on.
+[16:50] Digital markings involves adding
+[16:52] headers, footers, watermarks, or
+[16:54] metadata to documents that contain
+[16:57] sensitive data. For some specific
+[16:59] solutions, it doesn't even involve
+[17:00] changing the original file. So, no
+[17:02] actual bytes are added to it. Instead,
+[17:04] the documents are accessed through a
+[17:06] document management system or solution.
+[17:09] that solution holds a database that maps
+[17:12] the corresponding labels to each file
+[17:14] like SharePoint or Imperva products.
+[17:17] This is sometimes required because you
+[17:19] might already have digitally signed or
+[17:21] encrypted documents which you cannot
+[17:23] simply modify by adding some data to
+[17:25] them without corrupting their digital
+[17:27] signature or their encryption. Uh some
+[17:30] companies even use a specific desktop
+[17:32] background and login banners. For
+[17:34] example, a system that processes
+[17:35] proprietary data may have a desktop
+[17:37] background or login message with the
+[17:38] word proprietary in a big warning in
+[17:40] there stating that if you're doing
+[17:42] something illegal or you don't have the
+[17:44] required approval to be there, alarms
+[17:46] will sound and security dogs will jump
+[17:48] on you. Kidding. It's it's going to say
+[17:51] that you'll be prosecuted, which often
+[17:52] makes the dogs sound somewhat better. Uh
+[17:56] the desktop background could also remind
+[17:58] users of their responsibilities to
+[17:59] protect the data. That's why some
+[18:01] companies don't allow users to change
+[18:02] the desktop backgrounds on their
+[18:04] computers. Obviously, this is not a true
+[18:06] preventative control and that SSH banner
+[18:09] is not going to physically stop you from
+[18:10] breaking the network, but it's about
+[18:12] liability and the company covering its
+[18:14] back. Sometimes marking can also apply
+[18:16] to unclassified data. This doesn't mean
+[18:19] that unclassified data is free for all,
+[18:21] but just well unclassified. Nobody has
+[18:24] got the time to classify just yet. It
+[18:27] might be anything in there. So, treat it
+[18:29] as you should treat sensitive data or
+[18:31] somewhere along these lines depending on
+[18:33] what your security policy says. Marking
+[18:36] can also change over time. Downgrading
+[18:39] means either removing sensitive data or
+[18:41] changing the labels to reflect a lower
+[18:43] classification level and it can happen
+[18:45] over time also because with time data
+[18:48] might become less and less sensitive. It
+[18:50] usually does. And that's simply because
+[18:52] sometimes we really don't care so much
+[18:54] about old data like we care about fresh
+[18:56] data. It's not always true. Of course,
+[18:59] this downgrading comes with a lot of it
+[19:01] depends and ifs and procedures and
+[19:04] approvals, but you hopefully get the
+[19:05] idea. The time makes things less and
+[19:08] less sensitive.
+[19:10] Data life cycle covers all the events
+[19:12] and states that the data goes through
+[19:14] dur during its life. Uh starting with
+[19:16] the moment of its creation up to the
+[19:18] point where it is destroyed. Of course,
+[19:20] the first step here would be actually
+[19:22] creating data. But since we're talking
+[19:23] about security, we're going to assume
+[19:25] that we already have the proprietary
+[19:27] information that we want to protect. And
+[19:29] we'll start with handling that data. So
+[19:31] handling data is what happens on a daily
+[19:33] basis. This is where we are concerned
+[19:35] with access control. So who has access
+[19:37] to the data? What kind of access like
+[19:39] reading, writing, making changes, adding
+[19:42] more data, deleting existing data and so
+[19:44] on. And for what purpose is the data
+[19:46] being accessed? Also covering the
+[19:48] handling of data is the way you handle
+[19:50] backups and off-site storage for the
+[19:52] data including cloud storage. This is
+[19:54] important because backups and cloud
+[19:56] storage should be protected with the
+[19:58] same level of security as the original
+[20:00] data. Why? Well, because it is the same
+[20:03] data. In many cases, backups were stolen
+[20:07] or lost because they were simply not
+[20:09] protected or cloud storage was left
+[20:12] unsecured resulting in data breaches. uh
+[20:14] cloud storage is a completely different
+[20:16] situation not only because it's uh it's
+[20:18] data that lives off premises but also
+[20:22] because access controls for cloud
+[20:23] services are completely different from
+[20:25] those that you use internally. Now
+[20:28] ideally a well-ritten security policy
+[20:30] should take into account the discrepancy
+[20:32] and try to map the same user identities
+[20:35] and the same access rights and policies
+[20:37] both to onrem as well as to the uh on
+[20:40] the cloud environment when accessing
+[20:41] cloud data. A special category worth
+[20:44] mentioning here is object storage which
+[20:46] is implemented by all major cloud
+[20:48] providers. Uh the container unit and
+[20:51] object storage is usually called a
+[20:52] bucket. Well, Azure actually calls them
+[20:55] containers. Thank you Microsoft for
+[20:57] abusing that word and creating
+[20:59] confusion. And these buckets need access
+[21:02] permissions. Some are are by default
+[21:04] public. And many data breaches happened
+[21:07] uh with publicly accessible buckets when
+[21:10] the people managing them forgot about
+[21:12] those open permissions. Now in many
+[21:14] cases the data breaches that you hear
+[21:16] about in the online news sites are not
+[21:18] even due to some advanced hacking steals
+[21:20] or a type of attacks or groups behind
+[21:23] them. They simply happen because someone
+[21:25] forgot that a cloud bucket or a GitHub
+[21:28] repository was publicly accessible.
+[21:31] Another step in the life cycle is
+[21:33] collecting data. From a security
+[21:35] standpoint, we are concerned with what
+[21:37] we do with the data after we collect it.
+[21:39] Uh data collection limitation means that
+[21:41] we only collect and store the data that
+[21:43] we really need for our business. Nothing
+[21:45] more than we need for no other purposes
+[21:47] than those that we need and uh not for a
+[21:50] minute longer. For example, if we sell
+[21:52] products online, we use a credit card
+[21:54] processor. We don't need to store the
+[21:56] credit card data of our customers. we
+[21:58] can just pass it to the payment
+[21:59] processor and forget about it. This way,
+[22:01] we don't have to worry about losing it
+[22:03] or exposing that sensitive information
+[22:05] if we happen to have a data breach. You
+[22:08] might think, well, what if at some point
+[22:10] in the future I might need the data
+[22:11] again? Maybe I need it for some
+[22:13] reporting purposes. Why not keep it for,
+[22:15] let's say, one year and then delete it?
+[22:18] You might be allowed to do this, but if
+[22:19] we collect and store more data than we
+[22:21] need, such as names, emails, addresses,
+[22:24] phone numbers, credit card numbers, and
+[22:26] so on, we are putting ourselves at risk.
+[22:28] If a breach happens, we could lose all
+[22:30] that data. And the biggest problem is
+[22:31] that we would face legal troubles and
+[22:34] reputation damage. When it comes to
+[22:36] storing data, keeping multiple copies of
+[22:38] our data in different places is a good
+[22:40] thing from an availability perspective
+[22:42] as it provides us with redundancy and
+[22:44] disaster recovery methods. Security-wise
+[22:47] though, we should proceed carefully when
+[22:49] doing so because now you have the same
+[22:51] perhaps confidential data in multiple
+[22:53] places stored on different media with
+[22:56] different access policies and different
+[22:57] access points. Uh best practice is to
+[23:00] keep at least one backup on site and
+[23:02] another backup copy offsite. If a
+[23:05] disaster such as a fire destroys the
+[23:07] primary business location, the company
+[23:10] would still have a backup copy stored
+[23:11] offsite. the decision of how far the
+[23:15] offsite to store the backup needs to be
+[23:18] uh needs to be considered as well. If
+[23:20] it's stored in a business location at in
+[23:22] the same building, it could be destroyed
+[23:24] in the same fire, right? Even if the
+[23:27] backup was stored 5 miles away, it's
+[23:29] possible that a hurricane or a flood
+[23:31] could destroy both locations. But that's
+[23:33] a story for the disaster recovery
+[23:35] chapter. Now, the same considerations
+[23:37] apply to cloud storage, too. When using
+[23:39] cloud storage for backups, we may need
+[23:41] to check where the cloud storage is
+[23:43] located. We want to make sure it's not
+[23:45] in the same place as our primary data or
+[23:48] our other backups. Also, on the topic of
+[23:50] storing backups in the cloud, the
+[23:52] decision of where to store the data
+[23:54] should take into consideration some
+[23:55] other concerns. In which country or
+[23:58] territory is your data stored? Are you
+[24:00] allowed to store it there? Depending on
+[24:01] the nature of the data, are you allowed
+[24:03] to use any encryption method that you
+[24:05] want? uh which countries or territories
+[24:07] are being transited when you are storing
+[24:09] or retrieving the data from cloud
+[24:11] storage. That's also an issue and a
+[24:13] pretty difficult one to manage. And
+[24:16] lastly, where do your users connect
+[24:18] from? If they need to access restricted
+[24:20] data, it means that the data will travel
+[24:22] to the user's location wherever he or
+[24:25] she might be located. Sometimes that is
+[24:27] not allowed for all countries and for
+[24:30] all types of data. Consult with your
+[24:31] legal department on this. Of course, one
+[24:34] way to protect sensitive data is to
+[24:36] encrypt it. On top of encryption, it
+[24:38] also helps to keep the data in a safe
+[24:40] place. If we store data on our physical
+[24:42] media, such as hard drives or tapes, we
+[24:45] should lock them up in a secure place.
+[24:47] Could use a safe, a vault, or at least a
+[24:49] locked cabinet in a server room. Also,
+[24:51] the server room should have decent
+[24:53] physical security measures such as
+[24:54] locks, alarms, cameras, biometric
+[24:57] authentication, for example, to prevent
+[24:59] and detect unauthorized access. One more
+[25:02] thing to remember is that our data is
+[25:03] more valuable than our devices. It
+[25:05] doesn't matter how cheap or expensive
+[25:07] our device is. What matters is how
+[25:09] important our data is. That's why we
+[25:11] should invest in highquality devices
+[25:13] that are durable, perhaps even devices
+[25:15] that have built-in encryption
+[25:16] capabilities. Some things you simply
+[25:19] must not buy cheap. Storage devices and
+[25:22] sushi are good examples for this. Well,
+[25:25] about ending the data life cycle,
+[25:28] destroying data means making sure that
+[25:30] no one can recover it and use it for any
+[25:33] other including illegal purposes.
+[25:35] Depending on how sensitive the data is
+[25:37] or was, we may need to use different
+[25:40] methods of destruction. The way you
+[25:42] should get rid of data should be written
+[25:44] in your security policy or data policy
+[25:46] and you should have acceptable methods
+[25:48] for different types of data. For
+[25:50] example, some data may require us to
+[25:52] physically destroy the device that holds
+[25:54] it, while other data may allow us to use
+[25:56] software tools to just erase it and be
+[25:58] able to reuse the device that held data
+[25:59] to store something else. Now, one source
+[26:02] of guidance for destroying data is again
+[26:04] from Nest Special Publication 800-88
+[26:08] revision 1 or whatever revision you
+[26:10] might encounter, which is a document
+[26:13] that provides detailed information on
+[26:15] different data sanitization method. By
+[26:17] the way, data sanicidation methods are
+[26:19] ways of removing or destroying data so
+[26:22] that it cannot be recovered. So, it's a
+[26:24] step further beyond just deleting files.
+[26:26] It can mean either destroying the device
+[26:29] or erasing the data without destroying
+[26:30] the device. The choice depends on the
+[26:32] level of sensitivity and sometimes on
+[26:34] the value of the device and the type of
+[26:36] the device. Destroying the device is
+[26:38] more secure but also more costly. You
+[26:40] probably don't want to throw away an
+[26:41] entire storage array out the window. On
+[26:43] the other hand, erasing the data is less
+[26:45] secure, but also less costly. Actually,
+[26:47] it's it's free. Data remmanance is a key
+[26:50] word that you should remember. Data
+[26:52] remnants is data that stays on a device
+[26:54] after we already deleted it. It can be a
+[26:57] security risk if someone can recover it.
+[27:00] One type of device that can have data
+[27:02] remnants is a simple hard drive. When we
+[27:04] delete a file, it does not matter which
+[27:06] operating system, Windows, Linux, Mac
+[27:08] OS, Android, whatever. It's not actually
+[27:11] deleted but just marked as usable space.
+[27:14] It's like removing an item from the
+[27:15] restaurant menu but the ingredients are
+[27:18] still there in the kitchen. Okay. Uh in
+[27:21] a hard drive. This means that the data
+[27:23] is still there and can be recovered with
+[27:25] special tools. It's just that the OS
+[27:27] does not see it as a usable file
+[27:30] anymore. Some people, especially people
+[27:32] that are looking to excfiltrate data
+[27:33] outside of the company, can also hide
+[27:35] data in the free space using tools that
+[27:38] make it look like nothing's there. Uh,
+[27:40] one way to eliminate data remnants on
+[27:42] magnetic discs is to use a degosser,
+[27:45] which is a device that creates a strong
+[27:47] magnetic field that scramles the
+[27:48] magnetic structure of the disc. This
+[27:51] makes the data unreadable and
+[27:52] unreoverable. Sometimes it even makes
+[27:54] the discs unusable too, right? As you
+[27:57] can guess, a deoser only works on
+[27:59] magnetic discs, not on other types of
+[28:02] devices. So, no SSDs or any other kind
+[28:04] of flash memory. Since degossing does
+[28:07] not work for SSDs, one way to eliminate
+[28:09] data remnants on SSDs is to use built-in
+[28:12] erase commands that clean the entire
+[28:14] disc. Uh, some SSDs have different
+[28:16] designs and some erase commands don't
+[28:18] work well on them, and they all depend
+[28:19] on how the vendor implemented this erase
+[28:21] functionality. Actually, the best way to
+[28:23] get rid of data on SSD is to destroy it
+[28:26] physically. unfortunately, which is
+[28:27] another pain in the butt when the SSD is
+[28:30] in a laptop and it's soldered on. And if
+[28:33] you're thinking or about bashing Apple
+[28:35] for this, don't. Other vendors are doing
+[28:38] it as well, so don't hate just Apple for
+[28:40] it. Another way to protect SSDs and to
+[28:43] make the data destruction much easier is
+[28:45] to encrypt all the data on them. Now,
+[28:48] encryption makes the data unreadable and
+[28:50] unreoverable without the right key. Even
+[28:52] if someone can recover some or all of
+[28:55] the data from the disk, they won't be
+[28:56] able to decrypt it without the key. This
+[28:59] also makes it so much easier when you
+[29:00] want to destroy the data as you only
+[29:03] need to destroy the encryption key.
+[29:05] Think about it. It's just a few bytes in
+[29:07] length, not whole terabytes of storage
+[29:10] on entire discs. Just throw away the key
+[29:12] and you don't care what happens to the
+[29:14] encrypted data anymore. Well, there's a
+[29:16] caveat here. You need to have a very
+[29:18] strict key management process in place
+[29:21] so that you can be sure that when you
+[29:22] destroy the encryption key, you're also
+[29:24] destroying all and the last copy of it.
+[29:28] So nobody else will be able to decrypt
+[29:30] that data in the future with some key
+[29:31] that was stashed away. Clearing is a bit
+[29:34] better than erasing, but not by much.
+[29:37] You overwrite the data with some other
+[29:38] data like zeros, ones, or random bits.
+[29:41] This makes it harder for someone to
+[29:42] recover the original data, but not
+[29:44] impossible. with some fancy equipment
+[29:46] and skills, they can still get some
+[29:48] clues about what was there before. And
+[29:50] some parts of the media may not even be
+[29:52] overwritten at all, like bad sectors or
+[29:54] spare sectors. So clearing is not
+[29:56] completely reliable either. Purging is a
+[29:58] serious way of destroying data. You
+[29:59] overwrite the data multiple times with
+[30:01] different patterns and maybe use another
+[30:03] method like deossing to make sure
+[30:05] nothing's left. This makes it very
+[30:06] unlikely that anyone can recover the
+[30:08] original data even with the most
+[30:10] advanced techniques. But purging is not
+[30:12] always trusted by everyone. For example,
+[30:14] the US government doesn't think purging
+[30:16] is good enough for top secret data. They
+[30:19] want to make sure that no one can ever
+[30:20] see their secrets. So, they destroy the
+[30:22] media completely. Speaking of, well,
+[30:25] destruction is the end of the road for
+[30:26] the media and data. Is the most secure
+[30:29] method of sanitizing media. Actually,
+[30:31] it's kind of difficult to call it
+[30:33] sanitization of media since there's no
+[30:35] media afterwards because it makes sure
+[30:37] that the media and the data are gone
+[30:39] forever. There are different ways of
+[30:41] destroying media depending on how much
+[30:42] you enjoy destroying stuff, watching
+[30:45] things burn, crush, being shredded,
+[30:47] disintegrated, or dissolve. So, just to
+[30:50] mention a few here because you need to
+[30:51] know this for the exam. Uh, incineration
+[30:54] is a process of uh burning media until
+[30:56] there's nothing left but ashes. It works
+[30:59] well on paper, plastic, metal media as
+[31:01] long as the temperature is high enough
+[31:02] to melt everything. Uh, crushing is a
+[31:05] process of applying a lot of force to
+[31:06] the media until it breaks into pieces.
+[31:08] It works well on hard disks, uh, CD,
+[31:10] DVDs, USB drives, SSDs, as long as the
+[31:12] force is strong enough to damage the
+[31:14] surface and the internal components. It
+[31:16] doesn't work so well on tapes or floppy
+[31:18] discs if you're thinking about those
+[31:21] because they can bend and fold without
+[31:23] losing data. Uh, shredding is a process
+[31:25] of cutting media into small pieces using
+[31:27] blades or metal teeth. It works well on
+[31:29] paper tapes, floppy discs, and even
+[31:31] optical discs. It's quite nice because
+[31:34] you also get a lot of confetti in the
+[31:35] process.
+[31:37] Disintegration is a process of breaking
+[31:39] media into tiny particles using abrasion
+[31:41] or friction. It works well on any type
+[31:43] of media. It doesn't work well on large
+[31:44] quantities of media because it can take
+[31:47] a long time and can consume a lot of
+[31:49] energy and you get no confetti.
+[31:52] And dissolving, also known sometimes as
+[31:55] pulping, especially when paper is
+[31:57] involved, is the process of dissolving
+[31:59] media in a chemical liquid that reacts
+[32:02] with its material. Uh again it works
+[32:04] well on paper, metal and plastic media
+[32:06] as long as the liquid is corrosive
+[32:07] enough to eat away the material that
+[32:09] stored the data. Uh declassification
+[32:13] uh some companies are very paranoid
+[32:15] about their data and don't don't trust
+[32:16] any of these methods at least not those
+[32:19] that don't involve destruction. So they
+[32:21] remove the parts of the media that store
+[32:23] the data and destroy them separately
+[32:25] simply because they think that all the
+[32:27] secure erase methods that leave the
+[32:29] media intact but destroy the data might
+[32:32] someday be defeated and somebody might
+[32:34] invent a new way to recover that data.
+[32:36] So declassification involve destroying
+[32:39] everything from the data to the storage
+[32:40] media when it's not needed any longer.
+[32:42] So it's not a new concept. Just keep in
+[32:44] mind that there's a new term for this as
+[32:46] well declassification.
+[32:48] Uh cryptographic eraser again not a new
+[32:51] concept just a new term as we said
+[32:53] before is the most elgen process we
+[32:55] already talked about it it makes
+[32:56] encrypted data unreadable by deleting
+[32:58] the key that decrypts it so that you
+[33:01] don't have to delete or sanitize the
+[33:02] entire disk or storage device. Now of
+[33:04] course it only works with encrypted data
+[33:07] but also remember that if someone can
+[33:08] crack the encryption or find the backup
+[33:10] key they can still read the data. That's
+[33:13] why you should use another method to
+[33:14] overwrite the data as well after
+[33:16] deleting the key.
+[33:18] By the way, cryptographic eraser may be
+[33:20] the only option for destroying data on
+[33:22] cloud storage because you don't know
+[33:24] where that data is located or even if
+[33:27] you have a hunch about the general
+[33:29] location or data center, then you still
+[33:30] don't have physical access to the hard
+[33:32] drives that store it or how many copies
+[33:35] of that data are stored for redundancy
+[33:37] and failover purposes. Uh you don't get
+[33:39] any direct control on uh on how the data
+[33:42] is stored. So fortunately pretty much
+[33:44] all the data in public cloud storage
+[33:45] around the world is by default encrypted
+[33:47] if not uh with the customer's key like
+[33:50] your key then at least with the provider
+[33:53] the cloud provider's keys. So deleting
+[33:55] those keys uh is another way of ensuring
+[33:57] the destruction of that data. Well here
+[34:00] are some other methods for protecting
+[34:01] data other than encryption access
+[34:03] control and uh putting data in a
+[34:05] hideyhole. Uh the first one worth
+[34:07] mentioning here is DRM digital rights
+[34:09] management. It's a way of trying to
+[34:12] protect your creative work from being
+[34:14] stolen, copied, or modified by others.
+[34:16] It can be implemented as simple as a
+[34:18] file that tells you what you can and
+[34:20] cannot do with a product and gives you a
+[34:22] key to access it. It might require you
+[34:24] to be online all the time to use a
+[34:26] product. It might perform some sort of
+[34:27] an audit trail recording everything that
+[34:29] you do with a product and stopping you
+[34:31] from illegal operations like copying
+[34:32] protected bites and bits and pieces of
+[34:34] it. It can also implement some
+[34:36] expiration mechanisms which are usually
+[34:38] tied to the always online method that we
+[34:40] just mentioned. Other implementations
+[34:43] include timebound subscriptions that
+[34:45] provide you with additional
+[34:46] functionality for a limited amount of
+[34:47] time like when you download Netflix
+[34:50] episodes locally on your device. After
+[34:52] some time they well quote unquote
+[34:54] expire. To access them after they
+[34:57] expired you don't need to redownload
+[34:58] them but just renew the authorization
+[35:00] for them. Right? You're basically
+[35:02] refreshing something like an access
+[35:04] token. Some DRM methods try to prevent
+[35:06] piracy by using digital watermarks or
+[35:08] metadata to mark the files with hidden
+[35:11] information so that that hidden
+[35:12] information can identify the owner or
+[35:14] the buyer in case illegal copies of uh
+[35:17] that data are being made or that if you
+[35:19] share it illegally, everyone will be
+[35:21] able to point their fingers back to you
+[35:22] because the material that you copied
+[35:24] carries your name. Uh but many people
+[35:27] don't like DRM because they think
+[35:29] they're it restricts uh fair use of the
+[35:32] materials they bought. For example, if
+[35:34] you want to copy your songs to different
+[35:36] devices or share your books with a
+[35:38] family,
+[35:40] you might encounter some issues because
+[35:42] of DRM. DRM implemented for computer
+[35:44] games, for example, such as Denuvo, are
+[35:47] somewhat disliked because they consume
+[35:49] additional CPU cycles, thus affecting
+[35:51] the game's performance. Performance hits
+[35:54] that you don't get when you're running
+[35:56] the pirated version of the same game.
+[35:57] So, you can understand the frustration
+[35:59] here. Okay. Not only do you pay for the
+[36:01] game, but you get less performance than
+[36:03] those who did not pay for the game. It
+[36:06] doesn't take much to decide that this
+[36:08] does not sound really fair. Uh DRM
+[36:11] methods are also not very effective
+[36:13] against pirates who can find ways to
+[36:15] bypass them. So many people think that
+[36:16] they just complicate the usage for
+[36:19] honest users. And yes, as of today,
+[36:21] there are no known DRM methods that
+[36:24] haven't been defeated in some way.
+[36:26] Another protection mechanism is
+[36:28] pseudonymization.
+[36:29] if I'm pronouncing it correctly, which
+[36:32] is a process of using fake names to hide
+[36:35] real data or just masking them as
+[36:37] numbers. Uh it's important when it comes
+[36:39] to real people and protecting
+[36:41] identities, medical records, actions,
+[36:43] and in general private information. It's
+[36:45] a way in which you can still analyze the
+[36:47] data, process it from a statistical
+[36:51] point of view while protecting the
+[36:54] identities of the people behind it. So
+[36:56] you can get statistics but you don't get
+[36:58] the individual data that make up those
+[37:01] statistics. Okay, as you can imagine
+[37:03] this is a useful approach for GDPR
+[37:05] related concerns. GDPR calls it
+[37:08] replacing data with artificial
+[37:10] identifiers in case someone asks you.
+[37:12] Tokenization is the use of a well token
+[37:16] which is a random string word byte
+[37:20] string whatever random something to
+[37:23] replace other data. This method is often
+[37:25] used when for more generic purposes the
+[37:27] actual values of a data set are not
+[37:30] required. So you don't need to see the
+[37:31] real names, the real phone numbers or
+[37:33] the real addresses of the people in the
+[37:35] database. But when needed, this
+[37:37] information is stored in a separate more
+[37:39] secure database with very strict access
+[37:41] controls. Whoever has access to the more
+[37:43] secure database can use the tokens from
+[37:45] the original database, correlate them to
+[37:48] specific entries in the more secure one,
+[37:50] and then query for the necessary
+[37:52] information by combining information
+[37:53] from both databases. The tokens are both
+[37:56] placeholders and somehow keys. Everyone
+[38:00] can see the tokens, but as long as they
+[38:02] don't have access to the secure
+[38:03] database, they mean nothing to them.
+[38:05] They're just random strings.
+[38:07] Tokenization and pseudonymizations are
+[38:09] similar, but we generally use
+[38:11] tokenization when we need the original
+[38:13] data for a very specific use case at
+[38:15] some point, like when actually making a
+[38:17] credit card purchase. And we use
+[38:19] pseudonymization when we need to share
+[38:21] access to the data on an ongoing basis
+[38:23] while still protecting the privacy of
+[38:25] it. Anonymization
+[38:28] is the process of removing all personal
+[38:30] data so that no one can tell who the
+[38:32] data is about. Of course, this is useful
+[38:34] when you don't actually need that
+[38:35] personal data in the first place. So,
+[38:37] why store it? Let's say you have a list
+[38:39] of employees in a company along with
+[38:41] those salaries and their departments. If
+[38:43] you want to make a statistical
+[38:44] calculation based on the salaries in a
+[38:46] company, you might think that removing
+[38:47] the names column or encoding it somehow
+[38:50] is enough. In reality, anyone could
+[38:52] pretty much guess that the largest
+[38:54] salary in the certain department points
+[38:56] to the lead of that department. And then
+[38:58] you are one LinkedIn search away from
+[39:00] finding out who that person is. And
+[39:02] there goes your anonymization out the
+[39:04] window. Now, this is a very basic
+[39:07] example, but some smart people may be
+[39:09] able to figure out who the data is
+[39:11] about, even if you remove the obvious
+[39:13] clues. This is called reidentification
+[39:15] of anonymized data. Randomized masking
+[39:19] can be a good way of anonymizing data.
+[39:21] Masking mixes up data rows in individual
+[39:23] data columns so that records don't show
+[39:26] the real data. You can still calculate
+[39:28] uh column-based averages, minimums,
+[39:31] maximums, sums and so on. But you don't
+[39:34] know to whom or to which department each
+[39:37] line belongs to. So you cannot correlate
+[39:39] the department with salary or the person
+[39:41] anymore. Downside of this, you cannot
+[39:44] correlate the department with the salary
+[39:45] of the person anymore. So your
+[39:47] statistical analysis is going to be
+[39:49] pretty crap or very very generic and not
+[39:51] very useful. But the data still keeps
+[39:53] some value that can be used for other
+[39:55] research purposes. Uh, another method is
+[39:58] banding or aggregation. Those operations
+[40:00] replace specific data with more generic
+[40:03] ranges again protect privacy. So instead
+[40:05] of saying that Andrew is 37 years old,
+[40:08] we say that our trainer is in the 30 to
+[40:11] 39 years old range. Another example here
+[40:15] would be retaining just a city instead
+[40:17] of a customer specific address. A
+[40:19] special mention here is for clouds. A
+[40:22] CASBY, cloud access security broker, is
+[40:25] a piece of software that acts like a
+[40:26] gatekeeper between you and the cloud. It
+[40:28] checks everything that goes in and out
+[40:30] of the cloud, including operations and
+[40:32] commands, not just file transfers, and
+[40:34] make sure it follows your security
+[40:36] rules. It can also check who is
+[40:38] accessing the cloud and what are they
+[40:40] doing with it. Uh, it can log, monitor,
+[40:42] and alert you of any suspicious
+[40:44] activity. and not just suspicious
+[40:45] activity, but it can also protect you
+[40:47] against accidental misconfigurations
+[40:48] like creating a storage bucket and
+[40:50] forgetting to make it private. So yes,
+[40:53] we can see that the CASBY can work as a
+[40:55] data protection method simply because it
+[40:57] is kind of a gatekeeper of the place
+[41:00] where the data is stored. In this case,
+[41:03] it's the cloud. Think of it as an
+[41:05] advanced firewall for the cloud
+[41:07] infrastructure if you wish, but don't
+[41:09] quote me on this. It's not exactly the
+[41:11] by the book definition of a CASBY. All
+[41:14] right. Now data needs people to create
+[41:16] it, manage it, secure it and of course
+[41:18] use it and then destroy it hopefully
+[41:20] intentionally not accidentally. From a
+[41:23] data management perspective there are a
+[41:25] number of data related roles that you
+[41:27] can find in a company and in CISSP
+[41:30] exams. First data owners have the
+[41:34] ultimate responsibility for data in a
+[41:35] company. They are usually the big bosses
+[41:37] like the CEO, the president or a
+[41:39] department head. Data owners decide how
+[41:42] important and sensitive the data is and
+[41:44] how it should be labeled. They also make
+[41:45] sure that the data is protected and used
+[41:47] properly according to the security
+[41:49] policy. Well, they don't do it
+[41:51] personally, but they delegate these
+[41:53] tasks to one of these roles below. Uh
+[41:56] data owners may be in trouble if they
+[41:58] don't do their job well and something
+[41:59] bad happens to the data. A breach for
+[42:01] example, because they are ultimately
+[42:03] responsible for it. Next up, we have
+[42:05] business or mission owners. These are
+[42:08] the people responsible for the processes
+[42:09] that use data in a company. I know you
+[42:12] may now roll your eyes. Welcome to the
+[42:14] corporate world. They are usually the
+[42:16] managers or department leads. Business
+[42:18] or mission owners make sure that the
+[42:20] data provides value and it is used so
+[42:23] that it increases productivity. I know
+[42:26] this sounds like a madeup job
+[42:27] description, but bear with me here.
+[42:29] Also, if you worked in corporations,
+[42:31] this should not come as a surprise
+[42:33] anymore. So you might have a business
+[42:35] that relies on a website that uses a
+[42:37] database server. The IT department takes
+[42:39] care of the web server and the database
+[42:41] as their system owner. But the sales
+[42:43] department, even though it doesn't own
+[42:46] these systems, does own the business
+[42:49] process that makes money using these
+[42:51] systems. So if this doesn't make a
+[42:55] little bit more sense, I cannot help you
+[42:56] more than this. The asset owners are the
+[43:00] people who own the asset or the system
+[43:02] that processes and stores sensitive
+[43:04] data. Again, this is where we find
+[43:06] department leads who make sure that the
+[43:07] asset has a security policy and is
+[43:09] compliant with it. They also make sure
+[43:12] that the people who use or support the
+[43:13] asset have proper security training. The
+[43:16] asset or is responsible for making sure
+[43:18] that data used on the system is secure
+[43:20] and this includes finding out how
+[43:21] important and sensitive the data is on
+[43:23] the system. The asset owner then makes
+[43:26] sure that the system is labeled
+[43:27] correctly and that proper security
+[43:29] controls are in place to protect the
+[43:31] data. Next, we have data processors and
+[43:34] data controllers. The GDPR defines a
+[43:36] data processor as someone who surprise
+[43:41] processes personal data for someone else
+[43:44] and a data controller as someone who uh
+[43:47] decides what part of why and how that
+[43:51] personal data is processed. These roles
+[43:53] are important for GDPR uh because GDPR
+[43:55] limits data transfers to countries
+[43:57] outside the EU. Companies that break
+[44:00] privacy rules in the GDPR may have to
+[44:02] pay a lot of money. Unfortunately, the
+[44:03] wording and exceptions in GDPR are
+[44:05] sometimes less than userfriendly. So,
+[44:08] many companies have hired special people
+[44:09] like a data privacy officer to figure
+[44:12] out how to read and understand all the
+[44:14] laws and regulations. The GDPR has made
+[44:16] it a rule to have a data protection
+[44:18] officer for any company that has to
+[44:20] follow the GDPR. The person in this role
+[44:22] is responsible for making sure the
+[44:24] organization follows the laws to protect
+[44:26] the people's private data. We can all
+[44:29] see the benefits of this. But oh my god,
+[44:31] what an incredibly boring job this is.
+[44:35] And if this wasn't confusing and
+[44:36] subjective enough, we have another role
+[44:38] called data custodian. Data custodian
+[44:41] are the people who help data owners with
+[44:44] their daily tasks. I told you that
+[44:46] they're delegate. They make sure that
+[44:49] the data is stored and protected
+[44:50] properly. For example, they make backups
+[44:52] of the data according to the backup
+[44:54] policy. They also keep logs of the data
+[44:57] activity if auditing is enabled. Uh data
+[44:59] custodians are usually IT staff or other
+[45:02] uh system security administrators. They
+[45:04] may also be the ones who give
+[45:06] permissions to access data. Finally,
+[45:08] also on the topic of data, we have
+[45:10] admins and regular users. And yes,
+[45:13] normally these would refer to the types
+[45:14] of users that can be defined in any
+[45:16] operating system like Windows and Linux.
+[45:18] So administrators are the people who
+[45:20] have special privileges of systems and
+[45:22] the data. They can do things that
+[45:23] normally users cannot do like changing
+[45:25] settings, installing programs or dealing
+[45:27] files. But some companies call anyone
+[45:30] with some extra privilege an
+[45:32] administrator even if they don't have
+[45:33] full administrative powers over the
+[45:35] system. Especially if it's about having
+[45:37] full permissions on a specific set of
+[45:39] data. So they are administrators of that
+[45:42] data or type of data. For example, even
+[45:44] desk clerks who accept, create, sign
+[45:48] documents for clients can be considered
+[45:50] admins for those specific documents. So
+[45:52] keep this this this fine print in in
+[45:56] your mind. And of course the users are
+[45:59] the people who use the data to do their
+[46:00] work tasks. Users should only have
+[46:03] access to the data they need to do their
+[46:05] work tasks. They cannot change policies.
+[46:08] They cannot reassign permissions. They
+[46:10] can only work with the company data that
+[46:12] was assigned to them. What they can do
+[46:16] is misuse, leak data and facilitate data
+[46:21] breaches since they have access to the
+[46:23] data. So that's what that's why we have
+[46:26] trainings and all users should be on all
+[46:30] user training should be high in your
+[46:31] list of priorities.
+[46:33] Speaking of baselines for securing data,
+[46:36] security baselines are a way of checking
+[46:38] or making sure that your assets are
+[46:41] secure. They give you a starting point
+[46:44] and a minimum security standard. Comply
+[46:46] with that minimum standard and you can
+[46:48] call yourself in your data in your
+[46:49] systems somewhat secure. One common
+[46:52] security baseline technique is that uh
+[46:54] that is found in organizations is called
+[46:56] imaging. Which means that administrators
+[46:59] set up a single system with the right
+[47:01] settings, the perfect settings. Uh take
+[47:03] a snapshot of its entire disk as an
+[47:05] image and then duplicate this image to
+[47:07] other systems when they need to be
+[47:08] initialized. This makes sure that all
+[47:10] systems are set up in a similar secure
+[47:12] manner with consistent configurations
+[47:14] which helps protect the privacy of data.
+[47:17] A security baseline can also be stored
+[47:19] and used as a collection of settings or
+[47:21] configuration files for a specific type
+[47:23] of device. For example, when a new
+[47:25] appliance or software installation is
+[47:26] deployed, security baseline
+[47:28] configuration is automatically installed
+[47:29] so that a minimum security level is
+[47:31] gained right out of the box. Uh Nest
+[47:34] Special Publication 800-53
+[47:36] is a document that includes a big list
+[47:38] of security controls and has picked many
+[47:41] of them to include in different
+[47:42] baselines. Specifically, they show four
+[47:44] baselines based on how bad it would be
+[47:47] for an organization mission if there is
+[47:49] a loss of confidentiality, integrity or
+[47:51] availability of a system. The four
+[47:53] baselines are low impact baseline
+[47:55] controls in this baseline are suggested
+[47:58] if a loss of CIA will not be very bad
+[48:00] for the company. Moderate impact
+[48:02] baseline controls for when a loss of
+[48:04] confidentiality, integrity or
+[48:06] availability will be somewhat bad for
+[48:07] the company. High impact when the impact
+[48:11] is very bad and privacy control
+[48:14] baseline. This baseline gives an initial
+[48:16] baseline for any system that uses and
+[48:19] processes and stores PII personally
+[48:22] identifiable information. Companies may
+[48:24] combine this baseline with one or other
+[48:26] baselines. Pretty basic, right? We also
+[48:29] need ways of fine-tuning a security
+[48:31] baseline to fit your company's needs.
+[48:33] This is sometimes called tailoring and
+[48:35] scoping. A big part of the tailoring
+[48:38] process is making sure the controls
+[48:40] match your company's specific security
+[48:41] requirements. For example, a company
+[48:43] might decide that a set of baseline
+[48:45] controls works well for computers in
+[48:47] their main location, but some controls
+[48:49] are not suitable or possibly completely
+[48:52] unapplicable in remote office location.
+[48:55] Okay, so scoping is a part of the
+[48:58] tearing process and means looking at a
+[49:00] list of baseline security controls and
+[49:02] picking only those controls that apply
+[49:04] to the IT systems that you're trying to
+[49:06] protect. For example, if a system is
+[49:07] located in a completely airgapped
+[49:09] network, there's no need makes no sense
+[49:12] to implement a logical perimeter
+[49:14] security like firewalling and IPSS for
+[49:17] that network segment.

@@ -1,0 +1,1318 @@
+[00:07] [music]
+[00:08] >> All right, network security. The place
+[00:10] where you should ask, wait, is there any
+[00:13] other kind of security? The answer is
+[00:16] no, there isn't.
+[00:17] Just kidding, of course there is.
+[00:19] Ah, kidding again. No, there really
+[00:21] isn't. Or at least let's put it this
+[00:23] way, it all starts with the network.
+[00:28] And this could not have been a security
+[00:30] training without asking about networks
+[00:32] and network security because most, if
+[00:34] not almost all attacks out there happen
+[00:37] over the network. It might be your home
+[00:39] network, the coffee shop network, the
+[00:41] corporate network, a cloud network, or
+[00:43] even the teeny weeny network that gets
+[00:46] created between your phone and the POS
+[00:49] device when you make an NFC payment. All
+[00:52] the good stuff in this world travels
+[00:54] over the network and so does the nasty
+[00:56] stuff as well.
+[00:58] Now, one problem is that there are a lot
+[01:01] of network types and a lot of ways to
+[01:03] send data over them and a lot of
+[01:05] applications and a lot of protocols and
+[01:08] a lot of devices that use the network.
+[01:10] The protocols
+[01:12] and uh run the applications that you
+[01:14] use. Now, when computer networks were
+[01:16] first invented people thought that they
+[01:19] needed to bring some order to this
+[01:21] madness and carve out some strict rules
+[01:24] about how this communication should
+[01:26] happen, no matter who or where they are,
+[01:29] who you're talking to, over how many
+[01:31] networks, and um
+[01:34] how many types of networks perhaps. So,
+[01:37] we ended up with two categories of
+[01:39] standards, protocols and communication
+[01:42] models.
+[01:43] A network protocol is nothing more than
+[01:46] a set of rules. So, when I I talk to
+[01:50] you, I need to follow a set of rules for
+[01:52] you to be able to understand me, not
+[01:55] necessarily over a recording, but in
+[01:57] real too. First of all, I need to speak
+[02:00] using a language that you know and
+[02:02] understand. Secondly, it's not enough
+[02:04] for me to use English words, but I have
+[02:06] to build correct sentences. I also have
+[02:08] to pronounce them correctly, otherwise
+[02:10] it will only make sense to me, but not
+[02:13] to you.
+[02:14] I also need to speak loudly for you to
+[02:16] hear me and perhaps take into account
+[02:18] the noisy area that we're in. If we're
+[02:20] talking over a phone, I might have to
+[02:23] expect some delay. If we're talking over
+[02:25] email, I would probably expect a reply
+[02:28] in a few hours or a day. If we're
+[02:30] talking over instant messaging, I would
+[02:32] probably expect a reply somewhere in
+[02:34] between a few minutes and a couple of
+[02:36] hours. Regardless of how we communicate,
+[02:39] I need to keep my message short enough
+[02:41] for you to still pay attention to me,
+[02:43] but still long enough for me to say what
+[02:45] I have to say.
+[02:47] And perhaps if I have something big to
+[02:49] say, I would probably expect some
+[02:51] nodding or some uh-huh from you from
+[02:54] time to time just to confirm that you're
+[02:56] still listening and you haven't died of
+[02:59] boredom and death by PowerPoint. And
+[03:01] also, regardless of how we communicate,
+[03:04] I need to make sense. When I say
+[03:07] something to you, you shouldn't start
+[03:09] wondering whether I'm supposed to be
+[03:11] talking to you or whether you should
+[03:13] call an ambulance because it seems like
+[03:15] I'm talking nonsense and I I might be
+[03:17] having a stroke. So,
+[03:19] now you're wondering why did I tell you
+[03:21] this? Well, because this is just a big
+[03:24] simplification of how many rules you
+[03:26] have to obey when you communicate
+[03:28] verbally, even if you're not really
+[03:31] aware of them. And it's the same set of
+[03:33] issues, the same problems when computers
+[03:36] communicate, too. All these rules are
+[03:38] what we call protocols. In other words,
+[03:41] rules, sets of rules for communication.
+[03:44] If you don't play by the rules, if you
+[03:46] don't follow the protocol, don't expect
+[03:49] your communication to go through.
+[03:51] The OSI model was developed by the ISO.
+[03:55] Yeah, I know.
+[03:56] In the late 1970s as a common
+[03:59] communication standards for all
+[04:01] computers. The seven layers of the OSI
+[04:03] model are from top to bottom:
+[04:05] application, presentation, session,
+[04:08] transport, network, data link, and
+[04:12] physical.
+[04:13] If you want to remember these, there's a
+[04:14] mnemonic called please do not throw
+[04:18] sausage pizza away
+[04:20] or
+[04:21] people don't need those stupid packets
+[04:25] anyway.
+[04:26] All right, each letter is the beginning
+[04:28] of each
+[04:30] uh of each layer in these sentences.
+[04:32] And there's yet another one which will
+[04:34] probably get my recording banned if I
+[04:36] pronounce it, so I'll leave it to you to
+[04:39] find it online.
+[04:41] The OSI model shows how information
+[04:44] flows at all levels, starting from the
+[04:46] electrical signals up to the Netflix
+[04:48] movie that you're watching.
+[04:49] Each layer communicates with the layer
+[04:51] above and the layer below it. When data
+[04:54] is sent, data goes from top to the
+[04:56] bottom and each layer adds its own
+[04:58] information. When data is received, it
+[05:01] goes from the bottom to the top and each
+[05:03] layer removes a piece of information
+[05:05] after it processes it. The entire dance
+[05:08] through these layers of the OSI model is
+[05:10] called encapsulation and decapsulation.
+[05:13] Encapsulation is when a layer adds
+[05:15] information to the data received from
+[05:18] the layer above it before passing it to
+[05:20] the layer below. This information is
+[05:22] usually added at the beginning of the
+[05:24] data when it's called a header or at the
+[05:26] end of the data.
+[05:28] Decapsulation works the other way
+[05:29] around. When a layer removes information
+[05:31] from the data received from the layer
+[05:33] below it before passing it to the layer
+[05:35] above.
+[05:36] Let's see an example of how
+[05:38] encapsulation and decapsulation work in
+[05:40] the OSI model. Let's suppose you want to
+[05:42] send an email to your friend over a
+[05:44] network. Here's what happens.
+[05:47] At the application layer, your email
+[05:49] client processes the message that you
+[05:51] want to send and add some information to
+[05:53] it, such as your email address and your
+[05:55] friend's email address and some other
+[05:57] email headers that help the email along
+[05:59] the way to its destination and make
+[06:01] delivery more secure, perhaps. This is
+[06:03] called an application header. The
+[06:05] application layer passes the
+[06:07] encapsulated message down to the
+[06:09] presentation layer. Now, the
+[06:10] presentation layer is about format or
+[06:12] the way the data is represented or
+[06:15] presented, as the layer name suggests.
+[06:17] The message is converted into a standard
+[06:20] format that can be understood by
+[06:21] different systems. In the case of email,
+[06:23] it might be just ASCII or Unicode or
+[06:26] sometimes binary. The presentation layer
+[06:29] could also add some encryption or
+[06:31] compression methods and then it passes
+[06:33] the encapsulated message down to the
+[06:35] session layer.
+[06:36] Third comes the session layer, which is
+[06:39] supposed to emphasis on the supposed
+[06:41] handle different streams of
+[06:43] communication. Managing sessions,
+[06:46] retransmissions, confirmations, and so
+[06:48] on. Nowadays, this doesn't really happen
+[06:51] anymore and the definition remains
+[06:53] purely theoretical because this session
+[06:55] management either happens at transport
+[06:57] layer or at the application itself.
+[07:00] All right, that the application itself
+[07:02] manages it at the application layer. So,
+[07:04] we don't really see this happening at
+[07:05] the session layer nowadays.
+[07:08] Next comes the transport layer, where we
+[07:10] split data into segments and each
+[07:12] segment gets a header with a source and
+[07:14] a destination port number that tells
+[07:16] your computer and any server which
+[07:19] application or service it belongs to.
+[07:22] This is how we know that when we receive
+[07:24] packets on a specific port, we should
+[07:26] treat them as an email or as a web page
+[07:29] or as any other application. It also
+[07:31] means that at the transport level, we
+[07:33] have multiplexing. This is the ability
+[07:35] of two computers to communicate over the
+[07:37] same physical channel, but actually be
+[07:39] able to conduct multiple independent
+[07:41] conversations at the same time.
+[07:44] Your computer can browse the web, use
+[07:46] instant messaging, play a movie, play a
+[07:49] game, receive emails all at the same
+[07:51] time and over the same network
+[07:53] interface, the same cable, right? Due to
+[07:55] this type of multiplexing. This works
+[07:57] because we assign different port numbers
+[08:00] to each type of traffic coming in or
+[08:02] going out. The transport layer also adds
+[08:04] some information to each segment such as
+[08:06] error detection or correction codes,
+[08:09] flow control mechanisms.
+[08:11] Flow control is what helps you use all
+[08:14] the available bandwidth.
+[08:15] For example, to download a file as fast
+[08:17] as possible, regardless if you're in a 1
+[08:20] gigabit per second or 1 megabit per
+[08:22] second connection.
+[08:23] And error detection and retransmission
+[08:25] also happens here. That's why no matter
+[08:27] how bad the Wi-Fi is in a coffee shop or
+[08:31] hotel, the files that you download over
+[08:33] that Wi-Fi are almost never corrupted.
+[08:36] Yes, they might take a long time to
+[08:38] download, it might be annoying and
+[08:40] tiresome, but that happens precisely
+[08:42] because of the bandwidth issues
+[08:44] correlated with error correction
+[08:46] mechanisms that involve a lot of errors
+[08:49] and retransmissions, but they will
+[08:50] arrive eventually. Correctly or not at
+[08:54] all. This is called a transport header
+[08:57] right here at the transport layer. The
+[08:59] transport layer passes the segments down
+[09:01] to the network layer.
+[09:03] At the network layer, we find packets.
+[09:05] Each one has a source and a destination
+[09:07] IP address if we're using the IP
+[09:09] protocol that identifies which computer
+[09:12] it came from or it is going to, right?
+[09:14] Source and destination.
+[09:16] This decision is called routing, moving
+[09:18] packets across networks based on logical
+[09:22] addresses or simply put based on IP
+[09:24] addresses.
+[09:25] The network layer also adds some
+[09:26] information such as hop count or traffic
+[09:29] prioritization levels, and this is added
+[09:31] in the network header. The main protocol
+[09:33] that we find here is the IP protocol and
+[09:35] the addressing is done using IP
+[09:37] addresses. Both IPv4 with 32-bit
+[09:41] addresses and IPv6 with 128-bit
+[09:43] addresses are defined here. The network
+[09:46] layer passes the packets down to the
+[09:48] data link layer.
+[09:50] At the data link layer, we find frames.
+[09:53] Each frame has a source and a
+[09:54] destination MAC address that identifies
+[09:57] which physical interface it came from
+[10:00] and to which physical interface it's
+[10:01] going to. At this level, moving frames
+[10:03] around is called switching. This is
+[10:06] moving frames inside of a network based
+[10:09] on the data link information.
+[10:11] MAC addresses are specifically the
+[10:14] information used for switching and are
+[10:16] 48 bits in length and should be unique
+[10:19] all over the world. As in each device
+[10:22] ever produced over the network should
+[10:23] have a unique MAC address.
+[10:26] To make this easier and to avoid two
+[10:28] vendors producing interface cards or
+[10:31] ports on a switch with the same MAC
+[10:33] address, the address itself it splits
+[10:36] into two parts. The first 24 bits are
+[10:39] called the OUI, that is organizationally
+[10:42] unique identifier, and these first 24
+[10:45] bits should uniquely identify one
+[10:47] manufacturer, like Apple, Cisco, Dell,
+[10:49] HP, and so on. Some vendors have
+[10:52] multiple identifiers because they make a
+[10:53] lot of network cards or ports. The last
+[10:56] 24 bits are unique for each network
+[10:57] card. It is considered that a company
+[11:00] should be able to manage its internal
+[11:02] MAC address allocation to avoid
+[11:03] duplicate addresses. Okay? The data link
+[11:06] layer also adds some extra information
+[11:08] to a frame apart from the source and
+[11:09] destination MACs, such as frame
+[11:11] delimiters, checksums. This is called a
+[11:14] data link header, and depending on the
+[11:16] implementation, there might be also a
+[11:18] footer or a trailer, that is data added
+[11:20] to the end of the frame. The data link
+[11:22] layer passes the frames down to the
+[11:25] physical layer.
+[11:27] At the physical layer, the frames become
+[11:29] bits, and those bits are represented as
+[11:31] electrical impulses over network cables,
+[11:34] electromagnetic waves for Wi-Fi
+[11:37] networks,
+[11:38] light or laser signaling for fiber
+[11:41] optics. These signals are arranged in
+[11:44] such a way so that bits can be
+[11:46] identified and transmitted.
+[11:48] Theoretically, we say that at this level
+[11:50] we find signaling or modulation. The
+[11:54] physical layer does not add any new
+[11:56] information apart from some control
+[11:58] information that helps the network
+[12:00] interface card determine which voltage
+[12:02] fluctuations indicate that there's a new
+[12:04] frame that's about to arrive or it's
+[12:06] about to finish transmission. The only
+[12:09] intermediary devices found here are some
+[12:11] simple devices such as signal repeaters
+[12:14] and amplifiers. Some many, many years
+[12:16] ago, we would have said that this is
+[12:18] where you find network hubs, but
+[12:20] nowadays those things are museum
+[12:22] exhibits.
+[12:23] You might have heard before about terms
+[12:25] such as layer two, layer three, layer
+[12:26] four, and layer seven. They map to the
+[12:29] OSI model as in layer two is the data
+[12:32] link layer. This is where you find layer
+[12:34] two switches. Layer three is the network
+[12:36] layer, so this is where we say that we
+[12:38] have layer three routers, layer three
+[12:40] switches, and IP addresses. And layer
+[12:42] four means transport layer like that is
+[12:45] anything that has to do with TCP or UDP
+[12:47] and port numbers.
+[12:49] Finally, generically we refer to
+[12:51] anything that is purely application
+[12:53] related as layer seven. We normally
+[12:55] don't address layers five and six
+[12:57] anymore in our networks using modern
+[13:00] protocols.
+[13:01] An old networking joke says that there
+[13:04] are more than seven layers, and on top
+[13:07] of the application layer is the user
+[13:09] layer, the business layer, the political
+[13:12] layer, the government, religion, and so
+[13:14] and so on. It doesn't even matter which
+[13:15] is which, but when troubleshooting
+[13:17] network issues, you might run into,
+[13:20] let's say, layer eight or layer nine
+[13:22] problems, which might cause your network
+[13:25] to stop working more often than you
+[13:28] would think.
+[13:30] It's interesting to see that when people
+[13:32] find out about the OSI model, they both
+[13:34] get the feeling that it it makes sense,
+[13:37] but they also get the feeling that it's
+[13:40] sort of too much or too theoretical.
+[13:43] And I won't hold it against you if you
+[13:44] were thinking that a moment ago. Isn't
+[13:47] the communication between two computers
+[13:48] supposed to be simpler than that?
+[13:51] Don't we have enough stuff to worry
+[13:52] about at the application layer anyway?
+[13:54] >> [laughter]
+[13:55] >> The good news is that
+[13:57] you aren't the only one thinking that.
+[13:59] Some people might hate me for saying
+[14:01] this, but but the OSI model was like
+[14:04] putting the carriage before the horse.
+[14:06] It struggled so much to become a
+[14:08] universally acceptable model of
+[14:10] everything that means computer
+[14:11] communication that it eventually ended
+[14:13] up as a theoretical model pretty far
+[14:15] away from the actual implementations.
+[14:18] The model should help us understand what
+[14:20] is actually happening. We shouldn't
+[14:22] struggle to match what's happening to a
+[14:24] model in order to understand it.
+[14:27] Now, long story short,
+[14:28] we really don't need seven or eight or
+[14:31] nine layers. That's because session
+[14:33] information and presentation information
+[14:35] is honestly just part of the application
+[14:37] itself. There's no intermediary device
+[14:39] or service that takes care of this, and
+[14:41] there are no clear headers or trailers
+[14:43] being added to the data that deal with
+[14:45] these features. It's all just
+[14:46] application data and application
+[14:48] behavior, and the app or the user
+[14:50] encapsulate whatever they want in there.
+[14:52] And also, what's with the physical
+[14:54] layer? There's no extra information
+[14:56] there, just encoding. And yes, it's an
+[14:57] important step while troubleshooting,
+[14:59] but it's not an abstraction of anything.
+[15:01] So, we combine that application,
+[15:03] presentation, and session layers into
+[15:05] what should have been called just
+[15:07] application from the very beginning, and
+[15:09] the data link layer with the physical
+[15:10] layer, and we got a simpler, so-called
+[15:13] link layer.
+[15:15] So, here we have, ladies and gentlemen,
+[15:17] the TCP/IP model created by the
+[15:20] Department of Defense.
+[15:23] It's a much more down-to-earth
+[15:25] representation of what it means for
+[15:27] computer to communicate as it closely
+[15:29] maps to the TCP/IP implementations in
+[15:31] any operating system nowadays. Simply
+[15:33] because we don't really care anymore
+[15:35] about any of the other dead protocols.
+[15:38] In the TCP/IP model or stack, we only
+[15:41] have a generic application layer, which
+[15:44] replaces all layers five through seven,
+[15:47] and then we have the transport layer,
+[15:49] which is still useful, so it maps
+[15:50] exactly to the transport layer from the
+[15:52] OSI stack, and this is where we find
+[15:55] TCP, UDP, and port numbers.
+[15:57] Underneath it,
+[15:59] we then get to the internet layer, which
+[16:01] again maps to the network layer of the
+[16:02] OSI, where we find IP addresses, and at
+[16:06] the bottom we have the network access
+[16:08] layer, or simply put the network layer,
+[16:11] which replaces layer one and layer two
+[16:14] from OSI, meaning that everything that
+[16:17] has to do with layer two MAC addresses
+[16:18] and physical signaling. Much simpler and
+[16:21] easier to map to real-life communication
+[16:23] protocols.
+[16:24] Routing protocols are exactly what their
+[16:27] name says. They're a set of rules that
+[16:30] routers use to talk to each other and to
+[16:32] communicate routes to different
+[16:33] destinations.
+[16:35] Think about the internet. A simple
+[16:36] action as you accessing a website might
+[16:38] require your browser to send a request
+[16:40] to that website and expect a reply with
+[16:43] the website's content. Now, that website
+[16:45] might be hosted on a server that you can
+[16:47] access only by going through 10, 20, or
+[16:50] 30 routers or hops. Each and every one
+[16:52] of those routers needs to know how to
+[16:55] handle your request and where to forward
+[16:57] it so that it reaches the web server and
+[17:00] how to reach you back when the reply
+[17:01] comes in.
+[17:03] And you're not the only person browsing
+[17:04] the internet. And that website is not
+[17:06] the only one on the internet.
+[17:08] So, configuring all this information
+[17:10] manually in all of the routers all over
+[17:12] the world is not a difficult task. It's
+[17:14] an impossible one. That's why routing
+[17:17] protocols were invented. They advertise
+[17:19] routing information from one router to
+[17:21] the next, which is another way of saying
+[17:23] that routers tell each other about what
+[17:25] destinations they know about. It all
+[17:27] starts with uh simple information like
+[17:30] the networks that a router is directly
+[17:32] connected to.
+[17:34] Then in turn, that routers tells the
+[17:36] information or in network speak
+[17:38] advertises routes to those networks to
+[17:41] neighboring routers and to the neighbors
+[17:44] of those neighbors and so on.
+[17:46] Routing protocols can be categorized in
+[17:49] two types, interior routing protocols
+[17:51] and exterior routing protocols. Well,
+[17:54] interior or exterior to what?
+[17:56] When we think about a single network or
+[17:58] a single domain such as a local area
+[18:00] network or LAN
+[18:01] or all of the local networks that belong
+[18:04] to a single entity or company including
+[18:06] the WAN links perhaps,
+[18:07] in many cases that is administratively
+[18:09] called an autonomous system or AS. Now,
+[18:13] while the term AS sounds pretty vague in
+[18:16] when it comes to routing over the
+[18:17] internet.
+[18:20] As we said before, it is a collection of
+[18:22] networks belonging to the same company.
+[18:25] For routing purposes, ASs have a unique
+[18:28] number and the routers at the border of
+[18:30] the AS can contain and advertise
+[18:32] specific routes to reachable
+[18:34] destinations that can be found within
+[18:36] that AS.
+[18:37] We also have to introduce the concept of
+[18:39] an AS precisely because the second
+[18:41] category, exterior routing protocols,
+[18:43] are used to route between different ASs
+[18:46] across the entire internet.
+[18:48] Now, interior routing protocols can be
+[18:51] further divided into two subcategories,
+[18:53] distance vector and link state. Distance
+[18:56] vector means that the protocols use a
+[18:58] simple method to calculate the best path
+[19:00] to a destination based on the distance
+[19:02] to that destination and the direction
+[19:04] they should go towards, just like a
+[19:06] vector in math and physics. With
+[19:09] routing, the The is usually the number
+[19:11] of hops as in how many hops or routers
+[19:14] do you have to pass through before
+[19:16] reaching the destination or how far is
+[19:18] the destination? And the direction is
+[19:20] merely the exit interface or the next
+[19:23] hop routers address. As you can see,
+[19:26] distance vector protocols are pretty
+[19:28] easy to implement and to configure, but
+[19:30] they can be slow to converge, so it
+[19:32] might take a longer time for every
+[19:33] router to find about a change in the
+[19:35] network. It takes time to propagate
+[19:37] information this way.
+[19:39] Sometimes distance vector routing is
+[19:40] also called routing by rumor because it
+[19:43] propagates routing information from hop
+[19:45] to hop
+[19:46] just like gossip. Examples of distance
+[19:49] vector routing protocols are RIP,
+[19:52] routing internet protocol, and IGRP, and
+[19:55] older protocols that you can only find
+[19:57] in books and certification exams
+[19:59] nowadays.
+[20:00] Link state routing protocols are a bit
+[20:02] more complex to calculate the best path
+[20:04] to a destination as they do it based on
+[20:06] the characteristics of each link such as
+[20:09] the speed of the link, its latency, and
+[20:12] even arbitrary costs directly configured
+[20:14] by the admin.
+[20:15] It makes sense to have protocols that
+[20:17] take into consideration the speed of the
+[20:18] link, for example, since distance vector
+[20:21] protocols only looked at the number of
+[20:23] routers the packets would have to
+[20:24] traverse without taking into
+[20:26] consideration that a longer path might
+[20:29] actually be made up of faster links than
+[20:31] a path with fewer routers but slower or
+[20:33] more congested links.
+[20:35] Uh link state protocols are more
+[20:37] accurate and efficient, but they require
+[20:38] more CPU resources. Some examples are
+[20:41] OSPF, EIGRP, and ISIS. Actually, EIGRP
+[20:45] is more like a hybrid protocol. It
+[20:47] combines link state and distance vector
+[20:49] calculations, but this depends on who
+[20:51] you're asking about EIGRP.
+[20:53] Exterior routing protocols use a
+[20:55] different method called path vector.
+[20:57] Path vector chooses the best path to a
+[21:00] destination based on the entire
+[21:02] remaining path and a whole bunch of
+[21:04] other configurable factors, not just the
+[21:06] next hop. The primary example of a path
+[21:09] vector protocol is BGP, Border Gateway
+[21:11] Protocol, which is used to exchange
+[21:13] routes between different ASes on the
+[21:15] internet. That's the high-level routing
+[21:18] protocol of the internet. If you wish to
+[21:20] put it this way, BGP is the protocol
+[21:22] that makes the internet work. Of course,
+[21:25] let's not forget that there are
+[21:26] security-related issues with routing
+[21:28] protocols as well. Simply because, well,
+[21:30] they are implemented as application
+[21:33] code, sometimes running on a very
+[21:35] resource-constrained router. So, attacks
+[21:38] against routing information are
+[21:40] possible. That's why protocols can be
+[21:42] configured to require authentication,
+[21:44] encryption, filtering out updates, and
+[21:47] protection against rogue information
+[21:49] injection. For example, routers can be
+[21:51] configured to only accept route updates
+[21:54] from other authenticated routers, and to
+[21:56] reject updates from unauthorized
+[21:58] sources. That's because messing around
+[22:00] with the routing tables can cause a
+[22:02] denial-of-service attack, or even a
+[22:04] man-in-the-middle attack.
+[22:06] Let's talk about analyzing network
+[22:07] traffic. Since we have such a good
+[22:10] structure in all these networking
+[22:11] models, and we know exactly what to
+[22:13] expect to see and happen, and how should
+[22:15] protocols work at each layer, it just
+[22:17] makes a lot of sense to be able to use
+[22:19] that knowledge to monitor traffic, to
+[22:21] generate statistics out of it, to
+[22:23] perform troubleshooting when something
+[22:25] doesn't work, and even to look for
+[22:26] patterns that might indicate intrusion
+[22:28] attempts, malware, or any kind of attack
+[22:30] that is conducted over a network. Now,
+[22:33] for this, we have something called a
+[22:34] protocol analyzer. Well, it's not a
+[22:37] single product, it's a category of
+[22:38] tools. It can be a dedicated gadget, or
+[22:41] simply a software installed on your
+[22:43] regular computer designed to catch
+[22:45] network traffic, to store all captured
+[22:47] data packets in its memory, or on a
+[22:49] storage device, for later analysis. Now,
+[22:52] here comes the fun part. Analyzing the
+[22:55] captured data. This can be done either
+[22:57] through some super smart automated tools
+[22:59] and scripts, or even manually if you
+[23:01] really know what you're looking for.
+[23:03] Also, don't get confused if you hear the
+[23:05] term like
+[23:06] uh sniffer, network evaluator, or packet
+[23:10] capturing utility. They all mean the
+[23:11] same thing.
+[23:13] A protocol analyzer can put the network
+[23:15] interface card, or the NIC, into what we
+[23:18] called promiscuous mode.
+[23:20] I know, the term sounds interesting, but
+[23:23] actually it just asks the operating
+[23:25] system to put the NIC in promiscuous
+[23:26] mode, which means that the NIC is going
+[23:29] to ignore the destination MAC addresses
+[23:31] of received frames, and will collect
+[23:33] each and every frame that reaches that
+[23:35] interface.
+[23:36] Normally, a network card looks at the
+[23:38] destination MAC addresses that are
+[23:40] coming in, and only accepts those that
+[23:42] match its own MAC address, and a couple
+[23:45] of multicast addresses, since, well,
+[23:47] those are obviously addressed to it, and
+[23:49] the others aren't. And just like we
+[23:51] said, it's worth mentioning that there
+[23:53] are also some exceptions to this, as it
+[23:55] also accepts broadcasts and some
+[23:57] multicast frames.
+[23:59] So, protocol analyzers usually easy for
+[24:01] you to see any fields in any headers at
+[24:03] any layer of any packet that happens to
+[24:05] reach our device. The payload is also
+[24:08] captured in binary, but packet capture
+[24:11] utilities can display it in many ways,
+[24:12] including hexadecimal for binary values
+[24:15] and ASCII, which is useful
+[24:17] when the payload is in clear text.
+[24:20] These tools also have features that
+[24:22] allow you to reconstruct larger payload
+[24:24] from a larger stream of multiple
+[24:26] packets. For example, from a file
+[24:28] transfer, which might have had its
+[24:29] payload split into just a few more
+[24:31] packets, or even into thousands of them.
+[24:34] And of course, you can apply both
+[24:36] capture filters or display filters,
+[24:37] because if you capture everything, the
+[24:39] amount of information might be
+[24:41] overwhelming. A NIC can easily process
+[24:43] thousands of packets every second, and
+[24:45] you probably want to have a haystack as
+[24:49] small as possible for starting your
+[24:51] needle search.
+[24:52] Uh not to mention that you if you plan
+[24:54] on running these types of packet
+[24:55] captures on aggregation links, which can
+[24:58] range from gigabits to
+[25:00] hundreds, 400, 800 gigabit links, or
+[25:03] even more,
+[25:05] the amount of captured data is going to
+[25:06] be absolutely huge. Some of the
+[25:08] available tools out there start with the
+[25:10] open source options like Wireshark and
+[25:12] TCPdump, or commercial ones like
+[25:15] OmniPeek, NetWitness, and NetScout.
+[25:18] Application layer protocols. Here are a
+[25:20] couple of example protocols at each
+[25:22] relevant layer. Starting with the
+[25:23] application layer, it doesn't matter if
+[25:25] it's the application layer in the OSI or
+[25:27] the TCP/IP stack, its role is exactly
+[25:30] the same. And this is not just a cute
+[25:32] listing of example protocols, but this
+[25:33] is stuff that you should really remember
+[25:35] because all the test makers and all
+[25:37] certification exams for networking,
+[25:38] cybersecurity, or whatever exam,
+[25:41] when they run out of ideas while writing
+[25:43] questions, guess what they do. Yep, they
+[25:46] ask you questions about memorizing
+[25:48] protocol and port numbers. Awesome,
+[25:51] right?
+[25:52] So, let's start with the granddaddy of
+[25:55] them all, Telnet on TCP port 23. Telnet
+[25:58] is your remote control for executing
+[26:00] commands on remote systems.
+[26:02] Supports text only in clear text only.
+[26:05] Nowadays, you should know better than to
+[26:07] use Telnet, though. SSH is the way to go
+[26:10] on TCP port 22.
+[26:12] Next, another grandfather of file
+[26:13] transfers is FTP, file transfer
+[26:16] protocol, on TCP ports 20 and 21. It has
+[26:20] two ports because it uses one for
+[26:22] control messages and another one for the
+[26:24] actual data transfer, which is a big
+[26:26] pain in the behind for firewalls,
+[26:29] security policies, and NAT devices when
+[26:31] they need to be FTP aware to memorize
+[26:34] the state for two correlated ports.
+[26:36] But, the protocol has evolved over time
+[26:38] in order to alleviate these annoying
+[26:40] issues, mainly with the introduction of
+[26:42] FTP passive mode.
+[26:44] Long story short, in the original FTP
+[26:47] active mode, the server was supposed to
+[26:50] connect back to a port chosen by the
+[26:53] client.
+[26:55] You can actually feel how this kind of
+[26:57] nonsensical behavior was definitely
+[27:00] designed before NAT and firewalls.
+[27:03] While on passive mode, the client opens
+[27:05] up a new secondary connection to a port
+[27:07] chosen by the server for data transfers.
+[27:10] Now, obviously, the second approach
+[27:12] works much better with NAT and
+[27:13] firewalls, which usually allowed inside
+[27:16] initiated connections, but deny any
+[27:18] connection that attempts to initiate
+[27:20] from the outside in.
+[27:22] FTP has authentication built in, but
+[27:25] it's in clear text. For better security,
+[27:27] we have SFTP or FTPS instead. Another
+[27:31] old one is TFTP on UDP port 69. At least
+[27:34] this one is easy to remember.
+[27:36] A protocol so lightweight that it
+[27:38] doesn't even bother with authentication.
+[27:40] It doesn't even bother with TCP,
+[27:42] actually. It works over UDP.
+[27:45] So, you don't have reliable
+[27:46] transmission, no authentication. It
+[27:48] doesn't even support listing
+[27:50] directories. You might ask, "Who the
+[27:52] heck uses this?" Well, it is used in
+[27:54] environments where you don't expect
+[27:56] packet loss or you don't need
+[27:58] authentication because it's a controlled
+[27:59] environment, and where you need absolute
+[28:02] speed without all the bells and whistles
+[28:04] and overheads of TCP. That's right. In
+[28:07] your own data center for moving around
+[28:09] operating system images, backups,
+[28:11] configurations, and such. So, don't
+[28:13] dismiss it simply because it looks
+[28:15] featureless. Sometimes you really don't
+[28:17] need all the bells and whistles.
+[28:19] SMTP
+[28:21] sitting pretty on TCP port 25
+[28:24] is the postman, the delivery of your
+[28:27] emails from client to server,
+[28:30] and from one server to another. By
+[28:32] default, it is insecure, but it can be
+[28:35] wrapped up nicely and safely in TLS to
+[28:37] transform it into SMTPS.
+[28:41] POP3
+[28:42] at TCP port 110
+[28:45] is the mail retriever, which is pulling
+[28:48] emails from the server to your client.
+[28:51] Just like SMTP, it needs a TLS codes to
+[28:54] become POP S.
+[28:56] Over the TCP port 143, we have IMAP 4,
+[29:00] another email retriever.
+[29:02] It's the fancy version of POP 3 letting
+[29:05] you retrieve just the headers and delete
+[29:07] messages directly from the server.
+[29:09] It supports folder synchronization and
+[29:11] many more. It's It kind of resembles
+[29:13] pretty much all that you could expect
+[29:15] from a mail client nowadays, but
+[29:16] remember it too needs the TLS armor to
+[29:20] transform it into IMAP S.
+[29:23] DHCP is sitting on UDP ports 67 and 68,
+[29:28] takes care of configuring your devices
+[29:31] when they first connect to the network.
+[29:33] It makes sure that they receive a valid
+[29:34] IP address, the address of the gateway,
+[29:37] the domain suffix, the address of the
+[29:38] local DNS server, and many other
+[29:40] details.
+[29:42] HTTP, the celebrity of the group,
+[29:44] resides on TCP port 80 delivering web
+[29:47] page elements in clear text. It's more
+[29:50] secure sibling HTTPS uses the more
+[29:53] secure TCP port 443 turning HTTP into a
+[29:57] TLS encrypted protocol.
+[29:59] Nowadays, HTTP can transport virtually
+[30:01] anything from streaming videos to games
+[30:03] directly into your browser
+[30:05] even to tunnel other protocols.
+[30:09] And finally, we have SNMP on UDP port
+[30:12] 161 which is used for collecting network
+[30:16] health and status info from your
+[30:17] devices. The devices can also talk back
+[30:20] to the server and announce that an event
+[30:21] has happened which is called an SNMP
+[30:24] trap that happens on the next port, UDP
+[30:26] port 162.
+[30:29] And I know that we're not specifically
+[30:30] focusing on SNMP topic right now, but I
+[30:32] guess I should probably mention the most
+[30:35] security relevant piece of information
+[30:36] here about SNMP. SNMP versions 1 and 2
+[30:39] including 2C transmit everything in
+[30:42] clear text. And by now you know why this
+[30:44] is bad. SNMP version 3 has encryption
+[30:48] and authentication, but this
+[30:50] changes nothing about the ports that we
+[30:52] discussed. In all versions, we still
+[30:54] have UDP 161 used by the SNMP agent to
+[30:57] listen for requests coming in from the
+[30:59] management station, and UDP 162 on the
+[31:03] management station for the agent to send
+[31:05] its traps to, or its alerts to. All
+[31:09] right, so there's a slight chance of a
+[31:10] tricky question here. Most other
+[31:13] protocol port numbers are server ports.
+[31:15] Here with SNMP, we have one listening on
+[31:18] the agent and one listening on the
+[31:20] server.
+[31:22] A very important
+[31:23] by the way here. The protocol port
+[31:26] numbers, these and every other port
+[31:28] numbers out there, are just conventions
+[31:31] that servers know on which port to
+[31:34] listen, and clients should know on which
+[31:36] port to send their request to without
+[31:38] any other extra configuration. But
+[31:40] again, this is just a convention. There
+[31:43] is absolutely nothing stopping SSH from
+[31:46] working on port 80 or HTTP from working
+[31:49] over port 12345.
+[31:52] Remember that.
+[31:54] Going down the stack, OSI or TCP/IP, it
+[31:57] doesn't matter, we will find right below
+[31:59] application protocols the transport
+[32:01] layer protocols.
+[32:02] Communication using these protocols is
+[32:04] done using port numbers. The ports are
+[32:06] nothing more than indication that a
+[32:07] specific protocol is in use.
+[32:10] In most cases, we can just look at the
+[32:11] port numbers and determine which
+[32:13] protocol is communicating over it. In
+[32:15] most cases, because as we just said a
+[32:17] minute ago, the protocol to port mapping
+[32:19] is nothing more than a simple
+[32:20] convention.
+[32:22] Nevertheless, we still have a lot of
+[32:23] ports we can use, 65,536
+[32:27] to be precise, which is exactly 2 to the
+[32:30] power of 16th, which indicates that 16
+[32:33] bits are used in the transport header to
+[32:35] store the port numbers. Yes, numbers,
+[32:38] two of them, both source and
+[32:39] destination. With multiple ports on each
+[32:41] connected host, it means that each host
+[32:43] can now talk over multiple protocols at
+[32:45] the same time, even with the same peer,
+[32:47] without interference, as long as each
+[32:49] protocol nicely obeys its allocated port
+[32:51] numbers.
+[32:53] The port numbers are not created equal.
+[32:55] The first 1,024 of them are the
+[32:58] well-known ports. Fortunately, you don't
+[33:01] really have to know well all of them for
+[33:03] the exam. Uh these are the ones where we
+[33:05] find common protocols and applications
+[33:07] like email, web, VoIP, tunneling
+[33:09] protocols, NTP, SMTP, SNMP, and so on.
+[33:14] Then we have the port numbers from 1,024
+[33:17] to 49,151.
+[33:20] These are known as the registered ports.
+[33:22] And they're called registered because
+[33:23] they have been registered with the
+[33:25] International Assigned Numbers Authority
+[33:27] or the IANA for less common or
+[33:30] proprietary applications.
+[33:32] Finally, we have the random, dynamic, or
+[33:33] ephemeral ports from 49,152
+[33:38] to 65,535.
+[33:41] And these are always free to use, and
+[33:43] most source ports are selected from this
+[33:45] pool because they are chosen randomly.
+[33:48] For instance, we don't really care from
+[33:49] which source port we're sending a
+[33:51] request from as long as we're keeping
+[33:53] track of them for the duration of the
+[33:54] session when replies are coming back in.
+[33:57] The two primary transport layer
+[33:59] protocols of TCP/IP are TCP and UDP. The
+[34:02] shortest definition that you'll find
+[34:03] about them is that TCP is reliable,
+[34:06] while UDP is best effort.
+[34:08] There are many reasons why TCP is
+[34:10] considered reliable, uh for example,
+[34:12] because of the retransmission mechanism
+[34:14] built into it in case packets are lost
+[34:16] in transit or because of its capacity
+[34:18] for automatically fine-tuning the
+[34:20] transmission speed according to how fast
+[34:23] the link is.
+[34:24] The three-way handshake is also a major
+[34:26] feature that ensures that both parties
+[34:28] are able to communicate before actually
+[34:30] sending any data. You might already know
+[34:32] this, so I'll keep this short. The TCP
+[34:34] header has a number of flags, just bits
+[34:37] actually, that control the flow of the
+[34:39] connection. These same flags are used
+[34:41] during connection setup, so that when A
+[34:43] wants to initiate the connection to B, A
+[34:45] sends a first packet with the SYN flag
+[34:47] set, B replies with its own SYN flag and
+[34:51] acknowledges A's attempt to communicate
+[34:53] with an ACK flag, and finally A replies
+[34:56] with its own ACK flag. These flags are
+[34:59] also correlated with corresponding
+[35:01] sequence numbers, so that everyone knows
+[35:03] where to start counting from in case of
+[35:05] the SYN flag, and also what exactly are
+[35:07] we acknowledging via the ACK flag.
+[35:11] This three-way handshake happens for two
+[35:13] reasons. First of all, all TCP
+[35:15] communications are bidirectional, so we
+[35:17] basically have a flow from A to B and
+[35:19] another flow from B to A, even if, let's
+[35:22] say that B doesn't really have much to
+[35:24] say to A, but as far as TCP is
+[35:26] concerned, we're acknowledging in two
+[35:28] directions. And secondly, if you
+[35:30] remember what we just said about TCP
+[35:32] being reliable and being able to
+[35:33] retransmit lost packets, this can only
+[35:36] be done if TCP keeps track of which
+[35:38] packets were sent and which were
+[35:40] received. How does it do that? Well, it
+[35:42] just puts an incrementing number on them
+[35:44] and keeps track of that number. That's
+[35:46] the sequence number in the TCP header.
+[35:49] And for this number to work both ways,
+[35:51] both ends of the communication need to
+[35:53] agree on an initial sequence number in
+[35:56] each direction.
+[35:57] That's another thing that happens during
+[35:58] the three-way handshake, setting those
+[36:00] initial sequence numbers, which
+[36:02] sometimes are random, in very rare cases
+[36:04] they're predefined in the OS, so that we
+[36:07] know where to start counting from. So,
+[36:09] that's basically what we're
+[36:10] acknowledging, the other peer's chosen
+[36:14] sequence number, not just the fact that
+[36:16] we've received a SYN flag from them.
+[36:19] We have more flags, but this is not a
+[36:20] networking course, just a networking
+[36:22] chapter, so I'll mention just another
+[36:23] two. We have FIN,
+[36:25] uh for finishing a connection in a
+[36:27] graceful way. We're announcing that
+[36:28] we're done. We're saying goodbye. And
+[36:30] RST or reset, this is for resetting a
+[36:33] connection, which is like pulling the
+[36:35] network cable. So, not so gracefully.
+[36:37] The RST flag is sometimes also sent back
+[36:40] by firewalls or by operating systems
+[36:42] when a connection attempt is made to a
+[36:44] closed port. It's a way of saying,
+[36:46] "Nobody's listening on this port here.
+[36:48] Nobody's at home. Get off my lawn."
+[36:51] Reset the connection.
+[36:53] Let's talk just a bit about DNS. DNS
+[36:55] resolves a human-friendly domain name
+[36:57] like google.com into its IP address.
+[37:00] Because we need the IP address because
+[37:02] that's what is being added to the layer
+[37:04] three header of packets, and that's what
+[37:06] we use for routing on all intermediary
+[37:09] devices along the way. It's also
+[37:11] possible to query DNS in reverse, that
+[37:13] is, to find the domain name from an IP
+[37:15] address using what is obviously called a
+[37:18] DNS reverse lookup. This can be done
+[37:20] only if a PTR pointer record exists in
+[37:23] the domain's zone file.
+[37:25] DNS, functioning both public and private
+[37:28] networks, uses a hierarchical naming
+[37:30] system, which means that it is built
+[37:32] like a branching tree.
+[37:34] Formally speaking, it connects IP
+[37:36] addresses with easy easy to remember
+[37:37] fully qualified domain names, FQDNs.
+[37:41] An FQDN consists of three main sections.
+[37:44] The top-level domain, TLD, is the far
+[37:47] right section of the FQDN, like the .com
+[37:51] in www.google.com.
+[37:53] Then there's the registered domain name,
+[37:55] for instance, Google in google.com.
+[37:58] The far left segment, like www,
+[38:02] is the host name or the subdomains.
+[38:04] There's a whole array of top-level
+[38:06] domains available, including the
+[38:08] original ones, .com, .org, .edu.
+[38:11] Nowadays, you can even get uh TLDs like
+[38:14] .travel, .mobile, .systems, and so on.
+[38:17] And of course, you have the well-known
+[38:19] two letters for country identifiers.
+[38:22] Another thing that you should remember
+[38:23] is that an FQDN cannot exceed 253
+[38:26] characters in total length and any
+[38:28] single section cannot exceed 63
+[38:31] characters. It can only contain letters,
+[38:33] numbers, and hyphens.
+[38:36] The way DNS works is that each
+[38:37] registered domain name has an
+[38:39] authoritative name server assigned to
+[38:42] it. This server is the one that actually
+[38:44] hosts the original editable zone file
+[38:47] for that domain. Uh secondary
+[38:49] authoritative name servers can also host
+[38:52] zones, but only read-only versions of
+[38:55] the zone files.
+[38:56] DNS was initially managed by a static
+[38:59] local file known as the hosts file,
+[39:01] which is located under {slash} etc.
+[39:03] {slash} hosts in Linux systems. The file
+[39:06] still exists in both Windows and Linux
+[39:09] and it's actually the first file to be
+[39:10] checked every time the computer needs to
+[39:12] resolve a DNS name. The {slash} etc.
+[39:15] {slash} hosts file is so well known and
+[39:18] has been around for so long that even
+[39:20] Windows implemented it in a somewhat
+[39:22] memorable fashion. It's located in C:
+[39:25] {backslash} Windows, System32, drivers,
+[39:29] etc. hosts.
+[39:31] So, at the end it's still going to be
+[39:33] etc. hosts, right? Even in Windows.
+[39:35] This file is also a pretty juicy target
+[39:37] for hackers because by altering this
+[39:39] file they can trick your computer into
+[39:41] accessing non-legitimate destinations.
+[39:43] You think you're typing google.com in
+[39:45] your browser, but your malicious hosts
+[39:47] file might redirect you to an IP address
+[39:50] that belongs to the attacker and you
+[39:51] might not even be able to tell the
+[39:53] difference.
+[39:54] There is also a DNS client cache on your
+[39:56] computer so that when a client requests
+[39:58] a FQDN to be resolved, it first checks
+[40:02] the local DNS cache to see if the answer
+[40:04] is already there, maybe from a previous
+[40:06] request. If it's not, a DNS query is
+[40:09] sent to the DNS server specified in the
+[40:11] machine's configuration.
+[40:13] Uh DNS works over TCP and UDP port 53.
+[40:16] TCP port 53 is used for zone transfers,
+[40:19] which happens only between DNS servers
+[40:22] when they need to sync with each other
+[40:24] or when a response exceeds 512 bytes in
+[40:28] length.
+[40:29] UDP port 53 is used for regular, most
+[40:33] typical DNS queries from clients to
+[40:35] servers.
+[40:36] A security enhancement called Domain
+[40:38] Name System Security Extensions, DNSSEC,
+[40:42] provides certificate authentication and
+[40:44] encryption to DNS operations. Which, as
+[40:46] you probably guessed, like all protocols
+[40:48] invented before you and I were born, DNS
+[40:51] works in clear text by default. DNSSEC
+[40:54] also helps with attacks like zone file
+[40:57] poisoning and DNS cache poisoning. And
+[41:00] there's also something called DNS over
+[41:02] the HTTPS, DoH, duh. Uh this creates an
+[41:06] encrypted tunnel with a DNS server and
+[41:09] uses it as a VPN to protect the DNS
+[41:12] traffic to and from that DNS server. And
+[41:15] we also have Oblivious DoH, ODoH,
+[41:20] which adds a DNS proxy between the
+[41:22] client and the DNS resolver for
+[41:25] anonymity and privacy. Similar to a web
+[41:27] proxy, but for DNS.
+[41:30] Like any other protocol, there are a few
+[41:33] risks associated with DNS. We need to be
+[41:35] aware of them and to address these
+[41:37] because DNS is one of those things that
+[41:39] you cannot simply shut down if you think
+[41:40] it's too risky. We just have to find a
+[41:42] secure way of living with it.
+[41:44] First, we have DNS poisoning, also known
+[41:46] as DNS spoofing or DNS cache poisoning,
+[41:49] which is a cyber attack where the
+[41:50] attacker maliciously changes the DNS
+[41:52] data used by a client. It's more of a
+[41:55] generic term than a specific attack
+[41:56] method because it can be done in a
+[41:58] number of ways. An attacker could alter
+[42:01] the host file, they could intercept and
+[42:03] modify the DNS traffic in a in a
+[42:05] man-in-the-middle attack, they could
+[42:07] inject a fake DNS server in the
+[42:09] operating system, or they could hack the
+[42:11] company DNS server itself in order to
+[42:13] make it return the results that the
+[42:15] attacker wants.
+[42:16] A rogue DNS server is basically a
+[42:18] deceptive server that eavesdrop on
+[42:20] network traffic to intercept DNS
+[42:22] queries. It then sends back its own DNS
+[42:25] responses with false IP details to the
+[42:27] client. If the response from the rogue
+[42:29] server can reach the client before the
+[42:31] real DNS server's one, the client
+[42:34] believes the first response to be true
+[42:36] and closes the DNS session. This results
+[42:38] in the actual response from the real DNS
+[42:40] server being discarded as information
+[42:42] that wasn't requested.
+[42:44] Uh DNS farming, farming with a ph, is an
+[42:48] attack that redirects a legitimate
+[42:50] website's URL to a counterfeit website.
+[42:52] This is achieved either by modifying the
+[42:54] local host file on the system or by
+[42:56] tampering with the DNS resolution, so
+[42:58] it's still some sort of cache poisoning,
+[43:00] but we call it farming because it is
+[43:02] used to, quote on quote, farm
+[43:04] credentials, stealing passwords, that
+[43:06] is.
+[43:07] Uh altering the host file, since we
+[43:09] already talked about this, is done
+[43:11] through malware and or shell scripts,
+[43:13] and it affects just a single host.
+[43:15] Changing the host file is not
+[43:17] necessarily malicious as some host
+[43:19] firewalls use it to block user access to
+[43:21] specific destinations,
+[43:22] or some admins might use it to control
+[43:24] where a server is allowed to connect.
+[43:26] And on the grayer side of things,
+[43:29] pirated software sometimes alters this
+[43:31] host file to fool activation attempts
+[43:34] from software that tries to call home.
+[43:37] If this is malicious or not depends on
+[43:39] your perspective on piracy.
+[43:41] Also, a compromised IP configuration can
+[43:43] lead to a client having false DNS
+[43:45] information. In most networks, the DNS
+[43:47] information is transmitted through DHCP,
+[43:50] so any attacks targeting the DHCP
+[43:52] server, like performing a
+[43:53] man-in-the-middle attack, DHCP spoofing,
+[43:56] or just hacking the DHCP server, can
+[43:58] have side effects on DNS connectivity,
+[44:00] as well.
+[44:01] Now, strictly speaking about the domains
+[44:03] that you own and manage, there are a
+[44:05] couple of risks that you should be
+[44:07] aware. For example, domain hijacking or
+[44:09] just simply known as domain theft means
+[44:12] that the registration of a domain name
+[44:14] is altered without the permission of the
+[44:16] original owner. This can be done through
+[44:18] various methods such as stealing login
+[44:20] credentials or exploiting weaknesses in
+[44:22] the domain registrar systems. The new
+[44:24] domain owner could host uh internal
+[44:27] different content or a deceptive copy of
+[44:30] the previous site, potentially leading
+[44:32] to fishing attacks and data theft.
+[44:34] A domain can also be stolen right from
+[44:36] under your nose if you forget to renew
+[44:38] it before it expires, and this is
+[44:40] perfectly legal. Depending on the
+[44:42] registrar policy, they might reserve the
+[44:45] domain for you for some time or they
+[44:46] might just open it up for anyone else to
+[44:48] grab it.
+[44:50] To protect against domain hijacking,
+[44:52] it's essential to use strong
+[44:53] multi-factor authentication when logging
+[44:55] into your domain registrar. To prevent
+[44:57] your domain registration from expiring,
+[44:59] set up auto renewal, double-check the
+[45:01] payment method before the renewal date
+[45:03] so that the domain doesn't become
+[45:04] available without your knowledge, or at
+[45:07] least add a calendar reminder before the
+[45:09] expiration date. Uh domains are bought
+[45:11] for many years, and people tend to
+[45:13] forget that they have an expiration
+[45:14] date.
+[45:15] Uh typosquatting is a strategy used to
+[45:18] exploit user typing errors when entering
+[45:21] a domain name or an IP address. The
+[45:23] squatter anticipates these errors and
+[45:25] registers similar domain names to
+[45:28] redirect traffic to their own site, like
+[45:30] typing uh
+[45:32] g o g l e, Google with a single o, or
+[45:35] Google with three o's, something like
+[45:38] this.
+[45:39] Homograph attacks exploit similarities
+[45:41] in character sets to register bogus
+[45:44] domains that appear legitimate. For
+[45:46] example, the Greek letter o,
+[45:48] that's omega, the Latin letter o, and
+[45:52] the Cyrillic letter o look the same but
+[45:55] have different codes. So, they will
+[45:57] redirect you to different websites if
+[45:59] registered as part of similar domain
+[46:01] names.
+[46:02] Uh many other letters have almost
+[46:04] indistinguishable alternatives in the
+[46:06] alphabets of other languages.
+[46:08] Uh there is also URL hijacking, which is
+[46:10] different from domain hijacking. Uh URL
+[46:13] hijacking involves displaying a
+[46:14] deceptive link or ad that looks like a
+[46:16] familiar site. However, when clicked, it
+[46:19] redirects the user to a different
+[46:20] location. Malicious ads usually do this.
+[46:23] Last one is clickjacking. This is
+[46:25] usually done by adding an invisible
+[46:26] overlay, frame, or image map over a
+[46:29] displayed webpage. Uh any click or
+[46:32] selection by the user is then captured
+[46:35] by this invisible layer and redirected
+[46:37] to a malicious target. Not exactly DNS
+[46:40] related, but can be mitigated by not
+[46:42] allowing the user to navigate to
+[46:44] locations other than the authorized
+[46:46] domain, or even the browser can be
+[46:48] instructed to not load or display frames
+[46:51] that are not stored on the same domain
+[46:53] as the main page. We're going to stop
+[46:55] here because we're about to go into the
+[46:57] realm of web application security, and
+[47:00] there be dragons, but not in this
+[47:02] raining.
+[47:03] All right, so how do you secure DNS?
+[47:05] You add an S to the end, like with HTTP,
+[47:08] right?
+[47:09] Ain't that cute?
+[47:10] But it's wrong.
+[47:12] First, start by limiting zone transfers
+[47:15] from internal DNS servers to external
+[47:18] DNS servers. There is no reason why
+[47:20] someone over the internet would ever
+[47:22] request your entire DNS database over a
+[47:25] zone transfer.
+[47:27] Next, internal clients should resolve
+[47:29] all domain names via the internal DNS
+[47:32] names, so you might want to block
+[47:34] outbound UDP port 53 or queries coming
+[47:36] from internal clients to stop them from
+[47:39] contacting DNS servers that are not
+[47:41] under your control.
+[47:43] Next, set up a network intrusion
+[47:45] detection system to monitor any unusual
+[47:47] DNS traffic. This might also be enabled
+[47:49] as part of your edge firewall services.
+[47:52] Ensure that all DNS server and client
+[47:54] systems within your private network are
+[47:57] patched, updated, not running
+[47:58] unnecessary services, not being exposed
+[48:01] with unnecessary interfaces to
+[48:03] unnecessary networks.
+[48:05] Use DNS sec when possible to secure your
+[48:08] DNS infrastructure and implement DoH on
+[48:12] all clients where supported.
+[48:14] Consider using a split DNS system. This
+[48:16] involves setting up a DNS server for
+[48:19] public use
+[48:20] and a separate one for internal use.
+[48:22] Uh the internal DNS is only accessible
+[48:24] by internal systems while outsiders are
+[48:27] being blocked from access.
+[48:29] Finally, a DNS sinkhole is another
+[48:32] defense strategy. This technique
+[48:33] involves providing false responses to
+[48:36] DNS queries from malware to prevent
+[48:39] access to command and control systems.
+[48:41] Uh it can also protect users from
+[48:43] visiting known malicious or fishing
+[48:45] sites.
+[48:46] Sometimes these can also be used to
+[48:47] disrupt denial of service traffic. As
+[48:50] you can guess, a sinkhole is only as
+[48:51] useful as your filtering mechanisms. To
+[48:54] filter out malicious traffic, you first
+[48:56] need to identify it. So, this is where
+[48:58] you go back to that IDS and IPS
+[49:00] functionality above.
+[49:08] >> [music]

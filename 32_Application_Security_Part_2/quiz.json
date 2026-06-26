@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A developer for an online auction website implements a feature where users bid on items. Bids are stored in a database using a signed 8-bit integer for the item count. An attacker submits a request to bid on a quantity of items that exceeds 127. The application processes the value and registers the item count as -128, resulting in a negative invoice balance that transfers money back to the attacker's account. What type of vulnerability was exploited?",
+    "options": [
+      "Buffer overflow",
+      "Integer overflow",
+      "Null pointer de-referencing",
+      "Server-side request forgery (SSRF)"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is an integer overflow. In signed 8-bit integers, the maximum value that can be represented is 127 (01111111). When the value exceeds 127 (e.g., adding 1 to make it 128, which binary represents as 10000000), it overflows and rolls over to the minimum negative value (-128) because the sign bit is set to 1. This is a logic flaw resulting from the choice of variable size and lack of input boundary validation."
+  },
+  {
+    "question": "A high-volume trading platform is experiencing an issue where two different brokers are occasionally able to sell the same block of shares simultaneously, leading to duplicate transactions. A review of the source code reveals that the application checks the availability of the shares and then records the sale. However, these two steps are separate operations and not locked. What type of vulnerability is present, and how should it be resolved?",
+    "options": [
+      "A directory traversal vulnerability; resolve by canonicalizing paths.",
+      "A Time of Check / Time of Use (TOC/TOU) race condition; resolve by executing the check and transaction as a single atomic operation.",
+      "Cross-site scripting (XSS); resolve by sanitizing input fields.",
+      "Insecure object reference; resolve by implementing a Web Application Firewall (WAF)."
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a Time of Check / Time of Use (TOC/TOU) race condition, which is a type of race condition. The vulnerability arises because the state of the resource (share availability) can change between the time it is checked and the time it is used. To resolve it, the check and use operations must be combined into a single, indivisible (atomic) operation using locking mechanisms like mutexes or semaphores."
+  },
+  {
+    "question": "A database security audit reveals that a web application is vulnerable to SQL injection because it builds SQL statements using string concatenation of user-provided form parameters. Which is the most effective coding control the development team should implement to prevent this vulnerability?",
+    "options": [
+      "Use URL encoding and Base64 encoding on all form parameters.",
+      "Deploy a Web Application Firewall (WAF) to block RDP connections.",
+      "Implement parameterized queries or stored procedures.",
+      "Enable database data minimization and tokenization."
+    ],
+    "correctIndex": 2,
+    "explanation": "The most effective code-level defense against SQL injection is the use of parameterized queries (prepared statements) or stored procedures. These compile the SQL query structure first inside the database engine or application before parameters are passed, preventing user input from altering the execution path of the query."
+  },
+  {
+    "question": "An administrator is logged into a corporate network switch management portal in one browser tab. In a separate tab, they browse an external tech blog and click on a link that contains a hidden image tag. The source of the image points to a command on the switch portal that resets the switch configuration. Because the administrator has an active authenticated session, the switch executes the command and resets. What type of attack did the tech blog execute?",
+    "options": [
+      "Cross-Site Scripting (XSS)",
+      "Cross-Site Request Forgery (CSRF)",
+      "Server-Side Request Forgery (SSRF)",
+      "Local File Inclusion (LFI)"
+    ],
+    "correctIndex": 1,
+    "explanation": "This is a Cross-Site Request Forgery (CSRF) attack. CSRF exploits the trust a site has in a user's browser by abusing an active authenticated session. When the user visits a malicious third-party site, the site forces the victim's browser to send an unauthorized request (carrying the session cookies) to the target application."
+  },
+  {
+    "question": "An attacker targets a critical directory service by sending malformed packets containing null values in pointer fields. The service dereferences these null values, resulting in a Null Pointer Exception that crashes the authentication daemon. Upon crashing, the service enters a fail-open state, allowing all login requests to bypass authentication until the daemon is restarted. What should the security team recommend to mitigate this risk?",
+    "options": [
+      "Enable code signing and use PKI to encrypt the pointer addresses.",
+      "Implement strict input validation to catch null values and rewrite the exception handler to ensure the service fails-secure (blocks all access) upon a crash.",
+      "Use a stored procedure to sanitize the pointer fields in the user directory.",
+      "Deploy a database firewall to block directory traversal attempts."
+    ],
+    "correctIndex": 1,
+    "explanation": "To mitigate null pointer crashes and fail-open states, developers must implement robust input validation to prevent null pointer inputs from being processed (dereferenced). Additionally, the application must be designed to fail-secure (blocking all access and terminating securely) rather than failing open when an unhandled exception or crash occurs."
+  }
+]

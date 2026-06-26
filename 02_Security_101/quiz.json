@@ -1,0 +1,57 @@
+[
+  {
+    "question": "An organization recently suffered a data breach due to a zero-day exploit in its web server software. The security team had previously performed risk assessments, documented their architectures, applied all vendor-released patches up to the day of the attack, and continuously monitored network traffic. From a legal liability perspective, which of the following is correct?",
+    "options": [
+      "The organization failed to exercise due care by not preventing the breach.",
+      "The organization can demonstrate due care and due diligence by showing they researched risks and implemented standard protections.",
+      "The security analyst who configured the firewall will be held personally liable for the data breach.",
+      "The organization is compliant because zero-day exploits are explicitly exempt from all regulations."
+    ],
+    "correctIndex": 1,
+    "explanation": "Due diligence is the research and planning (performing assessments, documenting architectures), while due care is the implementation and action (applying patches, monitoring traffic). Because the organization actively did both, they can legally demonstrate they met the standard of care, even though a breach still occurred. Zero-day exploits cannot be predicted, so the organization is not liable for negligence if they followed best practices. Personal liability rarely falls on technical staff; ultimate accountability remains with senior management."
+  },
+  {
+    "question": "A system administrator has configured a host-based firewall on all company servers to block all inbound traffic from data interfaces by default. According to the security policy hierarchy, which term best describes this control?",
+    "options": [
+      "Standard",
+      "Guideline",
+      "Baseline",
+      "Procedure"
+    ],
+    "correctIndex": 2,
+    "explanation": "A baseline is a minimum security configuration applied uniformly across systems to maintain a consistent security posture (e.g., blocking all inbound traffic by default on all newly deployed servers). A standard is a mandatory high-level technology rule (e.g., 'all servers must run Linux'). A guideline is advisory and optional. A procedure is a step-by-step instruction on HOW to configure that firewall."
+  },
+  {
+    "question": "Which of the following threat types from the STRIDE model directly targets the non-repudiation security goal?",
+    "options": [
+      "Spoofing",
+      "Repudiation",
+      "Information Disclosure",
+      "Elevation of Privilege"
+    ],
+    "correctIndex": 1,
+    "explanation": "Repudiation is the threat where an active entity denies having performed an action. Non-repudiation is the security goal designed to prevent this threat by ensuring actions can be verified and traced back to a specific identity with high certainty (using digital signatures and audit trails)."
+  },
+  {
+    "question": "During a security audit, it was discovered that developers are allowed to write and modify security policies for their own projects without obtaining senior management sign-off, as long as they follow the security framework. Why is this practice a violation of security governance principles?",
+    "options": [
+      "Developers do not have the technical skills to write security policies.",
+      "Security frameworks are proprietary and cannot be used by developers.",
+      "Ultimate liability lies with senior management, so they must approve all security policies.",
+      "Policies must be written by external auditors to ensure objectivity."
+    ],
+    "correctIndex": 2,
+    "explanation": "Ultimate liability and accountability for security breaches lie with senior management. Therefore, senior management must review, approve, and sign off on all security policies. Delegating policy approval to developers without management oversight violates the chain of accountability and governance."
+  },
+  {
+    "question": "Which phase of the AAA framework is responsible for matching a verified identity to its specific permissions and rights on a system object?",
+    "options": [
+      "Identification",
+      "Authentication",
+      "Authorization",
+      "Accounting"
+    ],
+    "correctIndex": 2,
+    "explanation": "Authorization determines what an authenticated subject is allowed to do (their permissions) on an object (e.g., read, write, execute). Identification is claiming an identity, Authentication is proving it, and Accounting is tracking the actions."
+  }
+]

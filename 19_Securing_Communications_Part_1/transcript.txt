@@ -1,0 +1,1275 @@
+[00:09] [music]
+[00:09] >> Welcome back. This chapter is about
+[00:11] securing the integrity and
+[00:13] confidentiality of data in transit
+[00:16] when we're moving data from one computer
+[00:19] to another over a network. We'll be
+[00:21] looking at different types of
+[00:22] communication security and potential
+[00:24] vulnerabilities simply because this is
+[00:27] where most vulnerabilities can be found
+[00:30] as well as possible fixes. So, let's get
+[00:32] started.
+[00:34] Let's talk about authentication
+[00:35] protocols. Most communication nowadays
+[00:38] revolves around TCP/IP. It's an old
+[00:41] protocol suite, but it has passed the
+[00:43] test of time quite well. Still, like
+[00:45] most protocols invented a long, long
+[00:48] time ago when security really wasn't a
+[00:49] big concern, TCP/IP does have several
+[00:52] issues that need to be addressed before
+[00:54] we can consider the data that it's
+[00:56] transporting truly secure.
+[00:58] Now, among the first things that happen
+[01:00] before transmitting secure data is a
+[01:02] process called authentication or should
+[01:04] be a process called authentication.
+[01:06] There would be no point in calling a
+[01:08] transmission secure if we were not able
+[01:11] to identify and confirm that the person
+[01:13] we're talking to is who they pretend to
+[01:16] be.
+[01:17] What would be the use of communicating
+[01:19] over a secure channel like a VPN
+[01:22] but to be talking to a hacker?
+[01:24] Fortunately, we have some protocols that
+[01:26] help us implement authentication at the
+[01:28] network level.
+[01:30] Now, the first protocol worth mentioning
+[01:31] is Point-to-Point Protocol or PPP.
+[01:35] It's a protocol which was traditionally
+[01:37] used to transport IP traffic over
+[01:39] dial-up or Point-to-Point links like
+[01:43] leased lines or serial connections,
+[01:45] hence the name Point-to-Point Protocol.
+[01:48] We don't use such connections today
+[01:49] anymore, of course, but PPP can still be
+[01:52] the basis of many authentication
+[01:53] methods. Uh PPP is actually a very
+[01:56] capable protocol as it can assign IP
+[02:00] addresses, can offer synchronous
+[02:01] communication, can encapsulate other
+[02:03] protocols, can perform multiplexing, can
+[02:06] configure link parameters, can test and
+[02:09] report on the link quality, can perform
+[02:12] error detection, and it even supports
+[02:14] additional features that can be
+[02:15] negotiated between the peers.
+[02:17] PPP was actually a replacement of the of
+[02:20] an older protocol called Serial Line
+[02:23] Internet Protocol, SLIP, designed, of
+[02:26] course, for serial connections,
+[02:28] which are also gone nowadays, but PPP
+[02:31] offered several improvements. PPP's
+[02:33] original authentication options were
+[02:36] Password Authentication Protocol, PAP,
+[02:39] Challenge Handshake Authentication
+[02:40] Protocol, CHAP, and Extensible
+[02:43] Authentication Protocol or EAP.
+[02:46] PAP or Password Authentication Protocol
+[02:48] transmits usernames and passwords in
+[02:51] clear text without any form of
+[02:53] encryption. It's something, but it's not
+[02:56] much. No security, no encryption. It's
+[02:59] like shouting your password out in the
+[03:01] open. You can prove that you know the
+[03:03] password,
+[03:04] but now so does everyone else around
+[03:07] you. CHAP, next one or Challenge
+[03:09] Handshake Authentication Protocol,
+[03:11] authenticates using a challenge-response
+[03:14] process that cannot be replayed. That's
+[03:16] the important part. Anti-replay is
+[03:19] important in authentication because
+[03:21] while an attacker might not be able to
+[03:23] find the password or a secret key used
+[03:25] for authentication, they might attempt
+[03:27] to repeat a packet exchange or packet
+[03:30] sequence they've seen before knowing
+[03:33] that it was part of a successful
+[03:35] authentication. Now, protocols should be
+[03:37] built to deny authentication attempts
+[03:39] based on replayed sessions.
+[03:42] The way CHAP works is as follows. If I'm
+[03:44] sending you a number, you do some math
+[03:46] with that number and some secret
+[03:48] password that you and I both know, and
+[03:51] then you send me the result. If I
+[03:53] compute the same result using the same
+[03:55] algorithm and using the same secret
+[03:57] password, then I can be sure that you
+[03:59] and I both know the same password and
+[04:02] that's without ever exchanging it over
+[04:04] the network. Now, whoever listens to the
+[04:06] communication cannot figure out the
+[04:08] password, nor can it do anything with
+[04:10] captured packets in case they think
+[04:12] about replaying them back in the future.
+[04:15] EAP or Extensible Authentication
+[04:16] Protocol is not exactly a protocol, but
+[04:19] a framework for authentication, more
+[04:21] like a collection of protocols, allowing
+[04:23] you to customize your authentication
+[04:25] however you want. It supports many
+[04:27] authentication methods ranging from um
+[04:30] passwords to certificates, one-time
+[04:33] passwords, even authentication using
+[04:35] your SIM card from a mobile phone when
+[04:37] connecting to a Wi-Fi network. So,
+[04:39] there's a huge flexibility hidden behind
+[04:42] this EAP framework. Some methods use
+[04:44] encryptions, other don't.
+[04:47] Next, let's dive into some specific
+[04:49] authentication protocols starting with
+[04:51] Lightweight Extensible Authentication
+[04:53] Protocol, LEAP, L E A P. Uh LEAP uses
+[04:58] username and password credentials to
+[05:00] authenticate users and supports dynamic
+[05:02] web keys for encryption and mutual
+[05:05] authentication.
+[05:06] Now, although it was a step forward when
+[05:08] it was introduced, Cisco LEAP, similar
+[05:11] to WEP, had well-known security
+[05:13] weaknesses as its passwords could be
+[05:16] cracked offline.
+[05:18] LEAP uses a modified version of MS-CHAP
+[05:20] authentication protocol in which user
+[05:22] credentials are not strongly protected,
+[05:25] thus this older Cisco proprietary
+[05:27] protocol is now considered outdated and
+[05:29] is best avoided.
+[05:31] Another one is Protected Extensible
+[05:33] Authentication Protocol, PEAP, P E A P.
+[05:36] It's a more secure option and it
+[05:37] encapsulates EAP with a TLS tunnel
+[05:40] adding an extra layer of security. It
+[05:42] also supports mutual authentication, so
+[05:44] client can authenticate the server and
+[05:46] server can authenticate the client as
+[05:48] well over the same session.
+[05:51] For mobile devices, we have a method
+[05:53] called Subscriber Identity Module, SIM,
+[05:57] uh also called, in fact, EAP-SIM, which
+[06:00] authenticates devices using the SIM card
+[06:02] in your phone. The SIM card stores a
+[06:04] unique identifier called IMSI and
+[06:07] cryptographic keys that can be used to
+[06:09] verify the user's identity.
+[06:11] Uh basically, when a user authenticates,
+[06:13] the network sends a challenge and the
+[06:14] SIM card provides a secure response
+[06:17] based on one of these cryptographic
+[06:18] shared keys with the mobile operator,
+[06:21] kind of like CHAP, if you think about
+[06:23] it.
+[06:23] EAP-SIM was designed to work with 2G,
+[06:27] GSM, and 3G mobile networks, but it can
+[06:30] also be used in Wi-Fi networks for
+[06:32] seamless handover between cellular and
+[06:34] Wi-Fi services.
+[06:36] Now, today EAP-SIM is somewhat more of a
+[06:38] generic term since the actual
+[06:40] technologies use newer protocols like
+[06:42] EAP-AKA,
+[06:44] meaning authentication and key
+[06:46] agreement, for 3G, 4G, LTE networks, or
+[06:49] even EAP-TLS using certificates. The
+[06:52] original EAP-SIM is considered to be
+[06:54] less secure than the newer variants of
+[06:56] the newer protocols.
+[06:58] Cisco also introduced Flexible
+[07:00] Authentication via Secure Tunneling,
+[07:02] EAP-FAST, as a replacement for the now
+[07:05] obsolete LEAP. This happened at the same
+[07:07] time as WPA2 happened in Wi-Fi networks.
+[07:11] Now, if you remember, we mentioned that
+[07:12] LEAP was using WEP when it was
+[07:14] introduced, so it really needed a better
+[07:17] replacement.
+[07:18] EAP-MD5
+[07:20] is an old method that hashes passwords
+[07:22] using MD5, Message Digest 5.
+[07:25] It offers some level of security, at
+[07:27] least considering that passwords are not
+[07:29] sent in clear text. However, it's now
+[07:32] considered deprecated just like the MD5
+[07:34] algorithm, which was actually the reason
+[07:36] behind the deprecation of EAP-MD5 as
+[07:39] well.
+[07:40] Next, EAP-Protected
+[07:42] One-Time Password, EAP-POTP,
+[07:46] is another method that supports OTP
+[07:48] tokens, one-time password tokens,
+[07:50] including hardware and software ones in
+[07:52] multi-factor authentication for both
+[07:54] one-way and mutual authentication.
+[07:57] EAP-Transport Layer Security, EAP-TLS,
+[08:00] is an open standard that implements the
+[08:02] TLS protocol to protect authentication
+[08:04] traffic. It's most effective when both
+[08:07] the client and the server have a digital
+[08:10] certificate, well, different one each,
+[08:12] of course,
+[08:13] and it was designed for
+[08:15] certificate-based mutual authentication.
+[08:18] So, unlike the TLS you are familiar with
+[08:20] when connecting to a regular HTTPS
+[08:22] website,
+[08:23] not only the website needs to present
+[08:26] and have its certificate validated, but
+[08:28] you as a client need to do it as well.
+[08:30] You need to prove who you are to the
+[08:32] server, and the server needs to prove
+[08:34] who it is to you.
+[08:36] Next, EAP-Tunneled Transport Layer
+[08:38] Security, EAP-TTLS, is an extension of
+[08:41] EAP-TLS that creates a secure tunnel
+[08:44] between endpoints before authentication,
+[08:46] ensuring that even the client's identity
+[08:48] is not transmitted in clear text before
+[08:51] the actual protected channel is created.
+[08:53] Now, unlike EAP-TLS, which requires both
+[08:56] the client and the server to have
+[08:57] certificates, EAP-TTLS only requires the
+[09:00] server to present a certificate. This
+[09:03] simplifies the implementation a lot as
+[09:05] clients can use other less complex forms
+[09:08] of authentication such as just usernames
+[09:10] and passwords instead of needing their
+[09:12] own certificate.
+[09:14] Now, EAP-TTLS works in two phases.
+[09:17] There's a phase one, which is the
+[09:19] establishment of the secure tunnel. In
+[09:20] this phase, the server, on the network
+[09:23] side, authenticates itself to the client
+[09:25] using a certificate. A secure encrypted
+[09:28] tunnel is then created using TLS, and
+[09:31] this process is similar to an HTTPS
+[09:33] encryption, what happens when you access
+[09:35] an HTTPS website.
+[09:37] Phase two is client authentication. So,
+[09:39] once the secure tunnel is established
+[09:41] and you have authenticated the server,
+[09:44] then the client, the user or the device,
+[09:47] is authenticated as well using some
+[09:49] inner methods such as password, tokens,
+[09:52] or other legacy authentication
+[09:53] mechanisms like PAP, CHAP, MS-CHAP v2.
+[09:57] This authentication is encrypted within
+[09:59] the secure tunnel, protecting the
+[10:01] credentials from eavesdropping, so you
+[10:03] could potentially get away with using a
+[10:04] crappier authentication method since the
+[10:06] entire exchange now has an additional
+[10:08] layer of protection around it. Now,
+[10:10] let's now discuss IEEE 802.1X,
+[10:13] a standard that defines how EAP is used
+[10:16] to support various authentication
+[10:18] methods. Now, formally 802.1X or simply
+[10:21] {dot} 1X is known as port-based network
+[10:25] access control. This technology helps us
+[10:27] make sure that clients can only
+[10:28] communicate with a network after proper
+[10:31] authentication at the network level.
+[10:33] Note that it says port-based, but it can
+[10:36] actually be any network link, including
+[10:38] wireless connections and logical VPN
+[10:40] connections. Long story short, it's a
+[10:42] protocol that controls which devices and
+[10:44] users can access the network and it's
+[10:46] implemented at the network's edge, where
+[10:49] the users and the devices actually
+[10:50] connect to the network.
+[10:52] The way we encounter 802.1X in the
+[10:54] context of network access control is
+[10:56] where the {dot} 1X device, a switch or
+[10:59] an access point, acts as an
+[11:01] authentication proxy, forwarding client
+[11:04] authentication requests to a dedicated
+[11:06] remote server or AAA server, typically
+[11:09] RADIUS or TACACS+, and officially the
+[11:11] roles involved in 802.1X
+[11:14] are as follows. We have the supplicant,
+[11:18] that's a device trying to access the
+[11:19] network. The supplicant has to run some
+[11:21] client software to communicate with the
+[11:23] authenticator, otherwise it won't
+[11:25] understand what 802.1X wants from it.
+[11:28] Uh the authenticator is the network
+[11:30] device, like the switch for wired
+[11:33] networks or an access point for
+[11:34] wireless, that acts as the gateway,
+[11:37] controlling access to the network. This
+[11:39] is the device that forwards the
+[11:40] authentication request to the
+[11:42] authentication server, and of course we
+[11:44] have the authentication server, usually
+[11:46] a RADIUS, a remote authentication
+[11:48] dial-in user service, which checks the
+[11:50] credentials provided by the supplicant
+[11:53] and decides whether to grant access or
+[11:55] not.
+[11:57] It's also important to understand the
+[11:58] data flow in 802.1X.
+[12:00] First, when a device, the supplicant,
+[12:03] tries to connect to the network, the
+[12:04] authenticator, a switch or an access
+[12:06] point, blocks all traffic on that port
+[12:09] by default, except for {dot} 1X traffic.
+[12:12] That is the only traffic allowed by
+[12:13] default on a {dot} 1X configured port.
+[12:16] Next, the authenticator prompts the
+[12:18] supplicant, so the switch prompts the
+[12:21] PC, let's say, for credentials, for
+[12:24] example, username and password,
+[12:26] certificate, using the EAP over LAN,
+[12:30] EAPOL, protocol. So, actually when we
+[12:32] say that {dot} 1X traffic is allowed by
+[12:35] default over an unauthenticated port, in
+[12:38] fact, the only traffic allowed is EAPOL,
+[12:41] EAP over LAN.
+[12:43] After receiving the credentials, the
+[12:44] switch or the access point does not have
+[12:46] the necessary intelligence, the security
+[12:48] policy, or even the required user and
+[12:49] device database to decide on its own
+[12:52] whether to permit access or not.
+[12:54] So, the authenticator forwards the
+[12:56] credentials to the authentication
+[12:58] server, RADIUS, for validation.
+[13:02] Then the authentication server checks
+[13:03] the credentials. If they're valid, it
+[13:06] informs the authenticator to open the
+[13:08] requested port and only that port for
+[13:10] network access. If invalid, access is
+[13:13] denied.
+[13:14] Often this is implemented by installing
+[13:16] an ACL, access control list, on the
+[13:18] required port with the necessary entries
+[13:21] to allow specific traffic over it.
+[13:23] Notice that granting access to a device
+[13:25] connected to a port does not necessarily
+[13:27] mean opening up that port for any kind
+[13:29] of traffic. An ACL is downloaded to that
+[13:32] port, hence the name that you might
+[13:34] encounter of DACL, downloadable ACL, and
+[13:37] that ACL allows traffic specific for
+[13:40] that user or device.
+[13:42] Now, multiple users or devices might get
+[13:44] different levels of network access.
+[13:46] Also, the VLAN configuration of the port
+[13:48] might change as well, depending on the
+[13:50] user connecting to it and to which group
+[13:52] it belongs to.
+[13:54] It makes sense to open up a port for a
+[13:56] specific device and include that port in
+[13:58] the VLAN maps to the group that the user
+[14:01] belongs to. So, VLAN membership can also
+[14:03] be,
+[14:04] let's say, downloaded automatically and
+[14:06] installed at the port level once
+[14:08] authentication is passed.
+[14:12] Port security, before getting deeper
+[14:13] into this topic, it's worth mentioning
+[14:15] that port security can refer to a number
+[14:16] of things. Just make sure you don't
+[14:18] confuse them during the exam. First, the
+[14:20] physical protection of actual device
+[14:22] ports on a switch, router, or patch
+[14:23] panel from unauthorized devices
+[14:25] connecting to them. This is a physical
+[14:27] type of control and can be done simply
+[14:29] by securing the wiring closet and
+[14:31] disconnecting any unneeded wall jacks
+[14:33] from the patch panel.
+[14:34] Second, there's a definition of port
+[14:35] security to cover TCP- and UDP-based
+[14:38] port filtering, which in my opinion is
+[14:40] downright confusing for absolutely no
+[14:42] useful reason.
+[14:43] Third, there is the {dot} 1X port
+[14:45] security, which is another source for
+[14:47] confusion. For the sake of the
+[14:48] discussion, we will only consider port
+[14:50] security as a layer two technology that
+[14:53] works, as we will describe in a moment.
+[14:56] The name port security actually comes
+[14:58] from Cisco, but has been borrowed or
+[15:01] slightly changed in other vendors. It
+[15:03] does the same thing. Mainly, it's a
+[15:05] switch security feature that limits and
+[15:06] controls the number of MAC addresses
+[15:09] that can connect to a switch port. If
+[15:11] the number of learned addresses exceeds
+[15:13] the configured limit, a security action
+[15:15] like shutting down the port can be
+[15:17] taken. Now, Cisco has different ways of
+[15:19] reacting to such a policy violation,
+[15:21] like protect, restrict, or shut down.
+[15:24] Without going into too many details,
+[15:26] they just specify whether to block all
+[15:27] traffic or just the traffic from the
+[15:29] unknown MAC address. The exam is
+[15:31] probably not going to ask you about this
+[15:33] since
+[15:33] this is vendor-specific.
+[15:35] Now, what is worth mentioning about port
+[15:37] security is how these MAC addresses
+[15:39] earned the status of approved.
+[15:42] Uh we have three methods. Static MAC
+[15:45] addresses, you can manually specify
+[15:47] allowed MAC addresses on a port. This is
+[15:49] useful when you know the specific
+[15:50] devices that should be allowed, like a
+[15:52] printer or a server that doesn't move
+[15:54] that often. Actually, with servers, you
+[15:56] might run into issues when you change or
+[15:58] upgrade the NICs
+[15:59] or the servers themselves.
+[16:01] Or if the servers actually expose
+[16:04] virtual machines behind a hypervisor,
+[16:07] which have direct network access. So,
+[16:08] there are issues there as well.
+[16:11] Next, after static MAC addresses, we
+[16:13] have dynamic MAC addresses.
+[16:15] The switch can learn MAC addresses
+[16:17] dynamically, automatically, as devices
+[16:19] connect. You can limit how many dynamic
+[16:21] addresses are learned on a port. The
+[16:23] last one is sticky MAC address. In this
+[16:25] mode, dynamically learned MAC addresses
+[16:28] are saved in the switch's configuration.
+[16:31] So, if the switch reboots, the learned
+[16:33] addresses persist, providing a way to
+[16:35] automatically configure the port based
+[16:37] on the first device that connected to
+[16:39] it. Now, sticky is the easiest one to
+[16:41] implement from an admin perspective as
+[16:43] it allows switches to learn what they
+[16:45] should allow by looking at the first
+[16:47] device they see.
+[16:48] If you can have control over the network
+[16:51] and you are sure no rogue devices are in
+[16:53] there, you can just let the switches
+[16:55] learn this uh the first thing on a
+[16:56] Monday morning, let's say, when people
+[16:58] come into the office and turn on their
+[16:59] computers.
+[17:01] Voice communication security. Now, we
+[17:03] already briefly touched on VoIP and
+[17:05] mentioned the Secure Real-time Transport
+[17:07] Protocol, SRTP, for encryption. However,
+[17:10] just like any other end-to-end
+[17:12] communication, uh you need to understand
+[17:13] that VoIP encryption is not always
+[17:15] end-to-end. And if it's not end-to-end,
+[17:17] then it's not much encryption at all, is
+[17:20] it? It's because voice over IP solutions
+[17:23] from different vendors don't always play
+[17:25] well together, and sometimes it's not
+[17:27] even over IP end-to-end.
+[17:30] So, if you have voice over IP phone
+[17:32] service from an ISP, you might have a
+[17:34] VoIP phone on your desk, which is
+[17:36] plugged into the LAN rather than a
+[17:38] telephone line.
+[17:40] However, the VoIP service provided by
+[17:42] your ISP might not offer any encryption,
+[17:45] making end-to-end encryption impossible.
+[17:48] Even if your ISP did offer encrypted
+[17:50] VoIP services, end-to-end encryption
+[17:52] would only be possible if you called
+[17:54] someone using the same ISP
+[17:57] and the same service. If you called
+[17:58] someone using a different voice over IP
+[18:00] solution, you obviously don't have any
+[18:03] control over the end-to-end encryption.
+[18:05] And yes, these are pretty much the exact
+[18:07] same issues that we have with regular
+[18:09] IP-based internet communication.
+[18:11] Consequently, VoIP voice over IP
+[18:13] solutions are still susceptible to
+[18:15] threats, including standard network
+[18:17] attacks like man-in-the-middle,
+[18:18] hijacking, credential farming, and
+[18:20] denial of service. There are also
+[18:22] concerns of vishing, that is, phishing
+[18:25] over voice over IP, phreaking, only uh
+[18:28] phreaking with a ph, by the way, only
+[18:31] applicable to plain old telephone
+[18:32] service, POTS, lines, fraud, abuse, just
+[18:35] to list a few. Now, to secure voice over
+[18:38] IP communications, you can apply some
+[18:40] common security concepts. It's just an
+[18:41] application running on top of regular
+[18:43] IP, after all.
+[18:44] So, things such as strong passwords,
+[18:46] two-factor authentication, call log
+[18:48] recording and inspection, blocking
+[18:50] international calling, voice over IP
+[18:52] equipment firmware updates, physical
+[18:55] access restriction to VoIP-related
+[18:56] networking devices, user training on
+[18:59] VoIP security best practices, blocking
+[19:02] ghost or phantom calls on IP phones, and
+[19:04] even intrusion prevention monitoring
+[19:06] with VoIP awareness.
+[19:08] Now, let's explain some of these uh
+[19:10] these risks. Many VoIP attacks are just
+[19:13] social engineering attacks, actually.
+[19:15] Vishing, or voice phishing, just like
+[19:17] email phishing, can target anyone who
+[19:19] can receive a call over a traditional
+[19:21] landline at home, a business line, a
+[19:22] mobile phone, a VoIP network. Phishing
+[19:25] is not strictly related to voice over
+[19:27] IP.
+[19:28] Now, to protect against vishing, there's
+[19:31] little that can do better than user
+[19:33] education.
+[19:35] Teach users to always be cautious when a
+[19:37] voice call seems strange, to always
+[19:39] request proof of identity before
+[19:41] discussing sensitive information, being
+[19:44] aware of what information can be
+[19:45] discussed over voice, and never giving
+[19:47] out or changing passwords using
+[19:49] voice-only communications.
+[19:52] Also, people should be aware that
+[19:55] other than the number of the person that
+[19:57] you are calling, voice communications
+[19:59] are not a method of authenticating
+[20:02] people unless you ask for additional
+[20:04] proof. Phreakers, with a ph on the other
+[20:07] hand, are those hackers that exploit old
+[20:09] school phone systems.
+[20:11] Initially, one of the major use cases
+[20:13] for phreaking was to bypass the
+[20:15] telephone system mainly to make free
+[20:17] long distance calls, to access paid
+[20:19] services for free, impersonating
+[20:21] somebody else's phone number, or just to
+[20:23] cause damage and denial of service.
+[20:25] Phreakers originally focused on PSTN,
+[20:28] publicly switched telephone network,
+[20:30] PSTN phones and systems, especially
+[20:32] during the '80s and the '90s when
+[20:34] digitization started to happen, but
+[20:36] security wasn't yet on everyone's minds.
+[20:39] Nowadays, even though it might depend on
+[20:40] where you live, you probably won't see
+[20:42] physical landlines too often. I live in
+[20:45] Romania, and even though it might not be
+[20:47] the most advanced country in the world,
+[20:49] we're pretty good in the IT department.
+[20:50] I haven't had a physical phone line in
+[20:52] my home since 2005,
+[20:55] when I left for college. I never felt
+[20:57] the need for one ever again.
+[20:59] We have an an FTTH, fiber to the home
+[21:03] infrastructure, now that reaches cities
+[21:05] and even villages, so phone lines are
+[21:08] not even useful for data anymore. We can
+[21:11] get 10 gigabit per second connections in
+[21:13] your home or apartment.
+[21:16] But, we digress. Phreaking nowadays has
+[21:18] evolved to attack
+[21:20] mobile devices, PBX systems, and of
+[21:22] course, voice over IP solutions. A PBX,
+[21:25] that's a private branch exchange, is a
+[21:27] telephone system used within a company.
+[21:29] Of course, it allows access to outside
+[21:31] PSTN lines as well.
+[21:34] So, to counter PBX fraud and abuse, you
+[21:36] use similar precautions as you would to
+[21:38] protect a typical computer network,
+[21:40] logical and technical controls,
+[21:41] administrative controls, and physical
+[21:43] controls. Key points to consider when
+[21:45] designing a PBX security solution
+[21:48] would be restricting dial-in and
+[21:50] dial-out features to authorized
+[21:53] individuals, protecting administrative
+[21:55] interfaces, and disabling maintenance
+[21:57] modems or any form of remote admin
+[21:59] access.
+[22:00] Basically, you should think of a PBX as
+[22:02] an isolated network. Protect it, but be
+[22:05] aware that your traditional networking
+[22:07] equipment has no power in the PBX realm.
+[22:10] You should also define an acceptable use
+[22:12] policy and train users on how to
+[22:13] properly use the system, log all
+[22:15] activities on the PBX just like you
+[22:17] should do and
+[22:18] just like you hopefully do on all your
+[22:20] internal IT systems, or, you know, just
+[22:22] get rid of it.
+[22:24] Stepping away from ancient technology
+[22:26] and moving backwards towards the
+[22:27] present, and hopefully the future, let's
+[22:29] dive into the realm of remote work,
+[22:31] where employees work at a location far,
+[22:34] far away from the primary office. Many
+[22:37] of us are already familiar with this
+[22:38] practice as we often work remotely in
+[22:41] our current roles.
+[22:42] Now, there are ways in which we can
+[22:44] connect to our central offices, local
+[22:46] networks, and we'll focus on three main
+[22:47] types, even though you probably thought
+[22:49] there's only one, and it's called a VPN.
+[22:51] First, we have service specific remote
+[22:54] access.
+[22:55] This is about giving users the ability
+[22:56] to connect to a single service or
+[22:58] application, like accessing your
+[23:00] SharePoint files or your email from a
+[23:02] remote location. It's also the type of
+[23:04] access that you might find in companies
+[23:05] that have a lot of distributed offices,
+[23:07] like banks, post offices, or large
+[23:10] retail stores, where the employees only
+[23:12] need to connect to one application when
+[23:14] they come into work. That application
+[23:16] could be running in some other location,
+[23:17] and the user only uses a custom client
+[23:20] or a web browser.
+[23:22] Next, we have remote control admin for
+[23:24] protocols meant to configure and control
+[23:26] other systems for administrative
+[23:27] purposes from a distance.
+[23:29] Usually, this is where we find remote
+[23:31] desktop connections, SSH access,
+[23:33] API-based access, and so on. Also, even
+[23:36] though it's a type of remote access, it
+[23:38] usually cannot happen directly, at least
+[23:40] not over the internet. The reason behind
+[23:42] this is that management interfaces of
+[23:44] infrastructure devices are usually
+[23:46] grouped into a separate network, all the
+[23:48] management network, and this network
+[23:51] should never be accessible from the
+[23:52] outside, at least not without going
+[23:54] through a VPN concentrator or some jump
+[23:56] box first.
+[23:58] Thirdly,
+[23:59] we have what's known as basic remote
+[24:02] network access. This is when you
+[24:03] establish a direct connection to a LAN
+[24:06] using a VPN. Of course, your device
+[24:07] actually connects to a remote access
+[24:09] server or a VPN concentrator, which
+[24:11] provides authentication and and then
+[24:13] access to the private network behind it.
+[24:16] Now, when it comes to implement remote
+[24:18] access, we cannot overlook the
+[24:19] importance of security,
+[24:22] especially because the idea of remote
+[24:24] access usually implies that the
+[24:25] connection is made from some other
+[24:27] location over the internet.
+[24:30] Here are some key points to consider.
+[24:32] First, authenticate remote access users
+[24:35] rigorously before granting them access,
+[24:38] because if something can be managed
+[24:40] remotely, it means that it can be
+[24:41] managed from any location. And who lives
+[24:44] in any location? That's right,
+[24:46] everybody. Or, only those who require
+[24:48] remote access to perform their job
+[24:51] duties should be permitted to establish
+[24:53] remote connections. All data transmitted
+[24:56] over the internet should be encrypted.
+[24:58] Period, no exceptions. Don't forget that
+[25:00] any remote access that you allow can
+[25:02] potentially breach your organization's
+[25:04] security. Also, all the benefits of
+[25:06] physical security don't apply here
+[25:08] anymore, so you don't have the same uh
+[25:11] let's say defense-in-depth benefit or
+[25:13] approach. Another idea here is that uh
+[25:15] you should keep in mind that people
+[25:16] accessing your services from remote
+[25:18] locations might be allowed to use less
+[25:20] secure devices to access sensitive data,
+[25:23] thereby increasing the risk of data loss
+[25:25] and compromise.
+[25:26] Also, keep in mind that remote systems
+[25:28] could be easily exposed to malware and
+[25:30] potentially act as a carrier, bringing
+[25:32] malware into the private LAN, especially
+[25:34] if those remote systems are not under
+[25:36] your company's control.
+[25:38] Uh since troubleshooting remote systems,
+[25:40] especially for security issues, can be
+[25:42] very challenging, it's much easier to
+[25:43] just deny access to whomever does not
+[25:46] comply with company policy. Don't
+[25:48] negotiate with terrorists.
+[25:50] Lastly, remote systems might not be as
+[25:53] easy to upgrade or patch due to
+[25:55] infrequent connections or simply because
+[25:57] they might not be under the company's
+[25:59] management.
+[26:01] Now, obviously, you need to have a
+[26:03] remote access policy in place, which
+[26:05] should act as a baseline for the minimal
+[26:07] set of security features that need to be
+[26:08] enabled on a device attempting to access
+[26:10] your services from any remote location.
+[26:13] Uh design the security policy in such a
+[26:15] way that it takes into consideration all
+[26:17] the aspects of remote connectivity.
+[26:20] Don't just copy-paste your office or
+[26:22] workplace policy, because you're not
+[26:24] playing the same game anymore.
+[26:27] Speaking of remote access, what do we
+[26:30] use it for after we gain remote access?
+[26:32] Well,
+[26:33] one pandemic, and hopefully it's just
+[26:35] one when you're listening to or reading
+[26:37] this,
+[26:38] has taught us that people still need
+[26:40] interaction, communication,
+[26:42] teams need to be synchronized, and so
+[26:44] on. Now, how better to do this from the
+[26:46] comfort of your home than through online
+[26:49] collaboration, virtual meetings, and
+[26:51] video conferencing?
+[26:52] Actually, scratch that. All those words
+[26:54] mean exactly the same thing. Why did I
+[26:56] list them all?
+[26:57] I should have stopped at one. It was
+[26:59] probably just my enthusiasm for remote
+[27:02] working that got the better of me.
+[27:04] And this is just a part of what nowadays
+[27:07] we call collaboration. It's not just
+[27:09] about meetings, and not just about phone
+[27:11] calls, but about exchanging data,
+[27:13] collaborate on shared documents, keeping
+[27:15] everyone in sync. Now, obviously, remote
+[27:17] work should not mean insecure work. So,
+[27:20] for meetings, at least, consider the
+[27:23] following: good authentication,
+[27:25] multi-factor ideally,
+[27:27] uh communication should be secure. If
+[27:29] you're not worried about someone
+[27:30] listening on your phone, you shouldn't
+[27:31] be worried about someone listening on
+[27:33] your Zoom call.
+[27:35] Think about content retention. You might
+[27:37] not want to record forever your
+[27:39] confidential meetings or your list of
+[27:41] participants. Maybe you do, think about
+[27:43] that, too.
+[27:44] Careful when scheduling meetings, and
+[27:46] careful if somebody from the outside of
+[27:48] the company or someone that hasn't been
+[27:49] invited that can join your meeting.
+[27:51] Some people
+[27:52] are sneaky like this, and they might
+[27:54] join your public meeting using a name
+[27:57] such as guest, connecting {dot} {dot}
+[27:59] {dot}, or settings with [laughter] a
+[28:02] with a pictogram of a of a cogwheel, for
+[28:05] example. They look like a like a
+[28:06] settings button in the in the in the
+[28:08] participants list. Do you need voice,
+[28:11] screen sharing, video, and file sharing,
+[28:15] all the bells and whistles? If you're
+[28:17] sharing sensitive information, you might
+[28:19] want to disable file sharing, but that
+[28:21] doesn't stop someone from sharing a
+[28:23] screen with that sensitive information.
+[28:25] It also doesn't stop any of the
+[28:27] participants from taking screenshots or
+[28:29] photos with their phones of your
+[28:31] confidentially shared content on your
+[28:33] screen.
+[28:35] Uh lastly, consider who has access to
+[28:37] the recordings, and if you really need
+[28:38] them long-term.
+[28:41] Simple chat services can pose a
+[28:42] challenge as well due to the lack of
+[28:44] security or management controls. Uh some
+[28:47] primitive instance mess instant
+[28:48] messaging apps can be susceptible to
+[28:51] packet sniffing, many don't have
+[28:52] advanced security features, and most of
+[28:54] them think that privacy is a joke. Now,
+[28:56] unfortunately, many companies use
+[28:58] instant messaging services outside the
+[29:00] company's control to conduct daily
+[29:02] business. It's funny that some companies
+[29:04] consider these out-of-band, unregulated
+[29:06] services like WhatsApp or Telegram or
+[29:08] Signal
+[29:09] and others as being more secure than the
+[29:12] company infrastructure, thinking that
+[29:14] nothing can be traced back to them when
+[29:17] sensitive information is being shared.
+[29:19] Not to mention that many chat clients
+[29:21] can introduce malware through their file
+[29:23] transfer capabilities, and chat is a
+[29:25] very cheap and efficient vector for
+[29:27] social engineering attacks, too.
+[29:29] Another aspect of secure communication
+[29:31] is security implemented on or through
+[29:34] load balancers. You might be thinking
+[29:36] that you don't need to know about this
+[29:38] because maybe you don't have a load
+[29:39] balancer. Maybe not, but you might be
+[29:40] using one every single time you access
+[29:42] an online service.
+[29:44] And if you host your business in some
+[29:45] cloud, be it public or private, access
+[29:48] to your services, to your website is
+[29:49] most likely going going through a load
+[29:51] balancer.
+[29:53] Now, a load balancer is used to
+[29:54] distribute network traffic across
+[29:56] several network links or towards several
+[29:58] devices. Why? Well, because this is how
+[30:00] we optimize utilization, minimize
+[30:02] response time, we get resiliency when
+[30:05] something fails, we avoid bottlenecks.
+[30:08] In a sentence, load balancers are very
+[30:09] important factor when it comes to your
+[30:11] client's happiness.
+[30:13] Generally, load balancing is implemented
+[30:15] when you need to distribute connections
+[30:17] and traffic among multiple members of a
+[30:19] server farm or a server cluster. In that
+[30:22] case, your website doesn't run on a
+[30:24] single server, but on multiple ones that
+[30:26] are able to deliver the same content,
+[30:28] and the load balancer decides which one
+[30:30] of those servers will receive the next
+[30:32] request.
+[30:33] So, how does a load balancer, well,
+[30:35] balance?
+[30:36] How does it choose the next destination
+[30:38] for the next request? Now, there are
+[30:40] many possible algorithms here. Here are
+[30:42] a couple of them.
+[30:44] First, round robin. It's the simplest
+[30:46] method where each connection is assigned
+[30:49] to the next available server or link in
+[30:52] a fixed order. When you're done, you
+[30:53] start over.
+[30:55] Load monitoring is a method that looks
+[30:59] at the current load of the targets. This
+[31:01] is useful
+[31:02] as not all requests are born equal. Some
+[31:05] take longer to process than others, so a
+[31:07] good approach would be to choose not
+[31:09] only the next available server, but also
+[31:11] the least busy one. Of course, you need
+[31:14] to monitor this load somehow
+[31:15] periodically uh using either some sort
+[31:18] of SNMP based or agent based monitoring
+[31:21] that is compatible with both the servers
+[31:23] and the load balancer.
+[31:24] Preferencing or weighted distributions
+[31:27] spread connections based on a subjective
+[31:29] preference or known capacity difference.
+[31:31] In other words, if you're an admin and
+[31:33] you know that some new servers in the
+[31:34] cluster can easily handle twice the
+[31:36] capacity of the older ones, it would
+[31:38] make sense to send twice as many
+[31:40] requests to them.
+[31:41] This manual preference allocation is
+[31:43] ideally combined with round robin as
+[31:46] load monitoring should already take
+[31:48] additional capacity into consideration.
+[31:50] That is, if resource monitoring and
+[31:51] reporting is done right.
+[31:54] Session persistence is another important
+[31:56] criterion because web applications can
+[31:58] rely on session information in
+[32:00] subsequent requests. If one server has
+[32:02] the active session for an active client
+[32:04] because uh that's the server where that
+[32:07] client first authenticated, we need to
+[32:08] send all subsequent connections from
+[32:11] that client to the same server because
+[32:13] the other ones don't have the session
+[32:14] information of that client.
+[32:16] Like an active shopping cart, for
+[32:18] example. This is done through session
+[32:20] persistence, cookies, and load balancers
+[32:22] must support this feature.
+[32:25] Another method is the least number of
+[32:26] connections or the least amount of
+[32:28] traffic or the lowest latency. We use
+[32:31] these to assign connections based on
+[32:33] some networking metrics, but not on the
+[32:36] actual load of the servers. Again, not
+[32:38] all requests are born equal, so looking
+[32:40] at requests uh at the network level
+[32:43] might not give you the actual load on
+[32:45] the servers, but it's much easier to do
+[32:47] so as the load balancer is already on
+[32:49] the network path and can decide on its
+[32:51] own by observing these metrics.
+[32:53] It does not need to talk to the back-end
+[32:55] servers. The problem is that one request
+[32:59] could take a server 10 milliseconds to
+[33:00] process,
+[33:02] while another one could cause a huge SQL
+[33:04] query that keeps the server and the
+[33:06] database busy for an entire 30 seconds.
+[33:09] Some heartbeat style querying will still
+[33:11] happen as the load balancer needs to
+[33:13] check the health of the server
+[33:15] uh the servers in the back end from time
+[33:17] to time to see if they're still
+[33:18] answering.
+[33:20] Another method is locality-based or
+[33:22] geographic distribution of connections.
+[33:24] This is based on how far is the
+[33:26] requesting client from the load balancer
+[33:28] and depends on how the service is
+[33:30] distributed across a country or even
+[33:32] across the globe. This type of
+[33:34] high-level load balancing where the user
+[33:36] is first assigned to some region or
+[33:37] continent is usually followed in
+[33:40] sequence by a local load balancing
+[33:42] method to select a specific server after
+[33:45] the geographical location has been
+[33:47] established.
+[33:49] Geographic distribution is sometimes
+[33:50] replaced by the simpler latency-based
+[33:53] distribution, which normally is a pretty
+[33:54] good estimation of actual physical
+[33:57] distances as well. Uh you can ping the
+[33:59] client from several locations around the
+[34:01] world and decide based on the latency or
+[34:03] improperly called by the ping uh which
+[34:06] server cluster is closest to the client.
+[34:09] And finally, randomly or hash-based
+[34:12] distribution. This one is where we don't
+[34:14] care how the connections are being
+[34:16] balanced. So, it might be a purely
+[34:17] random algorithm or as as it happens
+[34:20] more often, there's a hashing function
+[34:22] that inputs some connection parameters
+[34:24] that result in a specific server that
+[34:26] should process that connection. The main
+[34:28] reason behind the hash function as
+[34:30] opposed to a purely random choice, apart
+[34:32] from its pseudo-random results that it
+[34:34] generates,
+[34:35] is to ensure some level of session
+[34:37] persistence. Given the same input, a
+[34:40] hash function will always return the
+[34:42] same output, which means that one
+[34:44] client, for example, will always be
+[34:46] assigned to the same back-end server,
+[34:48] regardless how many connections they
+[34:50] initiate. Common inputs in load
+[34:51] balancing hashing functions might be
+[34:53] source and destination IP addresses,
+[34:55] source and destination TCP or UDP ports,
+[34:58] and the protocol itself, be it TCP or
+[35:00] UDP.
+[35:02] When all are used, they are usually
+[35:04] called a five-tuple input.
+[35:06] Load balancing can be just a software
+[35:08] service running on anything that can run
+[35:10] software, like a router, a server, a
+[35:12] bare-metal one or a virtual machine, and
+[35:14] of course, running in a cloud
+[35:15] environment. They can also be dedicated
+[35:18] hardware appliances, just like pretty
+[35:19] much any other type of service or
+[35:21] appliance out there. So, you can
+[35:23] actually have a rack-mountable box that
+[35:25] you can fit in a rack and call it a load
+[35:27] balancer.
+[35:28] Also, load balancers can do more than
+[35:30] just balancing, including caching for
+[35:32] often-accessed content, SSL offloading,
+[35:35] that is, terminating the SSL connection
+[35:37] from the clients onto the load balancer
+[35:40] instead of the back-end servers to
+[35:42] offload this additional effort from the
+[35:44] actual servers, traffic filtering, since
+[35:46] they get to see all the requests, and
+[35:48] even firewall intrusion prevention
+[35:49] capabilities, again because they act as
+[35:52] gatekeepers in front of your web apps
+[35:54] and they get to see all the traffic,
+[35:55] even the nasty one.
+[35:57] One more thing you should be aware of is
+[35:59] a term virtual IP or VIP. Uh the VIP
+[36:03] is the actual address that the load
+[36:05] balancer presents to its clients. So, a
+[36:07] single IP address can be used by clients
+[36:10] to represent a service, but it's
+[36:12] actually used by a load balancer or a
+[36:14] cluster of load balancers to distribute
+[36:16] connections to a different set of
+[36:17] internal IP addresses. This ensures that
+[36:20] the IP address the clients use doesn't
+[36:22] change, regardless if you have one or
+[36:24] 1,000 servers waiting to receive
+[36:26] connections.
+[36:27] Finally, like all services that act like
+[36:31] a bottleneck or can cause a single point
+[36:33] of failure, and just like any other
+[36:35] clustering technology, we might need
+[36:37] more than one load balancer for
+[36:39] resiliency, so we can run them in
+[36:41] active-active mode, where multiple load
+[36:43] balancers can be active at the same
+[36:45] time. But if one fails, the remaining
+[36:47] active nodes can support the full load.
+[36:50] Also, this might create another issue.
+[36:52] How do you balance among multiple load
+[36:54] balancers?
+[36:56] A first-level balancing implemented
+[36:58] right into DNS might be a solution here.
+[37:02] Another method for resiliency is
+[37:04] active-passive. This keeps one or some
+[37:07] devices in standby, ready to take over
+[37:10] when an active device fails. This also
+[37:12] requires some sort of heartbeat
+[37:14] communication so that a failed device
+[37:16] can be detected immediately and its role
+[37:18] can be taken over by a functioning one.
+[37:21] Email security and challenges. Now, we
+[37:23] might like it, we might not, but email
+[37:26] is still a very important communication
+[37:27] tool.
+[37:29] Gen Z doesn't really like it, so we
+[37:31] expect a decline to it. So, if you're
+[37:33] watching this in 20 years, you might be
+[37:35] thinking, "What the heck is this guy
+[37:37] talking about?"
+[37:38] But for now, at least, email is not
+[37:40] going anywhere. At the heart of email
+[37:44] lies the SMTP server using the SMTP
+[37:47] protocol, which stands for Simple Mail
+[37:50] Transfer Protocol.
+[37:51] The SMTP server is the one that receives
+[37:53] and delivers messages to their intended
+[37:55] recipients.
+[37:56] Users like you and I use email clients
+[37:59] like Outlook and a few others,
+[38:01] which can use several client-server
+[38:03] protocols, like the POP3 and IMAP
+[38:06] protocols and some Microsoft proprietary
+[38:09] ones to connect to their email servers,
+[38:11] retrieving those messages from our
+[38:13] mailboxes. One thing to remember here is
+[38:15] that protocols that take care of mail
+[38:18] delivery are completely different from
+[38:20] the protocols that allow you to view,
+[38:22] retrieve, and send new mail right from
+[38:24] within your software client. Email is
+[38:26] not a truly end-to-end uniform protocol
+[38:29] like HTTP,
+[38:32] where the client talks HTTP all the way
+[38:35] to the final server. With email, we use
+[38:38] a set of languages, protocols to talk to
+[38:41] the server, and a completely different
+[38:43] set of language and protocols when
+[38:46] servers talk to each other.
+[38:48] When deploying an SMTP server,
+[38:50] authentication is non-negotiable. Like
+[38:52] any public service, it needs strong
+[38:54] authentication and security.
+[38:57] At the other end of security are the
+[38:59] so-called open relays, servers which
+[39:01] accept mail without checking sender
+[39:03] credentials. We don't like those,
+[39:05] they're breeding grounds for spam, so no
+[39:08] security training is ever going to
+[39:09] recommend you to install one of those,
+[39:12] but be aware that the design of email
+[39:14] protocols allows for them as well.
+[39:17] Another important issue with email is
+[39:18] not just your authentication uh to
+[39:21] access your email, but authenticating
+[39:23] the sender, the person who claims that
+[39:25] they sent you a message. In SMTP, pretty
+[39:28] much anyone can claim anything since
+[39:30] there is no built-in security, so we
+[39:32] need digital signatures in email
+[39:34] messages to authenticate the sender.
+[39:36] That's because you might be receiving
+[39:37] sensitive information, and if you cannot
+[39:39] trust the source of that information,
+[39:42] bad things can happen. Not to mention
+[39:44] that you might want to reply with some
+[39:45] sensitive information as well, which
+[39:47] brings us to DLP or data loss prevention
+[39:50] or data leak prevention, which are
+[39:52] solutions that restrict sending of
+[39:54] sensitive information outside the
+[39:55] company, email included. Solution is
+[39:58] very relevant to email, of course,
+[40:01] as email can be used to disseminate
+[40:03] documents that should not leave your
+[40:04] team or your company.
+[40:07] For DLP, classification of data is the
+[40:10] first step here. Understanding what data
+[40:12] is sensitive and to whom it can be sent.
+[40:15] But then we need to integrate our email
+[40:16] system with a DLP solution so that when
+[40:18] somebody intentionally or accidentally
+[40:21] tries to attach a sensitive document to
+[40:22] an email destined for some Gmail address
+[40:25] out there
+[40:26] or God forbid Yahoo,
+[40:28] they should be denied from doing so.
+[40:31] Long story short, let's cover some of
+[40:33] the challenges with securing email. The
+[40:35] first obstacle we face is the lack of
+[40:37] native encryption in email protocols,
+[40:39] SMTP, POP3, IMAP.
+[40:42] It's like sending messages on a
+[40:43] postcard, totally exposed. This opens
+[40:46] the door for interception,
+[40:48] eavesdropping, which is not good.
+[40:50] Luckily, they all have secure
+[40:52] counterparts, but somebody has to know
+[40:54] about them and probably the same someone
+[40:56] has to implement them and they should do
+[40:58] it correctly. We'll talk about these
+[41:00] secure versions of the traditional email
+[41:01] protocols in just a second.
+[41:04] Email isn't just for sending text,
+[41:06] memes, and company newsletter that
+[41:08] everybody ignores.
+[41:09] It's a playground for viruses, worms,
+[41:11] and Trojans. Sometimes email messages
+[41:13] embed scripting languages and auto
+[41:15] download features, not to mention basic
+[41:18] hyperlinks and attachments, which can
+[41:19] become serious threats as they can
+[41:21] contain or redirect you to malicious
+[41:23] content.
+[41:24] Spoofing is also a big problem because
+[41:26] email headers can be tampered with at
+[41:28] any point. So,
+[41:30] there's no built-in verification, at
+[41:31] least not by default, in traditional
+[41:33] email protocols.
+[41:35] Email can be used as a denial of service
+[41:37] delivery mechanism. It's as simple as
+[41:39] having your inbox bombarded with
+[41:41] messages until it throws in the towel.
+[41:44] This is called mail bombing, an
+[41:46] email-based denial of service attack.
+[41:48] Storage and processing capacity go
+[41:50] haywire and legit messages are ignored.
+[41:53] Also, did you ever hit reply all and
+[41:56] watched chaos unfold? That's a mail
+[41:59] storm with everyone chiming in or
+[42:02] replies as well, it's chaos and at best
+[42:05] it's a real headache that generates
+[42:06] email fatigue.
+[42:08] And of course, we have spam. It's not
+[42:10] just annoying, it's resource wasting,
+[42:12] inbox invading,
+[42:14] annoyance generating. The tricky part,
+[42:17] the source is usually disguised and the
+[42:19] content is now AI generated and looks
+[42:22] very, very real and trustworthy. So, our
+[42:25] filters need to become smarter and
+[42:26] smarter each day. And it also helps if
+[42:28] you report spam message from time to
+[42:30] time just to help those machine learning
+[42:33] algorithms grow.
+[42:34] Well, how do you protect email? Here's a
+[42:36] toolkit of solutions and protocols that
+[42:38] might help you.
+[42:40] Secure Multipurpose Internet Mail
+[42:42] Extensions, S/MIME. It's a standard
+[42:45] built around public key encryption,
+[42:47] digital envelopes, and signatures. It
+[42:49] provides authentication,
+[42:50] confidentiality, and non-repudiation,
+[42:53] the whole package.
+[42:55] Another one is PGP, Pretty Good Privacy.
+[42:58] It's using peer-to-peer public private
+[43:00] key magic. PGP isn't just a standard, it
+[43:03] grew as an independent solution, which
+[43:05] later became a standard. It has a
+[43:07] variety of encryption methods up its
+[43:10] sleeves, so it's all about encryption.
+[43:13] Domain Keys Identified Mail, DKIM, DKIM
+[43:18] actually,
+[43:19] is about identity assurance. It makes
+[43:22] your email messages look legit by
+[43:24] verifying the sender's domain name. In
+[43:27] other words, it checks if you actually
+[43:29] own the domain that the email message
+[43:31] says it came from. Great for avoiding
+[43:34] spam
+[43:35] if you're on the destination side and
+[43:37] fishing attempts, but the receiver must
+[43:38] be smart enough and security conscious
+[43:40] to check for this information.
+[43:43] SPF, Sender Policy Framework, is another
+[43:46] solution against spoofing, spam, and in
+[43:48] general, impersonating over email. SPF
+[43:51] checks if the email is coming from an
+[43:54] SMTP server authorized to send email by
+[43:58] the domain owner.
+[43:59] DMARC, Domain Message Authentication,
+[44:02] Reporting, and Conformance,
+[44:04] is based on DNS checks again and it's
+[44:07] useful against business email
+[44:08] compromise, phishing, and other scams.
+[44:11] For protecting SMTP, we first have
+[44:14] STARTTLS.
+[44:16] It's not a protocol, but a command that
+[44:18] attempts to secure your SMTP connection.
+[44:21] It's the let's make this encrypted from
+[44:23] now on magic word that starts
+[44:26] encryption. It doesn't require a
+[44:27] specific port other than the standard
+[44:29] one, but you should know that although
+[44:31] traditionally SMTP was working over TCP
+[44:33] port 25, nowadays most servers accept
+[44:36] connections on TCP port 587
+[44:39] and this is also where the secure
+[44:41] session starts with STARTTLS.
+[44:44] If it requires an explicit command to
+[44:46] secure the communication, it's also
+[44:48] called explicit SMTPS.
+[44:51] For SMTP, there's also implicit SMTPS.
+[44:55] This one attempts to start communicating
+[44:57] in a secure manner
+[44:59] from the very beginning instead of clear
+[45:01] text.
+[45:02] Assuming the target server also likes uh
+[45:06] secure connections. Now, if the feeling
+[45:08] is mutual, an encrypted session is
+[45:10] created. If not, it's the end of the
+[45:11] line because plain text is not allowed,
+[45:14] okay, with with implicit SMTPS.
+[45:18] Uh and since we're not accepting clear
+[45:19] text, we're not using port 25 or 587,
+[45:23] but instead we use TCP port 465.
+[45:27] Unlike STARTTLS, which upgrades an
+[45:29] existing connection, SMTPS establishes a
+[45:32] secure connection from the very
+[45:34] beginning and this is also why the
+[45:36] connection is initiated on a different
+[45:37] port where only secure communication
+[45:40] should happen or is expected. This one,
+[45:42] interestingly enough, is considered a
+[45:44] bit obsolete due to the ability of the
+[45:46] standard ports to have their connections
+[45:48] upgraded using STARTTLS, so there really
+[45:51] wasn't a need for a separate protocol
+[45:53] and a separate port to manage.
+[46:02] >> [music]

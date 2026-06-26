@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A company with 500 employees wants to deploy a private messaging application. The security manager suggests using a symmetric key model where every employee shares a unique secret key with every other employee to ensure confidential one-on-one communication. How many unique keys must the organization generate and distribute to support this architecture?",
+    "options": [
+      "500 keys",
+      "250,000 keys",
+      "124,750 keys",
+      "1,000 keys"
+    ],
+    "correctIndex": 2,
+    "explanation": "The number of unique keys required for symmetric encryption in a group of N users is calculated using the formula N(N-1)/2. For 500 users: 500 * (500 - 1) / 2 = 124,750 keys. This demonstrates the poor scalability of symmetric key distribution."
+  },
+  {
+    "question": "A developer is implementing a secure database application. The system must encrypt stored customer data and ensure that if an attacker modifies the encrypted data block, the decryption engine will immediately detect the unauthorized alteration. Which block cipher mode of operation is the best choice?",
+    "options": [
+      "Cipher Block Chaining (CBC) mode",
+      "Output Feedback (OFB) mode",
+      "Electronic Codebook (ECB) mode",
+      "Galois Counter Mode (GCM) mode"
+    ],
+    "correctIndex": 3,
+    "explanation": "Galois Counter Mode (GCM) is an authenticated encryption mode that provides both confidentiality and data authenticity (integrity verification). Standard modes like CBC, OFB, and ECB are unauthenticated modes; they encrypt data to keep it confidential but cannot inherently detect ciphertext alteration without a separate hashing or MAC mechanism."
+  },
+  {
+    "question": "A cryptanalyst is reviewing a legacy system that implements the Data Encryption Standard (DES) algorithm. Although the input key provided to the system is 64 bits in length, the documentation states that the algorithm's effective key strength is only 56 bits. What is the reason for this difference?",
+    "options": [
+      "The algorithm compresses the key using a one-way hashing function before processing.",
+      "Every eighth bit of the 64-bit key is discarded to serve as parity bits, leaving only 56 bits for the actual encryption rounds.",
+      "The remaining 8 bits are reserved to store the initialization vector (IV) for cipher block chaining.",
+      "The system pads the key with 8 bits of random data to satisfy asymmetric algorithm requirements."
+    ],
+    "correctIndex": 1,
+    "explanation": "DES takes a 64-bit input key, but before the 16 rounds of encryption occur, every eighth bit (bits 8, 16, 24, 32, 40, 48, 56, and 64) is stripped from the key to be used for parity checking. This leaves an effective key length of 56 bits for the actual cryptographic calculations."
+  },
+  {
+    "question": "A military communications unit is using a one-time pad (OTP) to send encrypted tactical commands. Which of the following is NOT a requirement to ensure that the one-time pad encryption remains mathematically unbreakable?",
+    "options": [
+      "The key must be completely randomly generated.",
+      "The key must be kept secret and protected from disclosure.",
+      "The key must be encrypted using an asymmetric RSA public key before transmission.",
+      "The key must be at least as long as the plaintext message and used only once."
+    ],
+    "correctIndex": 2,
+    "explanation": "For a one-time pad (OTP) to be mathematically unbreakable, it must satisfy four rules: (1) the key must be randomly generated, (2) the key must be kept secret, (3) the key must be at least as long as the message, and (4) the key must be used only once. Asymmetric RSA encryption of the key is not a requirement for the OTP's mathematical security."
+  },
+  {
+    "question": "A software startup decides to write its own custom encryption algorithm to secure its database records. The development team argues that keeping the algorithm's mathematical formula secret will make it much harder for hackers to crack the database. Which cryptographic principle does this violate?",
+    "options": [
+      "The concept of Diffusion",
+      "Kerckhoffs' Principle",
+      "Zero-Knowledge Proofs",
+      "The Work Function"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kerckhoffs' Principle states that a cryptographic system must remain secure even if everything about it (except the key) is public knowledge. Relying on the secrecy of the algorithm is known as 'security through obscurity,' which is a design flaw. Cryptography relies on public, well-tested algorithms with secret keys."
+  }
+]

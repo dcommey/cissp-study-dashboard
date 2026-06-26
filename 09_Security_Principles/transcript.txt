@@ -1,0 +1,653 @@
+[00:08] Now, security is a big topic, as you
+[00:10] probably guessed by now. We have this
+[00:12] entire training just to talk about
+[00:14] security. But, at a conceptual level,
+[00:17] there are some basic building blocks
+[00:20] that we need to address in order to
+[00:21] build actual security solutions on top
+[00:24] of them. And that's exactly what we're
+[00:26] going to be addressing in the following
+[00:28] minutes.
+[00:30] So, let's talk about security
+[00:31] principles. Security is something that
+[00:33] you have to think about from the very
+[00:35] start and build into every part of a
+[00:38] system. And it's especially important
+[00:40] for systems that handle critical or
+[00:42] sensitive information. That's why people
+[00:45] say that security is a is not a product,
+[00:48] but it's a process. Unfortunately, it's
+[00:50] a continuous, never-ending process. But,
+[00:53] look on the bright side. An never-ending
+[00:55] battle between attackers and security
+[00:57] professionals means that you will always
+[00:59] have a job.
+[01:01] One of the uh key aspects of security
+[01:04] design is controlling who has access to
+[01:06] resources. Access control is all about
+[01:08] the subjects and the objects. The
+[01:11] subject is the one who wants to access
+[01:13] something, and the object is the thing
+[01:15] that they want to access, to put it very
+[01:18] simplistically.
+[01:20] The subject can be you or I, a user, a
+[01:24] program, a computer, or anything else
+[01:27] that can make requests. Most likely, if
+[01:30] it's not going to be a user, then it's
+[01:32] going to be some software application.
+[01:34] Actually, even when the subject is a
+[01:36] user, the technical entity that requests
+[01:40] and receives access to a resource is
+[01:42] still going to be a device and some
+[01:44] software on that device. You're not
+[01:46] physically grabbing bytes with your
+[01:48] hands. You're still using a device to do
+[01:50] it. But, the intention and the
+[01:52] associated privileges belong to you as a
+[01:55] person, the user. So, you are the one
+[01:57] considered to be the subject in that
+[02:00] situation.
+[02:01] Now, the object can be a resource, such
+[02:04] as a file or a server that you're
+[02:05] connecting over a remote desktop
+[02:07] connection to, for example. A website
+[02:10] that you're accessing using a browser,
+[02:13] even a printer that you're trying to
+[02:15] use, or anything else that can be
+[02:17] accessed.
+[02:18] Also worth mentioning here is that when
+[02:22] we say access, that is a type of action
+[02:25] that the subject wants to perform on the
+[02:27] object. So, it matters if the subject
+[02:30] wants to perform something such as
+[02:32] reading, writing, deleting data,
+[02:34] changing some data, adding some new
+[02:36] data, and so on. So, it's also the type
+[02:39] of access that matters.
+[02:41] The subject and the object are not fixed
+[02:44] roles. They depend on the context of
+[02:47] each request. One time an entity can be
+[02:49] a subject in one request and an object
+[02:52] in another one. For example, uh suppose
+[02:55] I want to get some data, so I access a
+[02:56] web application. I am the subject and
+[02:59] the web application is the object,
+[03:00] right? Pretty obvious.
+[03:02] But, if the web app that I'm accessing
+[03:04] needs to access in turn another database
+[03:07] or some external storage or even needs
+[03:09] to ask another service to provide me
+[03:12] with an answer, then the app becomes the
+[03:14] subject and whatever it needs to access
+[03:17] becomes the object. So, see how this
+[03:19] goes?
+[03:21] This uh chain-like scenario can also
+[03:23] imply something called transitive trust.
+[03:26] For example, if, let's say, Alice trusts
+[03:29] Bob and Bob trusts Charlie, then we can
+[03:32] say that Alice trusts Charlie by
+[03:34] transitivity. This can be a security
+[03:37] risk because it can be difficult to
+[03:39] predict and it can allow entities to
+[03:41] bypass security controls. For example,
+[03:43] suppose
+[03:45] um Alice's network blocks access to some
+[03:48] websites like Steam or Xbox or Epic
+[03:51] Games, but Bob's network doesn't. If
+[03:54] Alice can connect to Bob's network
+[03:57] through a VPN or a remote desktop
+[04:00] connection, then she can access those
+[04:02] websites through Bob's network, even
+[04:04] though the security policy says that she
+[04:06] shouldn't. And then Alice plays games
+[04:08] like crazy all day long and she gets
+[04:10] paid for it on the job. Of course, this
+[04:12] is not foolproof. We can design security
+[04:15] policies so that this doesn't happen.
+[04:17] But, usually, we don't.
+[04:22] Now, when we think about designing
+[04:24] security, we also need to think about
+[04:26] how these systems that we're protecting
+[04:28] were designed to interact with the
+[04:29] outside world because the
+[04:32] uh outside world interaction is most
+[04:34] likely the thing that needs protection
+[04:35] in the first place. In most cases,
+[04:37] outside is the place where there be
+[04:40] dragons.
+[04:41] But, there are exceptions to this.
+[04:44] Another idea here is that some systems
+[04:45] are closed, which means they only work
+[04:48] well with few other systems, usually
+[04:50] from the same vendor or maker.
+[04:52] Uh interoperability evolves, and
+[04:55] nowadays most vendors support
+[04:57] open-source protocols that allow them to
+[04:59] talk to other vendor solutions as well.
+[05:02] Now, how well they do it is a completely
+[05:05] different story. Nevertheless, closed
+[05:07] systems have secret implementations and
+[05:10] don't share much information or at least
+[05:12] don't share more information than the
+[05:14] vendor intended uh for the device or
+[05:16] software to share. Other systems are
+[05:18] open, which means, you guessed it, they
+[05:20] work pretty well with many other
+[05:22] systems, even from other different
+[05:24] vendors. Open systems and security
+[05:26] solutions have ways to connect to other
+[05:29] systems by using common standards such
+[05:32] as APIs or other open protocols.
+[05:35] Connecting closed systems to other
+[05:36] systems might be more difficult, but
+[05:38] sometimes, just sometimes, this can make
+[05:41] them more secure. Just look at how long
+[05:44] iPhones have led as a malware-free or
+[05:48] almost malware-free devices simply
+[05:51] because of their closed-down
+[05:53] architecture and lack of options for
+[05:55] installing apps apart from a very strict
+[05:58] App Store.
+[05:59] Sometimes, closed systems have unique
+[06:01] hardware and software that don't follow
+[06:03] industry standards or use open APIs.
+[06:05] Keep this in mind as well.
+[06:07] Uh this means that attacks that usually
+[06:09] target generic system components might
+[06:11] not work at all or will need to be
+[06:14] customized to work on proprietary
+[06:16] solutions.
+[06:17] Now, since we mentioned APIs, just to
+[06:19] make sure that everybody's on the same
+[06:20] page here, an API is a set of rules that
+[06:23] tell systems how to talk to each other.
+[06:25] It defines what kinds of requests can be
+[06:28] made, how to make them, over which
+[06:30] protocols they should be made, what
+[06:33] kinds of data can be exchanged, how the
+[06:35] request should be formatted, how the
+[06:38] reply should look like, what response we
+[06:40] should be expecting, and even what type
+[06:42] of security is needed. Uh APIs make it
+[06:45] possible for systems to work together
+[06:48] and share information. And generally,
+[06:50] APIs are designed for, let's say,
+[06:52] machine-to-machine communication. But,
+[06:54] of course, there are tools out there
+[06:56] like curl or postman that can be used as
+[06:58] API testing clients for humans and your
+[07:01] custom-made scripts.
+[07:03] Uh there's also a difference between
+[07:04] open-source and closed-source systems.
+[07:07] An open-source system is one where the
+[07:08] code and logic behind it is public, and
+[07:11] anyone can see the source code, and
+[07:13] anybody can even make contributions to
+[07:14] it. Uh you can even create an entire new
+[07:17] project starting from an existing
+[07:19] open-source one. A closed-source system,
+[07:22] obviously, it's one where the code and
+[07:23] logic behind it are in um are private,
+[07:27] in a private repository, and only the
+[07:29] vendor can change it. And even only the
+[07:32] vendor can access it. Open-source
+[07:34] systems can benefit from, let's say,
+[07:36] more feedback from the community and
+[07:39] improvements from the community as well.
+[07:42] But, keep in mind that it's not a paid
+[07:43] community in most cases. Nobody's
+[07:45] getting paid to do that. Uh people might
+[07:48] argue that having a paid workforce
+[07:51] creates more motivation for better and
+[07:54] up-to-date products than simply relying
+[07:56] on the will and passion of smart and but
+[07:59] unpaid developers. Closed-source systems
+[08:02] can keep their secrets and quality under
+[08:04] control, but they can also hide more
+[08:07] errors and vulnerabilities, which in the
+[08:10] open-source community isn't so easy to
+[08:13] hide since all the source code lives in
+[08:14] plain sight. Now, in my opinion, this is
+[08:18] a big grayish area. On one hand, you
+[08:21] have the paid workforce that
+[08:22] theoretically can build better products,
+[08:25] but has the opportunity to hide
+[08:27] vulnerabilities. On the other hand, you
+[08:29] get the open-source community that
+[08:30] should detect vulnerabilities easier
+[08:32] since the code is open-source, but
+[08:35] there's nobody actually paid to do so,
+[08:37] right? There are no deadlines and
+[08:39] and checklists to be to be checked.
+[08:42] Hackers do so, but they have a different
+[08:45] kind of motivation. So, are
+[08:47] vulnerabilities really detected quicker
+[08:49] in the open-source world? There is no
+[08:52] simple answer to this.
+[08:54] Next, on the topic of default
+[08:55] configurations, uh you know how
+[08:57] sometimes you buy a new gadget or
+[09:00] software and you just use it with the
+[09:01] settings that it comes with. Well, if
+[09:03] you're a geek like me, you probably
+[09:05] don't, and you'll start tinkering with
+[09:07] settings right away. But, most people
+[09:09] think that those settings are the best
+[09:11] one, those default settings are the best
+[09:13] ones, because the makers of the product
+[09:15] delivered it that way, so they must know
+[09:17] what they are doing, right? Isn't that
+[09:20] cute? But, it's wrong.
+[09:22] If you get this reference, sorry, but
+[09:24] you're kind of old.
+[09:25] Uh those settings might be the worst
+[09:28] ones for your security because they are
+[09:30] chosen to make the product easy to sell,
+[09:33] to install, and use, not to protect you.
+[09:36] Of course, not all software and hardware
+[09:38] vendors behave in the same way. Some
+[09:40] might actually sell completely
+[09:41] locked-down products, like a firewall,
+[09:44] for example, where in an absence of any
+[09:46] config, the device, the firewall, does
+[09:49] not forward any traffic at all.
+[09:51] Obviously, this demands some admin work.
+[09:53] But, at least now, if you're messing up
+[09:55] the implementation of your security
+[09:56] policy, you cannot blame the vendor
+[09:59] anymore. It's on you and on your crappy
+[10:01] config.
+[10:03] Now, let's talk about what happens when
+[10:04] things go wrong. You know, when your
+[10:07] system crashes, your app freezes, your
+[10:08] code explodes. How do you deal with
+[10:10] these failures?
+[10:12] How do you make sure that your system
+[10:13] doesn't become a security nightmare when
+[10:15] it fails? Because an error is something
+[10:17] that we don't want to happen, something
+[10:19] that we hope will not happen, but still
+[10:22] something that we need to plan for.
+[10:24] How well we plan for it is going to
+[10:26] impact our security posture as well
+[10:28] because when it comes to errors,
+[10:29] security is actually concerned with what
+[10:31] happens immediately after an error.
+[10:34] Failing securely means that your system
+[10:37] handles a failure in a way that doesn't
+[10:40] compromise security. It means that you
+[10:42] anticipate and handle errors before they
+[10:45] cause a disaster.
+[10:47] Notice that we don't necessarily mean
+[10:48] that you should prevent errors or have
+[10:51] absolutely no errors. If you prevent
+[10:53] them, good for you. Congrats, your
+[10:55] software does not fail. But now we're
+[10:57] concerned with what happens when the
+[10:59] software does fail. So, failing
+[11:02] securely, notice the keyword failing,
+[11:04] means that you have a plan for how to
+[11:07] recover from errors and restore normal
+[11:09] operations as soon as possible without a
+[11:12] negative impact to your security
+[11:14] posture.
+[11:15] Now, one way to fail securely
+[11:17] is to use a very generic term called
+[11:20] error handling, which is a fancy way of
+[11:22] saying that you write code that can
+[11:24] catch and handle errors when they
+[11:26] happen. Actually, in many programming
+[11:28] languages, the code block is called a
+[11:31] try-catch block, which is a way of
+[11:33] telling the app, "Try to do this, to
+[11:35] execute this piece of code, but if you
+[11:37] catch an error, do this instead."
+[11:40] So, handling an error actually means
+[11:42] doing something when you detect that the
+[11:44] error happened. This is important
+[11:46] because unhandled errors can potentially
+[11:48] have any possible outcome. If you don't
+[11:52] make a decision when the error happens,
+[11:54] then your code was not prepared for it.
+[11:56] It is now facing a state for which it
+[11:58] was not designed. And what's the outcome
+[12:01] of this? Well, you don't know because
+[12:04] you did not design the code to handle
+[12:06] that situation. So, by catching and
+[12:08] handling errors, you can avoid crashing
+[12:11] your system or showing ugly error
+[12:13] messages to your users. We're not really
+[12:15] concerned about how ugly the error
+[12:17] messages are, but also about providing
+[12:19] too much information in our error
+[12:21] messages, information that could be
+[12:24] uh useful to a potential attacker. So,
+[12:26] don't forget that a vulnerability in
+[12:27] your code might even look like a
+[12:29] specific use case that results in an
+[12:32] error and causes the software to spit
+[12:34] out a bunch of information in an error
+[12:36] message. An attacker could cause your
+[12:38] software to crash intentionally just to
+[12:41] find out that information in the error
+[12:43] message.
+[12:45] Another way to fail securely is to
+[12:47] perform input validation, which means
+[12:49] that you check what your users type,
+[12:52] what they click, or what they send to
+[12:55] your app before you actually use that
+[12:57] data. For example, you can check the
+[12:59] length, the formats, and the content of
+[13:01] the input and filter out anything that
+[13:02] looks suspicious or malicious. This way
+[13:05] you can avoid getting bad data or bad
+[13:07] commands that can mess up your system or
+[13:09] even malware code that might get
+[13:10] executed if received from an attacker.
+[13:14] Sometimes, however, error handling and
+[13:16] input validation are not enough to
+[13:17] prevent failures. Sometimes your system
+[13:19] will fail anyway, and you have to decide
+[13:22] what to do next. This is where you have
+[13:24] to choose between different type of
+[13:25] failure modes. Uh first one, fail soft.
+[13:29] This is when your system keeps working
+[13:32] even after a part of it fails. For
+[13:34] example, if one app crashes on your
+[13:36] computer, the other apps can still run.
+[13:38] But the apps on your system are mostly
+[13:40] independent. In a larger application
+[13:43] with interconnected modules, if one
+[13:45] module fails, you probably don't want to
+[13:47] leave it like that. Imagine if the the
+[13:50] database failed or the authentication
+[13:52] module of the app failed. You could
+[13:54] theoretically say that it's a fail soft
+[13:57] scenario since the rest of the app is
+[13:58] still running, but is the app still
+[14:00] usable? No. Is that what you want? Of
+[14:04] course not.
+[14:06] Another method is fail secure. This is
+[14:08] when your system stops working, but
+[14:10] protects the security of your data or
+[14:13] your users.
+[14:14] Uh if the firewall stops,
+[14:17] no traffic is allowed.
+[14:19] If an electronic lock on a door fails
+[14:22] and stops working,
+[14:24] it should deny everyone trying to gain
+[14:27] access, not allow everyone.
+[14:30] Next one is fail safe. This is when your
+[14:32] system stops working, but protects the
+[14:34] safety of the people or the environment.
+[14:38] Careful, there's a difference between
+[14:39] fail safe and fail secure.
+[14:41] If people are involved in fail safe,
+[14:45] so in case of an electronic lock, if
+[14:48] there's a fire or a power outage and the
+[14:51] lock stops working, the lock on the door
+[14:53] stops working,
+[14:55] it should leave the door open so that
+[14:57] people are not locked in and can
+[15:00] evacuate. All right? So, see the
+[15:01] difference between fail secure and fail
+[15:03] safe? Uh fail open. This is when your
+[15:06] system stops working, but allows access
+[15:08] to the data.
+[15:09] For example, if a firewall fails, it
+[15:12] might let all traffic through instead of
+[15:14] blocking it if that's what you want.
+[15:16] It's similar to fail safe, but for the
+[15:18] digital world, for the data. And
+[15:20] finally, fail closed. This is when your
+[15:22] system stops working, but denies access
+[15:25] to the data. For example, if a firewall
+[15:27] fails, it's going to block all the
+[15:28] traffic like fail secure, but again, for
+[15:31] the digital world.
+[15:32] Now, how do you choose which failure
+[15:34] mode to use? Well, it depends on what
+[15:36] kind of product you have, what features
+[15:38] it supports, obviously. And at the end
+[15:40] of the day, it depends on what you value
+[15:43] more, security or functionality or
+[15:45] usability. You really cannot have them
+[15:48] all at maximum at the same time.
+[15:51] Now, let's talk about zero trust. You
+[15:53] know how back when you were young, you
+[15:56] used to rely on a security perimeter, a
+[15:58] line, imaginary line that separates the
+[16:01] good guys from the bad guys, the inside
+[16:04] from the outside of the network, where
+[16:06] you used to trust everything inside of
+[16:09] your network and give the stink eye to
+[16:11] everything outside? Well, forget all
+[16:14] that. That's old school. That's not
+[16:16] working anymore. That's how you get
+[16:17] hacked.
+[16:19] Zero trust is a security concept where
+[16:21] you assume that everything and everyone
+[16:23] is potentially malicious. Yes, it's a
+[16:26] very antisocial concept. You don't trust
+[16:29] anything inside or outside your network.
+[16:33] You don't trust your users, don't trust
+[16:34] your devices, your networks, not even
+[16:36] your apps running on your servers. You
+[16:38] don't trust your friends, your partners,
+[16:40] your vendors. You don't even trust
+[16:42] yourself. You always verify each request
+[16:46] for access or activity before you allow
+[16:48] it.
+[16:49] Now, zero trust is a different way of
+[16:50] doing security that requires a lot of
+[16:53] changes in how you design and manage
+[16:55] your system because you cannot just
+[16:56] filter or analyze traffic in every
+[16:59] single place of the network anymore. It
+[17:01] requires you to divide your system in
+[17:04] many small zones isolated from each
+[17:07] other. These zones can be as small as
+[17:10] even one device, one server, or even one
+[17:13] single application on a server. And this
+[17:16] is also related to a concept called
+[17:18] microsegmentation in security.
+[17:20] Any communication between these zones
+[17:22] has to be filtered, authenticated,
+[17:24] encrypted, controlled. This way you can
+[17:27] limit the movement and damage of any
+[17:29] attacker or insider who gets into your
+[17:32] system, no matter where is the entry
+[17:34] point. Okay? It doesn't have to be an
+[17:37] outside entry point. It can be a a
+[17:39] compromised application inside of your
+[17:40] very own data center.
+[17:42] And this is also one of the biggest
+[17:44] reasons why zero trust has gained so
+[17:46] much traction because nowadays, you
+[17:48] cannot be sure that the threats are
+[17:50] always coming in from the outside.
+[17:53] Insider threats, intentional or
+[17:55] unintentional, are real threats. People
+[17:57] are constantly bringing in new devices
+[17:59] in the office, and you have a remote
+[18:01] workforce, uh where the line isn't that
+[18:04] clear regarding what's inside and what's
+[18:06] outside. Same blurred lines apply to the
+[18:09] cloud and to bring your own device
+[18:11] deployments.
+[18:13] For zero trust to work, you also need
+[18:16] security tools and techniques to verify
+[18:18] and monitor every request and activity
+[18:20] in your system. Some of these tools and
+[18:23] techniques are, well, firewalls. You can
+[18:25] also add uh MFA, multi-factor
+[18:28] authentication, identity and access
+[18:29] management, and endpoint security.
+[18:32] Sometimes, however, verification and
+[18:34] monitoring are not enough to protect
+[18:36] your system. Sometimes you need to
+[18:37] completely cut off your system from any
+[18:40] other
+[18:41] communication to the outside world. This
+[18:42] is called complete isolation or air
+[18:45] gapping. An air gap is when you
+[18:48] physically disconnect your system from
+[18:51] any network connection, be it wired or
+[18:53] wireless, internal or external.
+[18:55] As far as actually implementing zero
+[18:57] trust, forget about trust sources. Don't
+[19:01] assume that just because something or
+[19:02] someone is inside your network, they're
+[19:05] not malicious or compromised. Always
+[19:07] assume that attackers are already inside
+[19:09] your system, on every device, on every
+[19:11] server. Be a little paranoid.
+[19:14] Um this is also sometimes called an
+[19:16] assume breach mentality. Always assume
+[19:19] that every request or activity could be
+[19:22] harmful or fraudulent.
+[19:24] Also, you might need to rethink your
+[19:26] access controls. Don't use traditional
+[19:29] access controls that grant a one-time
+[19:31] access based on one identity or role,
+[19:34] right? Don't use default or shared
+[19:37] passwords or keys. Uh don't use static
+[19:39] or permanent permissions or privileges.
+[19:42] Instead, use dynamic and granular access
+[19:44] controls that grant access based on
+[19:47] context, identity, role, time, and
+[19:50] location if possible.
+[19:52] Use multi-factor authentication to
+[19:54] verify who is requesting access, use
+[19:56] encryption, use firewalls to secure the
+[19:59] communication between zones and to
+[20:00] validate every single access attempt
+[20:02] regardless of the user's location or
+[20:04] posture. Use the principle of least
+[20:07] privilege and micro-segmentation to
+[20:09] limit the access to minimum necessary.
+[20:13] Also, don't forget to monitor your
+[20:16] systems continuously. Don't ignore or
+[20:18] dismiss anomalies and alerts. Don't wait
+[20:20] for incidents or breaches to happen
+[20:22] before you react. Instead, use real-time
+[20:25] monitoring and logging to track and
+[20:27] record everything that happens in your
+[20:29] system. Use anomaly detection,
+[20:31] preferably automated ones, and threat
+[20:34] intelligence tools to identify and
+[20:35] analyze suspicious events. And of
+[20:37] course, you will need to use incident
+[20:39] response and recovery tools to stop and
+[20:41] mitigate attacks as soon as they happen.
+[20:44] So, you remember what CIA stands for,
+[20:46] right? Confidentiality, integrity, and
+[20:49] availability. These are the three goals
+[20:51] of security that we want to achieve for
+[20:52] our data.
+[20:53] Now, one of the techniques for ensuring
+[20:55] CIA is called confinement. Confinement
+[20:58] means that you limit what your program
+[20:59] can do and where it can go and who it
+[21:02] can talk to. It means that you only
+[21:04] allow your program to read from and
+[21:06] write to certain memory locations and
+[21:08] resources, perhaps. It means that you
+[21:10] don't let your program interact with
+[21:12] other programs or systems that it
+[21:14] doesn't need to. This way, you can
+[21:15] prevent your program from leaking data
+[21:18] to unauthorized parties or from being
+[21:20] corrupted by malicious parties.
+[21:22] Confinement is also known as sandboxing
+[21:25] because it's like putting your program
+[21:27] in a sandbox where it can play safely or
+[21:29] misbehave safely without harming or
+[21:32] being harmed by others. Sometimes this
+[21:34] is also called containerization, but be
+[21:36] careful, it has nothing to do with those
+[21:38] containers in Docker and Kubernetes.
+[21:40] That's going to be another training.
+[21:41] We're only calling it containerization
+[21:43] to put an emphasis on the fact that we
+[21:45] have a system or an app isolation in
+[21:47] place.
+[21:48] Another technique for ensuring CIA is
+[21:50] called bounding. This is an imaginary
+[21:52] line around your program. It means that
+[21:54] you assign an authority level to your
+[21:57] program that tells the system what your
+[21:59] program can do. You set limits on the
+[22:02] memory addresses and the resources that
+[22:04] your program can access, like an access
+[22:06] list, but for resources. This way, you
+[22:08] can enforce confinement and prevent your
+[22:10] program from crossing that imaginary
+[22:11] line and accessing things that it
+[22:13] shouldn't or from using too much
+[22:15] resources. A third technique for
+[22:17] ensuring CIA is isolation. There are
+[22:20] many ways to implement this depending on
+[22:21] which features of the OS you choose to
+[22:23] leverage, but at a high level, it means
+[22:25] that your program runs
+[22:28] in its own space and it doesn't affect
+[22:30] or gets affected by other programs. It
+[22:32] means that your program has its own
+[22:34] memory and own resources, dedicated
+[22:36] resources, that are not shared with
+[22:38] others. Your program can only
+[22:39] communicate with others through
+[22:41] controlled channels. You might think,
+[22:43] well, isn't this the same thing as
+[22:45] confinement or containerization? Well,
+[22:47] it is at a superficial level, but for
+[22:50] teaching purposes, let's say isolation
+[22:52] is achieved through confinement and
+[22:55] bounds. Access controls are rules that
+[22:58] tell your system who can access what and
+[23:01] how. Access controls limit the access of
+[23:03] a subject, which might be a user or a
+[23:06] program, to an object, like a file or a
+[23:08] network destination. Access controls
+[23:10] state which objects are valid for each
+[23:13] subject and which type of access is
+[23:15] allowed or denied. For example, if you
+[23:17] say that Alice can read one file but not
+[23:20] write to it, Bob can write to it but not
+[23:23] delete it, and Charlie can neither read
+[23:25] nor write nor do anything to that file,
+[23:28] that's the type of entry you would find
+[23:30] uh in an access control implementation.
+[23:33] Another concept for ensuring security is
+[23:36] trust and assurance. Uh trust is the
+[23:38] presence of a security mechanism. For
+[23:40] example, trust is having a firewall, an
+[23:43] encryption algorithm, or an
+[23:45] authentication method that provides us
+[23:47] with a perceived level of safety. You
+[23:50] should and will at some point simply
+[23:53] trust that your firewall actually blocks
+[23:55] the traffic types that you configured it
+[23:56] to block, at least after a little
+[23:58] testing.
+[23:59] Uh assurance is a degree of confidence
+[24:02] in that security mechanism. For example,
+[24:04] assurance is how well your firewall
+[24:06] blocks unwanted traffic. Can it block
+[24:09] malware if it's over HTTPS? How about
+[24:12] VPNs? How about over five different type
+[24:14] of VPNs? How about malware that is
+[24:16] inside of a zip file? How about malware
+[24:19] inside of a password-protected zip file?
+[24:22] How about malware that is inside of a
+[24:23] file zipped 25 times in a row and
+[24:26] password-protected? Okay?
+[24:28] >> [snorts]
+[24:28] >> So, assurance also looks at how strong
+[24:31] your encryption algorithm is or how
+[24:33] accurately your authentication methods
+[24:36] verify your identity. In general,
+[24:39] assurance means how well your security
+[24:41] control does its job because, as you can
+[24:44] see, it's not always a yes-no situation.

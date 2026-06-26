@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A security engineer is performing a physical security audit of the head office. They observe an individual wearing a delivery uniform carrying two large boxes. As an employee approaches the locked badge-access door, the delivery person asks them to 'hold the door for just a second.' The employee complies and holds the door open, allowing the delivery person to enter. Which social engineering technique and human factor were exploited here?",
+    "options": [
+      "Tailgating; authority was exploited.",
+      "Piggybacking; human helpfulness was exploited.",
+      "Tailgating; consensus was exploited.",
+      "Piggybacking; scarcity was exploited."
+    ],
+    "correctIndex": 1,
+    "explanation": "Piggybacking occurs when an authorized person actively holds a door open for an unauthorized person, usually preying on human helpfulness or courtesy (e.g., carrying boxes, wearing uniforms). Tailgating occurs when an unauthorized person sneaks in closely behind an authorized person without their knowledge or active assistance. In this scenario, the employee actively held the door, making it piggybacking."
+  },
+  {
+    "question": "An attacker registers several domain names such as 'micros0ft.com' and 'mircosoft.com' with the intention of hosting credential-harvesting pages. Many users accidentally navigate to these sites due to typing errors on mobile touchscreens. What type of social engineering attack is this?",
+    "options": [
+      "Pharming",
+      "Typosquatting",
+      "Watering Hole",
+      "DNS Spoofing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Typosquatting (also known as URL hijacking) involves registering common typographical errors of popular domain names (e.g., swapping letters, replacing 'o' with '0') to redirect users who make mistakes when typing URLs. Pharming, by contrast, involves technical redirection (like DNS hijacking or hosts file modification) where the user types the URL perfectly but is still redirected."
+  },
+  {
+    "question": "During a routine audit of the corporate trash containers located in an unsecured parking area, a security officer discovers several printed spreadsheets detailing internal system names, IP addresses, and email drafts. What attack does this practice expose the company to, and how is it best mitigated?",
+    "options": [
+      "Shoulder surfing; mitigated by privacy screens.",
+      "Hoaxes; mitigated by updating spam filters.",
+      "Dumpster diving; mitigated by requiring secure shredding bins and paper shredders.",
+      "Watering hole; mitigated by disabling external links."
+    ],
+    "correctIndex": 2,
+    "explanation": "Dumpster diving is the act of digging through trash for sensitive papers or data. It is best mitigated by administrative policies requiring the use of paper shredders or secure, locked shredding bins for all company documents prior to disposal."
+  },
+  {
+    "question": "An organization experiences a security breach where several users on the finance team typed their banking URLs correctly but were silently redirected to a clone website that captured their login credentials. Investigations revealed that the users' local computers had a modified 'hosts' file. Which of the following best describes this attack?",
+    "options": [
+      "Watering Hole Attack",
+      "Phishing",
+      "Pharming",
+      "Spear Phishing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Pharming (or DNS farming) is an attack where users are redirected to a fraudulent website even when they type the correct URL. This is accomplished either by changing the local hosts file on the client computer, running a rogue DHCP/DNS server, or poisoning a DNS cache. Since they typed the URL correctly but were redirected due to a modified hosts file, it is pharming."
+  },
+  {
+    "question": "An employee receives an urgent email that appears to come from their company's CISO. The email states: 'A critical vulnerability has been detected on your workstation. You must immediately click this link to run the diagnostic tool, or your system access will be terminated within 2 hours.' The employee clicks the link and downloads malware. What combination of social engineering principles did the attacker exploit?",
+    "options": [
+      "Social Proof and Consensus",
+      "Likability and Scarcity",
+      "Authority and Scarcity/False Urgency",
+      "Familiarity and Consensus"
+    ],
+    "correctIndex": 2,
+    "explanation": "The email claims to be from the CISO (exploiting the principle of Authority) and threatens immediate account termination within 2 hours if they do not comply (exploiting Scarcity / False Urgency to induce panic and quick action)."
+  }
+]

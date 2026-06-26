@@ -1,0 +1,57 @@
+[
+  {
+    "question": "An operational technology (OT) manager at a municipal water treatment facility wants to integrate water quality sensors spread across the city with a centralized DCS platform at the headquarters. The sensors connect over public cellular links. As a CISSP, what is the primary risk and the best architectural countermeasure?",
+    "options": [
+      "The threat of DNS cache poisoning; implement immediate addressing on the sensors.",
+      "Exposure of telemetry over public networks; isolate remote PLCs via VPN tunnels and implement strict authentication for DCS console access.",
+      "Interference from low-frequency CRT radiation; replace all field sensors with FPGA-based LCD panels.",
+      "Starvation of CPU cycles during Measured Boot; disable local RTOS auditing logs."
+    ],
+    "correctIndex": 1,
+    "explanation": "Transmitting telemetry data from field PLCs over public networks exposes SCADA communications to interception and tampering. Implementing secure VPN tunnels isolates this data flow. Additionally, strong authentication controls on the DCS console prevent unauthorized control of the physical systems."
+  },
+  {
+    "question": "A manufacturer is designing a robotic surgical arm controlled by a specialized Real-Time Operating System (RTOS). During threat modeling, the team evaluates the impact of network-based Denial of Service (DoS) attacks on the arm's control loops. How should a CISSP describe the unique risk profile of an RTOS under a DoS condition?",
+    "options": [
+      "A DoS attack will deplete the FPGA's non-volatile PROM cache, causing a permanent system reboot.",
+      "Even a minor network delay (latency jitter) of a few milliseconds caused by a DoS can disrupt the deterministic scheduling of the RTOS, leading to physical operational failure.",
+      "The RTOS will automatically transition to Ring 3 problem state, disabling the interface definition language (IDL).",
+      "The RTOS will replicate its execution state across an asymmetric multiprocessing (AMP) grid, causing desynchronization."
+    ],
+    "correctIndex": 1,
+    "explanation": "RTOS systems are deterministic, meaning processing must occur within strict, predictable timing windows. A DoS attack on an RTOS does not need to crash the system to succeed; introducing even a small delay (latency) of a few milliseconds can violate these timing constraints, leading to catastrophic failure of physical operations (like a surgical procedure)."
+  },
+  {
+    "question": "A financial analyst's browser is compromised via a DOM-based Cross-Site Scripting (DOM XSS) attack, allowing the attacker to corrupt local browser cache files. Which developer-controlled mechanism would have been most effective in preventing the caching of sensitive transactional templates in the analyst's browser?",
+    "options": [
+      "Implementing Symmetric Multiprocessing (SMP) on the database server.",
+      "Restricting the local network interfaces to a dedicated WEP-encrypted VLAN.",
+      "Setting secure Cache-Control headers (such as 'no-store' or 'no-cache') via HTTP headers or meta HTTP-equiv tags.",
+      "Using an Interface Definition Language (IDL) to establish static DCOM objects."
+    ],
+    "correctIndex": 2,
+    "explanation": "Developers can control web caching behavior using the Cache-Control header (either via HTTP headers or HTML meta HTTP-equiv tags) and the Expires header. Setting Cache-Control to 'no-store' prevents the client browser from storing sensitive templates locally, neutralizing the threat of local cache harvesting via DOM XSS."
+  },
+  {
+    "question": "A global consulting firm hosts its customer database in a distributed cloud database cluster with nodes located in Germany, Singapore, and the United States. A customer complains that their private records are being accessed by local law enforcement in the United States without their consent. Which legal concept is directly applicable to this scenario, and what is the best governance approach?",
+    "options": [
+      "Data sovereignty; the data is subject to the laws of the country where the physical hosting storage device is located, requiring operational policy to specify geographic replication boundaries.",
+      "Same-Origin Policy; the customer's browser must enforce HTML-level domain isolation.",
+      "Asymmetric Multiprocessing; the German nodes must execute tasks in isolation to prevent data leaks.",
+      "Cryptographic transitivity; the blockchain ledger must be compiled with a different interface definition language (IDL)."
+    ],
+    "correctIndex": 0,
+    "explanation": "Data sovereignty dictates that digital data is subject to the laws of the country in which the physical hardware storing it is located. For distributed cloud architectures, replicating data to US-based servers subjects that data to US legal processes. Security management must define policies and replication procedures that respect geographic legal boundaries."
+  },
+  {
+    "question": "An enterprise deploys thousands of smart environmental sensors across its office buildings to manage energy consumption. During an operational audit, it is discovered that these cheap IoT sensors utilize weak, obsolete WPA wireless encryption, have hardcoded admin credentials, and their firmware cannot be upgraded. Which risk response is most appropriate for the security manager to recommend?",
+    "options": [
+      "Implement risk avoidance by immediately decommissioning the sensors or isolating them onto a dedicated, non-routable VLAN with a distinct SSID.",
+      "Accept the risk since the sensors run static operating systems that automatically reset themselves on power loss.",
+      "Attempt to reverse-engineer the FPGA chips to force-install a modern TLS client.",
+      "Enable measured boot on the sensors' local RTOS to automatically rotate the hardcoded credentials."
+    ],
+    "correctIndex": 0,
+    "explanation": "Unpatchable firmware, weak legacy wireless encryption, and hardcoded credentials represent a permanent vulnerability. The most appropriate risk response is risk avoidance/mitigation: either decommissioning the insecure sensors or strictly isolating them on a separate VLAN and SSID where they cannot access internal corporate assets."
+  }
+]

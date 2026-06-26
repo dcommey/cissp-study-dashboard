@@ -1,0 +1,1391 @@
+[00:08] All right, everyone. So, today we're
+[00:09] going to talk about compliance and
+[00:11] regulations. And I know this is going to
+[00:13] be a sad, sad day for all of us.
+[00:17] But, we will push through it. I promise
+[00:19] you. All right?
+[00:21] So, the world of compliance is a mess in
+[00:25] IT in general and for cybersecurity in
+[00:28] particular.
+[00:30] Uh there so many laws and regulations
+[00:32] from different places and different
+[00:34] countries that it has become really hard
+[00:38] to keep track of all of them. And they
+[00:40] don't always agree with each other.
+[00:42] There's not always the common sense that
+[00:44] can help you figure out which rule you
+[00:48] should be applying when and to whom.
+[00:51] It's like a jungle out there, but with
+[00:53] more lawyers and less fun.
+[00:55] So, we're here because law enforcement
+[00:57] agencies have been trying to catch up
+[01:00] with cybercrime, but they're not always
+[01:01] on the same page, either. All right?
+[01:03] Some of them have experts who know what
+[01:05] they're doing and can be reasoned with.
+[01:08] Uh you can explain to them how a
+[01:09] cyberattack happens and what are its
+[01:11] implications.
+[01:13] While others have to call for help when
+[01:15] they see a computer. And unfortunately,
+[01:17] these are the people who determine the
+[01:18] outcomes in a prosecution, in a trial.
+[01:22] This gets even more complicated when you
+[01:23] add to the table international law,
+[01:26] which is a whole other level of
+[01:27] complicated. So, in this chapter, we'll
+[01:29] cover the different kinds of laws that
+[01:31] deal with computer security. We'll look
+[01:34] at how they handle cybercrime, privacy,
+[01:36] intellectual property, and some other
+[01:38] stuff which we cannot define just yet at
+[01:41] this point.
+[01:42] Uh we'll also cover some basic
+[01:44] investigative techniques like uh knowing
+[01:47] when to call the cops and when to run
+[01:48] away. I'm kidding. Uh But, don't run
+[01:51] away. Uh that makes you much more
+[01:53] suspicious. Except if your life's in
+[01:55] danger and you can prove it. Okay? So,
+[01:58] let's get going.
+[02:00] Speaking of types of laws, criminal law
+[02:03] is the foundation of all laws that keep
+[02:05] us safe and civilized. Now, these are
+[02:07] the laws that the police and other law
+[02:09] enforcers care about. Uh criminal law
+[02:11] has a lot to say about acts like
+[02:13] killing, hurting, stealing, burning
+[02:16] stuff, not just all the above, of
+[02:18] course. Penalties for breaking criminal
+[02:21] laws can range from you having to pick
+[02:23] up the trash and plant daisies, paying
+[02:25] money in fines, or even going to jail,
+[02:28] or some unfortunate combination of all
+[02:30] of them.
+[02:31] Now, there are also some criminal laws
+[02:33] that protect us from computer crime, as
+[02:35] you probably can expect. Later in this
+[02:37] episode, you'll learn how some laws like
+[02:39] the Computer Fraud and Abuse Act, the
+[02:41] Electronic Communications Privacy Act,
+[02:43] and the Identity Theft and Assumption
+[02:45] Deterrence Act, and others with long,
+[02:49] unbearable, and unrememberable names,
+[02:52] punish serious cases of computer crimes.
+[02:55] Now, the civil laws are more, let's say,
+[02:57] more civilized, as well. Uh you might
+[03:00] laugh, but it's not that far from the
+[03:02] truth. Civil laws are the rules that
+[03:04] make us play nice with each other, and
+[03:07] with the government, as well.
+[03:09] So, if we're thinking about playing
+[03:10] nice, we're way beyond stuff like
+[03:14] killing, burning, hitting, and stealing.
+[03:17] Civil laws cover things like contracts
+[03:19] for real estate, for jobs, and wills are
+[03:22] also covered by civil law. Uh they also
+[03:24] tell the government how to spend our
+[03:25] money, or your money, and what it can do
+[03:28] and cannot do with that money.
+[03:30] So, long story short, civil laws are
+[03:32] those that don't usually put anyone in
+[03:34] jail, usually.
+[03:36] Now, how are civil laws made and
+[03:37] enforced? Well, in the US, they have to
+[03:40] go through the Congress and the courts,
+[03:42] and they have to follow the
+[03:43] Constitution. If someone breaks a civil
+[03:45] law, you have to sue them yourself. The
+[03:48] government will not do it for you. So,
+[03:51] unlike criminal law and law enforcement
+[03:53] can automatically
+[03:55] react when when theft or murder happens,
+[03:59] with civil law you need to announce
+[04:01] yourself as the victim. So, you actually
+[04:03] have to complain and explain why you are
+[04:06] entitled to, well, victimization or
+[04:08] complaining. Thus, civil law affects
+[04:11] your rights as a citizen. You can put it
+[04:13] this way. And it can also help you solve
+[04:16] problems with other people or companies
+[04:17] peacefully and fairly whenever you have
+[04:20] some reason to complain.
+[04:21] Now, and since at some point we did
+[04:23] mention the government, civil law can
+[04:25] also protect you from the government
+[04:27] abusing its power, right? Or wasting
+[04:30] your taxes.
+[04:31] The last one is administrative law. And
+[04:34] this is the set of rules that the
+[04:36] government makes to run its own
+[04:37] business. It covers everything from how
+[04:40] to get a tax refund to how to deal with
+[04:42] immigrants. Administrative law is not
+[04:44] made by the Congress, but by other
+[04:46] agencies. They write executive orders,
+[04:48] policies, procedures, and regulations,
+[04:51] and then tell them how to do their jobs.
+[04:53] Now, administrative law is not above the
+[04:55] law. It still has to follow the laws
+[04:57] that Congress makes and the Constitution
+[04:59] that everybody lives by. If an agency
+[05:01] does something that goes against the law
+[05:04] or the Constitution, it can be
+[05:05] challenged in court. And by the way,
+[05:07] administrative law can also change over
+[05:09] time depending on who is in charge of
+[05:12] the executive and what their priorities
+[05:14] are. They kind of make their own rules.
+[05:18] And since computers simplify some tasks,
+[05:20] but over complicate a whole bunch of
+[05:22] others, we have to thank them for a
+[05:23] different kind of branch in the world of
+[05:26] law, which is computer crime.
+[05:28] Now, computer crime is when you use your
+[05:30] computer or your computer skills for
+[05:32] evil instead of good. And you end up
+[05:34] breaking the law and hurting other
+[05:36] people or other companies.
+[05:38] You might think that computer crime is a
+[05:40] new thing, but it's actually been around
+[05:41] for quite some time. The problem is that
+[05:44] for a long, long time the law was not
+[05:46] ready for it, and many computer
+[05:48] criminals simply got away because courts
+[05:50] of law didn't know how to apply the old
+[05:52] laws to the new technology or were not
+[05:55] able to correctly determine what does
+[05:57] evidence mean in the world of IT, what
+[06:00] should be accepted as evidence, how
+[06:02] computer data should be treated in order
+[06:04] to be accepted as evidence. Uh now, for
+[06:06] a long, long time, the courts of law had
+[06:09] big, big issues with evidence that you
+[06:11] cannot touch.
+[06:13] Okay? That's why the US Congress,
+[06:15] specifically as the exam is concerned
+[06:16] with US laws and examples, the US
+[06:19] Congress decided to step in and create
+[06:21] some new laws that specifically deal
+[06:23] with computer crime and make it clear
+[06:25] what you can and cannot do with your
+[06:27] computer or with someone else's. All
+[06:29] right? So, here are some laws.
+[06:31] For example, we have the Computer Fraud
+[06:33] and Abuse Act, CFAA.
+[06:36] This was the first big law that focused
+[06:38] on computer crime in the US. It started
+[06:40] around in 1984, a bit early, but also a
+[06:43] bit kind of late. Computers were around,
+[06:46] but not everyone had one, and even less
+[06:49] people knew how to use one. Companies,
+[06:51] governments had lots of them. So, the
+[06:53] CFAA made it illegal to access or damage
+[06:57] these computers or to use them for fraud
+[06:59] or other bad things. It also made it
+[07:01] illegal to mess around with medical
+[07:03] records or to sell or buy passwords.
+[07:06] But, quickly after computers became more
+[07:07] common, focused
+[07:09] on
+[07:10] more personal use cases, found in more
+[07:12] households, more connected, so the CFAA
+[07:15] had to change, too. In 1986, CFAA was
+[07:19] expanded to cover almost any computer
+[07:21] owned by anyone. So, what does this mean
+[07:24] to you? What does the CFAA mean to you?
+[07:26] Well, it means that you have to be
+[07:27] careful with what you do with your
+[07:29] computer because you might be breaking a
+[07:30] law without even knowing it. The CFAA
+[07:34] had some serious penalties like fines,
+[07:37] jail time, or both. So, please, use your
+[07:39] computer skills for good, not evil. And
+[07:41] if you have any questions about the CFAA
+[07:44] or other computer crime laws, please ask
+[07:46] a lawyer. They know much more than I do
+[07:48] about this stuff.
+[07:49] Later in 1994, CFAA was again not enough
+[07:54] uh to deal with the new and improved
+[07:56] computer criminals uh who are now
+[07:58] creating viruses and worms and other
+[08:01] nasty things. So, the law was updated
+[08:03] and made more strict and also more broad
+[08:06] to cover more types of shenanigans.
+[08:09] And the name was changed as well. They
+[08:11] called it the Computer Abuse Amendments
+[08:14] Act of 1994, and it explicitly made
+[08:17] malicious code or malware illegal. Yes,
+[08:20] we had to get to 1994 for malware to be
+[08:23] declared illegal.
+[08:25] The CFAA is a powerful law that can be
+[08:27] used to prosecute many kinds of computer
+[08:29] crime, but it's also controversial law
+[08:31] that some people think it's too vague
+[08:33] and or too harsh. For example, some
+[08:35] people say that the CFAA can make you a
+[08:37] criminal if you break the rules of a
+[08:38] website, like when you're abusing, quote
+[08:41] unquote, a website by downloading too
+[08:43] many files or when you lie about your
+[08:45] age when you access websites.
+[08:48] Everybody does that, right?
+[08:49] >> [snorts]
+[08:50] >> Now, there are different opinions about
+[08:52] how to interpret and apply this law.
+[08:54] Some courts say that the CFAA does not
+[08:56] apply to breaking website rules because
+[08:59] that would give too much power to
+[09:00] website owners.
+[09:02] Like, you shall not click on this red
+[09:04] button, right? If you click the red
+[09:05] button, bam, you violated the website
+[09:07] rules and you go to jail.
+[09:09] It doesn't really sound that plausible,
+[09:11] right? I mean, come on. Others say that
+[09:14] it does apply because breaking website
+[09:16] rules is like breaking into someone's
+[09:18] house. You could probably think about
+[09:19] some situations where this would also
+[09:21] make sense,
+[09:22] but it's really tough to have a a
+[09:24] catch-all rule or law. Unfortunately,
+[09:27] laws are designed this way.
+[09:30] Next, we have the National Information
+[09:31] Infrastructure Protection Act of 1996.
+[09:34] This is also an upgrade to the CFAA when
+[09:36] the government became worried about the
+[09:38] security of the national infrastructure
+[09:41] because everyone had computers now
+[09:43] including computers installed in the
+[09:44] national infrastructure as well. So,
+[09:47] this law started covering computers that
+[09:48] were used for international commerce.
+[09:52] That means any computer that connects to
+[09:53] the global internet which is well every
+[09:55] computer nowadays.
+[09:57] Now, it also protected other parts of
+[09:59] the national infrastructure that depend
+[10:00] on computers like trains, gas pipelines,
+[10:03] power grids, phone lines, and so on. It
+[10:06] made it a felony to intentionally damage
+[10:08] any of these critical systems. Another
+[10:10] interesting one is the federal
+[10:12] sentencing guidelines. In 1991, the
+[10:14] federal government released some
+[10:16] guidelines to help judges decide how to
+[10:18] punish computer criminals.
+[10:20] >> [laughter]
+[10:21] >> Kind of funny. I don't know why this
+[10:23] this this does sound a bit funny to me.
+[10:25] The guidelines said that senior
+[10:28] executives have to take personal
+[10:30] responsibility for information security.
+[10:33] This is why nowadays in every security
+[10:35] training we learn that the ultimate data
+[10:37] owners as the ultimate people who are
+[10:41] responsible for the security of the data
+[10:44] are the top executives in the company.
+[10:47] They cannot just blame their IT staff or
+[10:49] their dog or anybody else who works
+[10:51] around the data. They have to act like
+[10:53] prudent people who care about security
+[10:54] and do their best to protect their
+[10:56] systems and data. Now, obviously this
+[10:58] does not mean that the CEO has to
+[11:00] generate the encryption keys and store
+[11:02] them securely and perform backups. But
+[11:04] they still will be liable. They will be
+[11:07] responsible
+[11:08] for any misfortune that happens to that
+[11:10] data. The guidelines also gave some
+[11:12] incentives for companies to be proactive
+[11:14] about security so they don't end up on
+[11:16] the other side of the law.
+[11:18] Now, they said that if they can show
+[11:20] that they did they due diligence, a lot
+[11:23] of D's here,
+[11:24] which means that they followed the best
+[11:26] practices and standards for security.
+[11:28] They did their homeworks basically. They
+[11:31] might get a lighter sentence or not at
+[11:33] all if something goes wrong. So, the CEO
+[11:35] is not just a scapegoat this time, but a
+[11:37] person who can show that the company has
+[11:39] made all possible efforts to avoid
+[11:41] security incidents. Now, the guidelines
+[11:43] also explain how to prove negligence and
+[11:45] that there are three things that have to
+[11:48] be shown. First, that the person had a
+[11:50] legal obligation to do something.
+[11:52] Second, that the person did not do what
+[11:55] they were supposed to do. All right, so
+[11:57] this is not doing their homework. And
+[11:59] third, that the person's failure
+[12:01] actually was the direct cause of some
+[12:03] damage. So, yeah, you could potentially
+[12:04] get lucky with the last one. Now, as you
+[12:06] can see, these things are pretty much
+[12:08] common sense up to a point at least.
+[12:10] It's not a brand new approach to the
+[12:12] law, but it's the just the common sense
+[12:14] that we've already had in the law
+[12:16] applied to computer security now.
+[12:18] Another one that you might have heard
+[12:19] about is the Federal Information
+[12:21] Security Management Act, also called
+[12:24] FISMA, introduced in 2002.
+[12:27] This law requires that federal agencies
+[12:29] and their contractors need to have a
+[12:31] good information security program so
+[12:32] they cannot keep doing security the way
+[12:34] they just feel like it should be done.
+[12:37] The National Institute of Standards and
+[12:39] Technology, or NIST for short, is the
+[12:41] agency that tells everyone how to follow
+[12:43] FISMA. NIST says that an effective
+[12:46] information security program has a
+[12:48] couple of elements.
+[12:49] Among which we have regular assessments
+[12:52] of risks, as you might expect.
+[12:55] Another one is policies and procedures
+[12:56] that are based on risk, which means
+[12:58] having rules and guidelines that help
+[13:00] you prevent and deal with security
+[13:01] problems.
+[13:02] Another one is having specific security
+[13:04] plans for different part of your
+[13:06] company, per department, for example.
+[13:09] Another one is running security
+[13:10] awareness trainings.
+[13:12] Another one is periodically testing your
+[13:14] security policies, procedures, and
+[13:16] practices, and controls, ultimately of
+[13:19] course, to make sure that they are
+[13:20] working as expected at least once a
+[13:22] year.
+[13:23] Another one is to have a process for
+[13:26] remedial actions, which means having a
+[13:28] way to fix any security issues that you
+[13:30] find or that happen.
+[13:33] Um another one is having procedures for
+[13:35] security incidents, which means having a
+[13:37] way to detect, report, and respond, most
+[13:40] importantly respond, to any security
+[13:42] breaches. And finally, you need to have
+[13:45] plans and procedures for continuity of
+[13:47] operations, which means having a way to
+[13:48] keep your systems and data working in
+[13:50] case of an emergency or disaster.
+[13:54] All right? So, this is what NIST says
+[13:56] that an information security program
+[13:58] needs to have.
+[14:00] A bit more recently, we got the federal
+[14:02] cybersecurity laws of 2014
+[14:05] signed by Barack Obama. These are the
+[14:07] new laws that changed the way the
+[14:09] federal government handles cybersecurity
+[14:11] issues. The first one was called FISMA,
+[14:13] as we just saw, which is the same name
+[14:15] as an older law from 2002, but this
+[14:17] FISMA was different. It gave the
+[14:19] Department of Homeland Security the
+[14:21] power to oversee most of the federal
+[14:23] cybersecurity issues, except for the
+[14:25] defense and intelligence stuff,
+[14:27] which stayed with their own bosses,
+[14:29] separate bosses.
+[14:30] Now, the second one was also called the
+[14:32] Cybersecurity Enhancement Act, which
+[14:34] gave NIST the job of coordinating the
+[14:36] work on cybersecurity standards for
+[14:38] everyone.
+[14:39] Now, you should also know that NIST is
+[14:40] an agency that makes a lot of useful and
+[14:43] free publications about computer
+[14:45] security. You can find them online for
+[14:47] free, and some of the most popular NIST
+[14:49] publications are
+[14:51] NIST SP, which stands for special
+[14:53] publication 800- 53, and you should
+[14:55] remember this one.
+[14:57] Uh this one tells you what security and
+[14:58] privacy controls you need to have. Uh
+[15:01] it's for federal information systems,
+[15:02] but nobody's stopping you from applying
+[15:04] the same recommendations to your own
+[15:05] network or company. It's mandatory for
+[15:07] federal systems, of course, but it's a
+[15:09] good reference for everybody else, too.
+[15:11] Another one is NIST special publication
+[15:13] 800-171.
+[15:15] This one tells you how to protect
+[15:17] controlled unclassified information.
+[15:20] This is important if you work with the
+[15:21] government and they give you some
+[15:22] sensitive information uh that you need
+[15:24] to keep safe.
+[15:26] And another one is the NIST
+[15:28] Cybersecurity Framework, a shorthand
+[15:30] CSF. This one is a set of standards that
+[15:33] you can use to manage your cybersecurity
+[15:35] risks. It's voluntary, but it's also
+[15:37] very useful, helpful, and widely used.
+[15:40] Very good starting point when you are
+[15:41] tasked with managing cybersecurity in
+[15:43] your company and you don't know where to
+[15:45] begin. So, the CSF NIST Cybersecurity
+[15:47] Framework is a great starting point.
+[15:50] A lot of laws and regulations would not
+[15:52] exist if not for the data that needs
+[15:54] protection. Pretty obvious, right? One
+[15:57] big category of data that needs
+[15:58] protection is intellectual property or
+[16:01] IP.
+[16:02] Now, IP is not something you can touch
+[16:04] or hold, but it's still very valuable.
+[16:06] IP is the stuff that comes out of your
+[16:09] brain, your ideas, your creativity, your
+[16:12] inventions, your source code, and even
+[16:14] your brand names.
+[16:16] IP is what makes you different from
+[16:18] everyone else and what you use to come
+[16:20] up with a product or a service that
+[16:21] people are willing to pay for. So, in
+[16:23] short, IP is all those ideas that you
+[16:25] use to make money. But, IP is also very
+[16:28] easy to copy or steal, especially in the
+[16:30] digital age. That's why there are laws
+[16:33] that protect intellectual property and
+[16:34] give you the right to benefit from your
+[16:36] own work. These laws also help you avoid
+[16:39] getting sued by someone else who claims
+[16:41] that you stole their IP.
+[16:45] You need to care about IP because it
+[16:46] affects your job and the company that
+[16:48] you work for or you own. You need to
+[16:50] protect your own IP from hackers, from
+[16:53] spies, from competitors, from
+[16:54] disgruntled employees, insider threats,
+[16:57] and even pirates, right?
+[17:00] The digital ones, not the sea shanty
+[17:02] ones. You also need to know enough about
+[17:04] IP to respect other people's IP and not
+[17:07] use it without permission or payment.
+[17:09] Otherwise, you might get in trouble with
+[17:10] the law or damage your reputation.
+[17:13] There are four main types of IP that you
+[17:15] need to know about. There's copyrights,
+[17:16] there's trademarks, there's patents and
+[17:18] trade secrets. Each one protects a
+[17:20] different kind of IP and has different
+[17:22] rules and requirements.
+[17:24] The copyright in the Digital Millennium
+[17:26] Copyright Act is probably the most
+[17:29] well-known set of laws that protects IP.
+[17:32] If you ever created something original
+[17:34] like a book, a song, a play, a painting,
+[17:37] a movie, recording, a piece of code,
+[17:40] congratulations. You are an author and
+[17:43] you have the right to control who can
+[17:44] copy your work. That's what copyright
+[17:47] law is all about.
+[17:48] The DMCA has several parts, but the most
+[17:50] important one for us is the part that
+[17:52] says you cannot break or bypass any
+[17:54] protection that an author puts on their
+[17:56] digital work to prevent copying.
+[17:58] For example, if you buy a CD or a DVD,
+[18:01] if anybody still does that, that has
+[18:03] some encryption or code that stops you
+[18:05] from making copies of it, uh you cannot
+[18:08] try to crack or hack that code, even if
+[18:10] it's really easy to crack. And yes, most
+[18:12] protection mechanisms have been defeated
+[18:14] as of today, but the law still stands.
+[18:17] If you do, you could face some serious
+[18:19] fines or jail time. The only exceptions
+[18:21] are for some nonprofit institutions and
+[18:23] libraries, uh educational institutions
+[18:26] like schools and colleges that need to
+[18:27] make copies for educational purposes.
+[18:30] Now, the DMCA is a controversial law
+[18:32] that has both supporters and critics,
+[18:34] pretty much like every other law out
+[18:36] there. Uh actually, what thing on this
+[18:38] planet doesn't have supporters and
+[18:40] critics as well? Some people say it
+[18:42] protects authors and encourages
+[18:44] creativity. Others say it limits fair
+[18:47] use and innovation because
+[18:49] fewer people have access to good
+[18:50] knowledge because of it.
+[18:52] It's easy to say that information should
+[18:53] be free. It sounds good. Everyone should
+[18:56] be able to be benefit from it for the
+[18:58] good of mankind, but there's also the
+[19:00] issue of people that need to make money
+[19:02] from that creativity in order to live,
+[19:04] to pay the bills, thus making it
+[19:06] possible for them to be creative.
+[19:08] So, see where this is going?
+[19:10] I probably would not be recording this
+[19:12] right now considering how little I'm
+[19:13] earning
+[19:14] from it if I would worry about tomorrow
+[19:18] and whether I have a roof over my head
+[19:20] and food on my table for my family and
+[19:21] I.
+[19:22] Now the DMCA may even involve internet
+[19:25] service providers or ISPs as well but
+[19:28] not that much actually. The DMCA says
+[19:31] that ISPs are not
+[19:33] not responsible for what their users do
+[19:35] with their internet connection as long
+[19:37] as they don't know about it or they
+[19:40] don't help them do it if it's something
+[19:42] illegal.
+[19:43] And also give some protection to ISPs
+[19:45] for caching, searching and storing
+[19:47] information on their network. So the
+[19:49] DMCA will not fine an ISP because it
+[19:52] automatically cached a piece of
+[19:53] copyrighted content that was downloaded
+[19:56] illegally by some random users
+[19:58] who were just using their network.
+[20:00] That would have been kind of stupid,
+[20:03] right? So the DMCA says that ISPs can do
+[20:06] these things without getting sued but
+[20:08] they have to remove any content that
+[20:10] violates copyright as soon as they find
+[20:12] out about it and usually people report
+[20:15] it and there are certain organizations
+[20:17] that deal with this or the actual
+[20:18] companies that find their copyrighted
+[20:20] content online, they report it and then
+[20:22] it's taken down.
+[20:24] Also the DMCA says that streaming is not
+[20:27] the same as copying and it has different
+[20:29] rules for it.
+[20:30] Next, we have something called
+[20:32] trademarks.
+[20:33] When you see a pair of specific golden
+[20:35] arches, you might think of McDonald's or
+[20:37] when you hear just do it, you think of
+[20:39] Nike.
+[20:40] Or when you see an apple with a bite,
+[20:42] you think of Apple. These are example of
+[20:43] trademarks which are signs that identify
+[20:45] a company and its product or services.
+[20:48] You don't really have to register your
+[20:50] trademark, you just have to use it in
+[20:52] public and show that you want to protect
+[20:53] it by using the TM symbol next to it.
+[20:56] But if you want to get official
+[20:57] recognition and more protection, you can
+[20:59] register your trademark in the US with
+[21:01] the United States Patent and Trademark
+[21:03] Office. This process takes time, takes
+[21:06] money and you need a lawyer to help you
+[21:08] with it. But once you get a registration
+[21:10] certificate, you can use the R circle R
+[21:13] symbol next to your trademark.
+[21:16] Now, obviously, you cannot just register
+[21:17] any word or logo as a trademark. There
+[21:20] are some rules.
+[21:21] First, your trademark has to be unique
+[21:23] and not similar to another trademark
+[21:24] that already exists. Otherwise, you
+[21:26] might confuse customers or get sued by
+[21:28] other companies.
+[21:30] Second, your trademark should not be
+[21:31] descriptive of your product or services.
+[21:34] For example, you cannot register just
+[21:35] pizza as your trademark for a pizza
+[21:38] restaurant because that's too generic
+[21:39] and also boring. But well, you could
+[21:43] register Apple as long as you don't sell
+[21:45] apples, right?
+[21:47] >> [laughter]
+[21:48] >> Another type is represented by patents.
+[21:52] Patents are legal documents that give
+[21:55] you the exclusive right to use your
+[21:57] brilliant idea for something new and
+[21:59] useful, like a gadget, a new machine, a
+[22:02] new algorithm, or a process
+[22:04] for about 20 years from the time you
+[22:07] apply for it. During that time, you can
+[22:09] make money from your invention by using
+[22:11] it yourself or by licensing it to
+[22:13] others. After that time, your invention
+[22:16] becomes public domain, which means
+[22:17] anyone can use it.
+[22:19] Just like with trademarks, you cannot
+[22:21] just patent any idea that pops into your
+[22:23] head. Your invention has to be new. It
+[22:25] cannot be something that already exists
+[22:27] or that someone else has already
+[22:28] invented. Uh second, your invention has
+[22:31] to be useful, which is very debatable in
+[22:34] the age of pseudoscience.
+[22:37] Uh also, it has to work
+[22:39] >> [laughter]
+[22:39] >> and to do something that people actually
+[22:41] need or want. Again, very, very
+[22:44] debatable.
+[22:45] There are a lot of products out there, a
+[22:47] lot of ideas, and a lot of Kickstarter
+[22:49] and GoFundMe projects out there, you
+[22:52] know, offering solutions that are
+[22:54] strongly looking for a problem to solve.
+[22:57] If you get my point. Third, your
+[22:59] invention has to be not obvious. It
+[23:02] cannot be something that anyone with
+[23:04] common sense could come up with, like a
+[23:06] fork with five teeth.
+[23:09] Okay? You have to show that your
+[23:11] invention is creative and innovative and
+[23:13] useful and, you know, all the rest. Uh
+[23:15] trade secrets are a type of intellectual
+[23:18] property that are not registered or
+[23:20] disclosed to anyone, hence the name
+[23:22] secrets. Uh these are the things that
+[23:24] give you an advantage over your
+[23:25] competition and that would cause you
+[23:28] harm if they were revealed. So, unlike
+[23:30] patents where everyone can see how your
+[23:33] uh invention works, but they're are not
+[23:35] allowed to use it, uh trade secrets are
+[23:38] kept confidential. The formula for
+[23:40] Coca-Cola or the secret blend of herbs
+[23:42] and spices for KFC, these are the trade
+[23:44] secrets. The KFC recipe actually was
+[23:47] published, if I'm not mistaken. Uh the
+[23:49] thing is keeping trades secrets secret
+[23:53] is not easy. You have to take steps to
+[23:55] protect them by limiting who has access
+[23:57] to them and making sure they sign a
+[23:58] contract that says they won't tell
+[24:00] anyone else, for example, an NDA, a
+[24:02] non-disclosure agreement, because at
+[24:04] least some people, your people, your
+[24:06] company will need to have access to the
+[24:07] secret information in order to make
+[24:09] money out of it, right?
+[24:11] You also have to use security measures,
+[24:13] like locks and passwords and encryption
+[24:15] or whatever applies to the type of
+[24:16] secret that you're protecting to prevent
+[24:18] unauthorized access or theft.
+[24:21] Licensing agreements are the contracts
+[24:23] that you make with the software vendors
+[24:25] when you buy the right to use their
+[24:27] software.
+[24:28] Uh they tell you what you can and cannot
+[24:29] do with the software and sometimes what
+[24:31] the vendors can and cannot do with your
+[24:33] data that you're injecting into their
+[24:36] software.
+[24:38] They also tell you what happens if
+[24:39] something goes wrong with the software
+[24:41] or if you break the rules. Now, there
+[24:43] are four common types of software
+[24:45] licensing agreements that you might
+[24:46] encounter. There's the contractual
+[24:48] licensing agreements, uh which are the
+[24:50] most formal and serious ones. They're
+[24:51] written contracts that you have to sign
+[24:53] with the vendor. Those are usually for
+[24:55] expensive and specialized software that
+[24:57] you don't want to mess around with.
+[24:59] Another one is shrink-wrap license
+[25:01] agreements. Funny name. Uh are the ones
+[25:03] that you find on the outside of the
+[25:05] software package. They have some fine
+[25:08] print that says that by opening the
+[25:09] package you agree to the terms of the
+[25:11] contract. Those are usually for cheaper
+[25:13] or more generic off-the-shelf software
+[25:15] that you buy from a store or online.
+[25:17] Now, of course, the actual software that
+[25:19] came in shrink wrap is a matter of the
+[25:21] past, but the term still stands.
+[25:25] Uh click-through license agreements are
+[25:27] the ones that pop up on your screen when
+[25:29] you install or use the software. Like
+[25:31] most software nowadays, uh they have
+[25:33] some text that says that you have to
+[25:35] click a button to say that you agree to
+[25:36] the terms of the contract. Uh some make
+[25:39] you scroll down to the end of it, like
+[25:42] that proves that anyone reads those. Uh
+[25:44] these are usually for software that you
+[25:45] download from the internet.
+[25:47] Any
+[25:49] cloud service license agreements
+[25:52] are the ones that flash on your screen
+[25:54] when you use the cloud service or cloud
+[25:56] app, like Gmail, Dropbox, AWS, ChatGPT,
+[25:59] and so on. Now, these are usually for
+[26:01] services that you access online without
+[26:03] installing anything on your computer.
+[26:05] So, you're basically agreeing to a
+[26:07] contract that assumes that you will be
+[26:09] fully using, utilizing the
+[26:12] infrastructure of the vendor. Not just
+[26:14] their software, but also their
+[26:15] infrastructure.
+[26:17] Now, computer and encryption
+[26:18] technologies are very powerful tools
+[26:20] that can be used for good or evil. They
+[26:22] can help people communicate, shop,
+[26:24] learn, do lots of stuff, have fun on the
+[26:26] internet. But they can also help people
+[26:29] spy, hack, steal, or attack on the
+[26:31] internet. That's why the government used
+[26:33] to have very strict rules for exporting
+[26:36] these products, especially products that
+[26:37] have encryption capabilities outside of
+[26:40] the United States. They did not want
+[26:42] them to fall into the wrong hands, like
+[26:44] enemies or terrorists.
+[26:46] But these rules also made it hard for US
+[26:48] companies to sell their products to
+[26:50] other countries, especially when other
+[26:51] countries had no such rules.
+[26:53] This made US companies lose money and
+[26:55] customers and made them unhappy. So,
+[26:58] they asked the government to change the
+[27:00] rules and make them more fair and
+[27:01] flexible. Now, they have different
+[27:03] category of products like retail and
+[27:05] mass market security software. These are
+[27:07] products that are not very dangerous or
+[27:09] sensitive and that anyone can buy or
+[27:11] use. And the government says that
+[27:12] companies can export these products
+[27:14] after they submit them for a quick
+[27:15] review by the Department of Commerce.
+[27:18] For other types of products, uh
+[27:20] I remember that's actually an option for
+[27:23] ordering uh Cisco equipment and licenses
+[27:26] and software. Whenever you order from
+[27:28] Cisco, if you're ordering something that
+[27:31] has encryption capabilities like
+[27:32] nowadays any switch or router has it,
+[27:35] you'll also have a a checkbox in there
+[27:38] in the configurator that you can check
+[27:40] in order to say that you agree to lift
+[27:43] these US export restrictions for the
+[27:47] product that is being delivered to your
+[27:49] country. So, it's basically just your
+[27:51] option nowadays. Now, you know, if you
+[27:53] want to receive it without export
+[27:54] restrictions so it has full encryption
+[27:56] capabilities, you it's just a checkbox
+[27:59] away.
+[28:00] Privacy laws. Now, the story of privacy
+[28:03] versus security or privacy, depending on
+[28:06] where you live,
+[28:07] uh is sometimes a gray area even for
+[28:09] security professionals.
+[28:11] You might find different definitions,
+[28:13] but here are mine.
+[28:15] Uh this is a free training, so don't
+[28:17] hold me accountable if some other book
+[28:18] out there has a different opinion. You
+[28:20] get what you paid for.
+[28:22] Privacy is about having control over
+[28:25] your personal information and being able
+[28:27] to decide what to share. In other words,
+[28:30] is your ability to control what the
+[28:32] outside world should know about you.
+[28:34] Common sense, I would say.
+[28:36] Security, on the other hand, focuses on
+[28:38] protecting your information and devices
+[28:40] from unauthorized access.
+[28:43] So, I hope you see the difference here.
+[28:45] Privacy is not explicitly guaranteed by
+[28:47] the Constitution, but there are many
+[28:49] federal laws that try to protect it in
+[28:51] different ways.
+[28:52] Uh the Fourth Amendment is the closest
+[28:54] thing to a constitutional right to
+[28:56] privacy. It says that the government
+[28:57] cannot search your property or take your
+[28:59] stuff without a good reason and warrant.
+[29:02] It also says that government cannot tap
+[29:03] your phone or spy on you without a good
+[29:05] reason and a warrant. Now, what
+[29:08] constitutes a good reason? Well, that's
+[29:09] what lawyers and judges are for.
+[29:12] The Privacy Act of 1974, quite old, is a
+[29:15] law that limits how the government can
+[29:17] collect and use your private
+[29:18] information. It says that the government
+[29:20] can only keep the information that it
+[29:21] needs for its work and that it has to
+[29:23] get rid of it when it doesn't need it
+[29:25] anymore. Pretty okay so far.
+[29:27] It also says that you have the right to
+[29:29] see and correct the information that the
+[29:31] government has about you and that the
+[29:34] government cannot give it to anyone else
+[29:36] without your permission. Now, if this
+[29:38] sounds kind of familiar, it's because
+[29:40] it's very very similar to GDPR nowadays.
+[29:44] Another one is the Electronic
+[29:45] Communication Privacy Act of 1986. This
+[29:48] is a law that makes it a crime to invade
+[29:50] your electronic privacy. It says that no
+[29:53] one can intercept or access your
+[29:54] electronic communications or data
+[29:56] without your permission.
+[29:57] This protects your email, your
+[29:59] voicemail, if anyone still uses that,
+[30:01] your mobile phone conversations, your
+[30:03] instant messages, any method of
+[30:04] communication from being monitored or
+[30:06] disclosed by others.
+[30:09] Next, the Communication Assistance for
+[30:10] Law Enforcement Act of 1994 is a law
+[30:13] that changes the one above it. It says
+[30:15] that all communications providers
+[30:18] have to make it possible for law
+[30:20] enforcement to wiretap your
+[30:21] communication with a court order, no
+[30:25] matter what technology you use. Yikes,
+[30:28] and that has been there since '94.
+[30:31] Another one is the Economic Espionage
+[30:33] Act of 1996. This is a law that extends
+[30:36] definition of property to include your
+[30:38] economic information, like your trade
+[30:39] secrets or business plans. It says that
+[30:41] stealing this information is a crime
+[30:43] called industrial or corporate
+[30:45] espionage.
+[30:47] The Health Insurance Portability and
+[30:49] Accountability Act of 1996, you probably
+[30:51] heard about it as HIPAA, is a law that
+[30:54] makes many changes to the health
+[30:55] insurance and health care systems.
+[30:58] One of these changes is about privacy
+[31:00] and security of your health information.
+[31:02] It says that hospitals and insurance
+[31:04] companies have to protect your health
+[31:06] information from being accessed or
+[31:08] shared without your permission. It also
+[31:10] says that you have the right to see and
+[31:11] correct your health information and to
+[31:13] know who has seen or used it.
+[31:16] The Health Information Technology for
+[31:18] Economic and Clinical Health Act of 2009
+[31:24] is a law that updated the HIPAA with
+[31:26] some changes to the security rules for
+[31:29] health information.
+[31:31] The Children's Online Privacy Protection
+[31:33] Act of 1998 is a law that addresses how
+[31:36] children interact with websites and
+[31:38] websites with children.
+[31:40] It states that parental consent is
+[31:42] required if websites are collecting
+[31:44] information from children under 13.
+[31:48] The Gramm-Leach-Bliley Act of 1999 is a
+[31:50] law that changed the rules for financial
+[31:52] institutions. It allowed banks,
+[31:54] insurance companies, credit providers
+[31:57] to offer more services and share more
+[31:59] information with each other. But it also
+[32:02] limited how they could use and disclose
+[32:04] their customers' private information and
+[32:06] it required them to provide written
+[32:08] privacy policies to their customers.
+[32:11] The USA PATRIOT Act of 2001 is a law
+[32:13] that was passed after the terrorist
+[32:15] attacks on September 11, 2001.
+[32:17] It gave more power to the law
+[32:19] enforcement and intelligence agencies to
+[32:21] monitor and investigate electronic
+[32:23] communications.
+[32:24] It also changed the way they could get
+[32:26] wiretaps, subpoenas, and other tools to
+[32:28] access private information. It also
+[32:30] increased the penalties for computer
+[32:32] crimes.
+[32:33] The Family Educational Rights and
+[32:36] Privacy Act is a law that affects
+[32:38] schools that get money from the federal
+[32:39] government. It gives some privacy right
+[32:42] to students who are older than 18 and
+[32:44] parents of students who are younger than
+[32:46] 18.
+[32:47] It says that they can see and correct
+[32:49] their educational records and that
+[32:50] schools cannot share their personal
+[32:52] information without their permission.
+[32:54] Identity theft is a serious crime, as
+[32:57] you might have heard. The Identity Theft
+[32:59] and Assumption Deterrence Act from 1998
+[33:02] says that anyone who steals or uses your
+[33:05] identity without your permission can
+[33:07] face harsh penalties like up to 15 years
+[33:09] in prison. That's a lot of time.
+[33:12] All right, let's see about Europe as
+[33:13] well. The EU used to have a law called
+[33:16] the Data Protection Directive or DPD for
+[33:18] short.
+[33:19] It was passed in 1995 and went into
+[33:21] effect in 1998. It was the first big law
+[33:24] that covered privacy and data protection
+[33:27] in the world. It also said that anyone
+[33:29] who collects or processes personal data
+[33:31] of EU citizens had to follow some rules.
+[33:33] It also said that anyone who sends
+[33:35] personal data of EU citizens outside
+[33:38] European Union has to make sure that it
+[33:40] stays protected. That was an actual
+[33:43] nasty and very difficult requirement in
+[33:45] the age of internet.
+[33:47] But the DPD was not enough for the EU.
+[33:48] They wanted to have a better and
+[33:50] stronger law that covers privacy and
+[33:51] data protection in the digital age. So,
+[33:53] they passed a new law called the General
+[33:56] Data Protection Regulation or GDPR for
+[33:59] short.
+[34:00] In 2016 was passed and went into effect
+[34:03] in 2018. It replaced the DPD and changed
+[34:06] some things.
+[34:07] The GDPR is a big deal because it
+[34:09] applies to everyone who collects or
+[34:10] processes personal data of EU citizens,
+[34:13] even if they are not in the EU. And yes,
+[34:15] that's a very big issue nowadays when
+[34:17] anyone can access any service or website
+[34:19] or data from across the world from
+[34:21] virtually any destination.
+[34:23] It also gives more rights and powers to
+[34:25] the EU citizens over their data. And it
+[34:28] has some serious penalties for anyone
+[34:29] who breaks the rules or violates their
+[34:31] rights.
+[34:32] The GDPR has some key principles that
+[34:34] you need to know and follow if you deal
+[34:36] with personal data of EU citizens. For
+[34:38] example, these are lawfulness, fairness,
+[34:41] and transparency. You have to have a
+[34:42] very good reason and permission to
+[34:44] collect or process personal data. You
+[34:46] have to be honest and fair about what
+[34:48] you do with it, and you have to tell
+[34:50] people what you do with it. No shady
+[34:52] business.
+[34:53] Uh purpose limitation is another one.
+[34:55] You have to say why you collect or
+[34:56] process personal data and stick to that
+[34:58] reason only.
+[35:00] Data minimization, you have to collect
+[35:01] or process only the data that you need,
+[35:04] actually need, for your reason and
+[35:05] nothing more.
+[35:07] Uh accuracy, you may have to make sure
+[35:09] that the data you have is correct and
+[35:11] not misleading, and you have to update
+[35:13] it or delete it if it's not.
+[35:15] Storage limitation, you have to keep
+[35:17] data only for as long as you need it for
+[35:20] your reasons and delete it when you
+[35:22] don't need it anymore. You also have to
+[35:23] delete it if people ask you to. Well,
+[35:26] when the owners, the actual owners of
+[35:28] the data ask you to, not just anyone.
+[35:31] Security, of course. You have to protect
+[35:33] the data from being lost, stolen,
+[35:34] damaged, or misused by using strong
+[35:36] security measures. It does not mean that
+[35:38] a breach is not going to happen, but you
+[35:41] need to demonstrate that you took all
+[35:42] the necessary precautions, so it
+[35:44] doesn't.
+[35:46] And accountability, you have to take
+[35:47] responsibility for what you do with the
+[35:49] data and show that you follow all the
+[35:51] rules above.
+[35:53] For cross-border information sharing,
+[35:56] you have two options. If you want to
+[35:57] share data between different
+[35:59] departments, for example, in different
+[36:00] countries,
+[36:02] you can either use some standard
+[36:03] contracts that the EU has approved for
+[36:05] this purpose, or you can make your own
+[36:07] rules that the EU has to approve for
+[36:09] this purpose. The first option is
+[36:10] obviously much easier and faster, but
+[36:12] the second option is more flexible, and
+[36:14] you can customize it to your needs.
+[36:16] Now, in the past, there was another
+[36:18] option if you wanted to share data
+[36:19] between the EU and the United States. It
+[36:21] was called Privacy Shield, and it was an
+[36:23] agreement between the EU and the US that
+[36:26] said that if you follow some privacy
+[36:28] practices and get a certification, you
+[36:30] can transfer freely data between them.
+[36:33] But this option is not available anymore
+[36:35] because of a court case that said that
+[36:37] Privacy Shield is not good enough to
+[36:39] protect EU citizens' data.
+[36:41] All right. So, we're done with the US,
+[36:43] we're done with Europe. What's left?
+[36:46] Well, Canada has a national law that
+[36:48] covers privacy and data protection for
+[36:50] businesses. It's called the Personal
+[36:51] Information Protection and Electronic
+[36:53] Documents Act or PIPEDA for short.
+[36:57] It says that you cannot collect, use, or
+[36:59] share personal information of Canadian
+[37:01] residents without their permission and
+[37:03] without a good reason. So, it's pretty
+[37:04] much like all the other ones before it,
+[37:06] but for Canada.
+[37:08] California has a law that covers privacy
+[37:10] and data protection for customers. It's
+[37:11] called the California Consumer Privacy
+[37:13] Act or CCPA for short. And I know it's
+[37:16] still in the US, but it's still a
+[37:17] separate law.
+[37:18] Uh it was passed in 2018 and went to
+[37:20] effect in 2020.
+[37:22] It was inspired by the European Union's
+[37:25] law, the GDPR.
+[37:27] >> [snorts]
+[37:27] >> Uh it says that you have to respect some
+[37:29] rights and rules if you collect and
+[37:30] process personal information of
+[37:32] California residents. Similar to GDPR,
+[37:34] the CCPA gives consumers some rights
+[37:36] over their personal information. The
+[37:38] right to know, you have to tell
+[37:39] consumers what information you collect
+[37:41] about them and how you use and share it.
+[37:43] The right to be forgotten, you have to
+[37:45] delete customers' personal information
+[37:47] if they ask you to. The right to opt
+[37:50] out, you have to let consumers say no if
+[37:53] they don't want you to store their
+[37:55] personal information anymore. And the
+[37:57] right to non-discrimination, you cannot
+[37:59] treat consumers differently or badly
+[38:01] simply because they exercise their
+[38:03] privacy rights.
+[38:05] Well, speaking of privacy, what about
+[38:08] what happens inside your own backyard or
+[38:10] your own company?
+[38:12] Your employer might have the right to
+[38:14] monitor your communications for legal
+[38:16] and good reasons, like security. Let's
+[38:18] say okay to that.
+[38:20] Productivity,
+[38:21] that's going to make some very
+[38:22] frustrated headlines and social media
+[38:24] posts.
+[38:25] Or compliance? Okay, let's accept this
+[38:28] one as well.
+[38:29] But they also have to respect your
+[38:30] rights as an employee and follow some
+[38:32] rules. They cannot just spy on you
+[38:34] without telling you or without a good
+[38:36] reason.
+[38:37] Now, that's why they should take some
+[38:39] steps to make sure that you know and
+[38:40] agree that they can monitor you. They
+[38:42] should also make sure that they don't
+[38:44] monitor more than they need to or use
+[38:46] the information for bad purposes. No
+[38:48] employer owns you, so no employer owns
+[38:51] your privacy. Okay? Here are some things
+[38:53] that they can do.
+[38:55] Uh they can put clauses in your
+[38:56] employment contract that say that you
+[38:58] have no expectation of privacy while
+[39:00] using their equipment. Many companies do
+[39:02] this. That's why people play games and
+[39:05] watch Netflix on their smartphones and
+[39:06] tablets during boring meetings and not
+[39:09] on their work PCs.
+[39:11] Now, this is also problematic in some
+[39:12] cases. The employer should be careful
+[39:14] not to record or even look at
+[39:16] information that might be relevant to
+[39:18] your health, finances, personal
+[39:21] accounts, and so on. If you access your
+[39:23] online banking application on the
+[39:25] company laptop, the company should be
+[39:27] aware of this and any monitoring
+[39:29] solution that they may have should be
+[39:32] configured to ignore anything that you
+[39:34] do on that website because that
+[39:36] information should be completely private
+[39:37] to you and only to you.
+[39:39] On a simpler approach, your company
+[39:41] might simply deny you access to banking
+[39:43] websites completely from the company
+[39:44] computers or networks, which is a lot
+[39:47] less hassle for them and perfectly legal
+[39:49] to do so.
+[39:50] Uh they can also write similar
+[39:51] statements in their policies that tell
+[39:53] you what you can and cannot do with
+[39:55] their equipment and how they protect
+[39:56] your privacy. Usually, this is going to
+[39:58] be written in a document called the
+[39:59] Acceptable Use Policy or AUP.
+[40:02] And they can also put labels on your
+[40:04] computers or banners on your screen when
+[40:06] you log in that warn you that they can
+[40:08] monitor your actions and communications.
+[40:11] There are also specific compliance
+[40:13] requirements, which are not made by the
+[40:15] government. They're are laws, but they
+[40:17] are required by specific industries. For
+[40:19] example, if you process credit card
+[40:21] payments while, you know, selling
+[40:23] something online, a product or services,
+[40:26] then you have to follow the Payment Card
+[40:27] Industry Data Security Standard or PCI
+[40:31] DSS requirements.
+[40:33] They apply to any business that accepts
+[40:35] credit cards and works with a bank that
+[40:37] processes the payments.
+[40:39] PCI DSS has 12 main rules that you have
+[40:41] to follow if you want to be active in
+[40:43] the credit card business. These rules
+[40:45] sound like this. First, use a firewall
+[40:49] to block unwanted traffic and protect
+[40:50] credit card data. Kind of obvious.
+[40:53] Second, change the default passwords and
+[40:55] settings on your systems to make them
+[40:57] more secure. I mean, really now, you
+[40:59] should do that everywhere, not just for
+[41:01] PCI DSS. I really hope this is not
+[41:03] something new to you that you have to
+[41:05] write down at this point.
+[41:07] Number three, uh store credit card data
+[41:10] only when you need to and protect it
+[41:12] with encryption
+[41:13] and access control methods because it's
+[41:15] sensitive data.
+[41:17] Number four, use antivirus software to
+[41:19] prevent and remove malware from your
+[41:21] systems. Of course, remove it only when
+[41:23] possible. Often, if you get infected,
+[41:25] it's pretty much game over. You would be
+[41:27] much better just to re-image or
+[41:29] reinstall your systems. Just delete and
+[41:31] reinstall everything and restore from
+[41:32] backups, which you should have, right?
+[41:35] Uh number five, keep your systems and
+[41:37] applications updated and patched to fix
+[41:39] any security issues. Careful here with
+[41:41] newer versions. Minor versions are
+[41:43] usually bugs and security fixes. Major
+[41:46] versions bring new features and
+[41:48] potentially new bugs, of course, perhaps
+[41:50] even new vulnerabilities.
+[41:53] Number six, limit who can access credit
+[41:55] card data to only those who need it for
+[41:57] their work. Again, this involves access
+[41:59] control and it's basic stuff. Only
+[42:01] authorized people should have access to
+[42:03] sensitive data.
+[42:04] Number seven, use passwords, tokens, or
+[42:07] some other methods to verify the
+[42:08] identity of anyone who accesses your
+[42:10] systems. Again, this is access control.
+[42:13] Number eight, lock up your devices that
+[42:15] contain credit card data and prevent
+[42:17] physical unauthorized access to them
+[42:20] because it doesn't matter how well your
+[42:21] access control systems work, like
+[42:23] multi-factor authentication, identity
+[42:25] validation, and so on.
+[42:27] If someone can just waltz in, unscrew
+[42:29] the hard drives from your servers, and
+[42:31] take them home in a backpack.
+[42:33] Number nine, keep track of who accesses
+[42:36] your network and credit card data. So,
+[42:38] log the events and monitor them for any
+[42:41] suspicious activity. Again, logging
+[42:43] without someone actually looking over
+[42:45] these logs,
+[42:47] be it human or a computer, is useless.
+[42:50] Number 10, test your security systems
+[42:52] regularly to make sure they work
+[42:54] properly. Non-functional security stuff
+[42:56] equals to no security stuff.
+[42:59] Number 11, encrypt credit card data when
+[43:02] you send it over the internet or other
+[43:04] public networks. Actually, you know
+[43:06] what? Encrypt it everywhere. Encryption
+[43:08] is cheap today as far as CPU usage is
+[43:11] concerned.
+[43:12] And number 12, have a policy that tells
+[43:15] your staff how to handle information
+[43:17] security and train them on it.
+[43:19] You need people to be aware of risks and
+[43:21] how to mitigate them, not just have a
+[43:24] bunch of security devices in your
+[43:25] network.
+[43:27] Now, these rules are explained in uh
+[43:30] much more detail in the full PCI DSS
+[43:32] standard, which you can find online for
+[43:34] free. You might also have to do an
+[43:37] annual compliance assessment to show
+[43:38] that you follow these rules depending on
+[43:40] how many transactions you do and how
+[43:42] secure you've proven to be in the past.
+[43:44] And also, depending on those factors,
+[43:46] you might have to do it more than once a
+[43:47] year.
+[43:48] You also need to know about the audits
+[43:50] that show compliance. Audits are done by
+[43:52] your own people or by the people you
+[43:54] hire. These are called internal and
+[43:56] respectively, you guessed it, external
+[43:58] audits.
+[44:00] Audits are done to make sure that you
+[44:01] follow your own policies and procedures
+[44:03] and that you meet the expectations of
+[44:04] your customers, your partners, your
+[44:06] investors, and of the regulations that
+[44:09] you need to comply with. For example,
+[44:11] your financial auditors might check your
+[44:12] IT controls to make sure that your
+[44:14] financial systems are secure and
+[44:16] compliant with the Sarbanes-Oxley Act,
+[44:18] or SOX for short. This is a law that
+[44:20] covers financial reporting and
+[44:22] accountability.
+[44:24] Some audits are done by the people or
+[44:26] groups who make the rules or the
+[44:27] standards. These are called regulatory
+[44:29] or compliance audits. They are done to
+[44:31] make sure that you've followed the laws
+[44:33] and regulations that apply to your
+[44:35] industry or to your specific activities,
+[44:37] whatever they might be.
+[44:39] Uh for example, the credit card industry
+[44:40] might require you to hire approved
+[44:42] independent auditors to check your PCI
+[44:44] DSS controls and report their findings.
+[44:47] Uh I used to work for a Cisco partners
+[44:50] for many years and I still do. And as
+[44:52] part of the partnership requirements, we
+[44:54] have to pass some annual audits to show
+[44:56] that we have enough certified people, to
+[44:58] show our processes, to show that we have
+[44:59] a Cisco demo lab, and so on. Now, over
+[45:02] the years, this becomes kind of tedious.
+[45:04] It's It's a wasted week for an audit
+[45:07] preceded by several weeks to prepare for
+[45:09] all the documentation for the audit. So,
+[45:11] Cisco allowed us to do something like
+[45:12] this. We get audited externally when we
+[45:15] first become a partner, and then in
+[45:17] following years, we just audit ourselves
+[45:20] and upload a couple of reports.
+[45:22] Now, every few years, like three or
+[45:24] four, Cisco would think, "You know what?
+[45:26] You're reporting everything okay every
+[45:28] year, and we're not saying we don't
+[45:31] trust you, but it might be time for an
+[45:33] external audit as well."
+[45:35] So, this happens in other industries as
+[45:36] well, not critical ones, mind you, but
+[45:38] periodically you are allowed to audit
+[45:40] yourself, assuming that every
+[45:43] previous audit result was successful.
+[45:45] So, you're basically rewarded with less
+[45:48] nagging, less hassle if you have proven
+[45:51] a good track record in the past.
+[45:54] Finally, about auditing vendors, you
+[45:56] also have to know about the risks and
+[45:57] challenges of using cloud services and
+[46:00] other external vendors because you hire
+[46:02] these companies to store and process
+[46:04] your sensitive data. So, if they handle
+[46:06] your information one way or another, you
+[46:09] have to trust them in order to use them.
+[46:11] But, how can you make sure that you can
+[46:12] trust them? Well, one way to do that is
+[46:14] to review their security controls and
+[46:16] practices regularly. You have to check
+[46:18] if they comply with your expectations.
+[46:20] For some vendors, these are some
+[46:22] questions that you can ask them. Like,
+[46:24] what kind of sensitive information do
+[46:25] they handle for you? Because different
+[46:27] information might require different
+[46:28] approaches. Are they aware of the
+[46:30] different sensitivity levels of your
+[46:32] data?
+[46:33] Uh how do they protect your information
+[46:35] from being lost, stolen, damaged, or
+[46:37] misused?
+[46:39] How do they keep your information
+[46:40] separate from other clients? You need to
+[46:42] ask this because most likely you are not
+[46:44] their only customer. Uh if you were,
+[46:46] then you should probably think about
+[46:47] choosing a different provider.
+[46:49] And their data center, their servers,
+[46:51] even their hard drives are most likely
+[46:52] shared among multiple paying customers,
+[46:55] just like yourself. So, they need to
+[46:57] have some sort of segmentation in place
+[46:59] and secure strong security policies
+[47:00] implemented so that no data leakage
+[47:02] happens.
+[47:03] If they use encryption to protect your
+[47:05] data, how strong and secure is it?
+[47:07] Regardless if they are using their own
+[47:09] keys
+[47:10] uh or your own keys, how do they manage
+[47:13] the keys that unlock it?
+[47:15] How often do they audit their security
+[47:16] and what are their findings? Can you
+[47:18] access their audit reports?
+[47:21] Uh do they rely on third parties to help
+[47:22] them with their services? How do they
+[47:24] make sure that those third parties are
+[47:26] also secure?
+[47:28] Where do they keep and move your
+[47:29] information? If it's in another country,
+[47:31] what are the laws and rules there? Well,
+[47:33] this is more like a concern for you
+[47:35] rather than for them, but you can get
+[47:37] this information from your cloud or
+[47:38] hosting provider.
+[47:40] What do they do if there's a security
+[47:41] incident or breach? How soon will you
+[47:43] find out about it? What are their
+[47:45] incident response policies?
+[47:48] And finally, how do they ensure
+[47:49] availability so that you can reach your
+[47:51] data when you need it, especially during
+[47:53] a disaster or security incident?
+[47:55] Now, this is a pretty long checklist, I
+[47:57] know. And it mostly applies to small to
+[47:59] medium vendors and hosting companies.
+[48:01] With larger companies like Google,
+[48:03] Microsoft, Amazon, Oracle, obviously you
+[48:06] won't be invited to their data centers
+[48:08] to be presented with their security
+[48:10] controls, but they're they conduct
+[48:12] regular audits and they publish those
+[48:14] results. And that's because pretty much
+[48:16] everyone who uses their services and is
+[48:18] interested in those audit results. So,
+[48:20] they do it proactively for you.
+[48:28] >> [music]

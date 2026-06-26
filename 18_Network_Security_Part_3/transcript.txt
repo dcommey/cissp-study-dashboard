@@ -1,0 +1,1506 @@
+[00:09] CDNs or content distribution networks
+[00:12] are called networks, but they're not
+[00:13] exactly networks in the traditional
+[00:15] sense. CDNs are actually systems or
+[00:18] networks of distributed servers that
+[00:21] deliver pages, downloads, streaming
+[00:23] media, and other web content to a user
+[00:26] based on the geographical location of
+[00:28] that user. So, when a user requests
+[00:30] content that is part of a CDN, the CDN
+[00:32] will redirect the request to a server in
+[00:34] the CDN that is closest to the user and
+[00:37] delivers the cached content. This is
+[00:39] completely transparent to the user, and
+[00:41] they don't don't just offer better
+[00:42] speeds, but also they avoid overwhelming
+[00:45] a single server in a region when a
+[00:47] traffic spike occurs or a single
+[00:49] provider link when an entire country
+[00:51] wants to watch the latest season
+[00:53] published on Netflix.
+[00:54] Speaking of Netflix, it has a network
+[00:56] service called Open Connect where they
+[00:59] colocate their own networking and
+[01:01] caching equipment in provider data
+[01:04] centers all over the world. So, those
+[01:05] latest episodes will not be downloaded
+[01:08] from some far-away Netflix server, but
+[01:10] instead it might be cached right in your
+[01:12] provider's network. That's why online
+[01:14] streaming services usually feel so
+[01:16] snappy.
+[01:17] Basically, CDNs work similar to having a
+[01:19] load balancer with servers spread all
+[01:22] over the world. Well, almost all of the
+[01:25] world. The market for this is probably
+[01:27] not that big in Antarctica.
+[01:29] Speaking of network design, here are
+[01:31] some types of networks and or network
+[01:33] segments that you might encounter.
+[01:35] First off, an intranet is your private
+[01:38] network or private internet. It's a
+[01:39] local network often used to host
+[01:42] services similar to those on the
+[01:43] internet, but for internal use only.
+[01:45] This can mean web, email, DNS, any
+[01:48] internal app you might be using in your
+[01:50] company, file sharing service, any other
+[01:53] services, but again, these are only for
+[01:54] users within the private network. The
+[01:56] key to remember here is that an intranet
+[01:59] is usually not dependent on external
+[02:01] servers or on the public internet. So,
+[02:04] we have everything in one place on the
+[02:06] inside of our fence. And while we might
+[02:08] have a door in that fence, we tend not
+[02:10] to use it. Moving on to extranets, think
+[02:13] of these as a hybrid between the
+[02:14] internet and an intranet. This network
+[02:17] functions like an intranet, so like an
+[02:20] internal network, but this time not just
+[02:22] for us, but for other partners as well,
+[02:25] such as suppliers, contractors, business
+[02:27] partners, sometimes even customers.
+[02:29] Obviously, you should have some security
+[02:30] in place here, like you don't want to
+[02:32] give a supplier access to your entire
+[02:33] internal network, but you might want to
+[02:35] give them access to a few apps and
+[02:37] services.
+[02:38] Special type of extranet is what we call
+[02:40] a screen subnet or how we used to call
+[02:42] it and still do, a demilitarized zone,
+[02:45] DMZ. This is designed for systems that
+[02:48] are internal to us, but are also exposed
+[02:50] to the outside world, such as a public
+[02:52] web server. Some definitions of a DMZ
+[02:54] device mention something along the lines
+[02:56] of
+[02:57] those devices with at least one publicly
+[03:00] accessible interface, which is a pretty
+[03:03] good definition. So, you see why web or
+[03:05] email servers would easily fall into
+[03:07] this category. Uh you own the web
+[03:09] server, you need to manage the website
+[03:11] that it hosts, so it's part of your
+[03:14] internal infrastructure, but it's still
+[03:16] needs to be accessible from the
+[03:17] internet, too.
+[03:18] The DMZ design can be set up using
+[03:20] either one or two firewalls. With one
+[03:23] firewall, you might have one interface
+[03:25] for the inside network, one for the
+[03:27] outside network, and one for the DMZ.
+[03:29] And of course, security policies between
+[03:31] each pair of zones or interfaces.
+[03:33] With two firewalls, you can basically
+[03:35] chain them on one end, one firewall
+[03:38] connects to the internal network, on the
+[03:39] other end the other firewall connects to
+[03:41] the external network, and the network
+[03:43] segment in between is the one where we
+[03:45] host our DMZ services. So, basically
+[03:47] it's about creating a buffer zone
+[03:49] between the internet and the local
+[03:51] network.
+[03:52] Another concept is that of a screened
+[03:54] host, which is a server protected by a
+[03:56] firewall.
+[03:57] All incoming traffic goes to this host,
+[03:59] which then acts as a proxy. Its main
+[04:03] role is to filter incoming traffic and
+[04:05] to protect the internal network. We
+[04:06] don't really have this so much nowadays.
+[04:09] The traffic filtering and proxying
+[04:10] features are implemented onto next
+[04:12] generation firewall devices, but you
+[04:14] will find such hosts implemented as jump
+[04:17] boxes or bastion hosts. Basically,
+[04:19] that's a server that is exposed to the
+[04:21] internet, and if you authenticate
+[04:23] correctly to it, then you might get a
+[04:25] access to the rest of the internal
+[04:27] network. Very often used for management
+[04:30] purposes, for granting access to either
+[04:32] on-prem or cloud-hosted resources which
+[04:34] are not normally publicly available.
+[04:37] Networking devices, well, this is
+[04:39] normally a very big topic. Networking
+[04:41] vendors have tons of training sessions
+[04:44] only on this topic. But since we're not
+[04:47] a networking training, we're not going
+[04:49] to go too deep here, so I'll try to
+[04:51] present just an overview and also touch
+[04:53] on touch up on a few of the
+[04:55] security-related aspects of it.
+[04:57] But before we get to the devices, let's
+[04:59] define what those devices actually
+[05:01] connect, and we introduce two new terms
+[05:03] here, collision domain and broadcast
+[05:06] domain.
+[05:07] A collision is what happens when two
+[05:10] systems try to transmit at the same time
+[05:12] over the same shared medium.
+[05:14] The group of network devices that could
+[05:17] potentially cause or suffer because of a
+[05:19] collision is known as a collision
+[05:21] domain.
+[05:22] Nowadays, we don't really have collision
+[05:24] domains on cable networks anymore
+[05:26] because every type of cable that we're
+[05:28] using is a full duplex capable one. So,
+[05:31] any physically connected link is not
+[05:33] going to cause a collision anymore. And
+[05:35] by the way, full duplex means a link
+[05:38] over which you can send and receive data
+[05:40] at the same time, most likely because
+[05:43] there are actually at least two wires
+[05:44] inside of the link that allow you to do
+[05:46] so. There are exceptions to this with
+[05:48] fiber optics, there are fibers where you
+[05:50] can actually transmit signals using
+[05:52] different frequencies in both directions
+[05:56] at the same time.
+[05:57] But normally, when you think about full
+[05:59] duplex in regular networks, you will you
+[06:02] will find at least two conducting wires
+[06:05] in in a specific cable that allow you to
+[06:07] have simultaneous communication. Still,
+[06:10] collisions can happen over wireless
+[06:12] networks because we're still using a
+[06:15] shared medium where two devices that try
+[06:17] to transmit at the same time can hear
+[06:18] each other, talk over each other, and
+[06:21] jam each other's signals. And
+[06:22] theoretically speaking, since a
+[06:23] collision is basically a layer one
+[06:25] issue, collision domains are separated
+[06:28] by layer two devices, which means
+[06:30] switches.
+[06:32] On the other hand, a broadcast is when a
+[06:34] system sends data to all possible
+[06:36] recipients within the same network
+[06:37] segment. The group of systems that
+[06:40] receive this broadcast signal is known
+[06:42] as the broadcast domain. There are
+[06:44] special MAC and IP addresses used for
+[06:47] broadcast since we're not targeting
+[06:49] specific devices anymore like a unicast.
+[06:52] Uh typically, this term is used to refer
+[06:54] to Ethernet broadcast domains, and we
+[06:55] can divide these using any device that
+[06:57] operates at layer three, like a router
+[07:00] or layer three switch or any firewall
+[07:01] device with routing capabilities, which
+[07:04] pretty much all of them do have. Coming
+[07:06] back to networking devices, we also have
+[07:08] hubs or better said, we used to have
+[07:10] hubs. You're probably not going to see
+[07:12] one again in your lifetime. Hubs are
+[07:14] basically multi-port repeaters, uh which
+[07:18] work at layer one, which means that
+[07:20] whoever is connected to a hub is going
+[07:21] to be part of the same broadcast and
+[07:23] collision domain. Hubs have no
+[07:25] intelligence whatsoever, so they don't
+[07:27] look at packet headers. They're not even
+[07:29] capable of dropping corrupted frames.
+[07:31] They just blindly repeat the electrical
+[07:34] signals they receive on one port over
+[07:35] the other ports.
+[07:37] Then we have, again, had modems,
+[07:40] traditional landline modems or
+[07:42] modulators-demodulators,
+[07:44] hence the name modem. Those are devices
+[07:46] that convert between an analog carrier
+[07:48] signal and digital information. These
+[07:50] were commonly used for WAN and internet
+[07:52] links up until the mid-1990s.
+[07:55] So, nowadays, if you want a modem,
+[07:57] visit a museum.
+[07:59] All right. Uh the next uh stop, we find
+[08:01] bridges. Bridges are simple devices, but
+[08:04] somewhat strange devices if you think
+[08:06] about them nowadays because initially
+[08:08] they were designed they were designed to
+[08:09] connect networks at layer two, but
+[08:11] networks that were running different
+[08:13] protocols.
+[08:14] Maybe they had different topologies,
+[08:16] different speeds, different cabling
+[08:18] types. But nowadays, we don't really
+[08:19] have that many options at layer two in
+[08:21] place. It's the same Ethernet
+[08:23] everywhere. Perhaps you could think
+[08:25] about an access point being a bridge
+[08:27] between the wireless network and the
+[08:28] wired network, but that's pretty much
+[08:31] it. That's the extent of bridges
+[08:32] nowadays. Historically though, when we
+[08:34] had multiple layer two protocols, the
+[08:37] bridge was a device that was bridging or
+[08:39] translating the traffic from one network
+[08:41] to the next.
+[08:42] So, what we really have now is layer two
+[08:44] switches.
+[08:46] Switches forward Ethernet frames based
+[08:48] on their destination MAC addresses, and
+[08:50] they create separate broadcast domains
+[08:52] when used to create VLANs.
+[08:54] Switches forward Ethernet frames onto
+[08:56] the correct port only if they know that
+[08:58] destination MAC address is really
+[09:00] located on that port. If a switch
+[09:02] doesn't know in its internal memory
+[09:05] where the destination is located, what
+[09:07] do you think it does?
+[09:09] It will flood the Ethernet frame on all
+[09:11] ports part of the same VLAN.
+[09:13] Inefficient? Yeah.
+[09:15] Gets the job done by reaching the real
+[09:17] destination? Also, yeah.
+[09:20] Switches learn where MAC addresses are
+[09:23] located by looking at the source MAC
+[09:25] address in the incoming Ethernet frames.
+[09:28] So, it first needs to see traffic
+[09:30] generated by a device before it knows
+[09:32] where that device is located. Common
+[09:34] sense, really. And if you think about
+[09:36] the flooding of broadcast behavior when
+[09:38] a switch does not know where the
+[09:40] destination is, remember that almost all
+[09:42] communication is bidirectional, so even
+[09:44] if a switch floods its first frames
+[09:47] without knowing where the destination is
+[09:49] located, soon enough the destination
+[09:51] will reply with some traffic back to the
+[09:53] origin of the traffic, and the switch
+[09:54] will then know where that destination is
+[09:56] located on which port. Problem solved.
+[10:00] By definition, a switch is a layer two
+[10:02] device, but many switches nowadays have
+[10:04] layer three capabilities as well.
+[10:07] Sometimes it's tough to draw the line
+[10:09] where the layer three switch ends and
+[10:10] where the layer three router begins.
+[10:13] And routers are another key component
+[10:15] and we use them to connect different IP
+[10:17] networks. They decide where the traffic
+[10:19] goes based on IP addressing. In other
+[10:21] words, routers move packets based on
+[10:23] their destination IP addresses in their
+[10:26] layer three header.
+[10:27] This decision that routers make by
+[10:30] looking at the layer three address is
+[10:31] what we call routing and the decision is
+[10:34] made based on information stored in a
+[10:35] router's routing table. The routing
+[10:38] table can be built manually by the admin
+[10:41] by manually adding static routes to it.
+[10:44] The router can learn the routes by
+[10:45] itself dynamically from other routers by
+[10:48] using routing protocols.
+[10:50] So, routers are the by-the-book
+[10:51] definition of a layer three device.
+[10:55] Jump boxes or jump servers,
+[10:57] uh we just talked about them a moment
+[10:58] ago, are used to enable secure access to
+[11:02] a network. You find them in extranets,
+[11:04] screen subnets, DMZs, cloud networks
+[11:07] where a direct link to the internal
+[11:08] network is not safe, but instead
+[11:10] everyone must connect and authenticate
+[11:11] to a jump server before getting access
+[11:13] to the rest of the internal resources.
+[11:16] Speaking of other types of devices,
+[11:18] sensors are small devices that collect
+[11:20] information from the environment and
+[11:22] send it back to some central storage and
+[11:24] application for processing. You find
+[11:26] them in fog computing, industrial
+[11:28] systems, IoT, and from a security
+[11:30] standpoint, sensors for network traffic
+[11:33] can be used by IDS, IPS devices, and
+[11:35] SIEM solutions. Uh specifically, these
+[11:38] might be called collectors or security
+[11:40] collectors or visibility agents or
+[11:41] enforcement agents, depending on the
+[11:43] vendor.
+[11:43] These are called sensors because they
+[11:45] generally inspect network traffic
+[11:47] and sense network events and specific
+[11:50] types of traffic they're programmed to
+[11:51] report on.
+[11:53] Finally, we have the system-on-a-chip,
+[11:54] SOC. Uh these are basically small
+[11:57] computers. There could be an entire
+[11:59] chapter to talk about these because
+[12:01] there are a lot of security risks that
+[12:02] we need to consider whenever we're
+[12:04] dealing with simple devices.
+[12:06] Mostly, they revolve around the fact
+[12:08] that they include a very small operating
+[12:10] system. It might have some flavor of
+[12:12] Linux or Android at the core, but it's
+[12:15] stripped down of pretty much all the
+[12:16] functionality, including some security
+[12:18] features. Simple devices have simple
+[12:20] hardware, low memory, low power CPUs
+[12:23] that run crappy security algorithms
+[12:25] because those are the only ones that
+[12:27] they can run. Many rely on batteries,
+[12:29] which everyone wants to last as long as
+[12:31] possible, so this doesn't leave much
+[12:33] room for processing and security
+[12:35] features.
+[12:36] But enough about this for now. That's
+[12:37] the topic for another certification.
+[12:41] Controlling network access. I know, I
+[12:43] know. Network access control sounds like
+[12:45] a quite a generic term, but it's
+[12:48] actually a very widely used industry
+[12:49] concept, which is about controlling
+[12:51] access to an environment according to
+[12:53] security policies.
+[12:55] NAC, or network access control,
+[12:57] is supposed to work in a completely
+[12:59] automated manner and should allow or
+[13:01] deny access to a network to a certain
+[13:03] device or user based on a number of
+[13:05] factors.
+[13:06] Those factors can range from basic
+[13:07] authentication, like asking the user to
+[13:09] present a username and a password, but
+[13:11] can also go much further by inspecting,
+[13:13] for example, which patches and updates
+[13:15] are installed on the system the user is
+[13:17] trying to connect with. If your
+[13:18] operating system is way behind with its
+[13:20] security updates, you might be denied
+[13:22] access. Also, if your workstation
+[13:25] doesn't comply with the company's
+[13:26] security configuration and policy, you
+[13:28] might be denied access. Similarly, you
+[13:30] might be denied access if you're
+[13:31] connecting from a different country or
+[13:33] at unexpected hours at night or from
+[13:35] insecure wireless networks and so on.
+[13:38] The IEEE standard 802.1X is what most
+[13:41] networks implement nowadays when it
+[13:43] comes to NAC.
+[13:45] There are a lot of components in a NAC
+[13:47] solution, one of which is the presence
+[13:49] or the absence of an agent on each
+[13:51] device. If the solution is agent-based,
+[13:54] a NAC monitoring agent and or an
+[13:57] enforcement agent is installed on each
+[13:58] system. If a system is not compliant and
+[14:02] its state is reported to the NAC agent,
+[14:04] it can be quarantined into a special
+[14:06] subnet where it can only communicate
+[14:08] with the NAC server and perhaps with the
+[14:10] internet because you might want to allow
+[14:12] it to go online and install updates,
+[14:14] antivirus signatures, and everything
+[14:16] else that the device was missing and the
+[14:18] reason why it wasn't allowed access in
+[14:19] the first place. So, internet access
+[14:22] would be useful for bringing yourself
+[14:24] back into compliance.
+[14:26] And if the solution is agentless and it
+[14:28] doesn't have a piece of software on your
+[14:30] machine that it can communicate with,
+[14:32] then it can only look at your device
+[14:33] from the so-called outside. It can only
+[14:36] look at network traffic, which initially
+[14:38] is just authentication traffic, but it
+[14:40] might also observe other actions that
+[14:42] you might be performing even after
+[14:44] you're authenticated. This is sometimes
+[14:46] called continuous authentication to
+[14:47] determine if what you're doing is
+[14:49] acceptable.
+[14:51] An agentless NAC solution can also
+[14:53] perform port scans and vulnerability
+[14:56] scans against your device to determine
+[14:58] the software that you're running and if
+[15:00] you have any known vulnerabilities, at
+[15:02] least those detectable from the outside.
+[15:04] It's not a perfect method, obviously. It
+[15:06] takes much longer to execute and it
+[15:08] requires an administrator to manually
+[15:11] resolve any discovered issues, but it
+[15:13] might might be the only solution
+[15:15] available when you're dealing with
+[15:16] devices on which you simply cannot
+[15:18] install agents. Maybe printers, IoT
+[15:20] devices, some legacy operating systems,
+[15:22] and generally any device that is not
+[15:24] managed by your company, but plan on
+[15:26] giving it some access. NAC agents can be
+[15:29] either temporary or permanent. You
+[15:31] probably don't need to tell you what
+[15:32] that means, but a temporary NAC agent is
+[15:34] downloaded and executed on your machine
+[15:37] when you visit a specific web portal,
+[15:39] which is usually the gateway to the rest
+[15:40] of the company apps and perhaps works
+[15:42] with a works as a VPN portal as well. It
+[15:44] can be set to run once and then
+[15:46] terminate, clean up after itself. Of
+[15:48] course, only if you you give it enough
+[15:50] permissions to do so.
+[15:52] A permanent NAC agent is installed as an
+[15:54] application on your machine and it runs
+[15:56] in the background as service where it
+[15:58] talks and reports back to the NAC
+[16:00] management server. In other words, it's
+[16:01] a well, backdoor.
+[16:03] Uh don't forget that a permanent agent
+[16:05] also needs maintenance, so you would
+[16:07] better have a central dashboard that
+[16:09] reports on the status of your installed
+[16:11] or not installed agents all over your
+[16:13] network.
+[16:15] Firewalls are probably the most
+[16:17] well-known security devices out there
+[16:19] and the first method of implementing
+[16:20] security that might come into your mind
+[16:22] when speaking about securing networks.
+[16:24] So, in the shortest definition possible,
+[16:27] probably, a firewall blocks or allows
+[16:30] network activity according to some
+[16:32] rules.
+[16:33] You typically find them positioned
+[16:34] between zones with different trust
+[16:36] levels, like an internal network, which
+[16:38] is considered trustworthy, and the
+[16:40] internet, which is considered not
+[16:42] trustworthy or downright dangerous.
+[16:44] Between two network segments
+[16:46] with different security levels, like the
+[16:48] internal testing network and the
+[16:49] internal production network.
+[16:51] It makes sense to have a firewall
+[16:53] between zones with different security
+[16:55] levels because that's the threshold
+[16:57] where decisions need to be made about
+[16:59] allowing packets to go through. If all
+[17:02] zones have the same security level, then
+[17:04] they could just as well belong to the
+[17:05] single zone and your security policy
+[17:07] might not have any reason to block any
+[17:10] interzone traffic. A lot of the
+[17:12] firewalls you'll come across in
+[17:13] companies are hardware-based, sometimes
+[17:16] called hardware appliances, so physical
+[17:18] devices that you physically mount in
+[17:20] your server room or data center. Still,
+[17:23] in a virtualized or a cloud setting, we
+[17:25] also have virtual firewalls. These are
+[17:27] just the software versions of a typical
+[17:29] hardware firewall. In many cases, they
+[17:31] actually run the exact same software as
+[17:33] their hardware counterpart, but in a
+[17:35] virtual machine instead of a physical
+[17:37] one. It's quite easy for a vendor to
+[17:39] implement a virtual firewall similar to
+[17:40] a physical one because most hardware
+[17:42] firewalls are actually servers running a
+[17:44] specific piece of software and that also
+[17:47] have some added hardware benefits, like
+[17:49] hardware acceleration, large buffers, or
+[17:51] dedicated CPUs for performing things
+[17:54] like deep packet inspection and
+[17:56] decryption operations.
+[17:58] Nevertheless, they're still running
+[17:59] regular software and operating systems
+[18:01] on dedicated hardware, so you could just
+[18:03] easily take the software out and spin it
+[18:05] up into a virtual machine in your data
+[18:07] center or in your cloud tenancy.
+[18:10] Now, of course, the performance of the
+[18:12] virtual firewall will strongly depend on
+[18:14] the capabilities of the hardware that
+[18:16] you've chosen to run it on.
+[18:18] In a cloud environment,
+[18:20] you will also encounter provider-managed
+[18:22] firewalls, usually described as security
+[18:25] lists or security rules that you can
+[18:27] apply to your virtual machines or to
+[18:29] entire subnets.
+[18:30] While these firewalls are not completely
+[18:32] exposed to you as a cloud user,
+[18:35] so you don't have access to the software
+[18:36] or the hardware that they're running on,
+[18:38] you can still configure them to protect
+[18:40] your infrastructure. Some even have
+[18:41] advanced layer seven inspection
+[18:43] capabilities, but generally expect
+[18:45] cloud-managed firewalls to provide you
+[18:47] with much less functionality and
+[18:48] flexibility than a dedicated virtual
+[18:50] appliance from Cisco, Fortinet, Check
+[18:52] Point, or just to mention a few
+[18:54] examples.
+[18:55] Also, don't forget that we also have
+[18:56] software-based firewalls or host-based
+[18:58] firewalls, which are just applications
+[19:00] running on top of the operating system,
+[19:02] like Windows Firewall or IP Tables or
+[19:04] UFW on Linux. Firewalls work by applying
+[19:08] a set of rules or filters to traffic.
+[19:11] These rules say which traffic has to be
+[19:13] matched, also which traffic they should
+[19:15] be looking for, and also what action
+[19:17] should be taken when that traffic is
+[19:19] detected. Allow, deny, simply log, or
+[19:22] perhaps send the traffic to some more
+[19:24] advanced inspection engine, like those
+[19:26] in next-generation firewalls.
+[19:28] Only traffic that's given the green
+[19:30] light by all the policy matches,
+[19:32] filters, and actions along the way is
+[19:34] permitted to pass through the firewall.
+[19:37] A conventional firewall operates on a
+[19:39] deny any or also called deny by default
+[19:42] principle, meaning that
+[19:44] only communication matching an explicit
+[19:46] allow rule is going to pass.
+[19:49] This is also known as allow listing or
+[19:51] white listing. So, by default a firewall
+[19:53] out of the box with no rules will drop
+[19:56] all traffic.
+[19:58] When a firewall checks the traffic to
+[20:00] see if it matches existing rules, it
+[20:01] only looks at the first rule that
+[20:03] matches the traffic. So, only the first
+[20:05] rule that fits the packet is actioned,
+[20:07] ignoring the rest. That's why rules need
+[20:09] a priority order, and that order is
+[20:12] extremely important. Sometimes we refer
+[20:14] to a firewall's rule as a
+[20:16] rule set, actually as a tuple,
+[20:19] a math term, meaning a group of related
+[20:22] data items. That's because the matching
+[20:24] conditions can range from just the IP
+[20:27] addresses or subnets or to protocols and
+[20:29] port numbers. And for more advanced
+[20:31] firewalls, we can even match based on
+[20:33] the state of the connection, the nature
+[20:34] of the flags, the identity, domain
+[20:37] identity of the user that initiated the
+[20:39] connection, the application that is
+[20:41] being transported in inspected traffic
+[20:43] at layer seven, and many, many other
+[20:45] criteria. So, in general a firewall rule
+[20:48] will match information available at
+[20:49] layers three, four, or even layer seven.
+[20:53] Firewalls can also provide logging and
+[20:55] monitoring features.
+[20:57] So, you can get traffic statistics of
+[20:59] top talkers, top sources, top
+[21:01] destinations, who transferred the most
+[21:02] traffic, information about dropped
+[21:04] packets like why was the connection
+[21:06] dropped or who initiated it, for what
+[21:08] purpose, perhaps information about the
+[21:09] links with issues or oversaturated links
+[21:12] or interfaces. And since they are
+[21:14] security devices, many of these
+[21:15] inspection features actually translate
+[21:17] into what is called an intrusion
+[21:19] detection system or IDS functionality.
+[21:22] Actually, with the proper features and
+[21:23] licensing, of course,
+[21:25] a firewall might alert you on potential
+[21:28] threats, intrusion attempts, and even
+[21:30] detected vulnerabilities just by looking
+[21:32] at the traffic going through it.
+[21:34] Firewalls with additional features are
+[21:36] often called UTM, Unified Threat
+[21:38] Management, devices or NGFWs, next
+[21:41] generation firewalls. That's because a
+[21:43] pure firewall, by default, cannot
+[21:45] directly block viruses or malicious code
+[21:49] or to prevent accidental or intentional
+[21:51] information disclosure.
+[21:52] But some firewalls are equipped with
+[21:54] additional modules, most of the time
+[21:56] they're licensed, they cost extra, and
+[21:59] be thankful if it's just a one-time cost
+[22:01] and not a subscription.
+[22:03] And these modules can give you
+[22:04] anti-malware, URL filtering, IPS,
+[22:08] anti-spam, data loss prevention,
+[22:11] AI-based anomaly intrusion detection,
+[22:13] and a lot, lot more.
+[22:15] Speaking of URL filtering, also known as
+[22:17] web filtering, this is a feature on
+[22:19] layer seven firewalls for blocking
+[22:21] access to websites based on the URL used
+[22:25] to request access.
+[22:27] For this to work, many URL filtering
+[22:29] tools can obtain updated URL block lists
+[22:32] known to host malware or just lists of
+[22:34] almost all the websites out there
+[22:37] grouped by categories so that your
+[22:39] security policies can be implemented now
+[22:41] as deny all user access to gaming
+[22:44] websites without having to actually list
+[22:46] all those gaming websites in there. Of
+[22:49] course, all vendors allow you to define
+[22:50] your custom lists as well for both
+[22:53] blocking and allowing access.
+[22:55] An interesting fact as is that a large
+[22:57] part of URL filtering can be done even
+[22:59] before the web traffic is inspected by
+[23:02] looking and perhaps dropping DNS
+[23:04] traffic.
+[23:05] Hosts will send a DNS query before
+[23:08] attempting to access a website. So, if
+[23:10] you are able to intercept and validate
+[23:12] that query, you can drop it or replace
+[23:15] it with a predefined placeholder that
+[23:16] tells the requesting user that they
+[23:19] attempted to access a restricted
+[23:20] website.
+[23:22] Finally, a web security gateway is more
+[23:25] of an abused term, not often found
+[23:28] nowadays. But if you find it, know that
+[23:30] it is a device that filters web content
+[23:32] often based on URL and content keywords,
+[23:35] and also supports malware scanning.
+[23:37] There are several types, basic types of
+[23:40] firewalls. Some of them are purely
+[23:41] theoretical nowadays, they don't exist
+[23:43] anymore. Some of them are just marketing
+[23:45] terms. Nevertheless,
+[23:47] here they are.
+[23:48] A packet filtering firewall filters
+[23:51] traffic by looking only at the packet
+[23:52] header, packet by packet with no context
+[23:55] or session information. That's also why
+[23:57] we say that these firewalls are
+[23:59] stateless.
+[24:00] Stateful firewalls, on the other hand,
+[24:03] understand what a session is. That is
+[24:05] what it means for two devices to
+[24:07] communicate back and forth as part of
+[24:09] the same conversation using the same
+[24:11] protocol. So, these firewalls know that
+[24:14] when a request is initiated from the
+[24:16] inside of the network, the reply should
+[24:18] come back from the outside as well. So,
+[24:20] you don't need a separate rule for the
+[24:22] inside to the outside communication and
+[24:23] a separate rule in reverse for the
+[24:25] outside to to inside traffic. The
+[24:28] firewall handles this automatically and
+[24:29] opens up the return path for as long as
+[24:32] the TCP session is not closed.
+[24:35] In case of UDP, since we don't have a
+[24:38] three-way handshake and no proper
+[24:39] session initiation or termination
+[24:42] information, the so-called UDP session
+[24:45] is considered to be, quote unquote, open
+[24:48] as long as packets still flow. When they
+[24:51] stop flowing, the firewall waits a
+[24:53] predefined time interval until it
+[24:55] considers the session to time out. It's
+[24:58] somewhat similar to making microwave
+[25:00] popcorn when you you you keep the
+[25:01] microwave oven on until you don't hear a
+[25:03] pop for three or five seconds. It's kind
+[25:06] of like UDP sessions this way.
+[25:08] An application level firewall is what
+[25:11] they call a firewall that is able to
+[25:12] inspect and make decisions based on the
+[25:15] layer seven information. There are many
+[25:17] problems with inspection at layer seven.
+[25:19] First of all, in an application level
+[25:21] firewall, must be able to reassemble the
+[25:23] payloads from multiple packets and
+[25:25] conversations in order to figure out
+[25:27] what exactly was being sent over that
+[25:29] flow of packets. This requires much more
+[25:31] memory and CPU power than a regular
+[25:33] firewall, especially considering that
+[25:35] the firewall needs to do this for
+[25:36] hundreds or thousands of hosts at the
+[25:38] same time, all communicating through it.
+[25:40] Secondly, after extracting the payload,
+[25:42] the firewall must identify what
+[25:44] application it belongs to and how to
+[25:46] process that data. Thirdly, the firewall
+[25:48] must have proper rules for matching
+[25:50] whatever is considered worth blocking or
+[25:52] malicious at layer seven. It needs to
+[25:54] know about file types, scripts, malware,
+[25:57] and so on. And finally, this is a big
+[25:59] one. Nowadays, most internet traffic is
+[26:01] encrypted by default. You need to
+[26:02] decrypt the layer seven information
+[26:04] before you can even get a chance to make
+[26:06] some sense out of it.
+[26:08] There are some solutions out there like
+[26:11] Cisco's ETA, called encrypted traffic
+[26:13] analysis, that try to determine
+[26:15] malicious traffic over encrypted HTTPS
+[26:18] sessions without ever decrypting them.
+[26:21] It might be successful in detecting some
+[26:24] beaconing command and control traffic,
+[26:26] but they're far from being a reliable
+[26:28] source for dealing with encrypted
+[26:31] malware actually transferred over HTTP,
+[26:34] for example.
+[26:36] A next generation firewall, NGFW,
+[26:37] includes various security features in
+[26:39] addition to a simple firewall, which we
+[26:41] just mentioned a minute ago.
+[26:43] Usually, next generation means something
+[26:44] related to layer seven inspection and
+[26:46] filtering.
+[26:47] An internal segmentation firewall, and I
+[26:49] know that you might be wondering what
+[26:50] the heck is this, and yes, that's
+[26:52] exactly what I said when I found out
+[26:53] about it,
+[26:55] is a firewall deployed between internal
+[26:57] network segments inside of a company.
+[27:00] Its purpose is to prevent the spread of
+[27:02] malicious code and to filter traffic
+[27:03] between departments that should have no
+[27:05] business talking to each other.
+[27:07] In theory, we should find this in
+[27:09] microsegmentation-based architectures,
+[27:11] but in practice is not just a firewall,
+[27:13] it's mostly a distributed solution. The
+[27:15] reason behind this is that there might
+[27:17] be multiple points where departments or
+[27:19] VLANs might communicate with each other.
+[27:21] So, there will be multiple points where
+[27:23] traffic filtering must happen.
+[27:26] Microsegmentation can be implemented in
+[27:28] many ways, sometimes even down to the
+[27:30] operating system firewalls themselves
+[27:32] where the applications are running. If
+[27:34] you want to know more about
+[27:35] microsegmentation, just search for Cisco
+[27:37] Secure Workload or Cisco Tetration like
+[27:39] it was once called. Speaking of
+[27:42] operating system firewalls, those are
+[27:43] actually called host-based firewalls.
+[27:45] They only protect the local system, of
+[27:47] course, but they can control, monitor,
+[27:49] and limit how your installed
+[27:50] applications communicate. Think about
+[27:52] it, that's a pretty solid level of
+[27:53] protection because end user applications
+[27:56] and workstations are a prime target for
+[27:58] attacks. Having a firewall built into
+[28:00] the OS helps a lot with protection,
+[28:03] especially because it has visibility
+[28:05] over running processes and over
+[28:08] unencrypted traffic before it even
+[28:10] leaves the host or right after it
+[28:12] arrives from remote location.
+[28:14] So, host-based firewalls decide which
+[28:17] application is allowed to go online and
+[28:20] connect to which destinations, and can
+[28:22] even scan incoming traffic for intrusion
+[28:24] attempts or malicious code. Remember, a
+[28:26] host-based firewall can actually see
+[28:27] inside encrypted communications because
+[28:30] it is located at the end of any
+[28:32] encrypted tunnel or protocol that the
+[28:34] host or any application running on it
+[28:36] might be using.
+[28:38] A forward proxy server is a type of
+[28:40] application level firewall. Proxies
+[28:43] protect against external threats to
+[28:45] internal clients. They accept requests
+[28:48] from clients, they might change the
+[28:50] source address of the client and keep a
+[28:52] record of all requests. When a reply is
+[28:54] received, the proxy server identifies
+[28:56] the intended client and forwards the
+[28:58] packet to the right client. This is
+[29:00] essentially network address translation,
+[29:03] NAT, and many proxies do this as well.
+[29:05] Actually, the term proxy isn't so much a
+[29:07] device as it's a type of functionality.
+[29:10] Nowadays, we don't often see dedicated
+[29:12] proxy devices, but instead we get proxy
+[29:14] functionality as part of our gateways,
+[29:17] routers, or VPN concentrators.
+[29:20] In addition to features such as NAT,
+[29:22] proxy servers can often content caching.
+[29:25] That is, keeping local copies of the
+[29:27] most requested content or web pages from
+[29:29] the internet or any outside network, so
+[29:32] that when another client from the local
+[29:34] network requests the same page, the
+[29:36] proxy can immediately return the cached
+[29:38] content instead of going online and
+[29:40] downloading it all over again for each
+[29:42] client.
+[29:44] URL and or content filtering is another
+[29:47] useful feature and since the proxy is
+[29:49] located within the traffic path, it can
+[29:51] scan the traffic for malicious content
+[29:53] or look for destinations that your
+[29:54] client should not be accessing and block
+[29:57] their access of course.
+[29:59] A forward proxy is the standard proxy
+[30:02] that we've been talking about. So it's a
+[30:03] proxy for internal clients as they see
+[30:06] it when they when they go outside, when
+[30:08] they try to to connect to the outside
+[30:10] world or when they go forward, right?
+[30:13] Towards the internet. Hence the name
+[30:15] forward proxy.
+[30:16] On the other hand, we also have a
+[30:17] reverse proxy that handles incoming
+[30:20] requests from external systems to
+[30:23] internal services. It's similar to port
+[30:27] forwarding and static NAT functions and
+[30:30] it's often used on DMZs where we host
+[30:33] servers but still allow access to them
+[30:35] from the public internet. They don't
+[30:37] offer direct access but only through the
+[30:39] proxy. And well, if the proxy is able to
+[30:42] handle multiple servers behind it and
+[30:44] perhaps balance connections and requests
+[30:47] coming in from the outside, then we call
+[30:49] it a load balancer. So in 99% of the
+[30:53] cases nowadays, the reverse proxy is
+[30:55] nowadays a load balancer. Normally for a
+[30:59] standard forward proxy, clients need to
+[31:01] be configured so that they know to
+[31:03] contact the proxy when they need to go
+[31:06] outside of the network connected
+[31:07] internet. These settings can be manually
+[31:09] set into your operating system or your
+[31:11] browser or by using a proxy auto config
+[31:14] pack file which can be set up with a
+[31:17] script or via DHCP along with other
+[31:20] network configuration settings that
+[31:21] every client receives and needs.
+[31:23] A transparent proxy is used when a
+[31:25] client is not configured to send
+[31:27] requests to a proxy but instead the
+[31:29] network routes the traffic through the
+[31:32] proxy anyway. It's considered to be
+[31:34] transparent because it's well,
+[31:36] transparent to the users. So users don't
+[31:39] know that it exists. They cannot detect
+[31:41] it. They cannot address it. In most
+[31:44] cases, it's also transparent because
+[31:46] it's not a layer three device. It's seen
+[31:48] as a layer two device like a switch for
+[31:51] example. Of course, it has a management
+[31:53] IP address in some management network
+[31:55] but it does not route traffic between
+[31:57] networks. You don't see it as a network
+[31:59] hop or as a gateway. It's just there
+[32:02] intercepting and filtering traffic as it
+[32:04] goes through it.
+[32:06] Securing endpoints is a long story.
+[32:09] Basically, this is what we could have
+[32:10] called computer security and that would
+[32:12] obviously be an entire training in
+[32:14] itself.
+[32:15] As we all know, it's crucial to
+[32:16] implement devices like firewalls to
+[32:18] enforce network security but let's not
+[32:20] forget that each device in use needs its
+[32:23] own security measures, especially
+[32:25] devices that end users like you and I
+[32:27] interact with. This is known as endpoint
+[32:29] security. It means each device should
+[32:32] uphold its security policy no matter how
+[32:34] much security is provided by the network
+[32:37] or by the communication channels. To put
+[32:38] it simply, any weak spot whether on a
+[32:41] device, server or client poses a
+[32:43] potential risk to the entire company.
+[32:46] Nowadays, a lot of what we call
+[32:47] computing is done in a client-server
+[32:49] model. So clients and servers have their
+[32:52] own computing and storage capabilities.
+[32:54] Hence, security measures need to be
+[32:56] implemented everywhere and not just at a
+[32:58] central point. This implies that all
+[33:00] computers and the network connections
+[33:02] between them need to be safeguarded.
+[33:04] This is very important because for
+[33:06] instance, desktops and laptops might
+[33:08] hold sensitive data that could be
+[33:10] exposed and therefore must be protected.
+[33:12] The average user may not be fully aware
+[33:15] how security measures should be
+[33:17] implemented. So the system has to
+[33:18] account for this lack of awareness and
+[33:21] deny user actions that might cause a
+[33:23] security incident. Devices like desktop
+[33:26] computers, workstations and laptops can
+[33:28] be gateways into the company's vital
+[33:31] information systems because they need
+[33:33] access to network servers and services.
+[33:36] Therefore, it's important to acknowledge
+[33:37] that these user machines can also pose
+[33:40] threats if compromised. Any software and
+[33:43] system vulnerabilities must be
+[33:45] identified and dealt with accordingly.
+[33:47] Lastly, communication devices can
+[33:49] unintentionally offer entry points into
+[33:51] the network. For instance, a modem
+[33:53] attached to a network desktop can leave
+[33:55] the network open to a dial-in attack.
+[33:58] Moreover, wireless adapters on client
+[33:59] systems might be used to create
+[34:01] unprotected networks. Similarly,
+[34:03] downloading data from the internet can
+[34:04] put the users and other systems at risk
+[34:06] of infection. So remember to consider
+[34:08] all these entry points when evaluating
+[34:10] your security architecture. At a minimal
+[34:13] level and from a high point of view,
+[34:16] there are some directions to consider
+[34:18] for endpoint security like perform email
+[34:21] screening. Emails can be a gateway for
+[34:22] malware. Implement policies to govern
+[34:25] email usage and limit potential risks.
+[34:27] Filter spam, filter malware and phishing
+[34:29] attempts as best as you can.
+[34:32] Use policies for downloading and upload.
+[34:34] Screen incoming and out outgoing data to
+[34:37] block suspicious materials. Implement
+[34:39] access control. Use multi-factor
+[34:42] authentication to restrict access to
+[34:44] devices
+[34:45] and to prevent access both for end user
+[34:48] devices and servers as well. File
+[34:50] encryption. Encrypt files and data on
+[34:52] client machines. Drive level encryption
+[34:54] is great for mobile devices that may be
+[34:56] lost or stolen.
+[34:58] Screen savers. Activate screen savers
+[35:00] after a period of inactivity to hide
+[35:02] confidential materials requiring a valid
+[35:04] login to regain access.
+[35:07] Protection domains. Create network
+[35:09] segments so a compromised client doesn't
+[35:11] affect the entire network.
+[35:13] Label sensitive materials. Label disks
+[35:16] and other sensitive materials according
+[35:18] to their security classification. Also
+[35:20] works for files and databases. Backup
+[35:23] files of course. Use a centralized
+[35:25] backup utility to backup files on both
+[35:27] workstations and servers. Perform
+[35:29] regular security awareness trainings.
+[35:31] Keep users informed about potential
+[35:34] threats and how to handle them.
+[35:35] Disaster recovery and business
+[35:37] continuity planning. Include desktop
+[35:39] computers in your company's disaster
+[35:41] recovery plan as they are mandatory for
+[35:43] getting users back to work.
+[35:45] And make sure to secure software
+[35:48] development processes. Developers
+[35:50] creating custom software should consider
+[35:52] security at each step in the development
+[35:54] process using formal methods for
+[35:56] development such as code libraries,
+[35:58] change control mechanisms, configuration
+[36:00] management and patch and update
+[36:02] deployments constantly whenever
+[36:05] vulnerabilities are detected.
+[36:07] Automatically securing endpoints. Now,
+[36:09] setting up security on many devices can
+[36:12] be challenging. Of course, time
+[36:13] consuming and frankly quite dull. We
+[36:16] could for example start from a properly
+[36:18] configured main computer image, clone it
+[36:20] so we can have a consistent baseline
+[36:22] that we can use across all devices. It
+[36:24] kind of works but when you need to make
+[36:27] some changes to the security policies,
+[36:28] when you need to make sure everyone is
+[36:30] updated to the same version of a
+[36:31] specific piece of software, when you
+[36:33] need all the antivirus signatures
+[36:35] databases to be updated, that's when you
+[36:37] will look for some automated solutions.
+[36:39] So
+[36:40] here comes endpoint detection and
+[36:41] response EDR. This is an evolution of
+[36:44] traditional anti-malware products and
+[36:47] actually a combination of anti-malware,
+[36:49] intrusion detection and firewall. We use
+[36:51] them to detect, record and respond to
+[36:53] suspicious activities on your hosts.
+[36:56] EDR requires continuous monitoring. So
+[36:58] these solutions need to rely on agents
+[37:01] that perform some analysis on the device
+[37:04] and then report back to a central server
+[37:05] or to some cloud. EDR's goal is to
+[37:08] detect advanced threats that traditional
+[37:11] antivirus or host intrusion detection
+[37:13] systems cannot. And also since it's a
+[37:15] centrally managed it makes it a lot
+[37:18] easier for the security team to do its
+[37:19] job.
+[37:21] Other ones similar to EDR are managed
+[37:23] detection and response MDR, endpoint
+[37:26] protection platforms EPP and extended
+[37:28] detection and response XDR. We call MDR
+[37:32] those solutions that are not limited to
+[37:34] endpoints. MDR solutions can often
+[37:36] integrate many more technologies
+[37:37] including
+[37:38] seam software security information and
+[37:40] event management software, network
+[37:42] traffic analysis, sometimes even EDR and
+[37:45] intrusion detection systems. EPP on the
+[37:48] other hand, endpoint protection
+[37:49] platforms are similar to EDRs.
+[37:51] They are a more proactive variation of
+[37:54] the more passive EDR concept. Obviously,
+[37:57] this cannot be strictly defined from a
+[37:59] technological standpoint so it's kind of
+[38:00] more like a marketing term than an
+[38:02] actual technology. XDR is the most
+[38:05] comprehensive solution integrating
+[38:07] several concepts potentially including
+[38:09] EDR, MDR and EPP elements. XDR is not
+[38:12] limited to endpoints and can include
+[38:14] network traffic analysis NTA, network
+[38:17] intrusion detection systems NIDS and
+[38:19] network intrusion prevention system NIPS
+[38:21] functions. Finally, we cannot forget
+[38:24] managed security service providers MSSPs
+[38:26] which offer managed XDR solutions. They
+[38:29] are companies that are providing the the
+[38:31] acronyms that we just covered as a
+[38:33] service and for a fee of course.
+[38:37] These can be fully on premise,
+[38:39] cloud-based, hybrid structures managed
+[38:41] through a security operations center SOC
+[38:44] either locally or remotely. Of course,
+[38:46] collaborating with an MSSP can allow you
+[38:48] to take advantage of the experience and
+[38:50] expertise of the MSSP staff but since
+[38:53] you're buying something even better than
+[38:55] the team you could have hired
+[38:57] internally, expect it to cost a lot.
+[39:01] Well, there would be no network without
+[39:03] cabling. Right, when you think about
+[39:05] network security, your mind may jump
+[39:07] straight to the operating system and the
+[39:09] software but it is equally vital to
+[39:11] consider physical components like
+[39:14] cabling, network layout and the
+[39:15] technology used for data transmissions.
+[39:18] Now, local area networks LANs and wide
+[39:20] area networks WANs are the two basic
+[39:23] network types from a very very very high
+[39:25] level overview. LANs are confined to a
+[39:28] small area like a single building, a
+[39:29] floor or sometimes just a single room or
+[39:32] even your home while WANs connect
+[39:34] networks across large distances. Hence
+[39:36] the term local versus wide.
+[39:39] The media used for connectivity plays a
+[39:41] significant role in how the network is
+[39:43] designed and what it can do. Choosing
+[39:45] the wrong transmission media could
+[39:46] result in a network that cannot cover
+[39:48] your whole business or one that cannot
+[39:50] handle how much data you need to
+[39:51] transmit. Cable failures or incorrect
+[39:54] network designs are often behind network
+[39:56] outages, not just equipment failure and
+[39:58] human configuration errors. Therefore,
+[40:00] we need to understand which network
+[40:02] devices and technologies correspond to
+[40:04] specific types of cabling, each with its
+[40:06] own pros and cons.
+[40:08] Remember, cables aren't the only form of
+[40:11] transmission media. We've already
+[40:12] covered Wi-Fi, Bluetooth, Zigbee, and
+[40:15] some more. Those are still considered
+[40:17] transmission media.
+[40:19] Let's start with coaxial cable or just
+[40:21] coax. You probably haven't seen this one
+[40:23] in a while, at least not for networking,
+[40:25] right?
+[40:26] Uh it disappeared in the 1990s due to
+[40:28] the rise of the twisted pair wiring and
+[40:31] fiber optics. Nowadays, you're less
+[40:33] likely to find coax used for network
+[40:35] cabling, but it may still be used for
+[40:38] audio-visual connections, such as
+[40:40] between an antenna and your TV, or even
+[40:42] in some older home surveillance CCTV
+[40:45] solutions. Actually, not even that old.
+[40:47] My neighbor has coax-based cameras and
+[40:49] he sold them quite recently.
+[40:51] A coaxial cable has a central copper
+[40:54] wire core surrounded by insulation, a
+[40:57] conductive braided shield, and another
+[40:59] layer of insulation on top of these. So,
+[41:01] it has multiple concentric layers like
+[41:03] the sections of a tree trunk.
+[41:06] The copper core and the braided act as
+[41:09] two separate conductors, allowing the
+[41:10] cable to transmit data both ways.
+[41:13] Coaxial cables are fairly resistant to
+[41:15] electromagnetic interference EMI due to
+[41:18] the way that they are built and can
+[41:19] support pretty high data transfer rates.
+[41:22] Two types of coaxial cables exist,
+[41:24] thinnet and thicknet. Thinnet, also
+[41:26] known as 10Base2, was often used to
+[41:29] connect systems to thicknet cable
+[41:31] backbones. Thinnet can cover distances
+[41:33] up to 185 m, hence the two in 10Base2,
+[41:38] which is, well, almost 200 m.
+[41:41] It probably works at 200 as well. And
+[41:44] can transmit up to a whopping 10
+[41:47] megabits per second.
+[41:49] Uh thicknet or 10Base5 can reach up to
+[41:52] 500 m, hence the five, but also works
+[41:55] only up to 10 megabits per second.
+[41:58] On the bad side, coaxial cables are
+[42:00] bulkier and can be damaged if bent too
+[42:02] much. They lose signal if you exceed the
+[42:05] recommended length, just like any other
+[42:06] cables, mind you.
+[42:08] For a long time, when they were used in
+[42:10] networking, a big problem was not
+[42:12] correctly terminating the end with a
+[42:14] special resistor connector and failing
+[42:16] to ground at least one end of the cable.
+[42:19] The syntax for the cable denomination or
+[42:23] language, let's say, is written as AA
+[42:26] BBBB and CC. This is a syntax used for
+[42:30] most cable technologies. The AA
+[42:33] represents the maximum speed of the
+[42:34] cable, like 10 in 10Base2 cable, which
+[42:37] stands for 10 megabits per second.
+[42:39] The B indicates whether a cable is
+[42:41] baseband or broadband, not so relevant
+[42:43] today, but baseband cables transmit a
+[42:45] single signal at a time and broadband
+[42:47] ones transmit multiple signals
+[42:49] simultaneously. Most networking cables
+[42:51] are baseband. Finally, the Cs uh either
+[42:54] stand for maximum distance the cable can
+[42:57] cover
+[42:58] or it's a shorthand for the cable's
+[42:59] technology. For example, SFP models can
+[43:02] be uh small form pluggable modules,
+[43:04] right? The optical modules that you plug
+[43:07] into switches and routers. Can be
+[43:09] 1000Base-T,
+[43:11] which means gigabit, so 1000 megabits
+[43:13] per second, base for baseband, and T
+[43:16] stands for twisted pair, which is like
+[43:19] in your regular UTP network cables.
+[43:21] Twisted pair cabling is much thinner and
+[43:23] more flexible than coax.
+[43:25] It's made up of four wire pairs, so
+[43:28] eight wires inside of it, that are
+[43:30] twisted around each other two by two,
+[43:32] and then sometimes wrapped in an
+[43:34] insulator. Uh if there's a metallic foil
+[43:37] wrapper around the wires, it's known as
+[43:39] shielded twisted pair, STP, not to be
+[43:41] confused with the STP layer two loop
+[43:44] free algorithm. The foil gives extra
+[43:47] protection against electromagnetic
+[43:49] interference. Without the foil, it's
+[43:50] called unshielded twisted pair, UTP.
+[43:54] Very straightforward. What's with all
+[43:56] the twisting?
+[43:57] Well, the
+[43:59] twisting provides protection from
+[44:01] external interferences and reduces
+[44:03] crosstalk between pairs. Crosstalk
+[44:06] happens when data transmitted over one
+[44:09] set of wires is picked up by another set
+[44:12] because of the electromagnetic fields
+[44:14] created by the electrical current and
+[44:16] because they are so close to each other.
+[44:18] We don't want that because this damages
+[44:20] the transmission and corrupts the data
+[44:22] that we're trying to send. Also, one
+[44:24] thing that not many people know is that
+[44:26] each wire pair within the cable is
+[44:29] twisted at a different rate, preventing
+[44:32] signals from crossing over onto another
+[44:34] pair of wires. Of course, lower quality
+[44:37] cable from very cheap vendors might
+[44:39] contradict me on this.
+[44:41] Fiber optic cables transmit data using
+[44:43] light pulses rather than electrical
+[44:45] signals. This not only makes them
+[44:47] extremely fast, but nearly immune to
+[44:49] interference, crosstalk, or sniffing
+[44:51] using electromagnetic emissions.
+[44:53] Fiber optic cables can be either single
+[44:56] mode or multi-mode. Single mode fiber
+[44:59] optic cables support a single light
+[45:01] signal. They have a thinner optical
+[45:04] core, lower signal loss over long
+[45:06] distances, and virtually unlimited
+[45:08] bandwidth. These cables use a 1310
+[45:12] nanometer or 1550 nanometer wavelength
+[45:15] laser and can cover tens of kilometers
+[45:18] or miles, as you prefer, uh without the
+[45:20] need for repeaters. They're typically
+[45:23] yellow.
+[45:24] And remember that single mode fiber
+[45:26] carries one light beam. You shine a
+[45:28] light on one end and it shines back at
+[45:30] the other end.
+[45:32] On the other hand, multi-mode fiber
+[45:33] optic cables support multiple light
+[45:35] signals. They have a larger optical
+[45:37] core, but also a higher signal loss over
+[45:40] distance. These cables utilize a 850
+[45:44] nanometer or 1300 nanometer wavelength
+[45:47] LEDs or lasers and have a maximum
+[45:49] coverage of 400 m.
+[45:51] Uh they're usually blue in color.
+[45:53] Multi-mode fiber can carry multiple
+[45:56] light signals, each of them bouncing
+[45:58] around and being reflected inside of the
+[46:00] optical core. The amount of reflection
+[46:02] makes them lose signal quality quicker,
+[46:05] so they don't reach as long distances as
+[46:07] single mode fiber. UTP cabling comes in
+[46:10] several categories. The categories were
+[46:12] created according to how tight the
+[46:14] twists are and the quality of the
+[46:15] conductor and of the external shielding.
+[46:18] We've got category one, Cat 1 and Cat 2,
+[46:20] which were used for telephone lines. Cat
+[46:23] 3 and Cat 4 for 10 and 16 megabits,
+[46:25] respectively. Cat 5 was the first one
+[46:28] used for 100 megabits and probably one
+[46:30] of the most common cable types in the
+[46:32] past years.
+[46:33] Cat 5e and Cat 6 were the first ones
+[46:36] that supported 1 gigabit per second. And
+[46:38] from Cat 6a and up, we can find speeds
+[46:41] of 10 gigabits per second and above.
+[46:44] Most cables are designed for maximum 100
+[46:46] m in length, and some can support higher
+[46:49] data rates given that the length is much
+[46:51] shorter than 100 m. This is one of the
+[46:54] reasons why you might be surprised to
+[46:56] find out that some crappy old cables
+[46:58] that you find in your drawer might
+[47:00] support very high speeds over just a
+[47:02] couple of meters.
+[47:04] Cabling topologies. A network topology
+[47:06] refers to how your computers are
+[47:08] physically arranged and connected to
+[47:10] each other and to other devices,
+[47:12] mainly switches. It's important to note
+[47:14] that the physical topology might not
+[47:16] always align with the logical topology,
+[47:18] which uh depends on how the network is
+[47:20] configured after it's cabled.
+[47:23] Uh while the physical topology might
+[47:25] include all the cables in your network,
+[47:27] the logical topology might include only
+[47:29] specific VLANs, only the links that were
+[47:31] not blocked by STP, and single links
+[47:34] where in reality there's an aggregated
+[47:36] group of links. This is also known as
+[47:38] link teaming or NIC teaming, for
+[47:41] example, using link aggregation
+[47:42] protocols such as LACP or PAGP.
+[47:46] A bus topology connects each system to a
+[47:49] main cable known as a trunk or a
+[47:51] backbone. The bus topology is also a
+[47:53] legacy one, which was introduced along
+[47:55] with the old networks based on coaxial
+[47:57] cable. It also disappeared along with
+[47:59] coax networks.
+[48:01] Uh in a bus topology, all systems can
+[48:02] transmit data simultaneously, which can
+[48:04] cause collisions. So, collision
+[48:06] avoidance mechanisms needs to be used.
+[48:08] The advantage of a bus topology is that
+[48:11] if a single segment fails, other
+[48:13] segments continue to function. However,
+[48:15] the central backbone line remains a
+[48:17] single point of failure. A star topology
+[48:20] has a centralized connection device, a
+[48:22] switch, and each computer is connected
+[48:24] to the central device on a dedicated
+[48:26] segment or cable. If one segment fails,
+[48:28] others continue to operate. However, the
+[48:30] central switch is now a single point of
+[48:32] failure. There are no collisions over
+[48:34] any of the links or inside of the
+[48:35] central switch. Overall, the star
+[48:37] topology generally requires less cabling
+[48:40] than other topologies and makes it
+[48:42] easier to identify damaged cables.
+[48:44] In a ring topology, each system is
+[48:46] connected in a circular pattern
+[48:48] resembling a ring. In some older
+[48:50] networking technologies, such as token
+[48:53] ring, this ring was a unidirectional
+[48:55] transmission loop, allowing only one
+[48:57] system to transmit data at a time.
+[49:00] Traffic management was conducted by a
+[49:02] token, a sort of a digital pass, that
+[49:05] circled the round the ring until a
+[49:07] system captured it. And uh while the
+[49:10] system held the token, it was allowed to
+[49:12] send data.
+[49:13] If a segment on the loop breaks, all
+[49:15] communication halts. Some ring
+[49:17] topologies have a fault tolerance
+[49:18] mechanism, like two loops running in
+[49:21] opposite directions, to prevent uh
+[49:23] single points of failure.
+[49:25] Nowadays, you might find some ring
+[49:27] topologies in WAN connections, but
+[49:29] they're not based on the token ring
+[49:31] protocol anymore. Instead, the dual ring
+[49:33] topology is used just for its resiliency
+[49:36] and redundancy. Finally, a mesh topology
+[49:39] can be either full mesh where each
+[49:40] system is connected to all other systems
+[49:42] or a partial mesh.
+[49:44] A mesh means lots of redundant
+[49:46] connections, so many segments can fail
+[49:48] before the entire network becomes
+[49:50] unusable. Also, real implementations of
+[49:52] mesh topologies usually rely on logical
+[49:54] interfaces like VPN links or SD-WAN
+[49:57] connections since having a full mesh
+[50:00] based on actual physical interfaces and
+[50:02] networking cables is unfeasible.
+[50:05] Ethernet is the most common shared media
+[50:08] in a LAN in a local area network. This
+[50:10] one is a technology that lets multiple
+[50:12] devices communicate over the same
+[50:14] medium. Initially, since all we had was
+[50:16] coax networks, Ethernet was designed to
+[50:18] require devices to take turns in
+[50:20] communication and performing collision
+[50:23] detection and avoidance. Nowadays,
+[50:25] Ethernet can support full duplex
+[50:26] communication, that is two-way
+[50:28] communication, and typically uses
+[50:30] twisted pair cabling. Ethernet is often
+[50:32] deployed on star topologies which with a
+[50:35] switch at the center of each so-called
+[50:37] star, and it's based on the IEEE 802.3
+[50:41] standard. Units of Ethernet data are
+[50:43] called frames. The Ethernet standards
+[50:45] you might have heard about are fast
+[50:47] Ethernet, which supports a throughput of
+[50:49] 100 megabits per second,
+[50:51] gigabit Ethernet uh supports 1,000
+[50:54] megabits per second, 1 gigabit per
+[50:55] second, and 10 gigabit Ethernet supports
+[50:58] 10,000 megabits per second. We also have
+[51:01] multi-gigabit links with values such as
+[51:03] 2.5 or 5 gigabits per second, 25 gigabit
+[51:06] links, 40 gigabit links, 50, 100, 400,
+[51:09] 800 gigabit links uh on higher-end
+[51:12] switches are available, too. You might
+[51:14] have heard about analog and digital
+[51:15] transmissions. These sub-technologies
+[51:18] refer to the mechanisms used for
+[51:20] transmitting the actual signals and then
+[51:22] rebuilding, re-assembling those signals
+[51:24] on the receiving end.
+[51:26] Analog communications are made with a
+[51:28] continuous signal, usually voltage or
+[51:30] electromagnetic, that varies in
+[51:33] frequency, amplitude, or phase.
+[51:35] Basically, a signal that varies,
+[51:37] something that on the other end can be
+[51:40] detected and recreated as a coherent
+[51:42] message. While digital communications
+[51:45] uses a discontinuous electrical signal
+[51:47] and state changes or on-off pulses,
+[51:50] closely related to ones and zeros. So,
+[51:53] at the other end, the receiver will
+[51:55] understand binary information. Digital
+[51:58] signals are more reliable than analog
+[52:00] signals over long distances or in the
+[52:02] presence of interference.
+[52:04] Another concept is synchronous versus
+[52:06] asynchronous communication. Synchronous
+[52:08] communication rely on timing or a clock
+[52:11] mechanism, which can be an independent
+[52:13] clock or a timestamp embedded in the
+[52:15] data stream. Asynchronous communication,
+[52:18] on the other hand, rely on a stop and
+[52:20] start delimited bit to manage the
+[52:22] transmission of data.
+[52:24] We briefly mentioned baseband and
+[52:25] broadband as well. Just for the sake of
+[52:27] teaching, a quick reminder, baseband
+[52:30] technology supports only a single
+[52:32] communication channel with a direct
+[52:34] current applied to the cable and is a
+[52:37] form of digital signal. Broadband
+[52:39] technology can support multiple
+[52:41] simultaneous signals using frequency
+[52:43] modulation to support numerous channels,
+[52:45] each supporting a distinct communication
+[52:47] session. Broadcast, multicast, and
+[52:49] unicast are technologies that determine
+[52:52] how many destinations a single
+[52:53] transmission can reach. A broadcast
+[52:56] reaches out to all possible recipients.
+[52:59] Multicast can send data to multiple
+[53:01] recipients that are part of a specific
+[53:03] group called a multicast group. A
+[53:05] unicast supports only a single
+[53:07] communication to a specific recipient.
+[53:09] Finally, collisions. We tend to think
+[53:12] about collisions as a thing of the past,
+[53:14] and indeed, we don't have collisions
+[53:16] nowadays over a cable, but we still have
+[53:18] them over wireless communication. With
+[53:21] cable collisions, we had to implement an
+[53:23] algorithm called carrier sense multiple
+[53:25] access collision detection, CSMA/CD.
+[53:29] So, we had to detect when they happened
+[53:31] and try to back off communication for a
+[53:33] little while hoping that the next time
+[53:35] we try to transmit, there won't be
+[53:36] someone else already talking in there.
+[53:39] Not very convenient, hence the low
+[53:40] speeds of coax cable network or
+[53:43] hub-based ones.
+[53:45] But in Wi-Fi, since we have the
+[53:47] communication managed by an access
+[53:49] point, we can now implement CSMA/CA,
+[53:52] that is carrier sense multiple access
+[53:54] collision avoidance, not detection this
+[53:57] time, but avoidance. So, we can schedule
+[53:59] in advance when each client can transmit
+[54:02] without stepping on each other's toes or
+[54:05] fearing interference, at least not from
+[54:07] our own network. This works wonders,
+[54:10] hence the Wi-Fi speeds of today that
+[54:12] reach up to many, many gigabits and
+[54:14] still use a shared medium where
+[54:16] collisions are possible.

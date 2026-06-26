@@ -1,0 +1,1052 @@
+[00:08] Welcome to investigation and ethics.
+[00:11] You might wonder, and it would be
+[00:14] completely natural for you to do so,
+[00:16] what on earth do I have to do with
+[00:18] investigations? Isn't that police
+[00:21] business? Well, yes and no. Because if
+[00:24] you are the one certified individual in
+[00:27] charge of company security, you might be
+[00:29] involved in investigations. And not just
+[00:32] those alongside the police, the law and
+[00:35] the order, but internal investigations
+[00:37] as well. Problematic employees, security
+[00:40] incidents, even accidental
+[00:42] misconfigurations might warrant
+[00:44] investigations. And who's better at this
+[00:46] than the company's most valued CISSP
+[00:49] certified individual?
+[00:51] Let's talk a bit about investigation
+[00:53] types.
+[00:54] Now, administrative investigations are
+[00:56] internal and usually focus on some
+[00:59] operational issues or violations of the
+[01:01] company's policies. So, yeah, those are
+[01:04] the internal witch hunts. Let's call
+[01:06] them that way.
+[01:07] It might be as little as a technical
+[01:10] troubleshooting task, like searching for
+[01:13] a specific log entry, or it might be a
+[01:15] higher profile involving human resources
+[01:17] and disciplinary procedures.
+[01:20] However, if evidence of a system
+[01:22] intrusion is found during an operational
+[01:24] investigation, it may transition into a
+[01:27] criminal investigation. If you prove
+[01:29] that really bad things happened and
+[01:31] there was a malicious intent. So,
+[01:34] criminal investigations are typically
+[01:35] carried out by law enforcement
+[01:38] and focus on violations of criminal law.
+[01:40] These investigations require a high
+[01:42] standard of evidence, a lot of hassle, a
+[01:44] lot of paperwork, and a so-called red
+[01:47] tape, and can result in prosecution in
+[01:50] criminal court. The keyword here is
+[01:52] evidence, and we will see in a couple of
+[01:54] minutes how difficult it can be to
+[01:56] provide acceptable and usable evidence
+[01:59] in the digital world.
+[02:00] Now, civil investigations, on the other
+[02:02] hand, don't generally involve law
+[02:04] enforcement. These are usually carried
+[02:06] out by internal employees and external
+[02:08] consultants on behalf of a legal team
+[02:11] preparing evidence for a case in civil
+[02:13] court to resolve a dispute between two
+[02:15] parties. Regulatory investigations are
+[02:18] conducted by government agencies when
+[02:21] they suspect an individual or a
+[02:22] corporation uh has violated
+[02:25] administrative law. Now, the standard of
+[02:27] proof in these investigations aligns
+[02:29] with the law of the location where the
+[02:30] case is expected to be tried. Another
+[02:33] one is industry standards-based
+[02:35] investigations may not necessarily
+[02:37] involve government agencies. For
+[02:39] example, investigations based on the
+[02:41] Payment Card Industry Data Security
+[02:43] Standard, PCI DSS, are not tied to laws,
+[02:47] but to contractual obligations agreed
+[02:49] upon by the companies involved. In other
+[02:52] words, if you decide to play by the PCI
+[02:54] DSS rules, you will be required to
+[02:56] submit audits, assessments, and
+[02:58] investigations conducted by an
+[03:00] independent third party.
+[03:02] If you fail to comply or you fail an
+[03:05] audit, investigation results can lead to
+[03:06] fines or other sanctions.
+[03:09] Now, in all investigations, it's
+[03:10] essential to follow proper procedures to
+[03:13] ensure the rights of those being
+[03:15] investigated are not violated. Failure
+[03:18] to do so could result in a failed
+[03:19] prosecution or even legal action against
+[03:22] the investigator, which might actually
+[03:24] be you.
+[03:25] Electronic discovery, or e-discovery, is
+[03:28] the process of collecting, reviewing,
+[03:31] and exchanging electronically stored
+[03:33] information, or ESI. Another word for
+[03:36] just, well, data, basically, for use as
+[03:40] evidence in legal cases. This can
+[03:42] include data from email accounts, social
+[03:44] media, databases, disk drives, website
+[03:46] logs, and so on. In essence, e-discovery
+[03:49] focuses on identifying relevant digital
+[03:52] evidence that could be used in a court
+[03:53] of law. It's also the electronic method
+[03:56] of looking for the needle in a haystack.
+[03:59] So, the Electronic Discovery Reference
+[04:01] Model, EDRM, is the process for
+[04:04] conducting e-discovery, which consists
+[04:06] of nine aspects. First, information
+[04:08] governance means that information must
+[04:11] be well organized for future e-discovery
+[04:13] efforts.
+[04:14] Identification uh locates the
+[04:16] information relevant to a discovery
+[04:18] request, and that is sometimes the most
+[04:20] difficult part.
+[04:21] Preservation protects both the original
+[04:24] information and the collected ones
+[04:27] against alteration or deletion.
+[04:29] Collection, obviously, gathers the
+[04:31] relevant information centrally for use
+[04:33] in the e-discovery process, and this is
+[04:35] also sometimes very very difficult.
+[04:38] Processing screens the collected
+[04:40] information to filter out irrelevant
+[04:42] information, which is going to be a lot,
+[04:45] reducing the amount of information
+[04:46] required for detailed screening. Uh
+[04:49] next, we have review. This examines the
+[04:52] remaining information to determine what
+[04:54] information is relevant to the request.
+[04:56] Analysis performs a deeper inspection of
+[04:59] the content, maybe email headers, maybe
+[05:00] code snippets.
+[05:02] Production places the information into a
+[05:04] format that may be shared with others
+[05:06] and delivers it to other parties, such
+[05:08] as the opposing counsel. And
+[05:10] presentation displays the information to
+[05:12] witnesses, to the court, and to other
+[05:14] parties.
+[05:15] Evidence. Long story short, evidence is
+[05:18] what we need to prove whether someone is
+[05:20] guilty.
+[05:22] Evidence or artifacts can come in a
+[05:24] various forms when we're talking about
+[05:26] computers. Could be physical evidence,
+[05:28] could be logs, basically any kind of
+[05:30] data.
+[05:31] However, for the evidence to be
+[05:32] admissible in court, it must meet three
+[05:34] criteria. Relevance to determining a
+[05:37] fact, relevance to the case, and
+[05:39] competence, which in this case means
+[05:42] that it should have been legally
+[05:44] obtained.
+[05:45] There are four major categories of
+[05:47] evidence. There's real evidence. These
+[05:49] are the physical objects that can be
+[05:51] presented in court, such as a weapon,
+[05:53] clothing, or computers.
+[05:55] There's documentary evidence. This
+[05:57] refers to written items used to prove a
+[05:59] fact. Uh such evidence must be
+[06:02] authenticated, meaning a witness must
+[06:04] testify that it's a valid and collected
+[06:07] as a routine business practice. Here,
+[06:09] the best evidence rule states that the
+[06:12] original document must be introduced in
+[06:14] court, and the parole evidence rule
+[06:16] suggests that when an agreement is put
+[06:18] into written form, no verbal agreements
+[06:21] can modify the written agreement. And we
+[06:23] also have testimonial evidence. This is
+[06:25] evidence based on the testimony of a
+[06:27] witness. Witnesses should provide only
+[06:29] direct evidence, that is a testimony
+[06:31] based on their direct observations, not
+[06:34] something that they heard someone else
+[06:36] say.
+[06:37] And demonstrative evidence covers items
+[06:39] that may or may not be admitted into
+[06:41] evidence themselves, but are used to
+[06:43] help a witness explain a concept or
+[06:45] clarify an issue, because no court of
+[06:47] law is an expert in all human knowledge,
+[06:50] especially when it comes to computers.
+[06:52] Uh for example, this could be a diagram
+[06:54] or an explanation of how a network
+[06:56] protocol works if it's relevant to
+[06:57] understanding other types of evidence.
+[07:00] Now, when a witness gives uh testimony
+[07:02] in court, they typically need to avoid
+[07:04] the act of hearsay. That is, they cannot
+[07:06] testify about what someone else told
+[07:08] them outside of court, because the court
+[07:10] cannot verify that evidence. A
+[07:12] particular exception for forensic
+[07:15] analysts is the business records
+[07:17] exception to the hearsay rule.
+[07:20] This exception says that business
+[07:21] records, like computer logs, can be
+[07:23] admitted as evidence if they were made
+[07:26] at the time of the event by someone or
+[07:28] something with direct knowledge, if they
+[07:31] were kept as part of a regular business
+[07:33] activity, and if maintaining such
+[07:35] records is a standard practice for the
+[07:37] company. So, it's like saying, "I
+[07:38] haven't seen this person conducting data
+[07:41] breach directly,
+[07:42] but we usually log all access and all
+[07:45] activity, and here are the logs that
+[07:48] prove the activity of this person."
+[07:50] When dealing with real evidence, it's
+[07:52] important to establish a chain of
+[07:53] evidence, or a chain of custody. This
+[07:56] process ensures the evidence hasn't been
+[07:58] tampered with and it's the same item
+[08:00] presented in court. This chain of
+[08:01] custody documents everyone who handles
+[08:03] the evidence, from the investigators who
+[08:05] originally collected it, the technicians
+[08:08] who process it, to the lawyers who use
+[08:10] it in court. The aim is to ensure that
+[08:12] the evidence remains the same from the
+[08:14] time it was collected to when it was
+[08:17] displayed in court. This requires very
+[08:19] careful extraction of data through
+[08:21] labeling and detailed logs recording who
+[08:23] had access to the evidence, when, and
+[08:25] why. When uh labeling evidence to
+[08:29] preserve the chain of custody, the label
+[08:31] should include at least the following:
+[08:33] the general description of the evidence,
+[08:34] the time and the date the evidence was
+[08:36] collected, the exact location where the
+[08:38] evidence was collected, the name of the
+[08:41] person who collected the evidence, and
+[08:42] any other relevant circumstances
+[08:44] surrounding the collection of it.
+[08:46] Now, each person who handles the
+[08:47] evidence must sign the chain of custody
+[08:49] log, indicating when they took
+[08:51] responsibility for the evidence and when
+[08:54] they handed it over to the next person.
+[08:57] This chain should provide an unbroken
+[08:59] sequence of events accounting for the
+[09:01] evidence from collection to the trial.
+[09:06] Collecting digital evidence. Now, during
+[09:08] forensic evidence collection, the most
+[09:10] important aspect is to preserve the
+[09:12] original evidence. This is because the
+[09:14] investigation itself, or even the actual
+[09:16] collection process, might alter, might
+[09:19] change the evidence. So, when analyzing
+[09:21] digital evidence, it's best to work with
+[09:24] a copy of the actual evidence, but have
+[09:26] a method ready for demonstrating that
+[09:28] the copy is identical to the original.
+[09:31] Media analysis is a subset of computer
+[09:34] forensic analysis, and it means
+[09:36] identifying and extracting information
+[09:38] from storage media.
+[09:40] Storage may include magnetic media, like
+[09:42] hard disks or tapes, flash memory or
+[09:45] optical media, like CDs, DVDs, Blu-ray
+[09:47] discs, if you can still find some of
+[09:49] those.
+[09:50] When gathering information from storage
+[09:52] devices, you should avoid accessing hard
+[09:54] drives or any other writable media
+[09:58] directly from a live system. A A drive
+[10:00] connected to a live system might be
+[10:02] constantly changed, might have files
+[10:04] being written to it, which invalidates
+[10:06] its integrity. Instead, the system
+[10:08] should be powered off, the storage
+[10:09] device should be removed and connected
+[10:11] to a dedicated forensic workstation
+[10:13] using a write blocker. Only then a
+[10:17] forensic image of the device should be
+[10:18] created. Now, write blocker is a
+[10:21] hardware or software device that allows
+[10:24] you to access a storage device like a
+[10:26] hard drive, an SSD, an SD card, or any
+[10:29] flash type of memory or drive while
+[10:32] actively blocking, hence the name write
+[10:34] blocker, any write attempts from your
+[10:37] computer to the storage device.
+[10:39] Not even file access timestamps, nothing
+[10:41] is written to it. And this process
+[10:43] reduces the likelihood of errors and
+[10:45] ensures the preservation of the chain of
+[10:47] custody.
+[10:48] Also, an interesting
+[10:50] aspect is the fact that in many cases it
+[10:52] might actually be preferable to not shut
+[10:55] down the system hosting but instead cut
+[10:58] its power completely to pull its plug.
+[11:01] Indeed, this might corrupt some data,
+[11:04] but a normal shutdown might trigger
+[11:06] deletion procedures, might clean up swap
+[11:08] and cache data. So, it might actually
+[11:11] leave you with less useful data to
+[11:12] extract and analyze.
+[11:14] Collecting information from the memory
+[11:16] of live systems, known as in-memory
+[11:18] analysis, is a complex task as it can be
+[11:22] challenging or let me rephrase that. It
+[11:25] can be impossible to work with memory
+[11:28] without changing its contents.
+[11:31] If you want to read the content of a
+[11:34] computer's memory, you need to tell the
+[11:35] computer, go to this address and copy
+[11:38] the values you find in there. That
+[11:40] simple instruction needs to be loaded,
+[11:42] you guessed it, in memory as well. And
+[11:45] there you go, you just tampered with
+[11:46] evidence.
+[11:47] So, when gathering the contents of
+[11:49] memory, there are specialized tools out
+[11:51] there that create a memory dump file and
+[11:54] place it on a forensically prepared
+[11:56] device. Still, it might not be
+[11:58] admissible in court if not correlated
+[12:00] with other evidence.
+[12:01] On this topic, sometimes memory dumps
+[12:03] created by BSODs, blue screens of death,
+[12:07] can also be used to extract useful
+[12:09] evidence as well as hibernation files or
+[12:12] files resulting from the suspension of
+[12:14] active virtual machines. All these files
+[12:16] actually include memory contents.
+[12:19] Network analysis is another aspect of
+[12:22] forensic investigation. It involves
+[12:23] examining the activity that occurred
+[12:25] over the network during a security
+[12:27] incident. Again, this is very difficult
+[12:29] and mostly impossible to reconstruct
+[12:30] because network data is not stored
+[12:33] anywhere. Once it travels over the
+[12:35] network, it's gone forever. So, in this
+[12:37] cases, we look for security controls
+[12:39] that log network activity like those
+[12:42] generated by IPSs and IDSs, system logs,
+[12:45] network flow data, packet captures
+[12:47] perhaps if you have them collected
+[12:49] during an incident, and logs from
+[12:51] firewalls and other network security
+[12:53] devices. But in most cases, the actual
+[12:56] network traffic is gone forever. Of
+[12:58] course, if the traffic is gone, the data
+[13:00] that it transferred might be stored on a
+[13:02] storage device, but that's completely
+[13:04] another discussion and another type of
+[13:06] data collection.
+[13:07] When collecting data directly from a
+[13:09] network during a live analysis, for
+[13:11] example, if you have the chance of
+[13:12] capturing the traffic of an ongoing
+[13:14] attack,
+[13:16] you could do this over a mirrored port,
+[13:18] also called a span port in Cisco world,
+[13:21] on a switch, or using a network tap.
+[13:24] Both approaches generate packet copies
+[13:27] without messing with the original
+[13:28] network traffic. Or you could just
+[13:30] capture the traffic with an endpoint
+[13:32] capture software
+[13:33] such as Wireshark. You might have also
+[13:35] to investigate applications or the
+[13:38] activity that happens within a running
+[13:40] application. In some cases, especially
+[13:42] when malicious insiders are suspected,
+[13:45] you may be asked to review software code
+[13:47] for backdoors, logic bombs, or even to
+[13:49] review the presence of foreign code that
+[13:53] might have led to the attack.
+[13:55] In other situations, you might need to
+[13:56] review and interpret log files looking
+[13:59] for signs of malicious activity such as
+[14:01] SQL injection attacks, canning attempts,
+[14:04] privilege escalations, or other or any
+[14:06] application-level attacks.
+[14:09] Finally, you may often need to review
+[14:11] the contents of hardware and embedded
+[14:13] devices. This could include personal
+[14:14] computers, smartphones, tablet
+[14:16] computers, wearables perhaps, and
+[14:18] embedded computers in cars, security
+[14:20] systems, and many, many other devices.
+[14:23] Whoever conducts these reviews must have
+[14:25] specialized knowledge of the systems
+[14:27] under review, obviously. They might need
+[14:29] to bring in expert consultants who are
+[14:31] familiar with the memory, the storage
+[14:33] systems, and the operating systems of
+[14:35] such devices. Due to the complex
+[14:37] interactions between software, hardware,
+[14:39] and storage, the discipline of hardware
+[14:41] analysis requires skills in both media
+[14:44] analysis and software analysis in
+[14:46] addition to the skills related to the
+[14:48] actual hardware. There are several ways
+[14:51] in which you can gather evidence. One is
+[14:53] voluntary surrender, which is not as bad
+[14:56] as it sounds because
+[14:58] it's when the person who owns the
+[14:59] evidence willingly gives it up. Easy
+[15:02] peasy. However, this method is only
+[15:04] suitable when the attacker is not the
+[15:06] owner, otherwise most certainly they
+[15:08] will not want to incriminate themselves.
+[15:10] If the investigation is internal, most
+[15:12] of the information will likely be
+[15:14] gathered through voluntary surrender,
+[15:16] which means that employees and
+[15:17] colleagues will just give you what you
+[15:19] ask for as you're conducting the
+[15:21] investigation. Of course, it helps a lot
+[15:23] if senior management member tells them
+[15:26] to do so, to comply, and HR kind of
+[15:28] reminds them what happens if they don't
+[15:30] comply.
+[15:31] Another way is to get a court to issue a
+[15:33] subpoena, which compels someone, an
+[15:36] individual or even an entire company, to
+[15:38] surrender evidence. However, this gives
+[15:41] enough notice for someone to alter the
+[15:43] evidence or to get rid of it. I'm sure
+[15:45] you've seen enough cop shows to know how
+[15:47] this works, right?
+[15:49] Third way is via the plain view
+[15:52] doctrine, which is a fancy way of saying
+[15:55] that a law enforcement officer is
+[15:56] capable of seizing evidence that is
+[15:58] visible to the officer
+[16:00] and where they have probable cause to
+[16:02] believe that it's associated with some
+[16:04] criminal activity. Now, unfortunately,
+[16:06] this does not apply to you as a security
+[16:08] professional. No matter how obvious some
+[16:10] data might seem to you, you cannot just
+[16:13] take the law into your own hands and
+[16:15] seize whatever you think might be
+[16:16] evidence. Sorry, you're not Batman.
+[16:19] And just in case you are, many thanks
+[16:21] for watching this training, Batman.
+[16:23] A fourth option is a search warrant,
+[16:26] which should be used when you must
+[16:28] access evidence without alerting the
+[16:30] owner or other personnel. Again,
+[16:32] remember cop shows. You know how that
+[16:34] works. As part of your internal security
+[16:36] policy to make sure that gathering
+[16:38] evidence is done properly and without
+[16:40] much protest, it's common to have all
+[16:43] new employees sign an agreement that
+[16:45] provides consent
+[16:47] to search and seize any necessary
+[16:48] evidence during an investigation.
+[16:51] Conducting the investigation. Sometimes
+[16:53] you might need to decide whether to
+[16:54] involve law enforcement in the
+[16:56] investigation. And this is an important
+[16:58] choice that should involve senior
+[17:00] management, not just yourself. Also,
+[17:02] sometimes you might not want to involve
+[17:05] law enforcement, and not because you're
+[17:06] planning on acting shady, but as the
+[17:10] likelihood of the investigation becoming
+[17:12] public might potentially embarrass the
+[17:14] company and hurt its feelings, sorry,
+[17:17] its image. But again, this is most
+[17:20] likely not going to be your decision.
+[17:22] If you decide not to involve law
+[17:24] enforcement, you still need to follow
+[17:25] some basic principles. For example,
+[17:27] never conduct your investigation on a
+[17:29] compromised system. Take the system
+[17:31] offline, create a backup, and use the
+[17:32] backup to investigate the incident.
+[17:34] Never ever attempt to hack back at the
+[17:37] attacker. Even though this looks awesome
+[17:39] in movies, revenge is not self-defense,
+[17:41] and you could attack an innocent party,
+[17:44] which might be just another compromised
+[17:45] system where the attack is being
+[17:47] launched from, and find yourself facing
+[17:49] computer crime charges.
+[17:51] If in doubt, of course, always call in
+[17:53] expert help. If you don't want to
+[17:55] involve law enforcement, contact a
+[17:57] private investigation firm with specific
+[17:59] experience in computer security
+[18:01] investigations.
+[18:03] During an investigation, you may need to
+[18:04] speak with people who may have relevant
+[18:07] information. If you're just asking for
+[18:09] assistance, it's just called an
+[18:10] interview. If you suspect the person is
+[18:12] involved in a crime and plan to use the
+[18:14] gathered information in court, that's an
+[18:16] interrogation.
+[18:18] Now, interviewing and interrogating
+[18:20] individuals requires some special skills
+[18:23] and should only be performed by trained
+[18:25] investigators. If you do it badly, you
+[18:27] may jeopardize the ability of law
+[18:29] enforcement to successfully prosecute an
+[18:31] offender. Also, there are laws against
+[18:33] detaining individuals, and you must
+[18:35] abide by them
+[18:37] if you plan to conduct private
+[18:38] interrogations. You cannot simply force
+[18:40] information out of any individual on the
+[18:43] street or within your company.
+[18:45] Also, keep in mind that maintaining the
+[18:47] integrity of collected data is the
+[18:49] number one priority, regardless of how
+[18:51] persuasive and obvious and and in your
+[18:54] face the evidence might be.
+[18:57] If the evidence is altered during
+[18:58] collection, it's useless. It doesn't
+[19:01] mean it's wrong or it's fake, but the
+[19:03] court of law is not going to trust it.
+[19:05] Attackers often try to wipe their traces
+[19:07] from the log files after a successful
+[19:09] attack. So, protecting the integrity of
+[19:12] log files and restricting pretty much
+[19:15] anyone from being able to change them,
+[19:17] that's another important aspect. There
+[19:19] are techniques like remote logging where
+[19:21] all systems on the network send their
+[19:23] logs to a log server, or using digital
+[19:25] signatures and hashes to prove that log
+[19:27] files were not tampered with after the
+[19:29] initial capture, those can also be
+[19:31] helpful. Also, remember worm, write once
+[19:35] read many, those storage techniques,
+[19:37] those are also useful here. Remember,
+[19:39] worm is a type of storage that doesn't
+[19:41] allow you to change or delete the data
+[19:43] once it was written to them.
+[19:46] Every investigation must end with
+[19:48] documentation. A final report with all
+[19:50] the goals, procedures followed, the
+[19:52] evidence collected, and the final
+[19:54] results of the investigation. How formal
+[19:56] this report is, it's up to you, up to
+[19:58] your company's policies, as well as
+[20:01] the nature of the investigation itself.
+[20:03] Computer crime. Now, there are a lot of
+[20:06] ways to compromise a computer, and even
+[20:08] more reasons to do so.
+[20:10] Well, CISSP isn't the ideal place for
+[20:12] mentioning all possible computer
+[20:14] attacks,
+[20:15] even though we have a chapter about this
+[20:17] coming right up. When it comes to crimes
+[20:19] against or involving computers, these
+[20:21] are generally categorized in a couple of
+[20:23] ways. Starting with the definition,
+[20:25] essentially a computer crime is a
+[20:26] violation of a law that involves a
+[20:30] computer.
+[20:31] Pretty obvious thus far. The crime could
+[20:33] be against the computer.
+[20:35] No, don't think about Rage Against the
+[20:37] Machine.
+[20:38] Or the computer could have been used to
+[20:40] commit the crime, which is pretty much
+[20:42] every other computer crime out there.
+[20:46] Whoever violates one of your security
+[20:48] policies is considered an attacker.
+[20:51] Understanding of goals of an attacker
+[20:52] helps you get insight into the different
+[20:55] types of attacks. Remember, a crime is a
+[20:57] crime, and the motivations behind
+[20:59] computer crimes are no different from
+[21:00] motivations behind any other type of
+[21:03] crime. The significant difference lies
+[21:05] in the methods the attacker uses.
+[21:08] Computer crimes are generally classified
+[21:11] as one of the following types. We have
+[21:13] military and intelligence attacks, we
+[21:15] have business attacks, attacks for
+[21:18] financial gain, terrorist attacks,
+[21:20] simple grudge attacks, simple thrill
+[21:22] attacks just for the sake of it, and
+[21:24] hacktivist attacks.
+[21:26] We'll discuss the different categories
+[21:28] of computer crimes and the types of
+[21:30] evidence you might find after an attack.
+[21:32] This evidence can help you determine the
+[21:34] attacker's action and the intended
+[21:36] target. You may find that your system
+[21:39] was only a link in a chain of network
+[21:41] hops used to reach the real victim. So,
+[21:44] in this case, you weren't the actual
+[21:46] victim, even though you you might feel
+[21:48] that you were, since you've been
+[21:50] compromised. But, this also makes the
+[21:52] trail a bit harder to follow back to the
+[21:54] true attacker.
+[21:55] You might have been compromised not for
+[21:56] the data that you store, but as a pivot
+[21:59] point for another attack.
+[22:01] So, military and intelligence attacks
+[22:03] aim to acquire confidential information
+[22:05] from law enforcement, military, research
+[22:08] institutions. The exposure of such
+[22:10] information could endanger even national
+[22:12] security. Not all information, of
+[22:14] course, but usually information that is
+[22:16] targeted by such an attack might concern
+[22:19] national security. Such attacks often
+[22:21] happen at the first phase before other
+[22:23] more damaging attacks, since they act
+[22:25] like a reconnaissance phase in a grander
+[22:27] scheme of things.
+[22:29] Attackers may seek military information,
+[22:31] secret intelligence, storage locations
+[22:33] of evidence from criminal
+[22:35] investigations, or any secret
+[22:37] information that could be used in a
+[22:38] later attack. Due to this the sensitive
+[22:41] nature of the information collected by
+[22:43] military and intelligence agencies,
+[22:45] their computer systems are often targets
+[22:47] for more experienced attackers. As a
+[22:50] result, military systems have more
+[22:52] security measures in place.
+[22:54] We've seen in the past 10 or more years
+[22:56] the rise of complex and customized
+[22:58] attacks known as advanced persistent
+[23:00] threats or APTs. No, it's not a Bruno
+[23:04] Mars song. Just a personal note here
+[23:06] about APTs. Throughout security
+[23:08] trainings, you will encounter two usage
+[23:11] patterns for the term APT.
+[23:13] One is for the actual attack, and one is
+[23:15] for the group that launches such
+[23:17] attacks. People refer to both of them as
+[23:20] APTs, but in general, especially in
+[23:22] security exams, try to keep a focus on
+[23:24] the group meaning of APT, as it seems to
+[23:26] be the most common interpretation out
+[23:28] there, at least according to what I've
+[23:30] seen in security exams for the past
+[23:32] year. APT groups are usually well-funded
+[23:35] and have advanced technical skills. They
+[23:38] act on behalf of a nation-state,
+[23:39] organized crime, terrorist group, or
+[23:42] other sponsor, and can target specific
+[23:44] companies or government entities. The
+[23:46] reason behind their funding, resources,
+[23:48] and skills is that they develop
+[23:50] customized tools and attacks, which are
+[23:52] often very difficult to detect because
+[23:54] they were never seen before. This is
+[23:57] also another consequence of why APTs
+[23:59] refer to both an attack and a group. In
+[24:02] most cases, since attacks are customized
+[24:04] by a specific group, there's a
+[24:06] one-to-one mapping between groups and
+[24:08] attacks.
+[24:09] Business attacks are targeted to a
+[24:11] company's confidential information. This
+[24:13] could be a proprietary product, KFC's
+[24:16] recipe, or some source code, or any data
+[24:19] that could harm the company's reputation
+[24:21] or market value if disclosed, including
+[24:23] personal information about its
+[24:25] employees. Still, corporate espionage,
+[24:27] meaning the illegal gathering of a
+[24:29] competitor's confidential data, that's
+[24:31] nothing new. It has been around since
+[24:34] written paper has been around, but it
+[24:36] was made easier by the digitalization of
+[24:38] data. The primary goal of these attacks
+[24:40] may be to extract confidential
+[24:43] information, but the way in which the
+[24:44] information gathered during an attack is
+[24:46] used, that's what usually causes more
+[24:49] harm than the attack itself. So, the
+[24:51] problem is not that you've stolen
+[24:52] confidential data, but what are you
+[24:55] going to do with it? That's the scary
+[24:57] part. In other attacks, the focus might
+[24:59] be on the integrity and or availability
+[25:02] of information. For example, while
+[25:04] ransomware attacks actually encrypt or
+[25:06] hold ransom data, their main objective
+[25:08] is to disrupt availability and to make
+[25:10] some money. This prevents the target
+[25:13] from accessing their own data and forces
+[25:15] them to pay a ransom to restore access.
+[25:17] Financial attacks are conducted with the
+[25:19] intention of obtaining money. These are
+[25:21] the types of computer crimes you most
+[25:24] often hear about in the news. Stealing
+[25:26] credit card numbers, hacking bank
+[25:27] accounts, fake invoices, fraudulent
+[25:29] money transfers, even fraudulent crypto
+[25:32] mining sometimes falls under this
+[25:34] category, as it is still financially
+[25:36] oriented.
+[25:37] Financial attacks launched by
+[25:39] sophisticated attackers
+[25:40] can result in a lot of damage, and
+[25:42] sometimes the complexity of the attack
+[25:44] itself is what makes them so hard to
+[25:46] detect. Even attacks that steal small
+[25:49] amounts of money in each transaction,
+[25:51] like cents or even fractions of a cent,
+[25:54] can accumulate and result in serious
+[25:56] losses.
+[25:57] Financial attacks may also take the form
+[25:59] of cybercrime for hire, a type of attack
+[26:01] as a service where the attacker conducts
+[26:04] cyberattacks against targets for their
+[26:06] clients. For example, a distributed
+[26:08] denial-of-service attack, where an
+[26:10] attacker can lease out a botnet to
+[26:13] customers for using any DDoS they
+[26:15] desire. Here, the attacker only wants
+[26:17] money from the customer who has some
+[26:19] other motivation for the attack.
+[26:21] Attackers here are not motivated by any
+[26:23] money received from the target victim or
+[26:26] the real DDoS attack.
+[26:28] Another type of an attack is a grudge
+[26:30] attack. Sounds ominous, doesn't it?
+[26:32] Well, it can be. We all know that
+[26:34] emotions can run high in any
+[26:35] environment, and the workplace, of
+[26:37] course, is no exception. Actually,
+[26:39] workplace sometimes is the number one
+[26:41] source of stress, resentment,
+[26:43] frustration. Come on, you know what I
+[26:45] mean.
+[26:45] The office is no utopia. Sometimes these
+[26:49] emotions can manifest in a grudge
+[26:51] attack, which is when a person, driven
+[26:53] by their
+[26:54] dark passenger, Dexter reference here,
+[26:57] seeks to harm a company or another
+[26:59] person. Obviously, not physically, but
+[27:01] by damaging the reputation or causing
+[27:04] data loss. So, it's an attack that does
+[27:06] damage for the sake of the damage and
+[27:08] for no other reason. You don't even have
+[27:10] to think about very complicated business
+[27:11] relations for a grudge attack. Just
+[27:13] imagine an employee who has recently
+[27:15] been let go. Feelings of anger,
+[27:17] betrayal, frustration are running high.
+[27:20] Or even consider a love affair gone
+[27:22] wrong within the office. The rejected
+[27:24] party could use their tech know-how to
+[27:27] launch a grudge attack against the other
+[27:29] person, causing harm in both the
+[27:30] workplace and in personal life.
+[27:32] Interestingly, we often focus on
+[27:34] external threats, and we sometimes
+[27:36] overlook the potential threats from
+[27:38] within the company.
+[27:39] Uh the disgruntled employee, the
+[27:41] frustrated colleague, the resentful ex,
+[27:44] those are the potential grudge attackers
+[27:46] that we need to be mindful of.
+[27:48] Generally, we call these insider
+[27:50] threats, and the term is
+[27:51] self-explanatory. These can be very
+[27:53] dangerous, especially if the insider has
+[27:55] a higher level of privilege in the
+[27:57] company, like an admin.
+[27:59] An example of this would be, and this is
+[28:02] just an example, I hope I'm not giving
+[28:03] you any ideas,
+[28:05] a server admin who schedules a script to
+[28:07] run every day looking for his active
+[28:09] user in Active Directory. The moment the
+[28:12] user is not found or is found disabled,
+[28:14] the script automatically destroys key
+[28:16] databases and their backups, too. Of
+[28:18] course, this type of action would be
+[28:20] designed as a revenge act for when the
+[28:22] admin is let go from the company.
+[28:25] Let's just hope that he doesn't forget
+[28:26] about that script when he willingly
+[28:28] decides to change jobs.
+[28:31] But, let's be clear, not all insider
+[28:33] threats are intentional. Sometimes or
+[28:35] actually, well, more often than you
+[28:37] might expect, users can accidentally
+[28:39] compromise security, rolling the red
+[28:41] carpet for external attackers. That's
+[28:44] why it's important that our security
+[28:45] policy addresses the potential of
+[28:47] insider attacks, too. We also get thrill
+[28:50] attacks.
+[28:51] These are often related to a term that
+[28:53] you might have heard before, script
+[28:55] kiddies.
+[28:57] There, the attacker, who, lacking the
+[28:59] expertise to craft their own digital
+[29:01] break-ins, they turn to ready-made,
+[29:04] off-the-shelf,
+[29:05] let's call them off-the-shelf tools
+[29:07] available online.
+[29:09] These are not your typical
+[29:10] cybercriminals, but they're in for the
+[29:12] adrenaline rush, let's say. The impact?
+[29:16] Well, not just about data destruction,
+[29:18] it's the thrill, hence the name thrill
+[29:20] attacks.
+[29:21] The thrill of the conquest, the digital
+[29:23] high of infiltrating a system.
+[29:26] The most likely outcome may be none, or
+[29:28] maybe just some data as proof for, you
+[29:31] know, bragging rights. Now, of course,
+[29:33] expect to encounter script kiddies with
+[29:35] real malicious intent. So, even if
+[29:38] script kiddies use tools that are
+[29:39] extremely easy to detect, it doesn't
+[29:41] mean that everyone is able to detect
+[29:42] them. Anti-malware doesn't get updated
+[29:45] or not even installed. Patches don't get
+[29:48] don't get installed as well.
+[29:50] Vulnerabilities remain open for months
+[29:53] for even the dumbest script kiddie to
+[29:55] exploit.
+[29:57] While using tools they don't even know
+[29:59] how to how they work, they can still be
+[30:01] successful. There's a saying, "The only
+[30:03] thing necessary for the triumph of evil
+[30:06] is for good men to do nothing." Funny
+[30:08] enough, this also applies to patching
+[30:10] systems.
+[30:11] And finally, we have hacktivism. This is
+[30:13] where we're blending political agendas
+[30:16] with the rush of hacking. These digital
+[30:18] activists or hacktivists
+[30:21] rally under banners like Anonymous or
+[30:23] LulzSec. Their goal is to shake the
+[30:25] foundations of entities they dislike,
+[30:28] they hate. Governments, companies,
+[30:30] usually the targets of protests that you
+[30:33] hear about in the media. Activism is a
+[30:35] type of cyber protest, but with a lot of
+[30:37] potential for damage as it's about far
+[30:41] more than just holding up banners for
+[30:43] everyone to see.
+[30:45] And at the far end of the spectrum, we
+[30:47] encounter suicide hackers. These are
+[30:49] hackers that are fully aware that their
+[30:51] actions will be detected and they will
+[30:53] be identified and prosecuted. Yet driven
+[30:56] by diverse motives, they press on
+[30:58] unconcerned with covering their tracks.
+[31:00] They don't care about that.
+[31:02] They're ready to make their final stand
+[31:04] no matter what the consequences will be.
+[31:07] Ethics is a complicated topic in itself,
+[31:09] but even more complicated if you add the
+[31:11] philosophical meaning of ethics. But for
+[31:14] us here,
+[31:15] talking about security, think of ethics
+[31:17] as kind of a GPS for businesses
+[31:20] navigating the roads of whatever people
+[31:22] deem to be fair and just.
+[31:25] And since this sounds awfully
+[31:27] subjective, there you go. Let's make it
+[31:29] less subjective and write some ethical
+[31:31] guides. Many companies have them.
+[31:33] If you work for one of them, chances are
+[31:36] that you've already seen an ethics
+[31:37] guide. Seen as in, you know, HR pointed
+[31:40] it out to you and you can find it
+[31:42] somewhere in SharePoint.
+[31:44] >> [snorts]
+[31:44] >> But it's okay. Most of us don't read
+[31:45] them. And interestingly enough, the
+[31:47] reason why we're used to not reading
+[31:49] them is because we all think
+[31:52] that we already know what ethical
+[31:54] behavior means and how we should
+[31:56] properly behave. We all think that
+[31:59] ethics is, well, common sense.
+[32:02] No, I'm not going to make fun of this
+[32:04] because
+[32:05] it's actually quite true.
+[32:07] If there's maybe 2% of a company's
+[32:10] employees who read an ethics guide, it
+[32:12] doesn't mean that the other 98% will
+[32:15] start behaving like violent, cheating,
+[32:18] and deceiving animals. No, people
+[32:20] actually have a pretty good
+[32:21] understanding of what it means to behave
+[32:23] in an ethical way. And I'm sure if you
+[32:25] ask yourself right now what is ethical
+[32:27] and what isn't, you'll probably get it
+[32:29] right in at least nine out of 10
+[32:32] questions, if not even more. So, good
+[32:33] news here. Exam questions on ethics are
+[32:36] pretty easy.
+[32:37] Except for when they actually ask you
+[32:40] about details listed in specific codes
+[32:43] of ethics. And for example,
+[32:45] the US government has a code of ethics
+[32:47] as well, which states a bunch of things
+[32:50] which are basically positive attributes
+[32:52] of human beings.
+[32:53] Loyalty to the country and its people,
+[32:55] to uphold the laws, to aim for
+[32:57] efficiency, to provide decent pay to the
+[32:59] people who work for you, to not
+[33:01] discriminate, to not abuse your
+[33:03] privileges on your job, to not abuse
+[33:06] confidential information if you have
+[33:07] access to it, to not allow or hide
+[33:10] corruption.
+[33:11] And I think I can stop here. You
+[33:13] definitely got the idea. Be good. Do no
+[33:17] harm. See? That's why nobody reads that
+[33:19] stuff.
+[33:20] Now, for a CISSP, there is also an
+[33:23] (ISC)² code of ethics, which is
+[33:25] basically how you should behave after
+[33:27] you become CISSP certified and you get
+[33:29] employed in a job based on those
+[33:31] credentials.
+[33:33] You may be wondering why there's a
+[33:34] specific code of ethics for a
+[33:36] certification. What are the implications
+[33:39] of that? Well, it's not actually about
+[33:41] the certification itself, but if you act
+[33:44] as a security advisor, a chief security
+[33:46] officer, or just a simple employee that
+[33:49] has something to say or do which is
+[33:51] security related, then you can probably
+[33:53] understand why.
+[33:55] Your mission is to help secure others
+[33:57] and other people's data and businesses.
+[33:59] So, no monkeying around. Monkeys don't
+[34:03] know ethics. Well, the exam is going to
+[34:05] ask you about the (ISC)² code of ethics,
+[34:07] but fortunately, not on a very deep
+[34:10] level. That is for you to read and sign
+[34:12] because it's a condition to get the
+[34:13] certification. In short, these canons
+[34:16] say
+[34:17] uh some things along these lines.
+[34:20] Protect society, the common good, and
+[34:22] the infrastructure, which means that
+[34:24] your mission, should you choose to
+[34:25] accept it,
+[34:27] is to be this shield that guards society
+[34:31] and the web of trust that holds it
+[34:33] together.
+[34:34] Another one is to act honorably,
+[34:36] honestly, justly, responsibly, and
+[34:38] legally. Again, it sounds like the code
+[34:40] of superheroes. Another obligation is
+[34:43] for you to provide diligent and
+[34:45] competent service to principals. This
+[34:47] means that as the architects of
+[34:50] security, your design, your work must be
+[34:52] good.
+[34:53] You're the trusted advisors to those who
+[34:56] rely on your expertise to protect their
+[34:58] data. In other words, do your job and do
+[35:00] it well.
+[35:01] Finally, the last one is to advance and
+[35:03] protect the profession. This means that
+[35:05] the cyber world is ever evolving and so
+[35:07] must you.
+[35:08] As the custodians of cybersecurity, it's
+[35:11] up to you to keep your knowledge up to
+[35:12] date, share your insights, contribute to
+[35:14] the collective know-how. Everything is
+[35:17] for will be awesome.
+[35:19] Also, part of the code is the fact that
+[35:21] you need to protect the code itself.
+[35:23] That is, report any violations on the
+[35:25] code if you encounter them. Yeah, it
+[35:27] means that you need to be the
+[35:28] whistleblower. By the way, anyone can
+[35:31] file complaints about the first and the
+[35:32] second canon. Only an employer or
+[35:35] someone who employs a professional can
+[35:37] file a complaint about the third canon.
+[35:39] I hope it's obvious why as you'll always
+[35:41] have a pretty good opinion about your
+[35:43] own work, so you probably won't report
+[35:45] yourself for incompetence, right?
+[35:48] Finally, only a CISSP professional can
+[35:51] file a canon four complaint. And yes, it
+[35:53] means telling on another professional. A
+[35:56] formal investigation will be conducted
+[35:58] if your complaint is filed properly.
+[36:00] Find out more about this by searching
+[36:02] for (ISC)² ethics
+[36:05] or go at (ISC)² .org/ethics, but the
+[36:07] link might change.
+[36:09] Well, more ethics.
+[36:11] RFC 1087
+[36:13] is an interesting one. Not because it's
+[36:15] such a good book that you won't be able
+[36:17] to put down once you start reading it.
+[36:20] It's not about technical standards, but
+[36:22] more like a declaration of what not to
+[36:24] do in the age of internet. It's called
+[36:26] Ethics and the Internet and it focuses
+[36:29] on a couple of ideas. Unauthorized
+[36:31] access,
+[36:32] disruptive actions, also not ethical, so
+[36:34] don't make things not work.
+[36:38] Don't waste digital resources. Don't
+[36:40] waste time, space, computing power, any
+[36:43] technology.
+[36:45] Don't compromise digital information as
+[36:47] in don't make it so that other people
+[36:49] won't be able to trust it. And respect
+[36:51] privacy. Pretty obvious.
+[36:53] Or respect privacy depending on where
+[36:55] you live.
+[36:57] Finally, another pretty funny code of
+[36:59] ethics is the one developed by the
+[37:02] Computer Ethics Institute. If you want,
+[37:03] you can Google 10 Commandments of
+[37:06] Computer Ethics.
+[37:08] They all start with thou shalts.
+[37:10] Or you could just read them in 21st
+[37:12] century English.
+[37:14] I will let you read them online, but
+[37:15] basically they say do no harm, don't
+[37:17] snoop around, don't steal anything using
+[37:20] computers, don't lie with computers. Lie
+[37:23] as in non-truth, not in that other way.
+[37:27] Don't lie with computers.
+[37:30] Uh don't use pirated software, don't use
+[37:33] other people's computers if they don't
+[37:34] let you, don't pretend that stolen text
+[37:37] or any other creation is yours, and so
+[37:40] on. Again, you're definitely going to
+[37:41] know when you do something wrong, so all
+[37:44] this ethics business should be easy
+[37:45] going.
+[37:46] And if you don't know when you do
+[37:48] something wrong, then man, sorry to say,
+[37:51] you've got bigger issues than passing an
+[37:53] exam.
+[37:59] >> [music]

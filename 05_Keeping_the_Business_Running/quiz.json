@@ -1,0 +1,57 @@
+[
+  {
+    "question": "An organization experiences a major electrical fire at its primary headquarters. The IT team immediately begins restoring database backups and setting up the secondary disaster recovery site, while the customer service team initiates manual routing of customer calls to representatives' homes to ensure client services are uninterrupted. How should these activities be classified?",
+    "options": [
+      "Both are disaster recovery planning (DRP) activities.",
+      "Both are business continuity planning (BCP) activities.",
+      "Restoring backups and setting up the secondary site are DRP activities; manual phone routing is a BCP activity.",
+      "Restoring backups and setting up the secondary site are BCP activities; manual phone routing is a DRP activity."
+    ],
+    "correctIndex": 2,
+    "explanation": "Disaster Recovery Planning (DRP) is tactical and technically focused, covering the restoration of specific systems, data, and infrastructure (e.g., restoring backups, setting up secondary sites). Business Continuity Planning (BCP) is strategic and operationally focused, keeping core business processes running (e.g., routing customer service calls manually so the service continues)."
+  },
+  {
+    "question": "An online retail organization determines that its e-commerce payment checkout system can be offline for at most 4 hours before the business suffers catastrophic financial loss. The IT systems team estimates it takes 2 hours to provision new server instances, and the database administration team requires another 1.5 hours to configure data feeds, restore transactional logs, and verify checkout operations. What are the correct time-based metrics for this process?",
+    "options": [
+      "MTD is 2 hours, RTO is 1.5 hours, and WRT is 3.5 hours.",
+      "MTD is 4 hours, RTO is 2 hours, and WRT is 1.5 hours.",
+      "MTD is 3.5 hours, RTO is 2 hours, and WRT is 2 hours.",
+      "MTD is 4 hours, RTO is 3.5 hours, and WRT is 0.5 hours."
+    ],
+    "correctIndex": 1,
+    "explanation": "The maximum tolerable time a process can be offline before causing catastrophic loss is the Maximum Tolerable Downtime (MTD), which is 4 hours. The time needed to bring the hardware/systems online is the Recovery Time Objective (RTO), which is 2 hours. The time needed to configure, sync data, and restore the operational workflow is the Work Recovery Time (WRT), which is 1.5 hours. MTD (4 hours) is greater than or equal to RTO (2 hours) + WRT (1.5 hours) = 3.5 hours, which satisfies the relationship."
+  },
+  {
+    "question": "A risk manager is calculating the threat of a severe flood affecting a corporate warehouse. The warehouse and its inventory have a total asset value (AV) of $10,000,000. Actuarial data suggests a flood of this magnitude occurs once every 50 years in this area, and would damage approximately 40% of the warehouse. What are the Single Loss Expectancy (SLE) and Annual Loss Expectancy (ALE) for this risk?",
+    "options": [
+      "SLE = $4,000,000; ALE = $80,000",
+      "SLE = $10,000,000; ALE = $200,000",
+      "SLE = $4,000,000; ALE = $200,000",
+      "SLE = $400,000; ALE = $8,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "Single Loss Expectancy (SLE) is calculated as Asset Value (AV) multiplied by the Exposure Factor (EF). Here, SLE = $10,000,000 * 0.40 = $4,000,000. Annual Loss Expectancy (ALE) is calculated as SLE multiplied by the Annual Rate of Occurrence (ARO). Since the flood occurs once every 50 years, the ARO is 1/50 = 0.02. Thus, ALE = $4,000,000 * 0.02 = $80,000."
+  },
+  {
+    "question": "The Business Continuity Planning (BCP) team has drafted the final plan and needs to ensure that the document has maximum influence, receives corporate-wide support, and that employees actively cooperate. What is the most critical first step to achieve this goal?",
+    "options": [
+      "Conduct a full-scale simulation test immediately to demonstrate the plan's viability.",
+      "Email the technical sections of the BCP to the IT department for storage in a shared folder.",
+      "Have the CEO sign a 'Statement of Importance' and distribute it to all employees.",
+      "Distribute the statement of priorities widely to show salary adjustments in an emergency."
+    ],
+    "correctIndex": 2,
+    "explanation": "Executive support is the most critical factor for BCP success. Having the CEO or a senior executive sign a 'Statement of Importance' gives the BCP authority and visibility across the company, overcoming resistance and securing cooperation. Testing is done later, and the statement of priorities must never be linked to salaries or non-emergency operational decisions."
+  },
+  {
+    "question": "During a category 4 hurricane, a local emergency evacuation order is issued for the zone containing a company's primary data center. A critical backup generator fails to start. Three senior systems engineers volunteer to stay behind in the facility to manually restart the generator and save the physical database servers. As the BCP manager, what is the correct action?",
+    "options": [
+      "Approve the engineers' request, as saving the company's core data is vital for survival.",
+      "Allow only the most senior engineer to stay behind to reduce the number of exposed personnel.",
+      "Order all employees to evacuate the facility immediately in accordance with the evacuation order.",
+      "Request a special exemption permit from local law enforcement to allow the technicians to stay."
+    ],
+    "correctIndex": 2,
+    "explanation": "From the CISSP perspective, safety of human life is the absolute number one priority in any disaster or emergency scenario. No asset, database, or server is worth risking human lives. The BCP manager must enforce the immediate evacuation of all personnel, regardless of the financial or operational impact on the organization."
+  }
+]

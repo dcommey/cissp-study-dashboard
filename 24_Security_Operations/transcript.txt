@@ -1,0 +1,1309 @@
+[00:08] We briefly ended the last discussion
+[00:11] with a few concepts about security
+[00:13] processes, which also ties nicely with
+[00:16] the current chapter on security
+[00:17] operations because it is about the daily
+[00:21] duties, responsibilities, and actions
+[00:23] that security professionals take care of
+[00:26] on a daily basis.
+[00:28] Okay, so let's cover a couple of basic
+[00:30] principles applicable in the daily
+[00:33] business of security.
+[00:35] Need to know and least privilege are two
+[00:37] principles that limit the access to the
+[00:39] data based on the users' work tasks and
+[00:43] roles. Need to know means that users
+[00:45] only have the necessary access to the
+[00:48] data they need for their job. This is
+[00:50] often related to security clearances,
+[00:52] which indicates the level of access that
+[00:54] users have
+[00:56] to classified data. Still, having a
+[00:58] security clearance does not
+[00:59] automatically grant access to all the
+[01:02] data on that level. Users still need to
+[01:04] have a valid reason, hence the need to
+[01:07] know, for accessing specific data. The
+[01:09] other one, least privilege, is a concept
+[01:11] that applies to both users and non-users
+[01:13] like computers and applications, and it
+[01:15] means that they only have the privileges
+[01:17] that are necessary to do their job and
+[01:19] no more. Least privilege applies to both
+[01:22] data and system access, so it can
+[01:24] control the ability to read or change
+[01:26] data, as well as the ability to log on
+[01:29] to servers, execute commands, or run
+[01:31] applications. Separation of duties is a
+[01:33] principle aimed at preventing fraud,
+[01:36] human error, but also abuse by
+[01:39] distributing critical information among
+[01:42] multiple people. This way, no single
+[01:44] person can have complete control over
+[01:46] some critical function. Instead, they
+[01:48] need to cooperate and check each others'
+[01:50] actions to perform the necessary work
+[01:53] tasks. Uh this makes it more are to hide
+[01:56] malicious intent, fraudulent intent, and
+[01:58] it's also useful because a second person
+[02:00] might catch an error that the first
+[02:02] person missed, an intentional error.
+[02:05] Some examples of how separation of
+[02:06] duties can be applied in a lot of
+[02:08] contexts out there, such as, for
+[02:10] example, in a movie theater. Uh there's
+[02:13] one person that sells tickets and
+[02:15] another person collects them at the
+[02:17] entrance. Sometimes they're like 10 m
+[02:19] apart and you might wonder why the heck
+[02:21] would they need two people for one job?
+[02:23] Well, this prevents the ticket seller
+[02:25] from letting friends in without paying
+[02:27] or from keeping the money and letting
+[02:29] people in without issuing tickets.
+[02:31] In a company, another example, one
+[02:33] person approves payments for an invoice,
+[02:36] another person actually makes the
+[02:37] payment.
+[02:39] In a computer system, some privileged
+[02:41] activities require two administrators to
+[02:43] work together. For example, some PAM
+[02:45] privileged access management solutions
+[02:47] create special emergency accounts that
+[02:49] need two passwords to log on. The
+[02:51] passwords are split between two
+[02:53] administrators and this prevents one
+[02:55] administrator from abusing the emergency
+[02:57] account or from bypassing the security
+[03:00] mechanisms altogether. Another example
+[03:02] is approval workflows in companies.
+[03:05] Those work in a similar manner where two
+[03:07] or more people need to provide consent
+[03:09] before a change is implemented.
+[03:11] Sometimes separation of duties is called
+[03:13] two-person control, which is exactly
+[03:15] what we just described, or split
+[03:17] knowledge if it's just about having the
+[03:18] information required to perform an
+[03:20] operation.
+[03:21] All these can be combined with job
+[03:24] rotation. This involves moving employees
+[03:27] from one job to another periodically and
+[03:30] when possible, of course. Uh in some
+[03:32] cases it might be just a rotation or an
+[03:34] alternation of responsibilities. This
+[03:36] again prevents employees from becoming
+[03:38] too familiar with a function or system
+[03:41] and exploiting its weaknesses or
+[03:42] committing fraud. It also fights against
+[03:45] having a single person being responsible
+[03:46] for a process without anyone else being
+[03:48] able to detect if something fishy is
+[03:51] happening.
+[03:52] These principles can even be combined
+[03:54] with mandatory vacation. At least this
+[03:57] one actually sounds awesome. Mandatory
+[03:59] vacation is a policy that requires
+[04:01] employees to take a minimum number of
+[04:03] days off each year at regular intervals.
+[04:06] This might also prevent or detect fraud
+[04:10] by letting another employee, a colleague
+[04:12] of yours, take over the responsibilities
+[04:15] of the one that is bathing in the sun.
+[04:17] By making it mandatory to let someone
+[04:19] else take over your duties, at least
+[04:21] temporarily, it becomes more difficult
+[04:24] to hide illegal activities if you were
+[04:26] involved in such things.
+[04:29] Another security operations concept is
+[04:31] called privileged account management,
+[04:33] PAM. PAM is a category of solutions or
+[04:35] products that control and monitor access
+[04:38] to privileged accounts or privileged
+[04:41] operations. These include things such as
+[04:44] creating or deleting other accounts,
+[04:46] altering the base configuration of
+[04:48] systems, accessing logs, perhaps even or
+[04:51] audit files, running commands reserved
+[04:53] only for privileged users. These
+[04:55] privileges also make root and admin
+[04:57] accounts attractive targets for
+[04:59] attackers who may try to steal or misuse
+[05:02] them to compromise security of the
+[05:03] company.
+[05:05] PAM works by enforcing security
+[05:07] procedures and controls that limit and
+[05:09] audit how privileged accounts are being
+[05:11] used. Basically, admins have to go
+[05:13] through a couple more hoops and security
+[05:16] checks before they can execute those
+[05:18] privileged functions, at least more than
+[05:20] regular users executing regular
+[05:23] functions.
+[05:24] PAM also follows the principle of least
+[05:26] privilege, pretty obvious at this point,
+[05:28] which means that users only have the
+[05:30] privileges, including the advanced ones,
+[05:32] that are truly necessary and only for
+[05:34] the time that is needed. For example,
+[05:37] PAM could use time-limited tickets or
+[05:39] passwords that expire quickly to prevent
+[05:41] attackers from reusing them if they are
+[05:43] stolen or harvested at any point in the
+[05:45] future. PAM systems might also require
+[05:47] periodic re-authentication or continuous
+[05:50] authentication
+[05:51] for privileged users
+[05:53] while they are logged in.
+[05:55] Personnel security. Now, one of the main
+[05:58] goals of security operations is also
+[06:00] protecting the personnel. Yes, this is
+[06:01] about you and your co-workers.
+[06:04] This makes a lot of sense as people are
+[06:06] the main driver and the most valuable
+[06:09] business resource of a company. And yes,
+[06:11] I know that's also what companies say
+[06:13] even before laying off staff, but still
+[06:15] it's true.
+[06:17] So, what do you do for your colleagues
+[06:19] to feel safe and to actually be safe?
+[06:20] There are many, many things to address
+[06:22] here, but this is neither the time, nor
+[06:24] the place, nor the certification exam
+[06:25] for it. Still, at a minimum, let's think
+[06:27] about the following physical security
+[06:29] controls. Things such as exit door
+[06:31] locks, the locks that should allow
+[06:32] people to exit in case of danger, should
+[06:34] be designed to ensure that the exit door
+[06:37] unlocks automatically in case of a power
+[06:40] outage or a fire so that the personnel
+[06:42] inside can escape safely. The locks
+[06:44] should also be resistant to tampering or
+[06:46] bypassing by unauthorized persons.
+[06:49] Duress systems. These are systems that
+[06:51] allow personnel to send a distress
+[06:53] signal, call, or raise an alarm in case
+[06:55] of an emergency. It can be implemented
+[06:57] as a simple button hidden under the
+[06:59] reception desk, a specific code that
+[07:02] triggers a silent or audible alarm. The
+[07:05] systems should also alert somebody who
+[07:06] can actually respond and intervene such
+[07:08] as, well, the police.
+[07:11] Work and travel security. This is the
+[07:13] security of personnel who travel for
+[07:15] work or business purposes.
+[07:17] Travel security involves training
+[07:19] personnel on safe practices while
+[07:21] traveling like being careful what they
+[07:22] pay for, where they store their
+[07:24] belongings, what network they connect
+[07:26] their devices to,
+[07:28] how much they should drink at company
+[07:29] events, and so on.
+[07:31] Work security covers day-to-day
+[07:33] practices for keeping safe while
+[07:35] commuting to and from the office and
+[07:37] while working in the office building.
+[07:39] So, that is work security as opposed to
+[07:41] work and travel security.
+[07:44] Secure resource management.
+[07:46] One of the main security operations
+[07:47] concepts is how you provision resources
+[07:50] securely, process which starts with
+[07:52] asset management. Assets are actually of
+[07:55] two types, tangible and intangible. As
+[07:58] you can probably guess, tangible assets
+[08:00] are the physical resources that you can
+[08:01] touch, computers, servers, networking
+[08:03] devices, components, accessories, and so
+[08:06] on. Intangible assets are mainly data in
+[08:09] every imaginable form, code, trade
+[08:11] secrets, blueprints, patterns,
+[08:13] copyrights,
+[08:14] even things that are not so easy to
+[08:16] estimate like reputation or potential
+[08:18] revenue.
+[08:19] So, asset responsibility, at least when
+[08:21] it's about data, starts with the data
+[08:24] owner, who is the senior manager
+[08:27] ultimately responsible for the data.
+[08:29] There might also be a system owner who
+[08:31] is responsible for the hardware that
+[08:33] stores the software asset.
+[08:35] The owners delegate protection tasks of
+[08:38] the data to data custodians and to
+[08:41] system administrators, who perform the
+[08:43] daily operations such as monitoring, uh
+[08:46] ensuring that access control works fine,
+[08:48] backup, configuration management, and so
+[08:51] on.
+[08:52] Asset management always starts with
+[08:54] inventories. So, knowing what exactly it
+[08:57] is that you own, of course along with
+[08:59] their attributes like, I don't know, in
+[09:02] a hardware device, the model, the serial
+[09:04] number, the actual physical location,
+[09:06] uh the user responsible for it, the
+[09:08] department it it is allocated to, and
+[09:11] perhaps even service coverage
+[09:12] information so that people know who to
+[09:14] call when the asset breaks.
+[09:17] So, you can create an inventory of
+[09:18] assets using tools ranging from pen and
+[09:20] paper, notepad, Excel, or databases.
+[09:24] But, in real life, we try to at least
+[09:25] use some automation and consistency with
+[09:28] uh things such as barcodes, RFID, radio
+[09:31] frequency identification tags, or serial
+[09:33] numbers. And we can store these in
+[09:35] something called a configuration
+[09:36] management system or CMS, which of
+[09:38] course has a configuration management
+[09:40] database, CMDB. Software is also an
+[09:44] asset and it includes operating systems
+[09:46] and applications. From an asset
+[09:47] inventory point of view,
+[09:49] these are usually identified by unique
+[09:51] product identifiers or the actual
+[09:53] license keys to activate and use them.
+[09:56] Speaking of license keys, I probably
+[09:58] don't need to tell you that by
+[09:59] themselves they should be protected as
+[10:01] sensitive information since they have
+[10:03] real money value. You paid for those
+[10:05] licenses, so they are assets with value.
+[10:09] License keys also require compliance
+[10:11] with the software licensing rules, which
+[10:13] may limit how many times you can install
+[10:15] the software, on what hardware it can be
+[10:17] installed, if it's correctly licensed
+[10:19] according to the server it's running on.
+[10:21] Yes, Oracle, I'm looking at you here.
+[10:24] Or even how many users are using the
+[10:26] software in total or at the same time.
+[10:29] This brings us to another problem that
+[10:30] should be addressed by a software
+[10:31] inventory and in general by the resource
+[10:33] management program, ensuring that
+[10:35] systems do not have unauthorized
+[10:37] software installed, which may pose
+[10:40] security and legal risks.
+[10:43] Software asset inventories should be
+[10:45] created using tools that can detect the
+[10:47] software installed on the systems and
+[10:48] also validate their license status.
+[10:51] Also, since we're talking about
+[10:53] management and managing data in
+[10:55] particular, we need to address the
+[10:57] entire life cycle of that data,
+[10:59] including destroying the data when it's
+[11:01] not needed anymore. Uh destruction is is
+[11:03] also a part of uh secure resource
+[11:05] management program. Destroying is
+[11:07] necessary because storing sensitive
+[11:09] information that you don't really need
+[11:11] not only takes up space and physical
+[11:13] resources, like storage and power, but
+[11:16] also exposes you to some truly
+[11:18] unnecessary risks. If you don't have
+[11:20] that data, then nobody can steal it from
+[11:22] you in a data breach. Your risk exposure
+[11:25] gets lower.
+[11:26] The destruction of data can be done in a
+[11:28] number of ways. Generally, we call this
+[11:30] sanitization,
+[11:32] which is a process of removing all data
+[11:35] from the physical asset before disposing
+[11:37] of them to prevent unauthorized access.
+[11:40] Uh sanitization can be done by simply
+[11:42] overriding the data, degaussing the disk
+[11:45] if we're dealing with magnetic disks, or
+[11:48] physically destroying the media with a
+[11:49] hammer, with fire, whatever it can
+[11:52] destroy hard drives, SSDs, optical
+[11:54] media, or even backup tapes. Oh, and
+[11:56] don't forget about paper documents, too.
+[11:58] The information in those is an asset,
+[12:00] too, but you probably
+[12:02] know how to destroy paper pretty much at
+[12:04] this point.
+[12:05] Protecting media. Well, we all know that
+[12:08] data is an important asset, but in order
+[12:10] to have availability,
+[12:12] we also need to ensure that the medium
+[12:13] that stores the data is properly secured
+[12:16] and available, working well, whenever we
+[12:18] need to use the data on it.
+[12:19] So, first, what exactly is considered
+[12:21] media?
+[12:22] Well, media is anything that can store
+[12:24] data. SSDs and hard drives, optical
+[12:27] disks, uh USB drives, um flash memory,
+[12:30] basically.
+[12:31] Any smart devices with local storage,
+[12:33] again, flash memory.
+[12:35] Tape, no, it's not dead yet and widely
+[12:38] used for backups.
+[12:40] And last [snorts] but not the least,
+[12:41] paper.
+[12:42] Mobile devices and smart devices include
+[12:45] smartphones and tablets, but also
+[12:46] wearable and smart home and smart office
+[12:48] devices. For the purpose of the
+[12:50] discussion,
+[12:51] we'll include anything with an
+[12:53] accessible memory. For mobile devices,
+[12:55] think of security measures that prevent
+[12:57] data theft, infections, and illegal
+[13:00] access. At a minimum, lock those devices
+[13:03] with passwords, enable PINs, biometrics
+[13:06] if they're capable of this, encrypt the
+[13:08] flash memory in the device, use
+[13:10] anti-malware if it's available, update
+[13:12] the apps, update the operating system,
+[13:14] the firmware on mobile devices with the
+[13:15] latest patches. And last but not least,
+[13:18] make sure you have some sort of MDM,
+[13:20] mobile device management solution, that
+[13:22] enables the company to wipe mobile
+[13:24] devices remotely in case of loss or
+[13:26] theft. Tape media is commonly used for
+[13:29] archival purposes, usually for long-term
+[13:31] storage and archive data, and has a
+[13:33] pretty low cost per terabyte and a long
+[13:36] lifespan. Unfortunately, it's not made
+[13:38] for frequent access since it can take a
+[13:40] very long time to even find a single
+[13:42] file on a tape drive. It also requires
+[13:44] special care and handling to prevent
+[13:46] data loss, which basically means storing
+[13:48] it in a secure location with access and
+[13:50] environmental controls. You also have to
+[13:52] take care when transporting it as it is
+[13:55] fragile. Don't expose it to extreme
+[13:57] temperatures. Don't expose it to
+[13:59] magnetic fields.
+[14:01] Other than that, just treat data on tape
+[14:03] just like any other data. For example,
+[14:05] by throwing in a bit of encryption, it
+[14:08] never hurts.
+[14:09] So, securing the media
+[14:11] means preventing unauthorized access,
+[14:13] changes, and even destruction of data.
+[14:15] Basically, addressing all the threats to
+[14:17] confidentiality, integrity, and
+[14:18] availability.
+[14:20] We also need to properly manage media to
+[14:22] avoid the risk of malware infections and
+[14:24] data theft, especially with very mobile
+[14:27] media like USB flash drives. To mitigate
+[14:29] the risk of losing or having flash drive
+[14:31] stolen, ensure that the drives are
+[14:33] encrypted. Be aware that some of them
+[14:35] even have authentication mechanisms
+[14:36] built into them. Make sure the computers
+[14:39] that access the data or those drives are
+[14:41] running up to date and malware, and
+[14:43] don't forget that all this has to be
+[14:45] backed up by policies, procedures, and
+[14:48] some monitoring and alerting to make
+[14:50] sure you're compliant. Managing media
+[14:52] requires also keeping an eye on how
+[14:54] often and when media fails because it
+[14:57] can fail and it will fail eventually. A
+[14:59] hard drive can fail or the server's
+[15:02] power supply can fail.
+[15:03] Uh the same server that hosts your hard
+[15:05] drive.
+[15:06] Both types of failure will make your
+[15:09] media inaccessible. In this context,
+[15:12] we should be aware of metrics such as
+[15:14] mean time to failure, MTTF, and the mean
+[15:17] time between failures, MTBF. Note that
+[15:20] these don't apply just to media, but to
+[15:21] any type of device.
+[15:23] MTTF is the average time that the item
+[15:25] will last before it fails and cannot be
+[15:27] repaired. And in the context of media,
+[15:30] this is where we include, for example,
+[15:31] tape or SSDs.
+[15:33] MTBF is the average time that an item
+[15:35] will last before it fails and can be
+[15:37] repaired. For example, an entire storage
+[15:40] array, a server, or any type of network
+[15:42] appliance.
+[15:43] We use these metrics to determine the
+[15:45] average lifespan and reliability, very
+[15:48] very
+[15:49] subjective estimate, of course, of
+[15:50] reliability
+[15:52] of the devices
+[15:53] and of the media itself, as this helps
+[15:55] us plan for their replacement in
+[15:57] advance.
+[15:59] Resources in the cloud. Now, obviously,
+[16:01] nobody would take our discussion here
+[16:02] seriously if we did not have a section
+[16:05] about the cloud, of course.
+[16:07] The cloud is a way of getting computing
+[16:10] resources or any kind of digital
+[16:11] resources on demand. Access them from
+[16:14] anywhere and with high availability and
+[16:16] scalability.
+[16:17] All those commitments available to you
+[16:20] for a fee.
+[16:22] You can either rent these resources from
+[16:25] a cloud provider or you can host your
+[16:26] own mini cloud on your own premises.
+[16:29] One of the main problems or blocking
+[16:31] points, I would say, of using cloud
+[16:32] resources from a provider is that you
+[16:35] have less control over those resources
+[16:37] and you have to trust the provider to
+[16:39] manage the risk, especially when you're
+[16:41] running critical services in the cloud.
+[16:42] And those services need real protection,
+[16:45] real and real data to be protected in
+[16:47] order to work.
+[16:49] Uh you need to trust someone else with
+[16:50] your data, basically. On the other hand,
+[16:53] hosting your own cloud resources gives
+[16:54] you more control, but also requires a
+[16:56] lot more effort, lot more skill from
+[16:58] you, and it costs a lot. And don't
+[17:02] forget that it it it's a huge upfront
+[17:04] investment. All sensitive data should be
+[17:06] encrypted as a rule. You know this by
+[17:08] now, so it doesn't apply just to cloud,
+[17:11] but to any data.
+[17:12] Also, even if you're storing your data
+[17:14] in some cloud, you still should be the
+[17:15] one who manages the encryption and the
+[17:17] keys, not the provider. This way you can
+[17:19] avoid the risk of someone from the
+[17:20] provider accessing your data or deleting
+[17:23] your data without leaving a trace.
+[17:24] Encryption also helps you destroy your
+[17:26] data much more quickly and securely by
+[17:27] simply deleting the keys. You don't even
+[17:30] have to delete the encrypted content. If
+[17:32] you use a strong encryption method,
+[17:34] deleting the keys will make your data
+[17:36] impossible to recover, at least at the
+[17:38] time of this recording. Speaking of
+[17:40] encryption, who is responsible for
+[17:42] securing access and data stored in a
+[17:44] public cloud such as Microsoft Azure,
+[17:46] Amazon Web Services AWS, and Google
+[17:49] Cloud Platform GCP, or Oracle Cloud
+[17:51] Infrastructure OCI? The answer, like in
+[17:54] real life, is it depends.
+[17:58] Well, the short answer is both of you,
+[17:59] both you and the cloud provider are
+[18:01] responsible, which is why we say that
+[18:03] it's a shared responsibility model.
+[18:06] All right, so how do we deliver cloud
+[18:08] services?
+[18:09] The first model is SaaS, Software as a
+[18:12] Service. It means that you use
+[18:13] applications that are installed,
+[18:15] managed, and maintained by the vendor.
+[18:17] And usually you just access them through
+[18:18] a web browser or a or a client
+[18:21] application. For example, Gmail is a
+[18:23] SaaS application. Do you care where
+[18:25] Gmail is running, on which server, how
+[18:27] much RAM it's taking up, if the former
+[18:30] of the server is up to date or not? No,
+[18:32] of course you don't care. And it's not
+[18:33] because you are ignorant, but because
+[18:35] Google cares about that, and you only
+[18:37] should care about using a working end
+[18:39] product. The vendor takes care of
+[18:41] everything from the hardware to the
+[18:43] software. You don't have to manage or
+[18:44] control anything except for the
+[18:47] invoice payment terms.
+[18:49] PaaS stands for Platform as a Service.
+[18:51] It means that you use a platform that is
+[18:53] provided by the vendor, which includes
+[18:56] the hardware, the operating system,
+[18:57] perhaps some storage services,
+[18:58] databases, and a runtime environment.
+[19:01] The runtime environment supports
+[19:02] programming languages, libraries,
+[19:04] additional helper services, and other
+[19:06] tools that you can use. Uh you can
+[19:08] deploy your own applications on the the
+[19:10] and manage them, or you can just bring
+[19:12] in your code, the platform compiles it
+[19:14] and runs it for you. You might be able
+[19:16] to change some settings on the host, but
+[19:18] the vendor is still responsible for the
+[19:19] host and the cloud infrastructure around
+[19:21] it. We're starting to see platform
+[19:22] services for AI workloads as well, not
+[19:25] just for app development. IaaS stands
+[19:28] for infrastructure as a service. It
+[19:30] means that you rent basic computing
+[19:32] resources that are provided by the
+[19:33] vendor, like servers, storage,
+[19:35] networking. When we say servers, we
+[19:38] basically mean virtual machines here.
+[19:40] Although there are specific vendors that
+[19:42] allow you to rent entire of physical
+[19:44] servers from their own infrastructure,
+[19:46] on those virtual machines, you can
+[19:48] install your own operating systems and
+[19:50] applications, bring your own data, and
+[19:52] do whatever you want. You are now
+[19:54] responsible for everything that is
+[19:55] running on top of them. The vendor only
+[19:57] maintains the cloud infrastructure, and
+[19:59] it makes sure that you don't lose access
+[20:01] to the resources that you're paying for.
+[20:03] Notice that there is one element here
+[20:04] that is always your responsibility, the
+[20:07] data. You are always the one that
+[20:10] provides the data. You are the data
+[20:12] owner, so you are solely responsible for
+[20:14] its security. The provider, well,
+[20:17] provides security mechanisms, but it's
+[20:20] up to you to implement them correctly.
+[20:23] All right, so how do we deploy a cloud
+[20:24] infrastructure?
+[20:26] Now, public cloud is a type of cloud
+[20:29] computing service that is purchased as a
+[20:31] service from a cloud service provider,
+[20:33] also known as a CSP.
+[20:34] This means that you do not need to
+[20:36] invest in any on-premises
+[20:37] infrastructure, such as server, storage,
+[20:39] networking. Instead, you can just access
+[20:41] the cloud resources over any connection
+[20:43] to the internet, and pay only for what
+[20:45] you use.
+[20:47] Some obvious benefits of the public
+[20:48] cloud include the fact that they offer
+[20:50] you a distributed infrastructure,
+[20:52] redundant all over the world, which
+[20:54] means that you can deploy your
+[20:55] applications closer to your customers,
+[20:57] no matter where they live, and also
+[20:59] allows you to have high availability and
+[21:01] better performance.
+[21:02] Everything is virtualized, which means
+[21:04] that the resources that you're paying
+[21:06] for are abstracted from the underlying
+[21:08] physical hardware.
+[21:09] This allows you to scale up or down your
+[21:12] resources on demand, which is great.
+[21:14] Some public cloud providers also offer
+[21:16] bare metal instances, which give you
+[21:18] direct access to the hardware if you
+[21:20] really need it. Of course, they're more
+[21:21] expensive. By default, public cloud
+[21:24] resources are shared among multiple
+[21:26] customers, which you know nothing about
+[21:29] or tenants, who are isolated from each
+[21:32] other using virtualization and security
+[21:34] mechanisms. This is great for the public
+[21:36] cloud providers because they achieve
+[21:37] better utilization of their
+[21:39] infrastructure and they can keep the
+[21:41] costs low-ish.
+[21:44] On the other hand, you need to trust
+[21:45] that the security mechanisms of the
+[21:47] cloud provider never fail, otherwise
+[21:49] customers might be able to access each
+[21:51] other's data. Also, public cloud
+[21:53] providers offer various security
+[21:55] features. They encrypt your data in
+[21:57] transit and at rest using industry
+[21:59] standard protocols. They also provide
+[22:01] firewalls, identity and access
+[22:03] management, compliance tools to help you
+[22:05] secure your cloud environment. But like
+[22:07] we said a minute ago, security is a
+[22:08] shared responsibility between you and
+[22:10] the cloud provider and you need to
+[22:11] follow the best practices, too.
+[22:14] Don't forget that you pay only for what
+[22:15] you use, which means that you don't need
+[22:17] an upfront investment in infrastructure.
+[22:19] However, this also means that you need
+[22:21] to monitor and manage your cloud
+[22:23] spending carefully and avoid any
+[22:25] unnecessary or wasteful usage. You also
+[22:28] need to consider the long-term costs and
+[22:30] benefits of renting versus owning your
+[22:32] cloud resources. The same decision
+[22:34] process that we conduct with cars and
+[22:36] houses. Lease or buy, rent or buy,
+[22:39] depending on well, you, your budget and
+[22:41] your your future plans.
+[22:43] Public cloud providers manage the
+[22:45] hardware, the operating systems, and the
+[22:47] virtualization layer of the cloud
+[22:49] resources. So, you can focus on your
+[22:51] core business and application logic.
+[22:52] This also means that you have less
+[22:54] control and visibility over the
+[22:56] lower-level aspects of the cloud
+[22:58] resources and you may face some
+[23:00] compatibility or integration issues with
+[23:02] your existing systems or tools. You also
+[23:05] need to trust the cloud provider to
+[23:06] deliver reliable and secure services and
+[23:08] comply with relevant regulations and
+[23:10] standards because if they don't comply,
+[23:13] you don't have a business anymore.
+[23:15] And there isn't much you can do about
+[23:16] it. But if you don't have a business
+[23:18] anymore, then they don't have business
+[23:19] anymore. So, they're pretty good at this
+[23:22] at this topic.
+[23:23] Uh you are responsible for your
+[23:25] applications, data, and security
+[23:27] policies in the cloud. This gives you a
+[23:29] lot of flexibility but this also means
+[23:31] that you need to have the necessary
+[23:33] skills and expertise to design and
+[23:35] operate and secure your cloud
+[23:37] environment. You also need to be aware
+[23:39] of the potential risks and challenges of
+[23:41] moving your data and applications to the
+[23:42] cloud, such as where the data is allowed
+[23:44] to be stored, how the privacy controls
+[23:46] are being enforced, compliance
+[23:48] regulations, many other aspects. Maybe
+[23:50] something as simple as realizing that
+[23:52] you have a huge amount of data that
+[23:53] you'll never be able to upload to the
+[23:54] cloud.
+[23:56] Maybe that's a stopping point for moving
+[23:58] to the cloud.
+[23:59] Private cloud is a type of cloud
+[24:01] computing service that is dedicated and
+[24:03] isolated for you. Well, not you, but for
+[24:06] a single company.
+[24:08] This means that you have exclusive
+[24:10] access and control over the cloud
+[24:11] resources. You can customize them
+[24:12] however you want. You can even break the
+[24:15] entire cloud with a baseball bat or just
+[24:17] by inputting the wrong command if you
+[24:19] really want to.
+[24:20] Private cloud resources are virtualized
+[24:22] just like in any other cloud because we
+[24:24] still need to have flexibility and
+[24:26] scalability and we can only do this in
+[24:28] the virtual world.
+[24:29] Private clouds also generally use
+[24:31] self-service portals and APIs to access
+[24:34] your resources just like public ones.
+[24:36] Now, since the entire infrastructure and
+[24:39] data on top of it belongs to you, this
+[24:42] might give you the illusion of more
+[24:44] control, privacy, more security. This is
+[24:47] very debatable as you might think your
+[24:48] data is safer simply because you know
+[24:51] where it is
+[24:52] and you have complete control over it.
+[24:54] But on the other hand
+[24:55] think about this.
+[24:56] Is your security team, your SOC, your
+[24:59] security operations center, if you have
+[25:01] one,
+[25:02] the resources that you're allocating for
+[25:04] monitoring and security research, the
+[25:06] people even, are those wonder kids
+[25:11] really better than what Microsoft,
+[25:14] Amazon, or Google employees?
+[25:16] Are you really better than them at
+[25:18] security?
+[25:19] Think about this for a second. On the
+[25:21] positive side, performance and load are
+[25:24] not influenced by other users because
+[25:27] you are not sharing the infrastructure
+[25:28] with anyone else. So, you get a big
+[25:30] benefit on the resource utilization
+[25:33] side.
+[25:34] Nevertheless, since private cloud
+[25:36] resources are hosted either on premises
+[25:38] or off premises, they are still most
+[25:40] likely stored in the same place, city,
+[25:42] country, state, where your business is.
+[25:44] So, if you have privacy and data
+[25:45] localization requirements, it's much
+[25:47] easier to comply with those
+[25:49] requirements.
+[25:50] As we said before, private cloud
+[25:52] resources are fully managed by you, and
+[25:54] you are responsible for the entire cloud
+[25:55] stack, from the hardware to the data.
+[25:58] This means that you need a big
+[25:59] investment, capital expenditure also
+[26:01] known as capex,
+[26:03] in the infrastructure, and you also need
+[26:05] to maintain it and update it regularly.
+[26:07] You also need to have the necessary
+[26:08] skills and expertise to design, deploy,
+[26:11] and ultimately operate your cloud
+[26:13] resources and the hardware on top of
+[26:15] which they're running,
+[26:16] and to secure your environment. You also
+[26:18] need to bear the risks and costs of any
+[26:20] downtime or failure of your cloud
+[26:22] resources, as there is nobody else to
+[26:25] blame now.
+[26:27] A hybrid cloud, this is a type of
+[26:29] private cloud service that is integrated
+[26:31] and connected with a public cloud
+[26:32] service, creating a unified and
+[26:35] hopefully seamless cloud environment.
+[26:38] A hybrid cloud can offer the best of
+[26:40] both worlds, combining the data
+[26:41] ownership and control of private cloud
+[26:43] with the scalability and flexibility of
+[26:46] public cloud. However, hybrid cloud also
+[26:48] introduces more complexity for
+[26:50] deployments, for security especially,
+[26:52] and for pretty much anything. We usually
+[26:54] refer to hybrid cloud in two possible
+[26:57] scenarios. The first one is where the
+[26:59] company has some services on premises
+[27:02] and some services in the cloud. This is
+[27:04] not precisely hybrid cloud, but you
+[27:06] might find this definition in some
+[27:08] books. The second scenario is when a
+[27:10] company uses the cloud to scale when the
+[27:13] private one is not enough. Like, for
+[27:15] example, large online retailers
+[27:17] preparing for Black Friday. They know
+[27:20] they will have maybe 50 times the
+[27:22] regular number of users in a small time
+[27:24] span, so they choose to dynamically and
+[27:27] temporarily extend their infrastructure
+[27:29] with additional web servers and
+[27:31] redundant databases running in the
+[27:32] cloud.
+[27:33] This scaling can also happen while
+[27:35] traffic is dynamically increasing and
+[27:37] can also scale down when demand
+[27:39] decreases, thus keeping the costs low
+[27:42] and as many customers happy as possible.
+[27:45] Monitoring and management are also much
+[27:46] more difficult because you have to split
+[27:49] all these tools between on-prem and the
+[27:51] cloud.
+[27:53] The three cloud principles, or tenets,
+[27:55] are usually called self-service,
+[27:57] scalability, and elasticity.
+[27:59] Self-service is self-explanatory. The
+[28:02] cloud services are supposed to be easy
+[28:04] to use, easy to deploy from a web portal
+[28:07] where anyone needed a service can
+[28:09] activate or purchase one without having
+[28:11] to be aware of the technical intricacies
+[28:13] and the hardware details involved.
+[28:16] Scalability is the ability of a system
+[28:17] to handle more workloads by adding more
+[28:20] resources, such as memory, CPU, or
+[28:22] storage. For example, if you have a
+[28:23] website uh that receives a lot of
+[28:25] visitors, you may need to scale up your
+[28:27] server by adding more RAM or CPU cores
+[28:30] or scale it out by adding more instances
+[28:32] or nodes to a server pool. Elasticity is
+[28:36] the ability of a system to add or remove
+[28:38] resources automatically and dynamically
+[28:40] based on the current load or demand. For
+[28:42] example, if you have a web application
+[28:45] that has unpredictable or seasonal
+[28:47] traffic patterns, elasticity is what you
+[28:49] need to adjust your resources according
+[28:51] to real-time needs. Now, as you can see,
+[28:54] scalability and elasticity are related
+[28:56] but slightly different concepts.
+[28:58] Scalability is about the ability to
+[29:00] increase your system's capacity, while
+[29:03] elasticity is about matching your
+[29:05] system's capacity to the demand.
+[29:08] Scalability is just a static ability,
+[29:11] while elasticity is a dynamic and
+[29:13] ideally an automatic process.
+[29:17] Configuration management or CM, it's a
+[29:20] way of making sure that your systems are
+[29:22] secure and consistent from the start and
+[29:24] throughout their life cycle.
+[29:26] Generally, you can use baselines for
+[29:28] disk images and configurations to deploy
+[29:30] your systems. A baseline is a
+[29:32] standardized, predefined list of
+[29:34] settings that you use to configure your
+[29:37] systems. For example, you can have a
+[29:38] baseline for the laptops that your
+[29:40] employees use to make sure they're all
+[29:42] up-to-date, that they're running the
+[29:43] same pre-approved software, that their
+[29:45] security settings are in sync, and
+[29:47] they're okay no matter how much users
+[29:48] try to tinker with them.
+[29:50] You could also have a completely
+[29:51] different baseline for web servers that
+[29:52] are running applications accessible over
+[29:54] the internet. Those would have to comply
+[29:56] with a completely different set of
+[29:57] security policies, and those security
+[29:59] policies are going to be implemented in
+[30:01] their configuration baseline.
+[30:02] Whenever you deploy a new web server or
+[30:04] a new employee needs to receive a
+[30:06] laptop, you already have the template
+[30:08] for the baseline with all the necessary
+[30:10] configurations that the device is
+[30:11] supposed to have.
+[30:13] You can also use predefined images, and
+[30:15] we're talking here about disk images or
+[30:17] OS images, basically files that
+[30:19] represent the entire set of
+[30:21] files and settings that a device is
+[30:23] going to run, including the operating
+[30:25] system. Uh you can create and deploy
+[30:26] images in three steps. First, you can
+[30:29] install the operating system and the
+[30:30] applications that you want on a
+[30:31] computer. You also configure the system
+[30:34] with the security settings and any other
+[30:36] settings that you need. You test the
+[30:38] system to make sure that it works as
+[30:39] expected, and this becomes your baseline
+[30:41] system.
+[30:42] Uh second, you use imaging software to
+[30:44] capture an image of your baseline
+[30:46] system's disk. This will include a copy
+[30:48] of all the files and consequently of all
+[30:50] the settings on that computer.
+[30:52] You store the image somewhere safe. You
+[30:54] should probably run some hashing
+[30:56] software on top of it, too, to ensure
+[30:58] integrity.
+[30:59] And third, you deploy the image to other
+[31:01] systems that you want to use. You may
+[31:03] have to do some additional
+[31:03] customization, such as giving them
+[31:05] different host names and IP addresses,
+[31:07] but the main configuration settings of
+[31:09] those systems are the same as the
+[31:10] baseline system. Using predefined
+[31:13] baseline images
+[31:14] makes your systems more secure because
+[31:16] you can be sure that they all have the
+[31:18] correct settings.
+[31:19] It also has saves you a lot of time and
+[31:22] money by making the deployment and the
+[31:24] maintenance much easier and faster. If a
+[31:26] system gets corrupted, you can simply
+[31:29] redeploy an image instead of spending
+[31:30] hours fixing it, disinfecting it from
+[31:32] malware, or reinstalling it from
+[31:34] scratch.
+[31:36] Using software tools to apply your
+[31:37] baselines to your systems requires
+[31:39] automation, which is great when you need
+[31:41] to manage a bunch of devices. You can
+[31:43] also automatically install or update
+[31:45] applications, OS features, OS settings
+[31:48] for specific groups or computers. One
+[31:50] example of many tools that you can use
+[31:51] for automation is Group Policy in
+[31:53] Windows. This is a feature of Windows
+[31:55] that lets you configure settings for
+[31:57] your computers. You can set up a Group
+[31:59] Policy setting once and have it apply to
+[32:01] all the computers in your domain. You
+[32:03] can also set up different Group Policy
+[32:05] settings for different groups of
+[32:06] computers. Just like the name says, you
+[32:08] could have groups for different
+[32:09] departments or groups for servers and
+[32:11] other groups for workstations, and so
+[32:13] on.
+[32:15] Change management. Now, don't confuse
+[32:17] change management, another CM, with
+[32:19] configuration management, as change
+[32:21] management is a way of making sure that
+[32:23] your systems stay secure and consistent
+[32:26] long after you've deployed them. So,
+[32:28] it's about avoiding downtime or
+[32:30] disruption problems caused by
+[32:32] unauthorized or unplanned changes.
+[32:35] Well, how do you do this? We begin with
+[32:37] a review step. We make sure that the
+[32:39] right people review and approve changes
+[32:41] before they are implemented. Ideally,
+[32:44] they also make sure that the changes are
+[32:45] tested first. This is important because
+[32:47] changes can sometimes have negative
+[32:49] consequences that can affect even other
+[32:50] systems. For example, an admin might
+[32:53] decide one day to close a port on a
+[32:55] firewall that they think it's it's not
+[32:57] being used and this would improve the
+[32:59] security posture, but they might not
+[33:01] know that they're breaking the
+[33:02] connection between an application's
+[33:04] front end and a database. Errors come up
+[33:06] in a completely different department and
+[33:09] until the problem is identified and
+[33:11] fixed, you waste a bunch of time and
+[33:13] resources just to get back to where you
+[33:15] were before that nasty configuration
+[33:17] change. Some changes can also affect the
+[33:19] confidentiality and integrity of your
+[33:21] systems, which together with
+[33:23] availability we just lost in the
+[33:24] previous example, are also part of the
+[33:27] CIA triad. For example, admins may get
+[33:30] overwhelmed by the requests for more
+[33:32] access from individual users. They may
+[33:34] decide one day to just give some users
+[33:36] more access so they would just stop
+[33:38] nagging them. Or God forbid, just give
+[33:40] everyone the same admin account saying,
+[33:42] "Use this one when you need to, but
+[33:44] don't tell anyone I gave it to you." So,
+[33:46] the users are happy, but your network is
+[33:48] less secure. This goes against the
+[33:50] principle of least privilege and
+[33:52] accountability and against common sense.
+[33:55] Of course, part of change management,
+[33:57] you need to document these changes so
+[33:59] that later on in the future anyone would
+[34:01] be able to determine why each individual
+[34:03] setting on each individual system is
+[34:06] there. And in an ideal world, we would
+[34:08] only make planned changes, so those that
+[34:12] happen in pre-approved maintenance
+[34:13] windows and we'd also have a rollback
+[34:16] plan in mind
+[34:18] just in case the change or the update
+[34:20] doesn't go well. You need to be able to
+[34:22] go back to the last known working state
+[34:24] of the system so that you don't impact
+[34:26] availability anymore and then perform
+[34:28] some more testing in an isolated
+[34:30] environment so that on a second
+[34:31] maintenance window, things would go
+[34:32] smoothly.
+[34:34] Many of the ideas and practices of
+[34:36] configuration and change management come
+[34:38] from ITIL, which is a set of documents
+[34:41] that describe the best practices for
+[34:43] managing IT systems. ITIL is about the
+[34:47] whole life cycle of systems from design
+[34:49] to retirement. And by the way, ITIL
+[34:52] stands for Information Technology
+[34:54] Infrastructure Library. If you can think
+[34:56] of a more generic term than this one,
+[34:58] well, I can't.
+[35:00] Now, uh if we don't want to introduce
+[35:02] any new risks when we update our
+[35:04] systems, we need to follow some steps
+[35:05] before and even after we make any
+[35:07] changes. The first step is to, well,
+[35:10] obviously request the change. This is
+[35:12] where we explain what we want to change
+[35:14] and why. It might sound trivial, but
+[35:16] it's important. We need this request to
+[35:17] be explicit and it should be stored in
+[35:19] the database. This way, we can keep
+[35:21] track of our request, usually in an
+[35:23] application, and see its status and
+[35:25] approval flow, and can also check back
+[35:27] on it in the future. The second step is
+[35:29] to review the change. This is where some
+[35:31] experts from different parts of the
+[35:32] [clears throat] organization will look
+[35:33] at your request and evaluate its impact
+[35:36] on everything. Productivity, security,
+[35:39] even the money it costs us,
+[35:41] downtime if necessary, and so on. They
+[35:43] will either approve or reject our
+[35:45] request or ask for more information or
+[35:47] testing. Sometimes they will meet in a
+[35:49] board called a CAB, which stands for
+[35:51] Change Advisory Board, to discuss our
+[35:54] request. Hopefully, you'll be invited
+[35:56] there, too. The third step is to approve
+[35:59] or reject the change. This is where the
+[36:01] experts will give us their final
+[36:02] decision and record it in the
+[36:03] documentation. If they approve our
+[36:05] request, they might also ask us to
+[36:07] create a plan to undo the change, a
+[36:09] rollback plan, if something goes wrong.
+[36:11] By the way, the rollback plan is
+[36:13] sometimes also called a backout plan.
+[36:15] The fourth step is to test the change.
+[36:18] This is where we try it out the change
+[36:21] on a server, a network segment that is
+[36:22] not used for production, or with a
+[36:24] limited set of users and applications
+[36:26] that are properly informed and trained
+[36:29] and know what they're part of a test and
+[36:30] what they should expect. This way we can
+[36:32] check if the change works as expected
+[36:34] and it doesn't make anybody angry if it
+[36:37] doesn't.
+[36:38] The fifth step is to schedule and
+[36:40] implement the change. This is where we
+[36:41] decide when and how to apply the change
+[36:43] to the production environment. We want
+[36:45] to minimize disruption to systems and
+[36:47] users, so we might choose a time when
+[36:49] the network is less busy, which usually
+[36:51] means at night.
+[36:52] We also have to have a rollback plan
+[36:54] ready just in case the change is a
+[36:57] disaster.
+[36:58] The sixth and final step is to document
+[37:00] the change. This is where we update the
+[37:01] configuration management documentation
+[37:03] to reflect the new state of the system.
+[37:05] This is very important because it helps
+[37:07] us keep track of the system's history
+[37:09] and its configuration so that if we ever
+[37:11] need to rebuild a system, we can use the
+[37:13] documentation to restore to the same
+[37:15] state as it was before. Versioning is
+[37:17] also important here. Just create a new
+[37:19] version of the documentation after you
+[37:21] make changes, don't just overwrite the
+[37:22] old one. You might need at some point to
+[37:25] compare some befores with some afters,
+[37:28] especially when things don't go as
+[37:30] expected.
+[37:31] So, these are the main steps of the
+[37:33] change management process. What it
+[37:34] doesn't really cover is emergency
+[37:37] changes. For example, if there's a cyber
+[37:39] attack and we need to quickly
+[37:40] reconfigure our network or firewalls or
+[37:42] we're facing a malware infection and we
+[37:44] need to isolate it. These situations do
+[37:47] not excuse you from documenting the
+[37:49] change. You still have to do it so that
+[37:51] the advisory board can review it later
+[37:53] and see if it did more damage than good.
+[37:55] And we can also use this information to
+[37:57] rebuild the systems later on.
+[37:59] Patches are fixes that vendors create to
+[38:02] remove bugs and security flaws from
+[38:04] their software.
+[38:06] We need to apply patches to all kind of
+[38:07] devices that have an operating system or
+[38:09] are running some some sort of software.
+[38:11] This includes not only computers and
+[38:13] servers, but also network devices like
+[38:15] routers, switches, firewalls, access
+[38:16] points, building access systems, CCTV
+[38:19] systems, printers, anything that runs
+[38:21] even a bit of code.
+[38:24] Speaking of anything that runs code,
+[38:26] even though I'm repeating myself, we
+[38:27] also need to consider embedded systems,
+[38:29] devices with a CPU and an operating
+[38:31] system, which are used for specific
+[38:33] purposes. Some examples are cameras,
+[38:36] cars, medical devices, anything that has
+[38:38] a name that starts with smart.
+[38:40] Generally, Internet of Things IoT
+[38:43] devices fall into this category as well.
+[38:46] These devices can also have
+[38:47] vulnerabilities that need patches. For
+[38:48] example, in 2016, there was a huge
+[38:51] attack that blocked many websites by
+[38:53] overwhelming the DNS servers. The
+[38:55] attackers used a malware called Mirai
+[38:58] to infect and control IoT devices like
+[39:02] IP cameras, baby monitors, and printers.
+[39:05] They used these devices to send a
+[39:07] gazillion of DNS requests to the DNS
+[39:10] servers, making them crash or simply not
+[39:13] be able to execute legitimate requests.
+[39:15] You might think, what kind of a powerful
+[39:16] attack can you conduct with a baby
+[39:18] monitor? Well, not a very complicated
+[39:21] one, but if you take control of a
+[39:22] million of them, then you have a pretty
+[39:24] powerful army. And all you need them to
+[39:27] do is to make them send DNS requests,
+[39:29] which is something absolutely any single
+[39:30] device that connects to the Internet is
+[39:33] able to do. So, we need to patch these
+[39:35] devices, but many people don't, right?
+[39:37] Don't do that. Even worse, many vendors
+[39:40] don't even provide the patches for their
+[39:42] devices, or they don't allow you to
+[39:44] patch them by yourself.
+[39:47] Lastly, it's probably not even worth
+[39:48] mentioning mobile devices like
+[39:50] smartphones and tablets because those
+[39:52] are basically complete computers
+[39:53] nowadays. I wouldn't even put them in a
+[39:56] separate category. That's why we have
+[39:58] nowadays dedicated solutions like MDM,
+[40:00] mobile device management software, to
+[40:01] deploy mass patches to mobile devices.
+[40:04] Oh, and one more thing here. When we're
+[40:06] saying that we're patching computers and
+[40:07] servers, don't forget about cloud
+[40:09] instances, virtual machines, virtual
+[40:11] desktops. Those are real computers as
+[40:13] well because they are running software,
+[40:15] and the vulnerabilities are just as real
+[40:18] in any environment where a vulnerable
+[40:21] code is running.
+[40:23] Patches are only useful if we apply
+[40:25] them. This may sound dumb, but many
+[40:27] security incidents happen because
+[40:29] companies don't have a patch management
+[40:30] policy. Most major breaches that you
+[40:33] hear about in the news happen because
+[40:34] some malware exploited some
+[40:37] vulnerability which wasn't even a
+[40:39] zero-day. Most breaches work simply
+[40:42] because hackers exploit known
+[40:44] vulnerabilities which more often than
+[40:45] not have a patch or have had a patch for
+[40:49] a while, maybe for months, but companies
+[40:51] don't patch their systems. So, that's
+[40:53] why we need patch management. What does
+[40:55] patch management look like? Well, first
+[40:57] we evaluate the patches. When vendors
+[40:59] release patches, admins should check
+[41:01] them to see if they are relevant for
+[41:02] their systems. Maybe you're not running
+[41:04] or using that specific functionality or
+[41:06] use case that was patched.
+[41:08] Afterwards, test patches. Whenever
+[41:10] possible, admins should test those
+[41:12] patches on a separate system that is not
+[41:14] used for production, so that if the
+[41:16] patch causes any problems, the worst
+[41:18] thing that can happen is that one system
+[41:20] won't work, not the entire company.
+[41:22] Also, this way you don't have to worry
+[41:24] so much about having to roll back due to
+[41:26] unforeseen consequences.
+[41:28] Then someone should approve the patches.
+[41:29] This is where the change management
+[41:31] process, which we explained earlier in
+[41:32] this discussion, happens. Finally, after
+[41:35] somebody says, "I'll allow it." you
+[41:38] deploy the patches. Many companies use
+[41:40] automatic tools to deploy the patches.
+[41:42] Sometimes the users don't even know that
+[41:43] patching is happening in the background
+[41:45] except that the fan on their laptop
+[41:47] starts blowing up.
+[41:49] Finally, after deploying patches, admins
+[41:51] should test and audit those systems to
+[41:54] make sure that they are patched,
+[41:56] especially if deployment was done
+[41:58] automatically. Now, of course, many
+[41:59] deployment tools can also audit systems
+[42:01] so that they give you a successful
+[42:04] versus failed report right after the
+[42:06] deployment. Many vulnerability
+[42:08] assessment tools can check systems to
+[42:09] make sure that they have the right
+[42:11] patches installed.
+[42:13] Finally, let's talk about vulnerability
+[42:15] management. Now, patch management is a
+[42:17] process that ultimately helps us avoid
+[42:19] running around with vulnerabilities. So,
+[42:21] basically, patch management is a smaller
+[42:23] part of a bigger process called the
+[42:25] vulnerability management process.
+[42:27] Sometimes, different people or groups
+[42:29] are in charge of these two programs. One
+[42:31] group makes sure that the systems are
+[42:33] patched, and another person or group
+[42:34] makes sure that the systems are not
+[42:36] vulnerable. This way, they can check
+[42:38] each other's work and prevent mistakes.
+[42:40] Vulnerability scanners are the tools
+[42:42] that check systems and networks for
+[42:44] known security problems. Hackers also
+[42:46] use them to find weaknesses, such as
+[42:48] patches that are missing or passwords
+[42:50] that are easy to guess. And after they
+[42:52] find the weaknesses, they attack the
+[42:54] system and cause damage. Admins in
+[42:56] companies can use the same kinds of
+[42:57] vulnerability scanners to find
+[42:59] vulnerabilities on their network, but
+[43:00] their goal is to find and fix the
+[43:02] vulnerabilities before the hackers do.
+[43:04] Scanners return reports that show any
+[43:06] vulnerabilities they find. The reports
+[43:08] may suggest applying patches or changing
+[43:10] some settings to make the systems more
+[43:12] secure, sometimes even completely
+[43:14] disabling services. Obviously, just
+[43:17] suggesting patches doesn't make the
+[43:19] vulnerabilities go away. Administrators
+[43:21] actually need to take action and apply
+[43:23] the patches. But, sometimes, it might
+[43:25] not be possible, or management might not
+[43:27] be willing to patch a system. For
+[43:29] example, if a patch that fixes a small
+[43:30] security problem breaks an application
+[43:32] completely or the way it integrates with
+[43:35] other apps, management might choose not
+[43:37] to use the patch until the developers
+[43:39] fix the problem. In that case, the
+[43:41] vulnerability scanner will keep
+[43:43] reporting the vulnerability even though
+[43:45] the company has dealt with the risk,
+[43:47] well, at least on paper. So, if
+[43:49] management can decide to live with a
+[43:51] risk instead of fixing it, it means that
+[43:53] we have residual risk. Basically,
+[43:55] residual risk is any risk that is left
+[43:58] after all decisions regarding patches
+[44:00] and security controls have been
+[44:01] implemented. Any losses that happen from
+[44:04] residual risk are the responsibility of
+[44:06] management because they agreed with it
+[44:09] and that's not such a bad thing as it
+[44:11] may sound because
+[44:13] security can only take us so far.
+[44:15] Actually, it's a process after all, a
+[44:17] never-ending process and at some point
+[44:19] you can you either realize that you you
+[44:22] cannot protect against unknown threats
+[44:25] and there isn't much you can do about it
+[44:28] or you can just realize that any
+[44:29] additional security controls or measure
+[44:31] costs more
+[44:33] or starts to cost more than the assets
+[44:35] you're trying to protect which obviously
+[44:37] makes no sense. You should never spend
+[44:39] more to protect an item than the item is
+[44:41] actually worth.
+[44:43] On the other hand, a company that never
+[44:44] does vulnerability scans will probably
+[44:47] have many vulnerabilities and these
+[44:49] vulnerabilities will stay unknown and
+[44:51] management will not have the chance to
+[44:52] decide which vulnerabilities to fix and
+[44:55] which ones to live with. That is the
+[44:58] worst way
+[44:59] in which you can feel secure.
+[45:04] >> [music]

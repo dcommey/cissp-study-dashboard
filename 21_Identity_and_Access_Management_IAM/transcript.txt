@@ -1,0 +1,1300 @@
+[00:08] IAM stands for identity and access
+[00:11] management and it's the most important
+[00:13] set of policies and technologies that
+[00:15] make sure that the right users have the
+[00:18] right access to the right resources.
+[00:22] So, that's it. We're done here. Very
+[00:24] short chapter. See you next time.
+[00:29] Now, you're not getting away so easily.
+[00:32] IAM is often matched with AAA or IAAA,
+[00:36] identification, authentication,
+[00:39] authorization, and accountability. And
+[00:41] not just for users, but also for
+[00:43] computers, and even for software that's
+[00:46] needs access to something, like for
+[00:48] example, a front-end trying to access a
+[00:50] back-end or an application attempting to
+[00:52] talk to another API.
+[00:54] Now, nowadays, usually we encounter just
+[00:57] a term AAA, but in practice, it all
+[01:00] starts with identification as well.
+[01:02] Identification is the process for
+[01:04] presenting or claiming a specific
+[01:07] identity, like your username, your user
+[01:10] ID, a user number, an email address, or
+[01:13] even your real name. When you claim that
+[01:16] you are a specific entity, even before
+[01:19] you can actually prove it, that's
+[01:21] identification.
+[01:22] So, the core functions of IAM start with
+[01:25] first, identity management. This is
+[01:27] where we do all the tasks like creating,
+[01:31] storing, and managing identity
+[01:33] information, like the actual user IDs
+[01:35] and and the usernames, their roles, what
+[01:38] groups they belong to, what permissions
+[01:41] they have or they should have, what
+[01:42] credentials they are going to use to log
+[01:44] in, and so on.
+[01:46] The next one is authentication. That's
+[01:48] the process of actually verifying the
+[01:50] identity by checking the password, a
+[01:52] one-time token, biometrics, multi-factor
+[01:56] authentication by any other means,
+[01:57] whatever we have configured to prove
+[01:59] identity.
+[02:00] Next, authorization. This comes after
+[02:03] authentication, so at this point, I know
+[02:04] who you are,
+[02:06] but I now have to decide if I'm going to
+[02:08] grant or deny you access to resources
+[02:12] based on what permissions you should
+[02:13] have. We can do this by checking access
+[02:16] control lists, ACLs, checking a a a role
+[02:21] membership, group membership, the groups
+[02:23] the users belong to, or just global
+[02:26] company policies.
+[02:27] And finally, we have access control,
+[02:30] where we enforce access to resources by
+[02:32] using logical or physical controls.
+[02:35] Now, on top of all this, there's also a
+[02:37] reports and monitoring part to all this.
+[02:40] Obviously, this is about generating and
+[02:42] analyzing data regarding the usage
+[02:45] patterns of the resources, using logs,
+[02:48] alerts, audit logs, mainly.
+[02:51] Now, a very simple concept that we
+[02:52] should get out of the way is the concept
+[02:55] of an asset.
+[02:57] Assets are the valuable things that a
+[02:59] company owns or uses.
+[03:01] An asset can be pure information, it can
+[03:03] be a system, a device,
+[03:05] uh the entire building even, and the
+[03:06] people in it, of course.
+[03:08] Assets are the things you rely on for
+[03:11] your business to work. Controlling
+[03:13] access to assets can be done by using
+[03:15] physical or logical security controls.
+[03:18] Now, physical security controls, as you
+[03:19] know, are the ones that you can touch,
+[03:21] locks, fences, gates, guards, cameras.
+[03:24] Logical security controls are the ones
+[03:25] that you cannot touch, such as
+[03:27] passwords, encryption, firewalls,
+[03:29] antivirus software.
+[03:30] Physical security controls protect
+[03:32] assets by controlling the environment,
+[03:35] while logical security controls protect
+[03:37] assets by controlling access to data.
+[03:41] Now, the CIA triad is a model that
+[03:43] defines the three main goals of
+[03:45] information security. You know them,
+[03:47] they're confidentiality, integrity, and
+[03:50] availability. Now, consequently, these
+[03:52] are also the different types of losses
+[03:55] that a company wants to prevent or at
+[03:58] least minimize as much as possible. Long
+[04:01] story short, confidentiality means
+[04:03] keeping the company data private and
+[04:04] secret from unauthorized access. For
+[04:07] this, we use encryption and access
+[04:08] controls.
+[04:10] Integrity means maintaining the accuracy
+[04:12] and consistency of the data. We need the
+[04:15] data to be trustworthy. We need to know
+[04:16] that it hasn't been modified without
+[04:19] authorization. For this, we have access
+[04:21] controls, again, and methods for
+[04:23] detecting unauthorized changes, like
+[04:25] digital signatures, hashes, or even
+[04:27] backups.
+[04:29] Availability means the data is
+[04:31] accessible and usable when you actually
+[04:33] need it. You might have the most secure
+[04:35] server in the world, completely
+[04:37] disconnected from any network, very deep
+[04:40] underground, in concrete, with no access
+[04:43] to it whatsoever. Nobody has access to
+[04:45] it. It's 100% confidential. Nobody can
+[04:48] access it. Integrity is through the
+[04:51] roof. Nobody can modify it, but neither
+[04:54] can you. So, you just lost availability.
+[04:57] Sometimes, you might see the CIA triad
+[04:59] as a triangle as a way of suggesting
+[05:01] that you uh when you're trying to
+[05:03] position yourself closer to one of the
+[05:06] goals, you might end up giving up on the
+[05:09] other two. And it makes a lot of sense.
+[05:12] The more easily accessible a system is,
+[05:15] the less secure it might be. The more
+[05:17] security obstacles and hurdles you have
+[05:19] to overcome to access it, the less you
+[05:22] get on the usability and availability
+[05:24] score, and the more annoyed your users
+[05:26] will be. So, it needs to be a and a
+[05:29] constant balance here. You cannot have
+[05:31] them all at maximum at the same time.
+[05:34] Now, finally, there's also an outlier
+[05:37] here, non-repudiation.
+[05:39] This is one in one often associated with
+[05:41] the CIA triad because often enough, it
+[05:44] derives from the others.
+[05:47] Non-repudiation means that you are
+[05:49] unable to deny having done something.
+[05:52] So, it's strictly connected to
+[05:54] accountability, which is also very
+[05:55] important for any security policy.
+[05:57] If you do your homework right, then you
+[06:00] have strict identities, unique access
+[06:02] and encryption keys, public key
+[06:04] authentication, digital signatures in
+[06:06] place,
+[06:07] then you automatically get
+[06:09] non-repudiation.
+[06:11] If you can prove with 100% certainty who
+[06:14] did what, then there's no more room for
+[06:17] lies.
+[06:19] Subjects and objects are the entities
+[06:20] involved in access control.
+[06:22] Specifically, subjects always want
+[06:24] access to objects, most likely to
+[06:26] retrieve some data from them.
+[06:28] So, subjects can be anything that can
+[06:30] access a resource, a user, a process on
+[06:32] a computer,
+[06:33] a service, or generically speaking,
+[06:35] computers. And when I say generically
+[06:37] speaking, it's because uh when it comes
+[06:39] to computers, computers don't just
+[06:41] access data by themselves, but there's a
+[06:43] process, a service, an app, or some
+[06:45] piece of code on that computer that's
+[06:48] the actual thing that accesses data,
+[06:50] okay? So, subjects can also modify
+[06:52] objects if they have the permissions to
+[06:54] do so. IAM also needs to define the
+[06:56] permissions that subjects have on
+[06:58] objects. Are they able to just read the
+[07:01] information in there? Are they able to
+[07:03] change it? Can they replace it or even
+[07:05] delete it entirely?
+[07:07] Objects, on the other hand, are the
+[07:09] passive entities that provide data to
+[07:11] the subject, or the things that get
+[07:13] accessed and queried for data. Objects
+[07:15] can be anything that hold data,
+[07:17] uh such as a simple file, a database, a
+[07:20] service on a computer accessible through
+[07:22] a protocol, a process, an API endpoint.
+[07:26] Uh an object can even be something
+[07:28] physical that you interact with, like a
+[07:30] like a locked door or a printer.
+[07:32] Sometimes subjects and objects can also
+[07:34] switch roles. Sometimes they may be
+[07:36] requesting information, and other times
+[07:38] they might be providing information. For
+[07:40] example, web application can be an
+[07:42] object when a user asks for a web page
+[07:45] and the subject when it needs to access
+[07:47] a database to retrieve information that
+[07:50] it needs to present back to the user.
+[07:52] Of course, before we get to the actual
+[07:54] interaction between subjects and
+[07:56] objects, we need to pass through the
+[07:57] process of authentication. And before
+[07:59] that process can begin, we need valid
+[08:01] identities. So, creating identities
+[08:04] involves a couple of steps.
+[08:06] First, we have registration. Means
+[08:09] creating an account for the user. That's
+[08:11] when you or the user chooses a username,
+[08:13] a password, you help them set up their
+[08:16] MFA, and so on.
+[08:18] Proofing, that's the process of checking
+[08:20] the user's identity against some other
+[08:22] trusted source like a government-issued
+[08:24] ID,
+[08:25] an external database, a background
+[08:27] check, or by contacting a a third-party
+[08:30] service.
+[08:31] Proofing can be done in person on
+[08:33] online. For example, if the user wants
+[08:35] to open an online savings account, the
+[08:37] bank will ask them some questions that
+[08:39] only they should know based on their
+[08:40] history with the bank and their other
+[08:42] accounts. Finally, establishment of
+[08:45] identity, that's just a fancy name for
+[08:47] authentication. And it's the process of
+[08:49] confirming that the user is the same
+[08:51] person who registered and proved their
+[08:53] identity. Now, this is done by checking
+[08:55] a password or biometrics. Security
+[08:57] questions can also be used here like the
+[08:59] ones that users choose for their
+[09:01] password reset process. But my advice is
+[09:04] to stay away from them as the answers
+[09:05] may be easily guessed or found online.
+[09:09] Let's talk a bit about authentication
+[09:10] factors. Now, authentication factors are
+[09:13] the types of credentials that we use to
+[09:16] verify the identity of a user.
+[09:19] There are three primary categories,
+[09:21] careful, categories of authentication
+[09:23] factors. Something you know, something
+[09:26] you have, and something you are. Now,
+[09:29] something you know is exactly what it
+[09:30] sounds like, something in your brain,
+[09:32] your head, your memory, your human
+[09:34] memory that is. For example, a password,
+[09:37] a PIN, a passphrase, or an answer to a
+[09:39] security question.
+[09:41] This is the worst and the most common
+[09:43] type of authentication factor, but it's
+[09:46] really convenient and easy to implement.
+[09:48] Needless to say that passwords can be
+[09:50] easily guessed, stolen, written down in
+[09:52] bad places, sometimes even completely
+[09:55] forgotten.
+[09:56] Something you have, the next category,
+[09:59] that is a physical device, let's say, a
+[10:01] smart card, a hardware token,
+[10:04] an application perhaps that generates
+[10:05] tokens on your phone, or some sort of a
+[10:07] USB device.
+[10:09] This is a stronger type of
+[10:10] authentication factor as it needs the
+[10:12] user to actually have the specific item
+[10:14] or device. Now, obviously, something you
+[10:16] have is something that you can have
+[10:17] stolen, of course, not to mention lost
+[10:20] or damaged. If it's a physical item, you
+[10:22] might sit on it, you might crack your
+[10:24] phone screen, you might forget the token
+[10:27] device in your jeans and throw them in
+[10:28] the washing machine, and so on.
+[10:31] So, here we find things such as smart
+[10:33] cards. Those are cards that with an
+[10:35] embedded chip that store information
+[10:36] about the user, sometimes even
+[10:38] certificates that belong to the user.
+[10:41] They can also be used for identification
+[10:43] and authentication, and afterwards, you
+[10:45] can use them for encryption and digital
+[10:46] signatures.
+[10:48] Uh users insert the smart card into a
+[10:50] reader, and they also need to enter
+[10:52] another authentication factor such as a
+[10:54] PIN or something they know.
+[10:56] Don't use just smart cards as they can
+[10:59] be shared or swapped between users.
+[11:02] Well, PINs can be swapped, too, but at
+[11:04] least you're not making it easy on the
+[11:05] on the rebels.
+[11:07] Next, a hardware token. Uh those are
+[11:09] devices that generate passwords, usually
+[11:11] numerical passwords. So, we usually call
+[11:14] them OTP, that's one-time password
+[11:17] generators, as they generate passwords
+[11:20] that are valid for only one use, only
+[11:23] once, or just for a short time.
+[11:26] Uh here, for example, we have two
+[11:27] categories. We have HOTP, which stands
+[11:30] for HMAC-OTP,
+[11:33] uh which creates a one-time password
+[11:35] based on a hash. That's the H in front
+[11:37] of it. A hash function and the counter.
+[11:40] And as the counter increases, we know
+[11:42] exactly what the next password is going
+[11:44] to be.
+[11:45] Another category is TOTP, time-based
+[11:47] OTP. Creates a one-time password based
+[11:50] on a hash function and the timestamp.
+[11:52] Now, these are the ones you're probably
+[11:54] more familiar with as you find them in
+[11:56] authentication apps. Remember those
+[11:59] codes that expire in 30 seconds or a
+[12:01] minute? Those are TOTPs. By the way, you
+[12:04] did not hear this from me, but they
+[12:05] don't actually expire in 30 seconds.
+[12:07] Most implementations allow you 1 to 2
+[12:10] minutes for each code to be used.
+[12:13] That's most likely because the actual
+[12:15] minute number is the input for the
+[12:19] one-time password when the hash is
+[12:20] calculated, not the seconds.
+[12:23] Another category here is something you
+[12:26] are. That's a biometric characteristic
+[12:29] that is unique to you. That's a
+[12:30] fingerprint, a face scan, your retina,
+[12:33] your iris, or even the veins in your
+[12:36] palm. Yeah. This is one of the strongest
+[12:39] types of authentication factors as it
+[12:41] relies on the unique and unchangeable
+[12:44] features of you as a person.
+[12:47] It's also not something that you can
+[12:48] forget, lose, or have it stolen from
+[12:50] you.
+[12:51] Still, it can be expensive to implement,
+[12:53] and some easily bothered people consider
+[12:56] these methods invasive.
+[12:58] From a technical standpoint, they can
+[13:00] also be inaccurate sometimes because
+[13:02] fingerprint scans can be affected by
+[13:03] dirt. They depend on the last time you
+[13:06] you cut your fingers, and you cannot
+[13:08] wear gloves. Face scans can be affected
+[13:11] by lighting, angle, expression, when you
+[13:14] last shaved, or accessories.
+[13:17] Uh retina scans can be uncomfortable,
+[13:19] and they can reveal medical conditions,
+[13:21] hence the intrusion concerns.
+[13:23] Iris scans can be fooled by high-quality
+[13:26] images, and they can be affected by
+[13:29] glasses, contact lenses, or even eye
+[13:31] diseases.
+[13:33] 3D face scans, like the one Apple uses
+[13:36] with Face ID, are better since they
+[13:38] don't depend on lighting conditions.
+[13:40] Ever notice how Face ID works in
+[13:42] complete darkness?
+[13:44] And are much harder to fake since they
+[13:46] scan the 3D shape of your face.
+[13:49] Finally, palm scans can be affected by
+[13:51] temperature, humidity, sweaty palms, or
+[13:54] skin conditions.
+[13:55] So, the quality of biometric devices is
+[13:58] a measure of how often they return
+[14:00] errors, just like every other device out
+[14:02] there, actually. If it fails often, it's
+[14:04] crap, okay?
+[14:06] Still, we have two types of failures. We
+[14:09] have FAR, that is the false acceptance
+[14:12] rate.
+[14:14] Really self-explanatory. It's a
+[14:15] probability of granting access to an
+[14:18] unauthorized person. So, this happens
+[14:20] when you mistakenly accept someone who
+[14:23] should be denied access.
+[14:25] Another metric is FRR, the false
+[14:27] rejection rate. Just by hearing the
+[14:29] name, this makes me feel sorry.
+[14:32] It's how often
+[14:34] you get rejected, right? How often you
+[14:36] deny access to an authorized person.
+[14:38] This happens when you mistakenly reject
+[14:40] someone who should have passed
+[14:42] authentication.
+[14:43] Just like rejection in relationships.
+[14:45] CER, that's the crossover error rate,
+[14:49] also known as the equal error rate,
+[14:51] sometimes found as ERR,
+[14:54] and is the point on the axis of accuracy
+[14:57] where the false acceptance rate and the
+[14:59] false rejection rate are equal. So, it's
+[15:02] the
+[15:03] sweet spot of a biometric device. The
+[15:06] CER is what we use to compare the
+[15:08] accuracy of different biometric devices,
+[15:10] how good they are. The lower the CER,
+[15:13] the better. Careful, this is not the
+[15:14] point where the device is perfect, but
+[15:16] it's the point where both types of
+[15:18] errors are minimized without one
+[15:21] exceeding the other.
+[15:23] Now, having said this, when you hear the
+[15:25] term single-factor authentication, it
+[15:26] means that we're only using one type of
+[15:28] authentication factors, while
+[15:30] multi-factor authentication uses two or
+[15:32] more types.
+[15:33] They need to be different types, not
+[15:36] just different authentication methods. A
+[15:37] password and a PIN does not mean MFA
+[15:41] because they belong in the same category
+[15:42] of something you know. Now, in addition
+[15:45] to the three primary types of
+[15:46] authentication factors,
+[15:48] there are other attributes such as where
+[15:50] you are, how your computer is
+[15:52] configured, what updates and what
+[15:54] software you have installed on it, and
+[15:56] even what exactly are you trying to do
+[15:58] by gaining access. Other attributes can
+[16:01] identify the user based on their
+[16:02] location, the time of day, the device
+[16:05] they're using, their behavior. Uh, for
+[16:07] example, user may need to be in a
+[16:09] certain place, use a certain authorized
+[16:11] device, and perform only a set of
+[16:13] pre-approved actions to access a system.
+[16:17] One more thing here. Uh, a valid method
+[16:19] of 2FA is to send a unique code to the
+[16:22] user using a mobile application, push
+[16:24] message, an SMS, or even over email. You
+[16:27] might want to know that the SMS method
+[16:29] is slowly being deprecated as SMS
+[16:32] messages can be displayed on the lock
+[16:35] screens of devices without them being
+[16:37] unlocked and can be redirected or
+[16:39] intercepted by attackers who can
+[16:41] convince the mobile operator to transfer
+[16:43] the user's phone uh, to another device.
+[16:46] The phone number to another device. So,
+[16:47] it's it's recommended to use other
+[16:49] methods of 2FA other than SMS that are
+[16:51] more secure and reliable such as
+[16:53] authentication authenticator apps
+[16:56] uh, like Microsoft authenticator, Google
+[16:58] authenticator, Authy, or anything
+[16:59] similar,
+[17:01] email challenges, or biometric factors.
+[17:04] And since you might be asked about this
+[17:06] as well, you also sometimes find the
+[17:08] term 2SV, that's two-step verification.
+[17:12] In general, people are not nitpicking
+[17:14] over the terminology and use 2SV and 2FA
+[17:18] interchangeably, but if you really want
+[17:20] to know this, 2SV is the more loose
+[17:23] variant of 2FA.
+[17:25] Since while 2FA or MFA requires your
+[17:28] factors to be distinct from different
+[17:29] categories, 2SV does not. So, any dumb
+[17:33] authentication system that asks you for
+[17:35] a password and a PIN, for example, can
+[17:37] be considered a purely 2SV example.
+[17:41] Also, this means that from a logic
+[17:42] perspective, any 2FA system is also a
+[17:45] 2SV system, but not vice versa.
+[17:48] Again, remember that the two terms are
+[17:51] loosely used interchangeably.
+[17:54] Passwords.
+[17:55] Now, passwords have been at the core of
+[17:57] everything that includes the word
+[17:58] security ever since security was
+[18:00] invented. Even even before we had
+[18:02] computers. Now, passwords are typically
+[18:04] static, so they don't change unless the
+[18:07] user instructed to do so.
+[18:09] We already said that passwords are bad
+[18:11] and they are bad because users choose
+[18:13] passwords that are easy to remember, but
+[18:15] they're also easy to guess.
+[18:17] Sometimes they even write them down,
+[18:18] they share them, or they forget their
+[18:20] passwords. Also, passwords are not
+[18:22] always transmitted or stored securely.
+[18:25] Sometimes this happens in clear text or
+[18:27] they are encrypted with weak algorithms,
+[18:29] easily exposing them. Passphrases. Those
+[18:32] are strings of characters that look like
+[18:35] sentences or phrases, hence the term.
+[18:38] A passphrase can be considered a
+[18:41] password too. Passphrases are easily
+[18:44] remembered because they hold special
+[18:45] meaning, but they're tough to crack with
+[18:47] brute force or dictionary attacks
+[18:49] because they are usually much longer
+[18:51] than passwords. One example of a
+[18:52] passphrase would be, "I enjoy studying
+[18:54] with certified breakfast." Okay, lots of
+[18:56] characters, very long password, easy to
+[18:58] remember, it's a passphrase.
+[19:00] PINs are just strings of numbers, very
+[19:03] similar to passwords, but if that's even
+[19:05] possible, even worse than passwords.
+[19:07] They are much shorter, which makes them
+[19:09] easier to crack. So, we use them in
+[19:11] combination with other factors.
+[19:13] Password policies are the rules that
+[19:15] companies use to enforce the use of
+[19:17] passwords by users. Some things that you
+[19:19] might find in a password policy are the
+[19:22] maximum age, that's how long can a user
+[19:24] keep using the same password, also known
+[19:26] as password expiration.
+[19:28] Normally, this was used for a long time
+[19:30] to prevent password reuse or compromise,
+[19:33] but more recently the industry has
+[19:35] become a bit divided on this topic. Uh
+[19:37] since some vendors proved that forcing
+[19:40] users to change their passwords is
+[19:42] actually worse from a security
+[19:44] perspective as users will keep trying to
+[19:46] use passwords that are easy to remember,
+[19:49] and even when they change them, any new
+[19:51] password that user generate on their own
+[19:54] usually follow a pattern like changing
+[19:56] the just a letter or a number with the
+[19:59] year with the month of the of the year
+[20:02] when the uh when the password expiration
+[20:04] happens.
+[20:05] And we don't like patterns in security
+[20:07] simply because attackers enjoy patterns
+[20:10] very much. That's exactly what they feed
+[20:13] on. Another one is password complexity,
+[20:15] that's how many character types your
+[20:17] passwords must include such as
+[20:19] lowercase, uppercase letters, numbers,
+[20:21] special characters. The more you have,
+[20:23] the longer it takes to break it.
+[20:25] Password length, the minimum and maximum
+[20:27] number of characters that passwords must
+[20:28] have.
+[20:30] Minimum age, when can users change their
+[20:32] passwords again? To prevent password
+[20:34] cycling or facilitating bypassing them.
+[20:37] Password history, the number of previous
+[20:39] passwords that users cannot reuse, maybe
+[20:43] the last five passwords or so to prevent
+[20:45] again password reuse. This is where
+[20:47] those patterns emerge. Password history
+[20:50] combined with minimum age are meant to
+[20:52] avoid attempt at rapidly cycling through
+[20:55] three or so passwords depending on the
+[20:57] length of the history just to reach back
+[20:59] to the original password. Just by
+[21:01] bypassing this way the entire password
+[21:04] refresh policy completely. There's also
+[21:06] a trend called passwordless
+[21:08] authentication, which is a way of
+[21:09] verifying the identity of a user without
+[21:11] using a password. This means that we'll
+[21:13] use other technologies instead, such as
+[21:15] biometric, authenticator apps like
+[21:17] Microsoft Authenticator, Cisco Duo,
+[21:20] Okta,
+[21:21] email challenges, hardware tokens, and
+[21:23] so on. Passwordless authentication can
+[21:25] be used in physical or logical access
+[21:27] controls. For example, many smartphones
+[21:29] and tablets use biometric
+[21:30] authentication, such as facial
+[21:31] recognition or fingerprint scanning to
+[21:33] unlock the device
+[21:35] or access an application without a
+[21:36] password. Yes, that is also a type of
+[21:39] passwordless authentication. Never
+[21:40] thought of that, huh?
+[21:42] Many websites use authenticator apps and
+[21:44] email challenges to send users a code or
+[21:47] a challenge that users need to enter
+[21:50] or confirm to access their account
+[21:51] without ever asking you for a password.
+[21:54] Have you ever found about a website that
+[21:56] simply lets you enter your email address
+[21:59] and then asks you enter the code we sent
+[22:01] you to that email address and that's it,
+[22:03] no other password? That's another method
+[22:05] of passwordless authentication as well.
+[22:08] Basically, you're authenticating by
+[22:09] proving that you are the owner of the
+[22:11] email address that you you used to
+[22:13] register on that website.
+[22:16] Apart from users, there's also the
+[22:17] concept of device authentication. This
+[22:19] is where we are verifying the identity
+[22:21] and the authorization of a device before
+[22:24] allowing it access to the network. Note
+[22:26] that we are checking the device, not the
+[22:28] user. Any user could be using that
+[22:30] device
+[22:31] and validating the user is an entirely
+[22:33] different process.
+[22:35] Now, we can perform device
+[22:36] authentication using a number of
+[22:38] methods. Obviously, we cannot ask
+[22:39] computer if they remember a password, as
+[22:41] usually they do
+[22:43] without much hassle,
+[22:44] but we can use some other,
+[22:47] let's say, interrogation techniques,
+[22:49] such as
+[22:50] uh device fingerprinting. This is a set
+[22:52] of unique attributes of a single device,
+[22:54] like its operating system, the set of
+[22:57] hardware components, the signature of a
+[22:59] digital or hardware component, or the
+[23:00] presence of a specific certificate on
+[23:03] that computer. Usually, computers don't
+[23:05] just authenticate by themselves, even
+[23:07] though we have specific scenarios for
+[23:08] when that happens, too.
+[23:10] But, normally, users are the ones who
+[23:12] register their devices with the company
+[23:14] and associate them with their user
+[23:16] accounts. When the user logs on from the
+[23:18] device, the authentication checks not
+[23:20] only the user's identity, but also
+[23:22] verifies if the device is accepted, as
+[23:24] well. Another one is context-aware
+[23:26] authentication. This method uses the
+[23:29] contextual information of a device, such
+[23:30] as the location, the time zone, the
+[23:33] network the device is connected to, like
+[23:35] a VPN versus being in the office,
+[23:37] and its behavior. What exactly are you
+[23:39] trying to do with that device?
+[23:41] Finally, there's 802.1X authentication,
+[23:44] the most common method and protocol for
+[23:47] port-based or wireless authentication.
+[23:50] When the user connects to the network
+[23:51] using the device, the authentication
+[23:53] system verifies the user's and the
+[23:55] device's credentials with an
+[23:57] authentication server, and only after
+[23:59] they both pass authentication, it opens
+[24:02] up the network port or installs a
+[24:04] downloadable access list to it in order
+[24:06] to provide uh network access.
+[24:08] Service authentication. Now, service
+[24:11] authentication is another interesting
+[24:12] topic, and
+[24:14] is the process of verifying the identity
+[24:17] of a service or of an application that
+[24:20] is trying to access resources on a
+[24:22] network.
+[24:23] Now, services can use usernames and
+[24:25] password combinations to authenticate
+[24:26] themselves, just like regular users do,
+[24:29] human users do.
+[24:31] However, instead of creating an account
+[24:34] for a person,
+[24:35] an administrator creates an account for
+[24:37] a service or an application. And
+[24:39] usually, that one is called a service
+[24:42] account. Let me give an example. Let's
+[24:44] say you have some tool you just bought
+[24:46] that monitors your email server for spam
+[24:49] or malware.
+[24:50] This tool needs to scan all the emails
+[24:53] in your server, so it needs a high level
+[24:55] of access.
+[24:56] How do you grant this access? Well, you
+[24:58] create a service account for this tool
+[25:00] and assign it the appropriate
+[25:01] privileges. Now, this way the tool can
+[25:03] authenticate itself to the email server
+[25:06] using the service account credentials
+[25:08] and still perform its tasks.
+[25:10] It's also a good practice when designing
+[25:11] service accounts to design them with the
+[25:13] appropriate privileges, of course, but
+[25:15] also to deny them from being used as
+[25:18] user accounts.
+[25:19] In Linux, for example,
+[25:21] you can just disable the command shell
+[25:23] for a service account so that an
+[25:24] application can use it, but a regular
+[25:27] user or an attacker can never actually
+[25:31] log in with a valid password as that
+[25:33] service account and start executing
+[25:35] privileged commands.
+[25:37] Now, speaking of passwords, unlike
+[25:38] regular users, service accounts don't
+[25:41] get notified when their passwords expire
+[25:43] and they cannot change them by
+[25:45] themselves. If a service account
+[25:47] password expires, the service will stop
+[25:49] working. So, it's common to set the
+[25:51] password expiration policy for service
+[25:53] accounts to never expire
+[25:55] or not for a very long period of time.
+[25:58] Another good practice that you will
+[25:59] encounter is to allow a service account
+[26:01] to be
+[26:02] uh to use multiple passwords in a
+[26:04] keychain.
+[26:06] Uh this way, when you need to change the
+[26:08] service's password, you can add the new
+[26:10] password to its keychain and then roll
+[26:13] out the old passwords after a while,
+[26:15] ensuring close to no downtime. Now,
+[26:18] passwords are not the only way to
+[26:20] authenticate services. Another method is
+[26:21] to use certificates, which are digital
+[26:23] documents that can prove the identity of
+[26:25] the service.
+[26:26] Uh certificates are issued by a trusted
+[26:28] authority and contain the name of the
+[26:30] service, its uh public key,
+[26:32] and a bunch of other information so
+[26:34] others can validate it and know how long
+[26:36] the certificate is valid for.
+[26:38] Now, when a service needs to access a
+[26:40] resource, it should present its
+[26:43] certificate to the resource, and the
+[26:44] resource verifies the certificate using
+[26:46] the public key inside of a certificate.
+[26:49] Uh Uh this way, the resource can ensure
+[26:51] that the service is who it claims to be
+[26:54] and then granted access accordingly.
+[26:56] Now certificates are especially useful
+[26:58] for web-based services running over the
+[27:00] internet.
+[27:01] Uh web-based services often use APIs,
+[27:03] which are interfaces that define how
+[27:05] different systems can exchange
+[27:06] information
+[27:07] and can be used by web developers to
+[27:09] integrate services with other websites
+[27:11] or apps. APIs also require
+[27:13] authentication and certificates are one
+[27:15] of the ways to achieve that along with
+[27:17] passwords, API keys, which are basically
+[27:20] also passwords, or temporary access
+[27:22] tokens, which are also passwords but
+[27:25] temporary.
+[27:27] Managing identities and SSO. Since
+[27:29] identity management those processes
+[27:31] span an entire organization usually, all
+[27:34] its users and perhaps even all its
+[27:36] devices,
+[27:37] it sounds like a good idea to be able to
+[27:39] manage everything from a central
+[27:41] location,
+[27:42] from a single authority that controls
+[27:44] the identity and access of everything in
+[27:46] the network. It's much easier to manage
+[27:49] it from central location like this
+[27:51] because all the changes are made in one
+[27:52] place and they affect the whole network.
+[27:55] Thus, the network can easily support
+[27:57] more users and services because it can
+[27:59] scale up by adding more resources to
+[28:01] that central authority. For example, if
+[28:03] you use Microsoft Active Directory,
+[28:06] you can start with one domain
+[28:07] controller, keep adding users and
+[28:09] devices to it and even add more domain
+[28:11] controllers as your network grows or
+[28:13] company expands. Now these centralized
+[28:16] identity management solutions can be a
+[28:18] single point of failure in the network,
+[28:20] which means that if the central
+[28:21] authority is compromised or unavailable
+[28:23] for any reason, the whole network is
+[28:25] affected. They are also a very juicy
+[28:27] target for attackers who can try to gain
+[28:30] access and manipulate the identity and
+[28:31] access of all users and services on the
+[28:34] network. On the other hand, a
+[28:36] decentralized approach to identity
+[28:37] management means that there are multiple
+[28:39] authorities that control the identity
+[28:42] and access and they can be distributed
+[28:44] across different locations or even
+[28:46] different domains.
+[28:47] A decentralized design can be more
+[28:49] resilient because it does not depend on
+[28:51] a single authority
+[28:52] and it can recover from failures more
+[28:54] easily. It can also be more flexible
+[28:56] because it can accommodate different
+[28:58] policies and requirements for different
+[28:59] parts of the network. Although with
+[29:01] careful configuration, this should not
+[29:03] be an issue even with completely
+[29:04] centralized deployments, but let's list
+[29:07] it here as a benefit nevertheless.
+[29:09] Any decentralized design is also harder
+[29:12] to manage because the changes have to be
+[29:14] made in multiple places and they have to
+[29:16] be consistent across the network. It can
+[29:18] be more prone to errors because the
+[29:20] authorities may have conflicting or
+[29:23] outdated information about the identity
+[29:25] and access of the users.
+[29:27] One of the techniques that can be used
+[29:28] to implement centralized identity
+[29:30] management is single sign-on or SSO. SSO
+[29:33] means that a user can log into the
+[29:35] network just once and then access
+[29:37] multiple resources without logging in
+[29:39] again. It sounds and it is convenient
+[29:42] for the users and surprisingly enough,
+[29:44] it also has security benefits.
+[29:46] Less risk of password exposure because
+[29:48] the users don't have to remember
+[29:50] multiple passwords and they are less
+[29:52] likely to write them down or share them
+[29:54] with others. It also greatly simplifies
+[29:56] the administration because the users do
+[29:58] not need multiple accounts and all their
+[30:00] permissions are now tied to a single
+[30:02] account. However, SSO increases the
+[30:04] impact of a compromise because if a user
+[30:07] or a service account is hacked, the
+[30:09] attacker can access all the resources
+[30:11] that the account is authorized to access
+[30:14] without any further authentication. So,
+[30:16] to mitigate this risk, most SSO systems
+[30:19] use methods to protect the credentials
+[30:21] such as encryption, hashing,
+[30:22] tokenization. These methods ensure that
+[30:25] the credentials are not stored or
+[30:27] transmitted in plain text ever and that
+[30:30] they are not reusable by anyone other
+[30:33] than the legitimate user or service.
+[30:36] And also doesn't hurt to combine the
+[30:38] single sign-on process with some MFA.
+[30:41] LDAP stands for Lightweight Directory
+[30:44] Access Protocol, and it's a standard way
+[30:47] of accessing and managing information
+[30:49] stored in something called a directory
+[30:52] service.
+[30:53] Okay, what is that? A directory service
+[30:56] is like a phone book for a network,
+[30:59] where you can find names, addresses,
+[31:01] other details of the systems and the
+[31:02] resources in your network. For example,
+[31:05] Microsoft Active Directory, that's
+[31:06] directory service, which stores
+[31:08] information about users, computers,
+[31:10] groups, policies, permissions on a
+[31:12] Windows network.
+[31:14] Well, SSO, as we presented it so far, is
+[31:17] common on internal networks, where users
+[31:21] and services
+[31:22] can use their credentials to access
+[31:25] different systems within the same
+[31:26] network. However, SSO can also be used
+[31:29] for the internet, where users can use
+[31:32] their credentials to access different
+[31:34] websites and cloud-based applications uh
+[31:37] that are hosted by third-party
+[31:38] providers. This makes it easier for
+[31:41] users to log in and access the resources
+[31:42] they need without having to remember
+[31:44] multiple passwords.
+[31:46] The term Federated Identity Management,
+[31:48] or FIM, not to be confused with File
+[31:50] Integrity Monitoring,
+[31:52] is what enables SSO on the internet.
+[31:55] FIM, so Federated Identity Management,
+[31:57] is the process of linking a user's or a
+[32:00] service's identity
+[32:02] in one network with multiple other
+[32:05] networks that can share identity
+[32:07] information. For example, if you have a
+[32:08] Google account, you can use it to access
+[32:11] different Google services, such as
+[32:13] Gmail, YouTube, Google Drive, but you
+[32:16] can also use it to access other websites
+[32:18] and applications that are not owned by
+[32:20] Google, but where you can use your
+[32:23] Google account to log into these
+[32:24] services, such as Spotify, Airbnb, Uber,
+[32:28] and a million others.
+[32:30] That's because these applications have
+[32:33] agreed to share identity the with
+[32:35] Google, and they recognize your Google
+[32:37] account as a valid credential. This way
+[32:40] you don't have to create a separate
+[32:42] account for each website or each
+[32:44] application and you can use your Google
+[32:46] account as a federated identity.
+[32:49] Now, it might be common sense, but being
+[32:51] a member of a federation does not mean
+[32:53] that you have access to everything that
+[32:54] the federation offers. Each network or
+[32:57] company decides what resources to share
+[32:59] with the federation and what level of
+[33:01] access to grant to those federated
+[33:03] identities. A challenge with FIM is that
+[33:06] different networks and different
+[33:08] companies may have different systems and
+[33:10] technologies and they need to find a
+[33:12] common language to communicate and
+[33:15] exchange that identity information. This
+[33:17] is where protocols and standards come in
+[33:20] and later on we'll talk about things
+[33:21] such as SAML, OAuth, and OIDC.
+[33:25] Federation can be cloud-based, which
+[33:27] means that the federation system is
+[33:28] hosted by a third-party provider on the
+[33:30] internet and the network the other
+[33:32] networks use the provider's service to
+[33:34] share identity information.
+[33:36] This is convenient. It's cost-effective
+[33:38] because the networks don't have to
+[33:39] maintain their own federated identity
+[33:42] management system and they can rely on
+[33:44] the provider both for technology as well
+[33:46] as for expertise and security.
+[33:48] However, this also means less control
+[33:50] and visibility over the federation
+[33:52] system and you have to trust the
+[33:54] provider with your identity information.
+[33:56] An example of a cloud-based FIM is when
+[33:58] you use your Google account to access
+[33:59] Airbnb. Airbnb uses Google's FIM service
+[34:04] to verify your identity and grant you
+[34:06] access.
+[34:07] On-premises FIM means that the FIM
+[34:09] system is hosted by one of the networks
+[34:11] or companies on their own network and
+[34:14] the
+[34:15] other networks connect to it to share
+[34:17] identity information. This is more
+[34:19] secure and customizable and gives more
+[34:22] control and visibility over the FIM
+[34:23] system, but also means that the company
+[34:25] has have to invest more time and money
+[34:28] to set up and maintain their own FIM
+[34:30] system and they have to ensure its
+[34:32] compatibility. An example of an
+[34:34] on-premise FIM is when two companies
+[34:36] merge and create a FIM system to share
+[34:39] identity information between their
+[34:40] networks.
+[34:42] This way, the employees of both
+[34:43] companies can access resources in both
+[34:45] networks without logging on twice and
+[34:48] without using two different accounts.
+[34:50] JIT stands for just-in-time, and in this
+[34:53] context, because just-in-time is an
+[34:55] abused term in many aspects of IT,
+[34:58] in this context, it's a feature that
+[35:00] allows federated solutions to
+[35:02] automatically create the relationship
+[35:04] between two entities, such as a user and
+[35:07] a service, so that they can talk to each
+[35:09] other without any manual intervention.
+[35:12] JIT is useful when there are new users
+[35:15] or services that need to access
+[35:17] resources for the first time, and
+[35:18] there's no existing account or
+[35:20] credential for them.
+[35:22] An example for this would be imagine if
+[35:24] you work for company A, and company A
+[35:27] has contracted with third-party provider
+[35:30] to offer some benefit plans for its
+[35:31] employees.
+[35:33] The third-party provider has a website
+[35:35] where you can choose the benefits you
+[35:37] want as long as you are an employee of
+[35:39] company A.
+[35:40] How do you access this website? Well,
+[35:42] one way is to create a separate account
+[35:44] for yourself, but that can be a hassle,
+[35:46] especially if you have to remember
+[35:48] another password. Another way is to use
+[35:50] just-in-time and federated identity
+[35:52] solutions. This way, you can log on
+[35:54] normally to your network using your
+[35:56] credentials, and the first time you
+[35:58] access the benefit website, the
+[36:00] just-in-time system exchanges data with
+[36:02] your network and creates an account for
+[36:04] you automatically on that website. The
+[36:07] account is linked to your identity on
+[36:09] the network, and it is recognized by the
+[36:11] benefit website. You don't need another
+[36:13] account. In my case, this is how I
+[36:15] borrow books from Bookster, which is a
+[36:18] very nice service available to a lot of
+[36:19] IT companies in Romania, and also how I
+[36:21] access my private health benefits paid
+[36:24] for by the company that I work for.
+[36:26] One of the common protocols and
+[36:28] standards that just-in-time systems use
+[36:31] is SAML, which stands for Security
+[36:33] Assertion Markup Language.
+[36:36] SAML is a language that allows entities
+[36:38] to exchange information about the
+[36:40] identity and permissions of users
+[36:43] and even services if applications are
+[36:45] the ones talking to each other.
+[36:48] Now, since we're talking about identity
+[36:49] management, well, what about credential
+[36:52] management? In other rudimentary words,
+[36:55] how do you store your passwords?
+[36:58] Credential management systems are tools
+[37:00] that let you save your credentials for
+[37:03] different websites in a secure storage
+[37:04] area, most likely encrypted, otherwise
+[37:07] it's not so secure,
+[37:08] and with one or more security layers on
+[37:11] top of it. And to retrieve them when you
+[37:14] need to log in again, you have to enter
+[37:16] a password, provide biometric
+[37:18] authentication, or some other
+[37:19] combination of factors.
+[37:21] This way you don't have to remember
+[37:22] multiple passwords. They can be randomly
+[37:24] generated and unique for each service.
+[37:27] Web browser-based
+[37:29] credential management systems are built
+[37:31] into web browsers such as, I don't know,
+[37:33] Chrome, Firefox, Safari, Brave, Edge,
+[37:35] whatever you're using.
+[37:37] They all support this feature. They can
+[37:39] remember the usernames and passwords
+[37:41] that you enter on any website that you
+[37:42] visit, and they also store them in an
+[37:45] encrypted form. When users return to the
+[37:47] same website, the web browser can
+[37:49] automatically fill in your credentials
+[37:50] for them or show them a list of options
+[37:52] to choose from.
+[37:54] But these browser-based credential
+[37:56] management systems
+[37:57] might not be compatible with federated
+[37:59] identity management systems. For
+[38:00] example, if you have a Google or
+[38:02] Facebook account, you can use it to sign
+[38:04] in to, let's say, Zoom,
+[38:06] but your web browser may not be able to
+[38:08] store or retrieve this credential for
+[38:10] you.
+[38:11] Also, they might not be portable across
+[38:13] different devices, and the company
+[38:15] security policy might not allow you to
+[38:17] save passwords in your browser.
+[38:19] One more thing to keep in mind is that
+[38:20] saving these credentials in a local
+[38:22] browser means that if your computer is
+[38:24] compromised entirely, an attacker can
+[38:27] gain access to the stored information as
+[38:29] well.
+[38:30] Cloud-based credential management
+[38:32] systems are digital vaults hosted by a
+[38:35] third-party provider on the internet.
+[38:37] These systems let you access them
+[38:39] securely from anywhere, control who can
+[38:41] uh use them,
+[38:43] rotate them automatically to reduce the
+[38:45] risk, and track every access for
+[38:47] auditing. It's a smarter, safer way to
+[38:49] handle secrets, especially in complex IT
+[38:51] environments where security and
+[38:53] automation are key. Major cloud
+[38:55] providers usually have their own systems
+[38:57] in this category. App-based credential
+[39:00] management systems are applications that
+[39:01] users can install on their devices and
+[39:04] that allow them to store their
+[39:05] credentials for websites, API keys,
+[39:07] certificates, and other sensitive info.
+[39:10] Uh they can encrypt the credentials and
+[39:11] store them in a database, which requires
+[39:13] you to unlock database first with a
+[39:15] master password. Once the database is
+[39:17] unlocked, users can easily copy their
+[39:19] passwords or paste them into websites or
+[39:21] application forms, or they can configure
+[39:24] the app to enter the credentials
+[39:25] automatically for them. For example,
+[39:27] KeePass, that's a freeware app that
+[39:30] allows users and services to store and
+[39:32] manage their credentials.
+[39:34] Now, these solutions are not so easily
+[39:36] portable across different devices
+[39:38] unless users sync their databases across
+[39:41] their devices or use a cloud-based
+[39:43] storage device to store the database.
+[39:46] For example, if you use KeePass, you
+[39:48] have to sync your database using a
+[39:49] service such as, I don't know, Dropbox,
+[39:51] Google Drive, or store your database in
+[39:55] some small private cloud that you might
+[39:57] own, maybe at home or on a NAS device.
+[39:59] Also, it might be obvious at this point,
+[40:01] but if you forget your master password,
+[40:03] you're screwed.
+[40:05] All right, provisioning and
+[40:06] deprovisioning identities. Provisioning
+[40:08] basically means setting up user accounts
+[40:10] and giving people the right permissions
+[40:12] for their job.
+[40:13] It often ties into onboarding, which is
+[40:15] the bigger process of getting new
+[40:17] employees settled in, showing them the
+[40:19] ropes, explaining company policies,
+[40:22] making sure they can access the tools
+[40:24] and resources they need to get started.
+[40:26] Uh manual provisioning and onboarding
+[40:28] means that the organization's personnel,
+[40:30] such as the HR department and the IT
+[40:32] department, create user accounts and set
+[40:34] up their privileges for the new
+[40:35] employees. They also provide them with
+[40:37] the necessary hardware, software,
+[40:39] training.
+[40:40] Uh manual provisioning, of course, has a
+[40:42] couple of advantages. It's flexible,
+[40:44] customizable. Uh it can provide the new
+[40:47] employee with personalized guidance and
+[40:48] support.
+[40:49] It is secure and reliable because the
+[40:51] personnel can verify the identity and
+[40:54] the background of the new employees. On
+[40:56] the downside, it's of course
+[40:57] time-consuming, labor-intensive because
+[40:59] the personnel have to create and manage
+[41:01] user accounts and privileges for each
+[41:03] new employee, provide them with
+[41:05] individual hardware, software, and
+[41:07] training. Also, a lot of errors and
+[41:09] inconsistencies can happen because the
+[41:11] personnel may make mistakes or forget
+[41:14] some details when creating user accounts
+[41:16] uh and assigning those privileges. And
+[41:18] that is a reason to consider the manual
+[41:20] process less secure than the automatic
+[41:23] provisioning of user accounts.
+[41:26] Now, on the other hand, automatic
+[41:27] provisioning and onboarding means that
+[41:30] the company systems, such as the
+[41:31] directory service and perhaps some
+[41:33] internal provisioning application,
+[41:35] create the user accounts and privileges
+[41:37] for new employees. Obviously, it's much
+[41:40] faster, more efficient, great for
+[41:42] employees who hate their colleagues
+[41:44] before they even met them.
+[41:46] Uh it's also much more consistent and
+[41:48] accurate as nothing gets overlooked.
+[41:51] Still, the automatic approach is
+[41:53] inflexible. Uh we should also admit that
+[41:55] automatic systems might be vulnerable,
+[41:57] open to compromise, and attacks. This
+[42:00] isn't to say that humans or the HR
+[42:03] department is not vulnerable. Of course,
+[42:05] just look at who they hire.
+[42:08] The initial creation of a new user
+[42:10] account is often called enrollment or
+[42:12] registration. Uh this is where the
+[42:14] company collects or generates the
+[42:16] information about the new employee such
+[42:17] as the username, the full name, the
+[42:19] email address, and more.
+[42:21] It may also collect and store the
+[42:22] biometric data of the new employee
+[42:24] during the step or might also provide
+[42:26] them with necessary second factor for
+[42:28] MFA. Uh this is where the company
+[42:30] creates a unique identifier for the new
+[42:31] user on the organization systems. Now,
+[42:34] as part of the onboarding process, the
+[42:37] company may also verify the identity and
+[42:38] the background of the new employee
+[42:41] uh such as the the photo ID of the of
+[42:44] the employee
+[42:45] uh performing a background check, credit
+[42:47] check, security clearance verification,
+[42:49] police record, and so on. Only after
+[42:52] these checks, the company may provide
+[42:54] the new employees with the necessary
+[42:55] hardware and software such as laptops,
+[42:57] mobile devices, hardware tokens, and
+[42:59] anything else they might need to do
+[43:00] their job.
+[43:01] Uh next, users are presented with the
+[43:03] necessary training to help new employees
+[43:05] learn and understand
+[43:07] how the company works, what policies it
+[43:10] has, and to know how to use and how not
+[43:13] to use the resources that they have
+[43:15] access to. Other onboarding processes
+[43:17] help the new employees to get familiar
+[43:19] and comfortable with the organization
+[43:21] and its systems
+[43:23] such as having them read and sign the
+[43:26] company's acceptable use policy AUP,
+[43:28] which is a document that defines the
+[43:30] rules and expectations for how you
+[43:31] should be using the company systems and
+[43:33] resources,
+[43:34] and the consequences for violating these
+[43:36] rules. Another example would be
+[43:38] explaining security best practices,
+[43:41] assisting the employee with configuring
+[43:42] MFA if available,
+[43:44] explaining how to access help desk
+[43:46] personnel for further assistance,
+[43:48] showing the employee how to access and
+[43:50] use company digital resources as
+[43:52] dictated by the AUP that they just
+[43:54] signed.
+[43:55] Finally, deprovisioning is a process of
+[43:57] deleting or more often disabling user
+[44:00] accounts and revoking their privileges
+[44:02] when employees leave the company.
+[44:05] Uh this includes when an employee is
+[44:07] laid off or resigns. This also includes
+[44:09] when an employee transfers to a
+[44:10] different department or location within
+[44:12] the same company
+[44:14] to avoid privilege creep. That is the
+[44:16] wrong practice by which people navigate
+[44:18] between departments in a large company
+[44:20] and um
+[44:22] over the years they get to retain all
+[44:23] the previous privileges they collected
+[44:25] along the way making them a somewhat
+[44:28] mini superuser.
+[44:30] Offboarding is a process of collecting
+[44:32] and terminating any hardware, software,
+[44:34] and benefits
+[44:36] uh, that the organization provides to
+[44:37] the employees. An exit interview would
+[44:39] happen during offboarding as well if the
+[44:41] company is really interested in employee
+[44:43] retention and finding out why people are
+[44:45] leaving.
+[44:46] Uh, they're also good for employees who
+[44:48] just need to vent.
+[44:51] Identity maintenance and review.
+[44:53] Identity maintenance is a process that
+[44:55] every business should have and should
+[44:56] follow. It's about managing user
+[44:58] accounts and privileges throughout their
+[45:00] life cycle.
+[45:01] This includes when users join, leave, or
+[45:04] change roles within the company, or when
+[45:07] the company policies and procedures
+[45:08] change.
+[45:09] Account access review means checking the
+[45:12] user accounts and their privileges on a
+[45:14] regular basis to ensure that they comply
+[45:17] with the company's policies and that
+[45:19] they do not have excessive or
+[45:20] unnecessary privileges.
+[45:22] Account access review can be done
+[45:24] manually or even better automatically
+[45:26] using tools and scripts that can audit
+[45:28] user accounts and report or even
+[45:30] immediately correct any anomalies or
+[45:32] privilege creep that might have happened
+[45:34] in the meantime.
+[45:36] Privilege monitoring is a process of
+[45:38] tracking and controlling user accounts
+[45:40] that have elevated or special privileges
+[45:42] such as administrator accounts, root
+[45:44] accounts, service accounts, or any
+[45:46] account that has more privileges than a
+[45:48] regular user.
+[45:49] Privilege monitoring can help to prevent
+[45:52] unauthorized access, abuse, but also to
+[45:55] detect and respond to any suspicious
+[45:57] activities
+[45:58] as they are a prime target for attackers
+[46:01] and data breaches.
+[46:02] Privilege monitoring can also help to
+[46:04] guard against uh two common problems
+[46:07] related to access control, that is
+[46:09] excessive privileges when users have
+[46:11] more privileges than they need for their
+[46:13] assigned work tasks, and privilege
+[46:15] creep, just like we said before, when a
+[46:17] user account accumulates additional
+[46:19] privileges over time as its roles and
+[46:21] responsibilities change. Both of these
+[46:24] problems violates the basic security
+[46:26] principle of least privilege, which
+[46:28] states that users should have the
+[46:30] minimum privileges necessary
+[46:33] to perform their job.

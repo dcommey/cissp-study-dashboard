@@ -1,0 +1,1500 @@
+[00:08] All right, everyone. Welcome back.
+[00:09] Today, we're going to dive into a more
+[00:12] technical realm, and that is the realm
+[00:15] of cryptography. And more specifically,
+[00:18] in this episode, we're going to be
+[00:19] talking about symmetric key
+[00:21] cryptography. Okay? Now, before we
+[00:24] begin, cryptography is the art and
+[00:28] science
+[00:30] of making secret codes, and
+[00:33] cryptanalysis
+[00:35] is the art and science of breaking those
+[00:38] codes. So, cryptography helps us keep
+[00:42] our sensitive information safe from
+[00:46] prying eyes and sticky fingers when it's
+[00:48] stored, sent, or used.
+[00:51] So, in other words, we use it for data
+[00:53] at rest, in transit, and data in use in
+[00:57] memory.
+[00:58] You use cryptography when you access
+[01:01] your email, when you make credit card
+[01:03] payments online, when you order an Uber
+[01:06] or takeout, or when you access a
+[01:08] website. When you share your location,
+[01:11] when you go to the doctor, and when you
+[01:13] go on vacation. Over the years, some
+[01:16] very smart people have come up with a
+[01:18] lot of different ways to make and break
+[01:20] secret codes.
+[01:22] So, codes needed to become stronger and
+[01:24] harder to break. Otherwise, they would
+[01:26] be completely useless. Um this led to a
+[01:28] constantly evolving so-called
+[01:31] cryptography race, and resulted in the
+[01:33] creation of very, very complicated codes
+[01:36] that we actually use today and that we
+[01:38] rely on today for our, let's say, online
+[01:41] transactions.
+[01:42] So, here we're going to talk about
+[01:44] methods for securing data using secret
+[01:46] keys. Notice that we're going to be
+[01:48] talking about symmetric key
+[01:50] cryptography.
+[01:51] That's actually a very simple concept,
+[01:53] which says that the same key can and is
+[01:57] used to both encrypt and decrypt.
+[02:01] Completely similar to a lock on a door.
+[02:04] You use the same key to lock the door
+[02:06] and same key to unlock it. And yes, I'm
+[02:09] pointing out this very basic concept
+[02:10] because
+[02:11] as you can probably guess, there is more
+[02:14] than one way to skin a cat and more than
+[02:16] one way to encrypt data.
+[02:18] We need to understand some basic
+[02:20] principles and concepts of cryptography
+[02:22] before we can learn how to use it. So,
+[02:24] in this section, we will review the
+[02:25] goals of cryptography, the basic ideas
+[02:28] of cryptographic technology, and the
+[02:31] main mathematical principles behind it
+[02:33] used by cryptographic systems so that we
+[02:35] all understand what is that we're
+[02:37] talking about.
+[02:39] Security people use cryptographic
+[02:41] systems to achieve four main goals:
+[02:43] confidentiality, integrity,
+[02:46] authentication,
+[02:47] careful, not availability, okay? And
+[02:51] non-repudiation.
+[02:53] So, let's have a look over them, but
+[02:54] this time with cryptography in our mind.
+[02:56] So, we need to focus on cryptography.
+[02:59] First of all, confidentiality makes sure
+[03:01] that data stays private in all three
+[03:04] different situations: when it is stored,
+[03:06] when it is sent over the network, and
+[03:08] when it is used inside your computer's
+[03:10] memory.
+[03:12] Confidentiality is probably the most
+[03:14] common goal of crypto systems and the
+[03:16] easiest one to understand because
+[03:18] keeping stored information secret or for
+[03:21] securing communications between people
+[03:23] and groups, that's the main goal that
+[03:26] comes into our mind whenever we think
+[03:28] about cryptography and encrypting stuff.
+[03:30] Two main types of crypto systems deal
+[03:33] with confidentiality. We have the
+[03:35] symmetric crypto systems, which, as we
+[03:38] just said, use a shared secret key that
+[03:42] everyone who uses the crypto system
+[03:43] knows, right? And also, as we said
+[03:45] before, it's like a door lock. The key
+[03:47] that locks the door is also the key that
+[03:49] unlocks the door, and many people can
+[03:51] have copies of the same key and of
+[03:53] course have the same privileges to open
+[03:55] and lock the door.
+[03:56] Asymmetric crypto systems on the other
+[03:58] hand use individual pairs of public and
+[04:02] private keys. So, there's always going
+[04:04] to be a pair, there's always going to be
+[04:05] two keys
+[04:07] whenever we talk about asymmetric crypto
+[04:09] systems. And those two keys are going to
+[04:11] be unique for each person who uses that
+[04:14] system. So, no more shared keys. While
+[04:16] this might not make sense in the door
+[04:19] analogy, we'll talk more about these
+[04:21] ideas later.
+[04:23] When securing data, you have to think
+[04:24] about the three different types of data
+[04:26] that we talked about in a previous
+[04:27] chapter. Data at rest or stored data,
+[04:30] that's data that stays in a fixed place
+[04:32] until someone accesses it and is at risk
+[04:35] of stealing and destruction perhaps when
+[04:38] in the place where it's stored. This is
+[04:40] the data stored on hard drives, on
+[04:41] backup tapes, on cloud storage services,
+[04:44] USB devices, and any other storage
+[04:46] media.
+[04:47] Next, we have data in motion or data on
+[04:50] the wire, sometimes called, as data that
+[04:53] goes across a network between two
+[04:55] systems and over the network is at risk
+[04:58] for sniffing or alteration modification.
+[05:01] Data in use is the data that is stored
+[05:03] in the active memory of a computer where
+[05:06] a process that is running on that system
+[05:08] can access that data and of course is at
+[05:11] risk of being accessed by some other
+[05:13] malicious process, too. So, that's it
+[05:17] with confidentiality, the first the
+[05:19] first topic here. Next, integrity.
+[05:22] Integrity makes sure that data is not
+[05:24] changed without permission. If integrity
+[05:27] mechanisms are working, then the
+[05:29] receiver of a message can be sure that
+[05:31] the message received is the same as the
+[05:33] message that was sent.
+[05:35] Encryption also facilitates this because
+[05:38] up to a point, you can be sure that if
+[05:40] only authorized people have the
+[05:42] encryption or decryption keys, then the
+[05:45] data is intact. It's like coming home
+[05:47] and finding the door locked just as you
+[05:50] left it. You can then make a good enough
+[05:52] assumption that your home wasn't broken
+[05:54] into in your absence. Also, integrity
+[05:57] checks can make sure that stored data
+[06:00] was not changed between the time it was
+[06:02] made and the time it was accessed. Okay?
+[06:05] Message integrity is done through the
+[06:07] use of encrypted message summaries or
+[06:10] digests or hashes, more commonly called,
+[06:13] which are also used in digital
+[06:15] signatures. Now, these are created when
+[06:17] the message is sent and then attached to
+[06:20] the message. So, the message reaches the
+[06:23] end of the communication, the recipient
+[06:25] of the communication, in both its
+[06:27] original form and along with its
+[06:31] original hash, right? The original hash
+[06:33] calculated by the person or the entity
+[06:35] who sent that message. Which means that
+[06:37] the receiver of the message now just
+[06:39] needs to check that the message's
+[06:41] digital signature is okay,
+[06:43] proving that the message was not changed
+[06:45] in transit. So, we'll discuss more about
+[06:47] this later, too.
+[06:49] Next on the list is authentication. This
+[06:51] one checks the claimed identity of users
+[06:55] creating and sending data. Now,
+[06:56] authentication is important because
+[06:58] trusting data always starts with the
+[07:00] trust in the entity that sent that data
+[07:02] to you. For example, suppose that Bob
+[07:05] wants to talk to Alice and they both use
+[07:07] a secret code system. The fact that
+[07:09] Alice knows about the same secret code
+[07:11] as Bob could be enough for both of them
+[07:13] to trust each other, but they might also
+[07:16] use a something like a challenge
+[07:18] response authentication method to make
+[07:20] sure that neither of them is lying. For
+[07:22] example, Alice could send a number to
+[07:23] Bob and ask Bob to scramble that number
+[07:27] in a way that should be known only by
+[07:29] Alice and Bob. Now, if Bob manages to
+[07:31] scramble that number using the correct
+[07:33] algorithm and perhaps the correct key
+[07:35] and returns it back to Alice, then she
+[07:38] could consider that the challenge was,
+[07:39] well, accepted and fulfilled by Bob, and
+[07:43] Bob is really who he claims to be. You
+[07:45] might think, why doesn't Alice simply
+[07:47] ask Bob for a password to prove who he
+[07:49] is? Well, she could, but someone
+[07:51] eavesdropping on the conversation
+[07:53] between them could also intercept that
+[07:55] password and reuse it in the future to
+[07:57] impersonate Bob. So, that's why
+[07:59] cryptography often does all this number
+[08:02] crunching business in the background
+[08:03] instead of simply sending credentials
+[08:05] between peers.
+[08:07] Okay? Because we don't want to send
+[08:09] actual credentials, but we still need to
+[08:11] be able to prove that we know the right
+[08:14] credentials, that we hold the right
+[08:15] keys. All right? So, instead of sending
+[08:17] the actual keys, we use the keys in such
+[08:20] a way so that whatever we send over the
+[08:22] wire to the other end
+[08:25] cannot be deconstructed and cannot be
+[08:28] used to obtain the original key that was
+[08:31] used to to actually calculate that hash
+[08:33] or that encrypted message.
+[08:35] So, authentication often is about
+[08:37] proving that we know something without
+[08:38] actually sending that something over a
+[08:40] wire. So, what we do is use that
+[08:43] information in a mathematical process
+[08:45] and send the result to the other end.
+[08:48] Next, non-repudiation gives assurance to
+[08:50] the receiver that the message was sent
+[08:52] by the sender and also stops the sender
+[08:55] from denying that they sent the message
+[08:56] in the first place. Also known as lying
+[08:59] about the message, which is very
+[09:00] important for auditing, for forensic
+[09:03] investigations. Secret key or symmetric
+[09:06] key crypto systems don't give this
+[09:07] guarantee of non-repudiation because,
+[09:10] well, since everyone uses the same key
+[09:12] to encrypt and decrypt, so the key is
+[09:14] basically or can be shared among
+[09:17] multiple users, there's no way to trace
+[09:19] one key back to a specific user. So, any
+[09:21] of them could say, "I did not send this
+[09:24] data because there are other people out
+[09:26] there who know about the same key and
+[09:28] either of them could have sent it." And,
+[09:30] well, you cannot contradict this the
+[09:31] statement. So, we're going to need some
+[09:33] advanced math and encryption methods to
+[09:35] ensure non-repudiation, but again, we'll
+[09:37] get there.
+[09:38] Okay, so let's look at some of the
+[09:40] keywords used to talk about codes and
+[09:42] ciphers. Now, before a message is turned
+[09:44] into a coded form, it's called a
+[09:46] plaintext message or a cleartext
+[09:48] message.
+[09:49] The sender of a message uses some sort
+[09:51] of a cryptographic engine to encrypt
+[09:53] that plaintext message and make what is
+[09:56] called a ciphertext message. So, the
+[09:59] ciphertext is the encrypted form of the
+[10:01] plaintext.
+[10:03] The receiver then uses another tool to
+[10:05] decrypt the ciphertext message and get
+[10:06] back the plaintext version.
+[10:08] Many cryptography concepts depend on
+[10:11] ease. For the most part, a key is, well,
+[10:14] just a number. Actually, it's a very big
+[10:17] binary number. And again, saying that
+[10:20] it's a binary number doesn't really mean
+[10:22] anything. You know, numbers are numbers,
+[10:23] and the base in which you represent them
+[10:25] does not change their value.
+[10:27] Uh with keys, we refer to bits. Length
+[10:30] of keys is is usually expressed in bits,
+[10:33] and we think about them in binary simply
+[10:35] because computers store data in binary
+[10:37] and process data in binary. But no
+[10:40] number out there is truly only binary in
+[10:42] nature. Thus, when we talk about the
+[10:44] length of a key, it's going to be about
+[10:45] the number of bits in it. This also
+[10:47] means that each key has a specific key
+[10:50] space, which is the range of values that
+[10:53] can be stored by that key. In other
+[10:56] words, all the possible key
+[10:57] combinations. If we think about the keys
+[11:00] in binary with n being the number of
+[11:02] bits, then all the key space is going to
+[11:04] be all the possible combinations ranging
+[11:07] from all zeros to all ones, which is
+[11:09] easy enough to calculate for a number of
+[11:11] n bits as 2 to the nth power. A large
+[11:15] key space is good because it makes more
+[11:18] difficult to guess or break the key
+[11:20] in case somebody attempts to try every
+[11:22] key combination out there. And by the
+[11:24] way, we're not talking here about keys
+[11:25] and combinations in the ranges of the
+[11:28] ones on your airport luggage locks. An
+[11:31] asymmetric RSA key, commonly used
+[11:33] nowadays, is a 2048-bit
+[11:37] key. Now, how many combinations are
+[11:39] there? It's 2 to the 2048th
+[11:43] power. How big is that?
+[11:45] Well, in the decimal system, it's not a
+[11:47] trillion trillion trillion something.
+[11:50] It's actually a number of over 600
+[11:53] digits in decimal system. So, forget
+[11:56] about triangle combinations, even on the
+[11:58] the mother of all supercomputers out
+[12:00] there.
+[12:02] A very important concept in cryptography
+[12:04] is called the Kerckhoffs' principle, an
+[12:06] idea that a cryptographic system should
+[12:09] be safe even if everything about the
+[12:11] system, except the key, is public
+[12:13] knowledge. The algorithm should be
+[12:15] public, well-known, and thoroughly
+[12:18] tested. Uh the key is the element that
+[12:20] should be secret. So, relying on the
+[12:23] secrecy of the algorithms
+[12:25] is a way of implementing security
+[12:27] through obscurity, which is not actually
+[12:29] security in any way.
+[12:31] It is, in fact, strongly recommended
+[12:33] that you choose public, well-known, and
+[12:36] well-tested encryption algorithms, and
+[12:39] don't run creating your own. That's
+[12:40] because what is public knowledge is
+[12:43] publicly accepted as being secure as
+[12:45] well.
+[12:46] Anyone can test those public algorithms.
+[12:49] They can attempt to check the math
+[12:50] behind them, can attempt to crack them,
+[12:52] to bypass them. And if they haven't
+[12:54] succeeded already, we can call them
+[12:57] pretty good as far as algorithms go.
+[13:00] So, use a public algorithm and a secret
+[13:03] key. Keep the key secret, not the
+[13:05] algorithm.
+[13:06] Uh Boolean mathematics is the math of
+[13:09] bits, and surprisingly enough, sometimes
+[13:11] bytes, that make up the brain of any
+[13:13] computer.
+[13:14] You probably know the decimal system.
+[13:16] It's a base-10 system where a number of
+[13:18] from 0 to 9 is used in each place, and
+[13:21] each place value is a multiple of 10.
+[13:23] It's likely that we use the decimal
+[13:25] system because of our biology. We have
+[13:27] 10 fingers that we can use to count.
+[13:30] Now, in the same way, the computer's use
+[13:32] of Boolean system has electrical
+[13:34] origins. In an electrical circuit, there
+[13:37] are only two possible states. On,
+[13:39] meaning there is electrical current, and
+[13:41] off, meaning there is no current.
+[13:43] Actually, it could easily be the other
+[13:46] way around, too. Really doesn't matter
+[13:47] as long as you're being consistent.
+[13:50] The Boolean mathematics of cryptography
+[13:52] uses different logical functions to
+[13:55] change data. Some of these operations
+[13:57] are the AND operation, shown by the
+[14:02] uh shift six symbol, the carrot symbol.
+[14:05] Uh checks to see if two values are both
+[14:07] true. So, they need to both to be true
+[14:09] for the result of the AND operation to
+[14:11] be true.
+[14:12] They have the OR operation, sometimes
+[14:14] shown by the pipe symbol or a small V
+[14:18] and in algebra. Checks to see if at
+[14:20] least one of the input values is true.
+[14:23] The NOT operation,
+[14:25] shown by the tilde symbol or the
+[14:27] exclamation mark symbol in some
+[14:29] expressions, just flips the value of an
+[14:32] input variable. So, if it's true, it's
+[14:34] it evaluates to false. If it's false, it
+[14:36] evaluates to true.
+[14:38] And the XOR function, also called as
+[14:40] exclusive OR, gives a true value when
+[14:43] only one of the input values is true. If
+[14:46] both values are false or both values are
+[14:48] true, the output of the XOR function is
+[14:51] false, right? Uh this is sometimes
+[14:53] represented as a small crosshair-like
+[14:56] character with a plus sign inside of a
+[14:57] circle.
+[14:59] Now, another important function is the
+[15:00] modulo function or the mod function,
+[15:03] which is a mathematical operation that
+[15:05] gives the remainder of a division. For
+[15:07] example, if you divide seven by three,
+[15:09] we get a quotient of two and a remainder
+[15:11] of one, right? The modulo function can
+[15:13] be written as 7 mod 3 = 1, okay? Meaning
+[15:18] that the remainder of 7 / 3 is 1. We'll
+[15:21] see how this is relevant later on.
+[15:23] A one-way function is a math operation
+[15:26] that creates output values for each
+[15:28] possible mix of input values,
+[15:31] but makes it impossible to figure out
+[15:33] what input was used to generate a
+[15:35] specific output just by looking at the
+[15:37] output.
+[15:39] Let me give you a very simple example
+[15:40] here. Let's say that I tell you that A +
+[15:42] B = X.
+[15:44] A and B are inputs and X is the output
+[15:47] of the function. If I give you some
+[15:48] values for A and B, you can easily
+[15:51] figure out X. But if I say that X is,
+[15:54] say,
+[15:55] 567,
+[15:58] you cannot determine my specific A and
+[16:00] B. You could determine a potential
+[16:02] combination of A and B, but you have no
+[16:04] way of knowing which A and B I actually
+[16:06] used to get to 567.
+[16:09] So, public key cryptosystems are all
+[16:11] based on some kind of one-way function.
+[16:14] In reality, however, it's never been
+[16:16] proven that any specific known function
+[16:18] is truly one-way.
+[16:20] Cryptographers use functions that they
+[16:22] think are one-way as far as the current
+[16:25] math and processing power is concerned,
+[16:27] but it's always possible that they might
+[16:29] be broken by future code breakers.
+[16:32] Another concept here is a nonce. It
+[16:34] means number used once,
+[16:37] and it's a fancy word for a just a
+[16:38] random number that you use only once in
+[16:41] a math equation.
+[16:42] One way to crack a nonce is to mix it
+[16:45] with your message, and that makes it
+[16:46] harder to crack when encrypted because
+[16:49] that additional piece of information,
+[16:51] the nonce, is never going to be used
+[16:53] anywhere else. Sometimes this is also
+[16:55] called an initialization vector or IV
+[16:58] for short.
+[16:59] But what if you want to prove that you
+[17:01] know something without actually
+[17:03] revealing what you know? That's where
+[17:06] zero-knowledge proofs come into play.
+[17:09] A zero-knowledge proof is a way to show
+[17:11] that you know something without telling
+[17:12] what it is, like a password. Let's say a
+[17:14] password that opens a door.
+[17:16] You know the password,
+[17:18] but you don't want to tell anyone. How
+[17:20] can you convince someone that you know
+[17:23] it?
+[17:24] Well, you could unlock the door, go
+[17:26] through it, and come out on the other
+[17:28] side. The other person will see that you
+[17:30] must have used the password since you
+[17:33] got through the door, but they won't
+[17:35] know what the password is. But, they
+[17:37] will trust you that you know the right
+[17:39] password to open the door. That's a
+[17:41] simple example of zero-knowledge proof.
+[17:44] Also, sometimes you don't want to give
+[17:45] too much power to one single person.
+[17:47] That's where split knowledge comes in,
+[17:49] which is a way to divide the information
+[17:51] or the privilege, most likely privilege,
+[17:54] needed to do something, usually
+[17:56] something important, something above a
+[17:58] regular user action. You divide that
+[18:01] action among several people.
+[18:03] Uh that way, no one can abuse their
+[18:05] authority or go crazy one day and
+[18:07] compromise the security for everyone.
+[18:09] It's like sharing a secret password with
+[18:11] your friends, but each of you only knows
+[18:14] part of it and can only use it together.
+[18:18] One example of split knowledge is called
+[18:19] key escrow, which happens when you store
+[18:22] a key with someone else, a third party,
+[18:24] for backup, for example, an encryption
+[18:25] key. If you lose your key or forget your
+[18:28] password, the third party can help you
+[18:30] recover it or decrypt your data. The
+[18:32] third party is also sometimes called the
+[18:33] recovery agent. It's just like giving a
+[18:36] spare key with your neighbor in case you
+[18:37] lock yourself out of the house.
+[18:39] Now, if the recovery agent is not
+[18:41] trustworthy and they decide to use your
+[18:43] key without your permission, like your
+[18:45] neighbor might come snooping in when
+[18:47] you're on vacation, that's where M-of-N
+[18:50] control comes in. M-of-N control is a
+[18:53] way to require a minimum number of
+[18:54] agents, which is M, out of the total
+[18:57] theoretical number of agents, which
+[18:59] could be N, to work together to perform
+[19:02] a task. For example, if you have eight
+[19:05] recovery agents or people, you can use
+[19:08] three of the eight to make sure that at
+[19:10] least three of them agree to use your
+[19:13] key.
+[19:14] That way you can prevent one rogue agent
+[19:16] from accessing the data. It's a very
+[19:17] simplistic way of voting actually before
+[19:21] making a decision and
+[19:23] somehow making it mandatory for people
+[19:25] to agree
+[19:27] before making that decision. Another
+[19:29] concept here is related to how strong
+[19:31] your cryptography system is. That's
+[19:34] where the work function comes in.
+[19:36] The work function is a way to measure
+[19:39] the effort in term of cost and or time
+[19:43] needed to break your encryption. The
+[19:45] higher the work function, the more
+[19:46] secure your system is because the
+[19:48] probability of a computer being able to
+[19:50] crack it is much lower.
+[19:53] How do you choose the right work
+[19:54] function for your data? That depends on
+[19:56] two things. How valuable your data is
+[19:59] and how long it will stay valuable. You
+[20:01] don't want to spend more money or time
+[20:02] to protect your data than it's actually
+[20:04] worth. But you also don't want to make
+[20:06] it too easy for someone else to steal
+[20:08] it, right? You also have to consider how
+[20:10] technology might change in the future
+[20:12] and make your encryption weaker due to
+[20:14] advances in computing processing power.
+[20:16] What was unbreakable in 1990 can now be
+[20:19] cracked with a smartphone.
+[20:22] Let's talk about codes and ciphers
+[20:23] because there is some room for confusion
+[20:25] here. Even though not everyone agrees on
+[20:28] the definition and most of the time they
+[20:30] are used interchangeably, albeit
+[20:32] incorrectly. A code is a way to replace
+[20:35] words or phrases with symbols that have
+[20:38] a fixed meaning. Like using aliases or
+[20:41] nicknames instead of people names or
+[20:43] numerical codes like I don't know,
+[20:45] something like police code 1065, armed
+[20:48] robbery in progress, right? When a
+[20:49] police reports a crime.
+[20:51] So ciphers are different from codes
+[20:54] because they also change the message in
+[20:56] a bit-by-bit or character-by-character
+[20:58] manner or at least they at the entire
+[21:01] block level. That means that they alter
+[21:04] and or rearrange the letters or the
+[21:07] chunks of your message in some
+[21:09] reversible way. And it's very important
+[21:11] to be reversible because otherwise you
+[21:13] completely lose the original message and
+[21:16] the encrypted cipher would have no
+[21:17] value. That basically means you're
+[21:19] destroying the data. There are many
+[21:20] types of ciphers or operations that
+[21:22] happen as part of creating a cipher, but
+[21:24] one common type is the transposition
+[21:27] cipher. Transposition cipher is a way to
+[21:29] scramble your message by changing the
+[21:31] order of the letters. You could, for
+[21:34] example, reverse all the letters in a
+[21:36] word or swap any two adjacent letters in
+[21:40] words two by two. You can make it even
+[21:42] more complicated like this, like writing
+[21:44] the message in a matrix or on rows and
+[21:47] then reading the matrix by columns.
+[21:50] Basically, any method that you can think
+[21:52] of and that can rearrange the letters in
+[21:54] a message and you can, of course,
+[21:56] reverse it. That's a transposition
+[21:58] cipher. The method has to work in
+[22:00] reverse, as we just said, otherwise you
+[22:02] lose the original message and the
+[22:03] process becomes pointless.
+[22:05] A second way to change your message is
+[22:07] to use a substitution cipher. Now, a
+[22:09] substitution cipher is a way to replace
+[22:11] each letter or bit or chunk of your
+[22:14] message with a different one. For
+[22:16] example, you can change every A to D,
+[22:19] every B to an E, and so on, as long as
+[22:22] you remember what you replaced with
+[22:24] what.
+[22:25] One of the oldest substitution ciphers
+[22:27] is called the Caesar cipher. It is said
+[22:29] that it was used by Julius Caesar to
+[22:32] send secret messages to his allies. He
+[22:34] shifted each letter of the alphabet
+[22:36] three places to the right, so that A
+[22:39] became D, B became E, and so on. He also
+[22:43] wrapped around the alphabet, so that X
+[22:45] became A, Y became B, and Z became C. Uh
+[22:49] you might not think this is a very
+[22:50] advanced method of encryption, but in
+[22:53] times when most people did not even know
+[22:55] how to read, it was pretty advanced and
+[22:58] pretty good.
+[22:59] This This also called the rot three, o t
+[23:03] 13 or rotate 13 cipher,
+[23:05] but Caesar did not know that it would be
+[23:07] called a ROT13 cipher and also did not
+[23:09] know that it wasn't very secure. The
+[23:11] secret key was basically, you guessed
+[23:14] it, three. And that's the secret key,
+[23:17] three. Three characters to the right.
+[23:20] It's easy to break with the technique
+[23:21] called frequency analysis. Frequency
+[23:24] analysis is a way to analyze how often
+[23:26] letters in a text appear and compare
+[23:30] those frequencies with the frequencies
+[23:32] of letters in a specific language. If
+[23:34] you're only substituting individual
+[23:35] letters using the same algorithm, the
+[23:37] most frequent letters will stand out.
+[23:41] Also, if you know it's a ROT type of
+[23:42] cipher, you can also brute force it.
+[23:45] That is, try all possible combinations
+[23:47] as there are only 25 of them. Basically,
+[23:50] the number by which you're shifting the
+[23:52] letters becomes the key. And the key
+[23:54] space, that is the possible number of
+[23:56] keys available. It's not very big, 25
+[23:59] out of 26 letters of the alphabet.
+[24:01] That's because if you shift by 26
+[24:03] positions,
+[24:05] you end up in the same place and you get
+[24:06] the same text. You knew that already,
+[24:09] right?
+[24:10] Another example is the Vigenere cipher,
+[24:13] which is a polyalphabetic cipher. While
+[24:16] this one is not as vulnerable to
+[24:17] frequency analysis because you're not
+[24:19] replacing the same letter twice with the
+[24:21] same replacement letter, it can be
+[24:23] analyzed with period analysis, which
+[24:26] examines the frequency based on how
+[24:28] often the key repeats over an entire
+[24:30] text. If you want to use the most secure
+[24:33] type of substitution cipher, you need to
+[24:35] use a one-time pad. A one-time pad is a
+[24:37] way to replace each letter or bit of
+[24:40] your message with a different one, but
+[24:42] using a different alphabet for each
+[24:44] letter. For example, you can use a
+[24:46] series of random numbers as your key
+[24:49] and then add it to your message using a
+[24:50] math formula. The best thing about
+[24:53] one-time pads is that they are
+[24:54] unbreakable if you use them correctly
+[24:56] because there is no type of analysis
+[24:58] that can be done. Since the key is as
+[25:00] long as the message itself, there is no
+[25:02] frequency or period analysis to be made
+[25:05] as the key never repeats itself and
+[25:07] breaking the key of the one-time pad is
+[25:10] the same as breaking the encrypted
+[25:11] message itself and decoding it. Okay?
+[25:14] But the one-time pad must be randomly
+[25:16] generated, must be physically protected
+[25:18] against disclosure, and only used once.
+[25:21] One-time pads are very powerful but also
+[25:23] very impractical. They're hard to make,
+[25:25] hard to distribute and protect. They
+[25:27] also require very long keys, which are
+[25:29] not convenient for very long messages,
+[25:32] and they're only suitable for
+[25:33] very short and very important messages.
+[25:35] Or like we'll see when talking about
+[25:37] asymmetric encryption, they can be used
+[25:39] to negotiate a secure communication
+[25:42] channel, which afterwards will use a
+[25:45] different encryption technique more
+[25:46] adequate for large amounts of data.
+[25:49] If you want to use a long key without a
+[25:52] hassle of a one-time pad, you can use a
+[25:54] running key cipher.
+[25:57] A running key cipher is a way to use a
+[25:59] long text that you and your recipient
+[26:01] already have as your key. For example,
+[26:04] you can use a book or an article as your
+[26:06] key. Basically, it's just like the
+[26:08] one-time pad but without the random
+[26:10] generation part, which means of course
+[26:12] that in theory, it is easier to break.
+[26:15] But also easier to communicate and
+[26:17] implement.
+[26:18] And it relies just a bit on security
+[26:21] through obscurity, unfortunately. You're
+[26:23] assuming that people will not know that
+[26:26] you're using Dostoevsky's
+[26:28] Crime and Punishment as the key to your
+[26:31] message, but everyone knows or can
+[26:33] potentially find and know the key.
+[26:35] Next, block ciphers and stream ciphers
+[26:37] are two ways to classify ciphers based
+[26:39] on how they operate on the message.
+[26:41] Block ciphers work on chunks or blocks
+[26:44] of the message, while stream ciphers
+[26:46] work on one character or bit of the
+[26:48] message at a time.
+[26:50] Block ciphers are good for encrypting
+[26:52] large messages that have a fixed length
+[26:54] and for those situations when we know
+[26:55] exactly how much data we need to
+[26:57] encrypt, like when we already have the
+[26:59] files ready waiting on the disk to be
+[27:01] encrypted. Uh they can use different
+[27:03] algorithms to rearrange or replace the
+[27:06] blocks of the message, but mostly what
+[27:07] they do is combine over and over
+[27:10] transpositions and substitutions because
+[27:13] those two are pretty much all you can do
+[27:15] with a data set without irreversibly
+[27:17] destroying it.
+[27:19] Stream ciphers, on the other hand, are
+[27:21] good for encrypting data streams that
+[27:23] they keep coming and coming, right? Uh
+[27:26] that have a variable length or when we
+[27:28] don't know exactly how much data we need
+[27:30] to encrypt or it's not entirely
+[27:32] available yet.
+[27:33] Think VPN connections. Okay, we don't
+[27:36] know how long the connection is going to
+[27:38] last and how many bits are going to
+[27:39] travel over the VPN, but we need to
+[27:42] encrypt it in real time as traffic
+[27:44] arrives, all right? The same principle
+[27:46] applies to a streaming Netflix movie.
+[27:50] You start watching the movie, but your
+[27:51] TV only downloads or caches like for the
+[27:54] first 5% of the movie or the next 5
+[27:57] minutes or so. You still need to decrypt
+[27:59] it in real time as the data flows in and
+[28:02] as you continue watching the the movie
+[28:04] or the episode. Uh Caesar cipher, for
+[28:07] example, is a stream cipher. Okay, we
+[28:09] don't need to know the entire message to
+[28:11] encrypt it. We just need to know what to
+[28:13] do with each letter or bit or byte that
+[28:16] arrives in, right? One by one.
+[28:19] Finally, one extra idea to mention here,
+[28:21] cryptographic algorithms rely on two
+[28:23] principles for encryption, confusion and
+[28:26] diffusion.
+[28:28] So, to avoid confusion, let's define
+[28:30] confusion.
+[28:31] Confusion, in the context of uh
+[28:33] cryptanalysis, is a way to make the
+[28:36] connection between the plain text and
+[28:38] the key very complicated.
+[28:41] So, that assuming that someone has
+[28:43] access to the encryption mechanism, if
+[28:45] they try to encrypt different types of
+[28:48] plain text, no matter how long they keep
+[28:51] experimenting and doing that,
+[28:53] they still won't be able to deduce
+[28:55] anything about the key, which is great
+[28:57] because this defeats cryptanalysis.
+[29:00] Diffusion is a way to make the effect of
+[29:03] the plain text on the ciphertext
+[29:05] as widespread as possible. In other
+[29:08] words, changing even one bit in the
+[29:11] clear text should change a lot more
+[29:14] bits, if not the entire resulting
+[29:16] ciphertext. Otherwise, if only small
+[29:18] portions of the ciphertext are affected,
+[29:21] it might make the cryptanalysis process
+[29:23] easier and crackers could deduce some
+[29:25] patterns about how the key is used or
+[29:27] even what value it has.
+[29:30] So, let's talk about symmetric key
+[29:31] encryption. If you want to encrypt some
+[29:33] data, you need to choose an algorithm
+[29:35] and an encryption key. But, as we said
+[29:36] before, you don't need to keep your
+[29:38] cipher algorithm secret. In fact, it's
+[29:40] better to make it public and let other
+[29:41] people review it and test it for flaws.
+[29:44] This way, you can make sure your
+[29:46] algorithm is strong and secure. Now, of
+[29:48] course, with time, some people might
+[29:50] discover vulnerabilities in some
+[29:52] algorithms. If they can prove that those
+[29:54] flaws make them easier to break, then
+[29:56] those algorithms become deprecated
+[29:58] because they are going to be considered
+[30:01] unsafe. Note that deprecating an
+[30:03] algorithm means nothing more than simply
+[30:06] declaring the fact that an algorithm is
+[30:09] considered unsafe. Nobody will stop you
+[30:12] from implementing it further if you
+[30:13] choose to be not so security conscious.
+[30:17] The key is also what makes your cipher
+[30:19] hard to break. The longer the key, the
+[30:21] more possible combinations there are for
+[30:23] the ciphertext. The more combinations,
+[30:25] the more time and effort it takes for
+[30:27] the attackers to try them all.
+[30:29] But, the key length is not fixed. It
+[30:31] changes with the technology and the
+[30:33] threats. As computers get faster and
+[30:35] smarter, they can try more combinations
+[30:37] in less time. As attackers get more
+[30:39] skilled and motivated, they can use more
+[30:41] techniques and resources to crack your
+[30:43] cipher. So, that means you have to use
+[30:45] longer keys to stay ahead of them.
+[30:48] For example, in the past, a 56-bit key
+[30:51] was enough to protect your data with
+[30:53] DES, Data Encryption Standard algorithm.
+[30:56] But now, a 56-bit key is considered to
+[30:59] be much too short and easy to break with
+[31:01] modern computers and methods.
+[31:03] That's why modern symmetric ciphers use
+[31:06] at least a 128-bit
+[31:08] key to protect your data.
+[31:10] As you already know, symmetric key
+[31:12] algorithms are ways to use the same key
+[31:14] to encrypt and decrypt your messages.
+[31:16] Symmetric algorithms are very fast and
+[31:18] efficient because they are, well, pretty
+[31:21] simple. Just a bunch of transpositions
+[31:23] and substitutions made according to a
+[31:25] specific key, but they also have some
+[31:28] drawbacks. Here are some of them.
+[31:31] First of all, key distribution is a
+[31:32] problem with symmetric encryption. You
+[31:34] have to find a secure way to share the
+[31:35] secret key with the one you're sending
+[31:37] the encrypted love letter to before
+[31:39] communicating.
+[31:40] If you don't have a secure channel yet,
+[31:42] you have to use an offline method such
+[31:44] as meeting in person or sending it
+[31:46] through a different person, different
+[31:48] channel, carrier pigeon, whatever. It's
+[31:51] called out-of-band communication.
+[31:54] Another problem is non-repudiation. It's
+[31:56] simply not possible. You cannot prove
+[31:58] who sent or received the message because
+[31:59] anyone who has the secret key can
+[32:01] encrypt or decrypt it. And you can
+[32:03] always deny having sent the message
+[32:05] because you are not the only one who
+[32:06] knows the symmetric key, and nobody can
+[32:08] say otherwise.
+[32:10] Scalability is an issue, too. It's hard
+[32:12] to communicate with many people using
+[32:13] symmetric key algorithms.
+[32:15] You have to either share a different
+[32:17] secret key with each person or group you
+[32:20] want to talk to, or use the same secret
+[32:22] to communicate to everyone.
+[32:24] The problem here is that when too many
+[32:26] people know about the key,
+[32:28] everyone knows about the key, so you
+[32:29] could just as well stop using
+[32:31] encryption.
+[32:33] Another problem is when key regeneration
+[32:35] is necessary. You have to change the
+[32:37] secret key often, especially if someone
+[32:39] leaves the trusted group or if the key
+[32:41] is compromised. Then you start all over
+[32:43] with the problems that we just mentioned
+[32:45] with key distribution and scalability.
+[32:47] Now with asymmetric key algorithms,
+[32:50] here's where encryption really becomes
+[32:52] interesting. There's a lot of math
+[32:54] involved here, but we're not going to
+[32:56] going that deep. Uh long story short,
+[32:58] with asymmetric encryption, we use two
+[33:00] different keys to lock and unlock
+[33:02] messages. One key is public, which means
+[33:05] that you can share it with anyone. I
+[33:06] know, it sounds weird at first sight,
+[33:08] but this is how it's designed to work.
+[33:10] The other key is private, which means
+[33:12] you keep it to yourself and never share
+[33:14] it, ever. But here's the catch. You
+[33:16] cannot use the same key to lock and
+[33:19] unlock a message.
+[33:21] You have to use the opposite key. So if
+[33:23] you use the public key to lock a
+[33:25] message, you need the private key to
+[33:26] unlock it and vice versa.
+[33:29] This might sound weird, like some
+[33:31] awkward rules for a Dungeons and Dragons
+[33:33] game, but these two keys create some
+[33:35] very interesting scenarios. For example,
+[33:39] secure communication looks like this.
+[33:41] Alice writes a message and encrypts it
+[33:43] with Bob's public key.
+[33:46] She knows Bob's public key because it's,
+[33:49] well, public. Bob could just tell his
+[33:51] public key to anyone. He could send it
+[33:53] over email. He could post it online for
+[33:55] everyone to see it, anywhere.
+[33:57] Then Alice sends the message to Bob. Now
+[34:00] Bob receives the message. The message is
+[34:02] encrypted with his public key and
+[34:04] decrypts it with his private key.
+[34:07] He is able to do this because he is the
+[34:09] sole owner of his private key. If Bob
+[34:12] wants to reply, he does so in reverse,
+[34:15] using Alice's public key to encrypt his
+[34:17] message because Alice is the only one
+[34:19] who can decrypt the message using her
+[34:21] private key.
+[34:23] On the other hand, authentication
+[34:25] can look like the next scenario when
+[34:27] implemented with asymmetric keys.
+[34:29] Alice wants to prove her identity to
+[34:32] Bob, so she prepares a description of
+[34:34] her identity and encrypts it with her
+[34:37] private key.
+[34:39] Then she sends that encrypted identity
+[34:40] to anyone, including Bob. Bob or anyone
+[34:43] else now can use Alice's public key to
+[34:46] decrypt her identity description and
+[34:48] thus confirm Alice's identity.
+[34:51] Why is this trustworthy? Because if you
+[34:54] or anyone else who has Alice's public
+[34:56] key can decrypt a message coming from
+[34:57] Alice, then we can be sure that the
+[35:00] message was just encrypted with Alice's
+[35:02] private key. And because nobody else has
+[35:04] or should have Alice's private key,
+[35:07] there you go. Now we can trust that we
+[35:09] are indeed talking to Alice and not to
+[35:11] an impostor. In other words, we have
+[35:14] authenticated Alice. The second scenario
+[35:17] is a basically a very simplified
+[35:18] description of a digital signature and
+[35:21] how they work. Only the owner can create
+[35:23] a digital signature using his or her
+[35:25] private key, but anyone can validate
+[35:27] that digital signature using the owner's
+[35:30] public key.
+[35:31] What about scalability? How many keys do
+[35:33] we need so that in a group of people
+[35:35] everyone can communicate with everyone?
+[35:37] The answer is n * (n - 1) / 2. We need a
+[35:43] key pair for every potential pair of
+[35:45] individuals in a group.
+[35:47] Another cool thing about asymmetric
+[35:49] cryptography is that it can also prove
+[35:51] who sent the message and that it hasn't
+[35:53] been tampered with. This is called the
+[35:55] digital signature technology, which we
+[35:57] briefly covered a moment ago. Basically,
+[35:59] if Bob wants to show everyone that he
+[36:01] wrote a message, he first creates a
+[36:03] short summary of the message using a
+[36:05] special function called a hashing
+[36:06] function. We'll talk more about this
+[36:08] later. Then he encrypts that hash or
+[36:11] digest with his private key and attaches
+[36:14] it to the message. Anyone who wants to
+[36:16] check the signature just decrypts the
+[36:18] summary with Bob's public key and
+[36:20] compares it with the original message.
+[36:23] If they match, then they know that Bob
+[36:25] wrote the message and that nobody
+[36:27] changed the message along the way
+[36:28] because otherwise the hashes would not
+[36:30] match.
+[36:31] The pros of asymmetric encryption are as
+[36:33] follows. You don't have to share the
+[36:35] keys because each two individuals will
+[36:37] use a separate set of keys, so no key
+[36:39] sharing needs to happen.
+[36:41] You only need to change your keys if
+[36:43] someone steals your private key, so you
+[36:46] don't have to change everybody else's
+[36:48] keys. Otherwise, you can keep them using
+[36:49] them forever.
+[36:51] It can provide integrity,
+[36:53] authentication, and non-repudiation
+[36:55] because we have authentication of peers.
+[36:58] It's easy to distribute keys. You just
+[37:00] need to share your public keys with
+[37:02] anyone who wants to talk to you by any
+[37:04] means. No one can figure out your
+[37:06] private key from your public key, and
+[37:08] since the public keys can be transmitted
+[37:10] over any medium, it doesn't matter how
+[37:12] you share those. Any method is okay. You
+[37:14] don't have to secure that type of
+[37:16] transmission.
+[37:17] And lastly, you don't need to know or
+[37:19] trust anyone beforehand. You can start
+[37:21] communicating securely with anyone who
+[37:23] has a public key.
+[37:26] The main drawback of asymmetric
+[37:27] cryptography is that it's slow compared
+[37:29] to symmetric cryptography. That's why in
+[37:32] most cases when we need to transfer more
+[37:34] data, we use both types of encryption.
+[37:36] We use asymmetric cryptography to
+[37:38] exchange a secret symmetric key and then
+[37:40] use that symmetric key to bulk encrypt
+[37:42] the rest of the data.
+[37:44] Oh, and also with asymmetric encryption,
+[37:46] the maximum size of the message that can
+[37:48] be encrypted is limited by the size of
+[37:50] the key. So, it actually acts like a
+[37:52] one-time pad if you think about it.
+[37:55] That's the same limitation we had with
+[37:57] one-time pads. So, even though the keys
+[37:59] in asymmetric algorithms are much longer
+[38:01] like 2048 bits or 4096 bits,
+[38:05] and they are long enough to negotiate a
+[38:07] symmetric encryption key or other
+[38:09] authentication parameters, they are
+[38:11] obviously insufficient for file
+[38:13] encryption, file transfers, streaming,
+[38:16] or VPN encryption.
+[38:17] Now, hashing functions are also
+[38:19] cryptographic functions that take a
+[38:21] variable length input and produce a
+[38:24] fixed length output. For example, you
+[38:27] can feed them a long text like the
+[38:29] entire Harry Potter series and they will
+[38:32] spit out the short code like 64 or 128
+[38:35] bits. That's pretty impressive, right?
+[38:38] Now, they are also one-way which means
+[38:41] that you cannot reverse them. You cannot
+[38:43] take that code and get back the original
+[38:45] text. Pretty obvious that you cannot
+[38:47] rewrite the entire Harry Potter series
+[38:50] out of 128 bits.
+[38:52] So, hashing functions present a pretty
+[38:54] nifty math trick. But, the big question
+[38:57] here is why does this matter? Well,
+[38:59] here's why.
+[39:01] Hashes are very useful for many things,
+[39:02] especially for storing passwords.
+[39:04] Instead of storing your actual password
+[39:06] in the database, you can store its hash.
+[39:09] That way, even if someone hacks into the
+[39:10] database, and we all know that data
+[39:12] breaches happen every day, they won't be
+[39:14] able to see your password. They will
+[39:16] only see a bunch of gibberish that they
+[39:18] cannot use or log in as you. Of course,
+[39:20] you still need to choose a strong
+[39:22] password that is hard to guess or crack.
+[39:24] This way, when checking for
+[39:25] authentication credentials, you don't
+[39:26] compare passwords anymore, but instead
+[39:28] you compare hashes. You calculate the
+[39:31] hash of the password that the user
+[39:32] provided and compare it with the stored
+[39:34] hash. If they match, you can confirm
+[39:37] that the user provided a valid password
+[39:39] even if you never get to see or know,
+[39:42] receive what the user's password
+[39:45] actually was.
+[39:47] Hashes are also good for ensuring
+[39:48] integrity. You can also use hashing
+[39:50] functions to make sure your data hasn't
+[39:52] been changed or corrupted. For example,
+[39:54] if you download a file from the
+[39:55] internet, you can check its hash against
+[39:57] the one provided by the source. And many
+[39:59] download sites provide you with the hash
+[40:01] along the actual file. If they match,
+[40:03] then you know that the file is
+[40:04] authentic, it's intact. If they don't
+[40:06] match, then someone might have tampered
+[40:08] with the file and you should not trust
+[40:09] the file.
+[40:10] There are many examples of hashing
+[40:11] functions, but some of the most popular
+[40:13] ones are MD5, Message Digest 5, and SHA,
+[40:17] S-H-A, a secure hashing algorithm. Also,
+[40:21] I want to make something very clear.
+[40:22] Hashing is not encryption. It might also
+[40:25] change your data just like encryption,
+[40:27] but it's not encryption. Encryption is a
+[40:29] two-way process that allows you to
+[40:31] encrypt and decrypt that data using some
+[40:34] secret key. So, you can get your
+[40:36] original data back. Hashing is a one-way
+[40:38] process that does not use any keys, at
+[40:42] least not for encryption, and does not
+[40:44] allow you to recover the original data.
+[40:46] Hashing is not reversible, and it should
+[40:48] never be.
+[40:50] The modes in which symmetric algorithms
+[40:52] operate are the actual operations
+[40:54] executed to encrypt data, or at least
+[40:56] how these operations are structured.
+[40:57] Again, at their roots, these methods
+[40:59] rely on transpositions and
+[41:02] substitutions. But, the way the chunks
+[41:04] of data are processed and chained define
+[41:07] the following modes of operations. So,
+[41:09] let's put on our nerdy glasses and talk
+[41:12] about the following modes. The first one
+[41:14] is electronic codebook, ECB mode. This
+[41:18] is the simplest and the least secure
+[41:19] mode. It just encrypts each block of
+[41:22] data with the same key without any
+[41:23] variation or randomness. This means that
+[41:25] if you encrypt the same block twice, you
+[41:27] get the same output twice. It's
+[41:29] predictable, and anyone who is analyzing
+[41:32] your encrypted data can figure out
+[41:34] easily how you've encrypted it. And the
+[41:36] more blocks they have access to, the
+[41:37] better the chances for them to break
+[41:39] that encryption.
+[41:40] Cipher block chaining, CBC mode, is a
+[41:43] more secure and more complex mode. It
+[41:45] encrypts each block of data with the
+[41:47] key, but it also mixes it additionally
+[41:49] with the previous block of encrypted
+[41:51] data using a mathematical operation
+[41:54] called an XOR, an exclusive or. This
+[41:56] makes each block unique and dependent on
+[42:00] the previous one. It somehow resembles
+[42:03] the way blockchain works, but in a much
+[42:06] simpler manner. It also uses an
+[42:08] initialization vector, which is the
+[42:09] random number that is used to start the
+[42:11] chain as the first block has no previous
+[42:14] block to use as an input, but instead
+[42:16] uses an initialization vector.
+[42:19] Uh cipher feedback CFB mode is a
+[42:21] streaming cipher version of CBC mode. It
+[42:24] means that it can encrypt data as it is
+[42:26] produced in real time without waiting
+[42:29] for a whole block to be filled. It uses
+[42:31] memory buffers of the same block size as
+[42:33] CBC mode and encrypts them as they
+[42:36] become full. It also uses an IV and
+[42:39] chaining just like CBC mode. The
+[42:41] difference is that it works with
+[42:43] real-time data instead of pre-existing
+[42:44] data.
+[42:46] Output feedback OFB mode is another
+[42:48] streaming cipher mode similar to CFB
+[42:50] mode. However, instead of mixing the
+[42:53] encrypted data with the previous block
+[42:55] of encrypted data, it mixes it with a
+[42:57] seed value. The seed value is derived
+[43:00] from an IV for the first block.
+[43:03] Counter CTR mode is yet another
+[43:06] streaming cipher mode similar to OFB
+[43:08] mode. Instead of deriving the seed
+[43:10] value, it uses a simple number counter
+[43:13] that increments for each block and it is
+[43:15] added into the encryption process. This
+[43:17] makes it faster and easier to implement
+[43:20] and because counting is easy to assume,
+[43:22] so we know what the values should be.
+[43:24] We don't really start from zero, but
+[43:26] instead from a nonce, a number used
+[43:28] once.
+[43:29] The last two include the following.
+[43:32] Galois counter mode GCM takes the
+[43:34] standard counter mode of encryption and
+[43:36] adds data authenticity controls to the
+[43:38] mix providing the recipient an assurance
+[43:41] of the integrity of the data received.
+[43:43] This is done by adding authentication
+[43:44] tags to the encryption process.
+[43:47] And the last one is, brace yourselves,
+[43:49] counter with cipher block chaining
+[43:52] message authentication code mode,
+[43:54] abbreviated, thank god, CCM.
+[43:57] Similar to GCM, but it uses a completely
+[44:01] different combination of modes and
+[44:02] functions. CCM ciphers combine the
+[44:05] counter CTR mode for confidentiality
+[44:08] with the cipher block chaining message
+[44:10] authentication code, CBC-MAC, algorithm
+[44:13] for data authenticity.
+[44:15] Now, long story short, because I know
+[44:17] you instantly forgot what you just read
+[44:20] or listened to in the past minute, GCM
+[44:23] and CCM modes both include data
+[44:26] authenticity in addition to
+[44:27] confidentiality.
+[44:29] They are known as authenticated modes of
+[44:31] encryption. And please remember that GCM
+[44:34] and CCM are authenticated modes of
+[44:36] encryption. The other ones only provide
+[44:39] confidentiality and are therefore known
+[44:42] as unauthenticated modes.
+[44:45] Uh for those of you watching this with
+[44:46] video, the slide here presents the main
+[44:49] symmetric uh modes of operations that we
+[44:52] just covered. Uh for the rest of you,
+[44:54] and actually for all of you, I would
+[44:55] recommend just visit Wikipedia and
+[44:57] search for the block cipher mode of
+[44:59] operation page, which is going to give
+[45:03] you a pretty good graphical
+[45:05] representation of how these blocks are
+[45:08] chained and what exactly is the input
+[45:09] and the output uh on each uh mode of
+[45:12] operation, on each encryption type.
+[45:15] About two main encryption algorithms,
+[45:18] symmetric encryption algorithms, uh
+[45:20] called DES and 3DES.
+[45:23] DES stands for Data Encryption Standard,
+[45:26] and it's a 64 block cipher that has five
+[45:30] modes of operation, the ones that we
+[45:31] just talked about. All of the DES modes
+[45:34] operate on 64 bits of plain text at a
+[45:36] time to generate 64-bit blocks of cipher
+[45:39] text. The key used by DES is 56 bits
+[45:44] long. You might have read in other
+[45:46] places the fact that DES uses 64-bit
+[45:49] keys. It's somewhat correct. The key
+[45:51] provided to the algorithm is a 64-bit
+[45:54] key, but in fact, before the DES process
+[45:57] even starts, every eighth bit of the key
+[46:00] is discarded to produce a 56-bit key.
+[46:04] So, those are the only 56 bits that are
+[46:07] actually used for encryption, hence a
+[46:09] 56-bit key. The remaining eight bits
+[46:12] contain parity information used to
+[46:14] ensure that the other 56 bits are
+[46:16] accurate.
+[46:17] DES uses a long series of exclusive or
+[46:20] operations to generate the ciphertext.
+[46:23] The process is repeated 16 times for
+[46:25] each encryption and decryption
+[46:26] operation. Each of these repetitions is
+[46:29] commonly referred to as a round of
+[46:32] encryption, explaining the statement
+[46:34] that DES performs 16 rounds of
+[46:37] encryption.
+[46:38] DES's 56-bit key is no longer considered
+[46:41] adequate. It can be cracked in a matter
+[46:43] of hours or even minutes by a
+[46:45] brute-force attacks, so even without any
+[46:47] prior knowledge of the plaintext or the
+[46:49] key. That's why an adapted version of
+[46:51] DES, Triple DES, 3DES,
+[46:54] was developed to produce encryption that
+[46:57] is stronger. Interestingly enough, 3DES
+[47:00] is still considered not enough for
+[47:02] current standards.
+[47:03] There are several different variants of
+[47:05] 3DES that each use different numbers of
+[47:08] independent keys.
+[47:09] One variant has three rounds of DES
+[47:12] encryption, and another one has one
+[47:14] round of encryption followed by one
+[47:16] round of decryption and another
+[47:18] encryption round.
+[47:20] Mathematically, DES EEE3 and DES EDE3,
+[47:25] so three encryptions or one encryption,
+[47:27] one decryption, one encryption,
+[47:29] should have an effective key length of
+[47:31] 168 bits, which is three times the
+[47:34] length of DES. However, known attacks
+[47:37] against the algorithm reduce the
+[47:39] effective strength to about 112 bits,
+[47:42] which is still not enough to resist
+[47:44] brute-force attacks.
+[47:46] Now, if you're wondering why the heck do
+[47:49] we have a decryption operation as a
+[47:51] second phase in an encryption operation,
+[47:54] that one is there as a legacy
+[47:56] implementation back when people who
+[47:58] introduced 3DS were trying to make it
+[48:02] backwards compatible with systems
+[48:04] capable of working in hardware only with
+[48:06] DES. Now, theoretically a device that
+[48:09] was able to implement DES was able to
+[48:12] implement it in two ways, encryption and
+[48:14] decryption. In nowadays implementations,
+[48:17] the second decryption operation does not
+[48:19] cancel the first encryption one, but
+[48:21] instead works just an additional step of
+[48:23] scrambling the data because it uses a
+[48:25] different part of the key. So, basically
+[48:28] it acts also as an encryption operation,
+[48:30] but can use the decryption engine in
+[48:33] some legacy implementations.
+[48:35] All right, you should know about other
+[48:37] symmetric encryption ciphers as well.
+[48:39] I would unfortunately have to mention
+[48:41] here that you need to know the internal
+[48:43] details of each, like the number of bits
+[48:46] in the keys and block size. It's quite
+[48:48] likely the exam will ask you about this,
+[48:50] and you should also at least be able to
+[48:52] recognize them as symmetric encryption
+[48:54] ciphers in the list.
+[48:57] First, we have the International Data
+[48:58] Encryption Algorithm, abbreviated IDEA.
+[49:02] It's a block cipher that was developed
+[49:04] in response to complaints about how
+[49:05] crappy the DES algorithm was.
+[49:08] Uh so, DES used a 56-bit key, but IDEA,
+[49:11] on the other hand, uses a 128-bit
+[49:14] key. The key is broken up in a series of
+[49:17] for operations into 16-bit subkeys. IDEA
+[49:20] is capable of operating in the same five
+[49:23] modes used by DES.
+[49:25] Blowfish, funny name I know, is a block
+[49:28] cipher that can handle 64-bit blocks of
+[49:30] text with keys of any length between 32
+[49:34] and 448 bits.
+[49:37] It is much faster than the others, DES
+[49:40] and IDEA, and it's free for anyone to
+[49:42] use. Blowfish encryption is widely
+[49:45] adopted in many commercial products and
+[49:47] operating systems, and there are many
+[49:49] libraries available for software
+[49:51] developers. By the way, all these public
+[49:53] algorithms have libraries available
+[49:55] already, so you don't really need to
+[49:57] understand and reprogram the math
+[49:59] involved. You need don't need to
+[50:01] reinvent the wheel, so to say, and
+[50:03] re-implement them if you need to use
+[50:04] them in your software.
+[50:07] Another one is Skipjack. It's a block
+[50:10] cipher that operates on 64-bit blocks of
+[50:12] text with an 80-bit key and supports
+[50:15] four modes of operation. The unique
+[50:18] feature of Skipjack is that it allows an
+[50:21] escrow of encryption keys by two
+[50:23] government agencies, NIST and the
+[50:24] Treasury. I know this is more political
+[50:27] than technical, but this means that law
+[50:29] enforcement can obtain the key with
+[50:31] legal authorization and decrypt the
+[50:32] communications between the parties
+[50:34] involved. However, as you can imagine,
+[50:36] this feature also made Skipjack pretty
+[50:39] unpopular among the cryptographic
+[50:41] community who did not trust the escrow
+[50:43] procedures.
+[50:45] Rivest ciphers are a series of symmetric
+[50:48] ciphers created by Ron Rivest, the R in
+[50:51] RSA.
+[50:52] They include RC4, RC5, and RC6, but they
+[50:56] are not related to each other.
+[50:58] RC4 is a stream cipher that was very
+[51:01] widely used in protocols over wireless,
+[51:03] such as WEP, WPA, uh even SSL, and then
+[51:07] later early versions of TLS. But it is
+[51:11] now insecure due to a series of attacks.
+[51:14] RC5, on the other hand, is a block
+[51:16] cipher that improved on an older
+[51:17] algorithm called RC2, but it was cracked
+[51:21] as well. RC6 is a block cipher that was
+[51:25] a candidate for AES, the Advanced
+[51:27] Encryption Standard, but it did not get
+[51:29] selected and it is not widely used
+[51:31] today. Tough second place. So, speaking
+[51:34] of AES, Advanced Encryption Standard, it
+[51:37] is the new boss of block ciphers, taking
+[51:40] over from the old and tired DES.
+[51:42] AES can work with keys of 128,
+[51:46] 192, or 256 bits,
+[51:50] but it only likes blocks of 128 bits.
+[51:53] The longer the key, the more rounds of
+[51:54] encryption needs, 10, 12, or 14
+[51:57] respectively.
+[51:59] AES is also the law for US government
+[52:01] data that is not top secret, but still
+[52:03] needs some protection.
+[52:05] CAST, c a s t, is a family of block
+[52:09] ciphers. There are two versions of CAST,
+[52:11] CAST 128 and CAST 256.
+[52:15] CAST 128 can use keys from 42 to 128
+[52:19] bits and blocks of 64 bits.
+[52:22] It can do either 12 or 16 rounds of
+[52:24] encryption. CAST 256 can use keys from
+[52:28] 128 to 256 bits and blocks of 128 bits.
+[52:34] It does a whopping 48 rounds of
+[52:37] encryption.
+[52:38] CAST 256 tried to be the AES
+[52:41] replacement, but it didn't make the cut.
+[52:45] Finally, Twofish is another block cipher
+[52:47] created by Bruce Schneier,
+[52:49] who also made Blowfish.
+[52:51] This guy really liked fish.
+[52:53] It was also a contender for AES. Twofish
+[52:56] works on blocks of 128 bits and can use
+[53:00] keys up to 256 bits.
+[53:02] It does 16 rounds of encryption and it
+[53:05] has some tricks up its sleeve. It uses
+[53:08] pre-whitening and post-whitening, which
+[53:11] are not dental treatments, but ways of
+[53:14] XORing the data, so applying exclusive
+[53:16] or operations to the data with subkeys
+[53:19] before and after encryption. Basically,
+[53:22] they're just additional encryption
+[53:24] rounds.
+[53:26] Well, when it comes to managing
+[53:27] symmetric keys, one of the biggest
+[53:29] challenges of symmetric encryption is
+[53:30] how to get the secret keys to the people
+[53:32] who need them. There are three main
+[53:34] methods for this. First, offline
+[53:36] distribution,
+[53:37] public key encryption,
+[53:39] and a guy called Diffie-Hellman that you
+[53:41] can hire to transport your keys. Now,
+[53:43] just kidding about this one.
+[53:45] So, let's take them one by one. Offline
+[53:47] distribution means that you physically
+[53:49] give the key to the other person like on
+[53:51] a piece of paper or a USB drive or some
+[53:53] out-of-band communication channel. Uh
+[53:55] it's important to use a different
+[53:57] channel than the one on which you are
+[53:58] planning to communicate over as using
+[54:01] the main communication channel is simple
+[54:02] but risky because someone might
+[54:04] intercept your key along with the
+[54:05] encrypted communication.
+[54:07] Next, we have public key encryption.
+[54:09] This means that you use an asymmetric
+[54:11] encryption to protect the communication
+[54:13] channel over which you send the
+[54:15] symmetric keys.
+[54:17] So, you use asymmetric encryption to set
+[54:20] up a secure connection, then you
+[54:21] exchange a secret key over it. Then you
+[54:24] switch to symmetric encryption to
+[54:26] encrypt the rest of the data that is
+[54:27] being sent. This is convenient but
+[54:30] requires a public key infrastructure to
+[54:32] work. This is actually how most
+[54:34] encryption happens these days over the
+[54:35] internet and in VPN connections.
+[54:39] Last one is Diffie-Hellman key exchange
+[54:41] means that you use a clever math trick
+[54:43] to create a secret key without ever
+[54:46] sending it over the network. You only
+[54:48] exchange some numbers that are related
+[54:50] to the key but never the key itself.
+[54:52] Each peer performs its own calculations
+[54:55] and they both end up with the same
+[54:56] resulting numerical value which is going
+[54:59] to be the encryption key without ever
+[55:01] sending this encryption key in clear
+[55:03] text over the communication channel.
+[55:05] This is useful but just a bit complex
+[55:07] and you'll learn more about it later.
+[55:09] So, here are some general tips for
+[55:10] storing and destroying your symmetric
+[55:12] keys. Don't keep your key where you keep
+[55:14] your data. Pretty much the same idea
+[55:16] behind don't leave your car key in the
+[55:19] ignition, right? Anyone who breaks into
+[55:21] your system can get both, the data and
+[55:23] the keys.
+[55:24] For extra security, split your key in
+[55:27] half and give each half to a different
+[55:29] person. They have to work together to
+[55:31] use the key. This is called split
+[55:32] knowledge and it prevents one person
+[55:34] from going rogue.
+[55:36] Third, when someone leaves or changes
+[55:38] roles, change your keys and re-encrypt
+[55:41] your data. This way, they cannot access
+[55:43] anything they shouldn't.
+[55:45] As for key storage mechanisms, you have
+[55:47] two main options for storing your keys,
+[55:49] software or hardware. Each has its pros
+[55:51] and cons. Software storage means you
+[55:53] keep your keys as digital files on a
+[55:55] system. You can use special key
+[55:57] management applications to protect them
+[55:59] such as
+[56:00] encrypting them with another key. This
+[56:02] is easy and cheap, but it also means
+[56:04] that your keys are vulnerable to hacking
+[56:06] or malware.
+[56:07] Hardware storage, on the other hand,
+[56:09] means that you use dedicated devices to
+[56:11] store and manage your keys. These can be
+[56:13] personal devices like flash drives,
+[56:15] smart cards, or enterprise devices like
+[56:18] hardware security modules, HSMs. Those
+[56:21] are more secure and reliable than
+[56:23] software, but they also cost more and
+[56:25] require more maintenance.

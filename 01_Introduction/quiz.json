@@ -1,0 +1,57 @@
+[
+  {
+    "question": "An administrator is reviewing a security policy and notices that the password policy is outdated. The administrator's primary role is technical. If they want to align with the CISSP philosophy, which of the following is their best initial step?",
+    "options": [
+      "Modify the password complexity settings on the Active Directory Domain Controller.",
+      "Draft a revised policy and present it to the IT Security Manager for approval.",
+      "Inform the senior leadership team directly of the security gap.",
+      "Consult the security baseline documentation and wait for the annual review cycle."
+    ],
+    "correctIndex": 1,
+    "explanation": "In CISSP, policies drive technical configurations. The administrator should follow the chain of command and governance processes. Drafting a revised policy and presenting it to the manager aligns with a structured, governance-first approach. Making direct changes without authorization or policy updates bypasses change management and governance (technician mindset)."
+  },
+  {
+    "question": "The CISSP certification is often described as a \"Jack of all trades, master of none.\" What is the main implication of this statement for candidates preparing for the exam?",
+    "options": [
+      "They must be able to configure firewalls, write access lists, and perform penetration tests.",
+      "They should focus on a single domain in-depth, as the exam allows specialization.",
+      "They must understand a broad range of security concepts and how they integrate to support the business.",
+      "They need to memorize command-line commands for all major security platforms."
+    ],
+    "correctIndex": 2,
+    "explanation": "The CISSP covers 8 distinct security domains. The exam evaluates your understanding of security principles at a high level and how they align with business operations, rather than deep implementation details of any single technology."
+  },
+  {
+    "question": "Which of the following best describes why the CISSP exam is heavily theoretical rather than practical?",
+    "options": [
+      "Hands-on skills are too easy to test in a multiple-choice environment.",
+      "The certification is designed for security architects, managers, and policy makers rather than implementers.",
+      "Theoretical knowledge does not change over time, whereas practical tools do.",
+      "Practical security is the sole responsibility of the operations department."
+    ],
+    "correctIndex": 1,
+    "explanation": "The CISSP is aimed at management, risk advisory, policy design, and security architecture. It prepares professionals to speak with authority on security architecture and management, rather than configure specific vendor products."
+  },
+  {
+    "question": "According to the instructor, even without mastering hands-on skills like running a network scan or writing an access list, what will a CISSP-level candidate primarily be able to do?",
+    "options": [
+      "Independently configure and troubleshoot any vendor's firewall in production.",
+      "Contribute authoritatively to any security design, policy, or architectural discussion.",
+      "Replace the day-to-day work of the security operations team.",
+      "Guarantee that no new security technology will ever surprise them again."
+    ],
+    "correctIndex": 1,
+    "explanation": "The instructor stresses that CISSP places very little pressure on practical implementation skills (such as network scans or access lists). Instead, it entitles you to have an informed opinion on virtually any security-related discussion and to contribute meaningfully to design, policy, and architectural decisions."
+  },
+  {
+    "question": "The instructor notes that after studying CISSP, little should surprise you in security — but only \"for a while, because things change and evolve.\" What does this caveat imply for a certified professional?",
+    "options": [
+      "Once certified, no further study or learning is ever required.",
+      "Security knowledge is static, so the broad foundation never needs refreshing.",
+      "Because technology and threats keep changing, professionals must keep learning to stay current.",
+      "The full CISSP exam must be retaken every single year to remain valid."
+    ],
+    "correctIndex": 2,
+    "explanation": "CISSP provides a broad, durable foundation, but the instructor emphasizes that things change and evolve. Professionals must continue learning to keep pace with new technologies and threats — a principle reflected in (ISC)²'s requirement to earn Continuing Professional Education (CPE) credits to maintain certification."
+  }
+]

@@ -1,0 +1,1419 @@
+[00:08] All right, let's talk about incident
+[00:09] response.
+[00:11] Now, the main reason behind security in
+[00:14] general is to prevent security incidents
+[00:16] from happening in the first place. But,
+[00:18] since we all know by now that security
+[00:21] is a process and not an end product,
+[00:24] incidents will happen from time to time,
+[00:26] even if we did our best to prevent them.
+[00:29] So, first let's define what we mean by
+[00:31] an incident. Now, officially, an
+[00:32] incident is any event that has a bad
+[00:35] effect on the confidentiality,
+[00:38] integrity, or availability of our
+[00:41] assets.
+[00:42] This could include even events like
+[00:43] direct cyber attacks, natural events
+[00:45] like a hurricane or an earthquake, and
+[00:48] even when a construction worker nearby
+[00:50] accidentally cuts a network cable or or
+[00:52] a fiber.
+[00:54] But, here we are mainly interested in
+[00:56] computer security incidents, which are
+[00:58] incidents that are the result of an
+[01:00] attack or the result of bad actions by
+[01:02] users. For example, any attempt to get
+[01:05] inside our network, any attempt to stop
+[01:07] our services, any malware that you find
+[01:09] on a computer, any unauthorized access
+[01:12] of data, or just any way in which your
+[01:14] security policies are violated are
+[01:16] considered computer security incidents.
+[01:18] Actually, that's what we used to define
+[01:21] a security incidents as opposed to a
+[01:22] generic incident. So, a security
+[01:24] incident is an event that violates your
+[01:27] security policy.
+[01:29] We will use the term incident to refer
+[01:31] to computer security incidents from now
+[01:33] on in the session. That's because
+[01:34] companies handle some incidents like
+[01:36] weather events or natural disasters
+[01:38] using other ways like a business
+[01:40] continuity plan or disaster recovery
+[01:42] plan.
+[01:43] Now, back to our security. A company
+[01:44] should have a security policy and an
+[01:46] incident management plan that defines
+[01:48] what an incident and the step to respond
+[01:50] to it are.
+[01:52] It's important to stress that incident
+[01:54] management does not include a
+[01:56] counterattack against the attackers.
+[01:58] Attacking others is a always harmful and
+[02:00] often illegal. Even more, attackers are
+[02:03] hiding behind innocent compromised
+[02:05] identities more often than not. So, just
+[02:08] don't think about it. Don't do it.
+[02:10] Now, the main goal of incident
+[02:12] management is to lower the impact of an
+[02:14] incident on our company. Again, it's not
+[02:16] about avoiding incidents. It's about
+[02:18] what we do when, God forbid, they
+[02:19] happen. Now, to get there, we have a
+[02:21] couple of steps.
+[02:23] Detection is where we confirm that an
+[02:25] incident has occurred or is occurring
+[02:27] right now. We can use a lot of tools to
+[02:29] identify incidents such as logs, alerts,
+[02:31] IDS devices, again which are generating
+[02:34] logs and alerts.
+[02:35] Uh malware scanning reports, alerts for
+[02:38] the use of special privileges, and even
+[02:39] complaints from users. Now, simply
+[02:42] hearing employees say or opening a
+[02:44] trouble ticket saying that a a resource
+[02:46] is inaccessible, it's sluggish, or
+[02:48] something has changed, or something is
+[02:50] something not working as expected might
+[02:52] be an indicator of compromise.
+[02:54] Notice that just because an IT
+[02:55] professional receives an alert from an
+[02:57] automated tool or a user complaint
+[02:59] doesn't always mean that an incident has
+[03:01] happened. Intrusion detection uh often
+[03:04] gives false alarms and end users will be
+[03:07] end users and will complain about
+[03:08] anything that doesn't mean that you
+[03:10] should not take them seriously, but you
+[03:13] need to investigate to filter these uh
+[03:15] events to see if they really are
+[03:17] incidents. Uh many IT professionals are
+[03:19] called first responders for incidents
+[03:21] because we rely on them to know how to
+[03:23] tell the difference between normal IT
+[03:25] problems and security incidents.
+[03:27] The response phase is where we decide
+[03:29] what to do and how to do it after we
+[03:31] verify an incident. This is where we can
+[03:33] isolate and stop the incident from
+[03:35] spreading or causing more damage.
+[03:37] Our response depends on how serious the
+[03:39] incident is. Many companies have a
+[03:40] special incident response team which is
+[03:42] called computer incident response team,
+[03:45] obviously, CIRT or computer security
+[03:48] incident response team, CSIRT.
+[03:51] Uh these people are, well,
+[03:52] quote-unquote, activated when there's a
+[03:54] major security incident. Uh the faster a
+[03:56] company can respond to an incident, the
+[03:59] better chance they have at reducing the
+[04:00] damage. If an incident lasts for hours
+[04:03] or days, the damage is likely to be
+[04:05] bigger
+[04:06] or already done and irreversible. For
+[04:09] example, an attacker may be trying to
+[04:10] get into a customer database. A fast
+[04:12] response can stop the attacker from
+[04:14] getting any useful data, but if the
+[04:15] attacker can access the database for
+[04:17] several hours or days in a row, they
+[04:19] might have already gone home with the
+[04:21] entire database entirely.
+[04:23] Mitigation includes steps to try to
+[04:26] control an incident. Configuration
+[04:28] changes on firewalls, routers, and
+[04:30] switches, access control lists, network
+[04:32] segmentation, those are typical methods
+[04:34] that we use.
+[04:35] The reporting step is where we inform
+[04:38] the relevant parties about the incident.
+[04:39] This can include both people inside and
+[04:41] outside the company. We probably don't
+[04:43] need to report minor malware findings to
+[04:45] the CEO, but we do need to report
+[04:47] serious security breaches to the people
+[04:48] upstairs.
+[04:50] Sometimes, companies have a legal
+[04:52] obligation to report some incidents
+[04:53] outside of the company, especially when
+[04:55] they affect sensitive data. Uh these
+[04:57] laws vary from place to place, but they
+[04:59] all aim to protect the privacy of the
+[05:01] individuals, to protect consumers, and
+[05:04] to set some good standards for financial
+[05:06] practices. Every company has a duty to
+[05:08] know what laws apply to it and to follow
+[05:10] those laws.
+[05:11] Next, recovery is the process of
+[05:13] bringing the systems back to working
+[05:15] state after an incident. Depending on
+[05:16] the severity of the incident, this can
+[05:18] be as simple as restarting the system or
+[05:21] as difficult as rebuilding the system
+[05:22] from scratch.
+[05:23] When rebuilding a system, we need to
+[05:25] make sure that we restore all the data
+[05:26] from the latest backup, and that we
+[05:28] configure the system securely. We also
+[05:30] need to make sure that we have backups.
+[05:34] Something that you should have taken
+[05:35] care of long ago before the incident
+[05:38] happened in the first place.
+[05:40] Remediation is a process of finding and
+[05:42] fixing the root cause of the incident.
+[05:45] Uh this means analyzing the incident and
+[05:47] identifying what allowed the attacker to
+[05:49] succeed. For example, if the attacker
+[05:52] exploited a vulnerability in the web
+[05:54] server,
+[05:56] uh, we need to patch the server and
+[05:57] perhaps implement a patch management
+[05:59] program. If the attacker used an SQL
+[06:01] injection attack, we need to update the
+[06:03] web application and use input validation
+[06:05] techniques such as installing a web
+[06:07] application firewall, for example. And
+[06:09] finally, learn from the incident. Uh,
+[06:11] this is where we review and improve our
+[06:14] incident management process based on the
+[06:15] lessons learned from the incident. You
+[06:18] probably know what this is about.
+[06:19] Documentation, awareness, training,
+[06:22] updating your security policies, and so
+[06:23] on.
+[06:24] Detection and prevention. Now, the best
+[06:27] way to deal with security incidents is
+[06:29] to prevent them from happening in the
+[06:30] first place. Very insightful, I know.
+[06:33] This is where preventive measures come
+[06:35] in. They're designed to block or deter
+[06:37] any unwanted actions that would harm us.
+[06:39] Some more or less obvious examples of
+[06:41] preventive measures include physical
+[06:43] barriers, fences, locks, that restrict
+[06:45] access to the premises or to specific
+[06:47] resources, biometric devices to verify
+[06:50] the identity of users, policies and
+[06:52] procedures, like separation of duties
+[06:54] and job rotation, to reduce the risk of
+[06:56] fraud or abuse, access control and
+[06:58] encryption protect the confidentiality
+[07:00] and integrity of the data, security
+[07:03] awareness trainings, uh, educate the
+[07:04] users and could potentially avoid
+[07:06] incidents from happening due to a
+[07:07] well-informed staff, antivirus software,
+[07:10] firewalls, intrusion prevention,
+[07:12] everything that defends the network from
+[07:14] malicious attacks. Now, preventive
+[07:16] measures are obviously not foolproof.
+[07:19] There's always a possibility that some
+[07:20] incidents will occur despite the
+[07:22] preventive measures. This is exactly why
+[07:25] we need detective measures, which are
+[07:26] exactly the controls designed to
+[07:28] discover or identify any unauthorized
+[07:31] actions that have already happened.
+[07:33] Here's some examples of detective
+[07:34] measures. Security guards, motion
+[07:36] detectors, security cameras, to monitor
+[07:39] the physical environment. They can also
+[07:40] alert the authorities, perhaps the
+[07:42] police or any malicious activities.
+[07:45] Job rotation, mandatory vacation, audit
+[07:48] trails also can detect anomalies in the
+[07:50] way users behave.
+[07:52] Honeypots, honeynets, intrusion
+[07:54] detection systems, uh which besides the
+[07:57] fact that can lure the attackers towards
+[07:59] a honeypot or a honeynet, the ultimate
+[08:01] purpose is still to analyze the attack
+[08:03] and the attacker.
+[08:04] And the violation reports and incident
+[08:06] investigations. These document the
+[08:08] incidents and their impact, which are
+[08:10] also detective measures because they
+[08:11] might uncover more shady business where
+[08:14] you previously thought there might be
+[08:15] none.
+[08:16] Uh one thing to note here is that some
+[08:18] measures can be both preventive and
+[08:19] detective, depending on how they are
+[08:21] used. For example, job rotation can
+[08:23] prevent an employee from abusing their
+[08:25] position for a long time, but it can
+[08:26] also detect any fraud or errors that the
+[08:28] employee has committed.
+[08:30] Let's talk about some basic preventive
+[08:32] measures that you can take to protect
+[08:33] your systems from a lot of attacks. As a
+[08:36] disclaimer, these measures are obviously
+[08:38] not exhaustive, but they are essential.
+[08:40] We'll still talk about them more later
+[08:43] on, but for now, let's get an overview
+[08:44] of what they are and why they're
+[08:45] important. First, keep your systems and
+[08:48] apps up to date, pretty obvious. Apply
+[08:50] patches and security fixes, and ideally
+[08:52] apply them as part of a patch management
+[08:54] program, so that you can track the
+[08:56] status of your environment and quickly
+[08:58] determine which devices have not been
+[09:00] updated and pose a higher risk. Second,
+[09:02] remove or disable unneeded services and
+[09:04] protocols. If you don't need a service
+[09:06] like remote desktop or SSH or whatever
+[09:08] service might be running on a host,
+[09:10] especially if it's a network service
+[09:11] that listens from connections, perhaps
+[09:13] from the outside, from the internet, uh
+[09:15] just shut it down, because it could be a
+[09:17] potential entry point for an attacker.
+[09:19] You can also filter these protocols and
+[09:21] potential services from the perimeter
+[09:24] firewall, for example, if you don't want
+[09:25] to shut them down.
+[09:27] Uh this is also recommended because
+[09:28] services that you don't normally use,
+[09:30] don't normally observe, you don't know
+[09:31] they're there,
+[09:32] it's recommended to you to do this in
+[09:34] order to evaluate their configurations
+[09:36] or check their logs. You know, if
+[09:38] there's a service that you don't use,
+[09:40] you obviously are not going to validate
+[09:42] its config and make sure it's secure.
+[09:44] Third, use intrusion detection and
+[09:46] prevention systems to alert you of any
+[09:48] suspicious or downright malicious
+[09:50] activities. IDS's detect attacks while
+[09:53] intrusion prevention systems IPS's can
+[09:54] take action against attacks. We're not
+[09:56] talking here about retaliation or about
+[09:58] attacking the attacker. Again, we don't
+[10:01] do that, but instead about measures that
+[10:03] can block malicious traffic or isolate
+[10:05] affected endpoints. IPS solutions are
+[10:07] the ones that can also block some
+[10:09] attacks from happening or at least from
+[10:10] spreading, but they require careful
+[10:12] planning during the deployment phase.
+[10:14] Usually, you cannot simply replace an
+[10:16] IDS solution with an IPS one because the
+[10:18] IDS will most likely be located in some
+[10:21] network edge, perhaps analyzing a copy
+[10:24] of the real traffic, while the IPS must
+[10:26] be deployed in line or close to in line,
+[10:29] let's say,
+[10:30] where it can actually block traffic from
+[10:32] passing.
+[10:33] I said close to in line because an
+[10:35] approach of for an IPS might be, for
+[10:37] example, to send a reset packet whenever
+[10:40] it detects a malicious connection.
+[10:42] Obviously, it's not going to stop the
+[10:44] those packets in their traffic path, but
+[10:46] it might break down the connection
+[10:48] before it manages to do something
+[10:50] harmful. Virtual deployments might
+[10:52] benefit from uh software-defined
+[10:54] networking implementations of an IPS
+[10:56] where the IPS might not necessarily have
+[10:58] to be in the traffic path, but could
+[11:00] potentially tell the SDN controller
+[11:02] what, when, and where to apply
+[11:03] restrictions on the network.
+[11:05] Blocking an attack could be as simple as
+[11:07] resetting a TCP connection also in SDN
+[11:10] uh that has no business happening or
+[11:11] tearing down a download when malware is
+[11:14] detected in it. If a source of malicious
+[11:16] traffic is detected, a much better
+[11:17] approach is to dynamically generate and
+[11:20] install the necessary access list
+[11:21] entries that immediately block that
+[11:24] specific traffic from that specific
+[11:26] malicious source from reaching further
+[11:28] into your network.
+[11:30] Fourth, use anti-malware and make sure
+[11:32] it's up to date. Not much to say here,
+[11:34] except that some commercial security
+[11:36] solutions might implement more than one
+[11:38] anti-malware engine in order to apply a
+[11:39] type of defense-in-depth approach. Uh
+[11:41] Cisco Firepower, now known as Secure
+[11:44] Firewall, for example, can implement
+[11:46] three anti-malware scanning engines on
+[11:48] their devices. Fifth, use firewalls
+[11:50] because they should be the first barrier
+[11:52] against malicious traffic. Filtering is
+[11:54] done based on rules and policies, and
+[11:56] many of them have IPS functionality
+[11:58] built into them. So, they might catch a
+[12:00] potential attack even if no specific
+[12:02] regular access rule is configured to
+[12:03] block it. Actually, on dedicated
+[12:06] firewall appliances, you might see that
+[12:07] on on ACL entries, you can choose from
+[12:10] more than just allow or deny actions.
+[12:13] Inspect might be an option as well,
+[12:15] where the traffic is being sent to the
+[12:17] IPS engine for further security rules to
+[12:19] be evaluated. Uh firewalls can be
+[12:22] network-based, which can protect the
+[12:23] entire network,
+[12:24] or host-based, which install on
+[12:27] workstations, like your PC, and protect
+[12:30] just your system. They apply for both
+[12:32] end-user devices, like desktops and
+[12:34] laptops, as well for servers. Same goes
+[12:37] for the cloud. You can have a cloud
+[12:38] firewall, which is also a basically a
+[12:40] network firewall, or a host-based
+[12:42] firewall instead of a installed on a on
+[12:44] a cloud VM or a desktop, a cloud
+[12:46] desktop.
+[12:47] Uh it works exactly the same. The
+[12:48] host-based firewall doesn't even know,
+[12:50] nor does it care that it's running on a
+[12:52] cloud infrastructure.
+[12:54] Finally, have some configuration
+[12:56] management tools and processes in place.
+[12:58] This means that you need to have some
+[12:59] best practices, that you know how to
+[13:01] configure systems in a secure way,
+[13:03] uh without having to figure out by
+[13:05] yourself the required configuration for
+[13:07] every single time for each new device
+[13:08] that you add to your network.
+[13:10] Configuration management makes sure that
+[13:12] your systems are configured according to
+[13:15] your security standards policy, also
+[13:17] according to industry best practices,
+[13:19] and even according to your own custom
+[13:21] baselines.
+[13:22] System management goes one step further
+[13:25] and enables monitoring, health checking,
+[13:28] backup and recovery. Very useful tools
+[13:30] in case of incidents. So, these are just
+[13:32] some basic preventive measures that you
+[13:34] can take to protect against attacks. Of
+[13:36] course, there's no silver bullet that
+[13:38] can stop all attacks, not even a uh
+[13:40] ideal combination of all of these. But,
+[13:42] by applying at least these measures, you
+[13:44] can reduce the risk and the impact of
+[13:46] attacks. And it also shows that you've
+[13:48] properly done your homework.
+[13:51] All right, let's talk about a couple of
+[13:52] basic attack types and methods.
+[13:54] A botnet is a network of compromised
+[13:57] computers that are controlled by an
+[13:59] attacker. Computers in a botnet are
+[14:01] often referred to as bots, hence the
+[14:03] name of botnet or zombies because they
+[14:05] act like robots that follow the commands
+[14:08] of a command and control server.
+[14:10] I know TV series have taught us that
+[14:12] zombies rarely follow orders, but for
+[14:15] the sake of not spending more time on
+[14:16] this,
+[14:17] let's just assume that they do.
+[14:19] By the way, a command and control or C&C
+[14:22] are two similar terms or C2 sometimes
+[14:25] abbreviated. They all mean the same
+[14:26] thing. The entire reason behind the
+[14:29] botnet is that the attacker can instruct
+[14:32] the bots to launch attack on other
+[14:34] systems such as a distributed
+[14:36] denial-of-service attack, sending spam,
+[14:38] sending phishing emails, or even renting
+[14:41] the botnet as a service, botnet as a
+[14:43] service, BaaS,
+[14:45] to other criminals who want to use it
+[14:47] for their own purposes. Yes, uh DDoS as
+[14:50] a service is a real thing that you can
+[14:52] buy. Bots need to periodically contact
+[14:56] the server over some sort of remote
+[14:57] connection that acts both as a heartbeat
+[15:00] for checking which compromised computers
+[15:01] are online because, well, people shut
+[15:04] down their computers from time to time,
+[15:06] infected or not.
+[15:07] And as a channel to receive
+[15:09] instructions. This traffic also happens
+[15:10] to be one of the main methods for
+[15:12] detecting compromised hosts and botnet
+[15:14] activity in an already compromised
+[15:16] network. This command and control
+[15:18] traffic is called beaconing traffic and
+[15:20] it can be very small and tough to
+[15:22] detect. It might even be the equivalent
+[15:25] of a single ping, single packet every 5
+[15:27] minutes, for example, but it usually is
+[15:30] regular, apart from some smart malware
+[15:33] that can randomize this communication
+[15:34] interval.
+[15:35] And is directed to unknown IP addresses
+[15:37] or randomly generated domain names,
+[15:39] which is another way to detect this type
+[15:40] of traffic through the local DNS server
+[15:43] logs. In most cases, beaconing traffic
+[15:45] uses
+[15:46] non-suspicious protocols, such as HTTP,
+[15:49] DNS, or even ICMP. The idea is to act
+[15:52] like regular traffic that an admin might
+[15:55] normally observe as going out of the
+[15:57] network, and also to use protocols that
+[15:59] are usually permitted over any firewall
+[16:01] that allows internet access.
+[16:03] Other botnets are using peer-to-peer
+[16:05] networks or encrypted channels to avoid
+[16:07] detection, and others are even using
+[16:09] social media. They are configured to
+[16:11] periodically check a social media
+[16:13] account for a specific type of post that
+[16:16] looks completely benign to the naked
+[16:17] eye, but acts as an instruction set for
+[16:20] the botnet. That's a behavior that it's
+[16:22] extremely difficult to detect,
+[16:24] especially networks where you expect
+[16:25] your users to visit social media
+[16:27] websites on a regular basis.
+[16:30] Other bots can remain dormant until a
+[16:32] specific date or time, or in response to
+[16:34] even events, which makes it a little
+[16:37] more difficult for you to detect their
+[16:38] presence, since in absence of that
+[16:40] specific event, they look like they
+[16:42] don't do anything.
+[16:44] Anti-malware solutions even have
+[16:46] or even sandboxes might have a hard time
+[16:50] detecting this type of malware,
+[16:52] since it looks like it does nothing. So,
+[16:54] analyzing this type of malware by
+[16:56] running it inside of a controlled
+[16:57] environment, like an isolated virtual
+[16:59] machine that is basically a sandbox,
+[17:01] might also pose difficulties, because
+[17:03] the malware is simply waiting for some
+[17:05] sort of event to happen, but you don't
+[17:07] know what that event might be.
+[17:09] Malware analysis sandboxes also
+[17:11] implement time acceleration functions
+[17:13] to make the software inside a virtual
+[17:15] machine think that months or years have
+[17:17] passed in a matter of seconds to see if
+[17:19] their behavior is time-based.
+[17:22] Those are called interstellar sandboxes.
+[17:24] No, I'm kidding. They're not. They're
+[17:26] just They're just sandboxes.
+[17:28] Or Black Mirror sandboxes. How do
+[17:30] computers become part of a botnet?
+[17:32] Usually, they are just infected with
+[17:35] some type of malware that exploits a
+[17:37] vulnerability in the operating system or
+[17:39] an application,
+[17:41] or it may trick the user into
+[17:42] downloading and opening some malware. Uh
+[17:44] once the computer is infected, it gives
+[17:46] the attacker remote access to the system
+[17:48] and additional malware tools for remote
+[17:49] control are installed.
+[17:51] These may search for files that include
+[17:53] passwords or other information of
+[17:54] interest to the attacker. Malware can
+[17:56] also install keyloggers to capture the
+[17:59] keys pressed on the keyboard keystrokes
+[18:01] and send them back to the attacker to
+[18:03] compromise other user accounts.
+[18:05] Usually, when you hear in the media
+[18:06] about large-scale DDoS attacks, these
+[18:08] were conducted by using a very large
+[18:10] botnet networks, not by single devices.
+[18:13] Hence, the distributed distributed
+[18:15] denial of service. How can we protect
+[18:17] ourselves from botnets? Well, there's no
+[18:19] single solution, unfortunately, but we
+[18:21] can use a defense-in-depth strategy.
+[18:23] This means updates for anti-malware and
+[18:25] operating systems, educating users about
+[18:28] dangers of phishing emails, malicious
+[18:29] attachments and links,
+[18:31] keeping browser and their plugins up to
+[18:33] date, and enabling security features
+[18:35] such as sandboxing and all the measures
+[18:36] that you can think of that will keep the
+[18:38] malware that compromises the host and
+[18:40] makes them part of the botnet from
+[18:42] entering your network. Still, if you do
+[18:44] get infected, monitoring network traffic
+[18:46] for signs of botnet activity and using
+[18:49] devices that can block malicious
+[18:50] traffic, like firewalls or IPSs, those
+[18:53] are your best defense.
+[18:54] On a host level, anti-malware solutions
+[18:56] can also detect botnet-specific
+[18:58] behavior, or even application signatures
+[19:00] for botnet-specific code. Next, still
+[19:03] strongly related to botnets, denial of
+[19:05] service attacks. These are attacks that
+[19:07] prevent a system from responding to
+[19:09] legitimate requests by consuming
+[19:11] resources of a certain type on that
+[19:13] target machine. So, a DDoS is an attack
+[19:16] against availability.
+[19:19] You can carry this out over a network by
+[19:21] flooding the victim with so many data
+[19:22] packets that it cannot process them all.
+[19:25] It doesn't mean that it won't be able to
+[19:26] process any legitimate traffic, but if
+[19:28] it can only process like 1% of what it
+[19:31] was able to process, you definitely have
+[19:33] a big problem. Processing only 1% of
+[19:35] requests is similar to having a 99%
+[19:38] packet loss.
+[19:39] You can also cause a denial of service
+[19:41] through vulnerabilities in an operating
+[19:43] system or an application.
+[19:45] Software denial of service usually has
+[19:47] one of two possible outcomes. You either
+[19:49] crash the system or the app, or you'll
+[19:51] see the CPU spiking up to 100% and
+[19:53] staying there. Many apps accepting input
+[19:56] from users can be tricked into
+[19:57] processing a request that never ends or
+[20:00] takes a very long time to process, or
+[20:02] they can be tricked into executing a
+[20:04] simple piece of code that causes them to
+[20:06] go into an infinite loop. That's also a
+[20:08] denial of service. A simple by-the-book
+[20:11] denial of service attack comes from a
+[20:12] single system and targets a single
+[20:14] system. If that were always the case, it
+[20:16] would be so easy to figure out who is
+[20:18] attacking you, and it would also make it
+[20:20] trivial to block the offending traffic.
+[20:22] And there you go, denial of service
+[20:24] avoided, back to doomscrolling.
+[20:27] Even if it's a single source, which is
+[20:28] actually rare, attackers try to remain
+[20:31] anonymous by spoofing that source
+[20:32] address. Or they use a compromised
+[20:34] system. So, the idea here is that
+[20:35] whatever source address you see in a
+[20:37] denial of service attack, distributed or
+[20:38] not, it's rarely, if ever, the
+[20:41] attacker's real IP address in there. The
+[20:43] most common form of denial of service
+[20:45] attack is a distributed denial of
+[20:46] service attack or DDoS. So, as you know,
+[20:48] this happens when multiple systems
+[20:50] attack a single system at the same time,
+[20:52] and this approach commonly uses botnets,
+[20:54] as we discussed already. In most
+[20:56] situations, you'll find denial of
+[20:57] service attacks targeted at
+[20:58] internet-facing systems, simply because
+[21:00] those are the easiest ones to access.
+[21:02] They're already public. There's nothing
+[21:04] to breach in order to get to them. Let
+[21:06] me put this in a different light. If you
+[21:08] have something that is accessible over
+[21:11] the internet, expect it to become the
+[21:13] target of many, many attacks, denial of
+[21:16] service included. That's not to say that
+[21:18] internal systems cannot be targeted by
+[21:19] denial of service attacks, but if they
+[21:21] do, then one of two things must have
+[21:23] happened. You either have a breach and
+[21:25] an attacker was able to enter your
+[21:26] internal network, or you have an
+[21:27] internal employee, your own colleague,
+[21:30] who has gone rogue and is damaging your
+[21:32] company from the inside. Both these
+[21:34] causes are much worse than the end
+[21:35] result of the denial of service. So, you
+[21:38] should definitely focus on those, not on
+[21:39] the outcome of the attack.
+[21:42] TCP attacks. Now, a SYN flood attack is
+[21:45] a type of denial of service attack that
+[21:46] targets the way TCP sets up
+[21:48] communication between two computers. As
+[21:50] you hopefully already know, TCP uses a
+[21:53] three-way handshake to start a session.
+[21:56] The client sends a SYN packet, the
+[21:58] server replies with a SYN ACK packet,
+[21:59] and the client confirms with another ACK
+[22:01] acknowledge packet. Then they can
+[22:04] exchange data until they close the
+[22:05] session with a FIN finish or reset RST
+[22:08] packet.
+[22:09] Now, this is how it should work, but in
+[22:11] a SYN flood attack, the attacker send
+[22:14] many SYN packets to the server, but they
+[22:16] never send the ACK packets back to
+[22:19] complete the handshake.
+[22:20] You might think, well, so what? How bad
+[22:23] could that be? Just ignore those
+[22:24] incomplete sessions, right? Well, in
+[22:26] theory, yes, but in practice, the server
+[22:29] has to reserve some resources for each
+[22:31] of these requests and wait for those ACK
+[22:33] packets to arrive.
+[22:35] Depending on the operating system, uh
+[22:37] this timeout can be as high as 3
+[22:39] minutes. Of course, this can be
+[22:40] fine-tuned, but not many people do it.
+[22:43] So, if there's just a couple of
+[22:44] requests, they are not a problem, but
+[22:47] what if the attacker keeps sending
+[22:48] thousands and thousands of SYN packets?
+[22:51] The server will run out of resources at
+[22:53] some point and will not be able to
+[22:54] handle legitimate three-way handshake
+[22:56] requests. The server will either slow
+[22:59] down, crash, or just ignore all further
+[23:02] requests. Availability is down, hence we
+[23:05] have a denial of service.
+[23:06] It's not difficult to spoof IP addresses
+[23:08] either, so the attacker can use fake
+[23:10] source addresses for the SYN packets, so
+[23:11] the server cannot block them by the IP
+[23:13] address.
+[23:14] Uh the attacker can also use multiple
+[23:16] systems to launch a DDoS attack against
+[23:17] the server, which also solves the
+[23:19] problem of multiple IP addresses.
+[23:21] Uh the server cannot defend itself by
+[23:23] limiting the number of open sessions
+[23:25] because that will also affect legitimate
+[23:27] users. Also, the server cannot increase
+[23:29] the number of open sessions it needs
+[23:32] hardware resources to do so, and like
+[23:34] everything else in this world, memory
+[23:36] and available port numbers, which is
+[23:38] around 65,000, and processing power are
+[23:41] all limited. How do you defend against
+[23:44] SYN floods? Well, one way to defend
+[23:45] against SYN flood attack is to use SYN
+[23:47] cookies. These are small pieces of
+[23:49] information that the server uses to
+[23:50] remember the active requests,
+[23:53] and it puts that information in the
+[23:54] SYN-ACK packet of its TCP sequence
+[23:56] number that it sends back.
+[23:58] The idea here is that instead of the
+[24:00] server remembering all active sessions
+[24:02] and the three-way handshake in progress,
+[24:04] it sends that information back to the
+[24:06] initiator. Then the server expects to
+[24:09] receive a sequence number back that
+[24:10] matches the expected sequence number. If
+[24:13] it does, it's something like, "Oh, I've
+[24:16] seen you before. I recognize the SYN
+[24:17] cookie. This is mine." So, it doesn't
+[24:20] need to remember a huge state table for
+[24:21] all three-way handshakes. Instead, it
+[24:23] makes the clients remember that
+[24:25] information for it. So, if it's a SYN
+[24:27] flood that is happening, the server is
+[24:29] just going to send back a bunch of
+[24:30] SYN-ACK packets.
+[24:32] We'll be busy doing that, of course, but
+[24:34] we'll instantly forget about those
+[24:35] sessions that never finalize. Just keep
+[24:37] on coming. Another way to defend against
+[24:39] SYN flood attacks is to reduce the time
+[24:41] that the server waits for an ACK packet.
+[24:44] As we said, some implementations use 3
+[24:45] minutes, which is huge. Who takes 3
+[24:47] minutes to reply to a packet? I mean, I
+[24:49] can open my computer, write an email,
+[24:51] send it, start making coffee in 3
+[24:53] minutes.
+[24:54] A computer should not take that long to
+[24:56] reply. It's not the 1970s.
+[24:59] So, by reducing the time, the server can
+[25:02] free up resources faster and its request
+[25:05] queue doesn't get overwhelmed, at least
+[25:07] not so fast. Another type of an attack
+[25:10] that affects the TCP session is a TCP
+[25:12] reset attack. This attack ends the
+[25:14] session by sending a fake reset packet
+[25:16] to one or both of the systems. The
+[25:18] systems then have to start the session
+[25:19] again. This can be a problematic
+[25:23] behavior for systems that need to keep
+[25:25] the session open for a long time. And
+[25:27] obviously this is not going to be a
+[25:28] disaster
+[25:29] if it happens from time to time, but if
+[25:31] the attack keeps hitting the peer with
+[25:33] reset messages over and over, it will
+[25:35] keep breaking all connections. This also
+[25:37] implies that the attacker has some sort
+[25:38] of an access to the victim network
+[25:41] segment because you need to know who the
+[25:43] server is talking to and some firewalls
+[25:45] will check those reset packets for valid
+[25:47] sequence numbers. So, not all of them do
+[25:50] it, though.
+[25:51] Another way to protect against attacks
+[25:52] in general, especially for publicly
+[25:54] available web resources, is to filter
+[25:56] them out through a cloud service like
+[25:58] CloudFlare, for example, which can
+[26:00] sanitize and scrub that traffic for
+[26:04] these types of
+[26:06] malicious packet flows.
+[26:09] Let's talk a bit about ICMP and some
+[26:11] legacy attacks.
+[26:12] A smurf attack, as cute as it might
+[26:15] sound, is an ICMP attack. And yes,
+[26:18] that's the protocol that is usually
+[26:19] associated with the ping utility, but
+[26:21] ping is just a couple of message codes
+[26:23] within the ICMP protocol. Normally, you
+[26:25] can use ping to send an ICMP echo
+[26:27] request to a system and get an ICMP echo
+[26:29] reply back. But in a smurf attack, the
+[26:32] attacker sends an echo request to the
+[26:34] broadcast address of the network and
+[26:37] uses the victim's IP address as the fake
+[26:39] source. If the broadcast reaches all
+[26:41] hosts, then all those systems will send
+[26:43] back echo replies to the victim,
+[26:44] overwhelming it with traffic. A smurf
+[26:47] attack used to be a type of an
+[26:48] amplification attack as well because if
+[26:51] a network can forward a broadcast ping
+[26:53] to all its systems, then an attacker can
+[26:54] send just one ping to the network and
+[26:56] get many replies from it, hence
+[26:58] amplification.
+[27:00] Thankfully, this is not possible anymore
+[27:01] because routers don't allow directed
+[27:03] broadcast anymore. If you've ever seen a
+[27:05] Cisco iOS configuration or been through
+[27:07] some Cisco certification exams, the no
+[27:10] IP directed broadcast command probably
+[27:12] sounds familiar to you.
+[27:14] Also, many firewalls, routers, and
+[27:17] servers are configured to block ICMP
+[27:19] altogether, apart from the management
+[27:21] network, perhaps. So, Smurf attacks are
+[27:23] not really making any headlines today.
+[27:25] A Fraggle attack is similar to a Smurf
+[27:27] attack, but uses UDP instead of ICMP.
+[27:30] So, a Fraggle attack will send a
+[27:31] broadcast UDP packet and use the
+[27:33] victim's IP address as the source, fake
+[27:35] source, of course.
+[27:37] UDP packets might be sent back to the
+[27:39] victim, flooding it with traffic, and I
+[27:42] know you're raising your hand right now.
+[27:44] Yes, it needs to attack a specific UDP
+[27:46] application that is able to respond,
+[27:48] otherwise packets will go completely be
+[27:50] ignored.
+[27:51] A ping flood, like the name says, uses
+[27:53] ICMP echo requests to flood the victim
+[27:56] with traffic. This is more efficient
+[27:57] when done by many systems at the same
+[27:59] time, such as a botnet. An easy way to
+[28:01] defend against a ping flood is to block
+[28:03] ICMP echo requests completely. This
+[28:05] blocks the ping traffic, but not all
+[28:07] ICMP traffic. Also, most IDSs can also
+[28:10] detect a ping flood and block those
+[28:12] requests during the attack.
+[28:14] Some examples of some other older
+[28:17] additional attacks which don't really
+[28:18] work anymore today, but you should know
+[28:20] about them. Ping of death.
+[28:24] This attack used a very large ping
+[28:26] packet that some systems could not
+[28:28] handle, crashing them with buffer
+[28:30] overflow errors. Easy to detect, easy to
+[28:33] stop, and even easier to ignore
+[28:35] nowadays.
+[28:36] Teardrop attack. This attack uses
+[28:38] fragmented data packets that the system
+[28:40] could not reassemble. This could also
+[28:42] cause the system to crash by running out
+[28:43] of memory while trying to reassemble a
+[28:45] potentially infinite number of packet
+[28:47] fragments
+[28:48] or the network interface driver to crash
+[28:50] when there are too many fragments to
+[28:51] reassemble. Land attack. This attack
+[28:54] used to send fake SYN packets to the
+[28:56] victim using the victim's IP address as
+[28:59] both the source and the destination. You
+[29:01] may say, "What?"
+[29:03] This could confuse some systems from
+[29:05] very old systems, but they had to be
+[29:07] pretty crappy systems in the first place
+[29:09] to be confused by something so trivial
+[29:11] like this. A variation of this attack is
+[29:13] the banana attack and
+[29:15] whatever you might be imagining and now
+[29:17] it's it's not that.
+[29:19] The banana attack sends the system's own
+[29:21] messages back to itself, blocking the
+[29:24] external communication. I don't know why
+[29:26] they didn't call it the boomerang
+[29:27] attack, but apparently banana somehow
+[29:29] comes back to you as well.
+[29:31] As you can see, these legacy attacks can
+[29:33] be considered extremely naive for a
+[29:35] current security landscape, but they
+[29:37] were designed during a time when
+[29:38] security was not built into each and
+[29:40] every component around us.
+[29:42] Things weren't so connected as they are
+[29:44] today and most of them were designed to
+[29:46] attack specific devices, which were
+[29:47] known not to implement any security
+[29:49] measures.
+[29:50] Those were the times when people did not
+[29:51] put security first simply because there
+[29:53] just wasn't that much technology around
+[29:55] waiting to be hacked and not that many
+[29:57] people involved in the hacking business.
+[30:00] A zero-day exploit or a zero-day attack
+[30:02] is an attack that exploits weaknesses
+[30:04] that almost no one else knows about.
+[30:06] Notice the use of the word almost. So,
+[30:09] here are some situations that might lead
+[30:10] to this happening.
+[30:12] One situation is when the attacker finds
+[30:14] the weakness first and nobody else knows
+[30:16] about it. There is no patch, no vendor
+[30:18] fix, no awareness, nothing. Nobody even
+[30:21] knows that the vulnerability is in
+[30:22] there.
+[30:23] The attacker can now exploit it as much
+[30:26] as they want and as long as they don't
+[30:27] publish or sell this information to
+[30:29] someone else, the vulnerability can
+[30:31] remain unknown for a very long time or
+[30:33] at least until someone else discovers it
+[30:35] as well. This is the usual meaning of a
+[30:36] zero-day exploit.
+[30:38] Another possible situation is when a
+[30:40] vendor knows about the vulnerability but
+[30:42] has not released a fix for it yet,
+[30:44] perhaps because patches need a lot of
+[30:45] testing to make sure that they don't
+[30:47] break anything else, or perhaps because
+[30:49] the vendor is just lazy, they don't
+[30:51] think that the vulnerability is too
+[30:52] serious, or they're just out of
+[30:54] business.
+[30:55] Or any combination of the above.
+[30:57] Attacks happening during this time are
+[30:59] still called zero day because the public
+[31:01] does not know about them.
+[31:03] Another situation is when the vendor
+[31:04] releases the fix,
+[31:06] but people take their sweet time before
+[31:10] applying the patch, making a gap between
+[31:12] when the vendor releases the fix and
+[31:14] when administrators apply it.
+[31:16] Uh Microsoft usually releases patches on
+[31:18] the second Tuesday of every month, and
+[31:20] that's why it's called Patch Tuesday.
+[31:23] Now, attackers often try to figure out
+[31:24] what the fixes are for and then try to
+[31:27] exploit those vulnerabilities the next
+[31:29] day, which is called Exploit Wednesday.
+[31:32] Simply because most people don't install
+[31:34] updates less than 24 hours after they've
+[31:36] been published. So, yeah, maybe you
+[31:38] didn't think about this, but a security
+[31:40] patch is also a dead giveaway of the
+[31:42] vulnerability that you just fixed.
+[31:44] Notice how security patch notes are
+[31:45] always extremely vague. As an attacker,
+[31:48] it's enough just to find users who did
+[31:50] not install the patch yet and exploit
+[31:52] their systems.
+[31:54] By extension, this is also called a
+[31:55] zero-day attack, even though it's not
+[31:56] the most common definition of it.
+[31:58] Now, it's zero day if we are just
+[32:00] talking about days between the fix and
+[32:02] the attack, but if an attack happens
+[32:03] weeks or months after a vendor releases
+[32:05] the patch, that's not a zero-day
+[32:07] exploit. That's just you getting hacked
+[32:10] because you were lazy and you were
+[32:12] ignorant and did not update your
+[32:13] computers.
+[32:15] Notice that zero day can also be used
+[32:16] with attacks and exploits, simply
+[32:18] because a zero-day vulnerability is
+[32:20] relevant if and only if there's an
+[32:22] actual exploit that can be launched as
+[32:24] an attack against that vulnerability.
+[32:27] So, while the terms are not 100%
+[32:29] synonymous, you really cannot have one
+[32:31] without the other.
+[32:32] A man-in-the-middle attack, MITM, it's a
+[32:35] a generic type of an attack. You might
+[32:36] get completely different definitions
+[32:38] depending on the context and on who
+[32:39] you're asking.
+[32:41] But, if you're asking me,
+[32:42] man-in-the-middle means that a bad user
+[32:45] gets in between two systems that are
+[32:46] talking to each other.
+[32:48] Now, once the attacker is the
+[32:49] man-in-the-middle, what it does in that
+[32:52] middle position is a completely
+[32:53] different story.
+[32:55] First, it could copy or sniff the
+[32:56] traffic, and it might just be the end
+[32:58] purpose. This might be the end purpose.
+[33:00] It probably will not capture anything
+[33:02] spectacular since almost all traffic is
+[33:05] encrypted nowadays, but you might be
+[33:06] able to figure out some web destinations
+[33:08] by looking at the DNS traffic. And if
+[33:11] you're in a hotel or an airport, you
+[33:12] might be able to intercept some login
+[33:14] credentials for those airport apps that
+[33:17] ask you to pay for internet because
+[33:18] those apps are truly awful, not because
+[33:20] they are awful, poorly written, with
+[33:22] crappy security, but mainly because they
+[33:24] ask you to pay money for internet
+[33:26] access.
+[33:27] Another situation is where the attacker
+[33:29] acts like a middleman. The client and
+[33:31] the server think they're talking to each
+[33:33] other directly, but the
+[33:35] bad user proxies or relays all data
+[33:37] between the two systems. So, from the
+[33:39] user's side, the attacker pretends to be
+[33:41] the server, and from the server's side,
+[33:43] the attacker pretends to be the user.
+[33:44] Now, if this pretending business is
+[33:46] successful and correctly configured, it
+[33:48] means that each connection now ends at
+[33:50] the middleman. So, even if you're using
+[33:52] encrypted traffic, that traffic is now
+[33:54] encrypted between you and the attacker,
+[33:56] not between you and whatever server you
+[33:58] want to talk to.
+[33:59] Now, that's some really bad news.
+[34:01] That's why we have authentication
+[34:02] methods that verify the identity of the
+[34:04] peer before actually sending any traffic
+[34:06] to it. That's why we're checking public
+[34:08] key fingerprints. That's why we're
+[34:09] validating certificates. That's why
+[34:11] we're sending challenges because on the
+[34:13] other side, it could be virtually
+[34:15] anyone. There could be dragons.
+[34:18] Man-in-the-middle attacks need more
+[34:21] skill than many other attacks because
+[34:23] it's pretty difficult to actually sit in
+[34:25] the traffic path.
+[34:27] And we're not talking here about cutting
+[34:28] a network cable and connecting both ends
+[34:30] to your computer.
+[34:31] It's usually associated with other
+[34:33] attacks as well, like injecting fake
+[34:35] routing or DNS information to trick the
+[34:38] traffic flow into coming the attacker's
+[34:40] way, tampering with STP spanning tree
+[34:43] protocol, sending fake ARP that is
+[34:46] address resolution protocols responses
+[34:48] to trick hosts into thinking the
+[34:50] attacker is the gateway, that kind of
+[34:52] stuff.
+[34:53] Man-in-the-middle attacks are usually
+[34:55] detected by looking for unusual
+[34:56] activities. We have tools that monitor
+[34:58] the STP structure or the ARP tables of
+[35:01] the hosts for this very reason.
+[35:04] Certificate pinning was also a method
+[35:05] for making sure that you're not
+[35:07] accepting someone else's certificate
+[35:08] instead of Google's or Microsoft's, and
+[35:11] also against situations that involve
+[35:13] traffic interception. This method is now
+[35:15] considered deprecated as on paper it
+[35:17] seemed like a good idea, but in
+[35:19] practice, well, companies pretty much do
+[35:22] man-in-the-middle by default for their
+[35:24] employees. They don't call it an attack,
+[35:26] but instead they call it security or
+[35:27] monitoring the adherence to the
+[35:30] acceptable use policy, the AUP, and
+[35:32] employees have to agree to their traffic
+[35:34] being intercepted and scanned. So,
+[35:36] having a technology that forbids this
+[35:38] makes managers unhappy.
+[35:41] IPSs and IDSs, intrusion detection and
+[35:43] prevention systems or IDSs or IPSs for
+[35:46] short, are what makes up the first line
+[35:48] of defense in protecting against
+[35:50] malicious activity. These systems have
+[35:52] seen significant enhancements over the
+[35:54] years evolving in response to
+[35:56] ever-changing threats.
+[35:58] At its core, an intrusion is a breach of
+[36:00] security where someone gains
+[36:01] unauthorized access to some resources.
+[36:03] Intrusion detection, therefore, is a
+[36:05] special kind of monitoring that looks
+[36:07] over system events in real time for
+[36:10] unusual activity that may signal a
+[36:11] potential intrusion. An IDS usually
+[36:14] automates the process of log inspection
+[36:16] and event monitoring to identify
+[36:18] intrusion attempts and perhaps even
+[36:19] system failures. Now, when you add
+[36:21] prevention capabilities to an IDS, you
+[36:23] get an IPS, intrusion prevention system,
+[36:26] which can take additional steps to
+[36:27] actually prevent intrusions after
+[36:29] they're detected.
+[36:30] Prevention can mean simply sending a
+[36:32] reset, TCP reset, to the malicious
+[36:34] connection to the end of it, shutting
+[36:37] down a switch port, installing an access
+[36:39] list that says deny traffic from this
+[36:41] malicious source, stuff like that.
+[36:43] IDSs are also pretty good at spotting
+[36:45] denial of service and distributed denial
+[36:47] of service attacks, the external ones
+[36:49] like an attack from the internet or
+[36:50] internal ones like a malicious worm or
+[36:52] generally speaking can inside a threat.
+[36:55] Upon detecting a suspicious event, they
+[36:57] react by raising alerts and in some
+[36:59] cases even change the environment to
+[37:00] stop an attack, that being an IPS type
+[37:03] functionality.
+[37:04] Now, an IDS should be seen as a
+[37:06] component of an all-encompassing
+[37:09] security strategy, a cog in the machine,
+[37:11] if you will. It needs to work with other
+[37:13] solutions like firewalls, but it's not
+[37:15] meant to replace them. So, in many
+[37:17] cases, you will see IPS functionality as
+[37:19] a built-in feature in modern firewalls,
+[37:21] next generation of firewalls,
+[37:23] layer 7 firewalls, or UTM devices.
+[37:26] When it comes to the methods employed by
+[37:28] an IDS to detect attacks, there are two
+[37:31] main ones, knowledge-based detection and
+[37:33] behavior-based detection.
+[37:35] Uh the former uses signatures, similar
+[37:37] to those used by anti-malware software,
+[37:39] and the latter compares activity against
+[37:41] a baseline of normal behavior to
+[37:43] identify, well, abnormal behavior. Of
+[37:46] course, abnormal doesn't necessarily
+[37:47] mean that it's an attack happening,
+[37:50] but it's an event worth investigating.
+[37:52] Most IDS is actually use a combination
+[37:54] of both methods.
+[37:56] Knowledge-based detection, also known as
+[37:58] signature-based detection, relies on a
+[37:59] database of known attacks. If it finds a
+[38:01] match, it raises an alert. This works
+[38:03] well against known attack methods, but
+[38:05] it's often
+[38:06] the method that fails against new or
+[38:08] slightly modified version of known
+[38:10] attacks.
+[38:11] Uh behavior-based detection, on the
+[38:13] other hand, works by creating a baseline
+[38:15] of normal system activities and events.
+[38:17] Once it has enough baseline data, it can
+[38:19] identify abnormal activity, whatever
+[38:21] that might be,
+[38:22] that may indicate a malicious event.
+[38:24] It's essentially a pseudo artificial
+[38:26] intelligence system as it learns and
+[38:29] makes assumptions about events.
+[38:31] When it comes to detecting malicious
+[38:32] events, we have four possible outcomes.
+[38:35] True positive is the ideal scenario.
+[38:37] Here an incident actually occurred and
+[38:39] the system successfully detected it.
+[38:41] Like your smoke alarm going off when
+[38:44] there's actually a real fire. False
+[38:47] negative, this is a potentially
+[38:48] dangerous situation and an incident
+[38:50] occurred but the system did fail to
+[38:52] detect it. So, imagine a real fire in
+[38:55] your house but the smoke alarm stays
+[38:57] silent.
+[38:59] A false positive, it's a frustrating
+[39:01] situation. The system alerts you to an
+[39:03] incident that didn't actually occur and
+[39:05] sometimes it doesn't even apply to you
+[39:08] or to your environment. That's the smoke
+[39:10] alarm waking you up in the middle of the
+[39:12] night when there's no fire.
+[39:14] And the true negative, this is another
+[39:16] good scenario. No incident occurred and
+[39:19] as expected the system didn't detect
+[39:21] any. It's just a quiet evening at home
+[39:23] with no smoke alarms. Netflix and chill.
+[39:27] IPS and IDS responses.
+[39:29] We briefly mentioned this before but
+[39:31] when an event is detected the IPS or IDS
+[39:33] triggers an alarm and responds either
+[39:35] passively or actively. A passive
+[39:37] response simply logs the event and sends
+[39:39] a notification like a silent alarm, like
+[39:42] your car's check engine light for
+[39:44] example. It tells you there's a problem
+[39:46] and doesn't do anything about it. And in
+[39:48] most cases it cannot do anything about
+[39:50] it. For example, an IDS could be set up
+[39:52] to send emails or text messages to
+[39:53] admins when an event is detected.
+[39:56] And one of the reasons why it cannot do
+[39:58] anything about it is usually because the
+[40:00] IDS does not sit in the traffic path but
+[40:02] instead analyzes just a copy of the real
+[40:04] traffic. So, not only it cannot block
+[40:06] the real traffic but when detection
+[40:07] happens
+[40:08] the real malicious traffic has already
+[40:10] reached its intended destination. So,
+[40:12] it's a purely alerting system.
+[40:14] An active response, on the other hand,
+[40:17] takes things a step further by changing
+[40:19] the environment to block the detected
+[40:21] activity
+[40:23] in addition to logging the event and
+[40:24] sending a notification, of course.
+[40:26] This is similar to your car's automated
+[40:29] braking system, if you have one. It
+[40:31] doesn't just tells you there's a
+[40:32] problem, even though it beeps like
+[40:34] crazy,
+[40:35] but it also hits the brakes for you to
+[40:36] prevent a crash. For instance, an IDS
+[40:38] could modify firewall access control
+[40:40] list to block traffic based on ports,
+[40:42] protocols, source addresses. It could
+[40:45] even shut down all communication over
+[40:46] specific cable segments, like shutting
+[40:48] down an entire switch port. If a SYN
+[40:50] flood attack from a single IP address is
+[40:52] detected, the IDS could alter some
+[40:54] existing ACLs on firewalls, routers, or
+[40:56] even on layer three switches
+[40:58] to block all traffic from that IP
+[41:00] address. As you can probably guess,
+[41:02] active IDSs are simply intrusion
+[41:04] prevention systems, IPSs. This can be
+[41:06] accurate, but it's important to know
+[41:09] that a true IPS is placed in line with
+[41:11] the traffic. If an active IDS is not
+[41:13] placed in line with the traffic, it can
+[41:15] only respond to an attack after it's
+[41:17] detected, which isn't quite as
+[41:19] effective, because we're taking action
+[41:21] after whatever malicious traffic has
+[41:23] already gotten through. That's why it's
+[41:25] recommended to place all active IDSs in
+[41:27] line with the traffic, allowing them to
+[41:29] function as a, well, an IPS.
+[41:33] Intrusion detection systems, IDSs, can
+[41:35] be either host-based or network-based. A
+[41:37] host-based IDS, HIDS, monitors a single
+[41:40] computer, looks at processes, system
+[41:42] calls, what applications and services
+[41:44] are running, what those apps are doing
+[41:45] with the disk, the network, and so on.
+[41:48] They also monitor violations to security
+[41:50] policies and host-based firewall logs.
+[41:52] This type of IDS can often delve deeper
+[41:55] into events than a network-based IDS,
+[41:57] and they can identify specific files
+[41:59] compromised in an attack or processes
+[42:01] used by an attacker, because they can
+[42:03] see right inside your own machine. It
+[42:05] also has a great advantage over an IDS
+[42:07] that simply looks at network traffic,
+[42:09] because it's located at the actual
+[42:11] endpoint, which means that it gets the
+[42:13] chance to view any encrypted traffic in
+[42:15] its non-encrypted form. That's because
+[42:17] any encrypted communications that you
+[42:19] participate in will always start or end
+[42:22] encryption on your own machine. Your
+[42:24] applications, especially those that
+[42:25] generate encrypted traffic, and your
+[42:27] operating system will get to see the
+[42:29] naked traffic in its unencrypted form.
+[42:32] However, while a host-based intrusion
+[42:34] detection provides detailed insight, it
+[42:37] can be resource intensive because it
+[42:39] needs to look out for a bunch of things
+[42:41] all the time and may degrade the
+[42:43] system's performance because it will
+[42:45] have to use the same CPU and RAM like
+[42:47] all the other apps on your system.
+[42:49] Perhaps even with a higher priority.
+[42:51] That's why most people complain about
+[42:53] company laptops. They're sluggish
+[42:54] because of all those firewalls and
+[42:56] security solutions like file monitoring,
+[42:58] DLP, anti-malware, and so on, which are
+[43:01] all installed on them running
+[43:03] continuously.
+[43:04] Also, a host-based intrusion detection
+[43:06] has its logs and databases stored on the
+[43:08] system, making them vulnerable to
+[43:10] attacks at least up until the point
+[43:12] where those reports are being sent to
+[43:14] some central monitoring location
+[43:16] console.
+[43:17] On the other hand, a network-based IDS,
+[43:19] NIDS, keeps an eye on the network
+[43:21] activity. It does this by using remote
+[43:23] sensors at key network locations like
+[43:25] critical uplinks or the last mile that
+[43:28] connects to the internet, which then
+[43:29] sends data to a central management
+[43:31] console.
+[43:32] This allows a single network intrusion
+[43:35] detection system to monitor a large
+[43:37] network, making it perhaps not
+[43:39] necessarily more cost-effective solution
+[43:41] than a host-based system, but at least
+[43:44] one that is easier to manage because it
+[43:46] doesn't require individual management on
+[43:48] each system. However, a NIDS cannot
+[43:51] detect anomalies on the host system that
+[43:53] a host-based system can, and it also can
+[43:57] have some really tough time inspecting
+[43:58] encrypted traffic.
+[44:00] As you know, most internet traffic today
+[44:03] is secured with encryption like TLS with
+[44:05] uh
+[44:07] While encryption is good and it keeps us
+[44:09] safe from a lot of nasty attacks, it can
+[44:11] pose challenges when you need to look at
+[44:13] the traffic and search for intrusions.
+[44:15] So, here's one scenario. A user
+[44:17] unknowingly establishes a secure HTTPS
+[44:20] session with a malicious website. The
+[44:22] site then attempts to download malicious
+[44:24] code onto the user's system. Because the
+[44:26] malicious code is encrypted, the IPS
+[44:28] cannot look at it. So, the code reaches
+[44:30] the client. It might be caught by the
+[44:32] anti-malware solution, but it definitely
+[44:34] is not stopped at the network layer.
+[44:36] So, to overcome this issue, some
+[44:37] companies use TLS decryptors or TLS
+[44:39] inspection solutions. They can be
+[44:41] hardware or software, but when there is
+[44:43] a lot of traffic to be decrypted, you
+[44:45] might want to look into hardware
+[44:46] solutions. As some of them have
+[44:48] dedicated encryption processors, ASICs,
+[44:51] that handle those crypto operations much
+[44:53] faster than the general-purpose CPUs.
+[44:56] Uh some firewalls and UTM devices have
+[44:58] this capability along with hardware
+[45:00] circuits built into them specifically
+[45:02] for this purpose.
+[45:04] The TLS inspection works by detecting
+[45:06] and intercepting a TLS handshake between
+[45:08] the internal network and the internet.
+[45:10] It then sets up two HTTPS sessions, one
+[45:14] between the internal client and the
+[45:15] decryption engine, and another between
+[45:17] the decryption engine and the internet
+[45:18] server. So, yeah, it's a man in the
+[45:20] middle happening right there, no matter
+[45:23] how you want to look at it. Of course,
+[45:24] just looking at traffic has its
+[45:26] limitations. Advanced persistent threats
+[45:29] often encrypt traffic before sending it
+[45:30] out of the network, and because the
+[45:32] traffic is encrypted on the client and
+[45:34] not within the TLS session, the TLS
+[45:36] decryptor cannot decrypt it. Think about
+[45:38] it this way. One way to send a file
+[45:40] securely is to send it over a TLS
+[45:42] connection, but another way would be to
+[45:44] archive that file locally, perhaps
+[45:46] making it a zip or RAR file,
+[45:49] then encrypting and password-protecting
+[45:51] that archive. Next, I could send that
+[45:53] file using whatever protocol I want,
+[45:55] including unencrypted ones.
+[45:58] What is a TLS decryptor going to do
+[45:59] about my password-protected zip file?
+[46:02] Absolutely nothing, of course. It is not
+[46:04] going to start cracking your password.
+[46:06] Of course, one solution to this would be
+[46:08] to simply block transfers of files where
+[46:10] the contents cannot be inspected.
+[46:12] But what if I use a non-standard
+[46:14] protocol to send that file? The rabbit
+[46:16] hole keeps going.
+[46:18] Decrypting network traffic also has one
+[46:19] additional limitation. You simply cannot
+[46:21] just pretend to be Google or Microsoft
+[46:25] and decrypt the traffic that travels
+[46:26] back and forth between your clients and
+[46:28] these companies. So, you need to push
+[46:29] your own company certificates to those
+[46:32] clients in order to decrypt their
+[46:33] traffic.
+[46:34] So, you either have to push this through
+[46:36] some group policy in Active Directory or
+[46:38] use some mobile device management
+[46:40] solution, or just allow users to accept
+[46:42] or deny your fake certificate, which
+[46:45] also means that it's worth mentioning
+[46:46] here to never accept a new certificate
+[46:49] when connecting to a public Wi-Fi
+[46:51] network. Airport, hotel, it doesn't
+[46:53] matter. If it asks you to accept a new
+[46:55] type of certificate when browsing the
+[46:57] web, don't do it. That's man in the
+[46:58] middle right there.
+[47:00] It might be legitimate, done by the
+[47:02] airport or the hotel. It might be an
+[47:04] attacker who managed to take control of
+[47:06] that network. Either way, don't accept
+[47:08] it. Even if it's a legitimate network,
+[47:11] its security's probably going to be
+[47:12] crappy, so don't trust it with your
+[47:14] clear text traffic. Finally, a less
+[47:16] common type of ideas,
+[47:18] the application-based ideas, monitor
+[47:20] specific application traffic between two
+[47:22] or more servers. For example, it could
+[47:24] keep tabs on traffic between a web
+[47:26] server and a database server looking out
+[47:29] for any suspicious activity. It's
+[47:30] basically just a specialized form of a
+[47:32] network-based ideas, but with more
+[47:34] advanced application-level awareness.
+[47:36] These are implemented as web application
+[47:38] firewalls, WAFs, or database firewalls
+[47:41] because they are tuned to look for
+[47:42] specific application-level attacks and
+[47:45] intrusion attempts.

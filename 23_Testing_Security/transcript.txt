@@ -1,0 +1,1316 @@
+[00:08] All right, today we talk about testing
+[00:09] security.
+[00:11] What good are so many security controls,
+[00:13] firewalls, access control systems, if we
+[00:15] cannot actually test them and see
+[00:17] whether they behave the way they should,
+[00:19] preferably before actual attackers do it
+[00:22] for us.
+[00:23] Also, one solution from one vendor might
+[00:25] be better than another vendor's. How do
+[00:27] we measure this and decide who we should
+[00:29] trust with security in our company?
+[00:31] Let's talk about tests and audits. Now,
+[00:34] security tests are the checks that we
+[00:36] perform to confirm that a control is
+[00:38] doing its job. If we're lazy, we can
+[00:40] perform automated scans. If we're less
+[00:43] lazy, we can invest in penetration tests
+[00:45] or manual attempts to bypass security.
+[00:47] Nevertheless, we should do security
+[00:49] testing regularly and focus on the most
+[00:51] important security controls. But how do
+[00:53] we decide when and which security
+[00:55] controls get tested? How do we choose
+[00:57] when we simply don't have enough time in
+[00:59] the world to run all possible tests? We
+[01:01] need to consider several factors. For
+[01:04] example, how critical are the systems
+[01:06] and the applications that we're testing?
+[01:08] How sensitive is the information that
+[01:10] we're protecting? Not all information is
+[01:12] secret. We simply don't give a crap if
+[01:14] some data becomes public. How likely it
+[01:16] is that the control will fail or to be
+[01:19] misconfigured? Don't underestimate human
+[01:21] error here.
+[01:23] How likely it is that the system will
+[01:25] actually be attacked?
+[01:26] You might only be able to guess here, or
+[01:29] you could look at similar businesses and
+[01:30] their history.
+[01:32] How much impact does the test have on
+[01:34] normal business operations? As you
+[01:36] probably remember from your high school
+[01:37] days, tests are stressful. They are also
+[01:41] stressful for your infrastructure, your
+[01:43] applications, and your security devices.
+[01:45] You don't want either of them to fail
+[01:47] during business productivity hours due
+[01:49] to routine tests.
+[01:51] For example, we may have a credit card
+[01:53] processing system that we scan for
+[01:54] vulnerabilities every night and have it
+[01:56] alert us if there's a new issue. This
+[01:59] scan is easy to set up and run, so we
+[02:01] can do it often. We may also have a
+[02:03] manual penetration test done by an
+[02:05] external expert once a year, let's say,
+[02:08] to check for any weaknesses, especially
+[02:09] on the weakest link, that is the human
+[02:12] element and social engineering.
+[02:15] This test is expensive and disruptive,
+[02:17] so we do it rarely. We also do security
+[02:19] assessments to measure the effectiveness
+[02:21] of our security controls.
+[02:22] Uh we can use different criteria, such
+[02:24] as compliance standards, look at best
+[02:26] practices, or the results of our own
+[02:29] risk analysis process. Assessments
+[02:31] usually are less intrusive, and
+[02:33] depending on how you decide to conduct
+[02:35] them, they might be done simply by
+[02:37] reviewing the configurations and looking
+[02:40] at the logs. That is assuming that you
+[02:42] have an up-to-date documentation and
+[02:44] configuration database.
+[02:46] Security audits are the reviews that we
+[02:48] do to verify that our security controls
+[02:50] are aligned with our policies. We can
+[02:52] use different sources for security
+[02:54] audits, such as internal auditors,
+[02:56] external auditors, or industry or
+[02:59] governmental regulators. This one is
+[03:01] often more about checking the right
+[03:03] boxes in a document than actually about
+[03:05] assessing the security posture, so it's
+[03:07] often done by external auditors, which
+[03:09] should not be biased or bribed.
+[03:12] When people talk about external
+[03:13] auditors, they usually refer to the big
+[03:15] four, because audits done by these firms
+[03:17] are usually accepted by most investors
+[03:19] and board members. Ernst & Young,
+[03:21] Deloitte, PricewaterhouseCoopers, and
+[03:23] KPMG.
+[03:25] When a company provides services to
+[03:26] other companies, often they have to go
+[03:28] through the hoops of third-party audits.
+[03:31] This is never pleasant, so standards
+[03:33] were developed for this as well. The
+[03:35] SSAE 18 standard provides a common way
+[03:39] for auditors to assess service
+[03:40] organizations and then share the report
+[03:43] with potential customers. Outside US, we
+[03:46] have the ISAE 3402 standard. These
+[03:49] standards are also called SOC audits,
+[03:52] which stands for system and organization
+[03:54] controls, and they have three types. SOC
+[03:58] 1, this is an
+[04:00] assessment for controls that affect
+[04:02] financial reporting. SOC 2, that's an
+[04:05] assessment for controls that affect the
+[04:06] security and privacy of information. SOC
+[04:09] 2 audit results are confidential and are
+[04:11] usually only shared with an NDA. And SOC
+[04:14] 3, this one looks at the company's
+[04:15] controls that affect the security and
+[04:17] privacy of information that they store,
+[04:20] but these SOC 3 audits results are
+[04:22] public.
+[04:23] There are also two different kind of SOC
+[04:24] reports. Type 1 reports only cover a
+[04:27] specific point in time, not a period.
+[04:29] You can think of the type 1 report as a
+[04:31] as a paper review, where the auditor is
+[04:33] looking at the documents and making sure
+[04:35] that the controls described there are
+[04:36] okay.
+[04:37] Type 2 also looks at the operating
+[04:39] effectiveness of the controls over time.
+[04:42] You can think of a type 2 report as a
+[04:44] periodic performance review for security
+[04:46] controls.
+[04:47] When we do an audit or an assessment, we
+[04:49] need to be clear about the standard that
+[04:50] we are using to measure the company. The
+[04:52] standard tells us what control
+[04:54] objectives the company should achieve,
+[04:56] and then we design the audit or
+[04:58] assessment to check that the company has
+[04:59] the right controls to meet those
+[05:01] objectives.
+[05:02] One common framework for doing audits
+[05:04] and assessment is COBIT. Stands for
+[05:07] control objectives for information and
+[05:08] related technologies.
+[05:10] COBIT tells us what common requirements
+[05:12] the company should follow for their
+[05:14] information systems. The COBIT framework
+[05:16] is updated by ISACA. The ISO, the
+[05:20] International Organization for
+[05:21] Standardization, also has a set of
+[05:23] standards for information security. ISO
+[05:25] 27001 tells us how to set up an
+[05:28] information security management system,
+[05:30] and ISO 27002
+[05:32] gives us more details on the information
+[05:34] security controls.
+[05:35] Uh these standards are accepted
+[05:37] worldwide and are used a lot in the
+[05:39] security field. Companies can also get
+[05:41] an official certificate that shows they
+[05:43] are compliant with these.
+[05:45] Vulnerability assessments help us find
+[05:47] and fix the weaknesses in our systems
+[05:49] and applications. We look for these
+[05:51] weaknesses usually with automated tools
+[05:54] that not only find those weaknesses, but
+[05:56] help us plan how to fix them before they
+[05:58] cause real harm.
+[06:00] We need a common way to talk about and
+[06:02] measure vulnerabilities. So, NIST, the
+[06:05] National Institute of Standards and
+[06:06] Technology,
+[06:07] gave us SCAP, the Security Content
+[06:11] Automation Protocol, to do that.
+[06:13] SCAP helps us communicate and automate
+[06:16] our interactions with different security
+[06:18] systems. The parts of SCAP that are most
+[06:20] relevant to vulnerability assessment are
+[06:23] as follows. We first have the CVE, the
+[06:26] Common Vulnerabilities and Exposures.
+[06:28] This gives us a name for each security
+[06:30] vulnerability.
+[06:32] Next, we have the CVSS, Common
+[06:34] Vulnerability Scoring System. This gives
+[06:36] us a score for how severe each security
+[06:38] vulnerability is. We also have CCE,
+[06:42] Common Configuration Enumeration.
+[06:44] Defines unique identifiers to system
+[06:46] configuration issues.
+[06:48] Common Platform Enumeration, CPE, is a
+[06:51] structured naming scheme for IT systems,
+[06:54] for software and packages, including
+[06:55] operating systems.
+[06:57] XCCDF
+[06:59] stands for Extensible Configuration
+[07:01] Checklist Description Format. Gives us a
+[07:03] language for writing security checklists
+[07:05] and configuration rules. And OVAL, Open
+[07:08] Vulnerability and Assessment Language,
+[07:10] gives us a language for describing
+[07:12] security testing procedures.
+[07:14] There are many types of vulnerability
+[07:16] scanning techniques, depending on what
+[07:18] we're scanning, the network, a specific
+[07:20] host, an app, a web app, a database, and
+[07:23] so on. We can use different tools for
+[07:25] each type of scan. We also should
+[07:27] remember that we are not the only ones
+[07:29] who can use vulnerability testing tools.
+[07:32] Attackers can also use the same tools
+[07:34] that we use and often scan our systems
+[07:37] before they try to break in. These scans
+[07:39] help attackers find the weak spots in
+[07:42] our systems and target their attacks
+[07:44] where they have the best chance of
+[07:45] success.
+[07:47] So, let's start with the basics, network
+[07:49] discovery. You might think that this is
+[07:50] not security testing, but you need to
+[07:52] know what is reachable and what is
+[07:54] functioning in your network before you
+[07:56] can drill deeper in finding flaws.
+[07:59] That's why network and host discovery is
+[08:01] the first step in any vulnerability
+[08:03] testing software out there, and in any
+[08:05] cyber attack, too.
+[08:06] Of course, this perspective of who is up
+[08:09] and which ports are open will change
+[08:10] depending on where you are scanning
+[08:12] from. Scanning from within the network
+[08:14] will reveal completely different results
+[08:16] than scanning from outside the network,
+[08:18] over the internet, through the edge
+[08:20] firewalls and routers.
+[08:22] Network discovery scanning uses
+[08:23] different methods to scan a range of IP
+[08:26] addresses, looking for systems with open
+[08:27] network ports. They won't go as far as
+[08:30] testing the systems for vulnerabilities,
+[08:32] but they give us a report that shows the
+[08:34] systems on a network and the list of
+[08:37] ports that are open. Some of the common
+[08:40] techniques used by network discovery
+[08:41] scanners are as follows.
+[08:44] First, we have SYN, TCP SYN scanning.
+[08:47] This sends one TCP packet to each
+[08:50] scanned port with the SYN flag on. This
+[08:52] means that it wants to start a new
+[08:54] connection. If the scanner gets a
+[08:56] response with the SYN and ACK flags on,
+[08:59] this means that the system is going to
+[09:01] the second step in the three-way
+[09:03] handshake and that the port is open. Uh
+[09:06] TCP SYN scanning is also called
+[09:07] half-open scanning, because it doesn't
+[09:10] go further than that. It never actually
+[09:12] finalizes or closes the connection,
+[09:14] which in large enough amount can
+[09:16] transform in a denial-of-service attack,
+[09:19] where there are too many half-open
+[09:20] connections on that host or on the
+[09:22] intermediary network devices can handle.
+[09:25] Another technique is TCP connect
+[09:26] scanning. This starts a full connection
+[09:29] to the remote system on the chosen port,
+[09:30] so it finalizes the three-way handshake.
+[09:33] This scan type is used when the user
+[09:35] doing the scan does not have the
+[09:36] permissions to do a half-open scan,
+[09:38] because half-open connections are
+[09:39] abnormal and you need admin or root
+[09:42] privileges to convince the OS on your
+[09:44] scanning device to do that. Actually, it
+[09:46] needs the ability to send raw packets,
+[09:48] and the user may be limited by the
+[09:50] operating system from sending customized
+[09:52] packets. If you are an attacker, you
+[09:54] probably don't want to do that, because
+[09:55] a complete connection is most likely
+[09:57] going to be logged on the scan device
+[10:00] instead of half open one might go
+[10:01] unnoticed.
+[10:03] Another technique is TCP ACK scanning,
+[10:05] acknowledgement scanning. This sends a
+[10:07] packet with an ACK flag on, meaning that
+[10:10] it attempts to pretend that it is part
+[10:13] of an already open connection.
+[10:15] Now, most servers won't be fooled by
+[10:17] this, but this type of scan may be done
+[10:19] to discover the rules of a firewall and
+[10:21] how it works. Some very basic firewalls
+[10:24] might allow ACK packets thinking, "Huh,
+[10:27] I probably allowed the SYN packet for
+[10:29] this one some time ago, so let's allow
+[10:31] this one, too." Or they just don't
+[10:33] expect it all together.
+[10:35] UDP scanning, this performs a scan on
+[10:37] the remote system using the UDP protocol
+[10:39] looking for active UDP services.
+[10:42] This scan type doesn't use the three-way
+[10:44] handshake because UDP obviously doesn't
+[10:46] have such a thing, but instead relies on
+[10:49] some timeouts. Send a packet and then
+[10:52] wait. Anything coming back? Yes? No?
+[10:56] Should we wait some more?
+[10:59] Not very precise, but might get the job
+[11:01] done eventually.
+[11:04] Christmas scanning, this sends a packet
+[11:07] with a FIN, PSH, and URG flags on.
+[11:11] A packet with so many flags on it is
+[11:14] said to be lit up like a Christmas tree,
+[11:16] which is why the scan is named that way.
+[11:19] The key advantage to this scan type is
+[11:21] that it can sneak through certain
+[11:23] non-stateful firewalls and packet
+[11:25] filtering routers.
+[11:27] Actually, even stateful firewalls like
+[11:28] IP tables might be fooled by this if
+[11:30] they are configured to look only for SYN
+[11:32] packets in order to block connections.
+[11:35] Idle or zombie scanning, it's an
+[11:37] interesting one. An idle scan is a type
+[11:40] of stealthy network scanning to map out
+[11:42] a network to find open ports on a target
+[11:45] system, but without directly interacting
+[11:48] with the target.
+[11:49] How do you do that?
+[11:50] Well, instead of sending scan packets
+[11:53] from their own machine, the attacker
+[11:54] uses a third-party called a zombie to
+[11:58] relay those packets.
+[12:00] This third-party device is typically a
+[12:02] machine that has little or no network
+[12:04] activity, hence idle,
+[12:07] making it easier to predict its
+[12:09] behavior. An idle scan works by
+[12:12] exploiting the predictable behavior of
+[12:14] the IP packet fields, especially the IP
+[12:17] identification IPID field.
+[12:20] This field is used by the operating
+[12:22] system to assign a unique number to each
+[12:24] packet sent out, allowing fragments of
+[12:27] data to be reassembled correctly.
+[12:29] Here's how it works.
+[12:30] The attacker sends a SYN ACK packet to
+[12:32] the zombie, which the zombie responds
+[12:35] with an RST, a reset packet back because
+[12:37] it was not expecting the communication.
+[12:40] The attacker inspects the RST packet and
+[12:43] records the current IPID value.
+[12:46] The attacker then sends a spoofed SYN
+[12:48] packet to the target,
+[12:50] making it appear as though it's coming
+[12:52] from the zombie IP address.
+[12:54] The target receives the SYN packet and
+[12:57] behaves in one of two ways. If the port
+[12:59] is open, the target responds with a SYN
+[13:02] ACK to the zombie because it thinks the
+[13:04] SYN came from the zombie.
+[13:06] If the port is closed, the target
+[13:08] responds with an RST back to the zombie.
+[13:12] Here's how the zombie responds to the
+[13:13] target. If the target responds with a
+[13:16] SYN ACK, an open port, zombie being idle
+[13:19] sends an RST back to the target.
+[13:22] If the target responds with an RST,
+[13:24] which is a closed port, the zombie does
+[13:26] nothing.
+[13:27] The attacker then sends another SYN ACK
+[13:29] to the zombie and checks the IPID again.
+[13:32] If the IPID has increased by two,
+[13:34] indicating the zombie responded to the
+[13:36] target, the attacker knows that the port
+[13:38] is open. If the IPID increased by one,
+[13:42] indicating no interaction with the
+[13:44] target, the attacker knows that the port
+[13:47] is closed.
+[13:48] Amazing stuff, right? The most common
+[13:51] tool for network discovery scanning is
+[13:53] an open-source tool called Nmap, network
+[13:55] mapper.
+[13:56] Old, but still updated and used today.
+[13:58] You can get it for free at nmap.org.
+[14:01] When Nmap scans a system, it tells us
+[14:03] the current state of each network port
+[14:05] on the system. For ports where Nmap
+[14:07] finds a result, it tells us the current
+[14:09] status of that port. Open, this means
+[14:11] the port is open on the remote system
+[14:13] and there's an application that is
+[14:14] taking actively connections on that
+[14:16] port.
+[14:17] Closed, the port is reachable on the
+[14:19] remote system, meaning that the firewall
+[14:21] is allowing access, but there's no
+[14:23] application taking connections on that
+[14:25] port.
+[14:26] Filtered means Nmap cannot tell if a
+[14:29] port is open or closed because a
+[14:31] firewall is blocking the connection
+[14:33] attempt. The firewall may actually be on
+[14:35] the host that you're scanning, so keep
+[14:37] that in mind, too.
+[14:39] Nmap has a lot of options. I would
+[14:41] advise you to check nmap.org or the man
+[14:43] page for Nmap on Linux or macOS and try
+[14:47] to remember as many as you can. You can
+[14:49] never know what might come up on the
+[14:50] exam. And by the way, there's also a
+[14:52] version of Nmap for Windows called
+[14:54] Zenmap. Check that out, too.
+[14:57] Some of the most common TCP ports out
+[14:59] there, which you need to know to
+[15:01] understand port scan results,
+[15:03] and here are some that you should
+[15:05] remember. For FTP, we have ports 20 and
+[15:08] 21, most of them TCP, by the way.
+[15:11] For SSH, we have 22, for Telnet 23, for
+[15:14] SMTP 25, for DNS 53, this is both UDP
+[15:19] and TCP.
+[15:20] HTTP, we have 80. POP3, we have 110.
+[15:24] NTP, we have 123.
+[15:27] For Windows file sharing, we have a
+[15:29] bunch of them,
+[15:30] 135,
+[15:32] everything between 137 to 139, and 445.
+[15:37] For HTTPS, we have 443, as you probably
+[15:39] know.
+[15:40] For LPR or LPD, printing basically, we
+[15:44] have 515.
+[15:46] For Microsoft SQL Server, we have 1433
+[15:49] and 1434.
+[15:51] For Oracle databases, we have 1521.
+[15:55] For H.323, we have 7020.
+[15:58] For PPTP, we have 7023. For RDP, we have
+[16:02] 3389.
+[16:04] Network vulnerability scanning goes
+[16:06] further than just discovery scanning.
+[16:08] They not only find hosts that are up and
+[16:10] what open ports they have, they also
+[16:11] check a system for known
+[16:13] vulnerabilities. These tools have
+[16:14] databases of thousands of known
+[16:16] vulnerabilities and tests that they can
+[16:19] do to see if a system has them. Many of
+[16:21] them are just a matter of determining
+[16:23] what version of a specific piece of
+[16:24] software is running on the host, and the
+[16:26] vulnerability database will tell us if
+[16:28] there are known vulnerabilities
+[16:29] associated with that specific version.
+[16:32] Sometimes the scanner
+[16:35] might not have enough information to be
+[16:36] sure that a vulnerability is there, and
+[16:39] sometimes it might report a
+[16:40] vulnerability when there is actually
+[16:42] none. We call a false negative when a
+[16:44] vulnerability is not found but is there,
+[16:46] or a false positive when the
+[16:48] vulnerability is reported but it's
+[16:49] actually not there. Both are bad. The
+[16:52] first one is really bad because it
+[16:54] leaves you exposed. The second one is
+[16:56] just annoying and time-wasting.
+[16:58] Obviously, normal vulnerability scans
+[17:01] cannot find zero-day vulnerabilities
+[17:03] that scanner vendor does not know about
+[17:05] yet. You cannot find what you don't know
+[17:07] you should be looking for in the first
+[17:09] place.
+[17:10] By default, network vulnerability
+[17:12] scanners do unauthenticated scans. This
+[17:14] means that they scan without valid
+[17:16] logins for the hosts that they're
+[17:18] scanning and no extra privileges. This
+[17:20] lets the scan run from the attacker's
+[17:23] point of view, but it also limits the
+[17:25] view on possible vulnerabilities. One
+[17:27] way to make the scanning more accurate
+[17:29] and reduce false positives and false
+[17:31] negatives reports is to do an
+[17:33] authenticated scan of systems or a
+[17:35] credential scan. In this approach, the
+[17:37] scanner has at least read-only access to
+[17:40] the servers being scanned and can use
+[17:42] this access to read configuration
+[17:43] information, running processes, or even
+[17:46] scan files from the target system and
+[17:48] use that information when looking for
+[17:50] vulnerabilities.
+[17:52] Web application scanning. Now, web
+[17:53] applications are a big risk because many
+[17:55] of them need to be exposed to the
+[17:57] internet, and firewalls and other
+[17:59] security devices
+[18:00] usually let web traffic go through to
+[18:02] web servers, but they also need to be
+[18:04] really secure because they handle user
+[18:06] data, your company data.
+[18:08] Most of them have special access to
+[18:10] databases, as well. Attackers often try
+[18:12] to attack the web application in order
+[18:14] to reach some SQL database behind it
+[18:17] using SQL injection and other attacks
+[18:18] that look for flaws in the security
+[18:20] design of web applications.
+[18:23] Now, this isn't the time or the place to
+[18:25] talk about web application attacks.
+[18:27] We'll do that later on, but for now,
+[18:29] we're focusing on web application
+[18:30] vulnerability scanners. A web
+[18:32] application scan checks the web
+[18:34] application with automated methods that
+[18:36] change inputs and other parameters to
+[18:38] find web vulnerabilities. They're mostly
+[18:40] focused on inputs because web
+[18:42] application inputs are the main source
+[18:44] of malicious content and exploits, and
+[18:46] they're also the main methods through
+[18:47] which an attacker can interact with your
+[18:49] application.
+[18:50] The tool then gives a report of what
+[18:52] it's found and often suggests how to fix
+[18:55] the vulnerabilities.
+[18:56] Most vulnerabilities come from user
+[18:58] input. That's why I usually say that
+[19:01] lack of input validation is the root of
+[19:03] all evil, and that's especially true in
+[19:05] web applications. That's why scanners
+[19:07] will look for inputs that can
+[19:09] maliciously affect the behavior of web
+[19:11] apps.
+[19:12] Do network vulnerability scans and web
+[19:14] vulnerability scans seem similar?
+[19:17] Yes, they are. They both check services
+[19:19] on a server for known vulnerabilities.
+[19:21] The difference is that network
+[19:23] vulnerability scans do not go deep into
+[19:25] the web application, while web
+[19:27] application scans only look at how the
+[19:28] web app was designed. Some network
+[19:30] vulnerability scanners can do some basic
+[19:33] web vulnerability scanning, but deep web
+[19:35] vulnerability scanning needs special
+[19:37] tools.
+[19:38] Also, keep in mind that a web app runs
+[19:40] on web server. The server might have its
+[19:42] own vulnerabilities, which are
+[19:44] completely different from those of the
+[19:45] web app running on top of it. And the
+[19:48] web server is running on top of an
+[19:49] operating system that might have its own
+[19:51] vulnerabilities. And the OS might run on
+[19:54] top of a hypervisor, which is with its
+[19:56] own vulnerabilities. And yes, you might
+[19:58] have a vulnerability sandwich.
+[20:02] Uh sometimes web application scanning
+[20:04] may be needed to meet compliance rules.
+[20:06] For example, the PCI DSS, the payment
+[20:09] card industry data security standard,
+[20:11] requires that companies either do web
+[20:13] application vulnerability scans at least
+[20:15] once a year or install web application
+[20:17] firewalls to add more protection against
+[20:19] web vulnerabilities.
+[20:21] There are dedicated firewalls for
+[20:22] protecting web apps, too. We call them
+[20:24] WAFs, or web application firewalls, and
+[20:27] they are layer seven firewalls that have
+[20:29] up-to-date databases of known attack
+[20:31] patterns against web apps, and some also
+[20:33] use machine learning to determine
+[20:35] abnormal behavior. Often the WAF
+[20:38] functionality is built into load
+[20:39] balancers or reverse proxies. That It's
+[20:42] a convenient place to have it, since it
+[20:44] becomes a single point of contact for
+[20:45] anyone trying to access the web apps
+[20:47] behind it. So, the WAF can intercept and
+[20:50] sanitize all the requests and all the
+[20:52] input coming in from the users before it
+[20:54] reaches our apps and our servers.
+[20:57] OWASP and their website owasp.org has a
+[21:00] list of open source and commercial tools
+[21:02] that are often used for web application
+[21:05] vulnerability scanning. Just to mention
+[21:06] a couple of them, ZAP, the Z Attack
+[21:09] Proxy, and Burp Suite are both very
+[21:11] common tools for testing web
+[21:13] applications.
+[21:14] OWASP is also a great place to learn
+[21:16] about vulnerabilities and mitigation
+[21:18] methods. A good place to start would be
+[21:19] the OWASP Top 10 application security
+[21:22] risk sections. Just Google OWASP Top 10,
+[21:26] which are gathered directly from
+[21:28] observable, measurable attack methods.
+[21:31] Now, on the database side, because most
+[21:33] web apps cannot work without a database
+[21:35] behind them, and many web attacks
+[21:37] actually target the front end with the
+[21:39] purpose of penetrating down to the
+[21:41] database or back end level,
+[21:43] in general, databases are not directly
+[21:45] exposed to the same network where the
+[21:47] web application is running. So, the web
+[21:48] front end and the input it receives
+[21:51] becomes the main method for compromising
+[21:53] a database, as well.
+[21:55] SQL injection is the most common attack
+[21:58] that you'll encounter, and it's about
+[21:59] crafting abnormal inputs in input fields
+[22:02] available to users in the web app with
+[22:05] the intention of tricking the web app
+[22:07] into executing the user's SQL statement,
+[22:10] and not the predefined ones in its code.
+[22:13] The purpose of this attack is to gain
+[22:15] illegal access to the database. As you
+[22:17] can imagine, if a malicious user
+[22:19] determines that it can execute any SQL
+[22:22] statement in some random field on a web
+[22:23] app, the damage can be huge. Not only
+[22:26] that, the attacker could potentially
+[22:27] gain access to all kinds of sensitive
+[22:29] information stored in the database,
+[22:31] information that, uh, as a regular user,
+[22:33] they would not be able to access, but an
+[22:36] attacker might also run a update, an
+[22:38] insert, or delete, or drop statement
+[22:40] that can change the data stored in the
+[22:42] database.
+[22:43] Thus, scanners focused on determining if
+[22:45] a database is vulnerable actually focus
+[22:48] still on the web app, but this time in
+[22:50] an attempt to provide inputs that might
+[22:52] reveal that the web app is vulnerable to
+[22:54] SQL injection.
+[22:56] There are limited protection mechanisms
+[22:58] that can be enabled on a database, as
+[23:00] well, like forbidding certain queries,
+[23:03] but they are limited in their
+[23:04] effectiveness, since the normal read and
+[23:06] write operations on the database are
+[23:08] still needed by the application to work
+[23:10] properly. Also, no access lists can be
+[23:13] implemented on the database, since even
+[23:15] if the application is the only entity
+[23:17] allowed to access it, this does not
+[23:19] minimize the risk of SQL injection,
+[23:21] since the malicious queries will still
+[23:23] be registered as coming in from the
+[23:25] compromised, but legitimate, web app.
+[23:28] One such tool for discovering SQL
+[23:30] injection vulnerabilities is SQLmap.
+[23:32] It's free, open source, very powerful
+[23:34] for testing if websites can be attacked
+[23:36] with SQL injection, and you can find it
+[23:39] as sqlmap.org.
+[23:41] And yes, somewhat surprising, there are
+[23:44] dedicated firewalls that are aimed at
+[23:46] protecting databases against all kinds
+[23:49] of attacks, including SQL injection. And
+[23:51] database firewalls are great for
+[23:53] validating compliance, as well. In the
+[23:55] past, we had more vendors offering
+[23:57] database firewalls, but nowadays most of
+[23:59] that functionality is built into the
+[24:01] standard, let's say, next generation
+[24:03] firewall offerings.
+[24:06] Penetration testing goes one step
+[24:08] further, because it actually tries to
+[24:09] break into the systems while testing
+[24:11] their weaknesses.
+[24:13] With vulnerability scans, we only look
+[24:14] to see if there is a known
+[24:16] vulnerability, but penetration tests, on
+[24:18] the other hand, try to crack security
+[24:20] controls and get into a targeted system
+[24:23] by actively exploiting the vulnerability
+[24:25] that the scanner simply identified.
+[24:27] Now, one small note here. It is normally
+[24:30] agreed upon that vulnerability scans
+[24:32] don't affect systems, at least not like
+[24:34] penetration testing, as they only probe
+[24:37] and interrogate services and network
+[24:39] interface cards.
+[24:40] Now, in reality, an aggressive enough
+[24:42] scan can downgrade the performance of a
+[24:45] system being scanned. So, keep in mind
+[24:46] that even a vulnerability scan should be
+[24:48] performed in a maintenance window, or at
+[24:51] least outside business hours.
+[24:53] So, back to the pen test. A pen test
+[24:55] happens in a couple of phases. First of
+[24:57] all, we have the planning phase. This is
+[24:58] where we agree on the scope of the test.
+[25:01] What exactly are we testing? Which
+[25:02] servers? How many hosts? And what are
+[25:05] the rules of engagement? Meaning, how is
+[25:07] the test going to be performed? It's
+[25:09] important because we need this phase to
+[25:11] make sure that both the testing team and
+[25:14] management agree with each other and on
+[25:16] how the test is to be conducted. It's
+[25:18] also important because a pen test is
+[25:20] actively trying to break security, and
+[25:23] in the process, it might cause system to
+[25:25] crash. If those are critical systems for
+[25:27] the business, then productivity is going
+[25:29] to be affected. So, we really need
+[25:31] management approval to give us the okay
+[25:33] to go on and the promise that they won't
+[25:35] chase us around the building when
+[25:37] systems break. Another phase is
+[25:39] information gathering. In this step, we
+[25:42] find out more about the systems.
+[25:44] Uh we could start by reviewing publicly
+[25:47] available documentation or open source
+[25:49] intelligence, also known as, uh, OSINT.
+[25:52] If we're pretending to be an attacker,
+[25:54] or internal documentation if we're, uh,
+[25:57] running the pen test from a perspective
+[25:58] of a malicious insider, or we just want
+[26:01] to be more thorough. We also scan for
+[26:03] open ports and try to find out more
+[26:05] about what's running on these ports.
+[26:07] Basically, in this phase, we're doing a
+[26:09] something like a vulnerability scan,
+[26:11] but we're not actually hitting the
+[26:12] target systems.
+[26:14] Then, in the attack phase, we are using
+[26:16] exploit tools to exploit the found
+[26:18] vulnerabilities. The attack might not
+[26:20] necessarily try to exploit a specific
+[26:22] vulnerability, but perhaps create
+[26:24] conditions to validate how the system
+[26:26] behaves under stress, like simulating a
+[26:28] denial-of-service attack.
+[26:30] Finally, we need to focus on reporting,
+[26:32] where we gather the results of the
+[26:33] penetration test and provide suggestions
+[26:36] for improving security.
+[26:37] The Metasploit framework is a very
+[26:40] common tool used by penetration testers,
+[26:42] as it provides a large database of
+[26:44] exploits that can be automatically run
+[26:46] against targeted systems.
+[26:49] Penetration testing types.
+[26:51] There are three main types of
+[26:52] penetration tests, depending on how much
+[26:54] information the testers have about the
+[26:55] target systems.
+[26:57] These are
+[26:58] white box tests, or what we call now
+[27:01] clear box testing. This is when testers
+[27:03] have full access to the target's
+[27:05] details, such as the architecture, the
+[27:07] configuration, maybe even the source
+[27:09] code. This makes the tests faster,
+[27:11] because you don't waste time discovering
+[27:13] information. They are more accurate,
+[27:15] because they have better coverage of the
+[27:17] tested targets, and they are more likely
+[27:19] to find vulnerabilities. They are also
+[27:21] not very realistic, apart from some very
+[27:24] specific insider threat scenarios.
+[27:26] Actually, come to think about it, clear
+[27:29] box kind of sounds better than white
+[27:31] box, since white box doesn't necessarily
+[27:33] mean that you get to see what's inside.
+[27:36] Just think of your fridge. It may not be
+[27:37] white, but you get the point.
+[27:40] Since most fridges, at least where I
+[27:42] live nowadays in Romania, are metallic
+[27:45] silvery gray,
+[27:46] here comes the gray box testing,
+[27:49] where testers have some, uh, access to
+[27:51] the target's details. Maybe they have a
+[27:54] valid user credential, but of a regular
+[27:56] user, not an admin. Maybe they have a
+[27:58] generic network diagram, and so on. Uh
+[28:01] the purpose of gray box testing is to
+[28:03] simulate an attack from the inside, like
+[28:06] one from, uh, a regular disgruntled
+[28:08] user, or a user whose corporate account
+[28:10] has been compromised.
+[28:12] Finally, black box tests, or closed box
+[28:15] tests, these tests give the testers no
+[28:18] access to the target's details, except
+[28:20] for what is publicly available. This
+[28:23] simulates the situation of an external
+[28:24] attacker who has to gather information
+[28:26] about the target before launching an
+[28:28] attack. These tests are more realistic
+[28:30] and challenging, but they also take
+[28:32] longer and may miss some
+[28:33] vulnerabilities, which might actually be
+[28:35] hidden by the security controls put in
+[28:37] place to deny access from the outside.
+[28:39] Penetration testing can also be
+[28:40] automated to some extent using something
+[28:42] called a breach and attack simulation,
+[28:44] BAS, platform.
+[28:46] These platforms are tools that generate
+[28:48] fake malicious activities, such as
+[28:50] placing suspicious files, sending random
+[28:52] network packets, scanning for
+[28:54] vulnerabilities. The purpose of these
+[28:56] platforms is to test the effectiveness
+[28:58] of the security controls in place,
+[29:00] uh how they detect, how well they alert,
+[29:03] and how well they prevent these attacks.
+[29:05] Uh the platforms do not actually launch
+[29:07] attacks, but they simulate them to see
+[29:10] if the controls in place are ready to
+[29:11] respond. It would be shameful if your
+[29:13] controls do not react
+[29:16] to even a fake attack, because what does
+[29:18] that say about their effectiveness in
+[29:20] the face of a real attacker?
+[29:22] And finally, there are many established
+[29:23] penetration testing methodologies, such
+[29:26] as the OWASP Web Security Testing Guide,
+[29:29] the OSSTMM, the Open Source Security
+[29:31] Testing Methodology Manual,
+[29:33] NIST 800-115,
+[29:36] and PCI DSS information supplement on
+[29:39] penetration testing.
+[29:41] Software testing. From a security
+[29:43] perspective,
+[29:44] software should be designed with
+[29:45] security in mind from the very
+[29:47] beginning. If you've ever written a
+[29:48] piece of code for someone else, you
+[29:51] already know not to assume that users
+[29:53] will always behave correctly or even
+[29:55] logically.
+[29:56] Users do tons of crazy stuff. Hackers do
+[29:59] as well, but with different motivations
+[30:00] behind them. You should write software
+[30:02] to try to anticipate and when possible
+[30:05] handle unexpected situations like an
+[30:08] invalid input, a wrong order of
+[30:09] operations, the app trying to execute
+[30:12] code that doesn't belong to it or tries
+[30:14] to access disk or memory locations where
+[30:16] it shouldn't have any business, any
+[30:17] anomaly such as these.
+[30:19] This is called exception handling and it
+[30:21] not only helps you reduce the number of
+[30:22] bugs that you will ship along with your
+[30:24] software,
+[30:25] but treating unexpected situations
+[30:27] correctly will minimize the security
+[30:29] risks as well. So, why test software? In
+[30:32] short, because it's complex and more
+[30:34] often than not you cannot simply admire
+[30:36] it like you would
+[30:38] do with a pizza perhaps you just baked
+[30:41] and simply say, "Well, this looks fine."
+[30:43] >> [laughter]
+[30:44] >> Actually, you probably shouldn't do this
+[30:45] with pizza either, at least not before
+[30:47] tasting it.
+[30:48] So, tasting the pizza is the same as
+[30:50] testing the software.
+[30:52] Uh testing must be done especially
+[30:54] because
+[30:55] software applications process or store
+[30:57] data that is confidential, belongs to
+[30:59] other people, data that needs to be kept
+[31:00] secret because it helps you run your
+[31:02] business, data in credit card numbers,
+[31:04] social security numbers, and in general
+[31:06] any business secrets that you want,
+[31:07] need, or must protect.
+[31:10] Then we also test software because
+[31:11] software often relies on databases that
+[31:13] hold all that sensitive data that we
+[31:15] mentioned just a moment ago and maybe
+[31:18] subject to unauthorized access or
+[31:20] changes. And also because databases by
+[31:22] themselves are just storage entities.
+[31:24] They have security features, of course,
+[31:26] but the main point for implementing
+[31:27] security is always going to be at the
+[31:29] application level because that's the
+[31:31] supposed gateway towards that storage,
+[31:33] that data.
+[31:35] And lastly, we test applications because
+[31:37] not doing so, running into errors or God
+[31:39] forbid data breaches due to unhandled
+[31:42] exceptions and bugs can have a very
+[31:44] negative business impact. Software is
+[31:47] the heart of the modern enterprise and
+[31:49] performs functions that are essential
+[31:51] for the business. Sometimes a software,
+[31:53] a website is the business itself. That's
+[31:55] all there is.
+[31:57] Particularly in those cases, software
+[31:59] failures can cause serious damage or
+[32:00] loss in many aspects of the business.
+[32:03] So, what methods or approaches can we
+[32:05] use for application testing? First, code
+[32:08] review. Just like it sounds, reviewing
+[32:10] and testing the code before deploying it
+[32:12] to the production environment. Sometimes
+[32:14] also called peer review. It means
+[32:16] developers check the code for errors.
+[32:18] Well, it would be a good idea to use
+[32:20] different developers, different from the
+[32:21] ones who wrote the code. Everybody does
+[32:23] code review however they see fit. Uh
+[32:25] more or less formal, more or less
+[32:27] thorough. For your information, the most
+[32:30] formal code review process is called
+[32:31] Fagan inspection and it has six steps.
+[32:35] Planning, define the scope objectives of
+[32:37] the code review.
+[32:38] Overview, let's explain the code and its
+[32:40] functionality to the reviewers so that
+[32:42] they know what they should be looking
+[32:44] for and how to approach the testing
+[32:45] process. Preparations, this is where the
+[32:48] reviewers examine the code and prepare
+[32:49] questions and comments. Inspections,
+[32:52] where the reviewers meet and discuss the
+[32:53] code, identify defects, and record
+[32:55] issues.
+[32:56] Rework, the original developer fixes the
+[32:59] defects and resubmits the code for
+[33:01] review, and follow up to verify that the
+[33:03] defects are fixed and the code meets the
+[33:05] quality standards.
+[33:07] Fagan inspection is very rigorous and
+[33:09] thorough, but it also takes a lot of
+[33:10] time and
+[33:11] uh looks like a hassle. It usually
+[33:14] it's found in environments where code
+[33:15] quality is critical and errors can have
+[33:17] disastrous consequences. But most
+[33:20] companies use a much less formal code
+[33:22] review process such as a simple
+[33:23] walk-through. In this one, developers
+[33:26] just present their code and explain it
+[33:27] to other team members in a meeting or a
+[33:29] whiteboard or a mood board. Manual
+[33:31] review, this happens when another, let's
+[33:33] say, senior developer checks the code
+[33:34] manually. An automated review can be
+[33:36] done using tools that scan the code and
+[33:38] detect common flaws before the code
+[33:40] reaches production. It looks for things
+[33:42] such as infinite loops, unreachable code
+[33:46] inefficient code, memory leaks, code
+[33:48] paths that bypass security measures,
+[33:51] input corner cases that generate errors,
+[33:53] and so on. From an approach standpoint,
+[33:55] we also have static and dynamic testing.
+[33:59] You can probably guess what these are,
+[34:00] but static testing means analyzing the
+[34:02] software without actually running it, so
+[34:04] by looking at the code. While dynamic
+[34:06] testing runs the software in a virtual
+[34:08] machine, container, or some simulated
+[34:10] environment and looks at the behavior of
+[34:12] it or tests its behavior.
+[34:15] Uh static testing can find common flaws
+[34:17] in code such as buffer overflows and
+[34:18] some vulnerabilities. It can be done
+[34:20] manually, but it's most likely going to
+[34:21] be conducted by an automated tool as
+[34:24] manual review can easily overlook major
+[34:26] issues and because, well, human brains
+[34:28] can only process
+[34:30] just a few thousands of lines of code
+[34:32] easily, perhaps. Next, dynamic testing
+[34:34] is often used when the testers do not
+[34:36] have access to the source code or when
+[34:38] testers don't know enough about the
+[34:39] source code to test it, but they can
+[34:42] still play with the end product and
+[34:43] start using it in crazy scenarios.
+[34:46] Uh dynamic testing can also use fake or
+[34:48] synthetic transactions that have known
+[34:50] results to see how the app behaves.
+[34:53] Any difference in the end result or in
+[34:56] how long a certain operation lasts
+[34:57] indicate possible errors in software
+[34:59] that need further investigation.
+[35:01] If you put on your security hat,
+[35:03] software testing can also be viewed like
+[35:05] vulnerability scanning. You might find
+[35:07] vulnerabilities while scanning for
+[35:09] errors. If you are a security
+[35:10] professional, then ethics dictate that
+[35:12] when you find such a vulnerability, you
+[35:14] should report it to the vendor so that
+[35:16] they can fix it and protect their
+[35:18] customers. This kind of disclosure
+[35:19] should be done privately with the vendor
+[35:21] at first to give them a chance to
+[35:23] correct the problem, but if the vendor
+[35:24] doesn't answer, doesn't care, or doesn't
+[35:26] fix it, then you should disclose the
+[35:28] vulnerability publicly so that other
+[35:29] security professionals can be aware of
+[35:31] it when using their product. It's not
+[35:34] just to shame the vendor, but it's to
+[35:36] actually help other people using the
+[35:38] same product. So, don't think that it's
+[35:40] a bad thing to do, disclosing
+[35:41] vulnerability information, because if
+[35:43] the vendor doesn't want to do anything
+[35:44] about it, then at least let the users
+[35:46] know about it. If you were able to find
+[35:48] it, a hacker might have already found it
+[35:50] as well. They might be actively
+[35:52] exploiting it right now.
+[35:55] Other testing methods.
+[35:56] Fuzz testing or fuzzing is another
+[35:58] method of testing with different kinds
+[36:01] of input, some of which may be invalid
+[36:03] or malicious. Actually, they should
+[36:05] pretty much be invalid or malicious
+[36:07] because that's the point of fuzzing, to
+[36:09] see what happens with our software when
+[36:11] input goes crazy.
+[36:12] Fuzz testing can find flaws that other
+[36:15] testing methods may miss, crashes,
+[36:17] buffer overflows, or very unexpected
+[36:19] outcomes.
+[36:20] Mutation fuzzing takes existing input
+[36:23] and changes it slightly to create new
+[36:25] input. So, it's basically the same type
+[36:27] of input just slightly altered. A
+[36:28] different number, different character
+[36:30] string, a string too long, a string too
+[36:32] short, and so on. Generational fuzzing
+[36:34] creates new input from scratch based on
+[36:36] specific data models, regular
+[36:37] expressions, let's say, manually
+[36:39] designed input sets, and so on.
+[36:41] Of course, not even fuzz testing cannot
+[36:43] cover all the code and it usually
+[36:45] detects simple vulnerabilities that do
+[36:46] not involve complex logic. So, it should
+[36:49] be combined with test coverage analysis
+[36:51] like checking which code pathways are
+[36:53] actually being executed to measure the
+[36:55] effectiveness of it. Interface testing
+[36:57] is another method for checking the
+[36:59] performance of specific interface
+[37:00] modules against some specifications.
+[37:03] What does that mean? Well, if an
+[37:05] application is made up of multiple
+[37:06] components, then it is natural to expect
+[37:09] that these components need to talk to
+[37:10] each other. On these virtual
+[37:13] communication channels, errors can
+[37:14] happen. Fragmented messages, invalid
+[37:16] syntax, incomplete or abnormal message
+[37:19] sequences, lost messages, malicious
+[37:22] inputs that get passed on, and so on.
+[37:24] Interface testing makes sure that each
+[37:26] module receives and sends only valid
+[37:29] useful data according to its interface
+[37:31] specifications. That is the way it was
+[37:33] designed to talk to the outside world
+[37:35] and with the other modules. The
+[37:37] interface keyword here is used as a
+[37:39] generic term for some pathway for
+[37:41] communication outside the current
+[37:43] module, not just the user interface, the
+[37:46] UI. There are many types of interfaces
+[37:48] actually, depending on how the app is
+[37:49] designed and what it needs to interact
+[37:51] with. The app might use APIs, it might
+[37:54] use network protocols to communicate
+[37:55] over TCP/IP, and it most likely has a
+[37:57] user interface which also needs testing.
+[38:00] Code coverage and monitoring. There's
+[38:02] also a testing method called misuse case
+[38:05] testing, which is a way of testing using
+[38:07] scenarios with malicious or incorrect
+[38:10] input. It's often very difficult to
+[38:12] identify all types of possible misuse
+[38:15] cases.
+[38:16] Uh your input can most likely be correct
+[38:18] in one way, but incorrect in a million
+[38:20] ways. Uh hackers hunt specially these
+[38:22] types of unvalidated inputs. If we could
+[38:25] test for all possible misuse cases, then
+[38:27] we wouldn't have any bugs or
+[38:28] vulnerabilities in our code, would we,
+[38:30] right? What a world would that be?
+[38:33] Another type is coverage analysis. This
+[38:35] is a way of measuring how much of the
+[38:37] software has been tested with regards to
+[38:39] all possible states and use cases in
+[38:41] which the application could find itself.
+[38:43] Of course, it is way more difficult to
+[38:45] correctly evaluate this as it's an
+[38:47] extremely subjective and difficult
+[38:49] calculation.
+[38:50] It depends on how the use cases are
+[38:52] defined and counted and how the testing
+[38:54] is done. It depends on so much that it's
+[38:56] almost impossible to generate a clear
+[38:58] result. This is one of those things
+[39:00] where you should just try and do your
+[39:01] best and improve the next time if you
+[39:03] can. Probably the only actual objective
+[39:05] method for coverage analysis is is code
+[39:07] coverage, that is testing all possible
+[39:09] code pathways. Now, of course, if you
+[39:12] went and tested all code, it doesn't
+[39:14] mean that all your code is flawless as
+[39:17] your tests are only as good as the
+[39:18] inputs that you're providing. It also
+[39:21] doesn't mean that if you tested all
+[39:22] pathways, you are done because different
+[39:24] behavior can happen on an already tested
+[39:27] pathway when you provide a different or
+[39:29] malicious input.
+[39:31] We have several standard types of code
+[39:33] coverage tests. Branch coverage measures
+[39:36] how many of the if statements in the
+[39:37] code have been tested under both the if
+[39:40] and else conditions or switch case on
+[39:43] structure included here as well.
+[39:45] Function coverage measures how many of
+[39:47] the functions in the code have been
+[39:48] called and returned results. Still a
+[39:51] long way to go from I have received the
+[39:53] results to I received the correct
+[39:55] results and I have received all possible
+[39:57] correct results, so don't be fooled by
+[39:59] this. Loop coverage measures how many of
+[40:02] the loops, uh, for, while, do while, for
+[40:05] each, and so on,
+[40:06] in the code have been tested and how did
+[40:09] the code run? Multiple times, once, not
+[40:11] at all, and so on.
+[40:13] And finally, statement coverage measures
+[40:15] how many of the lines of the code have
+[40:17] been executed during the test. You might
+[40:19] be tempted to use this as your as your
+[40:21] main testing metric. Don't. Bad, crappy,
+[40:24] ugly spaghetti code can still be 100%
+[40:27] tested from a statement coverage and
+[40:30] it's still going to be bad, crappy,
+[40:31] ugly, insecure spaghetti code.
+[40:33] Finally, website monitoring is also a
+[40:35] way of testing by actively monitoring
+[40:37] the performance and behavior of a web
+[40:39] application using real or simulated
+[40:41] input. You could do it passively by
+[40:43] analyzing the network traffic and this
+[40:45] provides realistic and detailed data
+[40:47] that shows what is happening with the
+[40:49] website. Passive monitoring can also
+[40:51] track individual users and this is
+[40:52] called RUM, or real user monitoring.
+[40:55] There is also synthetic monitoring with
+[40:59] automatically generated artificial
+[41:01] transactions sent to the website, which
+[41:03] actually is a type of fuzzy testing.
+[41:06] Security management. Someone once said,
+[41:09] "Security is a process, not a
+[41:11] destination."
+[41:12] As you can probably guess, just testing
+[41:14] software is not enough to make secure
+[41:16] software. You also need security
+[41:17] management processes to control how
+[41:20] software is developed and how security
+[41:22] is part of this process. Security
+[41:24] management includes several types of
+[41:25] reviews, starting with log reviews,
+[41:28] which means analyzing the log data
+[41:30] generated by the software. Logs provide
+[41:32] a wealth of available information about
+[41:34] the performance, the behavior, and if
+[41:36] you know what to look for and how to
+[41:38] read them, even the security of the
+[41:39] software. You can review logs manually
+[41:42] using some simple text matching tools,
+[41:44] but using dedicated log analysis tools
+[41:46] like a SIEM, a security information and
+[41:48] event management solution, makes your
+[41:50] life a whole lot easier. If you are
+[41:52] planning on using a SIEM, you might have
+[41:54] to configure your applications and
+[41:56] devices to send their logs to the SIEM
+[41:58] solution in a standard format, usually
+[42:00] as syslog. To have accurate logging, you
+[42:02] also need accurate time and this is
+[42:04] where you need to use network time
+[42:05] protocol, NTP, to synchronize the clocks
+[42:08] of the systems that send and receive log
+[42:10] data. This helps you ensure that the log
+[42:12] data has consistent timestamps and you
+[42:15] can reconstruct a consistent timeline of
+[42:17] events across different sources. Log
+[42:20] reviews should be conducted
+[42:21] periodically, especially if you don't
+[42:23] have a SIEM to do that for you, and
+[42:25] especially for sensitive functions, to
+[42:27] make sure that privileged users are not
+[42:29] abusing their privileges, as any
+[42:31] privileged operation should always be
+[42:32] logged and stored in an audit database.
+[42:35] Also on the topic of log review and
+[42:36] logging information that can be sent to
+[42:38] a SIEM, it's worth mentioning NetFlow.
+[42:41] NetFlow was a protocol originally
+[42:43] developed by Cisco, nowadays implemented
+[42:45] in many variations and open, as in
+[42:48] non-proprietary, for all vendors.
+[42:51] What NetFlow does is reports a summary
+[42:54] of the network conversations on a
+[42:56] network segment back to some central
+[42:58] management station. In a NetFlow report,
+[43:00] you will find who talked to whom, for
+[43:02] how long, how many packets were
+[43:04] exchanged, over which protocol, how many
+[43:06] bytes were sent, and from these
+[43:08] statistics you can determine whether the
+[43:10] top talkers, destinations, and so on.
+[43:13] This is a very valuable information,
+[43:14] especially if you are able to correlate
+[43:16] it with syslog information. Disaster
+[43:18] recovery, even though this is a very big
+[43:20] topic on its own, should also be present
+[43:23] somewhere in the security management
+[43:24] procedures. Remember, availability is
+[43:27] just as important as confidentiality and
+[43:29] integrity, perhaps even more important.
+[43:31] You can't have confidentiality and
+[43:33] integrity at all if you don't have
+[43:35] availability. So, disaster recovery and
+[43:37] business continuity are the processes of
+[43:40] designing and testing the controls that
+[43:42] allow your business to work and recover
+[43:45] in the face of natural disasters, cyber
+[43:47] attacks, or just, uh, resume generating
+[43:51] events, RGEs, also known as human
+[43:54] errors.
+[43:55] The first thing, uh, that you need for
+[43:57] this is, of course, a backup program.
+[44:00] Then you need an update to that program
+[44:01] that makes sure those backups are
+[44:04] created consistently, verified from time
+[44:06] to time, and actually usable. Sometimes
+[44:08] even a simulated disaster might be
+[44:10] called for to check if you can actually
+[44:12] restore something useful out of those
+[44:14] dusty backups.
+[44:16] Then the weakest link, humans. How do
+[44:19] you deal with humans? Well, you either
+[44:20] avoid them, but you might need them for
+[44:23] your business, or you educate them to
+[44:25] behave nicely. Training and awareness
+[44:27] about risks, threats, and best practices
+[44:29] for protecting information. This is the
+[44:31] most important thing that no company
+[44:32] ever does right. Some companies use
+[44:35] phishing simulations to evaluate how
+[44:37] effective a training was. Phishing
+[44:39] simulations are fake phishing messages
+[44:41] that test whether the users can be
+[44:42] tricked into clicking the link or
+[44:44] responding with sensitive information
+[44:45] and then shaming them by telling them
+[44:47] they were duped.
+[44:48] Obviously, nothing works if you cannot
+[44:51] validate it
+[44:52] uh, that it works. For any process, you
+[44:55] need measurable metrics and in business
+[44:57] we call these key performance and risk
+[44:59] indicators, or in short, KPIs.
+[45:02] In a security program, typical KPIs
+[45:04] would be number of vulnerabilities. This
+[45:06] indicates how many vulnerabilities are
+[45:08] identified but still not fixed.
+[45:10] Criticality should be taken into
+[45:11] consideration here as well. Time to
+[45:14] resolve vulnerabilities, indicating how
+[45:16] long it takes to fix a vulnerability
+[45:17] once it's identified.
+[45:19] Error recurrence indicates how often the
+[45:22] same or a similar problem or issue or
+[45:25] error reappears in the software. One
+[45:28] example of lessons not learned. Data
+[45:31] breaches and compromised accounts. This
+[45:33] is something that you should have at
+[45:34] zero and any number higher than that is
+[45:36] a disaster. Repeat audit findings. This
+[45:40] indicates how many issues or gaps or
+[45:42] action points are repeated in the audit
+[45:44] reports of the security program. So
+[45:46] again, the lessons not yet learned.
+[45:49] And finally, user attempts to visit
+[45:51] known malicious sites. This indicates
+[45:53] how many users try to access websites
+[45:55] that are known to be malicious or
+[45:56] harmful. It can indicate the absence of
+[45:59] proper training and awareness program
+[46:01] for the users
+[46:02] or the absence of correcting actions.
+[46:05] Just don't blame people when you catch
+[46:07] them looking for other jobs on career
+[46:09] websites.
+[46:13] >> [music]

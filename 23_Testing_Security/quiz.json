@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A cloud-based SaaS provider is undergoing a third-party audit to assure its enterprise clients that its security and privacy controls are designed properly and operate effectively over a six-month period. The SaaS provider wants to protect the proprietary configuration details within the report, meaning the final report must be confidential and shared only under a Non-Disclosure Agreement (NDA). Which type of audit report should the SaaS provider request?",
+    "options": [
+      "SOC 1 Type 2",
+      "SOC 2 Type 1",
+      "SOC 2 Type 2",
+      "SOC 3 Type 2"
+    ],
+    "correctIndex": 2,
+    "explanation": "A SOC 2 Type 2 report evaluates the design and operational effectiveness of a service organization's security, availability, processing integrity, confidentiality, and privacy controls over a specified period of time (e.g., six months). It is confidential and intended to be shared only under an NDA. A SOC 2 Type 1 report only evaluates the design of controls at a specific point in time (a 'paper review'). SOC 1 is focused on financial reporting controls, and SOC 3 is a simplified, public report that does not require an NDA."
+  },
+  {
+    "question": "A security analyst needs to scan an external target server for open ports. To evade detection and avoid revealing the scanning machine's IP address to the target's intrusion detection systems (IDS), the analyst decides to perform a scan that exploits the predictable IP Identification (IPID) field of an inactive third-party system. Which scan type should the analyst configure?",
+    "options": [
+      "TCP Connect Scan",
+      "TCP SYN Scan",
+      "TCP ACK Scan",
+      "Idle (Zombie) Scan"
+    ],
+    "correctIndex": 3,
+    "explanation": "An Idle (Zombie) Scan is a stealthy scanning technique that allows an attacker to map out open ports on a target without directly sending any packets from their own IP address. It works by monitoring the IPID (IP Identification) changes of an inactive third-party 'zombie' host, spoofing the source IP address of scan packets to match the zombie's IP, and observing if the zombie's IPID increments. TCP Connect and SYN scans interact directly with the target, while TCP ACK scans are used to map firewall rules rather than discover open ports."
+  },
+  {
+    "question": "A security engineer is performing a vulnerability assessment on a critical web application. The application's database is located on a private internal network segment and is not directly accessible from the internet. However, the engineer suspects that input validation is missing on the login page. Which tool should the engineer use to automatically discover and exploit potential SQL injection flaws?",
+    "options": [
+      "Nmap",
+      "ZAP",
+      "SQLmap",
+      "Metasploit"
+    ],
+    "correctIndex": 2,
+    "explanation": "SQLmap is an open-source penetration testing tool that automates the process of detecting and exploiting SQL injection vulnerabilities and taking over database servers. ZAP (Zed Attack Proxy) is a general web application vulnerability scanner, but SQLmap is specifically optimized for SQL injection exploitation. Nmap is a network discovery and port scanner. Metasploit is a general exploitation framework, and while it has SQL modules, it is not the primary tool for automated SQL injection testing."
+  },
+  {
+    "question": "An engineering manager is overseeing the development of software for a high-risk autonomous vehicle system. The security policy dictates that the code must undergo a rigorous, formal peer-review process where defect detection is recorded systematically through six distinct phases: Planning, Overview, Preparation, Inspection, Rework, and Follow-up. Which code review methodology meets this requirement?",
+    "options": [
+      "Fagan Inspection",
+      "Software Walkthrough",
+      "Static Application Security Testing (SAST)",
+      "Generational Fuzzing"
+    ],
+    "correctIndex": 0,
+    "explanation": "A Fagan Inspection is a highly structured and formal peer-review process consisting of six distinct steps (Planning, Overview, Preparation, Inspection, Rework, and Follow-up) aimed at detecting defects in documents or code. A Software Walkthrough is an informal process where developers present code to peers without rigid structures. SAST is an automated tool-driven testing method, not a peer-review methodology. Generational Fuzzing is an automated dynamic testing technique."
+  },
+  {
+    "question": "During a post-incident review, an incident response lead notices that firewalls, Active Directory servers, and database servers logged the same malicious event with timestamps that differed by up to five minutes. This time skew prevented the team from establishing a clear, chronologically accurate timeline of the attack. What is the most effective remediation?",
+    "options": [
+      "Implement a central Syslog server to normalize logs",
+      "Configure NetFlow on core switches to track conversations",
+      "Deploy a SIEM to perform dynamic parsing",
+      "Implement Network Time Protocol (NTP) to synchronize system clocks"
+    ],
+    "correctIndex": 3,
+    "explanation": "Network Time Protocol (NTP) synchronizes system clocks across all network devices and hosts, ensuring that log entries from different sources have consistent and accurate timestamps. This is essential for reconstructing an accurate timeline of events during forensic investigations. While Syslog, NetFlow, and SIEM are valuable components of a monitoring and logging strategy, they do not resolve system clock skew at the source."
+  }
+]

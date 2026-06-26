@@ -1,0 +1,57 @@
+[
+  {
+    "question": "An organization suffers a massive system outage after a routine update to an endpoint detection agent loads a buggy system driver. As a CISSP, how would you explain the architectural reason why this software bug caused a total operating system crash?",
+    "options": [
+      "The agent was executed within Ring 3 user space, allowing it to starve the system of CPU cycles.",
+      "The agent's device driver was loaded in Ring 0 (Kernel Mode), where any unhandled exception crashes the entire operating system.",
+      "The driver bypassed the Trusted Platform Module and executed directly in the supervisor state.",
+      "The scheduler forced the driver into a perpetual waiting state, leading to a system-wide deadlock."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ring 0 (Kernel Mode) has direct access to system hardware and memory. Any code execution failure in Ring 0, such as a buggy device driver, can cause an unhandled kernel panic and crash the entire operating system. Application code in Ring 3 is logically isolated from kernel space, preventing it from crashing the system."
+  },
+  {
+    "question": "A financial institution is decommissioning a storage array containing highly sensitive customer data. Senior management has proposed overwriting all solid-state drives (SSDs) with random characters three times before sending them to a third-party recycler. From a security manager's perspective, why is this procedure insufficient?",
+    "options": [
+      "SSD microcontrollers utilize wear-leveling and bad-block management, which can shield data sectors from being overwritten by software utilities.",
+      "SSDs require demagnetization (degaussing) rather than software overwriting to destroy data remnants.",
+      "Physical destruction is only required for legacy magnetic tapes, whereas digital SSDs are safely sanitized via quick format.",
+      "The Trusted Platform Module (TPM) on the SSD will encrypt the new random data, preserving the original keys in its registers."
+    ],
+    "correctIndex": 0,
+    "explanation": "SSDs contain internal microcontrollers that manage wear-leveling, bad-block reallocation, and over-provisioned space. Standard software overwriting utilities cannot access these hidden blocks, leaving potential data remnants intact. Physical destruction (e.g., shredding) or vendor-specific cryptographic secure erase commands are required. Degaussing only works on magnetic media and is ineffective on flash storage."
+  },
+  {
+    "question": "A security architect discovers that a private platform key (PK) for a major hardware vendor's UEFI implementation was leaked online. Which of the following is the most direct consequence of this compromise on systems using this vendor's hardware?",
+    "options": [
+      "The Trusted Platform Module (TPM) will fail to generate hashes for Measured Boot.",
+      "Attackers can sign malicious boot loaders or drivers that bypass the Secure Boot validation process.",
+      "Systems will automatically quarantine themselves into a restricted VLAN during startup.",
+      "Operating systems running on these motherboards will be forced into problem mode."
+    ],
+    "correctIndex": 1,
+    "explanation": "Secure Boot uses public-key cryptography to verify that boot components and drivers are digitally signed by trusted keys. If the vendor's platform key (PK)—which establishes the root of trust—is compromised, attackers can sign malicious boot loaders or drivers (such as UEFI rootkits) that the system will trust and execute without warning."
+  },
+  {
+    "question": "A defense contractor is building a secure facility for handling classified data. The designer suggests using unshielded twisted pair (UTP) cabling, relying solely on software encryption to protect data. As the CISSP, which countermeasure is most appropriate to mitigate electromagnetic emanation leakage and crosstalk?",
+    "options": [
+      "Replace UTP cabling with shielded twisted pair (STP) cables and utilize Faraday cages for high-emission devices.",
+      "Implement a measured boot policy that shuts down the CPU if a change in signal frequency is detected.",
+      "Rely on white noise generators to jam external GPS and GSM signals.",
+      "Group display interfaces using legacy VGA cables to isolate analog video frequencies."
+    ],
+    "correctIndex": 0,
+    "explanation": "Shielded Twisted Pair (STP) cabling contains foil shielding that reduces electromagnetic emissions (emanations) and protects against external electromagnetic interference. Combining STP with Faraday cages around high-emission devices directly mitigates side-channel emanation monitoring (TEMPEST). Legacy VGA cables are unshielded and leak significant electromagnetic signals, making them insecure."
+  },
+  {
+    "question": "An enterprise is planning to implement Measured Boot across its workstation fleet. The security team wants to ensure that any workstation whose boot components have been modified is denied access to the corporate network. Which of the following describes how this policy must be enforced?",
+    "options": [
+      "The UEFI firmware will halt the system before the bootloader runs if measured hashes do not match.",
+      "The Trusted Platform Module (TPM) will automatically lock the CPU registers in the supervisor state.",
+      "An operating system or network agent must compare the TPM-recorded hashes against a baseline and assign the device to a quarantine VLAN if a mismatch is found.",
+      "The system will disable the SSD microcontroller and force the system into a perpetual ready state."
+    ],
+    "correctIndex": 2,
+    "explanation": "Measured Boot does not halt the boot process if a modification is detected; it simply hashes each boot stage and stores the measurements securely in the TPM. Enforcing network access restriction or quarantining the device must be performed by high-level software (like a network access control agent or OS-level security tool) that reads the TPM measurements and applies network-level policy (e.g., VLAN isolation)."
+  }
+]

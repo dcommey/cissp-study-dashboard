@@ -1,0 +1,1187 @@
+[00:07] and mobile devices. Now, mobile devices
+[00:10] are usually the nightmare of security
+[00:11] teams. Welcome to the world of mobile
+[00:13] devices where anything that runs on
+[00:15] battery power can be considered a
+[00:17] potential security threat. Yes, even
+[00:19] your smartwatch or fitness tracker can
+[00:21] be hacked. So, don't think you're don't
+[00:24] think you're safe just because you're
+[00:25] not carrying a laptop, a tablet, or a
+[00:27] smartphone. Mobile devices can do a lot
+[00:29] of things nowadays. They can do so many
+[00:30] things that many of us don't even have
+[00:32] those big desktop computers anymore,
+[00:34] except if you're a power user or a gamer
+[00:36] or both. Uh actually, not even for
+[00:39] gamers. Uh cloud gaming works so well
+[00:41] that you don't even need a beefy gaming
+[00:43] desktop anymore. Mobile devices can do
+[00:45] everything. They can uh access the
+[00:47] internet, store and process data, run
+[00:49] applications, take photos, record
+[00:50] videos, make phone calls. Remember that
+[00:52] awesome feature, phone calls? A long
+[00:55] story short, mobile devices can do
+[00:56] everything our traditional computers can
+[00:58] do because they are computers.
+[01:02] But with great power comes great
+[01:03] responsibility and uh also great risk.
+[01:06] Mobile devices are often less secure
+[01:08] than traditional computers because
+[01:09] tablets and phones and wearables run on
+[01:12] stripped down or custom operating
+[01:14] systems that may not have the same
+[01:16] security features or updates as popular
+[01:18] PC or server operating systems. They
+[01:20] also have more ways of connecting to
+[01:22] other devices and networks such as
+[01:24] Bluetooth, Wi-Fi, cellular, NFC, USB,
+[01:27] you name it. This means they are more
+[01:29] exposed to potential attacks. Uh, mobile
+[01:32] devices are often targeted by attackers
+[01:34] because they are well mobile. They can
+[01:36] be used to bring in malware from the
+[01:39] outside or to steal sensitive data from
+[01:41] the inside of the company. They're also
+[01:42] easier to steal or lose. Many mobile
+[01:44] devices have personal or corporate
+[01:46] information that can be accessed by
+[01:48] anyone who gets a hold of them. Think
+[01:50] about your contacts, your messages, your
+[01:52] emails, your calendars, notes,
+[01:54] documents, photos, videos, and so on. Do
+[01:57] you really want them to fall into the
+[01:59] wrong hands or anybody else's hands for
+[02:01] that matter? As for mobile phones and
+[02:04] tablets, what we have nowadays are two
+[02:06] operating systems, major ones, Android
+[02:08] and Apple iOS. Android mobile device OS
+[02:11] based on Linux which was acquired by
+[02:13] Google in 2005.
+[02:15] It was first released to the public in
+[02:17] 2008 and since then it has become the
+[02:20] most widely used mobile OS in the world.
+[02:22] Android is open source which means
+[02:24] everyone can access and modify source
+[02:26] code. This also means that there are
+[02:28] many different versions and flavors of
+[02:30] Android for different devices and
+[02:32] vendors. Too many actually. Some people
+[02:35] like this because it gives them more
+[02:37] choice. Others hate it because it makes
+[02:38] it hard to update and secure the devices
+[02:40] and makes the Android ecosystem an
+[02:43] extremely fragmented and inconsistent
+[02:46] one. Android has many security
+[02:48] vulnerabilities just like any popular
+[02:49] operating system. Anything that's very
+[02:51] popular becomes very targeted. That's
+[02:53] nobody's fault. It's just a fact. Some
+[02:56] of these vulnerabilities are fixed by
+[02:58] Google in new updates, but not all
+[02:59] devices receive these updates in a
+[03:01] timely manner or not at all depending on
+[03:03] your devices vendor or how quickly they
+[03:06] implement those updates. And well, if
+[03:08] they decide to even release an update
+[03:10] for your device at all. That's why you
+[03:13] need to be careful about what you
+[03:14] install and what you do on your Android
+[03:16] device. You can also adjust some
+[03:18] settings and install some apps that give
+[03:19] you better security. For example, you
+[03:21] can enable device encryption, lock your
+[03:23] screen, disable installation of apps
+[03:25] from unknown sources, install antivirus
+[03:27] and so on. One of the security
+[03:29] improvements for Android is called SE
+[03:32] Android, which stands for security
+[03:33] enhanced Android. This is a framework
+[03:35] that borrows some elements from the SE
+[03:39] Linux. Security enhanced Linux mainly an
+[03:41] implementation for Mac. Remember that
+[03:44] one? mandatory access control which
+[03:47] limits privileges, enables sandboxing
+[03:49] and other security functions. Different
+[03:52] vendors may implement this in a number
+[03:54] of ways like Samsung's Nox for example.
+[03:58] iOS is the mobile device OS from Apple
+[04:01] that is standard on the iPhone, iPad,
+[04:03] Apple TV and some to some extent even
+[04:05] Mac OS and watch OS. iOS is not open
+[04:08] source so you cannot see the source
+[04:10] code. It's also not licensed for use on
+[04:12] any non-Apple hardware, although it's it
+[04:14] is possible to run it. Uh while at first
+[04:17] sight more limited and restricted, uh
+[04:20] the simple fact of not being able to
+[04:22] install apps from any source other than
+[04:24] the official app store, combined with a
+[04:26] more thorough approval policy for all
+[04:28] the software that gets published in
+[04:30] there, and combined with the fact that
+[04:33] iOS was from the very beginning a much
+[04:35] more locked down operating system, uh
+[04:37] makes iOS a much less popular target for
+[04:40] malware attacks. Vulnerabilities are
+[04:42] found from time to time, but they're not
+[04:44] even close to how many Android has. I
+[04:47] mean, for the first few years, iOS
+[04:48] wasn't even able to copy and paste
+[04:50] between different apps on the same
+[04:52] phone. People laughed and said that
+[04:54] Apple programmers cannot even implement
+[04:56] copying and pasting in iOS. Really, now
+[04:59] in hindsight, does anyone still believe
+[05:01] now they weren't able to implement it?
+[05:04] It was actually a very tight and secure
+[05:06] implementation of sandboxing that denied
+[05:08] any kind of communication between apps.
+[05:11] and it's still there but with a number
+[05:13] of additional security layers nowadays
+[05:15] and it still helps tremendously with the
+[05:17] security of Apple devices. So to protect
+[05:20] your iOS device from security risks, you
+[05:22] should follow some common sense best
+[05:23] practices such as updating your OS
+[05:25] regularly, enabling passcode lock or
+[05:28] Touch ID or Face ID, disabling
+[05:30] unnecessary services or features,
+[05:32] backing up your data, installing only
+[05:34] trusted apps from the app store,
+[05:36] avoiding jailbreaking your device, and
+[05:39] using VPNs or HTTPS when connecting to
+[05:42] public Wi-Fi networks. But that really
+[05:44] is just common sense, right? Also, you
+[05:47] should know that rooting is a term for
+[05:49] gaining root access which normally you
+[05:51] don't have on an Android device while
+[05:54] jailbreaking is the same approach when
+[05:56] talking about iOS devices.
+[05:59] All right, so let's mention a couple of
+[06:00] best practices for Android and iOS.
+[06:02] Let's see in a more efficient manner
+[06:04] what you should do to protect mobile
+[06:05] devices, not just your own, but the
+[06:07] companies too. One of the security
+[06:09] features that can help you manage your
+[06:10] mobile devices is called MDM, mobile
+[06:13] device management. This is a piece of
+[06:15] software that lets you register, that is
+[06:17] bringing a new mobile device on board,
+[06:19] lets you monitor and make changes to
+[06:21] employee devices remotely. MDM can also
+[06:24] be used to push or remove apps from your
+[06:26] employees phones, manage the data that
+[06:28] they store on those devices, enforce
+[06:32] settings with or without their consent,
+[06:34] and remotely troubleshoot problems.
+[06:36] Sounds good if you're in IT. And some
+[06:38] MDM solutions can also handle both
+[06:40] company-owned and personally owned
+[06:42] devices. can also encounter the term UEM
+[06:45] which stands for unified endpoint
+[06:48] management and the difference lies in
+[06:50] the fact that UEM targets all endpoint
+[06:52] devices desktops, laptops, even
+[06:55] industrial computers along with the
+[06:57] traditional mobile devices. With mobile
+[07:00] devices authentication also important
+[07:02] and it also should be common sense
+[07:04] obviously uh you need some system to
+[07:07] verify your identity before allowing you
+[07:09] to access your device. It can be done in
+[07:11] different ways such as using a password,
+[07:13] a PIN, a biometric scan, a USB key or
+[07:15] proximity device. As you surely know, a
+[07:18] biometric scan is a type of device
+[07:20] authentication that uses something that
+[07:22] you are such as your retina, your iris,
+[07:25] your face, or your fingerprint. This is
+[07:27] obviously more convenient and secure
+[07:29] than using a password or a pen because
+[07:31] you don't have to remember or type
+[07:33] anything. And more importantly, your
+[07:36] face or your fingerprint is not
+[07:37] something that can be stolen from you or
+[07:39] something that you can forget at home.
+[07:41] You might lose your mind, especially if
+[07:43] you're raising kids, but you'll never
+[07:45] lose your face.
+[07:47] It's also convenient because you just
+[07:49] have to show your face uh or touch your
+[07:52] finger to unlock your device. It's also
+[07:54] more unique and harder to spoof than
+[07:56] using a password or a pen because no one
+[07:57] else has the same biometric features as
+[07:59] you do. Uh so if you can accidentally
+[08:02] stumble upon or just guess someone's
+[08:04] password that cannot happen with
+[08:06] biometrics
+[08:08] encryption is another obvious security
+[08:10] solution for mobile devices. Most phones
+[08:12] and tablets today have full disc
+[08:13] encryption also called FTE built-in or
+[08:17] it can be enabled by the user. We have
+[08:19] it on Windows with Bit Locker on Mac
+[08:21] with File Vault on Android and iOS
+[08:23] devices. Actually most mobile phones and
+[08:25] tablets h have FD enabled by default
+[08:28] today. Once your device is encrypted,
+[08:30] your data is protected whenever your
+[08:32] screen is locked, which also disables
+[08:34] any attempt from the physical data port
+[08:36] on your device. This means that no one
+[08:38] can access your data through the usual
+[08:39] screen interface and not even through a
+[08:41] cable connection.
+[08:43] FDE is not foolproof. A device can have
+[08:47] vulnerabilities that might allow an
+[08:48] attacker to bypass encryption or access
+[08:52] the decryption key using other means.
+[08:55] And it also doesn't help if your phone,
+[08:57] for example, is stolen while unlocked.
+[08:59] You get a performance hit, of course,
+[09:01] when every read and write operation has
+[09:04] to go through the encryption engine,
+[09:05] which is actually not so bad on mobile
+[09:07] phones or tablets since most have
+[09:09] encryption enabled by default. And you
+[09:11] don't really perceive the performance
+[09:13] hit since you've you've never you never
+[09:15] get a chance to see how your device
+[09:17] would perform if otherwise not
+[09:19] encrypted.
+[09:21] uh to enhance the way you can unlock an
+[09:24] encrypted phone so you don't just rely
+[09:26] on a pin on a pattern. Some security
+[09:28] phones almost also support a um micro SD
+[09:32] card that acts like a hardware security
+[09:34] module, an HSM. The HSM works like a TPM
+[09:39] chip in your computer except that it is
+[09:40] removable. It deals with generating and
+[09:43] storing encryption keys and certificates
+[09:44] and it becomes a something you have type
+[09:48] of factor for unlocking the phone just
+[09:49] like a physical key. I know this really
+[09:52] kills usability and it's painfully
+[09:54] annoying uh but it's pretty secure.
+[09:57] Another security feature is called
+[09:59] remote wiping or remote sanitization.
+[10:02] Uh this lets you delete all data or at
+[10:04] least all the configuration settings
+[10:06] from your device remotely. You can
+[10:08] trigger the wipe process over any
+[10:10] internet connection but you will need an
+[10:12] internet connection on the phone that
+[10:14] you intend to wipe otherwise no wipe
+[10:16] command can reach it. Obviously, this is
+[10:18] useful when a mobile device containing
+[10:20] sensitive information gets stolen.
+[10:22] Thieves of course know about this as
+[10:24] well, so they attempt to disconnect the
+[10:26] phone from any network or even place it
+[10:27] in a Faraday cage to block any wipe
+[10:31] signal from reaching it. Cloud services
+[10:34] managed by the phone manufacturer
+[10:35] provide this uh remote wipe service as
+[10:38] well and uh you can control it inhouse
+[10:40] if you have a MDM solution that manages
+[10:43] your company phones. Another feature is
+[10:45] device lock out. This disables your
+[10:48] device after a number of failed
+[10:49] authentication attempts. You can try
+[10:51] this anytime on your own phone if you
+[10:53] want and the purpose is to block brute
+[10:55] forcing attempts on your authentication
+[10:57] method. It can also help to frustrate
+[10:59] the attackers by introducing delays
+[11:01] between failed access attempts.
+[11:04] Location services on mobile devices have
+[11:06] security implications too. The first
+[11:08] service that comes to everyone's mind is
+[11:11] GPS, which stands for global positioning
+[11:13] system. And it's a way of finding out
+[11:15] where you are on the planet using
+[11:17] satellites in orbit. You probably use
+[11:19] GPS every day when you use your phone to
+[11:21] get directions, navigate when driving,
+[11:24] checking the weather, finding nearby
+[11:26] restaurants. You can also use GPS to
+[11:28] track people and devices. Let's start
+[11:30] with the good stuff. GPS tracking can be
+[11:32] useful for many purposes, such as
+[11:34] monitoring your own movement, how long
+[11:36] your last outdoor run was.
+[11:38] Congratulations if you're doing that,
+[11:40] for checking out where your children
+[11:41] are, tracking deliveries, or if your
+[11:44] phone gets stolen, you can use GPS to
+[11:46] locate it and hopefully get it back. Or
+[11:48] for example, my company tracks the
+[11:50] movements of the car that they give me.
+[11:52] Uh actually I don't think they track
+[11:55] where I do my shopping but more like
+[11:57] tracking whenever I go across the border
+[11:59] which is a type of geo fencing a
+[12:02] technique that divides a a virtual
+[12:04] perimeter based on GPS coordinates. But
+[12:08] for GPS tracking to work and to be able
+[12:10] to send that information somewhere the
+[12:12] mobile device must have internet access
+[12:13] over it to communicate its location.
+[12:15] That's one thing that people get wrong
+[12:17] from badly written cop shows. And the
+[12:20] fact that having a GPS receiver with you
+[12:23] automatically means that someone else
+[12:25] can track your location, which is
+[12:27] completely wrong. Well, in case of
+[12:29] smartphones, they are both receivers of
+[12:32] GPS data and senders of any data. So, if
+[12:35] you lose your phone in a remote area
+[12:37] with no signal or if the thief turns off
+[12:39] your phone and puts it in airplane mode
+[12:41] or in a Faraday cage, GPS tracking won't
+[12:44] work. GPS tracking can also mean that
+[12:46] apps on your phone can record your
+[12:48] location, share it with who knows who,
+[12:50] sometimes without your consent. This is
+[12:52] a risk to your privacy and your
+[12:54] security. For example, some apps may use
+[12:56] your location to provide you with
+[12:58] personalized services, such as offering
+[12:59] discounts to whatever retail stores
+[13:01] happen to be close to your location.
+[13:03] I've never really met someone who
+[13:06] appreciates this kind of spamming, but
+[13:08] in business presentations, this is
+[13:10] probably some sales manager out there
+[13:12] who appreciates this or thinks that it's
+[13:14] a good idea. Unfortunately, it also
+[13:17] means that those apps know where you
+[13:19] are, what you like, and they may sell
+[13:22] that information to advertisers or other
+[13:24] third parties, which in turn generate
+[13:27] more spam and oh goody, relevant ads to
+[13:30] you. Just what we wanted always. Yay.
+[13:34] Another use case for GPS is geo tagging.
+[13:37] Geotagging means that the device adds
+[13:40] its GPS coordinates to any media content
+[13:44] like photos, videos, or when you're
+[13:46] updating a status on social media. This
+[13:48] can be useful if you want to remember or
+[13:50] share your memories, especially if
+[13:51] you're archiving your photos. Uh Google
+[13:54] Photos, for example, let you search for
+[13:55] all your photos taken in a certain
+[13:57] location. Personally, I use both Google
+[13:59] Photos and an app made by Synology,
+[14:01] which also stores all my my family's
+[14:04] photos and, you know, a couple of NAS
+[14:06] devices. Uh, it's convenient to be able
+[14:08] to search tens of thousands of photos
+[14:10] based on the locations where they were
+[14:12] taken. On the other hand, on social
+[14:14] media, that extra information might not
+[14:16] be exactly what you're aiming for. And
+[14:18] if you're not careful, you might be
+[14:20] tagging all your content with your
+[14:22] current location, which makes it a real
+[14:24] security concern if someone is tracking
+[14:27] your movements. For example, an
+[14:29] adversary or crazy ex-girlfriend or
+[14:32] boyfriend may view your photos from
+[14:34] social media and know exactly when and
+[14:37] where you were. This can be used for
+[14:39] stalking, harassing, blackmailing, or
+[14:42] even robbing you. or someone could use
+[14:44] geotagging to determine where you
+[14:46] normally perform routine activities such
+[14:48] as going to work, school, the gym,
+[14:50] grocery shopping. This can be used to
+[14:52] predict your behavior and plan an attack
+[14:54] on your home. So, well, at least don't
+[14:56] post vacation pictures while on
+[14:58] vacation. Another method to locate your
+[15:01] device is WIPS, and it stands for
+[15:04] wireless positioning system or whips. It
+[15:08] does not use GPS satellites for
+[15:10] positioning, but it uses the known
+[15:11] location of wireless access points, APS,
+[15:14] to determine your location. Uh, whips is
+[15:17] often used as a supplement to GPS when
+[15:19] you don't have enough satellite signal,
+[15:21] such as when you're underground inside
+[15:24] buildings or near tall buildings where
+[15:26] you cannot see the sky. I've been to
+[15:29] downtown Manhattan in New York or
+[15:31] downtown Chicago and surprisingly enough
+[15:35] GPS signal sucks big time there. Whips
+[15:38] is not as accurate as GPS and it depends
+[15:40] on the availability and accuracy of the
+[15:43] access points. But sometimes when GPS is
+[15:45] not so available, wireless positioning
+[15:47] works miracles. And it's also much
+[15:49] faster. Your phone does this whenever
+[15:51] you open up any maps application. If it
+[15:53] were to wait for a GPS signal, you could
+[15:56] wait for some minutes. uh perhaps for
+[15:59] your precise location to show up. But by
+[16:01] using them both at the same time, it's
+[16:03] much faster. Also, any data network can
+[16:05] be used to download the ephemerides data
+[16:08] about the position of the GPS
+[16:10] satellites, which also makes positioning
+[16:12] much much faster. Uh cellular or mobile
+[16:15] service tower triangulation is another
+[16:17] way to locate a mobile device using the
+[16:19] signals from the nearest cell towers. It
+[16:21] is not as accurate as GPS either and it
+[16:24] varies depending on the density and
+[16:25] coverage of the cell towers. It is
+[16:27] sometimes used by law enforcement or
+[16:29] emergency services, but I don't need to
+[16:31] tell you this because you know all about
+[16:32] this from TV cop shows. Bluetooth uh
+[16:35] location services are based on tracking
+[16:37] devices based on their Bluetooth device
+[16:39] address and signal properties. Sometimes
+[16:42] uh they're used in stores to locate
+[16:44] returning customers and provide them
+[16:46] with offers or in a warehouse to easily
+[16:48] locate merchandise using Bluetooth
+[16:50] beacons. Oh, and you also see this
+[16:53] sometimes in museums where they provide
+[16:55] you guided directions and audio tours.
+[16:58] Finally, geo fencing, remember we
+[17:01] briefly mentioned this before, means
+[17:03] designating a specific geographical area
+[17:06] that is then used to automatically
+[17:08] trigger an event when the mobile device
+[17:10] goes across the virtual border. A
+[17:13] geoence can be defined by GPS
+[17:15] coordinates like a real fence made up of
+[17:17] points with specific coordinates. uh the
+[17:19] presence of or lack of a specific
+[17:21] wireless signal, which if you think
+[17:23] about it, it's a pretty good positioning
+[17:25] method. The device can be configured to
+[17:27] enable or disable features based on a
+[17:30] geoenced area. For example, you can turn
+[17:32] you can set up a geoence around your
+[17:34] home or office that automatically turns
+[17:37] on your Wi-Fi on your phone when you
+[17:39] enter it and turns it off when you leave
+[17:42] it. Or you can just set up a geoence
+[17:44] around the restricted area that
+[17:46] automatically disables your camera
+[17:48] perhaps when you enter it and enables it
+[17:50] when you leave it. Uh rental car
+[17:52] companies uh might do this using GPS to
+[17:54] monitor whenever you're attempting to
+[17:57] cross a border or state line using their
+[17:59] cars. Geofencing is not as much a of a
+[18:03] technology as it's a software feature.
+[18:05] Basically, it doesn't require anything
+[18:06] additional or special. It's just a
+[18:08] configuration setting and a piece of
+[18:10] software that is able to figure out uh
+[18:12] what those coordinates actually mean.
+[18:15] Now let's talk a bit about mobile
+[18:17] devices and content security.
+[18:19] Application control or application
+[18:20] management is a way of controlling what
+[18:22] apps can be installed and used on a
+[18:24] device. But you guessed that already
+[18:26] from the name. It calls for a solution
+[18:29] that can manage mobile devices. So
+[18:32] generically it means that we need some
+[18:33] sort of a mobile device management
+[18:35] software or MGM. App control can force
+[18:38] specific apps to be installed or to
+[18:40] enforce the settings of certain apps or
+[18:42] the phone itself to match security
+[18:44] baseline. Actually officially these
+[18:46] solutions are called mobile application
+[18:48] management MAM mam. This is similar to
+[18:51] an MDM but focuses only on the app
+[18:53] management rather than managing the
+[18:55] entire mobile device. And if you're
+[18:56] thinking well what else is there to
+[18:58] manage apart from the apps on a mobile
+[19:00] device? Well, there are the security
+[19:02] settings like for example making it
+[19:04] mandatory to have a passcode or
+[19:06] biometric unlock code or not being
+[19:08] allowed to use rooted or jailbroken
+[19:11] devices on the network or controlling
+[19:13] the devices hardware starting from which
+[19:15] connections are permitted to whether you
+[19:17] are allowed to use the phone's camera
+[19:19] while on the company's premises. Stuff
+[19:21] like that can be controlled with an MDM
+[19:22] solution. So BYOD bring your own device
+[19:26] isn't exactly bring and do whatever you
+[19:28] want with your own device.
+[19:30] Uh anyway, coming back to the app
+[19:32] discussion, the idea here is to reduce
+[19:34] the risk of users installing nasty apps
+[19:36] by limiting their ability to install
+[19:38] apps that come from unknown sources or
+[19:40] that offered nonworkreated features. So
+[19:43] you get protection and employ
+[19:45] frustration in one single package
+[19:48] without application control. Users could
+[19:50] potentially install malware, run data
+[19:52] stealing software, run apps that reveal
+[19:54] location data, or, you know, just waste
+[19:57] time on social media where they're in
+[19:59] the office. My god, who would do that?
+[20:02] Actually, there could be accidental data
+[20:04] leaked, too. The user might not even
+[20:06] have bad intentions, but they might use
+[20:08] file synchronization services that leak
+[20:10] confidential information. They might be
+[20:12] able to send company documents over
+[20:14] their private email or social media
+[20:16] messaging platforms. is there if there
+[20:18] are no controls in place to prevent
+[20:19] this. And it doesn't mean that file
+[20:22] sharing or social media are bad. But we
+[20:24] all know how insecure and permissive
+[20:26] people behave when using those tools.
+[20:29] Users might use personal accounts that
+[20:32] get easily breached. Let's say you have
+[20:34] a good security policy inside your
+[20:36] company. You use MFA on all your devices
+[20:38] and services. Intrusion detection, data
+[20:41] loss prevention. Well, what if an
+[20:43] employee installs Dropbox or Google
+[20:45] Drive on their laptop and starts using
+[20:47] that storage for company files? That
+[20:49] storage might have a weak password. No
+[20:51] MFA, no DLP, no security. One example of
+[20:54] application control is application allow
+[20:56] listing. This used to be called
+[20:58] whitelisting. Allow listing is a way of
+[21:01] implementing security as a deny by
+[21:04] default allow by exception method. So
+[21:06] the allow list well lists all the
+[21:10] allowed apps. I know amazing that a user
+[21:13] can install and use nothing else. This
+[21:16] is different from deny listing or block
+[21:19] listing which also used to be called
+[21:21] blacklisting
+[21:23] which allows anything and everything
+[21:24] both good and bad to execute by default
+[21:27] unless it is added to the deny list.
+[21:31] Which approach works better? Well,
+[21:33] neither. Allow listing apps makes your
+[21:36] devices more secure, but it's going to
+[21:38] frustrate users who cannot run their
+[21:40] favorite apps anymore, and they will
+[21:42] frustrate the IT department with tons of
+[21:44] requests for exceptions. On the other
+[21:47] hand, deny listing is less secure
+[21:48] because you simply cannot add to a list
+[21:50] all the potentially malicious apps and
+[21:52] app sources out there. If this were
+[21:55] possible, then we wouldn't have a job,
+[21:57] right? If it were possible to list and
+[21:59] scan for all possible malicious
+[22:01] signatures or apps or types of traffic
+[22:03] or whatever malicious payload could
+[22:05] possibly exist out there, then security
+[22:08] would have been an extremely easy and
+[22:10] non-interesting job. There will always
+[22:13] be bad things out there that you know
+[22:15] nothing about. And if you don't know
+[22:17] about, then you cannot add them to a
+[22:19] list. Correct? But at least the users
+[22:22] will be happy and the IT department
+[22:24] won't be bothered. That is pretty much
+[22:26] all you can get with denial listing. As
+[22:29] you know, not all mobile apps come from
+[22:30] trusted sources. Some apps come from
+[22:33] thirdparty stores other than the
+[22:34] official Apple App Store in Google Play.
+[22:37] For Android devices, there's also the
+[22:40] second party Amazon App Store. You've
+[22:42] got the Huawei Store on Huawei devices
+[22:46] and probably a ton more that I haven't
+[22:48] heard about. thirdparty app stores, not
+[22:50] necessarily the ones that I mentioned,
+[22:51] often don't have any security rules
+[22:53] regarding hosting an app. They may offer
+[22:55] apps that are not available in the
+[22:57] official app stores or that are cheaper
+[22:59] or free and sometimes illegally cracked,
+[23:01] which also includes app downloaded and
+[23:03] installed and standalone APK files. Uh,
+[23:06] but they may also offer apps that are
+[23:08] malicious. The Google Play Store is
+[23:10] notorious for actually offering
+[23:11] malicious apps, and that's something
+[23:13] that has happened very often in the
+[23:15] past. So controlling thirdparty app
+[23:17] stores as part of the mobile app
+[23:19] management solution is another very
+[23:21] important security best practice. And by
+[23:23] the way, allow listing works great and
+[23:25] it's a much easier approach in this
+[23:27] situation. Additionally, app stores have
+[23:30] features that allow companies to
+[23:31] predetermine what apps their employees
+[23:34] can see on the regular app store and
+[23:36] Google Play Store when they access them
+[23:38] from company devices. Another feature of
+[23:40] the mobile devices is storage
+[23:42] segmentation which means dividing the
+[23:44] storage space on a device into different
+[23:46] compartments. It has benefits for
+[23:47] security and privacy of course
+[23:50] especially on devices that are used for
+[23:52] both personal and work purposes and it's
+[23:54] usually done through a device management
+[23:56] solution such as an MDM. It's not so
+[23:58] intrusive as using storage segmentation
+[24:01] allows your company to perform a remote
+[24:03] wipe only on the company's sensitive
+[24:05] data when needed, not the entire phone
+[24:07] without touching your personal stuff.
+[24:09] Another benefit is that you well your
+[24:11] admins in fact can define policies
+[24:14] between the personal compartment where
+[24:16] the personal apps the emails messages
+[24:18] and photos are stored and the business
+[24:20] compartment where company files
+[24:21] conversations and emails are stored so
+[24:23] that no file or not even information
+[24:25] from the clipboard like copying and
+[24:27] pasting can happen between these two
+[24:30] compartments. So if done properly, your
+[24:33] phone starts behaving like it has two
+[24:35] different personalities and there's no
+[24:37] communication between them. Policies for
+[24:40] mobile device deployments.
+[24:43] Of course, we have rules that define how
+[24:45] employees can use mobile devices at work
+[24:47] and for work and for other purposes as
+[24:50] well. The problem is that mobile devices
+[24:52] can also pose security risks to the
+[24:54] company and to the user, especially if a
+[24:56] mobile device is used for both personal
+[24:58] and business reasons. We have different
+[25:00] types of mobile device deployment
+[25:02] policies depending on who owns the
+[25:04] device, how it is used, and ultimately
+[25:06] depending on how permissive the company
+[25:08] wants to be. I'm pretty sure that you've
+[25:10] already heard of the first one, B Yo D,
+[25:13] which stands for bring your own device,
+[25:16] and it was a very big thing some years
+[25:18] ago. It means that employees can bring
+[25:21] their own personal mobile devices to
+[25:22] work and use them to connect to business
+[25:24] resources and to the internet through
+[25:26] the company network. This usually makes
+[25:28] people happy or at least as happy as we
+[25:31] can expect them to be in a corporation
+[25:33] as they can use their preferred devices
+[25:35] and apps. But of course, there's a lot
+[25:38] of risk involved. Personal devices can
+[25:40] be out ofd, vulnerable. They can even
+[25:43] carry malware. On top of that, there's
+[25:45] going to be an overlap of personal data
+[25:47] and business data on the same device.
+[25:49] So, how do you manage that? It seemed
+[25:51] like a great idea initially, especially
+[25:53] seeing companies like Cisco started
+[25:55] promoting this movement alongside their
+[25:58] zero trust model. So, everyone was on
+[26:00] board with the fact that this was a good
+[26:01] idea and implementation was possible.
+[26:04] Nowadays, companies aren't so happy
+[26:05] about this approach. And there's a
+[26:08] little wonder that some people called
+[26:10] BYOD bring your own disaster because
+[26:12] it's often a nightmare especially for
+[26:15] the IT department and when
+[26:17] misconfigurations happen also for the
+[26:19] security department.
+[26:21] C O P COPE stands for corporateowned
+[26:26] personally enabled and it means that the
+[26:28] company buys devices, gives them to
+[26:30] employees. Each user can then customize
+[26:33] the device and use it for both work and
+[26:36] personal reasons. It's a bit better for
+[26:37] the companies because companies can
+[26:40] select exactly what what devices are
+[26:42] allowed. Now, of course, it's much more
+[26:44] expensive for the company and not
+[26:46] exactly awesome to the employees either.
+[26:48] First of all, they get a second phone
+[26:49] and nobody really wants to carry and
+[26:51] charge two phones at all times. And
+[26:54] secondly, the company is probably not
+[26:56] going to buy you the most expensive and
+[26:58] the most awesome phone out there that
+[27:00] you and your salary would have dreamt
+[27:03] about. You can use it for personal
+[27:05] reasons. But if it's a crappy phone,
+[27:07] then many people will not use it for
+[27:09] personal reasons. And there you go.
+[27:11] Improved security posture all over the
+[27:13] company. Checked.
+[27:15] Uh next is C YOD stands for choose your
+[27:18] own device and it means that employees
+[27:21] can choose from a list of approved
+[27:22] devices that meet the security standards
+[27:24] of the company. CYOD gives some
+[27:27] flexibility to the user as they can at
+[27:29] least have some say in selecting the
+[27:31] device. However, you have to choose from
+[27:33] a predefined list of devices and again
+[27:36] your dream phone is definitely not going
+[27:38] to be on that list. But hey, at least
+[27:40] you can probably choose between Android
+[27:42] and iOS hopefully. So, at least you'll
+[27:45] get something that you feel comfortable
+[27:46] using. Hey, it it's something.
+[27:50] Know that all the above allow you to use
+[27:52] your phone for personal reasons with
+[27:54] personal data as well. And of course,
+[27:57] here comes the one that doesn't allow
+[27:58] you to cobo
+[28:02] corporationowned,
+[28:03] business only, the death of your
+[28:05] happiness. It means that the company
+[28:08] buys devices and gives them to the
+[28:10] employees, but they are strictly used
+[28:13] for work purposes only and no personal
+[28:16] use is allowed. No monkey business, just
+[28:18] official business. Wow, you can just
+[28:20] feel it in the air. The happiness and
+[28:22] the joy among your employees. Okay, so
+[28:25] with Coobo, employee satisfaction is at
+[28:28] an all-time low, but IT and security are
+[28:31] pretty much okay since you have a strict
+[28:33] control over those devices and over the
+[28:35] data that ends up on them. You just
+[28:38] cannot have it all. Okay. And by the
+[28:40] way, the risk of theft and loss is still
+[28:42] there. And one more thing, sometimes
+[28:44] Coobo is called COMS.
+[28:48] That's corporateowned mobile strategy. I
+[28:51] have no idea why they called it
+[28:53] strategy. It's probably something like
+[28:55] yes, that's our strategy and we're
+[28:57] lining our phones to it as well. And our
+[29:00] strategy is all work, no fun, and no
+[29:02] play. That's fine. LinkedIn job
+[29:04] searching works just fine once you're
+[29:06] out of the office building. All right,
+[29:09] since we're still on the topic about
+[29:10] vulnerabilities and threats, and since
+[29:12] most of these are found in software,
+[29:14] let's have a brief look over the most
+[29:16] common security flaws that you'll find
+[29:17] in application code. Just make this
+[29:19] clear, we're just scratching the surface
+[29:21] here. You could have a thousandpage book
+[29:24] written only about application attacks.
+[29:26] So in this section, we're just covering
+[29:27] generic categories. Now when we say
+[29:29] mobile deployment policies, it's not
+[29:31] just BYOD versus Coobo and the others.
+[29:34] It's not just about deciding who buys a
+[29:36] device. The policies for acceptable
+[29:38] usage when it comes to mobile devices
+[29:40] should address a lot of other issues as
+[29:42] well. The more freedom you give to a
+[29:44] user, the more issues you will have to
+[29:46] address and think about in advance. Here
+[29:48] are a couple of them. First, data
+[29:50] ownership. Who owns the data on the
+[29:52] device? Is it the user, the company, or
+[29:55] both? If both, then how much does each
+[29:57] own? How is the data separated and
+[30:00] protected? What happens if the device is
+[30:02] lost or stolen? Can the company remotely
+[30:04] wipe the device? How are backups
+[30:06] handled? These questions should be
+[30:07] answered by the policy, and users should
+[30:09] be aware of the benefits, restrictions,
+[30:11] and consequences of using mobile
+[30:13] devices. Another one is support
+[30:14] ownership. Who is responsible for the
+[30:17] devices repair, replacement, or
+[30:19] technical support? Is it the user or the
+[30:22] company? How will the support be
+[30:23] requested and delivered? How are we
+[30:25] going to decide whose fault it is when a
+[30:28] defect is found? The user should know
+[30:30] who to contact and what to expect in
+[30:32] case of a device failure. And how are
+[30:35] patches and updates installed on the
+[30:36] device? Is it the user's responsibility
+[30:38] or the company's responsibility? Which
+[30:40] patches and updates are required or
+[30:43] recommended? How are they tested and
+[30:45] verified? How are they delivered and
+[30:47] installed? What security tools are
+[30:49] installed on the device? Are they anti
+[30:51] virus, anti-malware, anti-spir scanners,
+[30:53] firewalls, hostbased, intrusion
+[30:55] detection or prevention or any other
+[30:57] security tools? Which apps are
+[30:59] recommended but or required by the
+[31:00] company? What are the settings for those
+[31:03] solutions and how do you have access if
+[31:06] you have access to change them? If nasty
+[31:09] things happen from a cyber security
+[31:11] point of view, then think about
+[31:13] forensics too. What happens if a
+[31:15] security violation of some criminal
+[31:17] activity happens and it involves your
+[31:20] mobile device? Your mobile device with
+[31:22] your photos, your conversations, your
+[31:24] private stuff. How will the device be
+[31:26] involved in an investigation? Will the
+[31:28] device be confiscated or accessed by the
+[31:30] organization or by law enforcement? Will
+[31:32] the evidence gathering affect your data
+[31:34] or your privacy? So, at this point, do
+[31:38] you start getting the feeling that
+[31:40] receiving a free iPhone from the company
+[31:42] that you work for might not be such a
+[31:44] good job perk after all? But wait, we
+[31:47] could go on. How much privacy do users
+[31:50] have when using their personal devices
+[31:53] for work? How much monitoring does the
+[31:55] company do on those devices? When a
+[31:56] personal device is used for work, the
+[31:58] user often loses some or all of the
+[32:01] privacy they enjoyed before. The
+[32:03] organization may track and monitor the
+[32:05] device even when not on company property
+[32:08] and outside work hours. A personal
+[32:10] device used for work should be
+[32:12] considered by the user to be somewhat
+[32:14] company property as well. There's a fine
+[32:16] line to be walked here. The user should
+[32:18] explicitly accept and understand how
+[32:20] much the company will monitor and the
+[32:22] company would better not log and peak
+[32:24] inside the user's personal device and
+[32:26] personal life more than they should. How
+[32:29] are personal devices set up and removed
+[32:31] from the company network? Onboarding
+[32:33] means installing security management and
+[32:35] productivity apps along with their
+[32:36] settings. These can be done by using a
+[32:39] device management solution such as an
+[32:41] MDM or manually. Offboarding involves
+[32:45] wiping the business data and removing
+[32:46] the business apps from the device. A
+[32:49] full device wipe and a factory reset may
+[32:51] be required. These processes will result
+[32:54] in the loss of personal data. Are your
+[32:56] users okay with this? because it's their
+[32:59] personal data that you might be erasing
+[33:01] if you don't have proper
+[33:02] compartmentalization implemented. Uh
+[33:05] next, infrastructure considerations. How
+[33:07] does the company network and security
+[33:08] support the use of personal devices for
+[33:10] work? If you're looking from the company
+[33:13] side, what are the costs involved? If
+[33:15] every worker brings in at least one
+[33:17] personal device, the number of endpoint
+[33:20] devices on the network may double or
+[33:22] triple almost overnight. Think about
+[33:24] mobile phones, laptops, tablets,
+[33:26] smartwatches. This means replanning IP
+[33:29] address assignments, network isolation,
+[33:31] subnets and VLANs, increased firewall,
+[33:34] ids, IPS monitoring load, increased
+[33:37] bandwidth consumption, and you might
+[33:39] need a better Wi-Fi network, especially
+[33:41] if it wasn't initially designed to
+[33:43] support so many devices or the standards
+[33:45] are pretty old. So, you thought that
+[33:48] we're done. Here come legal concerns,
+[33:51] too. How does using personal devices for
+[33:53] work affect the liability and risk of
+[33:56] data leakage for the company? Bring your
+[33:58] own device may make employees happy, but
+[34:01] it might not be worth it if it increases
+[34:03] risk and legal liability. And it does
+[34:06] increase risk by a lot.
+[34:09] Phone cameras and microphones, are they
+[34:11] allowed in certain areas or during
+[34:13] company meetings? Devices may be used to
+[34:15] collect images and videos that disclose
+[34:17] confidential information. The policy
+[34:19] should clearly document and explain when
+[34:22] and how the cameras can be used and what
+[34:24] are the consequences. If geo fencing is
+[34:26] available, it may be possible to use MDM
+[34:28] to turn off the camera while the device
+[34:30] is on company premises. And let me hit
+[34:32] you with an even worse one. How do you
+[34:35] stop people from recording meetings and
+[34:37] shared content while working from home
+[34:40] where you don't even have any control
+[34:42] over who has access to that screen and
+[34:44] which device camera is able to record
+[34:46] it? Tethering and hotspots. You didn't
+[34:49] think about that one, did you? Are they
+[34:51] allowed or prohibited? This effectively
+[34:54] allows the mobile device to act as a
+[34:56] portable wireless access point. The
+[34:58] problem here is that the internet
+[34:59] connection provided by the mobile
+[35:02] bypasses completely all your company's
+[35:04] perimeter defenses, including firewall,
+[35:07] IPS, IDS, DLP, even URL and website
+[35:10] filtering, malware scanning, and all
+[35:13] that. your employees can connect company
+[35:15] devices to the internet while bypassing
+[35:18] all these security mechanisms. Is that
+[35:21] something you really want to allow to
+[35:22] happen? Your answer should be a definive
+[35:26] no. Well, you can probably think about
+[35:28] some other issues as well, but I think
+[35:30] this is more than enough.
+[35:33] All right. So, since we're still on the
+[35:35] topic about vulnerabilities and threats,
+[35:37] and since most of these are found in
+[35:39] software, let's have a brief look over
+[35:41] the most common security flaws that
+[35:42] you'll find in application code. Just to
+[35:45] have this clear, we're just scratching
+[35:46] the surface here. You could have a
+[35:48] thousandpage book within only about
+[35:50] application attacks. So, in this
+[35:52] section, we're just covering very
+[35:53] generic categories. The first one worth
+[35:56] mentioning are covert channels. These
+[35:58] are sneaky ways of passing information
+[36:00] over paths that are not meant for
+[36:02] communication or not for the specific
+[36:04] kind of communication that they're being
+[36:06] used. Obviously, we're going to be
+[36:08] concerned here with confidentiality. We
+[36:10] call them covert because they are the
+[36:12] opposite of overt channels which are
+[36:15] known, expected, and authorized methods
+[36:17] of communication. There are more than a
+[36:20] couple of covert methods. covered timing
+[36:23] channels. Use timing or the performance
+[36:25] of a system to convey information. For
+[36:28] example, blinking a light, changing the
+[36:30] speed of a fan, altering the speed of a
+[36:32] data transfer. These methods are very
+[36:35] hard, next to impossible to detect
+[36:37] because they use subtle changes in the
+[36:39] system behavior and without any reason
+[36:41] to suspect data exfiltration, they
+[36:43] pretty much always look like normal
+[36:44] behavior. Covered storage channels on
+[36:48] the other hand use storage areas that
+[36:50] both parties have access to to write and
+[36:52] read data. For example, writing data
+[36:54] into unallocated space, slack space, or
+[36:56] hidden sectors on a disk. These methods
+[36:59] are hard to detect because they are
+[37:02] areas that are either ignored or unseen
+[37:04] by the operating system and by most
+[37:06] security tools out there. They may also
+[37:08] be using storage in unexpected ways
+[37:10] which are not monitored. There are also
+[37:14] methods that can communicate or
+[37:15] exfiltrate data by writing apparently
+[37:18] bogus data on shared storage locations
+[37:20] or by manipulating the timestamps of
+[37:22] files. We can even extrapolate cover
+[37:25] channels storage channels data
+[37:26] exfiltration that uses for example
+[37:28] social media posts which are again very
+[37:31] tough to detect. Many AP attacks and
+[37:34] even botn nets have been discovered to
+[37:36] watch for specific social media posts
+[37:39] which when detected acted as a command
+[37:42] or a command and control mechanism. Try
+[37:45] detecting that over social media. In
+[37:48] general, covert channels will use
+[37:50] traditional protocols because we still
+[37:52] need the communication to go through
+[37:54] unnoticed and happen correctly, right?
+[37:56] But use them in a non-standard way. For
+[37:59] example, you might be sending completely
+[38:00] normal ping ICMP echo requests,
+[38:03] basically ping packets to some
+[38:05] destination, but the payload in a ping
+[38:07] packet which is normally ignored
+[38:10] contains exfiltrated data. Alternately,
+[38:13] the frequency of pink packets could be
+[38:15] interpreted as Morse code. An attacker
+[38:18] could even attempt to exfiltrate data in
+[38:20] fake DNS requests that don't contain any
+[38:22] requests but actual exfiltrated data and
+[38:25] they are going over the standard DNS
+[38:27] protocol to fake DNS servers which
+[38:29] reassemble that exfiltrated data. DNS
+[38:32] can even be used as a tunneling
+[38:34] protocol. The sky and your creativity
+[38:36] are the limits here. Some attacks are
+[38:39] based on design or coding flaws that can
+[38:41] be exploited by attackers. One example
+[38:43] of an intentional flaw is a maintenance
+[38:45] hook or a backdoor which is a special
+[38:47] point of entry built into the code to
+[38:50] bypass security controls. These are
+[38:52] often added by developers for good
+[38:54] reasons like for debugging or testing
+[38:56] purposes during the debugging and
+[38:58] testing phases so that they can test
+[39:00] features quickly without going through
+[39:02] all the hoops of authentication and
+[39:03] authorization every single time they
+[39:05] make a minor change. But they should be
+[39:07] removed before the code is put into
+[39:09] production. Guess what? Sometimes
+[39:11] they're not removed intentionally or
+[39:14] accidentally.
+[39:15] Other attacks are due to poor coding
+[39:17] practices, forgetting to sanitize input
+[39:20] received from users or doing it badly
+[39:22] since we're talking about good
+[39:23] practices. Uh this is why we encounter
+[39:25] virus and worm attacks, SPL injection
+[39:28] attacks, cross-ite scripting attacks,
+[39:29] and defacement of websites. I've said
+[39:31] this many many times in the past, and
+[39:33] I'll keep saying it. Bad input
+[39:35] validation is the root of all evil. To
+[39:38] prevent these attacks, we need to think
+[39:40] about security from the very beginning
+[39:42] of a software project and spend extra
+[39:44] time and effort in testing. It's quite
+[39:46] difficult to protect a vulnerable
+[39:47] application from the outside or from
+[39:50] within the infrastructure. We can and we
+[39:52] should also use source code analysis
+[39:54] tools to find and fix flaws before you
+[39:56] release the code in production. In other
+[39:59] words, don't use your users or customers
+[40:02] as testers. I know the agile methodology
+[40:06] sometimes promotes this approach, but
+[40:08] don't do it when it comes to security
+[40:10] features. Also, if you are the user,
+[40:12] keep your software updated. After all,
+[40:14] that's pretty much all you can do to
+[40:16] minimize the risk apart from well, you
+[40:18] know, just stop using the software.
+[40:21] Writing completely secure code is almost
+[40:23] impossible. But we can attempt to get as
+[40:25] close to secure code as possible. So we
+[40:27] need to make sure that our code does not
+[40:29] handle any exceptions poorly, does not
+[40:32] exceed the authority that we allow it,
+[40:34] and does not leave any covert means of
+[40:36] access for attackers. A good place to
+[40:39] start for web applications, for example,
+[40:41] is the OASP top 10 application security
+[40:45] risk report for more guidance on how to
+[40:47] write secure code.
+[40:50] Another source of concern are root kits.
+[40:53] Root kits are nasty pieces of malware
+[40:55] that hide themselves deep inside the
+[40:57] operating system and can take full
+[40:59] control of the system or in general they
+[41:02] can do whatever they want since they can
+[41:03] run with the root or admin level
+[41:05] privileges. Rootkits can infect
+[41:08] different parts of the OS such as the
+[41:09] kernel, the device drivers or even some
+[41:11] application libraries. Mostly they are
+[41:14] focused on kernel level functionality.
+[41:16] They can replace or modify these parts
+[41:19] to feed false information to the
+[41:20] operating system and hide their
+[41:22] presence. For example, they can prevent
+[41:24] their files from being listed by file
+[41:27] managers
+[41:28] or or even by the ls command in Linux.
+[41:32] And uh there you go. You can imagine how
+[41:34] this would be great for hiding malware
+[41:36] from actual anti-malware solutions.
+[41:39] There are some tools that can detect and
+[41:41] remove known rootkits, but they're not
+[41:44] always reliable or effective. The only
+[41:46] sure way to get rid of a rootkit is to
+[41:48] wipe out the entire system and start
+[41:50] from scratch. That means sanitizing all
+[41:52] storage devices, reinstalling the OS and
+[41:54] all the applications from trusted
+[41:56] sources, and restoring files from clean
+[41:58] backups.
+[41:59] One way to potentially detect the
+[42:01] rootkit is to monitor the changes in
+[42:03] system files such as device drivers and
+[42:05] DLS and Windows. If these files change
+[42:09] in size or hash value, it may indicate
+[42:11] that they have been tampered with by the
+[42:13] rootkit. File hash tracking can be done
+[42:16] manually by an administrator or
+[42:18] automatically by security tools such as
+[42:20] intrusion detection systems. You might
+[42:22] also find these tools under the names of
+[42:24] FIM, file integrity monitoring
+[42:27] solutions.
+[42:28] Some attacks are not obvious or
+[42:30] noticeable, but instead they happen
+[42:32] slowly and gradually over time. One
+[42:35] example is data did link is when an
+[42:37] attacker makes small random or
+[42:39] incremental changes to your data when it
+[42:42] is stored or processed. For example,
+[42:44] changing just a digit in a bank account
+[42:46] balance, bumping up a grade in a student
+[42:49] record, adding a few extra days to a
+[42:51] date in a contract. These changes can be
+[42:53] hard to detect by human eyes unless you
+[42:55] use encryption or or hashing to protect
+[42:58] your data. Data diddling is usually done
+[43:00] by insiders with access to your system.
+[43:04] Uh, the salami attack is when the
+[43:07] attacker steals very small amounts of
+[43:10] money or other valuables from your
+[43:12] accounts. For example, taking a fraction
+[43:14] of a cent from each transaction or a
+[43:17] point from each reward program. These
+[43:19] amounts are so small that you may not
+[43:21] notice them. People usually don't, but
+[43:24] they add up over time. Even rounding
+[43:27] errors can be exploited this way. The
+[43:29] salami attack is possible especially if
+[43:31] insiders are involved who can manipulate
+[43:33] the code or the transactions and it can
+[43:36] be prevented by proper separation of
+[43:38] duties, control over code so as to not
+[43:41] leave any unmanaged division remainders
+[43:44] and monitoring of all transfers
+[43:46] including very small ones. Uh periodic
+[43:49] reconciliation also helps uh as well.
+[43:53] That is periodically checking whether
+[43:55] the total matches the sum of all small
+[43:57] operations. As you probably guessed,
+[43:59] it's called a salami because well, if
+[44:02] you come to visit your friend and on
+[44:04] each visit you take a slice out of their
+[44:06] salami from their fridge, they're not
+[44:09] going to notice. No euphemisms here,
+[44:11] honestly.

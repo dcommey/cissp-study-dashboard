@@ -1,0 +1,1565 @@
+[00:08] All right, so let's see what are the
+[00:10] security models that we have available.
+[00:12] So, what are the models that we can
+[00:14] follow so that we can define security
+[00:16] rules and later on security policies.
+[00:22] Security models are the let's call them
+[00:24] recipes for making secure systems. They
+[00:27] tell us what ingredients we need, what
+[00:29] type of security controls we need, and
+[00:31] how to mix them.
+[00:32] Uh security models help us translate
+[00:35] abstract ideas like only authorized
+[00:37] users can access this file into concrete
+[00:40] rules that computers can follow.
+[00:42] So, it looks terribly theoretical and it
+[00:44] is, but it can also be one way to define
+[00:48] what computers actually need to do.
+[00:51] Now, there are different ways to
+[00:52] describe the security attributes of an
+[00:54] object. And by the way, I know I've
+[00:55] repeated this several times already. An
+[00:57] object is something that gets accessed
+[00:59] and it can be a file or the process,
+[01:01] some resource on the network, a website
+[01:03] address, anything that can be accessed.
+[01:05] So, let's look at three common methods
+[01:07] for describing object security: tokens,
+[01:10] capabilities, and labels. A token, or
+[01:13] sometimes called an access token, is
+[01:15] like a ticket that you get when you
+[01:17] enter a let's say movie theater, if
+[01:19] anybody still goes to those.
+[01:21] Uh it tells you what movie you can
+[01:22] watch, uh where you can sit, and the
+[01:25] time frame during which the ticket is
+[01:27] valid. That is when the movie plays. It
+[01:29] also proves that you paid for your
+[01:31] ticket. The token can be associated with
+[01:33] an object. For example, a token for a
+[01:35] file might say who owns it, who can read
+[01:37] from it, who can write to it, or if the
+[01:39] file can be deleted.
+[01:41] Some tokens can be passed around to
+[01:43] other subjects want to access the
+[01:44] object, but in general such a token will
+[01:46] be generated for each subject that wants
+[01:49] to access that object. You as the
+[01:51] subject will have to present a valid
+[01:53] token when attempting to access that
+[01:56] resource.
+[01:57] Tokens, regardless of how they are
+[02:00] implemented, need to expire at some
+[02:02] point. Otherwise, they might be lost,
+[02:04] compromised, and reused sometimes in the
+[02:07] far future when nobody even remembers
+[02:09] that such a token was previously
+[02:11] generated, and nobody expects it to be
+[02:13] used.
+[02:16] A capabilities list is like a guest
+[02:19] list.
+[02:20] It stores the security attributes for
+[02:23] each object in a table. For example, a
+[02:25] capabilities list might have a row for
+[02:28] each file and a column for each user.
+[02:30] Each cell in that table would then
+[02:32] indicate what kind of access each user
+[02:35] has to each file. A capabilities list
+[02:38] can be faster than a token when checking
+[02:40] for permissions, but it can also be
+[02:42] harder to maintain and update,
+[02:44] especially when you need to revoke all
+[02:45] the permissions for a specific user.
+[02:48] A label is like a sticker that is
+[02:51] attached to an object. For example, a
+[02:53] label for a file might say it
+[02:55] classification label such as
+[02:56] confidential, secret, or top secret. A
+[02:59] label is usually affixed and cannot be
+[03:01] changed by anyone. This makes it more
+[03:03] secure than a token or a capabilities
+[03:05] list, but also less flexible. Of course,
+[03:08] when a subject attempts to access a
+[03:10] labeled object, the subject will need to
+[03:12] present its clearance level, and a match
+[03:15] needs to be made between what the
+[03:17] subject can access according to its
+[03:19] clearance, and what label is attached to
+[03:22] the object.
+[03:24] All right. So, we made a very brief
+[03:26] description about what security models
+[03:28] aim to achieve, but let's actually see a
+[03:30] couple of them, well, more than a
+[03:32] couple. And be prepared for some mental
+[03:34] gymnastics because we're going to really
+[03:37] high on the theoretical level before we
+[03:39] get down to earth and talk about real
+[03:41] security model implementations.
+[03:43] We'll start with the TCB called trusted
+[03:46] computer base, which is the hardware,
+[03:48] software, and all the controls that are
+[03:50] essential to enforce your security
+[03:52] policy inside of a single computer.
+[03:55] The TCB is the only part of your system
+[03:58] that you can trust to do its job right
+[04:00] because every other security function
+[04:01] that you might implement later is going
+[04:03] to depend on this TCB. If you cannot
+[04:07] trust the TCB, you cannot trust any
+[04:09] other type of security implementation on
+[04:10] that machine.
+[04:12] The TCB should be as small as possible
+[04:14] so that it can be analyzed and you can
+[04:16] make sure it meets your specifications.
+[04:18] You need to trust something before you
+[04:20] can build your trust up.
+[04:22] The TCB is separated from the rest of
+[04:24] your system by an imaginary boundary
+[04:26] called the security perimeter.
+[04:29] This boundary prevents
+[04:30] any unauthorized or insecure
+[04:32] communication between the TCB and the
+[04:34] rest of the system. To communicate with
+[04:36] the rest of the system, the TCB uses
+[04:38] only secure channels, also known as
+[04:40] trusted paths.
+[04:42] Sometimes, you may also use something
+[04:44] known as a trusted shell, which is a
+[04:46] command prompt running inside of a
+[04:48] sandbox where you can run commands
+[04:51] without risking your TCB's integrity or
+[04:54] that of your own user. Obviously, the
+[04:56] trusted shell is going to be a really,
+[04:58] really low-level shell with some very
+[05:00] basic but powerful functionality. As
+[05:03] with anything where security is of high
+[05:05] concern, the more complex a system is,
+[05:07] the more difficult it is to secure. So,
+[05:10] we keep all the essential components as
+[05:11] small as simple as possible.
+[05:14] Attached to the TCB is something called
+[05:16] the reference monitor, which acts like a
+[05:19] gatekeeper of your system. It checks
+[05:21] every request from every subject to
+[05:23] every object. The reference monitor
+[05:25] enforces your access control policy, so
+[05:27] it follows the rules that you set for
+[05:29] your system.
+[05:31] The reference monitor is a concept that
+[05:33] is implemented using a security kernel,
+[05:36] which is the engine of your TCB.
+[05:38] It mediates all resource access
+[05:40] requests, just like any operating system
+[05:43] kernel, and grants only those that match
+[05:46] the rules, hence the security part.
+[05:48] Now, at this point you might be
+[05:49] wondering what the heck are we talking
+[05:51] about here? If you were to imagine this
+[05:53] discussion, you could picture the TCB as
+[05:56] a secure area in your device bounded by
+[05:58] something called a security perimeter.
+[06:00] That perimeter has one point of access,
+[06:03] which is the reference monitor. Things
+[06:05] will start making sense soon. I promise
+[06:08] you this.
+[06:10] Next, we have the finite state machine
+[06:12] model. An FSM is like a robot that can
+[06:15] change its behavior depending on what
+[06:17] input it receives and what it remembers.
+[06:20] An FSM can have many different states,
+[06:23] but only one at a time. And it's very
+[06:25] useful to design and model a system like
+[06:27] this, especially a security one, because
+[06:30] it makes it so much easier to predict
+[06:32] all possible states in which the system
+[06:34] can find itself at any certain point.
+[06:38] In other words, the state machine model
+[06:40] says that a system is secure if it's
+[06:42] always in a secure state, no matter what
+[06:45] state it finds itself in, and no matter
+[06:47] what input it gets or what output it
+[06:49] produces.
+[06:51] The state machine model says that every
+[06:53] transition must result in another secure
+[06:55] state, so the system never becomes
+[06:57] insecure. It can also help us understand
+[06:59] how other security models work because
+[07:01] they are based on the state machine
+[07:03] model.
+[07:04] The problem with this approach is that
+[07:06] it also requires you to design in
+[07:08] advance for every possible interaction,
+[07:10] every possible input, error, or state
+[07:13] that your system might end up in. Pretty
+[07:15] tough to implement in real life, but
+[07:17] that's what every security
+[07:18] implementation out there aims for.
+[07:21] Next, we have the information flow
+[07:22] model. This model is all about
+[07:24] controlling how information moves around
+[07:26] in a system. Information flow models are
+[07:28] also based on the state machine model,
+[07:30] but they add some extra features. Like
+[07:32] they track based on what information
+[07:35] causes a state transition to happen,
+[07:37] what kind of information it is, and if
+[07:40] that state transition should happen or
+[07:42] not.
+[07:43] For example, an information flow model
+[07:45] might allow a subject with a high
+[07:47] security clearance to read an object
+[07:49] with low classification, but not vice
+[07:52] versa. Or it might allow an object to be
+[07:54] copied from one location to another, but
+[07:57] not modified or deleted. This
+[07:59] information flow model also tries to
+[08:01] prevent covert channels, which are
+[08:03] sneaky ways of sending information that
+[08:05] are not supposed to exist and are
+[08:08] running below the radar of the security
+[08:10] monitoring solutions. And that's another
+[08:12] benefit of a well-designed state
+[08:14] machine. It does not allow for any
+[08:16] covert channels because there is no
+[08:18] state in the machine that would allow
+[08:20] communication outside designed channels
+[08:23] and policies.
+[08:24] An example of a covert channel is
+[08:27] um in in inter-process communication,
+[08:29] for example, would be this. Uh if you
+[08:31] have two processes that are not allowed
+[08:33] to communicate directly, but they can
+[08:35] both access the same file, they might
+[08:38] use the file's content as a buffer to
+[08:41] exchange information. Or even more
+[08:43] covertly, they could use this file size
+[08:46] or the last modified time of the file as
+[08:49] a way of sending secret messages to each
+[08:51] other. That's just one example of many
+[08:53] possible covert channels and it's bad
+[08:55] news for security. Of course, given this
+[08:57] analogy, we're not really concerned
+[08:58] about processes starting to think from
+[09:01] for themselves and deciding to talk to
+[09:03] each other, but we're concerned with
+[09:04] data exfiltration and uh compromised
+[09:07] processes.
+[09:09] Next, we also have the non-interference
+[09:11] model. This model is similar to the
+[09:13] information flow model, but instead of
+[09:15] focusing on how information flows, it
+[09:17] focuses on how subjects affect each
+[09:20] other. Uh basically, the
+[09:22] non-interference model says that
+[09:23] high-level subjects should not mess with
+[09:25] low-level subjects.
+[09:27] That doesn't sound very politically
+[09:29] correct, right?
+[09:31] Or make them notice anything weird,
+[09:33] because if that happens, the lower-level
+[09:35] subject might either be influenced or
+[09:39] exposed to high-level information or it
+[09:41] might be able to deduce things that it
+[09:43] should not have access to.
+[09:46] Next we have the take grant model. This
+[09:49] uses a graph to show how rights can be
+[09:51] passed from one subject to another.
+[09:54] Think of it as uh taking permissions
+[09:56] from someone or granting someone
+[09:57] additional permissions.
+[09:59] Like when giving someone access to your
+[10:01] files. For example, if Alice has the
+[10:02] right to read Bob's file and Alice has a
+[10:05] take right, she can take the read right
+[10:08] from Bob and make it her own. The grant
+[10:11] rules means that for example, if Alice
+[10:13] has the right to make changes to a file
+[10:15] and Alice has the grant right, she can
+[10:18] grant the right right to Bob and let him
+[10:22] edit the file. So, even if it sounds
+[10:24] terribly theoretical, I think you can
+[10:26] start seeing at this point that this
+[10:28] behavior looks a lot like basic file
+[10:31] sharing on Windows or Linux or Mac OS.
+[10:34] Next we have the access control matrix
+[10:36] model. This model uses a table of
+[10:38] subjects and objects to show what
+[10:40] actions and functions
+[10:42] each subject can perform on each object.
+[10:45] It's like listing all subjects, all the
+[10:47] objects, and permissions in an Excel
+[10:48] sheet. An access control matrix has two
+[10:51] ways of representing the rights in a
+[10:53] system. It could be an access control
+[10:56] list, an ACL, or a capability list. An
+[10:59] ACL is tied to an object. It lists all
+[11:03] the subjects that can access that object
+[11:07] and what they can do with it. If you're
+[11:09] familiar with ACLs in networking, like I
+[11:11] don't know, Cisco or any other vendors
+[11:13] for example, you might remember that
+[11:15] ACLs are assigned directly to the
+[11:17] interface where they need to filter
+[11:19] traffic, inbound or outbound. As you can
+[11:22] see, they are tied to the object, so
+[11:25] that when a subject attempts to use that
+[11:27] interface to send or receive traffic,
+[11:30] the traffic will be subjected to the
+[11:31] rules in the ACL of that specific
+[11:34] interface. Now, ACLs are also used in
+[11:36] file systems like NTFS to list access
+[11:39] rights for users and files.
+[11:42] Capability lists, on the other hand, are
+[11:45] tied to the subject, so not to the
+[11:47] object. Imagine that each user in your
+[11:49] system would have a huge table that
+[11:51] lists all the files that the user can
+[11:53] access. Administratively wise, this is
+[11:56] horrible, a nightmare. If you want to
+[11:59] deny everyone access to a file, you need
+[12:01] to make changes in everybody's
+[12:02] capability lists, or at least check them
+[12:05] for permissions that you need to
+[12:06] invalidate.
+[12:07] So, an access control matrix is usually
+[12:09] constructed using ACLs rather than
+[12:11] capability lists because ACLs are easier
+[12:14] to manage and update. For example, if
+[12:15] you want to revoke access to Bob's file
+[12:18] from everyone except Bob himself, you
+[12:21] only need to change one ACL for Bob's
+[12:23] file rather than multiple capability
+[12:25] lists for every subject that might have
+[12:27] had access to it.
+[12:29] However, sometimes capability lists are
+[12:31] useful for quickly listing and perhaps
+[12:33] auditing all the permissions that
+[12:35] someone has in a system
+[12:36] all at once.
+[12:38] Huh, okay, that was a lot.
+[12:41] But wait, that's not all.
+[12:44] Next, we have the Bell-LaPadula model,
+[12:46] with the necessary apologies if I happen
+[12:49] to butcher the person's name.
+[12:51] Uh, it's an interesting one. It's uh, so
+[12:53] interesting that you're most likely
+[12:54] going to hear about it on the exam. The
+[12:56] Bell-LaPadula model was created in the
+[12:59] 1970s, when the Department of Defense
+[13:02] had a lot of sensitive data that needed
+[13:04] to be kept secret from enemies and
+[13:06] spies.
+[13:07] It's a multi-level security policy,
+[13:09] which means that different clearance
+[13:11] levels are assigned to personnel, and
+[13:13] different levels of classifications are
+[13:15] assigned to their data. For example,
+[13:17] they had levels like unclassified, uh,
+[13:20] confidential, secret, and top secret.
+[13:21] You can probably see where this is
+[13:23] going, right? This kind of policy states
+[13:25] that a person with any level of
+[13:27] clearance can access data at or below
+[13:31] their clearance level.
+[13:33] However, within each level, access to
+[13:35] specific data is granted only on a
+[13:37] need-to-know basis. For example, a
+[13:39] person with secret classification or
+[13:42] secret clearance can access any secret
+[13:44] data
+[13:46] that they need for their job or
+[13:47] department, but not any secret data that
+[13:50] they don't need for where they work. So,
+[13:52] it's not like there are only four types
+[13:54] of clearances or security levels, but
+[13:56] need-to-know is also important.
+[13:58] Officially, this need-to-know
+[14:00] restriction is known as
+[14:01] compartmentalization.
+[14:03] Uh you need to belong to the same
+[14:05] compartment
+[14:06] as the data that you're accessing for
+[14:09] your clearance to actually mean
+[14:10] something.
+[14:11] And uh a compartment is just a generic
+[14:14] grouping entity that can represent a
+[14:15] department, a project, basically
+[14:18] anything that groups people and data
+[14:20] together.
+[14:22] This is done by blocking lower-level
+[14:24] people from accessing high-level data. I
+[14:26] know, this again sounds condescending,
+[14:29] lower-level people, but [laughter]
+[14:31] computers don't make these judgment
+[14:33] calls. They just execute instructions,
+[14:35] so try not to see these statements as
+[14:37] condescending because they're
+[14:38] implemented by something that doesn't
+[14:39] know what condescending means.
+[14:42] So, coming back to our discussion, for
+[14:44] example, a person with confidential
+[14:46] clearance cannot access any secret or
+[14:48] top secret data, which are above his or
+[14:51] her security clearance. By the way, the
+[14:53] Bell-LaPadula model is focused on
+[14:55] maintaining confidentiality,
+[14:58] not on integrity nor availability.
+[15:01] That's why we say that people can or
+[15:03] cannot access something. It's only
+[15:05] concerned with confidentiality.
+[15:08] The Bell-LaPadula model has three basic
+[15:10] properties that define how the system
+[15:11] works. They are, in order, the simple
+[15:14] security property, the star security
+[15:17] property, and the discretionary security
+[15:19] property.
+[15:20] At this point, this probably means
+[15:23] absolutely nothing to you. So, let's
+[15:25] talk about these.
+[15:27] The simple security property says
+[15:30] that a person cannot read data at a
+[15:33] higher level than their clearance.
+[15:35] See? It's called simple for a reason.
+[15:38] For example, a person with confidential
+[15:40] clearance cannot read any secret or top
+[15:42] secret data. This is common sense,
+[15:44] really. And this is also called the no
+[15:46] read up property.
+[15:48] Next, the star security property says
+[15:51] that a person cannot write data to a
+[15:54] lower level than their clearance. This
+[15:58] is sometimes
+[16:00] not as intuitive as the first one. So,
+[16:03] let me say this one more. A person
+[16:04] cannot write data to a lower level than
+[16:08] their clearance.
+[16:10] For example, a person with top secret
+[16:12] clearance cannot write any top secret
+[16:15] data to a confidential or unclassified
+[16:18] file. This is also called the no write
+[16:21] down or de-confinement property. This
+[16:24] sometimes baffles people. If I have top
+[16:26] secret security clearance, then I can do
+[16:28] anything I want, right? Why can't I
+[16:30] write to an unclassified document,
+[16:33] especially if that document is way below
+[16:35] my security clearance?
+[16:37] Well, if you think about it, it's
+[16:38] because
+[16:41] and you're not supposed to disclose or
+[16:44] write that secret stuff to a lower
+[16:46] security file or location.
+[16:49] That's why we have the no write down
+[16:51] rule.
+[16:52] Hm? Does this start to make any sense?
+[16:55] Similarly, people sometimes stop to
+[16:57] think, "Wait, but this also means that
+[16:59] if high security cannot write down to
+[17:01] low security, then why is low security
+[17:03] allowed to write up to high security?"
+[17:06] Good question. There is no restriction
+[17:08] the other way around. Higher security
+[17:11] cannot write down to lower security, but
+[17:13] lower security can write up to higher
+[17:15] security. What the heck is this?
+[17:17] It makes no sense, right?
+[17:19] Why do low security entities have access
+[17:22] to high security ones?
+[17:23] Shouldn't that be denied?
+[17:25] Well, if you read carefully, it's right
+[17:28] access, not read access.
+[17:31] Actually, going from low security to
+[17:34] high security, you are allowed to write,
+[17:37] but you're not allowed to read.
+[17:40] Not allowed to read because you don't
+[17:42] have the necessary clearance,
+[17:43] but you're allowed to write,
+[17:46] to contribute to a higher security level
+[17:48] simply because
+[17:50] your low security information is simply
+[17:52] not that sensitive, not that Sorry.
+[17:55] important.
+[17:56] >> [laughter]
+[17:57] >> Think about it this way. You are allowed
+[17:59] to tell low security stuff to high
+[18:01] security personnel.
+[18:03] But you cannot ask high security
+[18:05] personnel about what confidential
+[18:07] information they know.
+[18:09] I hope this makes sense now. And by the
+[18:11] way, we're still talking about
+[18:12] confidentiality here. No integrity or
+[18:15] availability.
+[18:17] Lastly, the discretionary security
+[18:19] property says that the system uses an
+[18:21] access matrix to enforce something
+[18:24] called discretionary access control or
+[18:26] DAC, D A C,
+[18:28] which even if it sounds fancy, it only
+[18:30] means that the owner of an object can
+[18:31] decide who can access it and how at
+[18:34] their own discretion. Right?
+[18:37] The Bell LaPadula model, as I said, was
+[18:39] created in the 1970s, which I mean, it
+[18:42] doesn't even matter when you're
+[18:44] listening, reading, or watching this. It
+[18:46] was a long time ago. So, it does not
+[18:48] support many operations that are common
+[18:50] today, such as file sharing. It also
+[18:52] doesn't address in any way covert
+[18:55] channels.
+[18:57] Next, the Biba model was created after
+[19:00] the Bell LaPadula model, but it has a
+[19:01] different goal. This time is focused on
+[19:04] integrity of data, not on
+[19:06] confidentiality. The Biba model has two
+[19:08] basic properties that define how the
+[19:10] system works. They are the simple
+[19:12] integrity property and the star
+[19:14] integrity property.
+[19:16] The simple integrity property says that
+[19:18] a person cannot read data at a lower
+[19:21] level than their clearance.
+[19:23] This is also called no read down.
+[19:28] The star integrity property says that a
+[19:30] person cannot write data to a higher
+[19:32] level clearance.
+[19:33] For example, a person with low integrity
+[19:36] clearance cannot write any low integrity
+[19:39] data to a high integrity file. This is
+[19:41] also called the no write up.
+[19:44] Now, if you remember the Bell-LaPadula
+[19:45] model, the rules here are actually in
+[19:47] reverse mirrored.
+[19:49] In Bell-LaPadula, we had no read up.
+[19:53] In Biba, we have no read down.
+[19:56] In Bell-LaPadula, we had no write down.
+[20:00] In Biba, we have no write up.
+[20:04] So, which one is it? Make up your mind
+[20:06] here.
+[20:07] >> [laughter]
+[20:08] >> Does this make any sense? Well,
+[20:10] it makes sense if we remember that Biba
+[20:13] is all about integrity, not
+[20:16] confidentiality.
+[20:17] So, we're not trying to prevent data
+[20:19] disclosure, but instead we try to
+[20:21] prevent data contamination with bad
+[20:23] information.
+[20:25] Let's think about this for a second
+[20:27] regarding the no read down rule. If you
+[20:29] are a person with a high clearance
+[20:31] level, no read downs means that you
+[20:33] should not rely on information from a
+[20:36] lower integrity clearance level.
+[20:39] Basically, this says that if you work
+[20:40] with data that
+[20:42] we really need to protect from
+[20:43] corruption, then you should not get your
+[20:46] information from lower levels because
+[20:48] that information might be contaminated,
+[20:50] corrupted. It might have had its
+[20:52] integrity breached. It's like getting
+[20:55] your news from low-level conspiracy
+[20:58] theory websites and Facebook groups,
+[21:00] right? That's junk. You don't get
+[21:03] anything useful or reliable from those
+[21:05] sources, and you should never reuse the
+[21:08] information you find there.
+[21:10] And the reverse is also true. If you're
+[21:12] working with a low integrity set of
+[21:15] data, like conspiracy theory data,
+[21:18] you should absolutely rely on
+[21:20] information that is guaranteed to be of
+[21:22] high integrity. So, to read up is fine.
+[21:26] If you need to update your data set, you
+[21:28] should look for better information or
+[21:30] higher grade information, not
+[21:32] information of worse quality than the
+[21:34] one you're currently working with.
+[21:36] Again, try to forget about
+[21:37] confidentiality. This is not
+[21:39] confidentiality, but integrity. It's
+[21:41] about where you get the information to
+[21:44] update your current data, and how much
+[21:46] you should trust it.
+[21:48] The same approach works when you need to
+[21:50] write some data. If you're working with
+[21:52] high integrity data, then it's okay to
+[21:54] write down to a lower level because your
+[21:57] data is better anyway than whatever junk
+[22:00] you can find down there in the slums.
+[22:02] Consequently, if you work with slum
+[22:04] level information, then you should
+[22:06] absolutely not bring it to higher and
+[22:09] shinier levels of integrity because
+[22:12] what you know might be contaminated,
+[22:14] low-level crappy conspiracy theory type
+[22:17] of data, and not reliable. Thus, no soup
+[22:20] for you. No write up for you.
+[22:24] Does it start making a little bit of
+[22:25] sense? The good news is that
+[22:26] Bell-LaPadula and Biba are complete
+[22:28] opposites of each other. So, if you
+[22:30] remember one, you can easily deduce the
+[22:32] other one as the opposite. Just remember
+[22:34] that Bell-LaPadula is about
+[22:35] confidentiality, and Biba is about
+[22:37] integrity. Makes you think, like, why
+[22:41] it took them two people to invent them
+[22:43] both since one is basically a mirror of
+[22:46] the other?
+[22:47] Anyway, moving on.
+[22:50] Next, the Clark-Wilson model is based on
+[22:52] a simple idea. Don't let anyone mess
+[22:54] with your data unless they use a special
+[22:57] program that knows what it's doing.
+[23:00] So, your system stops being a
+[23:02] free-for-all kind of party. You need to
+[23:03] have the right tools.
+[23:05] This way you can prevent errors,
+[23:06] corruption, or sabotage from ruining
+[23:09] your precious data.
+[23:10] The model uses three things to make this
+[23:13] happen: subjects, objects, and programs.
+[23:15] Subjects are exactly what they used to
+[23:17] be for the past of this training, the
+[23:20] people or processes that want to access
+[23:21] or modify the data. Objects are the data
+[23:24] items themselves, such as the files, the
+[23:26] databases, or network locations.
+[23:28] Programs are the software tools that can
+[23:31] manipulate the objects in a controlled
+[23:33] way. Subjects can only access objects
+[23:37] through programs and not directly. The
+[23:40] Clark-Wilson model
+[23:42] has two types of objects: constrained
+[23:45] data items called CDIs and unconstrained
+[23:48] data items called UDIs.
+[23:50] CDIs are the ones that need to be
+[23:53] protected by the model, and UDIs are the
+[23:55] ones that don't. For example, a CDI
+[23:57] could be a bank account balance, and a
+[24:00] UDI could be the bank's name and
+[24:02] address.
+[24:03] The CDIs can only be changed by programs
+[24:06] called transformation procedures or TPs.
+[24:09] Funny, right? Because why not keep
+[24:11] things simple when we can overcomplicate
+[24:13] at least the naming conventions, right?
+[24:15] Stop rolling your eyes and let's move
+[24:17] on.
+[24:18] Uh transformation procedures, or
+[24:20] programs, just programs,
+[24:22] follow certain rules to ensure data
+[24:24] integrity. UDIs can be changed by any
+[24:27] program, but they need to be checked by
+[24:30] another program called an integrity
+[24:32] verification procedure, IVP, before they
+[24:35] can become CDIs.
+[24:37] Enough acronyms? Are you not
+[24:39] entertained?
+[24:41] The Clark-Wilson model also uses
+[24:43] security labels to decide who can use
+[24:46] which program to access which object.
+[24:48] These labels are based on the
+[24:50] classification level of the subject and
+[24:51] the object. For example, a subject with
+[24:53] a high clearance level can use a program
+[24:55] with a high clearance level to access an
+[24:57] object with a higher clearance level.
+[24:59] Same goes in reverse with low security
+[25:01] levels. So, even though Clark Wilson was
+[25:03] designed for integrity, we can also
+[25:05] protect confidentiality as well by
+[25:07] following these security clearance
+[25:08] levels.
+[25:10] The Clark-Wilson model is very useful
+[25:11] for
+[25:12] commercial applications where data
+[25:14] integrity is very important. For
+[25:15] example, you wouldn't want someone to
+[25:17] change your bank account balance without
+[25:20] using the proper procedure, programs, or
+[25:22] access, right? Or for complex systems
+[25:24] and applications, you don't just want to
+[25:26] make manual changes in the database that
+[25:28] might corrupt the entire system. But any
+[25:30] changes should be done through a
+[25:31] management interface that controls what
+[25:33] changes can be made, what operations are
+[25:35] required to avoid data corruptions, that
+[25:38] they can be rolled back if something
+[25:39] goes wrong, and so on.
+[25:41] The Clark-Wilson model makes sure that
+[25:44] these things don't happen by enforcing
+[25:46] separation of duties and what we call
+[25:48] restricted interfaces, which are exactly
+[25:51] what they sound like. Interfaces adapted
+[25:53] for specific use cases that limit what a
+[25:55] subject can do to an object through that
+[25:58] specific interface.
+[26:01] The Brewer-Nash model is also known as
+[26:03] the ethical wall or the cone of silence
+[26:07] model. But recently, we stopped calling
+[26:09] it by its first name, which was the
+[26:11] Chinese wall model. You could as well
+[26:14] just call it the wall model if you want.
+[26:17] Uh the Brewer-Nash model is designed to
+[26:18] prevent conflicts of interest when
+[26:21] accessing data. Keep that in mind. A
+[26:24] conflict of interest is when you have
+[26:26] access to data that could benefit or
+[26:28] harm another party that you're also
+[26:30] involved with.
+[26:32] The Brewer-Nash model solves this
+[26:34] problem by creating security domains and
+[26:38] conflict classes. A security domain is a
+[26:41] set of data that belongs to a certain
+[26:42] entity, like a company, a department, or
+[26:45] a project. A conflict class is a group
+[26:48] of security domains that are potentially
+[26:50] in conflict with each other, such as
+[26:53] competitors, if they were to access the
+[26:55] same data.
+[26:56] The Brewer-Nash model was like this.
+[26:58] When you access a security domain for
+[27:01] the first time, you can see all the data
+[27:03] in that domain.
+[27:04] However, as soon as you decide to do
+[27:07] that, to access that data, you are
+[27:10] blocked from accessing any other
+[27:12] security domain in the same conflict
+[27:14] class. This way, you can only see the
+[27:16] data
+[27:17] of one party in a conflict situation,
+[27:20] and not the others. This is why it's
+[27:22] called an ethical wall or a Chinese
+[27:24] wall. Once you've made your decision,
+[27:26] you've decided on which side you're on,
+[27:29] you're stuck with that side of the wall.
+[27:32] The Brewer-Nash model is also dynamic,
+[27:34] meaning that it changes based on your
+[27:36] actions and the current situation. If
+[27:38] the conflict between two parties is
+[27:40] resolved, or if you switch roles or
+[27:42] jobs, you might be able to access
+[27:44] different security domains than before.
+[27:46] However, you can never access two
+[27:48] conflicting, actively conflicting
+[27:50] security domains at the same time, which
+[27:53] I hope at this point in the training
+[27:54] makes a lot of sense, especially since
+[27:56] this model is much easier to understand
+[27:57] than what we've been through already.
+[28:00] And why not? We still have more security
+[28:02] models. Next, we have the
+[28:04] Goguen-Meseguer model. Apologies if I'm
+[28:07] butchering this name.
+[28:09] Uh which applies its idea of security by
+[28:11] defining a list of objects that a
+[28:13] subject can access, and the list of
+[28:15] actions that a subject can perform on
+[28:17] those objects.
+[28:18] Uh this way, the model restricts what
+[28:21] subjects can do with objects, and
+[28:22] prevents them from interfering with each
+[28:24] other. For example, if you're a student,
+[28:26] you can only access your own assignments
+[28:28] and grades, you cannot submit or edit
+[28:30] them.
+[28:31] And you also cannot access or modify the
+[28:32] assignments or grades of other students,
+[28:35] or the course materials, or the exam
+[28:37] topics.
+[28:38] This is sometimes called a principle of
+[28:40] domain separation, which says that
+[28:42] different domains should have different
+[28:44] levels of access.
+[28:45] Uh in other words, you should have
+[28:47] access to some things, but you should
+[28:49] not have access to other things
+[28:51] depending on the domain to which you
+[28:52] belong to. It's kind of like group
+[28:54] membership if you think about it in an
+[28:56] active directory where your rights are
+[28:58] defined by the group you are in with the
+[29:01] type of user you are basically. Some
+[29:03] advanced firewalls also apply this
+[29:05] principle when they block or allow
+[29:07] traffic based on a user's identity or
+[29:09] group membership, okay? Like the
+[29:11] department they belong to.
+[29:14] Next up, we have the Sutherland model is
+[29:16] a model that uses a state machine and
+[29:19] information flow to enforce integrity.
+[29:21] Remember, the state machine is a system
+[29:23] that has a finite number of states and
+[29:24] can change from one state to another
+[29:27] based on only on certain inputs or
+[29:28] events.
+[29:29] The Sutherland model builds on itself on
+[29:32] top of these ideas and applies them to
+[29:34] security by defining a set of secure
+[29:36] states, initial states, too, and state
+[29:39] transition rules for a system.
+[29:42] In other words, it's a model that
+[29:44] defines how a system can securely
+[29:46] transition from one state to another
+[29:49] while still maintaining data security.
+[29:51] The main idea here is to ensure that the
+[29:53] system only moves from one secure state
+[29:56] to another secure state and never enters
+[29:58] an insecure state where we cannot
+[30:00] control what might happen to our data.
+[30:03] Next, the Graham-Denning model is a
+[30:05] model that focuses on the secure
+[30:07] creation and deletion of objects and
+[30:09] subjects. It's more concerned with how
+[30:12] we set the stage for other security
+[30:13] models out there. The model defines
+[30:15] eight rules or actions that specify how
+[30:18] subjects and objects can be created,
+[30:20] deleted, and accessed in a secure way.
+[30:23] And that is probably enough for you to
+[30:25] know right now and more than the exam
+[30:27] will ask you about this topic anyway.
+[30:29] Finally, and the last name butchering
+[30:32] that I'll do for a while, is the
+[30:34] Harrison-Ruzzo-Ullman
+[30:37] model or Russo-Ullman.
+[30:38] Uh, this model is an extension of the
+[30:41] Graham-Denning model and deals with how
+[30:43] access rights can be assigned and
+[30:45] changed for both subjects and objects.
+[30:48] It introduces the concepts of procedures
+[30:50] and primitives.
+[30:52] Procedures are the actions that subjects
+[30:54] can perform on objects, such as read,
+[30:56] write, execute, delete, and so on. Uh
+[30:58] you could have more procedures depending
+[31:01] on
+[31:02] the type of data, of course.
+[31:03] Primitives are the commands that
+[31:05] subjects can use to change the access
+[31:08] matrix, such as add more access rights,
+[31:11] or remove access rights, or share access
+[31:14] rights. By the way, the access matrix is
+[31:16] a table that shows what procedures it
+[31:18] each subject can perform on each object.
+[31:21] The Harrison-Ruzzo-Ullman
+[31:23] model applies these ideas to security by
+[31:26] defining a finite set of procedures for
+[31:28] a system and by enforcing integrity
+[31:30] rules for anyone who tries to change the
+[31:32] access matrix.
+[31:34] This way it ensures that the access
+[31:35] matrix is always consistent and valid
+[31:37] and nobody messes around with it.
+[31:40] And wow, we're finally done.
+[31:42] Do you need to know all these for the
+[31:45] exam? Well, the exam says so, but if you
+[31:47] ask me, I would strongly suggest
+[31:49] focusing on the Bell-LaPadula, Biba,
+[31:52] Brewer-Nash, and Clark-Wilson models. If
+[31:55] this were me learning for the exam right
+[31:57] now, I would stop right there and maybe
+[31:59] read through the last weird ones once or
+[32:01] twice maximum, just so they sound
+[32:03] familiar in my head, but don't hold me
+[32:06] accountable for this. While I cannot
+[32:07] deny having said it, I cannot promise
+[32:09] that this is uh 100% true, either,
+[32:13] right? So,
+[32:15] focus on the main ones. Uh just be aware
+[32:17] of the other weird models at the end for
+[32:21] the exam.
+[32:23] Now, on the topic of security
+[32:25] principles, it's not always about
+[32:26] deciding how to implement a security
+[32:28] technology, but sometimes
+[32:30] it's just a matter of buying the right
+[32:33] stuff, stuff that makes you secure. How
+[32:35] do you choose then?
+[32:36] Well, it makes a lot of sense to be an
+[32:38] educated buyer whenever you buy a new
+[32:39] device for your home, for example, a
+[32:41] microwave oven or a laptop, but it makes
+[32:44] a huge sense, especially when you're a
+[32:46] bank, a billion-dollar company, or a
+[32:48] cloud service, or even the government
+[32:50] itself.
+[32:51] And if you're a bank, government, and so
+[32:53] on, well, when do you do your shopping,
+[32:56] the number of stores that you can visit
+[32:59] is pretty low, and the options are
+[33:01] pretty restrictive. That's because you
+[33:03] should only look for systems that have
+[33:05] been thoroughly tested, validated,
+[33:08] formally assessed,
+[33:11] systems that don't increase your risk,
+[33:13] and don't bring more bad stuff into your
+[33:15] network and life as an as an admin or
+[33:18] security professional.
+[33:20] You simply cannot buy based on price,
+[33:23] promotions, or because you just think
+[33:24] Apple products look nice, right? And
+[33:26] [snorts] because many companies don't
+[33:28] have the resources or the time it takes
+[33:30] to perform these validations on their
+[33:32] own, they trust the validations
+[33:34] performed by third parties. And yes,
+[33:36] speaking of time, time is important when
+[33:39] buying security because taking a long
+[33:41] time to decide to buy or to implement a
+[33:44] security solution is in itself a source
+[33:47] of increasing risk.
+[33:49] All right, so we need to trust
+[33:51] validations made by someone else if we
+[33:53] cannot do them ourselves. If we cannot
+[33:55] test every vendor and every device out
+[33:57] there. And because we need to speak the
+[33:58] same language, here we have a standard
+[34:01] for security capabilities called the
+[34:03] common criteria, which helps us identify
+[34:05] at which level the system was tested.
+[34:09] So, it's not the quality of the product
+[34:11] that we're talking about here, not even
+[34:12] the quality of the testing process, but
+[34:14] the thoroughness of the testing
+[34:16] procedures that were performed on it.
+[34:19] These levels are called evaluation
+[34:21] assurance levels, or EALs, and they
+[34:23] range from EAL 1 to EAL 7. The higher
+[34:27] the level, the more rigorous and
+[34:28] thorough the testing. The lower the
+[34:30] level, the crappier the test batch.
+[34:33] However, this does not mean that higher
+[34:35] levels are always better or more secure.
+[34:37] It depends on what kind of security you
+[34:39] need and what kind of threats you have
+[34:41] face. So, the common criteria levels are
+[34:44] more like a common language to help
+[34:46] match what a company is looking for with
+[34:48] what a vendor is able to provide.
+[34:52] The process in Common Criteria is based
+[34:53] on two key elements, protection profiles
+[34:56] and security targets. Protection
+[34:58] profiles are the security requirements
+[35:00] that customers want from a product.
+[35:02] These are basically descriptions of what
+[35:04] the product should do, what we expect it
+[35:06] to do taking into consideration our own
+[35:08] needs. Security targets, on the other
+[35:11] hand, are the security claims and the
+[35:13] features in the data sheet that the
+[35:15] vendors provide or claim they provide in
+[35:18] a product. They describe what the
+[35:19] product actually does and how much it
+[35:22] can be trusted to do what it's supposed
+[35:24] to do.
+[35:25] So, protection profiles are our needs
+[35:27] and requirements, while security targets
+[35:29] are what the product claims,
+[35:31] and claims it can do and how well in
+[35:34] numbers, packets, even bits and so on,
+[35:37] uh it actually it actually can can
+[35:39] perform.
+[35:40] Now, the EAL levels are as follows. Not
+[35:44] very easy to remember, but my tip for
+[35:46] the exam is to still give them a try and
+[35:49] remember them or at least be able to
+[35:51] place them in the right order. And no,
+[35:53] I'm not talking about being able to sort
+[35:54] them from one to seven, but to sort them
+[35:57] by their description. So,
+[36:00] here it goes.
+[36:01] EAL 1, functionally tested. Basic level
+[36:04] of testing to ensure the product works
+[36:06] as intended. Plug it in, see that you
+[36:09] can access it, run a simple test, power
+[36:11] off.
+[36:12] Good for environments where security
+[36:13] threats are not serious or not taken
+[36:16] seriously.
+[36:18] EAL 2, structurally tested. This
+[36:21] involves more detailed testing and
+[36:22] analysis of the product's design,
+[36:24] requires cooperation from the developer
+[36:26] to provide design information and test
+[36:28] results. So, you test the device by
+[36:30] having access to some internal
+[36:31] information, which is not normally
+[36:33] exposed during normal operation.
+[36:36] EAL3, methodically tested and checked.
+[36:39] This is just a more rigorous testing and
+[36:41] checking of the product's design and
+[36:43] implementation using, this time, a
+[36:45] standardized methodology.
+[36:47] Going further, EAL4, methodically
+[36:50] designed, tested, and reviewed. This
+[36:52] involves a thorough review of the
+[36:54] product's design and implementation on
+[36:56] top of the actual test. We question the
+[36:58] way the product was designed and see if
+[37:00] we agree with this design.
+[37:03] EAL5,
+[37:05] semi-formally designed and tested. This
+[37:07] requires an almost formal design
+[37:10] assessing process.
+[37:11] EAL6, semi-formally verified design and
+[37:14] tested. Again, high level of assurance
+[37:17] with a not very formal verification of
+[37:19] design and testing. And finally, the
+[37:21] supreme one, EAL7, formally verified,
+[37:25] designed, and tested. The highest level
+[37:27] of assurance requiring formal
+[37:29] verification of the design and testing
+[37:30] processes.
+[37:31] I know, we could have just said one
+[37:33] through seven without all the ambiguous
+[37:35] explanations, but
+[37:37] just might be asked about these
+[37:39] descriptions on the exam, unfortunately.
+[37:42] Well, the Common Criteria has some
+[37:43] weaknesses and challenges that you need
+[37:45] to be aware of. So, it's kind of like,
+[37:47] who watches the watchers? Who evaluates
+[37:50] the evaluator?
+[37:51] One of the downsides of the Common
+[37:53] Criteria is that it does not care about
+[37:55] users. Again, security is being
+[37:57] condescending here.
+[37:59] It's just about the security of the
+[38:01] product, not the behavior of the user.
+[38:03] For example, if a user shares their
+[38:05] password or leaves their computer
+[38:07] unattended, the Common Criteria does not
+[38:09] stop you from being dumb, and it's
+[38:11] actually
+[38:12] not the device's fault that you decide
+[38:15] to share its admin password.
+[38:17] Also, since the Common Criteria only
+[38:19] focuses on the technical aspects of
+[38:20] security, then if a policy or procedure
+[38:24] is not followed or enforced, what if a
+[38:26] training or an audit is not conducted,
+[38:28] the common criteria frankly doesn't give
+[38:30] a damn. It's not the device's fault if a
+[38:34] PEBCAK problem occurs. PEBCAK problem
+[38:36] means problem exists between keyboard
+[38:39] and chair, by the way.
+[38:41] Uh finally, another downside is that uh
+[38:45] the common criteria focuses on the
+[38:46] security of the product in isolation and
+[38:49] not in relation to its environment or in
+[38:51] a more complex environment or context.
+[38:54] For example, if a physical or a
+[38:55] personnel-based security breach occurs,
+[38:58] the common criteria doesn't want to hear
+[39:00] about that because it doesn't uh relate
+[39:02] directly to the to the product being
+[39:04] evaluated.
+[39:06] And it doesn't care about cryptographic
+[39:08] strength either. It only focuses on the
+[39:10] security of the product as a whole, not
+[39:12] on the specific algorithms or protocols
+[39:14] that it uses or implements.
+[39:17] Security functions and memory
+[39:19] protection. So, how do information
+[39:21] systems, or simply said, computers
+[39:23] actually do security?
+[39:25] Or why do we care? Well, because without
+[39:28] an understanding of what a system can do
+[39:30] from a security standpoint, we cannot
+[39:33] evaluate them and we cannot implement
+[39:35] them correctly. And just a heads-up
+[39:36] warning here, there are a lot of things
+[39:38] that we should be talking about here
+[39:40] because nowadays security is found at
+[39:41] each and every level in a computer.
+[39:44] Of course, we're not going to cover them
+[39:45] all here, but I hope this gives you a
+[39:47] nice way to at least start framing these
+[39:50] concepts.
+[39:51] So, let's start with memory.
+[39:52] Where all the data eventually gets to
+[39:54] live. Memory is the place where data is
+[39:56] stored when in use, and sometimes it's
+[39:58] where the data is stored long after you
+[40:00] stopped using it if there is really bad
+[40:03] programming involved.
+[40:04] Memory protection is not just a nice
+[40:07] feature to have, it's a must-have for
+[40:08] any secure and stable system. If there
+[40:11] are no memory protection mechanisms in
+[40:13] place, bad things can happen such as
+[40:17] system and process instability.
+[40:19] The system can crash or freeze because
+[40:21] some process messed up the memory of
+[40:23] another process or of the kernel itself.
+[40:26] Another one is violation of integrity.
+[40:28] You could corrupt the data or the
+[40:29] instructions of a process through
+[40:31] another process if there are no clear
+[40:33] boundaries and protection mechanisms
+[40:34] against this behavior.
+[40:36] Denial of service can happen. The system
+[40:38] can run out of memory or even out of any
+[40:41] other resources because some process
+[40:43] hogged or leaked the memory that was
+[40:45] supposed to be freed. And disclosure.
+[40:47] The sensitive or confidential
+[40:49] information of a process can be exposed
+[40:51] or stolen by another process with
+[40:53] malicious intent. A lot of software
+[40:55] exploits are aiming for this type of
+[40:56] memory access.
+[40:58] Just as a short overview here because we
+[41:00] will get back to this topic later on,
+[41:02] memory protection can be implemented in
+[41:04] a number of ways such as
+[41:07] isolation.
+[41:08] How to separate the memory spaces of
+[41:10] different processes and the kernel so
+[41:12] that they don't interfere with each
+[41:13] other. Now, there are of course ways in
+[41:16] which different processes can exchange
+[41:17] information legitimately when they need
+[41:20] to. It's called IPC, inter-process
+[41:22] communication, but it's supposed to
+[41:24] happen in a completely controlled
+[41:25] manner.
+[41:26] Virtual memory is also a memory
+[41:29] protection mechanism apart from its many
+[41:31] other benefits. Virtual memory means
+[41:33] pretending or lying to a process that
+[41:35] the system has more memory than it
+[41:37] actually has so that more processes can
+[41:39] run and more more memory can be
+[41:41] allocated to them.
+[41:43] With virtual memory, each process is
+[41:45] tricked into seeing that the entire
+[41:47] memory of the system is available to
+[41:49] that process and only to it. Of course,
+[41:51] this is not true. A computer's memory is
+[41:53] shared among all its processes and its
+[41:55] kernel. So, what happens is that the OS
+[41:58] presents this virtual memory to each
+[41:59] process. Basically, it it lies to them
+[42:02] so that when processes try to allocate
+[42:04] memory, they don't need to care or take
+[42:07] into consideration other potentially
+[42:08] running programs that consume the same
+[42:10] memory space. No piece of software or
+[42:12] programmer would possibly account for
+[42:14] that independently. Uh programmers just
+[42:17] see, for example, 32 gigs of RAM and ask
+[42:20] for 200 MB. They think they ask for the
+[42:22] first 200 MB when in fact the OS, the
+[42:25] operating system, translates this
+[42:27] request and then in the backstage it
+[42:29] maps those apparently first 200 MB onto
+[42:32] a real chunk of 200 MB in some other
+[42:35] random free space in the physical memory
+[42:37] where space is really available happens
+[42:40] available at that moment. Uh similarly,
+[42:42] this trickery also makes it almost
+[42:44] impossible, without elevator privileges
+[42:46] at least, for one process to see and
+[42:49] interact with another.
+[42:51] Another technique is memory
+[42:52] segmentation, uh which is a subjective
+[42:55] term and can mean a lot of things
+[42:57] actually, but in the computer memory
+[42:58] it's about how to divide the memory
+[43:00] space into logical segments such as uh
+[43:03] one segment for the code, one for the
+[43:04] data, the stack, the heap, and so on,
+[43:07] and assign different permissions and
+[43:08] attributes to them. Keeping in mind that
+[43:10] this happens per process or even per
+[43:12] single thread.
+[43:14] Memory management is generally about
+[43:16] allocating and deallocating memory
+[43:18] dynamically using techniques such as
+[43:21] paging, swapping, caching, and so on,
+[43:23] and freeing memory, basically. Again,
+[43:25] this becomes very relevant when we
+[43:27] consider the risk of denial of service.
+[43:29] A system can run out of memory simply
+[43:31] because memory is not infinite. So, when
+[43:34] processes without elevated privileges
+[43:37] can make an unprotected system run out
+[43:39] of memory and crash all its other
+[43:41] functions by requesting uh memory over
+[43:44] and over and it never releases it back,
+[43:46] that's when even a non-privileged
+[43:48] process can, well, crash other
+[43:50] privileged processes or the entire
+[43:51] system.
+[43:53] Protection rings are on the lower-level
+[43:57] operating system internals. These rings
+[43:59] are not actual rings, but often depicted
+[44:02] as rings. Uh they are areas that define
+[44:06] different levels of privilege and access
+[44:07] for different types of code, at least
+[44:09] for user mode and kernel mode.
+[44:11] Um or unprivileged mode and privileged
+[44:13] mode along with the hard separation
+[44:15] between these two.
+[44:17] Finally, buffer overflow protection.
+[44:20] This is how to prevent or mitigate the
+[44:22] common vulnerability of writing beyond
+[44:25] the boundaries of a buffer. A buffer
+[44:27] being a fixed-size pre-allocated memory
+[44:29] area and potentially writing beyond the
+[44:31] boundaries of a buffer means overwriting
+[44:34] legitimate application data or code,
+[44:36] which can lead to code injection,
+[44:38] perhaps even code execution. A lot of
+[44:40] the exploits out there that are are
+[44:43] buffer overflow exploits, and in most
+[44:45] cases this is what hacking, quote
+[44:46] unquote, an application is about.
+[44:48] Finding and exploiting a buffer overflow
+[44:50] vulnerability that allows an attacker to
+[44:52] inject their own code, thus taking
+[44:55] control of the app and making it execute
+[44:57] the attacker's code instead of its own.
+[45:00] And again, this is just
+[45:02] scratching the surface here. We could go
+[45:03] on forever, especially if we're were to
+[45:06] go into operating system internals on
+[45:08] this topic.
+[45:09] Uh two more examples worth mentioning
+[45:11] here from 2017 when two major memory
+[45:15] errors were revealed to the public,
+[45:17] Meltdown and Spectre.
+[45:19] Meltdown and Spectre are based on the
+[45:20] concept of speculative execution, which
+[45:23] might sound bad, but it's actually a
+[45:24] technique used by CPUs to improve
+[45:26] performance a lot.
+[45:29] Speculative execution means that the CPU
+[45:31] tries to guess, yes, actually guess,
+[45:34] what instructions will be needed next
+[45:37] based on the previous ones, and executes
+[45:39] them in advance. This way the CPU can
+[45:41] save time and avoid wasting resources
+[45:43] for slow operations like memory access
+[45:46] or branch prediction.
+[45:47] It guesses right more than 80% of the
+[45:50] time, so the cost of guessing wrong is
+[45:53] totally worth it, actually. Now,
+[45:55] guessing wrong can happen, and it's not
+[45:58] a problem for performance, but when it
+[46:00] happens, it means that the CPU has to
+[46:02] undo the speculative execution branch
+[46:04] that it just did because it was wrong
+[46:07] and start over from the previous correct
+[46:09] point. This is again usually fine and
+[46:12] invisible to the user and happens in an
+[46:14] instant, but there's a catch. Some
+[46:16] traces of that speculative execution may
+[46:19] remain in the memory or the cache of the
+[46:21] CPU in an insecure area and these traces
+[46:25] can be exploited by an attacker to steal
+[46:27] data that they shouldn't have access to.
+[46:30] So, it's like the CPU forgetting to
+[46:32] clean up after itself after working with
+[46:34] some sensitive data. And the funny thing
+[46:36] is that nobody really thought that this
+[46:38] cleanup was necessary in the first
+[46:40] place, at least not until some people
+[46:43] proved that this can be exploited.
+[46:45] So, Meltdown is an attack that can allow
+[46:47] a non-privileged process to read the
+[46:50] kernel memory contents. This is bad
+[46:52] because the kernel memory contains all
+[46:53] kind of sensitive information,
+[46:54] passwords, encryption keys, credentials,
+[46:57] a lot of other stuff as well. So,
+[46:59] that's where the juicy stuff is, right?
+[47:02] In in the in the kernel memory area.
+[47:04] Meltdown works by tricking the CPU into
+[47:07] speculatively executing instructions
+[47:10] that access kernel memory from user mode
+[47:13] and then using a side channel attack to
+[47:15] read the cache data from the memory.
+[47:18] Spectre is an attack that can enable the
+[47:20] theft of the entire memory of the
+[47:21] computer from other running
+[47:23] applications. Uh to point out the
+[47:25] differences, let me put it this way.
+[47:27] Meltdown affects the boundary between
+[47:29] user applications and the operating
+[47:31] system, while Spectre affects the
+[47:33] boundary between different applications.
+[47:35] Meltdown is easier to exploit, but it
+[47:37] can be mitigated with software patches.
+[47:39] Spectre is hard to exploit, but it's
+[47:41] also harder to fully mitigate.
+[47:43] Meltdown and Spectre are very serious
+[47:45] problems that affect almost every
+[47:46] processor made in the last 20 years.
+[47:49] They are hard to detect and prevent
+[47:51] because they exploit fundamental
+[47:52] features of modern CPUs that
+[47:55] and that's not a place you can easily
+[47:57] patch from software, right? There are
+[47:59] patches available to mitigate these
+[48:00] issues in existing hardware, but they
+[48:02] are pretty difficult to implement
+[48:03] because well, you're trying to patch
+[48:05] hardware with software.
+[48:08] So, if it's even possible at all at all,
+[48:11] then often these patches come with a
+[48:13] high cost of reduced performance or
+[48:15] compatibility issues.
+[48:17] Future CPUs should and already have
+[48:20] built-in mechanisms to prevent these
+[48:22] attacks natively. So, in your current
+[48:25] present when you are reading, listening
+[48:27] to, or watching this
+[48:29] this should not be an issue anymore.
+[48:33] Let's see some other security functions
+[48:34] or technologies where security is
+[48:36] involved. Let's start with server
+[48:38] virtualization. This is a technology
+[48:39] that allows you to run multiple
+[48:41] operating systems or applications on a
+[48:42] single physical machine. Now, you might
+[48:44] squint your eyes here and say something
+[48:47] on the lines of wait, multiple operating
+[48:48] systems or applications? Isn't the
+[48:51] application virtualization stuff related
+[48:52] to containers? Well, yes, and we'll get
+[48:55] there. We're going to talk about
+[48:56] containers, but basically virtualization
+[48:59] at any level is a logical segmentation
+[49:01] of a resource.
+[49:02] If that means slicing the hardware
+[49:04] resources into multiple virtual
+[49:06] machines, so be it. If it means slicing
+[49:09] or somehow compartmentalizing the
+[49:10] applications that are running on top of
+[49:12] an operating system, then so be it. It's
+[49:14] still called virtualization.
+[49:17] There are a lot of useful ways in which
+[49:20] we can use virtualization. For example,
+[49:21] for simple resource optimization by
+[49:23] allowing you to make better use of the
+[49:25] hardware that you already paid for. You
+[49:27] get to use the hardware better because
+[49:29] now you can run multiple apps or
+[49:31] multiple operating systems on the same
+[49:32] server completely isolated from each
+[49:34] other. So, you don't have to keep a
+[49:36] server up that only uses 10% of the CPU
+[49:39] most of the time.
+[49:40] Another good reason is isolation. You
+[49:42] can isolate different operating systems
+[49:45] or applications from each other so that
+[49:46] they don't interfere or conflict with
+[49:48] each other.
+[49:49] Uh this can improve security, stability,
+[49:51] and performance and allow you to run
+[49:52] even multi-tenant deployments for
+[49:54] multiple customers or departments on the
+[49:56] same shared hardware.
+[49:58] You can also use virtualization for
+[49:59] security testing. You can test
+[50:01] suspicious or unknown software in a
+[50:03] virtual environment without risking your
+[50:05] real systems or data. You can even test
+[50:07] updates in a virtual lab before you push
+[50:09] them to the production apps. In
+[50:11] cybersecurity, this can also help you
+[50:13] detect and analyze malware,
+[50:14] vulnerabilities, or bugs in a virtual
+[50:16] environment in which the malware can do
+[50:18] whatever it wants, allowing you to
+[50:20] observe it, understand it, and
+[50:22] eventually to build signatures that
+[50:24] detect it.
+[50:25] Uh compatibility is another benefit. You
+[50:27] can run applications that are not
+[50:29] compatible with your host OS in a
+[50:31] virtual environment without having to
+[50:32] install or switch to another OS. You
+[50:35] simply virtualize the necessary
+[50:36] operating systems and their necessary
+[50:38] versions on top of the hypervisor. This
+[50:40] can save you a lot of time and
+[50:41] resources.
+[50:43] You can also use virtualization in
+[50:44] security devices. Um almost all
+[50:47] enterprise grade firewalls, UTM devices,
+[50:50] next generation firewalls allow you to
+[50:52] segment their resources in multiple
+[50:54] instances or something called context or
+[50:57] virtual domains, VDOMs, depending on the
+[50:59] vendor's definition.
+[51:01] Uh you can then architect within a
+[51:03] single device multiple logical devices
+[51:06] with different functionality and even
+[51:07] different management interfaces.
+[51:09] Actually, you can even architect an
+[51:10] entire virtual network made up of
+[51:12] different instances, all of them running
+[51:14] completely independently from each
+[51:15] other, passing traffic to each other,
+[51:18] all on the same physical box. You can
+[51:20] have, for example, a a firewall
+[51:22] in a firewall, one context that deals
+[51:24] with VPN connections, another context
+[51:27] for the actual firewall filtering,
+[51:28] another for the IPS, or malware
+[51:31] scanning, and they don't interfere with
+[51:33] each other, but instead act like
+[51:35] completely separate independent network
+[51:37] devices along with their respective
+[51:39] reserved resources, including physical
+[51:41] interfaces.
+[51:43] Another concept here is the TPM. It's
+[51:45] another very important security
+[51:46] function. A trusted platform module,
+[51:48] TPM, is a special chip that is embedded
+[51:51] on the motherboard of a device. The TPM
+[51:53] is designed to provide many
+[51:55] cryptographic functions like key
+[51:57] storage, key processing, certificate
+[52:00] storage for purposes like disk
+[52:01] encryption or digital signatures or
+[52:03] authentication. So, basically for all
+[52:05] the purposes where cryptographic
+[52:07] functions like encryption or digital
+[52:08] signatures are required. Interfaces are
+[52:11] another, let's say surprisingly
+[52:14] unintuitive category of security
+[52:16] functions. An interface, as a very
+[52:19] generic definition, is the way that
+[52:22] users interact with something. For the
+[52:24] sake of an example, let's consider an
+[52:26] application. An interface can be a
+[52:28] graphical GUI interface, textual
+[52:31] interface CLI, a touch screen, or even
+[52:34] API. Yes, an API is also an interface.
+[52:36] It's actually in the name, application
+[52:37] programming interface, because that's
+[52:39] one way of programmatically interacting
+[52:41] with an application. So, an interface is
+[52:43] basically whatever you using to interact
+[52:46] with something that you can interact
+[52:47] with. An interface can also be
+[52:49] constrained, also called restricted,
+[52:52] based on the user's permission.
+[52:54] So, a constrained interface is an
+[52:55] interface that limits what users can do
+[52:58] or see according to their roles or
+[53:00] levels of access.
+[53:02] Uh users with full privileges might have
+[53:04] access to all the features and functions
+[53:06] of the application, so their interfaces
+[53:07] display all the necessary functionality.
+[53:10] Think about admin interfaces once you
+[53:12] log in as an admin in an app. But, users
+[53:15] with restricted privileges have only
+[53:16] limited access. They can see and use
+[53:18] only what they are allowed by the
+[53:20] administrator or the global security
+[53:21] policy or by their type of user.
+[53:25] Applications implement constrained
+[53:27] interfaces
+[53:28] using many different methods, most of
+[53:30] them very intuitive. For example, by
+[53:32] hiding some commands or options are
+[53:34] hidden from users who don't have
+[53:36] permissions to use them. You log in as a
+[53:38] regular user and you don't see the admin
+[53:40] options or the menu on the screen at
+[53:42] all.
+[53:43] Another method is by disabling some
+[53:44] commands or options
+[53:46] which are shown but disabled for the
+[53:48] users who don't have permissions to use
+[53:50] them. They appear on the menu, but they
+[53:52] are maybe grayed out or unclickable. Or
+[53:54] in case of CLIs, they're either commands
+[53:57] or parameters that when used return an
+[53:59] error or they are listed but tell you
+[54:01] that you don't have some sufficient
+[54:02] permissions to execute those commands.
+[54:04] Think using sudo or run as admin in
+[54:07] Windows when you don't have elevated
+[54:08] privileges.
+[54:10] This might not seem like rocket science,
+[54:12] I know, but the purpose of a constrained
+[54:14] interface is to enforce the principle of
+[54:16] least privilege and the Clark-Wilson
+[54:18] model of security by restricting what
+[54:20] specific users can do once they are
+[54:23] authenticated as a specific user type on
+[54:25] the system. And yeah, try to remember
+[54:27] the term constrained interface for the
+[54:29] exam.
+[54:30] Fault tolerance, and I know this might
+[54:32] come as a surprise to see fault
+[54:34] tolerance listed here, is the ability of
+[54:36] a system to survive a fault, a defect,
+[54:38] but continue to operate. How do you do
+[54:40] this? You add redundant components or
+[54:43] additional redundant systems that can
+[54:44] take over in case of a fault. And
+[54:46] ideally, you would also need a mechanism
+[54:48] that kicks in automatically when the
+[54:50] fault happens and switches to the
+[54:51] redundant system without human
+[54:53] intervention. One common example of
+[54:57] fault tolerance for computer disks is
+[54:59] RAID, which stands for redundant array
+[55:02] of inexpensive disks or independent
+[55:04] disks, depending on who you ask. So,
+[55:06] RAID is a technique that combines
+[55:08] multiple disks into one logical unit
+[55:11] that, depending on the way they are
+[55:12] combined, can provide better performance
+[55:15] and reliability than a single disk or
+[55:18] worse sometimes, depending on how you
+[55:20] configure it.
+[55:21] RAID can protect your data from disk
+[55:23] failures by using techniques such as
+[55:24] mirroring, copying data to another disk,
+[55:27] striping, splitting data across multiple
+[55:30] disks, or parity, adding extra bits to
+[55:32] detect, recover from, and correct
+[55:35] errors.
+[55:36] Another example for fault tolerance is
+[55:38] clustering and that's a technique that
+[55:40] connects multiple systems. They can be
+[55:42] servers, firewalls, storage devices,
+[55:45] routers, switches, and so on into one
+[55:47] logical unit that provides better
+[55:49] availability and scalability than a
+[55:51] single unit. Usually the cluster units
+[55:53] have some sort of detection of faults
+[55:55] using heartbeats for monitoring status
+[55:58] of each server. They also make decisions
+[56:00] as a quorum. That's deciding which
+[56:03] server is in charge and how many need do
+[56:05] we need to make uh any decision.
+[56:08] And also the failover algorithm. Uh like
+[56:10] switching to another server in case of a
+[56:12] failure.
+[56:13] But how is fault tolerance related to
+[56:15] security? Well, we use it to protect our
+[56:18] availability. Which is one of the three
+[56:20] major pillars of security, correct?
+[56:23] And of course, we have encryption
+[56:25] implemented as a security function. I
+[56:26] should have started with this one,
+[56:28] right? And yes, we all know encryption
+[56:30] and the fact that we use it for
+[56:32] protecting data at rest, in transit,
+[56:35] or in use.

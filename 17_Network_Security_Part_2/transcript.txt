@@ -1,0 +1,1533 @@
+[00:09] All right, let's talk about the big
+[00:10] elephant in the room, the IP, Internet
+[00:12] Protocol.
+[00:13] Uh, the IP protocol in the TCP/IP suite
+[00:17] operates at the network layer and this
+[00:20] is where it handles routing of data
+[00:22] packets.
+[00:23] You could say that IP is the backbone of
+[00:25] global internet communications, but also
+[00:27] remember that it does not provide any
+[00:29] guarantees. It does not have any
+[00:31] reliability mechanisms built into it.
+[00:34] Well, almost none.
+[00:36] IP addressing involves a source and a
+[00:39] destination address, which are both
+[00:40] written in the header of each IP packets
+[00:43] ever created and transmitted. We need
+[00:45] both source and destination because we
+[00:47] use the destination so that routers
+[00:49] along the way know where to send the
+[00:51] packet and we need the source so that
+[00:54] the recipient of the packet knows where
+[00:56] and how to send a response back to us.
+[00:59] We allocate 32 bits for IPv4 addresses
+[01:02] and 128 bits for IPv6 ones.
+[01:06] IPv6 doesn't only have a bigger address
+[01:08] space, but brings a lot of enhancements,
+[01:11] including scoped addresses, auto
+[01:13] configuration, QoS, that's quality of
+[01:16] service, and IPsec built into the
+[01:18] protocol itself. Uh, we could have this
+[01:21] all with IPv4 as well and we actually
+[01:24] do, but we need to build these features
+[01:26] on top of the IPv4 protocol using other
+[01:29] specialized protocols. IPv6 has these
+[01:32] ready as built-in features ready to be
+[01:34] enabled when needed.
+[01:36] Now, IPv6 is has an uh a very gradual
+[01:39] adoption. Many IPv6 networks are
+[01:42] currently confined to private networks
+[01:44] like large corporations, universities.
+[01:47] My home ISP actually provides me with an
+[01:49] IPv6 address as well as many others do,
+[01:52] too.
+[01:53] Uh, a while ago, while troubleshooting a
+[01:55] wireless printer in my home, I realized
+[01:58] that both Windows and Mac OS registered
+[02:01] that that printer by its IPv6 address by
+[02:05] default. And every time I printed
+[02:06] something, my documents were sent over
+[02:08] IPv6 to the printer without me even
+[02:11] being aware of it. So, IPv6 is here.
+[02:15] It's just not everywhere just yet.
+[02:18] IPv6 also raises several security
+[02:20] issues, like the fact that now you have
+[02:22] so much more of an address space
+[02:25] available to you that can be used as
+[02:27] source addresses for attackers. And also
+[02:30] the need for security filtering and
+[02:32] monitoring products to fully support
+[02:34] IPv6. This is usually a big problem when
+[02:36] configuring security. Always ask
+[02:38] yourself, what about IPv6? We're used to
+[02:41] building policies and ACLs and filter
+[02:44] lists for IPv4, but if you don't
+[02:46] implement anything security related to
+[02:48] IPv6, so if you completely forget about
+[02:51] IPv6, then we would be running on
+[02:54] default IPv6 configurations.
+[02:57] What do these default configurations
+[02:59] look like? Well, is it deny any in
+[03:02] absence of any IPv6 config? Is it permit
+[03:06] any?
+[03:07] Is it a policy that blocks a specific
+[03:09] protocol over IPv4 going to block it
+[03:12] automatically over over IPv6 as well?
+[03:15] Most likely no.
+[03:18] Uh, always double-check IPv6 policies as
+[03:20] well because those might be an open
+[03:22] invitation to attackers into your
+[03:24] network.
+[03:25] Uh, IPv6 also virtually eliminates the
+[03:28] need for NAT, for network address
+[03:29] translation, due to its huge address
+[03:32] space. NAT is still supported, of
+[03:34] course, but now it's up to you whether
+[03:36] you want to use it or not. The decision
+[03:38] is yours since for the first time in
+[03:40] many, many years, the number of
+[03:42] available IP addresses is not an issue
+[03:44] anymore. While some will argue that this
+[03:47] reduces security, it also reduces
+[03:49] privacy.
+[03:50] If you're not hiding behind a NAT
+[03:53] router, then any destination that you
+[03:55] access over the internet can see who you
+[03:57] are and where you're coming from. Even
+[03:59] more, without NAT in the middle of the
+[04:01] connection, you can just as easily be
+[04:02] contacted from the internet by an
+[04:05] attacker, so you become more exposed.
+[04:07] NAT is not just a solution against IPv4
+[04:09] address scarcity, but also a security
+[04:12] shield, a very effective one, for your
+[04:15] network.
+[04:17] Uh, you could have IPv4 and IPv6 coexist
+[04:19] on the same network. Uh, dual stack uh
+[04:21] actually means that operating systems
+[04:23] run both IPv4 and IPv6 in completely
+[04:27] separate
+[04:28] instances, processes. On networking
+[04:30] devices, we'll call this running like
+[04:32] ships in the night, where addressing,
+[04:35] routing protocols, security policies,
+[04:37] access lists configured for the IPv4
+[04:39] protocol have nothing to do with IPv6
+[04:42] and are completely unaware that IPv6
+[04:44] even exists. This is where you should be
+[04:46] careful with your security policies and
+[04:47] firewall rules as they need to be either
+[04:50] duplicated or designed in such a way so
+[04:52] that they successfully cover both IP
+[04:54] versions.
+[04:55] Another way to run both protocols is by
+[04:57] using tunneling uh technologies.
+[04:59] Tunneling means encapsulation, using
+[05:02] encapsulation to access other systems
+[05:05] that are running the other protocol.
+[05:07] There are many tunneling techniques that
+[05:08] involve IPv6, but this is not a
+[05:11] networking training, all right? So,
+[05:12] suffice to say that uh the most common
+[05:15] tunneling architecture involving IPv6 is
+[05:17] the one where two IPv6 private networks
+[05:21] want and need to communicate over an
+[05:23] IPv4 network like the internet. For
+[05:25] these situations, we also have NAT-PT.
+[05:29] That's network address translation
+[05:30] protocol translation, which as you can
+[05:33] probably guess performs NAT from IPv4 to
+[05:36] IPv6 and back, of course, in the other
+[05:38] way around. So, it's not just an address
+[05:40] and port translation, it's also an IP
+[05:42] version translation as well. Careful,
+[05:45] this is translation, not tunneling. With
+[05:48] translation, you're replacing one header
+[05:51] with another while keeping track of
+[05:53] these substitutions, but when using
+[05:54] tunneling, we're adding additional
+[05:56] headers to the IP packets to allow them
+[05:58] to traverse a network that routes based
+[06:00] on a different IP version's rules.
+[06:03] Uh, there is a small so-called, let's
+[06:06] say, reliability functionality built
+[06:08] into both IPv4 and IPv6. Both have a
+[06:12] header field that limits packets from
+[06:15] looping around indefinitely in the
+[06:17] network. In IPv4, uh it's the time to
+[06:20] live or TTL field. And in IPv6, it's the
+[06:23] hop limit field. Uh, when these fields
+[06:26] reach zero, the packet is discarded and
+[06:28] an ICMP type 11, also known as time
+[06:31] exceeded, error message is sent back to
+[06:34] the source.
+[06:37] IPv4 addresses are grouped into classes
+[06:39] and each class includes a specific range
+[06:41] of IP addresses. You can determine the
+[06:43] class just by looking at the first byte
+[06:45] in an IP address. Uh, we find classes A,
+[06:48] B, and C usable in networks nowadays.
+[06:51] Class D is the one reserved for
+[06:52] multicast and class E is for future use,
+[06:57] or at least that's how it was determined
+[06:59] initially. Uh, now we know that it
+[07:01] refers to a future that will never come
+[07:03] because IPv6 happened and IPv4 will
+[07:06] slowly die in the years to come. Now,
+[07:09] IPv4 classes are easy to identify based
+[07:11] on the value of the first byte in the
+[07:13] IPv4 address. So, we have class A where
+[07:16] the first byte has the values between 1
+[07:18] and 126.
+[07:19] Class B with values ranging from 128 to
+[07:23] 191.
+[07:24] Class C with values from 192 to 223.
+[07:30] Class D for multicast with values
+[07:33] ranging from 224 to 239. And finally,
+[07:37] class E with the rest of the values from
+[07:39] 240 to 255.
+[07:43] Did you see it?
+[07:46] There's a gap in there.
+[07:48] And if you spotted it,
+[07:49] congratulations. It's the addresses that
+[07:52] start with 127. That entire range, which
+[07:56] is about 16 million addresses, was
+[07:59] reserved for loopback addresses. That
+[08:02] is, communication with the local host.
+[08:04] 16 million addresses just for that.
+[08:07] People were so naive
+[08:12] in the humble beginnings of IPv4.
+[08:15] So, yes, you can actually use any IP
+[08:16] address that starts with 127 for
+[08:19] loopback communication, not just
+[08:21] 127.0.0.1, which might sound familiar to
+[08:23] you. You probably know about that one.
+[08:25] Uh, you can, but it doesn't mean that
+[08:27] any operating system will allow you to
+[08:28] do so. Most operating systems will still
+[08:30] listen only for 127.0.0.1.
+[08:34] Also, the class of addresses that start
+[08:36] with zero were meant as a bit bucket, a
+[08:39] place to route packets to be discarded
+[08:41] like a null zero route or a /dev/null
+[08:45] location. Again, all 16 million of them,
+[08:49] all that start with zero, for the single
+[08:51] purpose.
+[08:52] Uh, classes also had default network
+[08:54] masks or subnet masks. The network mask
+[08:56] is what we use to determine the network
+[08:58] portion of an IP address and to separate
+[09:00] it from the host portion. For specific
+[09:02] classes, their traditional, let's say,
+[09:05] network masks aren't really used any
+[09:07] longer because nowadays we use something
+[09:09] called classless inter-domain routing,
+[09:11] CIDR, c i d r, and variable length
+[09:15] subnet masks, VLSM, which basically mean
+[09:18] that you can use pretty much any network
+[09:20] mask with any IP address.
+[09:22] But still, you should know this stuff
+[09:23] because exam writers, when they run out
+[09:25] of ideas, love to ask you about useless
+[09:27] deprecated stuff. That being said, we
+[09:30] have class A with the traditional
+[09:32] network mask of 255.0.0.0,
+[09:36] written as /8 in CIDR notation. Class B
+[09:39] with a network mask of 255.255.0.0,
+[09:43] written as /16 in CIDR notation. And
+[09:45] class C with a network mask of
+[09:47] 255.255.255.0,
+[09:50] written as /24 in CIDR notation.
+[09:55] Two additional protocols are worth
+[09:56] mentioning in relation to IP, and these
+[09:59] are IGMP, Internet Group Management
+[10:01] Protocol. This is for multicast. ICMP,
+[10:04] Internet Control Message Protocol.
+[10:06] Fortunately, the naming of these
+[10:07] protocols is pretty self-explanatory.
+[10:09] So, we have the Internet Group
+[10:10] Management Protocol, IGMP, is used in
+[10:13] multicast transmissions, which involves
+[10:15] transmitting data to multiple recipients
+[10:17] at the same time. This behavior is in
+[10:19] contrast with what we call unicast,
+[10:22] which is a one-to-one communication, or
+[10:24] a broadcast, which is a one-to-many
+[10:27] or one-to-everyone communication.
+[10:29] Multicast is a one-to-many type of
+[10:31] communication where the members of the
+[10:34] many group belong to what is defined as
+[10:37] a multicast group, identified by a
+[10:39] specific multicast address. Now, in
+[10:41] order to participate in a multicast
+[10:43] group, members have to announce their
+[10:45] desire to subscribe to that group in
+[10:47] order to receive the messages sent to
+[10:48] it, similar to how you would subscribe
+[10:50] to a mailing list or tune in your TV to
+[10:52] a specific channel. Hence, the group
+[10:54] management part in IGMP.
+[10:57] When you think about IGMP, think about
+[10:59] TV broadcasts. The signal is received by
+[11:02] almost everyone, but only some of the
+[11:04] recipients
+[11:05] quote-unquote tune in to the desired
+[11:08] content. IGMP is the protocol that
+[11:11] manages a host's multicast group
+[11:13] membership.
+[11:15] The So, it's kind of like the remote
+[11:17] control, if you wish. It's the remote
+[11:19] that you use to join a specific group,
+[11:21] or to tune into a specific channel. The
+[11:24] Internet Control Message Protocol, ICMP.
+[11:26] This is used as a control and
+[11:28] troubleshooting protocol for the TCP/IP
+[11:30] networks. Tools like ping, traceroute,
+[11:33] pathping, all leverage ICMP messages one
+[11:36] way or another. The ping utility uses a
+[11:39] ICMP echo packets to determine if a
+[11:41] remote system is online, and echo and
+[11:44] echo reply, how quickly it responds, if
+[11:46] the devices in between are working, and
+[11:48] if the ICMP protocol itself is not
+[11:50] blocked by some firewall on the path
+[11:52] from the source to the destination.
+[11:54] ARP, or Address Resolution Protocol, is
+[11:57] a protocol used to resolve IP addresses
+[11:59] into MAC addresses. We need to do this
+[12:02] resolution because we usually know the
+[12:04] name or the IP address of the computer
+[12:06] that we want to communicate with. For
+[12:08] example, you know a website's address,
+[12:10] and you use DNS to convert that to an
+[12:12] actual IP address, but that's layer
+[12:14] three information. In order to build
+[12:16] frames at layer two, we also need source
+[12:18] and destination MAC addresses, because
+[12:20] those addresses are the one used by
+[12:21] layer two switches along the way. We
+[12:24] know our own MAC address, of course.
+[12:26] It's written on the network card, but
+[12:29] what's the MAC address of the recipient,
+[12:31] or of the next device along the path of
+[12:33] the next hop?
+[12:34] Well, if the recipient is in the same
+[12:36] network as us, something that we can
+[12:38] decide simply by looking at our own
+[12:40] network interface's IP address and
+[12:42] network mask, and then comparing it to
+[12:44] the recipient's IP address, we can just
+[12:46] ask the recipient what their MAC address
+[12:49] is, and that's when we use ARP, ARP. If
+[12:53] we find out that destination is not in
+[12:55] our network, then we should send our
+[12:57] packets to the default gateway, which
+[12:59] means we should ask the default gateway
+[13:01] about their MAC address instead.
+[13:03] Nevertheless, we need to ask around for
+[13:05] some MAC addresses. That's what ARP is
+[13:07] for.
+[13:08] Now, of course, the ARP protocol has
+[13:10] some concerns, like ARP cache poisoning
+[13:13] or ARP spoofing. These attacks happen
+[13:15] when an attacker sends falsified ARP
+[13:17] replies, causing incorrect information
+[13:19] to be stored in the ARP cache.
+[13:22] The dynamic content, the learned content
+[13:25] from these ARP requests and replies,
+[13:28] remains in a client cache until a
+[13:31] specific timeout occurs, usually under
+[13:33] 10 minutes, depends on the operating
+[13:35] system. This is possible because of the
+[13:37] way ARP was designed, so that even if a
+[13:39] host receives replies
+[13:42] without having sent a request for them,
+[13:45] they are still going to be processed.
+[13:47] The replies still get processed. This is
+[13:49] called gratuitous ARP, which basically
+[13:52] means that you can lie to anyone on your
+[13:54] network with fake IP-to-MAC information,
+[13:58] and everyone will believe you.
+[13:59] If you think, "Wow, that's a crappy
+[14:01] security flaw."
+[14:03] It's not exactly a flaw. This
+[14:05] bug/feature
+[14:07] is often used for announcing a new
+[14:10] node's existence, letting everyone in
+[14:12] the network know that new device just
+[14:14] connected, for updating an ARP mapping
+[14:17] due to a change in IP or MAC address, to
+[14:19] announce all switches that a host or VM
+[14:22] has moved from one port to another, or
+[14:24] to ensure reliable failover for
+[14:26] redundant devices, like, for example,
+[14:28] when one device or link fails, and the
+[14:30] redundant one becomes active, a flood of
+[14:33] new MAC-to-IP mapping information must
+[14:35] happen so that existing devices will
+[14:37] know how to use the new link of the new
+[14:39] device immediately, and stop trying to
+[14:42] contact the failed device as soon as
+[14:44] possible. Creating static ARP entries is
+[14:47] a form of ARP cache poisoning. This is
+[14:50] done locally through the ARP command in
+[14:52] the CLI,
+[14:53] both on Linux and on Windows, and can
+[14:56] also be conducted via a malicious script
+[14:58] on the client, of course. Each host can
+[15:01] add its own static ARP entries into its
+[15:03] table. However, these static ARP entries
+[15:05] are not persistent across reboots,
+[15:07] unless the script is set to run on each
+[15:09] boot.
+[15:10] To protect against ARP-based attacks, we
+[15:12] can use port security on the Ethernet
+[15:14] switches that connect our network, or at
+[15:16] least on the switch where our access
+[15:18] ports are located.
+[15:20] Port security allows you a number of
+[15:22] MAC-related security features, among
+[15:25] which the ability to limit the number of
+[15:27] MAC addresses that can communicate over
+[15:30] a specific switch port. This prevents
+[15:32] MAC spoofing, since if the switch is
+[15:34] configured to accept only one MAC
+[15:36] address, a specific one, once it's
+[15:38] registered one MAC, then if an attacker
+[15:40] changes the MAC address,
+[15:42] spoofs the MAC address, and tries to
+[15:44] impersonate somebody else on the
+[15:46] connected device in an attempt to
+[15:48] impersonate some other user, their
+[15:51] traffic will be denied, since now
+[15:53] they're trying to send frames with a
+[15:54] different and unauthorized MAC address.
+[15:56] So, that's the end of their spoofing.
+[15:59] Other solutions involve the use of local
+[16:02] software or host-based firewalls, host
+[16:04] intrusion detection and prevention
+[16:06] systems, HIDS, HIPS,
+[16:07] or special endpoint security products
+[16:09] that block unrequested ARP replies and
+[16:12] announcements.
+[16:13] Another defense is establishing static
+[16:15] ARP entries and not allowing a host to
+[16:17] learn any external dynamic ARP
+[16:19] information, but this only works in a
+[16:21] very isolated and static system, as it's
+[16:23] extremely inflexible and involves a lot
+[16:25] of management overhead.
+[16:28] DAI, or Dynamic ARP Inspection, as Cisco
+[16:31] calls it, is a technique that allows
+[16:32] layer two switches to first monitor and
+[16:35] log DHCP traffic, a feature called DHCP
+[16:38] snooping, and build something called a
+[16:40] DHCP snooping database that stores which
+[16:43] IP address, received from the DHCP
+[16:45] server, hence the DHCP snooping part,
+[16:48] maps to which MAC address, and on which
+[16:50] port it is located. It also memorizes on
+[16:53] which port the DHCP server is located,
+[16:55] just in case someone decides to run a
+[16:57] rogue one on a different port one day.
+[17:00] If you enable DAI on this database, the
+[17:03] switch can now detect and block MAC
+[17:06] spoofing attempts, can block attempts at
+[17:08] injecting malicious or fake ARP
+[17:10] information, because fake information is
+[17:13] easily identified when you know exactly
+[17:15] which host is supposed to be on which
+[17:16] port, and so on.
+[17:18] Other vendors support this, not just
+[17:20] Cisco. It's just that they call it using
+[17:23] different names. For example, Juniper
+[17:24] calls DAI Dynamic ARP Protection, DAP.
+[17:29] Aruba calls it ARP Protection. Arista
+[17:32] calls it ARP Security. Extreme Networks
+[17:36] calls it ARP Validation. Dell calls it
+[17:39] ARP Guard. If you need to come up with a
+[17:41] new name for this, you're going to have
+[17:42] a hard time doing it.
+[17:44] Similarly, for Cisco's port security,
+[17:48] Juniper refers to it as MAC limiting, or
+[17:51] MAC security. Extreme Networks calls it
+[17:54] MAC locking, or secure MAC addresses.
+[17:57] Dell calls it MAC address filtering, and
+[18:00] all the others pretty much just just
+[18:02] call it port security.
+[18:03] Marketing at its finest.
+[18:06] Just to make this clear, and to map what
+[18:08] we talked about the TCP/IP stack, what
+[18:11] happens when we start with application
+[18:13] data,
+[18:14] and we prepare to be put on the wire,
+[18:16] involves going through multiple stages
+[18:18] of encapsulation at different levels on
+[18:20] the stack. The useful data, like a file,
+[18:23] a web page, an image, or any application
+[18:25] level data, comes in at the application
+[18:27] layer, and becomes the payload that
+[18:29] needs to be transmitted. But, that
+[18:31] payload does not hold any other
+[18:32] information apart from the actual data,
+[18:34] or the file.
+[18:36] If a computer encounters pure data, like
+[18:38] a file, it simply cannot know what to do
+[18:40] with it, how to send it, over which
+[18:41] connection, or to whom. Now, in order to
+[18:43] attach this additional information to
+[18:45] the payload, and to make sure that when
+[18:47] we put it on the wire, all the devices
+[18:49] along the way will know what to do with
+[18:51] it, we need to encapsulate that payload,
+[18:53] which means that we need to add
+[18:54] additional information to it as a
+[18:56] header, or as a header and a trailer.
+[18:59] This encapsulation happens at multiple
+[19:01] layers, each layer adding its own
+[19:03] addressing and control information that
+[19:05] helps our payload to be properly routed,
+[19:07] and to reach its final destination.
+[19:09] Now, the first encapsulation happens at
+[19:11] the transport layer, which maps to both
+[19:13] the OSI and the TCP/IP stacks. According
+[19:17] to the OSI stack, the transport layer is
+[19:19] what we call layer four. At the
+[19:21] transport layer, we have information
+[19:22] that ensures end-to-end communication
+[19:24] between hosts. The encapsulated
+[19:27] information can be used by intermediate
+[19:29] devices, but mostly the endpoints are
+[19:31] the ones concerned with it. And so, at
+[19:34] layer four, data encapsulation happens
+[19:36] differently according to which protocol
+[19:37] is being used, with the major options
+[19:39] here being TCP, Transmission Control
+[19:41] Protocol, and UDP, User Datagram
+[19:44] Protocol. If TCP is used, the data from
+[19:47] the application layer is encapsulated
+[19:49] into a TCP segment. The TCP header
+[19:52] includes several critical pieces of
+[19:53] information such as source and
+[19:55] destination port numbers. This indicate
+[19:57] which applications or services are
+[19:59] communicating. Sequence numbers. We use
+[20:02] these to ensure that the data is
+[20:03] reassembled in the correct order.
+[20:05] Acknowledgement number. We confirm the
+[20:07] receipt of the data.
+[20:09] Flags, which control connection
+[20:11] establishment and termination like SYN,
+[20:12] ACK, FIN, reset, and so on. Window size
+[20:16] dictates the amount of data that can be
+[20:18] sent before waiting for acknowledgement.
+[20:21] Now, if UDP is used, the data in this is
+[20:24] encapsulated into what's called a UDP
+[20:26] datagram.
+[20:28] A simple UDP header contains just as
+[20:31] well source and destination port
+[20:33] numbers.
+[20:34] A length, the size of the entire UDP
+[20:36] datagram. A checksum that is used to
+[20:39] detect errors in the datagram.
+[20:41] Now, the mapping between port numbers
+[20:45] and what is actually being sent over
+[20:47] them, the actual protocols, is nothing
+[20:49] more than a convention. That's why just
+[20:51] looking at protocol numbers in your
+[20:53] security policies is not a foolproof
+[20:55] method of keeping unwanted traffic or
+[20:57] protocols out of the network. To truly
+[20:59] determine what is being sent, deep
+[21:01] packet inspection, DPI, is required,
+[21:04] which is a technique in which the
+[21:05] security device actually looks at the
+[21:06] protocol payload to determine if it's
+[21:08] malicious or not. Oh, and you need to
+[21:10] find a way to deal with encrypted
+[21:12] traffic as well, but that's a story for
+[21:14] another time.
+[21:17] Since we just mentioned encapsulation,
+[21:18] it's worth mentioning converged
+[21:20] protocols as well. They are called
+[21:21] converged because they have the ability
+[21:23] to utilize the existing network
+[21:25] infrastructure that supports TCP/IP
+[21:28] because that's what everyone already has
+[21:30] to host special services which normally
+[21:32] would have required dedicated networks
+[21:34] or at least dedicated links. So, we are
+[21:36] converging multiple protocols over the
+[21:38] same network infrastructure.
+[21:40] As you can see, the concept is a pretty
+[21:42] subjective one, but a few examples here
+[21:44] include storage area networks, SANs.
+[21:47] This is essentially a secondary network
+[21:49] separate from the main data network, and
+[21:51] its purpose is to ensure communication
+[21:53] for storage devices between servers and
+[21:55] storage devices
+[21:57] into one unified network accessible
+[21:59] storage space, making that storage
+[22:01] appear to servers as though they were
+[22:03] connected to local storage.
+[22:05] Another one is FCoE, Fibre Channel over
+[22:07] Ethernet. It's a data storage protocol
+[22:09] initially designed for fiber optic
+[22:10] cables with support for copper cables
+[22:13] added later to provide less costly
+[22:15] alternatives.
+[22:16] Fibre Channel, the original one, needed
+[22:18] its own dedicated infrastructure with
+[22:20] dedicated switches, SFP modules, and
+[22:22] network links, but FCoE can support it
+[22:25] over the existing TCP/IP network
+[22:26] infrastructure.
+[22:28] MPLS, multiprotocol label switching, is
+[22:30] another example, which is a switching or
+[22:32] routing protocol. It's a 2.5 layer
+[22:36] protocol,
+[22:37] depending on who you ask, that uses
+[22:40] small labels instead of IP or MAC
+[22:42] addresses to move packets even through
+[22:44] the underlying infrastructure being
+[22:46] TCP/IP. And iSCSI, Internet Small
+[22:49] Computer System Interface, is a network
+[22:51] storage standard based on IP, which
+[22:53] again does not require a dedicated
+[22:54] network for workloads or servers to
+[22:56] access their required storage and disks.
+[23:00] Since we're on a roll with protocols,
+[23:02] let's mention those related to voice
+[23:03] over IP or VoIP.
+[23:05] Voice over IP protocols work like a
+[23:08] tunneling mechanisms that transport
+[23:10] audio, video, and other data into neat
+[23:13] IP packets to support voice and video
+[23:16] calls and many other features related to
+[23:18] multimedia collaboration. So, even if
+[23:20] the technology involved is usually
+[23:23] called voice over IP, generally they are
+[23:25] used to transfer more than just voice.
+[23:27] So, VoIP was initially invented and used
+[23:30] as a direct telephone replacement. Many
+[23:33] companies had or have already ditched to
+[23:35] the desktop hardware IP phones in
+[23:37] exchange for software solutions. It's a
+[23:40] great example of a converged protocol as
+[23:42] it combines audio and video
+[23:44] within the protocol stack of TCP/IP.
+[23:47] There are loads of VoIP options out
+[23:49] there, both commercial and open source,
+[23:51] and since the pandemic, you've probably
+[23:53] become accustomed to most of them. Yes,
+[23:55] Teams, Zoom, GoToMeeting, Slack, WebEx,
+[23:58] Skype, Google calling, whatever their
+[24:00] services are now called. VoIP calls over
+[24:03] Messenger, Telegram, Signal, WhatsApp
+[24:06] are all implementations of voice over
+[24:08] IP.
+[24:08] The main protocol in voice over IP is
+[24:10] RTP, named with very little imagination,
+[24:14] Real-time Protocol, though proprietary
+[24:16] solutions might use other protocols as
+[24:18] well.
+[24:19] If you have a VoIP physical phone on
+[24:21] your desk from Polycom or Cisco, that
+[24:23] phone uses RTP.
+[24:25] A security improvement of RTP is Secure
+[24:28] Real-time Transfer Protocol or Secure
+[24:30] RTP, which should be used instead to
+[24:32] minimize the risk of denial-of-service,
+[24:35] on-path attacks, that's
+[24:36] man-in-the-middle attacks, and other
+[24:38] VoIP exploits as it supports encryption
+[24:40] and authentication.
+[24:42] Let's talk about SDN.
+[24:44] We all know how traditional networks
+[24:46] work. We have switches, we have routers,
+[24:48] and firewalls
+[24:50] that admins manage and configure merrily
+[24:53] every day. And the same devices deal
+[24:55] with moving packets around or denying
+[24:57] them from moving from one interface to
+[25:00] the next.
+[25:01] Now, software-defined networking, SDN,
+[25:03] this one flips this behavior on its head
+[25:06] by separating the infrastructure layer,
+[25:09] the hardware that actually moves packets
+[25:11] around, from the control layer, the
+[25:13] network services, and the point of
+[25:15] management or the brain of the network.
+[25:17] So, with SDN, we replace traditional
+[25:20] smart routers and switches with simpler
+[25:23] network devices capable of moving
+[25:25] packets around at high speeds, but
+[25:27] without much intelligence built into
+[25:29] them. Those somewhat dumb devices now
+[25:32] take instructions from something called
+[25:34] the SDN controller.
+[25:36] Now, one of the best things about SDN is
+[25:40] that it's directly programmable from a
+[25:42] central location. Now, it's flexible,
+[25:45] and some implementations are vendor
+[25:46] neutral, made on open standards,
+[25:49] and this provides you a lot of freedom,
+[25:52] at least in theory, from being tied to a
+[25:54] single vendor and allows companies to
+[25:58] choose the most cost-effective or the
+[26:00] highest throughput devices regardless of
+[26:02] the vendor on the label and on the
+[26:04] invoice.
+[26:06] Another fascinating aspect of SDN is
+[26:08] that it is essentially just network
+[26:10] virtualization. It allows data
+[26:12] transmission paths, communication
+[26:14] decision trees, flow control, everything
+[26:17] is just virtualized in the SDN control
+[26:19] layer instead of being handled on a per
+[26:21] device basis on the hardware.
+[26:23] SDN also led to development of virtual
+[26:25] SANs or vSANs, virtual storage area
+[26:27] networks, and software-defined storage
+[26:30] or SDS. These, again, bypass the complex
+[26:34] hardware requirements of traditional
+[26:35] SANs through virtualization at the
+[26:37] actual host level that holds the storage
+[26:40] hardware. Also, as part of the SDN
+[26:42] movement, we find software-defined WANs,
+[26:45] wide area networks, SD-WANs. Again, this
+[26:48] is an evolution of SDN for connectivity
+[26:50] and services between distant data
+[26:52] centers, remote branches, cloud services
+[26:54] over WAN links. What originally would
+[26:56] have been a complex dynamic multipoint
+[26:59] VPN configuration or a tough-to-manage
+[27:02] partial mesh of VPN links is now just a
+[27:04] simple redundant, self-healing, dynamic
+[27:07] connectivity option running directly
+[27:09] over the internet or over your dedicated
+[27:11] lines, which is less common nowadays.
+[27:15] A regular network, instead of being a
+[27:17] single massive collection of systems, is
+[27:19] usually divided into smaller units.
+[27:21] These smaller units can be subnets
+[27:23] and/or VLANs, or in most cases, they're
+[27:26] one in the same thing.
+[27:28] They can help with performance
+[27:29] improvements, reducing communication
+[27:31] issues, providing a barrier against
+[27:33] direct communication between VLANs. They
+[27:35] can help in defining and applying
+[27:37] specific security policies for specific
+[27:39] VLANs, and can also help contain
+[27:41] security incidents. How does this type
+[27:43] of segmentation boost performance?
+[27:46] Well, network segmentation can improve
+[27:48] performance by grouping systems that
+[27:50] often communicate in the same segment,
+[27:53] thus avoiding crossing over many busy
+[27:56] devices and links. Also, breaking down
+[27:59] broadcast domains can significantly
+[28:01] enhance performance, especially for
+[28:03] larger networks, because many hosts in a
+[28:05] large network will inevitably create a
+[28:08] large number of broadcasts and
+[28:10] multicasts, which will consume both
+[28:13] bandwidth and computing resources on all
+[28:15] the devices in the same segment
+[28:17] regardless if they are interested in
+[28:20] that broadcast traffic or not. As for
+[28:22] network issues, segmentation often
+[28:24] reduces congestion and contains
+[28:25] communication issues like a broadcast
+[28:28] storm that can disrupt your entire
+[28:29] network.
+[28:30] Now, as we said before, network
+[28:32] segmentation can also improve security
+[28:34] by isolating traffic and user access
+[28:36] only to those segments where they are
+[28:38] authorized. It's basically implementing
+[28:41] the principle of least privilege down to
+[28:43] a network segment. And we can even go
+[28:45] further with microsegmentation, which is
+[28:49] a concept that divides an internal
+[28:51] network into even more subzones,
+[28:54] potentially as small as a single device
+[28:57] or even a single app running on a single
+[29:00] VM on a server.
+[29:02] Each such microzone is separated from
+[29:05] the others by internal segmentation
+[29:07] firewalls, ISFWs,
+[29:09] subnets, VLANs, or other virtual
+[29:11] networking solutions.
+[29:13] There are even implementations such as
+[29:15] Cisco Secure Workload. You might know
+[29:17] this from its old
+[29:18] days as Cisco Tetration.
+[29:21] That implement microsegmentation through
+[29:22] policies pushed down to the operating
+[29:25] system's firewall on the system where
+[29:27] the app actually runs.
+[29:29] So, yeah, microsegmentation can create
+[29:31] zones as small as a single application.
+[29:34] Just imagine in this scenario how
+[29:36] granular your security policies can now
+[29:38] become. And imagine how much work you'll
+[29:40] have on your hands.
+[29:41] Speaking of microsegmentation, we should
+[29:44] also mention VXLAN, Virtual Extensible
+[29:46] LAN. It's worth mentioning here because
+[29:48] it's a protocol that enables VLANs to be
+[29:50] stretched across subnets and routed
+[29:53] networks. So, it works very similar to
+[29:56] some kind of VLAN tunneling protocol, if
+[29:59] you wish. This allows up to 16 million
+[30:02] virtual networks to be created compared
+[30:04] to traditional VLANs, which are limited
+[30:07] to only about 4,096 and the usable ones
+[30:10] are actually even less than that. VXLAN
+[30:12] can be used as a means to implement
+[30:15] microsegmentation without limiting
+[30:16] segments to local networks only. It's
+[30:19] also very flexible, uh very flexible
+[30:21] networking solution for environments
+[30:23] that are shared between multiple
+[30:25] tenants, like hosting provider networks
+[30:27] where multiple customers need isolation
+[30:29] of their virtual resources.
+[30:31] VXLAN can be used to create almost
+[30:34] unlimited virtual overlay networks for
+[30:37] each customer sharing one single
+[30:39] hardware infrastructure.
+[30:41] Wireless networking. Now, we all love
+[30:43] the convenience of wireless
+[30:44] connectivity, right? But, with this ease
+[30:47] of deployment and relatively low cost
+[30:50] come some unique challenges and
+[30:52] vulnerabilities, of course, including
+[30:54] the potential for eavesdropping and new
+[30:56] types of denial service and intrusion.
+[30:59] The standard for wireless network
+[31:00] communications is 802.11
+[31:04] IEEE. Over time, various versions of the
+[31:08] standard have been implemented in
+[31:09] wireless networking hardware, each
+[31:11] offering better throughput and better
+[31:13] security. So, initially, right after the
+[31:15] very first Wi-Fi standard launched in
+[31:17] 1997,
+[31:18] which was simply called 802.11
+[31:21] and only took us up to about 1 or 2
+[31:25] megabits per second, we had the 802.11a,
+[31:29] b, and g standards between 1999 and
+[31:32] 2003, which not only were able to reach
+[31:34] a theoretical 54 megabits per second
+[31:37] speed, but they also had a wider band
+[31:39] coverage, both 2.4 and 5 GHz.
+[31:43] Now, starting with 2009, we encountered
+[31:45] what was first called Wi-Fi 4 or the
+[31:49] 802.11n
+[31:50] standard, which could get a proper setup
+[31:53] up to a
+[31:54] amazing 600 megabits per second speed.
+[31:58] In 2013, we saw Wi-Fi 5 under the code
+[32:02] name of 802.11ac,
+[32:05] which promised almost 7 gigabits per
+[32:08] second over 5 GHz frequency.
+[32:11] Uh 2021 brought Wi-Fi 6 and 6E as
+[32:15] 802.11ax,
+[32:17] which could reach an amazing 9 gigabits
+[32:19] per second. And also introduced as part
+[32:21] of Wi-Fi 6E, the 6 GHz band, never used
+[32:25] before.
+[32:26] Next, Wi-Fi 7 as 802.11be
+[32:30] should allow up to 23 gigabits per
+[32:32] second. And if that's not enough, 2028
+[32:36] should bring us Wi-Fi 8
+[32:39] as 802.11bn
+[32:41] with almost 100 gigabits per second
+[32:44] wireless connectivity. Just wow.
+[32:47] Now, Wi-Fi can be deployed in either ad
+[32:50] hoc mode or infrastructure mode. In ad
+[32:53] hoc mode, any two wireless devices can
+[32:55] simply chat without needing anything
+[32:57] else. In infrastructure mode, a wireless
+[32:59] access point, WAP or just AP,
+[33:02] is required for wireless network access
+[33:04] and to enforce restrictions.
+[33:06] Now, there are several variations of
+[33:08] infrastructure mode, including the
+[33:09] standalone mode where there's just a
+[33:12] wireless network with no other
+[33:13] connections, wired extension mode where
+[33:16] the wireless network is connected
+[33:17] through the AP to some other wired
+[33:19] network. In other words, the AP has a
+[33:22] cable in it.
+[33:23] Uh enterprise extended mode, which is
+[33:26] also a wired extension, but allows
+[33:28] clients to roam from one AP to another,
+[33:30] so to move using a seamless
+[33:33] disconnection and reconnection from one
+[33:35] AP to the next.
+[33:37] And uh bridge mode, where each wireless
+[33:40] network acts as a bridge, obviously,
+[33:43] between two wired networks. Each has its
+[33:46] unique applications depending on the
+[33:47] needs of your network. Now, let's talk
+[33:49] about fat and thin access points. A fat
+[33:52] access point is a fully managed wireless
+[33:55] system operating as a standalone
+[33:57] wireless solution, completely
+[33:59] independent. It does not need any
+[34:01] additional hardware or software to
+[34:03] connect clients to a network. A thin
+[34:04] access point, on the other hand, is a
+[34:06] just a wireless transmitter and receiver
+[34:08] that needs to be managed from an
+[34:10] external centralized management console
+[34:12] called a controller, a wireless
+[34:14] controller, sometimes also called a
+[34:16] wireless LAN controller or WLC.
+[34:20] The beauty of thin access points is that
+[34:23] management, security, routing, filtering
+[34:26] are all centralized
+[34:28] in that WLC, which makes a larger
+[34:31] solution based on such access point,
+[34:33] uh think tens, hundreds, or even
+[34:36] thousands of access points covering, I
+[34:38] don't know, a a shopping mall, a
+[34:40] stadium, a public park, or something
+[34:43] like this,
+[34:44] makes managing such a large solution
+[34:46] much easier to to both to manage and to
+[34:49] secure. I'm sure you all know this, but
+[34:51] wireless networks are assigned a service
+[34:53] set identifier, SSID, to differentiate
+[34:57] one wireless network from another. There
+[34:59] are two types of infrastructure mode
+[35:01] SSIDs, extended service set identifier,
+[35:04] ESSID, and basic set service set
+[35:06] identifier, BSSID.
+[35:09] An ESSID is the name of a wireless
+[35:11] network, while the BSSID is the MAC
+[35:14] address of the base station. And this is
+[35:16] useful for the client to tell which AP
+[35:20] it is currently connected to. Because
+[35:22] multiple APs might transmit over the
+[35:25] same ESSID
+[35:27] and one AP can even transmit over
+[35:30] multiple ESSIDs. Now, while knowing the
+[35:33] SSID can help a wireless client
+[35:36] configure their wireless NIC to
+[35:37] communicate with the associated IP, it
+[35:40] doesn't guarantee access. While the
+[35:42] client can just listen for beacon frames
+[35:44] that announce periodically the available
+[35:46] networks, the AP might implement various
+[35:48] security methods to restrict access to
+[35:50] the wireless network. Also, know that
+[35:52] the simply disabling the SSID
+[35:54] broadcasting feature isn't a foolproof
+[35:57] security measure. Even if your network
+[35:59] is not immediately discoverable, with
+[36:01] the right software, a potential attacker
+[36:03] could still determine the available
+[36:04] networks simply by listening on the
+[36:06] traffic generated by other clients
+[36:08] nearby connected to that that network
+[36:10] and can deduce the network name over
+[36:12] which they are talking. So, instead, if
+[36:14] you want to truly secure your wireless
+[36:16] network, don't just hide it, but protect
+[36:18] it with WPA2 or 3 as a reliable
+[36:21] authentication and encryption solution.
+[36:23] All right, time to talk about wireless
+[36:25] channels. Picture these as lanes on a
+[36:27] highway. In the US, there are 11
+[36:30] channels within the 2.4 GHz frequency
+[36:32] range. In Europe, there are 13 and in
+[36:35] Japan, there are 14.
+[36:37] These differences come from the local
+[36:39] laws regulating frequency management.
+[36:41] Now, when two or more, let's assume 2.4
+[36:44] GHz access points
+[36:46] are close to each other, signals on one
+[36:48] channel can interfere with signals on
+[36:50] another channel.
+[36:51] One way to avoid this is to set the
+[36:53] channels of physically close access
+[36:55] points to non-overlapping values to
+[36:58] minimize this interference.
+[37:00] The 5 GHz wireless was designed from the
+[37:03] beginning uh to sidestep the
+[37:06] interference issue. Therefore, adjacent
+[37:09] 5 GHz channel do not interfere with with
+[37:11] one another. Plus, adjacent channels can
+[37:13] be combined or bonded into a larger
+[37:15] width channel for faster throughput. And
+[37:18] that is mostly what you why you see
+[37:20] those um those huge multi-gigabit speeds
+[37:23] being advertised in more recent Wi-Fi
+[37:25] standards. They're simply sending a
+[37:27] bunch of data over a bunch of
+[37:29] frequencies at the same time. So,
+[37:30] they're taking up a lot of the frequency
+[37:32] range. Now, when it comes to selecting
+[37:34] Wi-Fi bands or frequencies, the
+[37:36] selection should be based on the purpose
+[37:37] of the wireless network and the level of
+[37:39] existing interference. The 2.4 GHz band
+[37:42] is often preferred to be used for larger
+[37:45] areas because it provides a good
+[37:46] coverage over longer distance, but at
+[37:48] slower speeds.
+[37:50] The 5 GHz band is often preferred for
+[37:52] smaller internal networks because it
+[37:55] provides higher throughput rate.
+[37:57] Also, keep in mind that many wireless
+[37:58] devices, such as mice, keyboards, game
+[38:00] controllers, and even microwave ovens
+[38:03] can use or intentionally or
+[38:05] unintentionally jam the 2.4 GHz
+[38:08] spectrum. As a general rule in physics,
+[38:11] lower frequencies have a higher range,
+[38:14] so higher coverage, while higher
+[38:16] frequencies have a lower range, lower
+[38:18] coverage.
+[38:20] Wi-Fi, while convenient, not always
+[38:22] encrypted. Even when it is, the
+[38:24] encryption only happens between the
+[38:25] client and the AP. So, if you are really
+[38:27] concerned about encryption, use secure
+[38:30] end-to-end protocols or a VPN or even
+[38:32] better, both.
+[38:33] One of the first techniques implemented
+[38:35] for uh wireless uh security was called
+[38:38] wired equivalent privacy or WEP. They
+[38:41] were so confident back then and funny
+[38:43] enough, it proved to be a disastrous
+[38:45] security method, which nowadays you
+[38:48] should completely avoid. It's weak due
+[38:50] to its implementation flaws. It uses a
+[38:52] predefined shared RC4, Rivest Cipher 4,
+[38:57] secret key for both authentication and
+[38:59] encryption. However, it was cracked
+[39:01] almost immediately after its release.
+[39:03] As a replacement for WEP, we have Wi-Fi
+[39:06] Protected Access, WPA. The WPA
+[39:09] negotiated a unique key set for each
+[39:12] client and it separated authentication
+[39:14] from encryption. This one failed as well
+[39:16] due to many attacks focused on it. Then
+[39:18] we ended up with Wi-Fi Protected Access
+[39:20] 2, WPA2, this time using AES-CCMP
+[39:24] for encryption. Attacks have not been so
+[39:27] successful, but it still can be
+[39:28] exploited. Not that dangerous as the
+[39:30] previous ones. You're probably mostly
+[39:33] safe using WPA2 nowadays. Still, you
+[39:37] would much better go with WPA3 if your
+[39:40] hardware supports it. And this standard
+[39:42] was finalized in January 2018. WPA3
+[39:46] Enterprise uses 192-bit AES-CCMP
+[39:50] encryption, and WPA3 Personal remains at
+[39:54] 128-bit
+[39:56] AES-CCMP.
+[39:58] So, Enterprise 192, Personal 128-bit.
+[40:01] WPA3 Personal replaces the pre-shared
+[40:04] key authentication with something called
+[40:06] Simultaneous Authentication of Equals,
+[40:09] SAE. It also introduces for management
+[40:13] frames as up until now pretty much
+[40:15] anyone was able to perform a
+[40:16] denial-of-service on a Wi-Fi network and
+[40:18] start disconnecting and disassociating
+[40:20] random clients connected to it as the
+[40:22] management frames were not protected.
+[40:25] Some 802.11ac
+[40:27] or Wi-Fi 5 devices were the first to
+[40:30] support or adopt WPA3.
+[40:34] Next, for enterprise networks, we also
+[40:35] have 802.1X, which is a standard
+[40:37] port-based network access control
+[40:39] method, and it's supported by WPA, WPA2,
+[40:42] and WPA3 for enterprise authentication.
+[40:45] 802.1X ensures that client cannot
+[40:48] communicate over a network until proper
+[40:51] authentication occurs. Essentially,
+[40:53] 802.1X enables the wireless network to
+[40:56] use the existing network
+[40:58] infrastructure's authentication
+[40:59] services, such as authenticating users
+[41:01] and devices using RADIUS, TACACS,
+[41:04] identities stored in Active Directory,
+[41:06] certificates, smart cards, and so on.
+[41:09] People are used to seeing 802.1X in
+[41:12] wired networks, but it's possible over
+[41:14] wireless as well.
+[41:15] In general, 802.1X is paired with EAP,
+[41:19] which stands for Extensible
+[41:20] Authentication Protocol, which is an
+[41:22] authentication framework, not a specific
+[41:24] protocol as the name says.
+[41:26] An authentication framework is, simply
+[41:28] put, a bunch of methods for
+[41:30] authentication. Basically, this is what
+[41:33] allows us to use whatever authentication
+[41:35] method suits our needs, from passwords
+[41:38] to certificates to biometrics, even the
+[41:41] the SIM cards, even eSIM cards in our
+[41:44] mobile phones,
+[41:46] uh which are that much relevant in in
+[41:48] wireless networks.
+[41:50] Wi-Fi Protected Setup, or WPS, is
+[41:53] somewhat the bad joke of wireless
+[41:54] security. A joke because the security is
+[41:56] really awful and bad because, well, it's
+[41:58] still being used, unfortunately. Uh WPS
+[42:01] was designed to simplify the process of
+[42:03] connecting to a secure Wi-Fi network by
+[42:05] automatically connecting and
+[42:06] authenticating after pressing a button
+[42:09] on the AP or through a PIN sent remotely
+[42:12] to the AP. The problem with this
+[42:14] approach is that it is extremely open to
+[42:16] brute-force attempts. The PINs are eight
+[42:19] digits long, made up of two groups of
+[42:21] four digits each, and there's a
+[42:23] validation sent back after the first
+[42:25] four digits telling you if they are
+[42:28] correct or not. What's even worse, the
+[42:30] second group of four digits is actually
+[42:32] a group of three digits with the last
+[42:34] digit used for parity check, which
+[42:36] reduces the number of possible attempts
+[42:38] to 10,000 for the first four digits, so
+[42:42] 0000 through 9999, and then another
+[42:46] 1,000 attempts for the last three
+[42:48] digits,
+[42:49] taking the maximum number of brute-force
+[42:51] attempts to a whopping 11,000 attempts,
+[42:55] which is nothing, at least for computers
+[42:57] to brute-force.
+[42:59] At worst, it will take a brute-force
+[43:01] script a few hours to crack any
+[43:02] WPS-based Wi-Fi. WPS is a feature that
+[43:06] comes enabled by default on most
+[43:08] wireless access points and routers, and
+[43:10] it's a requirement for device Wi-Fi
+[43:13] Alliance certification. My advice,
+[43:15] disable it now. Take a break from this
+[43:17] training, go to your router in your
+[43:19] home, and disable it now. Of course,
+[43:21] even in Wi-Fi networks, we still can
+[43:23] implement wireless MAC filtering as a
+[43:25] security measure to control access at a
+[43:27] very basic level. Uh this operates by
+[43:29] creating a list of MAC addresses, and
+[43:31] the AP will only permit devices with MAC
+[43:34] addresses on the approved list to
+[43:35] connect to the network, blocking all
+[43:37] others.
+[43:38] Pretty difficult to manage, easily
+[43:40] spoofed, even with a WPA2 and 3 because
+[43:44] the Ethernet header remains in
+[43:46] cleartext, no matter what encryption
+[43:48] method you use. The Ethernet header is
+[43:50] required so that you can at least reach
+[43:52] the AP that you're communicating with,
+[43:54] so you can just listen to traffic going
+[43:56] by and then borrow one of those MAC
+[43:59] addresses and start using it.
+[44:01] Now, wireless communication in general,
+[44:02] so not just Wi-Fi, uses radio waves to
+[44:06] transmit signals. The radio spectrum has
+[44:08] multiple frequency bands, and the
+[44:10] frequency means how often the
+[44:13] electromagnetic wave oscillates within a
+[44:15] specific time frame. Goes up and down,
+[44:18] right? That's what the hertz in
+[44:20] megahertz or gigahertz actually
+[44:22] measures. To manage the fact that one
+[44:25] signal can be sent over multiple
+[44:27] frequencies, different techniques were
+[44:29] developed.
+[44:30] First one, called spread spectrum. This
+[44:33] one occurs over multiple frequencies by
+[44:36] breaking the message into pieces and
+[44:38] sending each piece simultaneously over
+[44:41] frequency.
+[44:42] Frequency Hopping Spread Spectrum, FHSS,
+[44:46] was an early implementation of this
+[44:47] concept transmitting data in series
+[44:49] across a range of frequencies, but only
+[44:51] using one frequency at a time, hence the
+[44:54] hopping part. Direct Sequence Spread
+[44:57] Spectrum, DSSS, uses multiple
+[44:59] frequencies at the same time with a
+[45:02] special encoding mechanism known as
+[45:03] chipping code, and this allows
+[45:05] reconstruction of data even if parts of
+[45:07] the signal are lost due to interference.
+[45:10] Orthogonal Frequency Division
+[45:12] Multiplexing, OFDM, uses a different
+[45:15] modulation scheme where the signals are
+[45:17] oscillated perpendicular to one another
+[45:20] to avoid interference, and that's what
+[45:22] allows very high transmission rates in
+[45:26] recent Wi-Fi standards.
+[45:28] Next up, we have Bluetooth as we all
+[45:30] know it. It's outlined in the IEEE
+[45:32] standard 802.15.
+[45:34] It works over the 2.4 GHz frequency and
+[45:37] by default is in plain text, but most
+[45:39] devices use implementations that involve
+[45:41] encryption.
+[45:42] It requires pairing, usually using a
+[45:45] PIN, and it is designed for
+[45:47] short-distance communication, even
+[45:49] though the standard theoretically allows
+[45:50] up to 100 m in distance. But we all know
+[45:54] that over 10 m, it really becomes almost
+[45:56] unusable.
+[45:58] There's also Bluetooth Low Energy,
+[46:00] Bluetooth LE, BLE, or Bluetooth Smart,
+[46:03] and also
+[46:04] alternative names,
+[46:06] which is an even lower power consumption
+[46:08] version of Bluetooth designed for IoT
+[46:11] devices, medical devices, fitness
+[46:13] trackers, mostly wearables and tracking
+[46:15] devices.
+[46:16] However, Bluetooth is vulnerable to
+[46:18] various attacks. Uh just to mention a
+[46:20] few, there's bluesniffing. It means
+[46:22] capturing Bluetooth packets, so it's
+[46:24] basically just sniffing. Bluesmacking,
+[46:27] it's a denial-of-service attack against
+[46:29] Bluetooth devices that involves
+[46:31] transmitted garbage traffic or jamming
+[46:33] signals.
+[46:34] Bluejacking means sending unsolicited
+[46:37] messages to Bluetooth devices without
+[46:39] the owner's consent.
+[46:41] Bluesnarfing
+[46:42] involves unauthorized data access via a
+[46:45] Bluetooth connection, even against
+[46:46] non-discoverable devices if their
+[46:48] Bluetooth MAC addresses are known.
+[46:51] And bluebugging allows an attacker to
+[46:53] gain remote control over a device's
+[46:55] hardware and software via a Bluetooth
+[46:57] connection.
+[46:58] Now, the reality is not that bad, and
+[47:00] the higher the Bluetooth version
+[47:01] implementation on your devices is, the
+[47:03] better security you'll get.
+[47:05] Nevertheless, it's a good idea to avoid
+[47:06] having your Bluetooth devices always
+[47:08] discoverable.
+[47:10] Mentioning other wireless technologies,
+[47:13] it's worth mentioning here radio
+[47:14] frequency identification, RFID. This is
+[47:16] a technology that uses radio waves over
+[47:19] very small distances and can be used for
+[47:21] tracking purposes or even as an
+[47:23] authentication factor. It works by
+[47:25] powering a radio transmitter through the
+[47:27] current generated in an antenna when
+[47:29] that antenna is placed inside of a
+[47:31] magnetic field. Pretty smart and also
+[47:33] very simple technology.
+[47:34] RFID tags can either be attached to or
+[47:37] integrated into devices and components,
+[47:39] which is often done for inventory
+[47:40] tracking. Anti-theft solutions can be
+[47:43] implemented as well. You know, those
+[47:44] tags attached to clothes in department
+[47:46] stores and malls, those also use RFID
+[47:48] tags. From a security perspective,
+[47:50] anyone with an RFID reader can easily
+[47:52] collect information transmitted by
+[47:55] activated chips in proximity, and the
+[47:57] technology can also be used to track
+[47:58] people, which might raise some privacy
+[48:00] concerns. Another one is NFC, Near Field
+[48:03] Communication. It's a set of
+[48:05] communication protocols that enable two
+[48:07] devices to establish communication when
+[48:09] they're within about 10 cm or 4 in
+[48:12] of each other. NFC technology is
+[48:14] commonly found in smartphones, credit
+[48:16] cards, payment kiosks, access cards that
+[48:19] you might use to access your office
+[48:21] building, and some high-tech appliances.
+[48:23] Uh it's often used for contactless
+[48:25] payment systems like Apple Pay and
+[48:27] Google Wallet, uh but can also be used
+[48:29] for sharing data between devices, even
+[48:31] for pairing Bluetooth devices, reading
+[48:34] NFC tags in advertising posters, reading
+[48:37] tags for exhibits in museums, and a lot
+[48:39] lot more use cases. It's a powerful
+[48:41] technology with a wide range of
+[48:43] practical applications. NFC, of course,
+[48:45] is not immune to attacks. Can be
+[48:47] vulnerable to on-path attacks,
+[48:48] man-in-the-middle attacks,
+[48:50] eavesdropping, data manipulation, replay
+[48:52] attacks, just like any other wireless
+[48:54] communication technology, except that
+[48:56] it's not so easy to intercept due to its
+[48:58] very limited range. Now, while some NFC
+[49:01] implementations do support reliable
+[49:02] authentication and encryption, not all
+[49:04] of them do. That doesn't necessarily
+[49:06] mean that contactless payments are not
+[49:08] secure because those require additional
+[49:10] validation from the merchant and from
+[49:12] the bank. So, a fraudulent transaction
+[49:15] doesn't require just hacking the NFC
+[49:17] connection.
+[49:19] Wireless networking over Wi-Fi is also
+[49:21] susceptible to attacks even with
+[49:23] security measures in place.
+[49:25] Uh one attack, or better said, one
+[49:27] reconnaissance method to detect wireless
+[49:29] networks is called war driving. The term
+[49:31] originates from war dialing, a somewhat
+[49:34] ancient attack used to find active
+[49:36] modems by dialing all numbers in a
+[49:39] particular area code. No need to mention
+[49:41] that this isn't really of much concern
+[49:43] nowadays. War driving can be done with
+[49:45] almost any mobile device with Wi-Fi
+[49:47] capabilities or even a drone, but you'll
+[49:49] probably want to find networks that are
+[49:51] accessible at the street level, not 10 m
+[49:53] up in the in the air. The scanning
+[49:56] device can register wireless networks in
+[49:58] range, their frequencies, their
+[50:00] channels, their SSIDs, even if it's
+[50:02] hidden, and the type of encryption used,
+[50:04] if any. There are even online maps of
+[50:07] Wi-Fi networks or for major cities built
+[50:10] by people to let others know where to
+[50:12] find unsecured Wi-Fi networks. Useful
+[50:15] for attackers when looking to conduct
+[50:17] shady business from somebody else's
+[50:18] network. Also sometimes useful if you're
+[50:20] traveling in countries where you don't
+[50:22] have cell phone data roaming, which
+[50:24] shouldn't be a problem nowadays anymore,
+[50:26] at least compared to some years ago.
+[50:28] Next, rogue access points are
+[50:30] unauthorized wireless access points
+[50:32] installed on an otherwise secure network
+[50:34] without the administrator's consent.
+[50:36] Actually, they can even be installed by
+[50:38] naughty admins, so the rogue part means
+[50:40] that they're not accepted by the
+[50:42] security policy. They could be set up by
+[50:44] employees for convenience, by insider
+[50:46] threats within a company, or by external
+[50:48] attackers. These rogue APs, if they're
+[50:51] not brought in with
+[50:53] malicious purposes,
+[50:55] often lack proper security
+[50:58] configurations and can create a backdoor
+[51:00] into your secured network.
+[51:02] Malicious ones, on the other hand,
+[51:04] usually mimic the company SSID, and they
+[51:07] can be configured to emit at much higher
+[51:09] power levels so that an unaware user
+[51:11] looking for a Wi-Fi network will see the
+[51:13] rogue AP with a familiar SSID as having
+[51:16] the best signal available. And more
+[51:18] often than not, they will just connect
+[51:20] to it. This is also one of the those
+[51:22] types of attacks that can be very easily
+[51:24] conducted in public areas like coffee
+[51:26] shops or hotels.
+[51:28] Enterprise networks should not be very
+[51:29] vulnerable to this type of attack as
+[51:31] there are many methods for detecting and
+[51:33] blocking rogue devices,
+[51:35] but still, someone has to do it.
+[51:36] Spectrum analysis can be done by
+[51:38] legitimate APs to detect these rogue
+[51:40] APs, as well as sources of interference.
+[51:44] Some enterprise Wi-Fi solutions can do
+[51:46] this automatically for you, like putting
+[51:49] the APs in something called the monitor
+[51:51] mode from time to time to listen for
+[51:53] these rogue sources of signal.
+[51:55] You can also use a wireless intrusion
+[51:56] detection system that can help identify
+[51:59] suspicious activity, such as when a new
+[52:00] AP appears with similar or copied SSIDs
+[52:03] and MAC addresses.
+[52:05] Additionally, and probably one of the
+[52:06] first access level security policies
+[52:08] that should be implemented in any
+[52:09] company is the configuration of port
+[52:11] security or 802.1X
+[52:13] at access port level so that rogue
+[52:15] devices won't be recognized when
+[52:18] connected to those ports and denied
+[52:19] access from the very beginning.
+[52:21] 802.1X can also require every device
+[52:24] that connects to a physical port in the
+[52:25] network to authenticate itself.
+[52:27] Nevertheless, protecting against rogue
+[52:29] APs should involve continuous monitoring
+[52:31] and regular audits of your network.
+[52:34] You never know what you might find in
+[52:35] there.
+[52:36] Also on the topic of rogue APs, we have
+[52:38] evil twins, which are are specific case
+[52:41] of fake access points that mimic the
+[52:43] identity of a real access point.
+[52:45] How does this happen? Well, when a
+[52:46] device connects to a Wi-Fi network, it
+[52:49] keeps a record of that network in its
+[52:50] history. This information is used to
+[52:52] automatically reconnect to the network
+[52:54] whenever it's available. You know that
+[52:55] your mobile phone constantly does this
+[52:57] and lists your known networks.
+[53:00] The evil twin attack works by listening
+[53:02] in for these reconnection requests that
+[53:04] include the original AP's MAC address
+[53:06] and the network SSID.
+[53:08] And once it sees a reconnection request,
+[53:10] the evil twin spoofs its identity to
+[53:13] match those parameters and offers an
+[53:15] unencrypted connection to the client.
+[53:17] The client, believing it's connecting to
+[53:19] the familiar network, establishes a
+[53:21] connection with the fake and evil AP.
+[53:23] Then, an attacker can intercept and
+[53:25] manipulate the client's data since they
+[53:28] now have access to all their data
+[53:29] traffic, leading to possible data or
+[53:31] identity theft. This is possible because
+[53:34] the AP is the one that manages
+[53:35] authentication and encryption, not the
+[53:37] client. So, even though the client's
+[53:39] wireless profile knows that it should
+[53:41] use authentication and encryption, it
+[53:43] will accept any type of connection
+[53:45] offered by whatever is considered to be
+[53:47] a known access point. A disassociation
+[53:50] attack takes advantage of a special
+[53:52] management frame that is used by clients
+[53:55] when they roam from one AP to another.
+[53:57] Up until and including WPA2, these
+[54:00] frames have no protection, so malicious
+[54:02] frames could be generated even by
+[54:03] external attackers who were not part of
+[54:05] the network, but just in the Wi-Fi range
+[54:07] of it, causing connected clients to lose
+[54:09] connection.
+[54:10] Now, a similar attack is
+[54:11] deauthentication. Normally, the
+[54:13] deauthentication packet is used when a
+[54:15] client wants to authenticate with an AP,
+[54:17] but for some reason fails
+[54:19] authentication. Now, if somebody sends
+[54:22] this packet while a connection is on, it
+[54:25] can disconnect the client as if their
+[54:27] authentication had suddenly failed.
+[54:29] Generally, attacks targeting Wi-Fi
+[54:31] management frames can be used to do some
+[54:33] really nasty stuff, like in networks
+[54:35] with hidden SSIDs, you can send a
+[54:37] disassociation packet with a spoofed MAC
+[54:39] address to a client. This makes the
+[54:41] client lose their connection and try to
+[54:43] reconnect. When it tries to reconnect,
+[54:45] it sends a reassociation request packet,
+[54:48] which includes the SSID in clear text,
+[54:50] and you get to see it. The client
+[54:52] doesn't even notice what happened.
+[54:54] You can also keep sending disassociation
+[54:56] frames to a client, preventing them from
+[54:58] reconnecting and causing a denial of
+[54:59] service on that client.
+[55:01] A session hijacking attack is also
+[55:03] similar to a denial of service, where
+[55:05] you keep sending disassociation frames
+[55:07] to keep the client disconnected, then
+[55:09] you spoof the client and you take over
+[55:11] their session with the AP.
+[55:13] Finally, jamming means disrupting
+[55:15] communication by sending garbage radio
+[55:18] signals on top of legitimate ones and on
+[55:20] the same frequencies. It's basically
+[55:22] intentional interference.
+[55:24] Uh generally, if you want to avoid
+[55:25] interference, the first step is
+[55:26] adjusting the physical location of your
+[55:28] devices, but if you suspect that a
+[55:30] jamming attack is happening, you could
+[55:32] attempt to triangulate the source of the
+[55:34] attack.
+[55:35] Some Wi-Fi solutions allow you to do
+[55:36] this by switching the APs in monitor
+[55:39] mode, which makes them listen for
+[55:41] foreign signals, and they might even be
+[55:43] able to tell you precisely where the
+[55:44] interference source is located on a map,
+[55:47] and when the microwave oven in the
+[55:49] company's kitchen is being used.
+[55:51] Cellular networks rely on coverage areas
+[55:54] called cells, and in each cell there's a
+[55:56] transmitter called a cell tower or a
+[55:59] base station. The generation of cellular
+[56:01] technologies is determined by the Gs in
+[56:04] 2G, 3G, 4G, 5G, and so on. Cellular
+[56:07] traffic is normally encrypted, but that
+[56:09] encryption only applies to the
+[56:10] connection between the mobile device and
+[56:11] the cell tower. What happens after the
+[56:13] cell tower on the wired network behind
+[56:15] it becomes the provider's
+[56:17] responsibility, and sometimes that
+[56:18] traffic travels in clear text. So,
+[56:21] establishing your own VPN connection
+[56:22] before sending sensitive data over a
+[56:24] cellular service is always a better
+[56:26] option. 4G, which has been around since
+[56:29] the early 2000s, is supported by most
+[56:32] cellular devices. It allows mobile
+[56:34] devices to reach around 100 megabits per
+[56:36] second, although the actual experience
+[56:38] will vary a lot depending on a lot of
+[56:40] factors.
+[56:41] 5G uses higher frequencies than previous
+[56:43] cellular technologies, which allow for
+[56:45] faster transmission speeds up to 10
+[56:47] gigabits per second, but over a reduced
+[56:49] distance. From a security standpoint,
+[56:51] keep in mind that not all cellular
+[56:53] communications are secure.
+[56:55] Fake cell towers can be simulated to
+[56:57] conduct man-in-the-middle attacks, and
+[56:59] allowing cell access on mobile devices
+[57:01] inside company premises can lead to data
+[57:03] leakage or malware entering the network,
+[57:06] as mobile devices can act as bridges
+[57:08] between the local network and the
+[57:10] insecure internet. And the problem is
+[57:12] that if you have mobile devices
+[57:14] connected to both the internet over a
+[57:16] cellular connection and to the company
+[57:18] network over Wi-Fi,
+[57:20] your perimeter security devices are
+[57:22] instantly bypassed and become useless.
+[57:25] You've just increased the attack surface
+[57:28] of your internal network. Shame on you.

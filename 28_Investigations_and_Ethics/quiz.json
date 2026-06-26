@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A corporate legal team is preparing for a contract dispute lawsuit against a competitor. The team must identify, preserve, collect, and review all email correspondence and database records relevant to the case. Which industry-standard framework should the legal team follow to guide this e-discovery process?",
+    "options": [
+      "Fagan Inspection Model",
+      "Electronic Discovery Reference Model (EDRM)",
+      "Common Criteria (ISO 15408)",
+      "MITRE ATT&CK Matrix"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Electronic Discovery Reference Model (EDRM) is a conceptual framework that outlines the standard stages of the e-discovery process, including Information Governance, Identification, Preservation, Collection, Processing, Review, Analysis, Production, and Presentation. Fagan Inspection is a code review process, Common Criteria is for product security evaluation, and MITRE ATT&CK is a threat modeling framework."
+  },
+  {
+    "question": "A digital forensics examiner is collecting evidence from a suspect's laptop. The examiner needs to extract a bit-stream image of a solid-state drive (SSD) to analyze its contents. To guarantee that the storage media remains unaltered and the evidence is admissible in court, what technical control should the examiner use when connecting the SSD to the forensic workstation?",
+    "options": [
+      "A software-defined network (SDN) tap",
+      "A hardware or software write blocker",
+      "A Syslog-ng server over TCP",
+      "An in-memory memory dumper"
+    ],
+    "correctIndex": 1,
+    "explanation": "A write blocker (hardware or software) intercepts any write commands sent from the forensic workstation to the suspect's storage device, preventing any changes (such as updating file access timestamps) and preserving the original media's integrity. SDN taps copy network traffic, Syslog collects logs, and memory dumpers capture RAM but do not protect storage disks."
+  },
+  {
+    "question": "During a criminal hacking trial, the prosecution attempts to introduce the server event logs to prove the defendant accessed confidential files. The defense lawyer objects, arguing that the logs are hearsay because they are computer-generated statements and cannot be cross-examined. Under which legal rule or exception can the prosecution argue for the logs to be admitted?",
+    "options": [
+      "Best evidence rule",
+      "Business records exception to the hearsay rule",
+      "Parole evidence rule",
+      "Plain view doctrine"
+    ],
+    "correctIndex": 1,
+    "explanation": "The business records exception allows computer-generated logs and records to be admitted as evidence (overcoming hearsay objections) if they were created at the time of the event by a system with direct knowledge, kept as part of regular business activities, and maintaining them is standard company practice. The best evidence rule prefers original documents, the parole evidence rule restricts verbal changes to written contracts, and the plain view doctrine allows police to seize visible evidence."
+  },
+  {
+    "question": "An IT department discovers a malicious script scheduled to run automatically on a primary domain controller. The script checks if a specific system administrator's user account is disabled; if the account is disabled, the script immediately deletes all company databases and backup drives. What type of attack motivation and threat profile does this script represent?",
+    "options": [
+      "Thrill attack; script kiddie executing a zero-day exploit",
+      "Business attack; competitor conducting corporate espionage",
+      "Grudge attack; disgruntled insider threat deploying a logic bomb",
+      "Military attack; advanced persistent threat (APT) establishing persistence"
+    ],
+    "correctIndex": 2,
+    "explanation": "A grudge attack is motivated by revenge or resentment (often by disgruntled employees or former staff) to cause damage for the sake of damage. A script designed to destroy data when an account is disabled is a logic bomb, representing a classic insider threat. Thrill attacks are for excitement, business attacks seek competitor secrets, and military attacks target national security."
+  },
+  {
+    "question": "A CISSP-certified security consultant discovers that a client's web application is vulnerable to SQL injection, exposing thousands of customer records. The client's CEO instructs the consultant to keep the finding confidential and not to publish it, as it would disrupt a planned venture capital funding round. According to the (ISC)² Code of Ethics, which canon must dictate the consultant's highest priority?",
+    "options": [
+      "Canon 3: Provide diligent and competent service to principals.",
+      "Canon 1: Protect society, the common good, necessary public trust, and infrastructure.",
+      "Canon 2: Act honorably, honestly, justly, responsibly, and legally.",
+      "Canon 4: Advance and protect the profession."
+    ],
+    "correctIndex": 1,
+    "explanation": "The (ISC)² Code of Ethics canons are listed in strict priority order. Canon 1 (protecting society, the common good, and infrastructure) is the highest priority and outranks Canon 3 (service to employers/clients). Protecting public trust and customer data privacy outranks the client's private business funding concerns."
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A security manager is assessing the risk of power outages to an enterprise database server valued at $100,000. History shows that a power outage occurs approximately once every two years, and each outage destroys about 30% of the database data, requiring expensive recovery. What is the Annualized Loss Expectancy (ALE) for this threat?",
+    "options": [
+      "$30,000",
+      "$15,000",
+      "$50,000",
+      "$200,000"
+    ],
+    "correctIndex": 1,
+    "explanation": "To calculate ALE, use the formulas: SLE = AV * EF and ALE = SLE * ARO. Here, AV = $100,000, EF = 30% (0.30). SLE = $100,000 * 0.30 = $30,000. The ARO = once every two years = 0.5. ALE = SLE * ARO = $30,000 * 0.5 = $15,000."
+  },
+  {
+    "question": "An organization wants to conduct a qualitative risk assessment regarding a new cloud migration project. The project lead wants to collect honest opinions from security engineers, project managers, and financial executives without causing conflict or letting senior directors dominate the discussion. Which assessment method is best suited for this goal?",
+    "options": [
+      "Brainstorming workshops",
+      "One-on-one structured interviews",
+      "The Delphi technique",
+      "Quantitative financial analysis"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Delphi technique is an anonymous, multi-round survey process designed to reach a consensus among experts. Because it is anonymous, it prevents dominant personalities (like directors) from influencing others (groupthink) and allows participants to share honest, unbiased feedback."
+  },
+  {
+    "question": "A company decides to host its email servers with a third-party SaaS provider to avoid managing the associated hardware and software vulnerabilities. They also purchase a cyber insurance policy to cover potential breach costs. How should these risk response strategies be categorized?",
+    "options": [
+      "Risk Mitigation and Risk Acceptance",
+      "Risk Transference and Risk Transference",
+      "Risk Avoidance and Risk Transference",
+      "Risk Avoidance and Risk Mitigation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Both outsourcing services to a third party (sharing the operational risk) and purchasing insurance (sharing the financial impact of a breach) are forms of Risk Transference. It is important to note that while cost and operations can be transferred, ultimate accountability and reputational impact cannot be transferred."
+  },
+  {
+    "question": "A network security administrator configures an Intrusion Detection System (IDS) to monitor network segments for unauthorized traffic patterns. When an alert occurs, the IDS logs the event and sends an email notification to the Security Operations Center (SOC). How is this security control categorized by its function and type?",
+    "options": [
+      "Detective Technical Control",
+      "Preventative Technical Control",
+      "Corrective Administrative Control",
+      "Detective Physical Control"
+    ],
+    "correctIndex": 0,
+    "explanation": "The IDS is an IT resource (software/hardware), making it a Technical (Logical) control. It monitors and logs suspicious activity without stopping it, making it a Detective control function. (If it were an IPS that actively blocked the traffic, it would be a Preventative Technical control)."
+  },
+  {
+    "question": "Which of the following correctly describes the relationship between total risk, control gap, and residual risk?",
+    "options": [
+      "Total Risk = Residual Risk - Control Gap",
+      "Residual Risk = Total Risk + Control Gap",
+      "Residual Risk = Total Risk - Control Gap",
+      "Control Gap = Inherent Risk - Total Risk"
+    ],
+    "correctIndex": 2,
+    "explanation": "Residual risk is the risk that remains in the environment after security controls have been implemented. It is calculated by taking the Total Risk (or starting risk) and subtracting the impact of the implemented security controls (which represents closing the control gap). Therefore, Residual Risk = Total Risk - Control Gap."
+  }
+]

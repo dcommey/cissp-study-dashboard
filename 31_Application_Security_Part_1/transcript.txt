@@ -1,0 +1,701 @@
+[00:09] Welcome to application security.
+[00:12] We talked about security during
+[00:13] application development
+[00:15] and why it's a good idea to have
+[00:17] security implemented or at least
+[00:19] considered at every step along the
+[00:22] software development life cycle's way.
+[00:24] And the main reason we're doing it is to
+[00:27] ensure, as well as we possibly can, that
+[00:30] later on attackers will not be able to
+[00:33] craft attacks or exploits that change
+[00:35] the behavior of our app.
+[00:38] So, yeah, this is where we start talking
+[00:40] about malware, viruses, client and
+[00:42] server attacks, stuff like that. And
+[00:44] it's not just useful for this
+[00:45] certification. You need to know this if
+[00:48] you work in any security-related IT
+[00:50] field. Heck, you need to know this if
+[00:53] you ever used and will use a computer.
+[00:55] So, here we go.
+[00:57] Well, what is malware? Malware is a very
+[01:00] broad term, which at some point you
+[01:02] started hearing instead of virus. The
+[01:05] same moment when we stopped having
+[01:07] antivirus software, instead we started
+[01:09] having anti-malware solutions.
+[01:11] Malware is not a one-to-one synonym for
+[01:14] virus, but instead is more like an
+[01:16] umbrella term, and we use it for two
+[01:18] reasons. First of all, we need an
+[01:19] umbrella term instead of listing all the
+[01:21] possible malware types, and secondly
+[01:23] because, well,
+[01:25] the different malware types
+[01:27] might not be so different after all.
+[01:29] Now, viruses, Trojans, worms, they
+[01:32] overlap in their definitions because
+[01:34] they really are just forced categories.
+[01:37] Real life isn't so black and white.
+[01:39] Hence, malware, one word to rule them
+[01:42] all.
+[01:43] So, in general, malware is any code that
+[01:46] exploits some vulnerability in another
+[01:48] software,
+[01:50] uh network protocol, operating system,
+[01:52] and so on. Actually, we can just say
+[01:55] that it exploits a vulnerability in
+[01:56] software since OS's are software, and
+[02:00] network protocols don't exist by
+[02:01] themselves, but are implemented in the
+[02:04] firmware of the network interface cards,
+[02:07] of the switches, of the routers,
+[02:09] of the OS drivers, and that firmware or
+[02:12] driver is also software.
+[02:15] Well,
+[02:15] malware does not live or grow by itself,
+[02:18] but it is written just like any other
+[02:20] code written before the age of
+[02:22] generative AI, completely by humans.
+[02:26] As a very broad categorization, we could
+[02:29] classify a piece of malware by how smart
+[02:31] and motivated are the people who wrote
+[02:33] it. So, we have malware from amateurs,
+[02:36] which is actually malware written by
+[02:38] smart hackers and used by amateurs, uh
+[02:41] which are sometimes called script
+[02:42] kiddies. That's just a person that takes
+[02:45] a ready-made piece of malware and uses
+[02:47] it without knowing or caring about how
+[02:50] it works. And even if they do understand
+[02:52] how it works, they don't customize it.
+[02:55] We also have skilled hackers
+[02:57] who might do it for money, renown,
+[02:59] political reasons. Of course, malware
+[03:01] coming from experienced hackers,
+[03:03] especially when it's crafted
+[03:04] specifically for a company, a person, or
+[03:07] a specific target is much more
+[03:09] dangerous.
+[03:10] Going up the ladder, we have organized
+[03:12] crime, just like in the world outside of
+[03:14] IT. Many of these are motivated by
+[03:17] money, so what they're going for is
+[03:19] fraud, but there might be political
+[03:21] reasons behind them as well. Just look
+[03:23] around at all the conflicts worldwide in
+[03:26] the past few years. In all of them,
+[03:28] there is also a cyber warfare component.
+[03:33] And finally, we have APT, advanced
+[03:34] persistent threats,
+[03:36] which has two meanings. The exam will
+[03:37] expect you to refer to APTs as advanced
+[03:40] hacker groups with a lot of resources,
+[03:43] able to craft their own unique
+[03:45] undetectable malware, or at least
+[03:47] undetectable by existing signature
+[03:49] databases. The second meaning of APT
+[03:51] refers to the actual attack method,
+[03:53] advanced persistent threat. It's about
+[03:57] custom malware crafted with a very
+[03:59] specific purpose for a very specific
+[04:01] target, able to infiltrate and reside in
+[04:04] a network undetected over a long, long
+[04:07] time.
+[04:08] Long time means
+[04:10] months or even years, during which an
+[04:12] attacker has access to all your data,
+[04:15] all your systems, but you don't know
+[04:17] anything about it. Check out the
+[04:18] SolarWinds hack for a very visible
+[04:20] example of such an APT. They often
+[04:22] target the so-called zero-day exploits,
+[04:25] which are vulnerabilities unknown to the
+[04:28] software vendor or known, but for which
+[04:30] there is no patch yet. You can just
+[04:32] search on Google APT groups for a
+[04:35] listing of most known hacker groups out
+[04:37] there with documented methods, observed
+[04:39] tools, supposed countries they
+[04:42] originated from. This is sometimes very
+[04:44] difficult to determine, and so on.
+[04:47] Mandiant.com
+[04:48] has such a listing, but depending on
+[04:50] when you're watching, listening, or
+[04:51] reading this training, this might
+[04:53] change, so just Google search.
+[04:56] Viruses. Okay, so let's talk about the
+[04:59] elephant in the hard drive, the virus.
+[05:02] Probably the most common or widely
+[05:04] recognized type of malware, and this is
+[05:06] because it has been around for quite
+[05:08] some time. At the time of this
+[05:09] recording, there are over 1.3 billion
+[05:12] viruses out there, and those are just
+[05:14] the ones that have been detected. And by
+[05:16] the way, these are 1.3 billion different
+[05:20] viruses, virus types. Just like human
+[05:22] viruses and animal viruses, and this is
+[05:25] where they actually get their name from,
+[05:27] computer viruses are designed to infect
+[05:30] and spread. Infection might be of an
+[05:32] executable file, a driver, a firmware,
+[05:35] or even the master boot record, you name
+[05:37] it. Spreading is also reliant on
+[05:40] infecting a specific file that has then
+[05:42] been disseminated, or in the case of
+[05:45] worms, they can even spread by
+[05:46] themselves by exploiting vulnerabilities
+[05:48] in network protocols such as SMB, RPC,
+[05:52] remote procedure call, FTP, file
+[05:55] transfer protocol, RDP, remote desktop,
+[05:58] and so on.
+[05:59] A virus will be detected by its
+[06:01] malicious payload, and at least part of
+[06:03] that payload is going to be the
+[06:04] signature of the virus itself. That is
+[06:07] the signature that AV databases,
+[06:09] antivirus databases, will look for. Now,
+[06:11] back to the topic of propagation, the,
+[06:14] let's say, traditional way of spreading
+[06:16] viruses is using and sharing infected
+[06:19] files. An infected file may or may not
+[06:22] store the original content, but will
+[06:24] have the malicious payload attached to
+[06:26] it. That is why viruses mostly infect
+[06:29] executable files, .exe for Windows, for
+[06:32] example, but also documents able to
+[06:34] execute some sort of scripted commands
+[06:36] or macros, like office files, PDFs,
+[06:39] anything that can embed some sort of an
+[06:41] executable code. This is because the
+[06:43] virus itself is made of executable code,
+[06:46] so it needs to attach to some type of
+[06:48] file that gets executed by the OS in
+[06:51] order to have a chance to execute its
+[06:53] code along with it.
+[06:55] This is also what makes them easy to
+[06:57] detect because the executable code is
+[07:00] visible up to a point and detectable by
+[07:02] anti-malware software. Sometimes viruses
+[07:05] are designed to target operating system
+[07:07] executable files, like internal
+[07:09] utilities of the operating system or OS
+[07:12] services, which makes them even more
+[07:14] dangerous as they infiltrate in the
+[07:15] operating system internals and thus are
+[07:18] able to hide themselves from the list of
+[07:20] running processes. Uh they can also
+[07:22] intercept system calls from antivirus
+[07:24] software when trying to access or scan
+[07:26] their locations and redirect those calls
+[07:29] to non-malicious files. You get the
+[07:30] point here.
+[07:31] It's one thing to have a nasty process
+[07:33] running on your system. It's a
+[07:35] completely different kind of a bad day
+[07:37] when your entire operating system is
+[07:39] infected. You don't even know what's
+[07:42] real and what's not, who to trust. And
+[07:44] we also have viruses that infect the
+[07:45] boot sector or the master boot record of
+[07:48] the hard drive. Actually, the MBR, the
+[07:51] master boot record, is just a small
+[07:52] sector of the media that is read first,
+[07:55] and it indicates which partition, also
+[07:57] called boot sector, has the OS that it's
+[08:00] supposed to be loaded. So, in correct
+[08:02] terms, we actually have viruses that can
+[08:04] infect the boot sector, the loading
+[08:06] point of the OS, or viruses that infect
+[08:08] both the MBR and the boot sector, which
+[08:11] means they change the contents of the
+[08:13] MBR so that it redirects the boot
+[08:15] sequence to an infected boot sector.
+[08:18] This is probably more details than you
+[08:20] will need for the exam. Nevertheless,
+[08:23] MBR or boot sector or generically boot
+[08:25] viruses, let's say, they spread through
+[08:28] infected media, but they require a
+[08:30] reboot of the machine with that media
+[08:32] mounted to be actually launched. As for
+[08:35] a couple of the techniques that you will
+[08:36] encounter with different viruses when
+[08:38] they try to hide their tracks, called
+[08:40] evasion techniques, we have multipartite
+[08:43] viruses, which attack on multiple
+[08:46] vectors, like files, boot sectors,
+[08:49] network propagations, and so on. Stealth
+[08:52] viruses are, as you can guess, those
+[08:54] that hide their presence in the list of
+[08:55] running processes, uh list of running
+[08:57] services, or intercept the AV scanning
+[09:00] system calls and they report back fake
+[09:02] clean information. For example, if they
+[09:04] created an infected boot sector on the
+[09:06] disk, when the antivirus tries to scan
+[09:08] that boot sector, the virus intercepts
+[09:11] the system call and instead redirects it
+[09:13] to the clean version of the boot sector,
+[09:15] so the antivirus says that everything
+[09:17] looks fine.
+[09:18] Polymorphic viruses are those that can
+[09:21] change their own payload dynamically.
+[09:23] Not drastically, they don't become a
+[09:25] different virus altogether, but small
+[09:28] changes to the payload are enough to
+[09:30] fool antivirus software looking for a
+[09:32] specific known signature. If the payload
+[09:35] is also changed using some sort of
+[09:36] random number generator, then having
+[09:38] signatures for each possible payload
+[09:40] combination becomes impossible. So,
+[09:42] antivirus software needs to use other
+[09:44] techniques to detect those viruses. This
+[09:46] is also one of the main reasons why
+[09:47] there are over 1 billion viruses in the
+[09:49] wild nowadays. Encrypted viruses, which
+[09:52] have become very widespread, uh read a
+[09:55] recent report that over 70% of observed
+[09:58] malware in the past few years is hidden,
+[10:01] obfuscated as encrypted code. This
+[10:03] method goes very well in hand with the
+[10:06] polymorphic viruses as it is very easy
+[10:08] for a virus now to change its so-called
+[10:11] payload simply by changing its
+[10:13] encryption key. Of course, there needs
+[10:15] to be a small piece of code that remains
+[10:17] unencrypted and that part of the virus
+[10:19] takes care of encryption, decryption,
+[10:21] and key rotation for the main payload.
+[10:23] That one can be detected a bit easier.
+[10:26] Here are some other types of malware
+[10:27] that you might encounter.
+[10:29] Logic bombs. Not so much a piece of
+[10:31] malware in itself as it is malicious in
+[10:34] the way it is intended to be used. A
+[10:37] logic bomb is a piece of code that lies
+[10:39] dormant, doesn't do anything until a
+[10:42] specific event happens. It might be a
+[10:44] defense mechanism against forensic
+[10:46] investigations like an automatic hard
+[10:48] drive wipe if a specific series of
+[10:51] commands is not carried out every time
+[10:53] the system is booted. It might be an
+[10:56] admin setting a piece of code to destroy
+[10:58] a company's infrastructure the moment
+[11:00] his or her user is no longer found in
+[11:02] the user directory, like a revenge
+[11:04] action anticipating a scenario when that
+[11:07] admin is fired by the company. You get
+[11:09] the idea behind logic bombs. Hoaxes.
+[11:13] Some people might not consider them as
+[11:14] malware, but they are annoying and they
+[11:16] can waste resources, not just your
+[11:18] computers but your own time as well,
+[11:20] which is probably more precious than CPU
+[11:22] cycles and memory anyway.
+[11:24] Hoaxes can try to trick people into
+[11:26] downloading malware by displaying a
+[11:28] banner saying that oh my god, your
+[11:30] computer is infected. Here, download
+[11:32] this piece of junk antivirus, which is
+[11:34] the only tool known to mankind able to
+[11:36] disinfect your computer. And guess what?
+[11:38] The antivirus, {quote unquote}, is
+[11:41] actually the malware itself. People are
+[11:44] easy to fool, especially when they are
+[11:45] think they're doing something right,
+[11:47] like we all do.
+[11:49] Pretty much all the time, right? So, if
+[11:51] the virus asks for network access, disk
+[11:54] access, admin access, they'll just say
+[11:56] yes, cuz it's an antivirus, right? It's
+[11:58] supposed to have all that access.
+[12:00] Nowadays, you mostly see them as
+[12:02] WhatsApp, iMessage, SMS, Instagram,
+[12:04] Facebook instant messages sent by one of
+[12:07] your friends who has been infected as
+[12:08] well.
+[12:09] Next, we have spyware. As the name says,
+[12:12] it is malware that monitors your actions
+[12:15] and sends those actions to an attacker.
+[12:18] Your keystrokes mainly, and these are
+[12:21] called key loggers.
+[12:23] For many people who don't use password
+[12:25] managers, will contain the passwords as
+[12:27] well. But once a spyware has system
+[12:29] access, they can also record the screen,
+[12:31] they can even access your webcam, they
+[12:33] can capture your network traffic, active
+[12:36] sessions, and so on. And these are not
+[12:38] just used by hackers.
+[12:40] There are tools out there designed
+[12:41] specifically to monitor your teenager's
+[12:44] chats or maybe a wife wanting to spy on
+[12:47] their husband or vice versa. And the
+[12:49] difference in those is that they are
+[12:52] over-the-shelf tools which don't need a
+[12:54] propagation mechanism as it is assumed
+[12:57] that the person wanting to install it
+[12:59] already has access to the machine that
+[13:01] they want to monitor. Adware is malware
+[13:04] that displays ads and pop-ups. Also, do
+[13:07] you remember those awful browser
+[13:09] toolbars? I remember visiting relatives
+[13:12] complaining about their computer being
+[13:14] too slow or behaving weird, and they had
+[13:17] like seven toolbars in Internet Explorer
+[13:19] taking up half of the screen. And I was
+[13:22] like, kill it with fire. Just wipe and
+[13:24] reinstall everything.
+[13:26] Ransomware. I'm sure everyone has heard
+[13:28] about this one. It's malware that either
+[13:30] steals or encrypts data on your disk and
+[13:33] then communicates back with an attacker
+[13:35] who claims that in exchange of a certain
+[13:37] amount of money, usually in crypto so it
+[13:39] cannot be traced back to them, they will
+[13:41] give you the decryption key or your data
+[13:44] in case it was deleted from your
+[13:45] machine.
+[13:46] It's no different from any other type of
+[13:48] malware except that it allows you an
+[13:50] extra, let's say, mitigation method. No,
+[13:53] that's not about paying the ransom, but
+[13:55] it's backups. If you have up-to-date
+[13:58] backups, you just don't care. Right,
+[14:00] wipe everything and restore from backup.
+[14:02] And of course, update your antivirus or
+[14:04] your firewall policy so that you don't
+[14:05] fall for the same trap a second time.
+[14:08] Malicious scripts are also considered
+[14:10] malware but a bit of a more dangerous
+[14:12] type. Yes, scripts allow you to view the
+[14:15] code in plain sight, so you might think
+[14:17] that these are the easiest types of
+[14:19] malware to detect and block.
+[14:20] Unfortunately, there is also a big
+[14:22] advantage from an attacker's
+[14:24] perspective. The script itself can be
+[14:26] assembled dynamically from multiple
+[14:28] sources, can be downloaded and changed
+[14:30] on the fly, can be hidden in a URL,
+[14:33] can even be automatically generated
+[14:35] using generative AI, which means that if
+[14:37] you rely on signature-based detection,
+[14:40] you're kind of screwed. And sometimes
+[14:42] it's as simple as changing the encoding
+[14:45] of the text, like conversion to base 64
+[14:48] or URL encoding and back to evade a
+[14:51] known signature. Speaking of URL
+[14:53] encoding, you could have malicious
+[14:55] script embedded right in the URL on
+[14:57] which you're clicking. And we all know
+[14:59] how ugly URLs can look nowadays with API
+[15:02] path, keys, time-based signatures, lots
+[15:05] of ad tracking and click tracking IDs,
+[15:08] source tracking IDs. There's a lot of
+[15:10] junk if you just try to share a simple
+[15:12] website link over an instant message,
+[15:14] especially if the link is coming from
+[15:16] social networks. Most people just got
+[15:19] used to seeing a lot of gibberish in the
+[15:20] URLs. They just ignore it, and so they
+[15:22] ignore malicious code as well. This type
+[15:25] of malware that isn't delivered as an
+[15:27] actual physical file is also called
+[15:29] fileless malware.
+[15:31] Next, Trojan horses, or just Trojans, in
+[15:33] my opinion, are the most vaguely defined
+[15:36] term in malware because they are
+[15:38] basically files that you expect to do
+[15:41] something. They do that something, but
+[15:43] they also have an additional malicious
+[15:45] payload in them. So, it's like it's kind
+[15:48] of like a virus-infected file. Okay,
+[15:50] fake software cracks, fake software,
+[15:53] fake antivirus installers. These fall
+[15:57] under the same
+[15:58] horses umbrella.
+[16:00] The Trojan ones. You might also
+[16:02] encounter the term RAT, R A T, or remote
+[16:06] access Trojan, which is a Trojan that
+[16:08] opens a backdoor allowing a remote
+[16:10] attacker to remotely control your
+[16:12] computer from the outside, from the
+[16:13] internet.
+[16:15] Finally, worms are again a bit vague,
+[16:18] but their main, let's say, feature is
+[16:20] the ability to propagate by themselves,
+[16:22] usually over the local network. In order
+[16:24] for this to be successful, they also
+[16:26] need to identify a specific
+[16:27] vulnerability in a network protocol,
+[16:30] most likely SMB or NFS.
+[16:33] Okay, so how do we prevent malware? Do
+[16:35] you need anything else apart from
+[16:37] anti-malware software and perhaps
+[16:38] keeping an an eye open in a metaphorical
+[16:40] way from time to time?
+[16:42] Well, it looks like things aren't that
+[16:44] simple. But first,
+[16:46] you might think that it makes more sense
+[16:49] to focus on those targets that are more,
+[16:52] well, targeted for malware.
+[16:54] Who do you think those targets are? Your
+[16:57] Windows laptop, your Linux servers, your
+[16:59] smart IoT devices in your home,
+[17:02] your phone, or even better, your your
+[17:04] badge or card swiping system for
+[17:06] building access. Don't forget about the
+[17:08] CCTV system, your office thermostats,
+[17:11] your printers.
+[17:12] Which of these should you prioritize?
+[17:15] Well, the answer is never easy. So, no,
+[17:17] it's not a trick question. It's more
+[17:19] like an impossible question. Maybe a few
+[17:22] more years ago, anybody would have said
+[17:25] that Windows is number one target and
+[17:28] Linux and Mac OS are safe.
+[17:30] Well, nowadays, not so much. This
+[17:33] overconfidence in Linux and Mac OS led
+[17:35] hackers to start targeting them
+[17:37] sometimes extremely easy. Same goes with
+[17:40] IoT. Those small embedded devices with
+[17:42] low power, crappy CPUs, and low memory
+[17:46] are just not enough to face an external
+[17:48] attack, especially when they're exposed
+[17:50] to the internet, and they become easy
+[17:52] targets.
+[17:53] Anti-malware is the most basic
+[17:55] protection, of course, that you can
+[17:56] implement. By basic, I don't mean that
+[17:58] it's not effective, but it's the
+[18:00] absolute minimum you should take care
+[18:02] of. You should absolutely not have a
+[18:04] personal computer in your home or office
+[18:06] without an anti-malware solution
+[18:08] installed on it. Windows provides one
+[18:10] for you at no additional cost. It's far
+[18:12] from being bad,
+[18:14] Windows Defender. So, you really have no
+[18:16] excuse not to have anti-malware
+[18:18] installed and active. Most anti-malware
+[18:20] software is signature-based. That is,
+[18:22] they download from time to time a
+[18:23] database of known virus signatures.
+[18:26] Then, when they start scanning the files
+[18:27] on your disk and the the processes and
+[18:30] the memory, they just perform simple
+[18:32] binary pattern matching trying to find a
+[18:34] match between the scanned file and a
+[18:36] known malware signature. If it matches,
+[18:38] then the file is infected, and we know
+[18:40] for sure what malware it is and perhaps
+[18:42] even how to get rid of it if someone
+[18:44] documented the process. Now, of course,
+[18:46] your signature-based solution is only as
+[18:49] good as your signature database. Even
+[18:51] more, it's only as good as how often
+[18:54] you're updating the signature database,
+[18:56] and ultimately, how good of a job is the
+[18:59] vendor of that anti-malware doing in
+[19:01] keeping that database up-to-date and
+[19:03] relevant.
+[19:05] Another way to analyze malware is by
+[19:06] using a heuristic method. Heuristic
+[19:09] means solving problems by watching and
+[19:12] experimenting or by trial and error.
+[19:15] Even the world of malware, this means
+[19:18] observing what the software does and
+[19:20] when it runs, and
+[19:22] based on the observed behavior,
+[19:23] determining if it behaves like malware
+[19:26] or not. Basically, instead of looking
+[19:28] for a signature, we look at whether the
+[19:30] malware is doing something nasty or not.
+[19:33] When we see a software starting to
+[19:34] encrypt and delete files on your disk,
+[19:37] well, after the first one, two, three
+[19:38] files, we say, "Hold up. What are you
+[19:40] doing here?"
+[19:41] Then we kill the process. We quarantine
+[19:43] the malware file, and perhaps we even
+[19:44] further analyze it to build a signature
+[19:47] for it. In many cases, including when
+[19:49] security companies research new malware,
+[19:51] the malicious payload is executed in
+[19:53] something called a sandbox. It's an
+[19:55] isolated logical environment, basically
+[19:57] a virtual machine, but it may also be a
+[19:59] container where the malware is left to
+[20:01] run on on its own, and the environment
+[20:04] is of course closely monitored and
+[20:06] secured to determine what the malware
+[20:08] actually does. Creates or deletes files,
+[20:10] installs services, installs
+[20:13] tasks
+[20:14] to to run periodically, runs processes,
+[20:18] attempts to connect to some command
+[20:19] control server, attempts to propagate
+[20:21] over the network, and so on.
+[20:23] Now, of course, the purpose of the
+[20:24] sandbox is that it is an environment
+[20:26] where the malware cannot do any harm
+[20:28] outside of the sandbox, and once the
+[20:30] analysis is complete or the sandbox,
+[20:32] well, crashes because of the malware,
+[20:34] whichever comes first, the sandbox is
+[20:36] completely destroyed. That is one way of
+[20:39] analyzing malware and creating
+[20:40] signatures for them, and the sandbox
+[20:42] analysis is also a type of heuristic
+[20:44] analysis.
+[20:45] Also, it's not absolutely necessary to
+[20:47] let the malware run to figure out what
+[20:50] it's doing or that it is doing something
+[20:52] nasty.
+[20:53] Analysis of machine code is possible as
+[20:55] well. So, an automated tool can
+[20:57] disassemble the executable file and
+[21:00] figure out by looking at its assembler
+[21:02] instructions that it might attempt to do
+[21:04] something malicious if it is run.
+[21:07] Now, if you think about it, heuristic
+[21:09] analysis might even be more efficient
+[21:11] than running signature-based scans
+[21:13] because, yes, we can detect unknown
+[21:16] threats, which is awesome. And by
+[21:18] unknown, I mean malware that we don't
+[21:20] have a signature for just yet, but and
+[21:22] like all buts, this is a big butt
+[21:25] sometime.
+[21:26] It's not foolproof. Hackers are smart,
+[21:30] and they know that their malware it
+[21:32] might be observed, so they use other
+[21:34] techniques. They use utilities built
+[21:36] into the operating system instead of
+[21:37] their own code. They execute extremely
+[21:40] slowly or with a huge delay, like 2
+[21:43] months from the installation date or its
+[21:46] first run. If your sandbox doesn't have
+[21:48] some sort of time acceleration feature,
+[21:50] you will not observe the malware doing
+[21:52] anything, not even anything good or not
+[21:55] even anything nasty, and you might give
+[21:57] it a green light. They are also smart to
+[21:59] detect when they're running inside a VM
+[22:01] and not a physical host. There are a
+[22:03] number of ways of doing this, like
+[22:04] trying to get physical access to
+[22:06] computer resources, measuring the delay
+[22:08] of certain operations that normally take
+[22:10] longer on a VM, looking for specific
+[22:13] drivers on a system, like if VMware
+[22:15] tools is installed, well, then it's
+[22:17] probably a virtual machine. Another
+[22:19] potential solution, although not as
+[22:21] smart as anti-malware, is to monitor the
+[22:25] files on your system and alert when they
+[22:27] change outside accepted scenarios.
+[22:29] Especially with critical files such as
+[22:31] those controlled by the operating
+[22:32] system, when they're changed outside of
+[22:35] a maintenance window or an upgrade,
+[22:38] that's probably an indication that
+[22:39] something fishy is going on.
+[22:41] Of course, something fishy might not be
+[22:43] going on as local apps might have
+[22:45] permissions to change those locations.
+[22:47] Also, you're only monitoring for changes
+[22:50] in those files, but you are completely
+[22:51] unaware of what kind of change is
+[22:53] happening. These tools sometimes
+[22:56] are called FIMs, as in file integrity
+[22:59] monitoring solutions.
+[23:01] Using them instead of anti-malware might
+[23:03] sound like overkill and at best a lot of
+[23:05] extra work for all those false
+[23:07] positives, but employing FIM solutions
+[23:10] for protecting critical confidential
+[23:12] data, protecting,
+[23:13] for example, even public website files
+[23:17] against defacement, even entire
+[23:19] databases against unauthorized changes,
+[23:21] in those scenarios, they are quite
+[23:23] useful. And just to get this out of the
+[23:25] way, how do you monitor for integrity?
+[23:27] Well, when you hear integrity, you
+[23:29] should have have a couple of neurons
+[23:31] firing already that make you say hashing
+[23:34] or hash functions. That's exactly how
+[23:35] file integrity monitoring solution
+[23:37] works, by monitoring the hashes of
+[23:39] important files.
+[23:41] Going one step further this time to more
+[23:43] advanced tools than anti-malware, we
+[23:45] find a couple of marketing terms, EDR,
+[23:49] endpoint detection and response, then
+[23:50] XDR, which is extended detection and
+[23:53] response.
+[23:54] You can already feel the subjectivity
+[23:56] floating all around us. That's why I
+[23:58] said they're basically marketing terms.
+[24:00] We should not forget about UEBA, which
+[24:03] is user and entity behavior analytics.
+[24:06] From a feature-centric point of view,
+[24:08] going from the bottom to the top, so
+[24:10] from EDR to UEBA, we find additional
+[24:13] functionality on top of the traditional
+[24:15] anti-malware, which is the ability of
+[24:17] the software to not just scan for file
+[24:19] signatures, but also look at what else
+[24:22] you're doing on the computer with the
+[24:24] intent of stopping you before you shoot
+[24:26] yourself in the foot.
+[24:27] Those solutions look at your processes,
+[24:29] at the life cycle of your system,
+[24:32] at its integrity. They're looking at
+[24:34] where the new files are coming from. Is
+[24:37] it the network? Is it the internet? A
+[24:39] USB drive? Are they generated by a local
+[24:41] process? And so on. They might be
+[24:43] looking at so-called file trajectories.
+[24:45] That is something like user A downloaded
+[24:48] a file at 1:00 p.m. Also, user A
+[24:50] executed the file at 1:01 p.m. At 1:05
+[24:54] p.m., 20 more computers in the network
+[24:56] are reporting the exact same new file
+[24:58] being downloaded over the network and
+[25:00] then executed. That is a worm.
+[25:03] Additionally, UEBA looks at the user
+[25:06] actions, trying to determine if the user
+[25:08] account has been compromised or not. Are
+[25:11] you doing what you should be doing on
+[25:13] your computer or what you've been doing
+[25:16] for the past 6 months?
+[25:17] If not, you might not be you. All these
+[25:21] advanced solutions would mean nothing if
+[25:22] they offered the just visibility. So,
+[25:25] they also take action. They can
+[25:26] quarantine files, but that's something
+[25:28] that anti-malware already does and has
+[25:30] been doing for a long time.
+[25:32] They might be able to quarantine entire
+[25:35] workstations, virtually disconnecting
+[25:37] you from the network so that you don't
+[25:39] infect others as well.
+[25:41] And the response part in EDR and XDR
+[25:45] means that the solution might be able to
+[25:47] alert a central software of the detected
+[25:50] incident, and then that central software
+[25:52] might be able to isolate an entire VLAN,
+[25:55] start packet captures to further
+[25:57] investigate what's going on, dynamically
+[25:59] install network policies and access
+[26:01] lists to block traffic, and so on. And
+[26:03] of course, they raise tickets and sound
+[26:05] alarms and send SMS messages and wake up
+[26:07] the security team at 3:00 a.m.

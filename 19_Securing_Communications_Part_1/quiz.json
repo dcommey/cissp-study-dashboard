@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A wireless network architect is designing a secure enterprise Wi-Fi infrastructure using 802.1X. The management team mandates strong authentication using digital certificates but wants to avoid the administrative overhead of issuing, deploying, and managing client-side certificates on thousands of employee mobile devices. Which authentication protocol should the security manager recommend?",
+    "options": [
+      "EAP-TLS (Transport Layer Security)",
+      "EAP-TTLS (Tunneled Transport Layer Security)",
+      "Lightweight Extensible Authentication Protocol (LEAP)",
+      "Password Authentication Protocol (PAP)"
+    ],
+    "correctIndex": 1,
+    "explanation": "EAP-TTLS (Tunneled Transport Layer Security) establishes a secure TLS tunnel (Phase 1) using only a server-side certificate, protecting subsequent communication. In Phase 2, the client authenticates inside this secure tunnel using simpler inner methods (like usernames and passwords or legacy protocols), eliminating the overhead of managing client-side certificates. In contrast, EAP-TLS requires certificates on both the server and every client device."
+  },
+  {
+    "question": "An employee connects a corporate laptop to an Ethernet wall jack in a conference room. The switch port is configured for IEEE 802.1X port-based network access control. Before the user enters any credentials, the laptop is blocked from standard network communications. What is the only type of traffic allowed through the switch port in this state?",
+    "options": [
+      "Implicit SMTPS traffic on TCP port 465",
+      "EAP over LAN (EAPOL) traffic",
+      "SNMP queries from the centralized management server",
+      "SQL database queries to local database clusters"
+    ],
+    "correctIndex": 1,
+    "explanation": "Prior to successful authentication, an 802.1X-configured switch port is in an unauthorized state. The authenticator (switch) blocks all user data traffic on the port. The only traffic permitted is EAP over LAN (EAPOL) traffic, which allows the supplicant (client laptop) to communicate with the authenticator to complete the authentication handshake."
+  },
+  {
+    "question": "A company operates a hybrid telephone environment with legacy POTS lines, an on-premises Private Branch Exchange (PBX) system, and VoIP desk phones. The security team detects unauthorized international calls billed to the company's trunk lines during non-business hours. Which combination of controls is most effective to secure the PBX and VoIP systems against this fraud?",
+    "options": [
+      "Hide the SSID of the VoIP access points and disable Category 5 UTP cabling.",
+      "Restrict trunk dial-in/out features, disable remote maintenance modems, implement strong passwords on VoIP administrative interfaces, and audit call logs periodically.",
+      "Upgrade all analog copper POTS lines to FTTH connections and configure round-robin load balancing.",
+      "Replace the PBX with an open SMTP relay server to handle voice traffic."
+    ],
+    "correctIndex": 1,
+    "explanation": "Securing telephone and PBX systems against fraud requires a combination of administrative and logical controls. Restricting dial-in and dial-out features limits unauthorized trunk access. Disabling remote maintenance modems and remote admin interfaces removes primary external attack vectors. Implementing strong passwords protects system integrity, while periodically auditing call logs serves as a detective control to detect anomalies."
+  },
+  {
+    "question": "An e-commerce application is hosted on a server cluster behind an Active-Active pair of load balancers. Users complain that their active shopping carts occasionally disappear when they navigate between different pages on the site. What is the most likely cause of this issue, and how should it be resolved?",
+    "options": [
+      "The load balancers terminate SSL connections and pass decrypted HTTP traffic to the backend, which the application rejects. Disable SSL offloading.",
+      "The load balancers lack session persistence, causing subsequent user requests to be routed to different servers that do not hold the active session state. Enable cookie-based session persistence or hash-based distribution.",
+      "The load balancers are using a round-robin algorithm with SNMP load monitoring, which blocks user connections. Disable SNMP queries.",
+      "The backend servers are blocked by a downloadable access control list (DACL) pushed during user authentication."
+    ],
+    "correctIndex": 1,
+    "explanation": "In a web cluster, user sessions (such as shopping carts or login states) are often stored locally on the specific backend server that handled the initial request. If the load balancer does not enforce session persistence (sticky sessions), subsequent requests from the same user may be sent to other servers in the cluster that do not possess the session data. Enabling session persistence (via cookies or hash-based routing using connection attributes like IP/ports) ensures the client remains pinned to the same backend server."
+  },
+  {
+    "question": "A financial firm wants to prevent email spoofing and business email compromise (BEC). The firm wants to ensure that external recipient mail servers can verify that emails claiming to come from the firm's domain were actually sent by authorized mail servers, and that the message contents were not modified in transit. Which combination of protocols should the firm configure in public DNS records to achieve this?",
+    "options": [
+      "PAP, CHAP, and EAP-SIM",
+      "POP3, IMAP, and STARTTLS",
+      "SPF (Sender Policy Framework), DKIM (DomainKeys Identified Mail), and DMARC",
+      "SSL offloading, VIP, and Active-Passive load balancing"
+    ],
+    "correctIndex": 2,
+    "explanation": "SPF, DKIM, and DMARC work together to secure email domain identities. SPF lists authorized sending IP addresses in DNS records. DKIM adds a digital signature to email headers, proving domain ownership and verifying message integrity in transit. DMARC aligns these checks, tells recipient servers how to handle failures (e.g., reject or quarantine), and provides reporting to the domain owner."
+  }
+]

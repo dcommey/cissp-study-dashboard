@@ -1,0 +1,57 @@
+[
+  {
+    "question": "An organization wants to allow its external business partners and suppliers to access a specific inventory management database server without granting them access to the rest of the corporate internal network. Which network architecture design is most appropriate to meet this requirement from a security and governance perspective?",
+    "options": [
+      "Deploy the inventory database server inside the corporate intranet and configure DHCP snooping.",
+      "Place the database server in a dedicated extranet segment protected by a firewall with granular access rules restricting external partner connections.",
+      "Implement a screened host configuration directly exposing the database server to the public internet.",
+      "Configure a full mesh physical network topology using Category 5e UTP cabling."
+    ],
+    "correctIndex": 1,
+    "explanation": "An extranet acts as a hybrid network between the public internet and a private intranet, allowing authorized external partners (like suppliers, contractors, or customers) to access specific internal resources. By placing the database server in a dedicated extranet segment and using a firewall to enforce granular access control, the organization permits partner collaboration while preventing unauthorized lateral movement into the broader internal corporate network (intranet)."
+  },
+  {
+    "question": "A security manager is designing a Network Access Control (NAC) solution for an enterprise with a diverse endpoint environment. The environment contains corporate-owned laptops, network printers, and various Internet of Things (IoT) devices such as smart building sensors. Which NAC deployment strategy should the security manager recommend?",
+    "options": [
+      "Deploy temporary NAC agents on the printers and IoT devices, and permanent agents on corporate laptops.",
+      "Implement an agentless NAC solution for network printers and IoT devices, and an agent-based NAC solution for corporate-managed laptops.",
+      "Utilize permanent NAC agents on all connected devices, leveraging Dynamic ARP Inspection (DAI) for agent distribution.",
+      "Establish stateless packet-filtering firewalls on all devices to simulate NAC policies."
+    ],
+    "correctIndex": 1,
+    "explanation": "Agent-based NAC solutions require installing monitoring/enforcement software on the client endpoint, which is feasible for managed corporate laptops (using permanent or temporary agents). However, network printers and IoT devices are closed systems that cannot run custom agents. For these unmanaged endpoints, an agentless NAC solution (which relies on external scans, traffic analysis, or continuous monitoring) must be used. Combining both approaches ensures comprehensive network coverage."
+  },
+  {
+    "question": "A network security administrator is configuring a Next-Generation Firewall (NGFW) to restrict outgoing social media traffic. The administrator writes two rules: Rule 1 denies all HTTP/HTTPS traffic to social media domains for all users. Rule 2 allows the marketing team's IP subnet to access a specific corporate social media page. However, marketing users report they are blocked from accessing the site. What is the cause of this issue, and how should it be resolved?",
+    "options": [
+      "The deny rule is placed above the allow rule (Rule 1 is before Rule 2). The rules must be reordered so that the specific allow rule (Rule 2) is evaluated first.",
+      "The firewall is stateless and cannot track HTTP sessions. The firewall must be upgraded to a stateful appliance.",
+      "The marketing team must bypass the NGFW and connect through a transparent proxy.",
+      "The firewall rules must be bound to a Port Aggregation Protocol (PAgP) configuration to function."
+    ],
+    "correctIndex": 0,
+    "explanation": "Firewalls process rules sequentially from the top down and stop evaluation at the first matching rule. If a broad deny rule (Rule 1) is placed above a specific allow rule (Rule 2), traffic matching the deny rule (including the marketing team's traffic) is dropped immediately, and Rule 2 is never evaluated. To resolve this, the specific allow rule must be placed above the general deny rule."
+  },
+  {
+    "question": "A global firm's security operations center (SOC) discovers that advanced malware successfully bypassed their traditional signature-based antivirus software. The security manager wants to implement a comprehensive security system that provides continuous endpoint monitoring, behavior-based threat detection, network traffic analysis (NTA), and integration with network intrusion prevention system (NIPS) logs. Which of the following solutions best meets these requirements?",
+    "options": [
+      "An Endpoint Protection Platform (EPP)",
+      "A Unified Threat Management (UTM) device",
+      "An Extended Detection and Response (XDR) solution",
+      "Spanning Tree Protocol (STP) implementation"
+    ],
+    "correctIndex": 2,
+    "explanation": "Extended Detection and Response (XDR) is an integrated suite of security tools that extends beyond endpoint detection and response (EDR) by collecting and correlating threat data across multiple security layers, including endpoints, network traffic analysis (NTA), email, cloud, and intrusion detection/prevention systems (NIDS/NIPS). It allows behavior-based detection and automated response across the enterprise, addressing the limitations of signature-based antivirus (EPP)."
+  },
+  {
+    "question": "A defense contractor is designing a network segment to transfer highly classified research files. The security policy mandates that the physical transmission medium must be completely immune to electromagnetic interference (EMI), crosstalk, and passive sniffing via electromagnetic emissions. Which cabling option should the security manager specify?",
+    "options": [
+      "Shielded Twisted Pair (STP) Category 6a cabling",
+      "Coaxial Thicknet (10Base5) cabling with terminal grounding resistors",
+      "Fiber optic cabling",
+      "Unshielded Twisted Pair (UTP) Category 5e cabling"
+    ],
+    "correctIndex": 2,
+    "explanation": "Fiber optic cabling transmits data using light pulses through glass fibers rather than electrical signals through copper. Consequently, fiber optic cables are completely immune to electromagnetic interference (EMI), radio frequency interference (RFI), and crosstalk. In addition, because they do not emit electromagnetic radiation, they are virtually immune to passive sniffing via electromagnetic induction, making them the most secure physical cabling medium."
+  }
+]

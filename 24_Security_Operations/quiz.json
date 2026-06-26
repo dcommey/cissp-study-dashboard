@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A financial institution implements emergency administrative accounts that require two separate managers to collaborate to access the recovery console. The password for the recovery account is divided into two halves, with Manager A holding the first half and Manager B holding the second. Neither manager knows the other's half. Which security principle does this implementation represent?",
+    "options": [
+      "Need to Know",
+      "Split Knowledge",
+      "Job Rotation",
+      "Least Privilege"
+    ],
+    "correctIndex": 1,
+    "explanation": "Split knowledge is a security control where the information required to perform a sensitive operation is divided among two or more individuals, ensuring that no single person possesses the entire secret or key. In this scenario, dividing the password into two parts is a textbook example of split knowledge. Need to know restricts data access based on job roles, job rotation rotates roles to prevent fraud, and least privilege limits permissions to the minimum necessary."
+  },
+  {
+    "question": "A multinational corporation has thousands of employees who access corporate cloud resources in AWS and GCP using company-issued tablets and smartphones. The CISO wants to ensure that in the event a device is lost or stolen, the security operations center (SOC) can immediately delete all corporate data from the device over the air. Which technology must the CISO deploy to enable this capability?",
+    "options": [
+      "Configuration Management Database (CMDB)",
+      "Mobile Device Management (MDM)",
+      "Privileged Access Management (PAM)",
+      "Security Information and Event Management (SIEM)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mobile Device Management (MDM) is a centralized software solution used to manage, monitor, and secure mobile devices such as smartphones and tablets. A core security capability of MDM is the ability to enforce encryption and perform remote wipes (over-the-air data deletion) on lost or stolen devices. CMDB tracks configuration items, PAM manages privileged administrative access, and SIEM correlates security event logs."
+  },
+  {
+    "question": "A system administrator proposes a critical security change to close an open port on the database server to reduce its attack surface. The Change Advisory Board (CAB) has formally reviewed and approved the change request. According to formal change management procedures, what step must the administrator perform immediately BEFORE implementing and scheduling the change in the production environment?",
+    "options": [
+      "Document the final state in the configuration management database (CMDB)",
+      "Obtain sign-off on the residual risk from senior executives",
+      "Test the change in an isolated, non-production environment",
+      "Establish a new baseline image for the database server"
+    ],
+    "correctIndex": 2,
+    "explanation": "Before any change is scheduled and deployed to a production environment, it must be thoroughly tested in an isolated, non-production environment (e.g., test or staging) to identify potential side effects (such as breaking application connectivity). Documenting the change in the CMDB occurs *after* implementation, executive sign-off on residual risk is for unmitigated vulnerabilities, and establishing a new baseline image is a separate configuration management process."
+  },
+  {
+    "question": "A data center manager is calculating hardware reliability metrics to plan for the lifecycle replacement of server infrastructure. The manager needs to distinguish between components that can be repaired (like a modular power supply or server chassis) and components that cannot be repaired and must be discarded upon failure (like solid-state drives or backup tape media). Which metrics should the manager apply?",
+    "options": [
+      "MTBF for repairable components; MTTF for non-repairable components",
+      "MTTF for repairable components; MTBF for non-repairable components",
+      "MTTR for repairable components; RTO for non-repairable components",
+      "MTD for repairable components; ALE for non-repairable components"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mean Time Between Failures (MTBF) is the average time a repairable system or component operates before failing and being repaired. Mean Time to Failure (MTTF) is the average time a non-repairable component (like a tape or SSD) operates before failing and being discarded. MTTR (Mean Time to Repair) is the time to fix a system, RTO (Recovery Time Objective) is a disaster recovery metric, MTD is Maximum Tolerable Downtime, and ALE is Annualized Loss Expectancy."
+  },
+  {
+    "question": "A vulnerability scanner identifies a critical vulnerability in a legacy software application running on an internal network. The application vendor has gone out of business, so no security patch is available. The organization's IT director implements firewall rules to restrict access to the application but cannot patch the code. The CISO decides to keep the application online. What is the remaining security exposure called, and who is responsible for it?",
+    "options": [
+      "Inherent risk, which is the responsibility of the system administrator",
+      "Total risk, which is the responsibility of the security operations team",
+      "Transferred risk, which is the responsibility of the firewall vendor",
+      "Residual risk, which is the responsibility of senior management"
+    ],
+    "correctIndex": 3,
+    "explanation": "Residual risk is the remaining risk after security controls (such as firewall restrictions) have been implemented. Senior management must formally accept and assume responsibility for residual risk. Inherent/total risk represents the risk before any controls are applied. Transferred risk involves shifting risk to another party (e.g., insurance), and administrators are not ultimately accountable for corporate risk decisions."
+  }
+]

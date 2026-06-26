@@ -1,0 +1,1379 @@
+[00:07] All right, so let's talk about
+[00:09] vulnerabilities and threats. And this is
+[00:11] just going to be the first part of this
+[00:13] longer discussion.
+[00:15] And uh
+[00:15] funny thing is that vulnerabilities and
+[00:18] threats could also be the title of this
+[00:20] entire training. We're studying security
+[00:23] and of course we need to address all
+[00:25] those places where security is relevant,
+[00:28] where vulnerabilities can be found. And
+[00:31] guess what? In computers, that's like
+[00:33] every single place out there. Every
+[00:35] single component on a computer, every
+[00:38] single interface that talks to the
+[00:40] outside, every peripheral.
+[00:42] And when we go higher to the network
+[00:45] level, it's just wow. That's really when
+[00:49] things take off.
+[00:50] There are so many security issues
+[00:54] uh that need to be addressed when just a
+[00:56] single computer connects to a network.
+[00:58] And from there to entire services
+[01:01] exposed to the internet, hosted in cloud
+[01:04] environments, it's a very very long,
+[01:06] winding, and
+[01:08] riddled with security issues road. So,
+[01:11] let's take a look at those first steps.
+[01:15] Now, since we're so embarking on such a
+[01:17] complex journey, let's take it step by
+[01:19] step and begin with the basics like
+[01:21] computer architecture.
+[01:23] This is the art and of course the
+[01:25] science of designing and building
+[01:27] computers at a logical level. Now,
+[01:30] logical means not the way the actual
+[01:32] hardware components fit into a computer,
+[01:35] but the way they talk to each other and
+[01:37] uh
+[01:38] the way they fit in the big picture. So,
+[01:41] logical means looking more at purpose
+[01:44] and functionality and less at bits and
+[01:46] bytes and transistors and memory cells.
+[01:49] Uh the problem with complexity is that
+[01:51] the more complex a system becomes, the
+[01:53] more potential vulnerabilities can be
+[01:55] discovered in it because it gets
+[01:56] exponentially more difficult to figure
+[01:58] out all the possible states of that
+[02:01] system, all its possible behaviors to
+[02:03] all potential inputs.
+[02:05] Testing helps a lot, obviously, but
+[02:07] testing is only as good as the batch of
+[02:10] tests that you run and ultimately as
+[02:13] good as the brain of the tester uh can
+[02:15] be when designing those tests. So, when
+[02:18] you hear that vulnerabilities have been
+[02:20] discovered, exploited, those are just
+[02:22] corner cases that haven't been tested
+[02:24] properly or tested and ignored because
+[02:26] the stakeholders declared the product
+[02:28] just had to be launched today, not
+[02:30] tomorrow.
+[02:32] Now, you might believe that the most
+[02:33] important piece of a computer is the
+[02:35] hardware. And it's true that hardware is
+[02:37] what makes a computer physically exist,
+[02:40] but it's not what makes it smart or
+[02:42] useful. That's where software comes in.
+[02:44] Remember that we said that computer
+[02:46] architecture deals mostly with the
+[02:48] logical level, not the physical one.
+[02:51] So, starting with the CPU or the central
+[02:53] processing unit,
+[02:55] that's the brain of the computer. It's
+[02:57] where all the calculations and the logic
+[02:59] happens. Uh the CPU can only do a couple
+[03:01] of very simple things like adding
+[03:04] numbers, subtracting numbers, comparing
+[03:06] numbers, moving data around to and from
+[03:10] the memory and between internal small
+[03:13] but very fast memory cells called
+[03:14] registers. Remember we talked about
+[03:16] those. But by combining these simple
+[03:19] things in clever ways, the CPU can
+[03:22] perform complex tasks and run even the
+[03:24] most demanding computer games and most
+[03:26] powerful cloud environments.
+[03:28] The CPU in general or a CPU core can
+[03:31] only do one thing at a time, but it can
+[03:33] do it very fast. Now, this statement
+[03:36] might make you groan a bit and I know, I
+[03:38] know there are instruction pipelines,
+[03:41] there's speculative execution, there's a
+[03:43] lot of stuff that you can use to
+[03:45] contradict me on this on this
+[03:48] one core does one thing at a time
+[03:51] sentence, but for the sake of
+[03:53] introducing this fact, let's assume that
+[03:55] it's true, right? That computer CPUs can
+[03:57] only do one thing at a time. In real
+[03:59] life, however, long gone are the days
+[04:01] when you only had one command line and
+[04:03] you would wait for each and every
+[04:04] command execution to finish before you
+[04:06] could move on to the next command. Now,
+[04:08] we expect our computers to play music
+[04:10] while we're browsing the web or running
+[04:12] multiple applications at once or
+[04:15] watching Netflix and online shopping
+[04:18] during a really really boring Zoom or
+[04:20] Teams call.
+[04:22] This is where multitasking comes in.
+[04:24] Multitasking means doing, you guessed
+[04:26] it, two or more things at once.
+[04:28] But how can a CPU really multitask since
+[04:31] theoretically it can only do one single
+[04:33] math operation at a time? Well, there
+[04:35] are different ways to achieve this
+[04:37] illusion of parallelism. And yes, it's
+[04:41] an illusion just like human
+[04:42] multitasking. Now, you cannot focus your
+[04:44] brain on two things at the same time.
+[04:46] Sorry for the bad news. Don't believe
+[04:48] any self-help books that tell you
+[04:50] otherwise.
+[04:52] One way of achieving a so-called type of
+[04:54] multitasking is called
+[04:55] multi-programming. This is when the OS
+[04:58] tricks the CPU into thinking that it's
+[05:00] doing multiple things at once by
+[05:01] switching between different programs
+[05:03] very quickly and executing just a few
+[05:05] instructions out of each one. Like
+[05:07] nibbling a little out of each appetizer
+[05:10] in a huge plate. You could say that
+[05:12] you're eating them all at the same time
+[05:14] to keep somebody else from stealing your
+[05:15] food like my
+[05:17] Toddler Robert does when he wants to
+[05:19] make sure nobody touches his food, but
+[05:21] inside you know the truth. You can only
+[05:24] take a bite of a single appetizer at
+[05:26] once.
+[05:27] Another comparison would be juggling
+[05:29] three balls with one hand. You can only
+[05:31] hold one ball at a time, but you can
+[05:33] throw and catch them so fast that it
+[05:35] looks like they are all in the air at
+[05:37] once.
+[05:39] Another way is called multi-threading.
+[05:40] This is when a program splits itself
+[05:42] into smaller pieces of executable code
+[05:45] called threads
+[05:46] uh that can run independently and
+[05:48] concurrently on the same CPU.
+[05:51] Again, this is like juggling three balls
+[05:52] but with two hands. Actually, now you
+[05:55] could even think about juggling
+[05:57] uh six balls because why not, right? In
+[06:00] reality, this is very useful because
+[06:02] just like we
+[06:03] like we don't expect a computer to do a
+[06:05] single thing at a time, the same applies
+[06:07] to our applications. We expect the
+[06:09] Spotify app to keep playing music in the
+[06:11] background while it's searching for new
+[06:13] songs and downloading an update and
+[06:15] rendering the interface and displaying
+[06:16] annoying pop-ups about the new interface
+[06:19] nobody asked for all at once.
+[06:21] So, the apps multitask by themselves as
+[06:24] well and they use threads to do so.
+[06:27] Think of threads as small execution
+[06:29] paths in a single program's code,
+[06:31] usually focused on a single function.
+[06:33] There's a thread for rendering the
+[06:35] interface, one for playing the music in
+[06:37] the background, one for network
+[06:39] connectivity and buffering, one that
+[06:40] checks for updates in the background,
+[06:42] and so on.
+[06:43] A third way is called multi-processing.
+[06:46] This is when you have more than one CPU
+[06:48] in your computer and each CPU can run a
+[06:50] different program or a different thread
+[06:52] at the same time.
+[06:54] It's like having, let's go with the
+[06:56] analogy, like having two jugglers
+[06:58] juggling three balls each, right? You
+[07:01] can hold six balls in the air at once
+[07:03] and you don't have to worry about
+[07:04] throwing or catching them because each
+[07:06] juggler has their own set of balls. And
+[07:08] yes, we're still talking about juggling
+[07:10] balls.
+[07:12] With multiple processors, um there are a
+[07:15] couple of caveats at work. In general,
+[07:17] the OS needs to assign apps and threads
+[07:21] with some sort of affinity or preference
+[07:24] for one CPU or the other. That's simply
+[07:27] because the CPUs that are not tightly
+[07:30] connected, so they don't share
+[07:31] registers, so we need to keep chunks of
+[07:34] code together, confined to the
+[07:36] boundaries of a single CPU in order for
+[07:39] that code to execute properly. In other
+[07:41] words, when we choose one CPU to execute
+[07:44] a chunk of machine code, we need to
+[07:45] stick with that CPU until the end, but
+[07:48] the OS takes care of this for you.
+[07:50] A fourth way is called multi-core
+[07:52] processing. This is when your CPU has
+[07:55] more than one core inside it and each
+[07:57] core acts like a separate CPU and can
+[07:59] run a different program or thread at the
+[08:01] same time with other cores.
+[08:04] This is also the most common method as
+[08:05] nowadays even my uh Apple Watch has a
+[08:09] quad-core processor in it. And if you're
+[08:12] reading or listening to this in a couple
+[08:13] of years from now, you're probably going
+[08:14] to laugh at my crappy Apple Watch since
+[08:17] yours probably is going to have 16 core
+[08:19] by then.
+[08:20] It's a bit of a stretch to make the the
+[08:21] ball juggling analogy here with
+[08:23] multi-core processing, so just imagine
+[08:25] that you have multiple processors
+[08:27] or a juggler with more than two hands.
+[08:29] Okay, not really an analogy but more
+[08:32] like a horror story, but let's just go
+[08:34] with that. As we said, this is the most
+[08:36] common architecture nowadays. Even
+[08:39] phones and tablets have a bunch of
+[08:41] cores, so even
+[08:43] uh some even have um slower called,
+[08:45] let's say, efficiency cores and faster
+[08:48] cores. So, that processes that only need
+[08:50] a little bit of attention can keep using
+[08:52] the efficiency cores and more demanding
+[08:55] threads and programs can take over the
+[08:57] performance cores. This helps with power
+[08:59] efficiency and that's why crappy cores
+[09:01] are called efficiency cores because it
+[09:03] can make your laptop or phone run less
+[09:05] hot and use up less of your battery and
+[09:08] your electrical bill.
+[09:10] Okay, so now let's focus on security
+[09:12] because that's why we're here.
+[09:14] One of the most common logical
+[09:15] protection mechanisms in a computer is
+[09:17] the use of protection rings. Imagine
+[09:21] onions. In fact, imagine just one onion,
+[09:24] a four-layered onion.
+[09:26] Uh Shrek said that onions and ogres have
+[09:28] layers. Well, modern computers have
+[09:30] layers, too. The core of the onion is
+[09:33] ring zero, the most trusted and
+[09:36] privileged part of your system. This is
+[09:37] where the kernel lives. The kernel is
+[09:40] the heart and soul of the operating
+[09:41] system. It controls everything that
+[09:43] happens at a low level on the computer
+[09:45] from memory management to process
+[09:47] scheduling to device drivers and direct
+[09:49] access to hardware components of your
+[09:51] computer. The kernel has full access to
+[09:54] all the resources and data on the
+[09:55] computer, but it also has full
+[09:57] responsibility from keeping them
+[09:59] out of harm's way.
+[10:01] Your code usually does not run in the
+[10:03] kernel unless your code is a device
+[10:05] driver or you are somehow tricking a
+[10:07] driver into loading some external code
+[10:10] like we had in the Microsoft and
+[10:12] CrowdStrike incident a while ago. The
+[10:14] next layer of the onion is ring one
+[10:17] where the rest of the operating system
+[10:19] resides. This includes parts that are
+[10:21] only used when needed such as file
+[10:23] systems, network protocols, user
+[10:25] interfaces, and so on. Now, these parts
+[10:27] have less access and privilege than the
+[10:29] kernel, but they still have more than
+[10:30] regular applications and programs.
+[10:33] The third layer of the onion is ring
+[10:35] two. So, remember we started with zero,
+[10:38] zero, one, now we have two where input
+[10:40] and output drivers and some system
+[10:42] utilities live. Now, these are parts
+[10:44] that help the operating system interact
+[10:47] with external devices and files such as
+[10:49] peripherals, disks, the network, and so
+[10:51] on.
+[10:52] The outermost layer of the onion is ring
+[10:55] three where applications and programs
+[10:57] live. These are parts that run on top of
+[10:59] the operating system and provide
+[11:01] functionality to the user itself such as
+[11:04] office applications, web browsers,
+[11:05] games, and so on. This is also sometimes
+[11:08] called the user space as opposed to all
+[11:11] the other previous ones which are
+[11:12] generically referred to as kernel space.
+[11:16] Now, in many other places you might find
+[11:17] that we what we just said about rings
+[11:19] zero, one, and two, so all the kernel
+[11:21] related or low-level functionality to be
+[11:24] grouped under a single generic ring zero
+[11:28] while the rest of the user apps are
+[11:30] being run in what is called a ring one.
+[11:33] This is a simplified representation
+[11:34] which does not contradict what we just
+[11:36] said here.
+[11:38] The idea behind protection rings is to
+[11:39] isolate and separate different parts of
+[11:42] the system based on their level of trust
+[11:44] and privilege. This way, if one part
+[11:47] gets compromised or corrupted, it cannot
+[11:48] affect or damage other parts that are
+[11:50] more trusted and might be critical to
+[11:53] the system.
+[11:54] Protection rings are nothing new, not a
+[11:56] new concept in computer science. They
+[11:58] were first introduced in the 1960s.
+[12:01] Yes, you heard that right
+[12:03] by a project called Multics which was
+[12:07] one of the earliest attempts to create
+[12:09] an operating system for multiple users
+[12:11] and applications.
+[12:13] That was a big thing back then.
+[12:15] Multics used up to seven rings of
+[12:18] protection, but most operating system
+[12:20] nowadays use only four rings or even two
+[12:23] rings like we said before, one for
+[12:24] kernel mode and one for user mode.
+[12:28] Now, talking about processes and memory,
+[12:30] we need to go a little deeper in the
+[12:32] inner workings of an operating system
+[12:34] and we have to do this because
+[12:36] understanding the risks that we're
+[12:37] facing with software bugs and malware
+[12:40] requires us to understand at least a bit
+[12:42] of what's going on inside the CPU, the
+[12:44] operating system, and how programs are
+[12:46] generally stored in memory and executed.
+[12:49] Because the way programs work is also
+[12:51] the way programs can be vulnerable,
+[12:52] exploited, and it's exactly what leads
+[12:54] to data breaches. Now, first of all, you
+[12:56] need to know that your computer has two
+[12:58] modes. These are called supervisor state
+[13:01] and problem state. Supervisor state is
+[13:04] when your computer is feeling powerful,
+[13:07] confident, and it can do whatever it
+[13:09] wants without asking anyone. Problem
+[13:11] state is when your computer has to ask
+[13:13] permission for everything it does.
+[13:15] Leaving the metaphors aside, you can
+[13:18] probably guess which one represents
+[13:20] system actions and which one represents
+[13:22] user actions.
+[13:24] Interestingly enough, the user mode is
+[13:26] called problem mode because, and I kid
+[13:30] you not, that's where problems can
+[13:33] appear.
+[13:34] The actions of the kernel or the OS
+[13:37] itself are considered always to be
+[13:39] secure and predictable, but the actions
+[13:42] performed by the users, well, that's the
+[13:44] place where anything goes. It's a place
+[13:46] where a lot of things can go wrong,
+[13:49] hence problems. That and also because
+[13:51] whatever is running at the user level
+[13:53] usually requires at some point some user
+[13:56] interaction or some outside network
+[13:58] interaction like network traffic or
+[14:00] anything that might change its state.
+[14:03] And the number one problem of the
+[14:04] operating system when dealing with user
+[14:05] actions from security perspective is the
+[14:08] preservation of the CIA triad. Now, when
+[14:11] a program wants to run on your computer,
+[14:13] it has to join a queue like when you're
+[14:15] waiting in line for a roller coaster,
+[14:17] let's say. In a roller coaster,
+[14:20] you want to use a roller coaster which
+[14:21] is a resource. You want to access that
+[14:23] resource and use it for some time,
+[14:25] but so do other people or in our case
+[14:28] processes. They all want to ride on the
+[14:30] CPU for some time, but they have to
+[14:32] wait.
+[14:33] The queue is called the processing queue
+[14:35] and it's managed by the OS. The OS
+[14:37] decides who gets to go on the ride first
+[14:40] based on, well, a lot of stuff like
+[14:43] their priority and how long they've been
+[14:45] waiting in the queue and what exactly
+[14:47] are they queuing up for. Okay? The ride
+[14:51] is the CPU and yes, just like people
+[14:52] waiting in line for the roller coaster,
+[14:55] some processes can jump that queue. Now,
+[14:57] when a program gets to go on the ride,
+[14:59] it enters the running state. This is
+[15:01] when the program is actually doing
+[15:02] something useful like playing your
+[15:04] favorite game. The program can stay on
+[15:06] the ride for a fixed amount of time
+[15:09] called a time slice, but if the program
+[15:11] finishes before the time slice is over,
+[15:14] it leaves the ride happily and goes into
+[15:16] the stopped state.
+[15:18] This is when the program says goodbye to
+[15:20] the computer, frees up its resources for
+[15:22] other programs to use,
+[15:24] content for having fulfilled its
+[15:26] lifelong execution dream. But sometimes
+[15:29] or well, very, very often actually, the
+[15:32] program doesn't finish before the time
+[15:34] slice is over. Maybe the CPU was too
+[15:36] slow or maybe the process was too greedy
+[15:39] and wanted too much CPU time or maybe
+[15:41] the process is simply designed that way
+[15:43] to keep running indefinitely like a
+[15:45] thread that renders the GUI of an app or
+[15:48] a game or a thread that listens for
+[15:50] network input and is designed to run
+[15:51] forever or at least as long as the
+[15:53] application is running.
+[15:55] Well, in that case, the OS kicks the
+[15:57] program off the ride and sends it back
+[15:59] to the queue. This is called the ready
+[16:02] state and it's when the program is
+[16:03] waiting for another chance to go on the
+[16:06] ride.
+[16:07] The program may have to wait for a long
+[16:09] time depending on how many other
+[16:10] programs are in front of it and how high
+[16:12] their priority is compared to its own.
+[16:15] And it also depends on how much of the
+[16:17] CPU is available and how many processing
+[16:20] cores it has. And yes, not all processes
+[16:23] are equal. They also have priorities
+[16:24] implemented in different ways according
+[16:26] to the OS. No need for social justice
+[16:29] here. It's perfectly okay for processes
+[16:31] to not be equal in the eyes of the
+[16:33] scheduler. Other times, the program may
+[16:35] have to wait for some external event to
+[16:37] happen while running on the CPU. This
+[16:40] could be a program performing an
+[16:41] input-output operation and that's when
+[16:45] the program interacts with other devices
+[16:46] like waiting for the user to press a key
+[16:48] for example or press a mouse button or
+[16:50] move the mouse or receive some packets
+[16:52] over the network or to load some content
+[16:55] from the disk.
+[16:56] But input and output can be slow at
+[16:58] least compared to how fast the CPU can
+[17:01] switch between processes and threads.
+[17:04] So, the program doesn't want to waste
+[17:05] its precious time slice on on that while
+[17:09] waiting for a CPU to just receive some
+[17:10] input. Actually, the CPU doesn't want to
+[17:13] waste its precious CPU cycles doing
+[17:14] nothing, being busy with a process that
+[17:17] simply waits for the for for something
+[17:19] to happen. Okay? Instead, the program
+[17:21] behaves nicely and asks the OS, "You
+[17:23] know what? I'm just going to wait here
+[17:25] for this IO operation to complete. In
+[17:28] the meantime, go ahead and let somebody
+[17:30] else go on the ride. When I'm done, I'll
+[17:32] be back in the roller coaster queue
+[17:33] again. This is called the waiting state
+[17:36] and it's when the program is suspended
+[17:38] until input and output is done.
+[17:40] Once input and output is done, the
+[17:42] program goes back to the queue and waits
+[17:44] for its turn again. It doesn't have any
+[17:46] kind of higher priority just because it
+[17:47] left the queue by its own will. It
+[17:50] doesn't try to regain its previous slot
+[17:51] by arguing with the with the processes
+[17:54] behind him in the queue. So, it just
+[17:57] goes back to the queue.
+[17:59] Now, finally, there's one more state
+[18:02] that we need to talk about, the
+[18:04] supervisory state. This is when the
+[18:05] program wants to do something special
+[18:07] that requires more privileges than the
+[18:09] problem mode allows. For example, maybe
+[18:11] your program wants to change some
+[18:13] settings on your computer like a
+[18:14] security policy or install some new
+[18:16] software or access some sensitive data.
+[18:19] Now, in that case, the program has to
+[18:21] ask the operating system to switch from
+[18:22] problem mode to supervisor mode where it
+[18:25] can do those things without any
+[18:26] restrictions. But supervisor mode is
+[18:29] risky and potentially dangerous because
+[18:31] changes to the system can be made. So,
+[18:34] the OS only allows trusted programs to
+[18:36] enter the state. Once they're done
+[18:38] executing their special tasks, they will
+[18:41] have to switch back to problem mode as
+[18:42] soon as possible. You can probably
+[18:44] relate this behavior to running a
+[18:46] program with the sudo command on Linux
+[18:49] or right-clicking and choosing run as
+[18:50] administrator in Windows. That's exactly
+[18:53] what happens in those situations as
+[18:54] well.
+[18:55] Let's talk about processes and memory.
+[18:57] Now, there are different types of memory
+[18:59] in a computer and each one has its own
+[19:01] purpose and characteristics.
+[19:03] It's pros and cons. Some memory is fast,
+[19:05] some memory is slow, big or small,
+[19:07] permanent or temporary. Let's see what
+[19:09] they are and how they work.
+[19:11] Now, the first type of memory we're
+[19:13] going to look at is read-only memory or
+[19:15] ROM. As the name suggests, ROM is a
+[19:17] memory that your computer can read but
+[19:19] cannot write on. It contains information
+[19:22] that your computer needs to start up and
+[19:24] run basic functions like how to check if
+[19:26] everything is working properly, a
+[19:27] process traditionally called POST which
+[19:30] stands for power-on self-test or POST,
+[19:34] and how to load the OS from the disk. As
+[19:36] you can see, in ROM you find stuff that
+[19:38] the computer definitely needs when
+[19:40] starting up but doesn't really need to
+[19:42] change that often or perhaps not even
+[19:44] ever. For example, ROM might check if
+[19:46] there's a working graphics card in the
+[19:48] system and the graphics card might
+[19:50] change, of course, but the PCI Express
+[19:53] slot, or the way any graphic card should
+[19:56] respond when asked how it's doing, will
+[19:58] always stay the same. The same rules
+[20:00] will apply, no matter what graphics card
+[20:02] you have. ROM is very reliable and
+[20:04] secure, but a big reason why it's secure
+[20:06] is because it cannot be changed by
+[20:08] anyone. It's also very limited, also
+[20:10] because it cannot be changed by anyone.
+[20:12] There's a special kind of ROM that can
+[20:14] be changed a little bit. It's called
+[20:15] programmable read-only memory, or PROM.
+[20:18] You can use PROM to store information
+[20:20] that you want to keep permanently, but
+[20:22] you have to be very careful and be sure
+[20:24] about what you write because you cannot
+[20:26] change your mind later.
+[20:27] Usually, computer manufacturers, or the
+[20:29] company who assembles your computer from
+[20:31] parts, writes this information before
+[20:33] they deliver it to you.
+[20:35] There's another kind of PROM that can be
+[20:36] erased and rewritten. It's called
+[20:38] erasable programmable read-only memory,
+[20:42] or EEPROM.
+[20:43] There are two types of EEPROM, UVEEPROM
+[20:47] and EEPROM.
+[20:49] UVEEPROM is a memory that you can erase
+[20:52] by exposing it to a special ultraviolet,
+[20:55] hence the UV in the front of it,
+[20:58] uh UV light. EEPROM is a memory that you
+[21:01] can erase by applying a special voltage
+[21:03] to it, so the name comes from
+[21:04] electrically erasable PROM.
+[21:08] Both types of EEPROM allow you to
+[21:11] rewrite the information in them, but
+[21:12] they are slow and expensive. On the good
+[21:14] side, they're also extremely durable.
+[21:16] So, what are they used for? Well, EEPROM
+[21:18] memory and flash memory can
+[21:20] theoretically be used for the same
+[21:21] purpose, but since flash is so much
+[21:24] faster on reads and writes, it's usually
+[21:26] the number one option when it comes to
+[21:27] storing any kind of application data,
+[21:29] things that can change sometimes often.
+[21:32] But for storing small pieces of
+[21:33] configuration data with low-power
+[21:35] microcontrollers, for example, EEPROM is
+[21:38] nice because there's no need to worry
+[21:40] about durability.
+[21:42] The last kind of PROM we'll talk about
+[21:44] is flash memory. Flash memory, very
+[21:46] fast, very convenient because you don't
+[21:48] need anything special to modify it.
+[21:50] Erasing and overriding happens using
+[21:52] regular electrical signals and commands,
+[21:54] just like those that you used to read
+[21:56] from flash.
+[21:57] Flash memory was also non-volatile, like
+[21:59] the other ones before it, which means it
+[22:01] doesn't lose its information when the
+[22:03] power is cut off.
+[22:05] You will find flash memory in devices
+[22:07] like memory cards, thumb drives,
+[22:08] smartphones, SSDs. You might find it
+[22:11] weird that flash memory is actually a
+[22:14] subcategory of ROM. Well, it's actually
+[22:17] a subcategory of EEPROM, electrically
+[22:19] erasable, right? So, yeah, it's like a
+[22:22] modifiable or writable read-only memory,
+[22:27] if you wish. Or just you know, just just
+[22:30] call it memory, right?
+[22:32] Naming conventions are are sometimes
+[22:34] weird like that.
+[22:35] Finally, random access memory, RAM, is
+[22:37] the memory that your computer uses to
+[22:39] store and process information while it
+[22:41] is working. Whenever a program says
+[22:43] loading, it means loading the program
+[22:46] and its data into RAM. Whenever a
+[22:48] process is running, it's running in RAM.
+[22:50] RAM is the shortest, not the shortest,
+[22:52] but the short-term memory of your
+[22:54] computer. It also has a big drawback. It
+[22:57] forgets everything when the power is
+[22:58] off.
+[23:00] Uh surprise, surprise, there are
+[23:01] different types of RAM, or better said,
+[23:02] it's allocated in different ways for
+[23:04] different purposes. And the first type
+[23:05] of RAM we'll look at is real memory,
+[23:07] also known as main memory, or primary
+[23:10] memory.
+[23:11] Uh real memory is the um largest RAM
+[23:14] storage resource available to your
+[23:15] computer. It's where your computer
+[23:17] stores all the information that it needs
+[23:19] to run your programs, Sandy OS. Real
+[23:21] memory is usually made of dynamic RAM
+[23:23] chips, which means that they need to be
+[23:25] refreshed by the CPU periodically to
+[23:27] keep their data. That's why you
+[23:29] sometimes see DRAM in specs, not just
+[23:32] RAM in online stores,
+[23:33] where the D stands for dynamic. Uh the
+[23:36] second type of RAM we'll look at is
+[23:38] cache RAM. Cache RAM is a small amount
+[23:41] of very fast memory that your computer
+[23:42] uses to store information that it uses
+[23:44] frequently, or has used recently, and is
+[23:47] usually placed next to some piece of
+[23:49] hardware that makes use of it. Cache RAM
+[23:51] helps your computer speed up by reducing
+[23:54] the time it takes to access information
+[23:55] from slower devices, like hard drives,
+[23:57] for example, by keeping the data close
+[23:59] to the device that needs it, and by
+[24:01] being very fast. Cache RAM can be found
+[24:04] in different places in your computer,
+[24:05] such as inside the CPU, which is
+[24:07] blazingly fast, or inside storage
+[24:09] devices, like hard drives, SSD, or RAID
+[24:12] controllers,
+[24:13] uh which are notoriously slower storage
+[24:15] devices. Cache RAM on the CPU can have
+[24:18] different levels, such as level one,
+[24:19] level two, level three, depending on how
+[24:21] close they are to the CPU and how fast
+[24:24] they are, which is often the same thing.
+[24:26] Now, we said that real memory is usually
+[24:28] dynamic RAM, and that means that it
+[24:30] needs to be refreshed periodically.
+[24:32] Well, static RAM is also a type of
+[24:34] memory that uses a different technology
+[24:35] than dynamic RAM.
+[24:37] It uses switches that can be turned off
+[24:39] or on to store data, and as long as
+[24:42] nobody flips those little switches back,
+[24:44] it will remember everything forever.
+[24:46] Well, not exactly forever, since static
+[24:48] RAM doesn't need to be refreshed by the
+[24:49] CPU, but it keeps its data as long as
+[24:52] the power is on. So, it it does need
+[24:55] power, right? Unlike flash, for example.
+[24:58] It can be much faster than dynamic RAM,
+[25:01] but also much more expensive and less
+[25:02] dense. So, static RAM is usually found
+[25:05] in cache memory because it can improve
+[25:08] access speed, but we don't need huge
+[25:10] amounts of it.
+[25:11] Another mention worth making here is
+[25:13] called persistent memory, P mem, which
+[25:16] is a weird combination between a flash
+[25:18] and RAM. Actually, it's made up of very
+[25:20] fast flash chips that are being used on
+[25:23] RAM modules.
+[25:25] It's cheaper than RAM, more expensive
+[25:27] than flash, but also faster than flash,
+[25:31] while still a bit slower than RAM. So,
+[25:33] it kind of fits exactly in between RAM
+[25:35] and flash.
+[25:36] It's a nice middle ground with some
+[25:38] interesting use cases for servers, as it
+[25:40] can act as both memory and cache, and it
+[25:44] retains contents even after power off,
+[25:47] which is great for forensics.
+[25:49] Another type of memory here are
+[25:51] registers, which are small memory
+[25:52] locations, and I mean very, very small.
+[25:55] They are directly inside the CPU, the
+[25:57] brain of the computer. Registers are
+[25:59] very fast and convenient because they
+[26:01] are part of the CPU itself, and can be
+[26:04] accessed directly by it, and this makes
+[26:06] it the fastest memory known to man
+[26:08] because it is the closest memory to the
+[26:10] CPU.
+[26:11] Now, the fastest memory needs to have a
+[26:14] compromise. It's also the smallest one.
+[26:16] A register can vary in size depending on
+[26:18] its use case, but for most registers,
+[26:20] their size is dictated by the
+[26:22] architecture of the CPU. So, you have a
+[26:25] 64-bit CPU, regular registers will have
+[26:29] 64 bits in size because the CPU uses
+[26:32] them to address 64-bit memory addresses.
+[26:35] Yeah, a 64-bit
+[26:38] piece of memory is not that big, but it
+[26:40] doesn't need to be. Basically, a
+[26:41] register is what stores the location of
+[26:43] the next instruction or the values of A,
+[26:47] B, or C whenever the CPU needs to
+[26:49] calculate A + B = C. Okay? And as you
+[26:52] can probably guess, since a CPU can
+[26:54] perform billions of such math operations
+[26:57] per second, the contents of these
+[26:59] registers can change at least a few
+[27:02] billion times per second, which also
+[27:04] makes it the most volatile type of
+[27:06] memory. You blinked once, and you just
+[27:08] lost 100 million values going through
+[27:10] that register. It's that fast.
+[27:13] This also makes data recovery or
+[27:15] forensics performed on registers
+[27:17] something that's not even worth
+[27:19] attempting. Another type, or better
+[27:21] said, another concept related to memory
+[27:23] is secondary memory, which is the same
+[27:25] memory that your computer uses to store
+[27:27] and access information while running,
+[27:29] but it might happen that this memory is
+[27:30] not even in RAM.
+[27:32] One implementation of secondary memory
+[27:34] is through virtual memory. This is when
+[27:36] your computer uses some translation and
+[27:38] mapping tricks to pretend that it has
+[27:40] more RAM than it actually does, and it
+[27:43] does this not for narcissistic reasons,
+[27:45] but before because programs, when when
+[27:48] running in memory, they don't care about
+[27:50] other programs in there. They don't care
+[27:52] about them, and they should not even
+[27:53] know that other processes are running on
+[27:56] the same machine. So, the OS does a bit
+[27:58] of trickery and actually lies to every
+[28:00] process, telling them that they each
+[28:02] have full and unconditional access to
+[28:04] the entire memory of the system, its
+[28:06] entire RAM.
+[28:08] So, if you're a computer with 32 gigs of
+[28:10] RAM, you're telling the first process,
+[28:12] you have access to my entire 32 gigs of
+[28:14] RAM. And to this next process, you have
+[28:16] access to all my 32 gigs of RAM. And you
+[28:19] have access, and you have access, and so
+[28:21] on.
+[28:21] This simplifies the memory management
+[28:24] functions inside each process, but now
+[28:26] the OS has to keep track of all these
+[28:29] lies that it told to all the processes,
+[28:32] and be able to do something if at some
+[28:34] point all these lies catch up to it, and
+[28:36] the processes are trying to eat up more
+[28:38] memory than the system has, because,
+[28:40] well, each of them was promised to the
+[28:42] whole memory. It sounds like a Ponzi
+[28:44] scheme that your computer is running,
+[28:46] but in fact, it has a solution so that
+[28:48] no but nobody loses. As long as all
+[28:51] memory requests from all processes,
+[28:53] summed up,
+[28:54] don't go above the free real hardware
+[28:57] memory on your system, everything is
+[28:59] okay because you have enough resources,
+[29:01] enough memory to share with all your
+[29:03] processes. It doesn't matter that a
+[29:04] process
+[29:05] thinks that all its allocated memory is
+[29:07] in a single memory location, when in
+[29:09] fact, that data is spread all over the
+[29:11] physical RAM. The OS keeps track of
+[29:14] this.
+[29:14] But what happens when your processes ask
+[29:16] for more memory than you can give them?
+[29:19] Because, remember, each process thinks
+[29:21] that it's entitled to receive system
+[29:23] memory. What happens when more than one
+[29:25] process, with all their requests summed
+[29:28] up, results in asking for more than the
+[29:30] entire system memory? Now, in order to
+[29:32] have this perpetual lie called virtual
+[29:35] memory, we usually have to rely on
+[29:37] secondary storage, like the disk, using
+[29:39] page file or swap files, which are
+[29:41] managed by the OS as an extension of
+[29:44] your actual real memory. Now, of course,
+[29:46] they are much slower since we're talking
+[29:48] about moving RAM pages to That's RAM
+[29:51] pages, okay? Two different words.
+[29:54] To flash drives or magnetic disks. All
+[29:57] right? The OS takes care of moving these
+[29:59] pages of memory back and forth between
+[30:02] RAM and the page file depending on how
+[30:04] often those memory pages are being
+[30:05] accessed, trying to keep the most
+[30:07] accessed ones as close to the CPU as
+[30:09] possible in the fastest type of memory
+[30:11] available. But, the moment you start
+[30:13] swapping memory pages back and forth
+[30:15] between the disk and your RAM, your
+[30:16] computer, along with you, the user, will
+[30:19] feel a performance impact. No matter how
+[30:22] fast your SSD is, you'll feel it. Right
+[30:25] now, a very fast consumer SSD can reach
+[30:28] perhaps 7 or 9 GB per second transfer
+[30:33] speed in an ultra ideal situation. And
+[30:36] most people have SSDs which don't even
+[30:38] reach 1 GB per second. While a DDR5
+[30:41] memory can go up to 64 GB per second.
+[30:45] And this doesn't even take into
+[30:46] consideration the blazingly fast access
+[30:48] times that RAM has.
+[30:50] Speaking of memory, memory addressing is
+[30:53] the way your computer refers to
+[30:54] different locations in memory where the
+[30:56] data it needs needs to be stored. So,
+[30:59] it's how the computer recalls or finds
+[31:01] things that are in specific locations in
+[31:03] memory.
+[31:05] But, since we have so many types of
+[31:06] memory and because processes see virtual
+[31:08] memory, which is not real memory, things
+[31:10] can get pretty complicated. So, I'll try
+[31:12] to keep this as simple as possible.
+[31:15] Now, the first type of memory addressing
+[31:16] we'll look at is register addressing.
+[31:19] Remember, registers are small memory
+[31:21] containers which are extremely fast,
+[31:23] very small, and conveniently placed very
+[31:25] close to the CPU.
+[31:27] Registers are used in basic math or
+[31:29] instruction-related operations directly
+[31:31] by the CPU.
+[31:32] Register addressing is when your
+[31:34] computer uses a register address such as
+[31:37] EAX, let's say, to add access data
+[31:40] stored in that register.
+[31:42] Addressing works the same way for all
+[31:44] registers regardless of what they are
+[31:46] used for. Some registers become math
+[31:49] operands, some store memory addresses,
+[31:51] some store offsets, but they are all
+[31:54] accessed and addressed the same way by
+[31:55] their unique names.
+[31:57] The second type of memory addressing is
+[31:59] immediate addressing. This is when your
+[32:00] computer uses a data value that is
+[32:02] supplied as part of an instruction such
+[32:04] as add five
+[32:06] or look at this memory address and add
+[32:09] 10 to it. Immediate addressing is also
+[32:12] very fast and simple because your
+[32:14] computer doesn't need to look anywhere
+[32:15] else for the data. It just uses the data
+[32:17] in the instruction itself. So, it's a
+[32:19] way to use the data inside of a
+[32:20] register.
+[32:22] The third type of memory addressing is
+[32:23] direct addressing. The direct addressing
+[32:26] is when your computer uses a memory
+[32:28] address
+[32:29] that is in RAM this time that is
+[32:32] supplied as part of an instruction. So,
+[32:34] it's basically like saying, use the data
+[32:36] from this location. But, direct
+[32:39] addressing has a limitation. It can only
+[32:40] access data on the same memory page as
+[32:43] the instruction. So, the data needs to
+[32:45] be somewhat close to the requesting
+[32:47] code.
+[32:48] The fourth type of memory addressing is
+[32:49] indirect addressing. Indirect addressing
+[32:51] is when your computer uses a memory
+[32:53] address that contains another memory
+[32:55] address. So, it's like a double pointer
+[32:57] dereferencing. In this case, your
+[33:00] computer can access data on any memory
+[33:02] page, not just the same one as the
+[33:04] instruction, but indirect addressing
+[33:06] takes more time and effort for your
+[33:08] computer since it involves two steps to
+[33:10] read two memory addresses instead of
+[33:12] one.
+[33:13] The fifth type of memory addressing
+[33:15] we'll look at is base plus offset
+[33:17] addressing. This happens when your
+[33:19] computer uses a value stored in a
+[33:21] register or a pointer as the base
+[33:24] location from which to start counting
+[33:27] and then adds an offset value supplied
+[33:30] with the instruction. It's like saying,
+[33:32] starting from this value, count 100 more
+[33:36] bytes and read what's in there at the
+[33:39] end.
+[33:40] Base plus offset addressing is very
+[33:42] useful for accessing data in lists,
+[33:44] arrays, or other predictable data
+[33:48] structures which are organized
+[33:49] collections and of data in memory
+[33:51] because you know where the starting
+[33:53] point is and you know the index of a
+[33:55] specific value that you want to access,
+[33:57] so you can easily reach the desired
+[33:59] location by multiplying the known index
+[34:02] by the size of an element in that data
+[34:04] structure.
+[34:05] Now, if you have a programmed in any
+[34:07] scripting or programming language, I'm
+[34:08] sure this sounds very familiar, but now
+[34:10] it has a name.
+[34:11] This type of addressing can also be used
+[34:13] with data buffers where we know exactly
+[34:15] how much data we have in the buffer, so
+[34:17] we know how to calculate the offset up
+[34:19] to which we need to read it.
+[34:21] Small note here. Pretty much all the
+[34:23] primary and secondary storage devices
+[34:25] are random in the way they are accessed,
+[34:27] not just RAM, which is random access
+[34:29] memory. That means that at any point in
+[34:31] time you can read any memory location in
+[34:33] cache, in RAM, or on a hard drive, or an
+[34:35] SSD. Random is opposed to sequential.
+[34:39] It's not random as in we just read
+[34:42] random data. It's random as in we can
+[34:45] read from any random location at any
+[34:47] time. We don't need to scroll or shift
+[34:49] in any way to get it. As an exception,
+[34:51] magnetic tape, which is still widely
+[34:53] used for backups, is sequential in
+[34:55] access, which means that you have to
+[34:56] read through the entire chunk of data
+[34:58] before you can access a specific
+[34:59] location. Just keep this difference in
+[35:01] mind.
+[35:02] Now, storage security is a very big
+[35:05] topic and we're not going to focus on
+[35:06] this right now, but since we talked
+[35:08] about so many types of memory, here are
+[35:10] a couple of risks from a security
+[35:11] perspective that you should be aware of.
+[35:14] Data remanence
+[35:15] happens when your data remains on a
+[35:17] storage device even after you delete it
+[35:19] or format it. It can also allow someone
+[35:21] else to recover your data with special
+[35:23] tools.
+[35:24] Now, to prevent this, you need to use
+[35:25] utilities that are able to overwrite
+[35:27] your entire storage device with random
+[35:29] data or destroy your storage device
+[35:31] physically or magnetically. SSDs are
+[35:34] notoriously difficult to sanitize this
+[35:36] way as they have a mind of their own, in
+[35:38] fact, they microcontroller of their own
+[35:40] that decides where data should go. And
+[35:42] sometimes they don't let you write data
+[35:44] exactly where you want to. So, unless
+[35:47] your SSD vendor provides a specialized
+[35:49] tool for this specific purpose, you're
+[35:51] much safer by simply destroying the SSD
+[35:53] physically. I know, bummer. Next, we
+[35:56] have theft. That's a real risk, it
+[35:58] always is with everything. No matter
+[36:00] what kind of access control you have in
+[36:01] place, how robust your firewall and your
+[36:03] authentication system is, if someone is
+[36:05] simply able to walk in your data center
+[36:07] and leave with a couple of SSDs in their
+[36:09] backpack, you just got breached, right?
+[36:11] To prevent this, you need to use disk
+[36:13] encryption or keep your storage device
+[36:15] in a safe and secure place.
+[36:16] We also have something called a cold
+[36:18] boot attack.
+[36:19] Not often encountered, but this is when
+[36:21] some attacker with physical access to a
+[36:23] computer performs a memory dump of a
+[36:25] computer's RAM by executing a hard reset
+[36:28] on the target machine.
+[36:30] Uh typically, cold boot attacks are used
+[36:31] for retrieving encryption keys from a
+[36:33] running operating system since most data
+[36:35] inside RAM is in clear text including
+[36:38] sensitive information. To prevent this,
+[36:40] you need to use memory encryption
+[36:41] techniques and as you can guess, this is
+[36:43] also a technique for digital forensics
+[36:46] when you actually need and are
+[36:47] authorized to grab the contents of the
+[36:49] running memory of a computer.
+[36:51] A memory dump attack is when someone
+[36:53] else accesses your memory image dumps or
+[36:55] system crash dumps to extract encryption
+[36:57] keys or other sensitive information. To
+[36:59] prevent this, again, use encryption.
+[37:02] Next, emanation security is a whole new
+[37:04] type of security that's that not many
+[37:06] people think about. Emanations are the
+[37:09] electrical signals or radiation that
+[37:11] devices produce when they operate. They
+[37:14] are normal, they are natural. Emanations
+[37:16] can be electromagnetic or radio
+[37:17] frequency signals.
+[37:19] Some devices emit emanations on purpose
+[37:22] because they use them to communicate
+[37:24] with other devices such as Wi-Fi
+[37:25] devices, Bluetooth, GPS, GSM
+[37:28] communication, NFC, and so on.
+[37:30] Basically, any wireless communication
+[37:32] technology.
+[37:33] These devices are obvious sources of
+[37:36] emanations and you probably know how to
+[37:37] protect them with encryption, but some
+[37:39] devices create emanations, let's say, by
+[37:42] accident because they use electronic
+[37:45] components that produce them as a side
+[37:46] effect.
+[37:48] For example, monitor and TV cables,
+[37:50] network cables, even keyboard USB
+[37:53] cables.
+[37:54] The interesting topic here is that with
+[37:55] the proper tools, knowledge, and
+[37:58] patience, and a bit of luck, an attacker
+[38:00] could potentially decode what is being
+[38:02] sent over a wire simply by analyzing the
+[38:05] electromagnetic field it generates
+[38:08] around it.
+[38:09] And if a display cable might be too
+[38:11] complex for this and running at a very
+[38:13] high speed, think of an USB keyboard
+[38:16] where a user might be able to press
+[38:17] maybe one to three keys per second. If
+[38:21] each key generates a specific
+[38:23] electromagnetic signature and you're
+[38:25] able to intercept those over the cable,
+[38:27] there you go. You just got a keylogger
+[38:30] without installing any software on the
+[38:32] victim computer.
+[38:33] To protect against emanations, one word
+[38:36] you need to remember is TEMPEST. This is
+[38:39] a government research project that
+[38:41] studies how to monitor and prevent
+[38:43] emanation interception.
+[38:45] TEMPEST stands for transient
+[38:47] electromagnetic pulse emanation standard
+[38:50] and you probably don't need nor will you
+[38:53] be able to remember that, but it also
+[38:55] refers to any technology related to
+[38:56] emanation security.
+[38:58] Countermeasures against interception
+[39:00] attack focused on emanations include
+[39:02] Faraday cages. This is usually a box,
+[39:05] but can also be a room, a secure cage in
+[39:07] a data center, or even a building that
+[39:09] has a metal mesh that surrounds the area
+[39:11] on all sides. Faraday cages act as a
+[39:13] shield that blocks emanations from
+[39:15] entering or exiting that area. You don't
+[39:17] have any Wi-Fi or GSM signal in a
+[39:20] Faraday cage.
+[39:21] Another security measure is white noise.
+[39:24] This is a false signal that you
+[39:25] broadcast to mask your real emanations.
+[39:28] White noise can be used to confuse or
+[39:29] disrupt eavesdroppers. It's kind of like
+[39:33] the significance of the term white in
+[39:35] white noise. It's kind of It's kind of
+[39:36] like the
+[39:37] It's analogous white light. You know,
+[39:41] like white light is made up of different
+[39:43] frequencies. It's basically all the
+[39:44] colors are found inside white light. Uh
+[39:47] the same goes for white noise. It
+[39:49] contains sounds over all frequencies, so
+[39:52] it becomes a jamming noise, right?
+[39:54] That's why we call it white noise. It
+[39:56] might be illegal, depending on where you
+[39:58] live, because if you're trying to jam
+[40:00] your communications, you'll be jamming
+[40:02] everybody else in the same area or on
+[40:04] the same frequencies, too. Control zone
+[40:06] is an area in an environment that uses
+[40:08] both a Faraday cage and white noise
+[40:10] generated to protect it from
+[40:12] interceptions. Talk about overkill.
+[40:15] Shielding refers to a material that
+[40:17] covers cables or even some components to
+[40:19] reduce their emanations. Uh shielding
+[40:21] can be built into some equipment, such
+[40:23] as shielded twisted pair, that's STP
+[40:25] cables. And it's not just for security
+[40:27] purposes. Using STP cables instead of
+[40:30] classic UTP cables is useful to avoid
+[40:32] interference, like when you need to run
+[40:34] data cables in the same cable conduit as
+[40:37] power cables.
+[40:39] Another measure is encryption. Pretty
+[40:41] obvious, right? You can apply encryption
+[40:42] to your data before it's transmitted or
+[40:44] stored on any devices that emit
+[40:45] radiations, uh so that if your data is
+[40:48] intercepted, well, at least it's not
+[40:50] usable. It might not sound like much,
+[40:53] but think about it. It's pretty much the
+[40:54] only security measure that we have when
+[40:56] transmitting data over Wi-Fi.
+[40:58] Wi-Fi can be intercepted by anyone, even
+[41:00] outside our building, so we can assume
+[41:02] that our communication will get into
+[41:04] intercepted at some point, but we
+[41:06] encrypt the data to make sure that the
+[41:08] data is useless to any intercepting
+[41:10] individuals.
+[41:12] Just a couple more ideas about TEMPEST.
+[41:14] Uh TEMPEST attacks can also target
+[41:16] unexpected devices in your network.
+[41:18] Actually, even devices that are not even
+[41:20] directly connected to the network, such
+[41:22] as computer monitors,
+[41:24] CRT monitors, you know, the old big and
+[41:26] thick ones before LCDs. Those emit a lot
+[41:29] more radiation that is potentially
+[41:31] interceptable and decodable, as opposed
+[41:33] to LCD monitors, LED and OLED monitors,
+[41:35] which theoretically cannot be
+[41:37] eavesdropped on based solely on the
+[41:39] radiation that they emit. Still, the
+[41:41] computer cable that leads to the monitor
+[41:43] is a risk factor, especially if it's not
+[41:45] shielded and isn't all the standard,
+[41:47] perhaps like a VGA cable, not HDMI,
+[41:50] DisplayPort, or USB-C using Thunderbolt.
+[41:54] Next, we have printers as a high-risk
+[41:55] device. That's because printers can be
+[41:57] used and physically accessed by someone
+[41:59] else who can take a copy of the
+[42:01] documents that they print.
+[42:02] This can allow someone else to access
+[42:04] your data without your knowledge.
+[42:05] Printers can also store data locally,
+[42:07] often on a hard drive. Some retain
+[42:10] copies of what they print indefinitely
+[42:12] or until the hard drive fills up. This
+[42:15] can also allow someone else to access
+[42:16] your data if they steal the printer hard
+[42:18] drive or the entire printer.
+[42:20] And printers are not known for being
+[42:22] among the most secure devices out there,
+[42:24] because they are designed and
+[42:26] implemented with a very strong focus on
+[42:28] usability, so not so much on security.
+[42:32] Also, they're usually exposed to almost
+[42:34] anyone and everyone on the network for
+[42:36] convenient access and are often not
+[42:38] designed to be secure systems.
+[42:41] Fun tip for this. Search on Google for
+[42:44] Doom running on a Canon printer to get a
+[42:47] feeling of just how bad security on
+[42:49] these devices is. Input devices, such as
+[42:51] keyboards and mice, can also be bugged
+[42:53] by someone else who can simply attach a
+[42:55] device inside them or along the
+[42:56] connection cable that captures all the
+[42:58] keystrokes or movements and clicks that
+[43:00] take place
+[43:01] and transmits them to a remote receiver.
+[43:04] Uh this has the same effect as TEMPEST
+[43:05] monitoring, but can be done with much
+[43:07] less expensive gear.
+[43:09] Additionally, if your keyboard and mouse
+[43:11] are wireless, including Bluetooth, their
+[43:12] radio signals can be intercepted. To
+[43:15] protect your keyboard and mice from
+[43:16] eavesdropping, you can use shielding if
+[43:18] cables are involved or encryption if
+[43:20] they're wireless.
+[43:22] Modems. Yes, modems. Some companies
+[43:24] still have them, and a large number of
+[43:26] them don't even know that they have
+[43:27] them, since they haven't been used since
+[43:30] generations ago.
+[43:31] Modems can um also create uncontrolled
+[43:34] access points into your network that
+[43:36] bypass all your perimeter security. Not
+[43:38] going to say secure your modems, enable
+[43:41] encryption. No, simply get rid of them
+[43:44] now.
+[43:45] All right, let's talk about firmware.
+[43:47] Firmware is a type of software, just a
+[43:49] small set of instructions,
+[43:51] stored in a chip that controls the basic
+[43:54] operations of a device. When the device
+[43:56] is a simple one, like a printer or flash
+[43:59] drive or smart home IoT device, like a
+[44:02] door sensor, smart light bulb, it
+[44:05] doesn't really run a full operating
+[44:07] system, but a small set of instructions
+[44:09] usually called a firmware.
+[44:11] Yes, you could potentially call it the
+[44:14] operating system, {quote} {unquote}, of
+[44:16] that device, but you don't, because it's
+[44:19] nowhere near that complex. And yes,
+[44:21] there are some devices, especially
+[44:22] things like IoT devices, home routers,
+[44:25] smartish appliances, smart TVs, where
+[44:27] this distinction is a little blurred.
+[44:29] They are running code a bit more complex
+[44:32] than the traditional firmware, but not
+[44:34] as complex as a real OS. Actually, they
+[44:36] are getting more and more complex. TVs,
+[44:40] smart assistants, even smart vacuum
+[44:41] cleaners, often run stripped-down
+[44:44] versions of Linux or Android.
+[44:46] Uh we also have types of firmware that
+[44:47] control the booting process of a
+[44:49] computer. So, it's a set of instructions
+[44:51] that gets executed before the OS even
+[44:54] has a chance to start loading itself
+[44:56] into memory.
+[44:57] BIOS. You probably heard about this one.
+[45:00] Stands for Basic Input/Output System,
+[45:02] and it's the legacy type of firmware
+[45:05] that was used in older computers.
+[45:07] BIOS contains the simple instructions
+[45:09] that look for components in your
+[45:10] computer, initialize them, check them to
+[45:13] see if they're working correctly, so
+[45:14] that the process of loading an operating
+[45:16] system can begin safely. Now, for
+[45:18] example, the computer must be aware of a
+[45:20] functional hard drive, must know how to
+[45:22] access its uh the partitions and the
+[45:24] file systems on it uh before it can even
+[45:27] attempt to load an operating system.
+[45:30] That's where the BIOS comes in. BIOS has
+[45:32] some limitations, such as support for
+[45:35] smaller hard drives, slower boot times,
+[45:37] almost no security features whatsoever,
+[45:40] and no mouse support. Imagine that.
+[45:43] Remember, we're still talking about the
+[45:45] original BIOS, which now is considered
+[45:47] legacy and obsolete.
+[45:49] So, because enough is enough, we just
+[45:50] couldn't stand anymore the lack of mouse
+[45:53] support in BIOS, so we invented a BIOS
+[45:55] with mouse support and called it UEFI,
+[45:58] which stands for Unified Extensible
+[46:01] Firmware Interface.
+[46:03] And it is the modern type of firmware
+[46:05] that replaces BIOS in most computers.
+[46:08] UEFI provides support for all the same
+[46:11] functions as BIOS, with many
+[46:13] improvements, such as support for larger
+[46:15] hard drives, faster boot times, a lot of
+[46:17] security features this time, if you know
+[46:19] about them and you choose to enable
+[46:20] them, of course. And, lo and behold,
+[46:23] mouse support.
+[46:25] Among the security features uh
+[46:27] introduced by UEFI are the following
+[46:29] two. The first one is Secure Boot. This
+[46:31] is a a feature of UEFI that prevents
+[46:34] loading device drivers or an OS that is
+[46:36] not signed by a pre-approved digital
+[46:38] certificate. Secure Boot ensures that
+[46:41] only the OS boot files that pass
+[46:44] attestation can run. Attestation means
+[46:47] that the uh means the validation of of
+[46:49] drivers and the of the OS through a
+[46:52] digital signature.
+[46:53] The idea behind Secure Boot was to
+[46:55] mitigate potential malware that could
+[46:57] infect the BIOS, and Secure Boot was
+[46:59] based on public key cryptography to
+[47:02] validate any code that gets loaded by
+[47:04] the BIOS when the computer starts.
+[47:06] The second one is Measured Boot. This is
+[47:08] a feature of UEFI that calculates a hash
+[47:11] of every element involved in booting the
+[47:13] computer. The hashes are stored in the
+[47:15] Trusted Platform Module, the TPM. The
+[47:18] hashes of the most recent boot can be
+[47:20] compared against known good values to
+[47:22] determine if boot components have been
+[47:23] compromised. Keep in mind that Measured
+[47:26] Boot does not stop the process of
+[47:28] booting. It just records the hashes used
+[47:31] in the boot, right? You need some other
+[47:33] policy
+[47:34] to enforce halting the boot process in
+[47:37] case some discrepancies are detected. Uh
+[47:40] you might think, well, then what's the
+[47:42] point of it if it cannot protect an
+[47:44] infected PC from booting? The idea
+[47:46] behind it is that you will need a
+[47:48] high-level place of software or control
+[47:51] device that needs to make a decision
+[47:53] based on the results reported by
+[47:54] Measured Boot.
+[47:56] The software is something usually
+[47:57] integrated in the OS by your company, so
+[48:00] that any decision of not allowing
+[48:02] network access, for example, or
+[48:04] activating a quarantine by placing the
+[48:07] device in a quarantine VLAN in case of
+[48:10] failures reported by Measured Boot,
+[48:12] that's something that an application
+[48:14] running on top of the operating system
+[48:16] must do. Uh it's not going to be a
+[48:18] low-level functionality, but a
+[48:20] high-level one. Uh fun stuff about
+[48:22] Secure Boot. As secure as it might seem
+[48:26] and as a good idea it might sound uh to
+[48:29] have all components loaded by the BIOS
+[48:31] digitally signed,
+[48:33] it is very hard to implement. All
+[48:34] computers need to have a platform key,
+[48:37] which is the root of trust anchor that
+[48:40] establishes the trust between the
+[48:42] firmware and the hardware it's running
+[48:43] on. That key should be unique for each
+[48:46] product line or at least for an entire
+[48:48] vendor, and it should be rotated as
+[48:50] often as possible. The problem found in
+[48:52] 2022
+[48:54] was found in a compromised platform key
+[48:58] disclosed on GitHub. The problem was not
+[49:01] only the fact that the key wasn't
+[49:03] rotated for like 10 years, but it was
+[49:06] used all this time by many vendors, all
+[49:09] using the same key. Now, such a private
+[49:11] key being compromised basically
+[49:13] invalidates everything that Secure Boot
+[49:15] attempted to accomplish.
+[49:17] A quick research demonstrated that over
+[49:19] 200 laptop models were at risk due to
+[49:22] this compromised older shared key.
+[49:25] Another thing that you need to keep an
+[49:27] eye out as a security professional.
+[49:29] Google search for uh Secure Boot
+[49:32] Compromised 200 Models, something like
+[49:34] this, for a very interesting read.

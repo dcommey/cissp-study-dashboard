@@ -1,0 +1,1342 @@
+[00:08] All right, let's talk about implementing
+[00:10] access control. Now, as you know, access
+[00:12] control is a process of granting or
+[00:15] denying access to resources such as
+[00:18] files, you know, applications, data
+[00:21] storage devices, and we do this based on
+[00:23] the identity and the level of
+[00:25] authorization of the users that request
+[00:28] that access, right? So, let's see what
+[00:30] are the theoretical and practical
+[00:32] aspects of implementing access control
+[00:34] in real life.
+[00:36] Now, first of all, we need to define
+[00:38] permissions, rights, and privileges.
+[00:41] Now, some people use these terms
+[00:43] interchangeably, but they don't always
+[00:45] mean the same thing.
+[00:47] Permissions are the most specific and
+[00:50] granular term. They refer to the access
+[00:53] granted for an object such as a file.
+[00:56] Permissions say what you can do with the
+[00:59] object. In case of files, that would
+[01:01] mean either create, read, edit, or
+[01:04] delete the file.
+[01:05] Operating systems also have the concept
+[01:07] of executing files, which, translated in
+[01:10] permissions, is a special case of read
+[01:12] access, which means that certain files,
+[01:14] compiled programs, or scripts can be
+[01:17] assigned a permission of execution.
+[01:20] Permissions are usually assigned by the
+[01:22] owner of the object, and they can be
+[01:23] modified or revoked at any time, of
+[01:25] course. But, if you have read
+[01:27] permissions for a file, then you can
+[01:30] open it and read it, but you cannot
+[01:32] modify or delete it. If you have read
+[01:35] and execute permissions for an
+[01:36] application, let's say, you can run it,
+[01:39] but you cannot change it or remove it
+[01:41] altogether.
+[01:42] If you have permission to change data
+[01:44] for a database, you could retrieve or
+[01:47] update the information in the database,
+[01:48] but you cannot create or delete tables
+[01:51] or drop the entire database. Next,
+[01:54] rights are the more general and abstract
+[01:57] term, and they refer to the ability to
+[01:59] take an action on an object. For
+[02:01] example, a user might have the right to
+[02:03] modify the system time, let's say the
+[02:05] clock on a computer, or the right to
+[02:07] restore backed up data from a storage
+[02:10] backup appliance.
+[02:11] Rights are not always associated with a
+[02:13] specific object, but rather with a
+[02:15] function or a capability of that person
+[02:19] who acts upon those rights.
+[02:21] Uh next, we have privileges. These are
+[02:23] the most comprehensive and inclusive
+[02:25] term, and they refer to the combination
+[02:28] of rights and permissions that a user or
+[02:31] service has. Yes, services and
+[02:33] applications have privileges as well,
+[02:35] because they need to access databases,
+[02:38] files on the disk, remote resources.
+[02:40] They need to authenticate themselves to
+[02:42] third-party apps, so they can behave
+[02:44] just like users, which means that
+[02:46] controlling privileges for apps is
+[02:48] equally important. Privileges are
+[02:51] usually assigned according to the role
+[02:53] of the user or of the service. For
+[02:56] example, an administrator for a computer
+[02:58] will have full privileges to do anything
+[03:00] on the computer, but a regular user will
+[03:03] have, of course, limited privileges.
+[03:05] Similarly, for an app or a service,
+[03:08] privileges might include the ability to
+[03:10] access only files in the application's
+[03:12] working directory, or the ability to
+[03:14] connect only to a specific database.
+[03:17] All right, in the next section, we'll
+[03:18] cover a couple of common and often
+[03:21] encountered concepts
+[03:23] that authorization mechanisms are based
+[03:25] on. Let's take them one by one. First,
+[03:28] implicit deny. This is a very
+[03:30] fundamental principle of access control.
+[03:32] It means that access to an object is
+[03:35] always denied by default, unless that
+[03:38] access has been explicitly granted
+[03:40] somewhere.
+[03:41] You also think of this as a
+[03:43] deny-by-default
+[03:45] rule, and it's one of the most common
+[03:46] approaches in security. So, instead of
+[03:48] explicitly thinking about
+[03:51] denying all possible ways in which a
+[03:53] resource can be accessed, why not deny
+[03:56] all access to it? Then think about when,
+[03:59] how, and by whom that resource actually
+[04:01] needs to be accessed. It makes your life
+[04:04] much simpler and secure.
+[04:06] Another one here is an access control
+[04:08] matrix. This is a table that includes
+[04:11] the subjects, the objects, and the
+[04:13] assigned privileges at their
+[04:14] intersection.
+[04:16] When a subject attempts an action, the
+[04:18] system checks the access control matrix
+[04:20] to determine if the subject has the
+[04:22] appropriate privileges to perform that
+[04:24] action on that object. Note that this
+[04:28] covers much more than a single access
+[04:30] control list or an ACL.
+[04:32] Speaking of, an ACL, an access control
+[04:34] list, is usually implemented as a list
+[04:37] of subjects and their associated
+[04:38] permissions. And the ACL itself is
+[04:41] attached to an object. You can find ACLs
+[04:44] in operating system file systems, where
+[04:46] each file has an ACL attached to it,
+[04:48] specifying exactly which users on the
+[04:50] system can access it, and what kind of
+[04:52] permissions they have. ACLs can also be
+[04:54] found in networking devices, like
+[04:56] routers, firewalls, switches. When
+[04:59] attached to interfaces, they explicitly
+[05:02] list which protocols, or IP addresses,
+[05:05] or MAC addresses are allowed to send
+[05:07] traffic through that interface. Funny
+[05:09] thing here, the implicit deny principle
+[05:11] also applies to ACLs on interfaces, as
+[05:14] well. If some subject is not explicitly
+[05:17] permitted through an ACL, it means that
+[05:19] it is denied by default.
+[05:21] Uh funny thing here, the implicit deny
+[05:23] principle that we just mentioned also
+[05:26] applies to ACLs, as well. If some
+[05:28] subject is not explicitly permitted
+[05:31] through an ACL, it means that it is
+[05:32] denied by default. Sometimes we call
+[05:34] this approach the deny any any approach,
+[05:38] similar to the deny any any entry at the
+[05:40] end of an ACL, a term
+[05:42] initially coined by by Cisco syntax for
+[05:44] building ACL entries.
+[05:46] Next, capability tables are different
+[05:48] from ACLs in that a capability table is
+[05:52] attached to the subject, not to the
+[05:54] object. For example, a capability table
+[05:56] created for the accounting role will
+[05:59] include a list of all objects that the
+[06:01] accounting role can access, as well as
+[06:04] the specific privileges assigned to that
+[06:06] accounting role for these objects. So,
+[06:08] in contrast, ACLs are focused on objects
+[06:12] and capability tables are focused on
+[06:14] subjects.
+[06:16] We also have constrained interfaces.
+[06:17] These are way to restrict what users can
+[06:20] do or see based on their privileges.
+[06:23] Users with full privileges have access
+[06:25] to all the capabilities. Users with
+[06:28] restricted privileges have limited
+[06:29] access and thus they will see different
+[06:32] menus, different buttons on the same
+[06:35] application interface. The same applies
+[06:37] to CLIs, right? Command line interfaces,
+[06:39] where less privileged users don't have
+[06:42] access to all the commands or all their
+[06:44] parameters. Database views, where only
+[06:47] specific tables or predefined join
+[06:49] operations are allowed, are also an
+[06:52] implementation of constrained
+[06:53] interfaces.
+[06:55] We also have content-dependent control.
+[06:57] This is a way to restrict access to data
+[06:59] based on the content within the object.
+[07:01] A database view is also a
+[07:03] content-dependent control when viewed
+[07:06] from the perspective of the data that's
+[07:08] stored in it. A view retrieves only
+[07:11] specific columns from one or more
+[07:13] tables, creating a virtual table. In
+[07:16] this way, the users of that database who
+[07:18] access the view can only see the data
+[07:20] that they are allowed to, authorized to
+[07:22] see, and not anything else.
+[07:25] Another one is context-dependent
+[07:27] control. This is a way to restrict
+[07:29] access to data based on what the user
+[07:31] does before accessing the data. A
+[07:34] scripts or robots, especially all those
+[07:37] that crawl over the internet, might
+[07:39] exhibit unique behavior when accessing a
+[07:42] service that is not on par with what a
+[07:45] normal human would do. You might have
+[07:46] seen a CAPTCHA appearing from time to
+[07:49] time in websites where you are already
+[07:51] authenticated stating that you should
+[07:53] prove that you are human because some
+[07:55] abnormal behavior was detected and those
+[07:57] are a type of context-dependent control.
+[08:00] Context can also include the possibility
+[08:03] to restrict access to computers and apps
+[08:05] based on let's say the current day and
+[08:08] or time,
+[08:10] uh the state of the device being used,
+[08:11] or the location based on your IP address
+[08:13] of where the user is attempting the
+[08:15] access from.
+[08:16] Another one is the need to know concept,
+[08:19] another very important principle that
+[08:21] ensures that subjects are granted access
+[08:23] only to what they are required to know
+[08:25] for their work tasks and job functions.
+[08:28] Subjects may be able to request access
+[08:30] to classified or restricted data, but
+[08:32] they're not granted access unless they
+[08:34] actually need it to perform a job and
+[08:35] they can prove it, of course. The least
+[08:38] privilege principle, last but not least,
+[08:41] is sometimes connected with the need to
+[08:44] know principle. The only difference is
+[08:46] that the least privilege will also
+[08:47] include the rights to data action on a
+[08:50] system. For example, a user may have the
+[08:52] privilege to read a file but not to
+[08:54] modify or delete it if they don't need
+[08:57] this privilege for their job. A user may
+[08:59] also have the right to change their own
+[09:01] password but not to change other users'
+[09:04] passwords. Pretty common sense, right?
+[09:06] Finally, separation of duties is a
+[09:08] principle that ensures that sensitive
+[09:10] functions are split into tasks that need
+[09:13] to be performed by two or more
+[09:15] employees. This helps prevent abuse and
+[09:18] also human error many, many times, but
+[09:21] mainly it's about avoiding collusion and
+[09:23] corruption among employees.
+[09:26] Modeling access control. Now, access
+[09:28] control models are the frameworks that
+[09:31] we use to define access control rules.
+[09:34] In other other in simpler words,
+[09:37] how do you actually describe who has
+[09:39] access to what? So, here are some of
+[09:41] them.
+[09:42] I'm going to start with discretionary
+[09:44] access control, DAC or DAC.
+[09:47] This model allows the owner of an
+[09:49] object, let's say a file, to grant or
+[09:51] deny access to any other user. It's at
+[09:53] the owner's discretion, hence the name,
+[09:56] who gets access to that file, just like
+[09:59] the regular file sharing
+[10:01] system that you're already familiar with
+[10:03] in any operating system. Of course, the
+[10:05] owner has full control over the
+[10:07] permissions of the object, and it is the
+[10:09] most common model, and it's used by the
+[10:11] file systems on pretty much any
+[10:12] operating system out there.
+[10:14] Another one is role-based access
+[10:16] control, RBAC. This model uses roles,
+[10:19] surprisingly, which are often mapped to
+[10:21] user groups in order to assign
+[10:23] permissions to users. So, instead of
+[10:25] giving permissions directly to single
+[10:27] users, users are placed in groups, and
+[10:31] administrators assign privileges at the
+[10:34] entire group level. The groups are
+[10:36] usually mapped to some job function, so
+[10:39] if you have a specific role in the
+[10:40] company, you also have the privileges
+[10:42] according to that role. That's exactly
+[10:44] how user groups work on Windows, Mac OS,
+[10:47] and Linux operating systems, as well.
+[10:49] Another one is rule-based access
+[10:51] control, another acronym for RBAC, or
+[10:54] sometimes called RBRBAC,
+[10:58] just to create more confusion.
+[11:00] This model applies global rules to all
+[11:04] users. The rules allow or block access
+[11:06] to resources depending on whether the
+[11:08] users meet some conditions. For example,
+[11:10] a firewall
+[11:11] is going to use rules to allow or block
+[11:13] traffic to all users based on the
+[11:15] source, destination, port, protocol, and
+[11:17] other, perhaps, upper layer information,
+[11:20] like layer seven.
+[11:22] Another one is attribute-based access
+[11:24] control, ABAC. This model uses rules
+[11:28] that can include multiple attributes of
+[11:30] the users,
+[11:31] of the resources, or of the environment,
+[11:34] and access can be allowed or denied
+[11:36] based on the values of these attributes.
+[11:38] For example, a rule can allow employees
+[11:41] to access the network using a mobile
+[11:43] device, but would only accept specific
+[11:46] devices, like, you know, the company
+[11:48] provided device. Only specific versions,
+[11:51] only specific browsers, or and even only
+[11:53] during a specific time of day. This one
+[11:56] is an extremely flexible one. Another
+[11:58] one is mandatory access control, MAC.
+[12:00] This model uses labels to classify the
+[12:03] users and the resources according to
+[12:05] their security level, or clearance.
+[12:08] The labels are just some text, just some
+[12:11] text information that indicate how
+[12:14] sensitive the resources are, such as,
+[12:16] you know, top secret, secret,
+[12:18] confidential, and so on. These labels
+[12:21] are assigned by the system or by the
+[12:23] administrator and cannot be changed by
+[12:25] the users. So, it's completely opposed
+[12:27] to discretionary access control where
+[12:28] users have discretionary access to who
+[12:32] gets to to access their data. The users
+[12:35] can only access the resources that have
+[12:36] the same or lower label than their own.
+[12:40] For example, you have a label of secret,
+[12:42] you can access a secret document, but
+[12:44] not a top secret document.
+[12:47] The MAC model can also be implemented as
+[12:49] a compartmentalized environment which
+[12:52] separates the labels and data into
+[12:54] different so-called security domains, or
+[12:57] compartments with no relationship
+[12:59] between them.
+[13:00] What this implies is that the users can
+[13:03] only access the data that belongs to the
+[13:05] same compartment as their own,
+[13:07] regardless of their security clearance.
+[13:09] So, you need to be first a member of
+[13:11] that compartment before your security
+[13:13] clearance can actually mean something to
+[13:16] the resources in it. If you think about
+[13:18] it for a bit, this is MAC, mandatory
+[13:21] access control, combined with
+[13:22] need-to-know. Finally, risk-based access
+[13:26] control.
+[13:27] This one grants access after evaluating
+[13:30] the risk of the access request.
+[13:33] To implement this, it needs to be paired
+[13:35] with some machine learning perhaps to
+[13:37] make some predictions on the activity
+[13:40] based on some past behavior.
+[13:44] At a very simple level, you could just
+[13:45] implement this as deny all access from
+[13:48] devices that don't belong to the company
+[13:50] and to all users who don't use 2FA.
+[13:54] Because those connections are of higher
+[13:56] risk.
+[13:58] Banks often employ this approach by
+[13:59] monitoring the behavior your shopping
+[14:02] behavior of their clients to identify
+[14:05] abnormal transactions, maybe fraudulent
+[14:07] transactions, that might indicate a
+[14:09] stolen account or credit card.
+[14:12] Implementing authentication. Now, on a
+[14:14] previous talk, we briefly covered SSO,
+[14:17] single sign-on. And SSO can be
+[14:19] implemented with different standards and
+[14:21] protocols, mostly depending on where it
+[14:23] is running, like over the internet,
+[14:25] helping you log in on different websites
+[14:27] with the same Google account for
+[14:28] example, or within your internal
+[14:30] network. Now, those standards are mostly
+[14:32] going to be among the lines of SAML,
+[14:35] OAuth, OpenID, and OIDC.
+[14:39] These standards and protocols use XML,
+[14:41] which is the language that can describe
+[14:43] any kind of data, and we also use it to
+[14:45] exchange information between different
+[14:47] parties, in our case between the user,
+[14:49] the service provider, and the identity
+[14:51] provider. And speaking of terminology,
+[14:53] let's describe the following entities.
+[14:56] The user, and we all know who that is.
+[14:58] Keep in mind it could also be a service
+[15:00] account, like representing an
+[15:02] application, but also real human user.
+[15:05] Uh we also have the service provider.
+[15:07] This is the one that provides the
+[15:09] application or the website that the user
+[15:11] wants to access. Okay? Uh the user is
+[15:15] the one that requests access from the
+[15:17] service provider. It's the thing that
+[15:19] the user wants to access.
+[15:22] The third entity here is the identity
+[15:25] provider. This is the one that
+[15:26] authenticates the user and authorizes
+[15:28] the access to the service provider.
+[15:31] Now, obviously, the identity provider is
+[15:33] not going to be the same as the service
+[15:35] provider because we're talking about
+[15:36] SSO, we need a centralized point of
+[15:39] identity management. So, we talk to one
+[15:42] single IDP, to one single identity
+[15:44] provider, to gain access to multiple
+[15:47] SPs, multiple service providers. The
+[15:49] communication with the identity happens
+[15:51] over XML, just like we just said, and
+[15:54] these messages are called assertions.
+[15:56] These are sent to the service provider,
+[15:59] confirming or denying the user's access.
+[16:01] The service provider then grants or
+[16:03] denies the user's access to the service
+[16:06] based on the assertions it's received.
+[16:08] The assertions can contain information
+[16:09] about user's authentication,
+[16:11] authorization, and other attributes.
+[16:14] Let's talk about OAuth, OpenID, and
+[16:15] OIDC. Now, OAuth and OpenID are two open
+[16:19] standards that can be used to implement
+[16:21] SSO on the internet.
+[16:23] Now, over the internet, we cannot use
+[16:25] the same protocols and methods that we
+[16:27] use in the local network, like Kerberos
+[16:29] or Active Directory, because we don't
+[16:31] have all the elements that play a role
+[16:33] in authentication under a single control
+[16:37] or under our own control. And the
+[16:38] internet is considered an insecure
+[16:40] network, so we need to play by some
+[16:42] different rules.
+[16:44] OAuth is an authorization framework.
+[16:47] This is sometimes confusing as people
+[16:49] think that the auth in OAuth stands for
+[16:51] authentication. It doesn't. It stands
+[16:53] for authorization.
+[16:56] OAuth allows the user to grant access to
+[16:59] their account or data on one website to
+[17:02] another website without sharing their
+[17:05] credentials. For example, imagine you
+[17:07] have a Facebook account and you want to
+[17:09] use an app, a game, let's say, that can
+[17:11] send invites to your Facebook friends.
+[17:14] Right? Don't Don't do do That's
+[17:15] horrible. But, let's say, for the sake
+[17:18] of the explanation, that that's exactly
+[17:20] what you want to do.
+[17:21] When you use the game, it redirects you
+[17:24] to Facebook, where you log in and
+[17:26] authorize the app to access your account
+[17:28] and list of friends.
+[17:30] Facebook then sends the app a token,
+[17:33] which is a code that proves that
+[17:35] Facebook recognized and authenticated
+[17:37] you.
+[17:38] The app then uses the token to access
+[17:40] your Facebook account and to retrieve
+[17:43] the list of your friends. As you can
+[17:45] see, OAuth does not authenticate the
+[17:47] user, but only authorizes the exchange
+[17:50] of specific information related to that
+[17:52] user's account. In our case, the friend
+[17:54] list.
+[17:56] A benefit of OAuth is that you never
+[17:58] give your Facebook credentials to the
+[18:00] game, and you can also revoke the access
+[18:03] at any time.
+[18:04] OAuth 2.0 is the latest version of
+[18:06] OAuth, and it's not compatible with
+[18:08] OAuth 1.0.
+[18:11] OpenID is another authentication
+[18:13] protocol that allows the user to log in
+[18:15] to multiple websites with one identity,
+[18:17] uh which is maintained by a third-party
+[18:20] service called an OpenID provider.
+[18:22] When you want to log in to a website
+[18:24] that supports OpenID, it asks you to
+[18:27] enter your OpenID identity, which is a
+[18:30] URL. That's your unique identifier.
+[18:33] The website then contacts your OpenID
+[18:35] provider and creates a secure channel
+[18:37] for you. You are then redirected to your
+[18:39] OpenID provider, where you log in and
+[18:41] confirm your identity.
+[18:43] You are then redirected back to the
+[18:45] website where you are logged in. Now,
+[18:47] here, as you can see, OpenID
+[18:49] authenticates the user, but does not
+[18:51] authorize the access. There is nothing
+[18:54] in this process regarding what your user
+[18:57] can access after it is authenticated.
+[18:59] We're just validating identities. That's
+[19:02] it.
+[19:03] A benefit of OpenID is that you only
+[19:05] need to remember one identity and
+[19:07] password, and you can use it across
+[19:08] different websites. Not so many websites
+[19:11] use it, unfortunately. OIDC, or OpenID
+[19:14] Connect, is an authentication protocol
+[19:16] that uses OAuth 2, an authorization
+[19:19] framework like we just said, to verify
+[19:21] the identity of users and grant them
+[19:23] access to online services. OIDC provides
+[19:26] both authentication and authorization,
+[19:29] so also authentication, the thing that
+[19:32] was missing from
+[19:33] OAuth, which means it confirms who the
+[19:37] users are and what they can do. OIDC
+[19:40] works by using a JSON Web Token, JWT,
+[19:44] which is a code that contains
+[19:45] information about the user and the
+[19:47] service. OIDC gets a token from the
+[19:49] website that the users want to access.
+[19:52] The JWT, the token, can also include
+[19:55] profile information about the user, such
+[19:57] as their name, maybe their email
+[19:59] address.
+[20:00] AAA
+[20:02] Now, SSO can also be used on internal
+[20:05] networks, such as your corporate
+[20:07] networks, to simplify the user
+[20:08] experience and improve security.
+[20:11] Kerberos is the most common SSO solution
+[20:13] for internal networks, and it is an
+[20:14] important authentication system to know
+[20:16] for the exam.
+[20:17] SSO can also be used to access internal
+[20:20] networks from remote locations, such as
+[20:22] at home, when you're on the road. This
+[20:25] requires, of course, a VPN connection.
+[20:27] Two common network access protocols that
+[20:30] support SSO are RADIUS and TACACS+ These
+[20:33] protocols also provide authentication,
+[20:35] authorization, and accounting, which is
+[20:37] why people call them AAA protocols or
+[20:40] AAA protocols.
+[20:42] AAA protocols are protocols that provide
+[20:45] centralized access control for remote
+[20:47] systems. They protect internal network
+[20:49] from attacks by checking the identity
+[20:51] and access rights of the users who try
+[20:53] to log in. They can also help monitor
+[20:55] the network usage,
+[20:57] resource usage of the network, which can
+[20:59] also be used for billing or auditing
+[21:01] purposes.
+[21:03] Kerberos is a ticket-based
+[21:05] authentication system that verifies the
+[21:07] identity and the authorization of users
+[21:10] and servers on a network. In case you're
+[21:11] wondering, Kerberos is named after the
+[21:14] three-headed dog from Greek mythology
+[21:16] that guards the underworld.
+[21:19] It uses symmetric key cryptography,
+[21:22] which means that it uses the same secret
+[21:23] key to encrypt and decrypt data, and it
+[21:26] uses the Advanced Encryption Standard
+[21:27] AES as the encryption algorithm.
+[21:30] Kerberos also provides confidentiality
+[21:32] and integrity for the authentication
+[21:33] data and prevents eavesdropping and
+[21:35] replay attacks.
+[21:37] Kerberos has a complex infrastructure
+[21:39] with several components. At the center,
+[21:42] we have the Key Distribution Center,
+[21:44] KDC.
+[21:45] This is the trusted element in Kerberos
+[21:47] that provides authentication services.
+[21:49] It holds a database of all the users and
+[21:51] servers on the network along with their
+[21:54] secret keys. It also consists of two
+[21:56] parts, the Authentication Service, AS,
+[21:58] and the Ticket-Granting Service, TGS.
+[22:01] The way these work is that the AS,
+[22:04] Authentication Service, verifies the
+[22:06] identity of the users and issues them a
+[22:08] Ticket-Granting Ticket, TGT. Sounds
+[22:12] weird, but this is a generic ticket that
+[22:14] does not give you access to anything,
+[22:16] but allows you to request further access
+[22:19] to specific services in the network.
+[22:21] Think of it like this. You've been
+[22:23] granted access to the building, but to
+[22:25] enter specific offices or the data
+[22:27] center, you still need to show your ID
+[22:30] and guest pass to the reception. So,
+[22:32] then when a user wants to access a
+[22:34] specific network resource like a file
+[22:36] server, for example, the user goes to
+[22:38] the TGS, the Ticket-Granting Service,
+[22:42] shows their TGT, the Ticket-Granting
+[22:44] Ticket, and the TGS verifies the TGT
+[22:48] presented by the user, and if the
+[22:49] authorization rules say that the user is
+[22:52] allowed access to that specific server,
+[22:54] it issues them a service ticket, an ST,
+[22:58] to access that specific server.
+[23:00] The user then connects to the server,
+[23:02] shows their ST, the server validates the
+[23:05] ST with the TGS to make sure it's not
+[23:07] fake, forged, duplicated, or expired,
+[23:11] and then grants access to the user. It's
+[23:13] a bit a bit complicated, I know. Uh we
+[23:15] also have the Kerberos principal. This
+[23:17] is any entity that can request a ticket
+[23:19] from the KDC. This could be a user, a
+[23:22] machine, a service. The principal is
+[23:24] identified by a unique name in the
+[23:26] Kerberos database. Often the actual
+[23:29] corporate email address in case of
+[23:31] users.
+[23:32] The Kerberos realm is a logical area or
+[23:36] a domain that is controlled by Kerberos.
+[23:38] The realm is identified by a name such
+[23:40] as certifiedbreakfast.com or domain
+[23:43] name. The principals within the realm
+[23:46] can request tickets from the KDC and the
+[23:48] KDC can issue tickets to the principal
+[23:50] in their in the same realm. Kerberos, as
+[23:53] we just said, uses a database of
+[23:54] accounts to store the information about
+[23:56] the principals and their keys. The
+[23:57] database can be a directory service such
+[23:59] as Active Directory or a local database
+[24:02] such as the Security Account Manager SAM
+[24:04] database.
+[24:06] You might be wondering why use such a
+[24:08] convoluted authentication method
+[24:10] involving so many tickets. Isn't this a
+[24:12] troubleshooting nightmare? Well, the
+[24:14] tickets also ensure that the passwords
+[24:18] are never sent over the network, that
+[24:20] the actual resources that you're
+[24:21] accessing also never see your password,
+[24:24] and also that the authentication data is
+[24:26] secure and valid. Moreover, the tickets
+[24:28] have a limited lifetime and need to be
+[24:30] renewed or replaced when they expire, so
+[24:32] you get a lot of security features from
+[24:34] this distributed approach.
+[24:36] Speaking of expiration dates, a TGT, for
+[24:39] example, lives for about 10 hours. So,
+[24:41] when you come into the office in the
+[24:42] morning, you open your computer and you
+[24:44] log into the domain account, you're
+[24:46] basically requesting and getting a TGT
+[24:49] for the rest of the next 10 hours or so.
+[24:53] Until you go home, hopefully less than
+[24:55] 10 hours, so you can gain access to any
+[24:57] company resource without ever needing to
+[24:59] reauthenticate.
+[25:01] We briefly mentioned before RADIUS and
+[25:03] TACACS+. So, let's see
+[25:05] a bit more detail about these two
+[25:07] protocols.
+[25:08] RADIUS, which stands for Remote
+[25:11] Authentication Dial-In User Service,
+[25:14] something that you will not remember,
+[25:17] is a network protocol that provides
+[25:19] centralized authentication,
+[25:21] authorization, and accounting. So, it's
+[25:22] it's a AAA protocol, right? For access
+[25:25] connections, including when you're
+[25:26] connecting to VPNs, when you're
+[25:28] connecting to Wi-Fi networks, when
+[25:30] you're connecting to devices for
+[25:31] management access even, or admin access.
+[25:34] RADIUS is found in companies with many
+[25:37] points of entry that allow users to
+[25:39] connect to the internal network. We call
+[25:40] these points network access servers, and
+[25:43] a user can connect to any network access
+[25:45] server, which then sends the user's
+[25:47] credentials to the RADIUS server. The
+[25:49] RADIUS server verifies the user's
+[25:51] identity and access rights, and starts
+[25:54] recording user activity.
+[25:56] Keep in mind that the network access
+[25:57] server is considered the RADIUS client,
+[26:00] and the RADIUS server is considered the
+[26:02] authentication server. Just a little
+[26:05] terminology trivia here.
+[26:07] Now, to avoid confusion and fancy
+[26:09] naming, a network access server is, as
+[26:11] we just said, any point of entry in the
+[26:13] network. VPN servers are a good example,
+[26:15] but also switches, behind the wall jacks
+[26:18] in every office, access points, wireless
+[26:21] LAN controllers that implement the
+[26:23] 802.1X standard. They also request
+[26:26] credentials from their connected devices
+[26:28] and present those credentials to the
+[26:29] RADIUS server somewhere in the back end.
+[26:32] Then, the RADIUS server lets the actual
+[26:34] switch, the access point, or the VPN
+[26:36] server know whether to allow or deny
+[26:39] whoever is currently knocking at the
+[26:41] network's door.
+[26:42] RADIUS works over UDP as the default
+[26:45] transport protocol, and encrypts only
+[26:47] the password exchange, not the entire
+[26:49] session. Remember this.
+[26:50] RADIUS can also use other protocols such
+[26:53] as TCP or even TLS to encrypt data
+[26:55] session. But, the current version of
+[26:57] RADIUS is defined in RFC 2865,
+[27:01] and there's also an RFC uh 6614 that
+[27:04] defines how RADIUS can use TLS over TCP,
+[27:07] which is also known as a RADIUS/TLS
+[27:10] or RadSec.
+[27:12] These newer standards can encrypt the
+[27:14] entire session and are much more secure
+[27:16] than RADIUS over UDP. When using TLS,
+[27:19] RADIUS uses TCP port 2083.
+[27:22] When using UDP, RADIUS uses port 1812
+[27:26] for RADIUS messages and port 1813 for
+[27:29] RADIUS accounting messages. I know,
+[27:31] boring, but useful on exam day.
+[27:34] The next one is TACACS+, which stands
+[27:36] for the following mouthful: Terminal
+[27:39] Access Controller Access Control System
+[27:41] Plus. It's another network security
+[27:44] protocol used to control and manage user
+[27:48] access
+[27:49] to network devices such as routers,
+[27:52] switches, firewalls, and many other
+[27:54] devices.
+[27:55] It works by separating authentication,
+[27:58] again, verifying who you are,
+[28:00] authorization, what you're allowed to
+[28:02] do, and accounting, tracking what you
+[28:04] do. All these three processes making it
+[28:07] more flexible and secure than RADIUS.
+[28:09] TACACS+ is also often used by uh network
+[28:13] administrators to access sensitive
+[28:15] network equipment for management tasks.
+[28:17] So, for connecting over the management
+[28:18] network to uh devices.
+[28:21] This makes it very valuable in when you
+[28:23] have a large company where managing
+[28:24] access to network devices is critical.
+[28:27] Compared to other protocols like RADIUS,
+[28:29] TACACS+ offer more granular control over
+[28:33] user permissions and commands. It also
+[28:35] encrypts the entire communication
+[28:37] between the client, the user, and the
+[28:38] server, adding an extra layer of
+[28:40] security. This helps prevent sensitive
+[28:42] data like passwords from being
+[28:44] intercepted during transmission. TACACS+
+[28:47] is commonly deployed in environments
+[28:48] where high security is required, such as
+[28:50] enterprise networks or government
+[28:52] agencies because of its robust
+[28:55] capabilities for controlling and
+[28:56] monitoring
+[28:57] user actions or network devices.
+[28:59] Networking-wise, TACACS Plus works over
+[29:02] TCP port 49. In terms of encryption,
+[29:05] TACACS Plus encrypts the entire body of
+[29:07] the packet, but not the header, thus
+[29:10] protecting sensitive data such as
+[29:12] usernames and passwords. For hashing
+[29:13] security, a TACACS Plus can use
+[29:16] algorithms such as MD5, message digest
+[29:19] algorithm 5.
+[29:20] Though the specific encryption
+[29:21] algorithms may depend on the
+[29:23] implementation and your configuration,
+[29:26] MD5, by the way, is now considered
+[29:28] relatively weak, and it's often
+[29:30] recommended to deploy additional
+[29:31] security measures like firewalls and
+[29:33] VPNs around TACACS communications.
+[29:36] Let's talk about a couple of potential
+[29:37] attacks on these access controls and the
+[29:39] best practices for defending against
+[29:41] them. Let's start by defining some
+[29:42] common terms.
+[29:44] An asset is anything that has value to
+[29:46] an organization, such as data,
+[29:48] equipment, or even the reputation of the
+[29:50] company. An asset is what we aim to
+[29:52] protect, the single reason why security
+[29:54] exists in the first place.
+[29:57] A risk is the chance or probability that
+[30:00] something bad will happen to an asset.
+[30:03] A threat is anything that can cause harm
+[30:05] to an asset, such as a hacker, a fire,
+[30:08] natural disaster, or even human error.
+[30:12] A vulnerability is anything that can be
+[30:13] exploited by a threat, such as a
+[30:15] software bug, bad programming, or simply
+[30:18] lack of some protection mechanism.
+[30:21] Finally, an impact, the impact, is the
+[30:24] consequence or the damage that results
+[30:26] from a threat exploiting a
+[30:27] vulnerability, such as financial loss,
+[30:30] physical injury, data disclosure,
+[30:33] uh or even service disruption.
+[30:35] All this is relevant for risk
+[30:37] management, which is the process of
+[30:39] identifying, analyzing, and mitigating
+[30:41] risks. Risk management is about reducing
+[30:43] likelihood and or the impact of risks.
+[30:47] Note that it's always about reducing,
+[30:49] almost never about completely
+[30:51] eliminating them.
+[30:52] Or it might be about simply accepting,
+[30:55] living with that risk, or transferring
+[30:58] them to someone else. In other words,
+[30:59] making it someone else's problem.
+[31:02] Risk management cannot eliminate all
+[31:03] risks, but it can help a company be
+[31:05] aware of them and prioritize to fix at
+[31:08] least the major ones.
+[31:10] What are the most common attacks that
+[31:12] you'll see in real world when it comes
+[31:14] to protecting access control systems? Or
+[31:16] better said, when it comes to protecting
+[31:17] actual data and assets from access
+[31:19] control related threats.
+[31:22] First, we have privilege escalation, and
+[31:24] this is a generic type of attack that is
+[31:26] not a single specific technique in which
+[31:29] an attacker gains more access or more
+[31:31] control over system, at least more than
+[31:33] they are supposed to have.
+[31:36] How could they do that? Well, isn't that
+[31:38] the point of having access control and
+[31:39] permissions in the first place? Of
+[31:41] course, but we're on the topic about
+[31:43] attacks, so hackers will try to go
+[31:45] around these limitations. Normally,
+[31:48] users have limited privileges that
+[31:49] should be enough for their job, like
+[31:51] accessing their own files and
+[31:52] applications. Of course, some users may
+[31:55] have higher privileges such as
+[31:57] local or domain administrators, and they
+[31:59] can manage the entire system or the
+[32:01] network settings and network devices.
+[32:03] Users should not be able to get the same
+[32:05] privileges as administrators unless they
+[32:07] are authorized to do so. Attackers use
+[32:10] privilege escalation techniques to
+[32:12] exploit vulnerabilities or weaknesses
+[32:14] in the authentication systems of the
+[32:16] network itself. They look for bugs,
+[32:18] misconfigurations, weak algorithms that
+[32:20] can be cracked, or simply human errors.
+[32:23] For example, an attacker may send a
+[32:24] phishing email with a malicious
+[32:26] attachment to a user. If the user opens
+[32:28] the attachment, the attacker can connect
+[32:30] to the user's computer and start
+[32:31] executing commands with the same
+[32:33] privileges as the user, which may be
+[32:36] very low. Still, if the attacker was a
+[32:38] simple outsider who just sent an email
+[32:40] to an internal employee, that attacker's
+[32:42] privileges were just elevated from none
+[32:45] to a regular company internal user.
+[32:48] Even the initial compromise of or
+[32:50] foothold inside a network can be an
+[32:52] example of privilege escalation.
+[32:54] However, the attacker can then use other
+[32:56] techniques to get higher privileges like
+[32:58] admin rights by exploiting weaknesses on
+[33:01] the user's computer or other computers
+[33:03] on the same network.
+[33:05] We also have here horizontal privilege
+[33:06] escalation. This means getting the same
+[33:09] privileges as another user who may have
+[33:11] similar or slightly different privileges
+[33:14] than you do. This is basically digital
+[33:16] impersonation. The privileges don't need
+[33:18] even to be of a higher level than those
+[33:19] of the initial user. It might be just
+[33:21] enough that by acting as another user,
+[33:23] an attacker gains access to data that is
+[33:25] normally available only to that user
+[33:27] like their email accounts. The most
+[33:29] dreadful one is vertical privilege
+[33:31] escalation means getting higher
+[33:33] privileges than the current user such as
+[33:35] administrator or root. Attackers often
+[33:38] combine both types of privilege
+[33:40] escalation techniques to compromise as
+[33:42] many computers and accounts as possible
+[33:44] in a network. Navigating between users
+[33:47] and accounts is also sometimes called
+[33:48] lateral movement.
+[33:50] There are incredibly many tools out
+[33:52] there for hacking and in general for
+[33:54] privilege escalation. Just one of them
+[33:56] is Mimikatz, which is
+[33:58] a software that can extract passwords,
+[34:00] hashes, tokens, and other credentials
+[34:02] from the memory of the system. So,
+[34:04] attackers can use Mimikatz gets
+[34:06] administrator privileges on an already
+[34:07] compromised computer and then use them
+[34:09] to access other computers on the
+[34:11] network. Eventually, the attacker may
+[34:13] get domain administrator privileges,
+[34:15] which can give them full control over
+[34:17] the entire network. One of the ways to
+[34:19] prevent privilege escalation besides
+[34:21] having, you know, devices hardened and
+[34:23] users educated
+[34:25] is to use service accounts, which are
+[34:27] special accounts that are used to run
+[34:29] services or applications, so not for
+[34:31] user logins.
+[34:33] Service accounts should only have the
+[34:34] minimum privileges that are required for
+[34:36] the service to function properly, and
+[34:38] they should not use the local system
+[34:40] account, which has full administrative
+[34:42] privileges on the local system, as this
+[34:44] can expose the system to privilege
+[34:46] escalation attacks. Of course, this
+[34:48] approach only protects against
+[34:49] situations where an internal application
+[34:51] is exploited, not when actual user
+[34:54] accounts are compromised.
+[34:56] Password attacks. These are a type of
+[34:58] attack that
+[35:00] tries to access an account by guessing
+[35:02] or cracking the password behind it. At a
+[35:04] minimum, password attacks can be
+[35:06] prevented by using strong passwords that
+[35:08] are long, complex, and unique for each
+[35:10] account.
+[35:11] Fortunately, regardless of what hackers
+[35:14] and TV series might suggest, passwords
+[35:16] are not so easily stolen from computers,
+[35:19] as they are usually not stored in plain
+[35:21] text, but in a hashed form, which means
+[35:22] that they're transformed into a
+[35:24] fixed-length number using a hashing
+[35:27] function such as SHA or MD5.
+[35:29] Hashing functions are one-way functions,
+[35:32] which means that they cannot be reversed
+[35:34] to get the original password from the
+[35:36] hash.
+[35:37] However, some of them, such as MD5, are
+[35:39] known to have weaknesses and sometimes
+[35:41] can be broken by attackers. So, the
+[35:44] hashing algorithm definitely matters.
+[35:46] You can perform password attacks online
+[35:48] or offline, depending on whether the
+[35:50] attacker gets their hands on the hash or
+[35:52] not.
+[35:53] Online password attacks are just
+[35:55] attempts to log into an account through
+[35:57] a website or an application's interface
+[35:59] using different password combinations.
+[36:01] Very noisy,
+[36:03] generates a lot of logs, easy to detect,
+[36:06] extremely slow, almost impossible to
+[36:08] crack unless it's something very simple
+[36:10] like a four-digit PIN, and it definitely
+[36:12] doesn't work like it does in the movies.
+[36:13] Offline password attacks involve
+[36:16] stealing the hash from the hash
+[36:17] database.
+[36:19] Any system that validates passwords has
+[36:21] some sort of password hash database, and
+[36:23] then trying to crack it on your own
+[36:25] computer without actually hitting the
+[36:27] authentication service. But wait.
+[36:29] What are you trying to crack? We just
+[36:31] said that hashing functions are only one
+[36:33] way, so how do you do it? Well, you
+[36:35] don't really crack the hash, but you try
+[36:37] to guess the password that generated
+[36:40] that hash by trying as many combinations
+[36:42] as possible and hashing them all.
+[36:44] Actually, that's exactly what happens
+[36:45] when a legitimate user tries to
+[36:47] authenticate. They present the password,
+[36:50] then the presented password is hashed,
+[36:52] and then the hash is compared with the
+[36:53] one stored in the database. The user's
+[36:56] real password never reaches or even gets
+[36:59] known by the application. Since giving
+[37:02] the same input to a hash function will
+[37:04] always produce the same output, it's
+[37:06] safe to say that if the hash provided by
+[37:09] the user matches the one in our
+[37:10] database, then the password was correct,
+[37:13] even if nobody got to see that user's
+[37:16] password ever. The hashing function
+[37:18] matters also because some algorithms are
+[37:20] more prone to collisions than others. A
+[37:22] collision is when two different inputs
+[37:25] produce the same hashed output. We don't
+[37:29] want that to happen, especially with
+[37:31] hashes that are calculated based on
+[37:32] passwords, because it can potentially
+[37:34] mean that more than one password is
+[37:36] going to be accepted for authentication,
+[37:38] and you don't even know what second
+[37:39] password is.
+[37:41] And that makes a a password cracker's
+[37:42] life much easier.
+[37:44] You might think, well, what are the
+[37:46] chances for two inputs to produce the
+[37:48] same hash output? I mean, just look at
+[37:51] those hashes, they're huge. How often
+[37:53] does this happen?
+[37:55] Well, that's the question most people
+[37:56] ask before finding out about the
+[37:58] birthday paradox in probability theory.
+[38:01] The birthday paradox goes like this.
+[38:03] Let's say we have a room with 23 people.
+[38:07] What do you think is the probability
+[38:08] that two of them share the same
+[38:10] birthday?
+[38:12] Low?
+[38:13] No. It's actually 50%. If you think that
+[38:16] it might be wrong, think about it this
+[38:19] way. It's not about two people having a
+[38:21] specific birthday,
+[38:23] but about two people having the same
+[38:25] birthday, whichever that may be.
+[38:28] If you go to 60 people, the probability
+[38:30] goes up to 97%.
+[38:33] You would bet money on 97%, right?
+[38:36] But you might not bet your money on 60
+[38:39] people.
+[38:40] Similarly, in a group of hashed
+[38:41] passwords,
+[38:42] there's a high chance that two of them
+[38:44] have the same hash value, even if the
+[38:46] passwords are different. An attacker can
+[38:49] use this phenomenon to find a password
+[38:51] that produces the same hash as a target
+[38:54] password, and then use it to impersonate
+[38:56] the user or bypass the authentication
+[38:58] system altogether.
+[39:00] Now, back on the hacker's side, what do
+[39:02] we do? We start hashing passwords one by
+[39:04] one until we find one that matches the
+[39:06] hash.
+[39:07] When we find a matching hash, the input
+[39:09] for it was the right password.
+[39:12] Some of the common methods for online
+[39:13] offline password attacks
+[39:15] are dictionary, brute force, and rainbow
+[39:18] tables. Dictionary attacks, just like
+[39:20] name says, use a list of common or
+[39:23] likely passwords, such as words from a
+[39:26] dictionary, and then try them one by one
+[39:28] until they find a match. You can also
+[39:30] combine them with a few numbers, so that
+[39:32] password123,
+[39:34] password you keep using, is not secure
+[39:36] at all.
+[39:37] More advanced dictionary attacks can
+[39:39] also use password databases recorded
+[39:41] from known and published data breaches,
+[39:44] which are known to contain real
+[39:45] passwords, which might be reused by the
+[39:48] same users. Another approach is brute
+[39:50] force attack. This is a systematic
+[39:52] approach of trying every possible
+[39:53] password combination until they find a
+[39:55] match. This can take a very long time,
+[39:57] especially if you plan on using the
+[39:58] entire character set, that is lowercase
+[40:01] and uppercase letters, numbers, and
+[40:02] punctuation.
+[40:04] The longer the passwords, the more
+[40:06] difficult a brute force attack is going
+[40:08] to be, exponentially. A brute force
+[40:10] attack can crack any password, given
+[40:12] enough time, but it can be prevented by
+[40:15] using long complex passwords that have
+[40:17] many possible combinations. A brute
+[40:19] force attack can also use a list of
+[40:21] common or likely passwords, such as a
+[40:23] dictionary attack, to create something
+[40:25] called a hybrid attack. Rainbow table
+[40:28] attacks, now these are truly dangerous.
+[40:30] They use a precomputed table of hashes
+[40:32] and passwords and look up the hash to
+[40:35] find the corresponding password. So,
+[40:37] you're transforming a computational
+[40:39] problem of calculating a gazillion
+[40:42] possible hashes into a searching problem
+[40:45] where you just search for your hash in a
+[40:47] precomputed database of a gazillion
+[40:50] hashes for all those possible inputs.
+[40:53] Rainbow tables can be pretty huge even
+[40:54] for passwords of, let's say, eight to 10
+[40:57] characters. Uh you are already reaching
+[40:59] in the range of terabytes for a single
+[41:01] database. But hey, they work.
+[41:05] So, does this mean that any password
+[41:06] under, let's say, 10 characters or so is
+[41:09] unsafe because it can be found in a
+[41:11] rainbow table?
+[41:13] Well, it depends.
+[41:14] If the authentication system is designed
+[41:15] correctly, like in most Linux, Mac OS,
+[41:18] and Windows systems nowadays, the
+[41:20] password isn't just hashed and then
+[41:22] stored, but combined with a small set of
+[41:25] characters called a salt, and then hash.
+[41:28] Afterwards, that small set of
+[41:30] characters, it might be just make, let's
+[41:32] say, four random digits or letters.
+[41:35] It doesn't even need to be longer than
+[41:37] that.
+[41:38] And it doesn't even have to be secret.
+[41:40] And in Linux,
+[41:42] the salt is often stored in clear text
+[41:45] right next to the hashed password for
+[41:47] everyone to see.
+[41:48] But what the salt does is it makes
+[41:51] rainbow tables useless.
+[41:53] With salted hashes, if you manage to
+[41:56] find a hash in a rainbow table, the
+[41:57] input for that hash is not the actual
+[42:00] password because the hash was originally
+[42:02] calculated with a password and a salt.
+[42:05] So, theoretically, you would need one
+[42:07] rainbow table for each possible
+[42:10] salt value, which is pretty much
+[42:12] impossible for now at least. A spraying
+[42:15] attack is a type of password attack that
+[42:18] tries to avoid account lockouts by using
+[42:20] the same password for multiple accounts.
+[42:23] For example, an attacker may use
+[42:24] something like password123
+[42:27] and try with many usernames on a
+[42:29] website. If the website locks out an
+[42:31] account after a few failed attempts, the
+[42:33] attacker can switch to another user
+[42:35] account and try the same password again.
+[42:37] This way the attacker can increase the
+[42:38] chances of finding a valid password
+[42:40] without triggering the lockout
+[42:41] mechanism. And it's not just about
+[42:43] avoiding lockout, but it's also about
+[42:45] finding a
+[42:46] let's say a low-hanging fruit. Among the
+[42:48] thousands of users of a website, one of
+[42:50] them is quite likely to have a very
+[42:52] insecure password set up like
+[42:54] password123.
+[42:55] So, why struggle to crack a specific
+[42:57] user's password when you can just look
+[42:59] for the user with the weakest password.
+[43:01] It is something similar to brute forcing
+[43:04] the username instead of brute forcing
+[43:06] the password, if you if you enjoy this
+[43:08] different perspective. A credential
+[43:11] stuffing attack is when an attacker uses
+[43:13] stolen credentials from one system to
+[43:15] access another. For example, an attacker
+[43:17] may obtain a list of usernames and
+[43:19] passwords from a data breach or a
+[43:20] phishing campaign, and then use an
+[43:23] automated tool to try them on other
+[43:25] websites or applications. If the users
+[43:27] have reused the same credentials on
+[43:29] multiple systems, and many of them do,
+[43:32] the attacker can gain access to their
+[43:33] other accounts.
+[43:35] There's also sniffing attacks, which are
+[43:37] still considered offline attacks since
+[43:39] you're not interacting with the
+[43:40] authentication system directly, but in
+[43:42] very rare situations where certain older
+[43:45] protocols are used that transmit
+[43:47] information in clear text, that network
+[43:49] traffic can be intercepted. And if
+[43:51] you're smart and lucky enough to
+[43:53] intercept traffic right when a
+[43:54] legitimate user sends their credentials,
+[43:57] voila, you just have a valid password.
+[44:00] No cracking involved.
+[44:02] Just in case you're asked about this on
+[44:03] the exam, there are some features of
+[44:06] Mimikatz when it comes to stealing
+[44:08] passwords and preparing for privilege
+[44:09] escalation. So, among the things that
+[44:11] Mimikatz can do is uh it can access the
+[44:14] memory of LSASS, local security
+[44:16] authority subsystem service, that
+[44:18] process, which handles authentication on
+[44:20] Windows, and sometimes even extract the
+[44:23] plain text passwords for the users who
+[44:25] are logged in onto the system. It can
+[44:27] also get the password hashes, which are
+[44:28] encrypted versions of the passwords.
+[44:31] Mimikatz can also obtain the Kerberos
+[44:32] tickets on the machine and then also
+[44:34] create uh it can also create fake
+[44:36] tickets such as golden and silver
+[44:37] tickets, which can give the attacker
+[44:39] unlimited access to the network.
+[44:41] It can extract certificates and private
+[44:43] keys using the Windows Crypto API module
+[44:46] to access the certificates and private
+[44:48] keys stored in memory.
+[44:50] It can read LM and NTLM password hashes
+[44:52] in memory, which are older and weaker
+[44:54] versions of the password hashes used by
+[44:56] Windows, but they might still be
+[44:58] available if on certain systems
+[45:01] backwards compatibility is enabled by
+[45:03] the administrators.
+[45:05] And it can also list running processes,
+[45:07] helping the hacker identify the ones
+[45:08] that can be used to perform other
+[45:10] attacks or access other targets on the
+[45:12] network.
+[45:13] Uh Mimikatz can run as what is called a
+[45:16] fileless malware, which means it does
+[45:19] not leave any traces on the disk, so it
+[45:21] can bypass a lot of security controls.
+[45:23] It can be loaded into the memory of the
+[45:25] system using PowerShell scripts such as
+[45:27] Invoke-Mimikatz and then perform any of
+[45:30] its functions without touching the disk
+[45:32] of the compromised host.
+[45:34] Finally, other password-related attacks,
+[45:36] let's mention here pass the hash PTH.
+[45:39] This is a type of password attack that
+[45:41] uses the hash value of a password
+[45:43] instead of the plain text password to
+[45:45] authenticate to a system.
+[45:46] A pass the hash attack does not need to
+[45:48] crack the hash, but only needs to
+[45:49] capture it from the memory or while it's
+[45:51] being sent over the network. What it
+[45:53] does need is a system that is so badly
+[45:55] configured that it blindly accepts
+[45:58] hashes instead of passwords without any
+[46:00] scrutiny.
+[46:02] Funny enough, we don't need to look very
+[46:03] far to find such systems as a pass the
+[46:06] hash attack was mainly used against
+[46:08] Windows and Windows server systems that
+[46:10] use NTLM or or older versions of the
+[46:13] Kerberos protocols for authentication. I
+[46:15] say was because modern versions of
+[46:18] Windows don't suffer from these
+[46:20] vulnerabilities anymore, but they can
+[46:22] become vulnerable when backwards
+[46:23] compatibility with older OS versions is
+[46:26] enabled. So, that's something you do on
+[46:29] your own, right?
+[46:31] You actually open up your
+[46:33] you weaken your security posture and you
+[46:35] open up to attacks just by enabling
+[46:37] backwards compatibility. These protocols
+[46:39] store the hashes of the passwords in the
+[46:41] memory of a process called LSASS. Again,
+[46:44] Local Security Authority Subsystem
+[46:46] Service, which handles the
+[46:47] authentication requests. An attacker can
+[46:49] use a tool like Mimikatz to access the
+[46:52] LSASS memory, extract the hashes of the
+[46:54] users who are logged in to the system,
+[46:56] including any administrators that might
+[46:58] be logged in and that have high
+[47:00] privileges. Then the attacker can send
+[47:02] these hashes to another system and log
+[47:03] in as those users or as those admins of
+[47:07] the stolen hashes without knowing their
+[47:09] passwords, without ever finding them
+[47:10] out, and they can move laterally across
+[47:13] the network and access more systems
+[47:15] using the same technique. Other Kerberos
+[47:17] attacks include overpass the hash, which
+[47:20] is a variation of pass the hash because
+[47:22] in some scenarios the NTLM hash might
+[47:25] still be stored in memory even if NTLM
+[47:27] is disabled, and that hash can be used
+[47:29] by an attacker to request a TGT from the
+[47:31] TGS.
+[47:33] Pass the ticket. This attack captures
+[47:35] the tickets held in memory, which can be
+[47:37] injected into other systems while the
+[47:39] tickets are still valid, of course, and
+[47:41] they haven't expired.
+[47:43] The silver ticket attack uses the NTLM
+[47:45] hash of a service account. The silver
+[47:47] ticket grants the attacker the same
+[47:48] privileges as the service account.
+[47:51] The golden ticket attack uses the hash
+[47:53] of the Kerberos service account, KRBTGT,
+[47:57] which is a special account that encrypts
+[47:59] and signs all the Kerberos tickets in
+[48:02] the domain. Yikes.
+[48:04] The attacker can then create any ticket
+[48:06] they want for any user and for any
+[48:09] service within the AD domain. The golden
+[48:11] ticket gives the attacker unlimited
+[48:13] access to the network. Good chosen name.
+[48:16] Another one is Kerberos brute force.
+[48:18] Obviously, it's an attack that tries to
+[48:20] guess the passwords or the usernames in
+[48:21] the database. Uh the tools for this
+[48:23] attack exploit the fact that Kerberos
+[48:25] reports whether the usernames are valid
+[48:28] or not and uh then allow you to try
+[48:31] different password combinations for the
+[48:33] valid usernames.
+[48:34] AS-REP Roasting is an attack that
+[48:37] identifies user accounts that have
+[48:39] Kerberos pre-authentication disabled.
+[48:42] Kerberos pre-authentication is a feature
+[48:43] that prevents password guessing attacks
+[48:45] by requiring users to prove their
+[48:47] identity before requesting a TGT.
+[48:50] If pre-authentication is disabled, the
+[48:51] attacker can request a TGT for the user
+[48:53] account and retrieve uh that TGT that is
+[48:57] encrypted with the user's password. The
+[48:59] attacker can then try to decrypt the TGT
+[49:02] offline
+[49:04] in a in an attempt to guess the user's
+[49:06] password, knowing that it was encrypted
+[49:08] with that user's password. Finally,
+[49:10] Kerberoasting. It's an attack that
+[49:13] collects the TGS tickets that are used
+[49:16] by the service accounts. The TGS tickets
+[49:18] are encrypted with the service accounts'
+[49:20] passwords, which sometimes is weak or
+[49:23] set to some predictable default value.
+[49:25] The attacker can try to crack the TGS
+[49:28] tickets offline and obtain the service
+[49:30] accounts' passwords.

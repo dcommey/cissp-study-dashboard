@@ -1,0 +1,1141 @@
+[00:08] Hi everyone, welcome back. Today's
+[00:10] episode is going to be about risk
+[00:12] management. It's a very important topic
+[00:14] because everything revolves in security
+[00:17] around identifying and managing risk. If
+[00:20] we're not addressing risk, if we're not
+[00:22] doing something because there's a risk
+[00:23] behind it, because we're afraid of risk,
+[00:26] and we want to minimize it, then
+[00:28] we have no business talking about
+[00:30] security, okay? So,
+[00:32] the essence of risk management is that
+[00:35] it's a process that should find
+[00:38] potential threats that could harm or
+[00:40] expose our assets.
+[00:42] And then you should do something about
+[00:43] those potential threats, thus managing
+[00:46] your risk. It's also about evaluating
+[00:49] these threats in relation to, and this
+[00:51] is very very important, in relation to
+[00:54] the value of your assets and the cost of
+[00:58] any countermeasure that we might decide
+[01:00] to implement.
+[01:02] So, the bottom line here is that
+[01:04] implementing cost-effective solutions is
+[01:07] key to mitigating and reducing risk. Or
+[01:10] in other words, risk management is here
+[01:13] to reduce risk to an acceptable level,
+[01:16] but without spending more than it's
+[01:19] worth.
+[01:20] There are two big steps in risk
+[01:22] management.
+[01:24] Finding out where it is and doing
+[01:26] something about it, kind of like every
+[01:28] other thing that needs fixing in our
+[01:30] lives.
+[01:31] The risk assessment is a health checkup
+[01:34] for the company's environment. It is
+[01:36] supposed to deliver us a listing of
+[01:39] potential risks along with their
+[01:41] likelihood and their potential impact.
+[01:44] Now, the risk assessment process also
+[01:45] includes assessing the cost of different
+[01:48] various countermeasures that you might
+[01:50] implement for each identified risk,
+[01:52] which actually means how much would it
+[01:55] cost us to fix this security issue.
+[01:58] Now, the outcome of a risk assessment is
+[02:00] is not just a list. Well, yeah, it is a
+[02:02] list, but it is a prioritized list of
+[02:05] tasks sorted by their criticality, which
+[02:08] is a measure of how bad we consider a
+[02:10] specific risk to be. This criticality is
+[02:13] why we need to evaluate risk likelihood
+[02:16] and impact in the first place.
+[02:18] Likelihood means, how, you guessed it,
+[02:21] likely it is for the risk to happen, and
+[02:23] impact means how bad it would affect us
+[02:27] when it happens. Now, of course, this
+[02:29] prioritization helps us focus our
+[02:31] efforts and resources on the most
+[02:33] significant threats first.
+[02:36] Then, what we need to do is to have a
+[02:37] risk response phase, which is the action
+[02:40] phase, where security controls are
+[02:42] evaluated, you go through a cost-benefit
+[02:45] analysis, and we decide what we could do
+[02:47] about that risk, if we can do it, and if
+[02:50] it's worth doing it. Now, the process
+[02:52] can actually be more complex than this,
+[02:54] as adjustments would need to be made
+[02:57] based on many other conditions, like our
+[02:59] personal concerns about specific assets,
+[03:02] our history, were we breached before, or
+[03:05] how afraid are we
+[03:07] um about a potential attack that might
+[03:09] happen.
+[03:10] Our business priorities, our budget,
+[03:12] don't forget about that one, and
+[03:13] available resources, and of course, our
+[03:15] risk appetite. Finally, what you get is
+[03:18] a proposal, which is basically just a
+[03:20] report for senior management, so that
+[03:22] they have something to base their
+[03:24] decisions on.
+[03:25] Based on management decisions, the
+[03:27] selected solutions are then implemented
+[03:30] into the IT infrastructure.
+[03:32] Now, security risks don't involve just
+[03:35] the IT department. Security and risk
+[03:37] awareness should be in the mindset of
+[03:40] every employee in your company. Each
+[03:42] employee can become the weakest link in
+[03:44] the security chain
+[03:45] uh if they have a compromised account, a
+[03:47] PC that is left unlocked on the desk, a
+[03:50] door left open into the building, a
+[03:52] stolen laptop, a weak configured
+[03:55] password, and so on. Being aware of all
+[03:57] these risks, no matter what position
+[03:59] you're occupying in the company, is very
+[04:01] important.
+[04:02] When does the risk assessment process
+[04:04] stop? Or for how long should we keep
+[04:07] doing it, repeating it? Well, the
+[04:08] question is valid because no matter how
+[04:10] much budget you have, if you keep making
+[04:13] investments in your security
+[04:14] infrastructure, and you keep running
+[04:16] audits,
+[04:17] those audits,
+[04:19] guess what? They're going to keep
+[04:20] finding stuff to fix.
+[04:23] If you are on the fifth iteration,
+[04:25] congratulations, by the way, it might
+[04:27] not be a set of critical findings and
+[04:29] recommendations that the audit's going
+[04:31] to give you, like it happened the first
+[04:33] time you ever ran a security risk audit
+[04:35] or assessment, but the findings will
+[04:37] keep coming, nevertheless.
+[04:40] Where do you say stop in this situation?
+[04:43] Well, a good reason to stop something
+[04:44] that costs money is when you run out of
+[04:47] money, obviously. That's probably going
+[04:49] to happen sooner or later if you don't
+[04:51] do anything about it. And there isn't
+[04:54] much that you can do about it, except
+[04:55] perhaps making sure that when you reach
+[04:58] that point, you've already invested in
+[05:00] the stuff that really matters to you,
+[05:02] and only the low priority stuff is left
+[05:04] out.
+[05:06] On the other hand, you probably don't
+[05:08] want to run out of money while investing
+[05:10] in security because other things cost
+[05:13] money in your business as well, not just
+[05:15] security. Another reason to stop is when
+[05:17] you reach a point where the remaining
+[05:19] risk, also called residual risk, becomes
+[05:23] acceptable.
+[05:25] Security is a never-ending process, but
+[05:27] at some point, you will have to say
+[05:30] enough is enough. So, it might be
+[05:31] never-ending, but you have to end it at
+[05:33] some some point. In some specific moment
+[05:36] in the future, security will become
+[05:39] unbearable if you keep implementing more
+[05:41] and more security measures, and it will
+[05:44] affect usability and productivity of
+[05:46] your users. People won't have time to do
+[05:49] their jobs due to how many security
+[05:50] hoops they need to go through, or the
+[05:52] limitations imposed on their accounts
+[05:54] and the systems. At some point, the
+[05:56] investment will cost more than the
+[05:58] resource that you're trying to protect.
+[06:00] At some point, the cost-benefit analysis
+[06:03] will say,
+[06:05] "No, this is not worth it anymore."
+[06:08] Maybe the risk is too low because it is
+[06:10] very unlikely to happen, or if it
+[06:12] happens, it simply doesn't affect us
+[06:13] that badly. We can live with that risk
+[06:16] and that loss.
+[06:17] So, at some point, you will have to
+[06:18] accept residual risk as a reality that
+[06:21] you simply have to live with. It doesn't
+[06:22] mean giving up, okay? It only means that
+[06:25] you understand cost, benefits,
+[06:27] priorities, and that you are able to
+[06:29] make sound decisions based on these
+[06:32] inputs and these factors.
+[06:34] Well, since we are throwing around a lot
+[06:36] of terminology here, uh let's try to
+[06:39] define the language of risk management.
+[06:41] So, let's define the key terms when
+[06:43] speaking about risk management. Expect
+[06:45] the exam to assume that you have a very
+[06:47] good understanding of these terms.
+[06:49] Starting with the main one, assets.
+[06:51] Assets are the valuable resources owned
+[06:54] by the company, such as the company
+[06:56] data, the hardware, its reputation even,
+[07:00] and the personnel. And by the way, in
+[07:02] case you're asked on the exam, the most
+[07:04] important asset is always the human
+[07:06] factor, the employee, okay? Protect
+[07:08] lives before anything else. That is, of
+[07:11] course, if lives are threatened. Next
+[07:13] term is threats. Threats are potential
+[07:15] events or actions that can cause harm to
+[07:18] these assets. As generic as it sounds,
+[07:21] that's basically it.
+[07:23] Uh a threat agent or a threat actor,
+[07:26] this is an entity that can carry out a
+[07:28] threat, like hackers. But, they could
+[07:31] also be natural disasters or even your
+[07:33] internal careless employees, willingly
+[07:36] or unwillingly, we call these insider
+[07:38] threats. But, they are all threat agents
+[07:41] or threat actors.
+[07:43] Next up, security incident.
+[07:45] Uh that's an event that violates a
+[07:48] company's security policy. Remember this
+[07:50] definition. A security incident is
+[07:52] something that violates a company's
+[07:54] security policy. And then of course, it
+[07:56] poses a risk to its assets. Be very
+[07:59] careful with this term here, security
+[08:01] incident. Incident doesn't always mean
+[08:04] security incident.
+[08:06] An incident simply means something
+[08:08] happened
+[08:09] which might or might not be outside
+[08:11] normal operations. It might not be
+[08:13] against security policy, but it needs
+[08:15] further investigation to determine if it
+[08:17] represents a security incident.
+[08:20] Next up on the list we have threat
+[08:21] vector. This is the path or the means by
+[08:24] which a threat agent carries out a
+[08:26] threat. In other words, a threat vector
+[08:29] is the way a hacker hacks, so to say,
+[08:32] uh such as through email, through direct
+[08:34] network access, or physical access, or
+[08:36] even through social engineering.
+[08:38] A vulnerability is a weakness in a
+[08:41] system that can be exploited by a threat
+[08:43] agent to gain unauthorized access to
+[08:46] some data or to cause damage. Usually
+[08:49] this uh stems from software bugs,
+[08:53] but bad configurations or improper
+[08:55] testing or coverage of use cases can
+[08:57] also be uh the root cause for a specific
+[08:59] vulnerability.
+[09:01] Exposure, another term here. This refers
+[09:04] to the state of being at risk due to a
+[09:08] vulnerability. It's basically living
+[09:10] with a known vulnerability. You are
+[09:12] exposed.
+[09:13] Next up we have risk. Risk is the
+[09:15] potential for loss or damage when a
+[09:18] threat exploits a vulnerability.
+[09:21] It's a product of two factors,
+[09:23] probability and impact. So you're going
+[09:25] to see the formula often uh depicted as
+[09:28] risk equals probability times impact.
+[09:32] It's not necessarily a multiplication
+[09:34] operation in there, but it's something
+[09:36] that says that it's directly
+[09:37] proportional to how high the probability
+[09:40] and the impact both are.
+[09:42] So, either probability or impact or both
+[09:45] can make your risk big or small.
+[09:48] Security control, another term here,
+[09:50] these are the measures taken to reduce
+[09:53] risks to your company's assets. In other
+[09:56] words, something that you do, install,
+[09:58] or configure, or implement to lower the
+[10:01] risks. For example, if you're installing
+[10:02] a firewall, for your name, you can
+[10:04] encryption on a link,
+[10:07] even applying a security policy, those
+[10:09] are types of security controls, okay?
+[10:12] Employee training is also a security
+[10:13] control, although rarely truly
+[10:15] effective, unfortunately. An attack, the
+[10:18] term of attack is very generic, is the
+[10:20] action taken by a a threat agent to
+[10:24] exploit a vulnerability in an attempt to
+[10:27] gain access, disrupt, steal data, or do
+[10:30] something nasty.
+[10:32] Finally, a breach. A breach is a
+[10:34] successful attack.
+[10:36] That results in unauthorized access,
+[10:38] disclosure of confidential information,
+[10:40] or damage to assets. We usually find
+[10:42] this term as data breaches because in
+[10:46] most cases the end purpose of a of a
+[10:48] breach is to to compromise sensitive
+[10:51] confidential data, right? So, expose
+[10:54] confidential data to the public.
+[10:56] Okay, so if you want to view these terms
+[10:58] together with their relationships,
+[11:00] we have something like a chain in here,
+[11:03] so we can define it like assets are the
+[11:06] things that we want to protect, which in
+[11:09] turn, after we determine their business
+[11:11] value, we can pinpoint the main threats
+[11:14] against them. Those threats are caused
+[11:17] by imperfectly designed software and
+[11:19] hardware, and these flaws are documented
+[11:21] as vulnerabilities.
+[11:23] Having and living with one or more
+[11:25] vulnerabilities means that we have a
+[11:27] certain level of risk exposure. We are
+[11:30] exposed to risk because we run around
+[11:32] with a bunch of vulnerabilities and that
+[11:34] risk or the fact that we want to
+[11:36] minimize it as much as possible, that's
+[11:39] what causes us to implement security
+[11:40] measures or security controls. So,
+[11:43] ultimately, these security controls
+[11:46] protect assets and they also become
+[11:48] assets themselves. Firewalls can be
+[11:51] hacked, too, and the cycle keeps going.
+[11:54] All right, let's talk a bit about asset
+[11:56] value.
+[11:57] In risk management, understanding the
+[11:59] value of company assets is very
+[12:01] important because if they don't have a
+[12:03] value, and does that doesn't mean that
+[12:06] they did not cost my anything, but the
+[12:08] actual question is do they have value
+[12:10] for the business? So, if they don't have
+[12:12] value for the business, then why bother
+[12:14] in the first place? Okay? Why are we
+[12:16] even having this conversation? Why
+[12:18] invest to protect something you don't
+[12:20] care about or something that doesn't do
+[12:22] you any harm if you lose it? Sentimental
+[12:25] value? Fine, that's a valid argument in
+[12:27] any other discussion, except perhaps in
+[12:29] a business case.
+[12:31] Of course, and it's if it's not the
+[12:32] first nor the last time I'm saying this,
+[12:35] don't spend more on protecting the asset
+[12:38] than the asset is worth. That's
+[12:39] basically shooting yourself in the foot
+[12:41] with security. And like any shooting
+[12:44] oneself in the foot, it's dumb.
+[12:46] So, each asset must be evaluated to
+[12:49] determine its importance to the
+[12:51] business. How accurate is this process?
+[12:53] It's subjectivism at its best or worst,
+[12:57] depending on how you see it.
+[12:59] Best effort guessing is your best guess.
+[13:02] You're going to read a lot about many
+[13:04] methods that quantify value, methods
+[13:06] that involve interviews, methods that
+[13:09] categorize, methods that are based on
+[13:11] formulas, but at the end of the day,
+[13:13] it's all about you deciding what matters
+[13:16] to you and to your company.
+[13:18] And if it's not your company, then good
+[13:19] luck trying to find a common denominator
+[13:21] between what you think matters, what the
+[13:24] IT department thinks matter, what the HR
+[13:27] department thinks matters, and what top
+[13:29] management thinks matters.
+[13:31] Ultimately, it's up to the topmost
+[13:33] decision-makers to establish which
+[13:35] assets are critical and which can be
+[13:37] left at the end of the list.
+[13:40] Now, you could go on with assigning the
+[13:41] value of an asset from the price of an
+[13:43] asset. That's up to you, but it's only
+[13:45] going to be a measure of what you
+[13:47] thought the asset was worth when you
+[13:49] bought it because, well, you bought it,
+[13:51] right? It might have been a good
+[13:53] decision at the moment, but it might be
+[13:56] a useless asset right now.
+[13:58] And the price that you paid might have
+[14:00] nothing to do with what the asset
+[14:02] currently values. Just look at the
+[14:04] inflation in the last years or how
+[14:07] important it is for your security
+[14:09] posture. Also, how much does something
+[14:12] that you created cost? Put a price on
+[14:15] that. Okay, it's not easy.
+[14:18] But if you really want to put a number
+[14:19] on it, that is to perform a uh what is
+[14:22] called a quantitative analysis, then you
+[14:25] could start from two places. First, how
+[14:27] much the asset values, and secondly, how
+[14:30] much would you lose if that asset would
+[14:33] suddenly become unusable, lost, or
+[14:36] compromised? For some assets, the two
+[14:38] values will be almost equal. You break a
+[14:41] chair, you need to buy a new chair, and
+[14:42] that's the cost of it. For others, like
+[14:45] reputation, client base, the
+[14:47] availability of an online store,
+[14:50] or market advantage,
+[14:52] well, you'll have a completely different
+[14:53] approach when thinking how much do I
+[14:55] stand to lose if this confidential data
+[14:57] goes public or if I completely lose this
+[14:59] data.
+[15:01] So, for risk assessments, it all starts
+[15:03] with top management, just like any other
+[15:05] type of audit, assessment, or pen test.
+[15:08] You need management approval before we
+[15:10] can even take the first step. Now, of
+[15:12] course, risk will always be there. If
+[15:14] you're looking to repeat assessments and
+[15:16] implement measures until you're left
+[15:18] with no risk at all, be prepared to be
+[15:20] doing this until the end of days. You
+[15:22] will never reach that point. So, as we
+[15:25] previously mentioned, we need to keep
+[15:26] improving just up to the point where the
+[15:28] remaining risk or residual risk is
+[15:31] considered acceptable by top management.
+[15:34] Those are the people who decide.
+[15:36] So, to outline the role of upper
+[15:38] management is to initiate and support
+[15:41] risk analysis and assessments, as well
+[15:44] as the fact that they define the scope
+[15:47] and purpose of anything related to risk
+[15:49] management, starting even with the
+[15:51] inventory. They're the ones who are
+[15:53] going to say, "Focus on this. Don't
+[15:55] focus on that." Even if this or that is
+[15:58] actually a business process. You then
+[16:00] have to figure out what are the assets
+[16:02] on which that process depends. Next,
+[16:05] you'll have to choose between two
+[16:06] primary risk assessment methodologies. A
+[16:10] quantitative risk assessment assigns
+[16:12] real dollar or euro or anything else
+[16:16] figures to assets. If this server cost
+[16:19] us X dollars, then now it would cost us
+[16:23] Y dollars to replace it, and Z dollars
+[16:26] as the lost cost during which the asset
+[16:30] is unavailable. We need to take downtime
+[16:32] into consideration as well, simply
+[16:33] because if you don't really lose any
+[16:36] additional money while the asset is
+[16:38] unavailable, then
+[16:41] I have some news for you. Well, it it's
+[16:43] not really a critical asset, is it?
+[16:45] Okay. It's a bit more difficult to
+[16:48] evaluate in a quantitative manner losses
+[16:51] of breaches or loss of customer trust.
+[16:54] Now, on the other hand, we have
+[16:56] qualitative risk assessment
+[16:58] in which we simply assign subjective
+[17:00] values like low, medium, or high,
+[17:03] considering perspectives, gut feelings,
+[17:05] and intuition. I'm not kidding, right?
+[17:07] It might sound like a rubbish method,
+[17:09] but you might be surprised how accurate
+[17:11] this one might be, too.
+[17:13] Now, of course, like all things in life,
+[17:15] we need to have a balance.
+[17:17] Uh companies can and often use both
+[17:20] approaches to fine-tune priorities. So,
+[17:22] sometimes they call these hybrid risk
+[17:25] assessments. So, as we just said, a
+[17:27] qualitative risk analysis is more about
+[17:29] creating scenarios than about crunching
+[17:31] numbers. And it involves ranking threats
+[17:34] on a scale to evaluate their risks.
+[17:37] In such a risk assessment, the most
+[17:39] important part is what questions you are
+[17:41] asking and how.
+[17:43] You could rely on surveys, interviews,
+[17:47] one-on-one discussions, brainstorming
+[17:49] sessions. Whatever you do, just make
+[17:51] sure you gather the feedback required
+[17:53] for your risk assessment that maps onto
+[17:55] your company's culture and priorities.
+[17:58] It also becomes very important who you
+[18:00] interview. If you only want to focus on
+[18:01] the assets of a specific department, it
+[18:04] might be a good idea to interview some
+[18:06] people outside that department as well,
+[18:09] including some top management
+[18:10] individuals. That's simply because each
+[18:13] individual is biased, concerned, and
+[18:16] focused more on their job role than on
+[18:20] the big picture. And thus, you might
+[18:22] receive biased feedback. Everybody is
+[18:24] going to believe that their job, their
+[18:26] role, their department is critical, and
+[18:29] screw the rest. Sometimes you can also
+[18:31] use what is called the Delphi technique,
+[18:33] which is an anonymous feedback process
+[18:35] to reach consensus.
+[18:37] Often people don't have the guts to
+[18:40] complain in public or talk about things
+[18:42] that are not going the way they should
+[18:44] in public. The point of the Delphi
+[18:46] technique is to evaluate ideas based on
+[18:48] their merit without bias or the shame of
+[18:51] stepping up and presenting a contrasting
+[18:53] idea.
+[18:54] Uh you know why many people don't speak
+[18:56] up in company meetings even when they
+[18:58] disagree.
+[19:00] And the other method for assessing risks
+[19:02] is providing actual numbers or dollars
+[19:05] values to your assets.
+[19:08] Don't get me wrong, this method is still
+[19:10] a lot of guesswork. It might be easy to
+[19:12] predict how much replacing a laptop will
+[19:14] cost you, but it might not be so easy
+[19:18] predicting how much business or market
+[19:19] share or customer loyalty you will lose
+[19:22] if your online store is unavailable for
+[19:25] 1 week, 1 day, 1 hour, or if your
+[19:27] customer's personal data becomes public.
+[19:30] Actually, the assessment is a bit more
+[19:31] than just about dollar value. Yes, we
+[19:34] have the dollar value, we have the cost
+[19:35] of the asset, and that's what we call
+[19:37] the asset value or AV. That's simply the
+[19:40] cost that we have to support in order to
+[19:42] replace the assets, and that's pretty
+[19:44] simple. But then, for each asset, we
+[19:46] need to consider the possible threats to
+[19:48] it. And then, for each such threat, we
+[19:51] need to think what is the exposure
+[19:53] factor of that asset to that threat.
+[19:56] Things already get complicated. The
+[19:58] exposure factor is the percentage of how
+[20:02] much you would lose of that asset's
+[20:05] value
+[20:06] if that specific asset were to directly
+[20:08] suffer because of a specific threat.
+[20:11] Now, we need this factor because in most
+[20:14] cases, a threat will not cause a total
+[20:17] loss of an asset. If a server fails
+[20:19] because a power supply has failed, you
+[20:22] will not replace the entire server, just
+[20:24] the power supply. If there's a flood or
+[20:27] a fire in your building, you're probably
+[20:28] not going to have to replace the entire
+[20:30] building. So, that's what we have the
+[20:32] exposure factor.
+[20:34] How do we calculate it? Well, tough
+[20:36] luck. Ask around. Look at your history.
+[20:39] Look at the history of other companies.
+[20:41] For each type of threat, there's going
+[20:42] to be a different approach to this
+[20:44] estimation.
+[20:46] And you're going to get it wrong almost
+[20:48] always. Are you going to be pretty
+[20:50] close?
+[20:51] That's what we're aiming for, and that's
+[20:53] the base we can hope for.
+[20:54] Now, with the asset value and the
+[20:56] exposure factor, we can now calculate
+[20:58] another value by multiplying these two,
+[21:01] the single loss expectancy, SLE. That's
+[21:04] the product of asset value and its
+[21:06] exposure factor. The single loss
+[21:08] expectancy is how much we expect to lose
+[21:10] in money when a single threat happens
+[21:13] one time against an asset. Thus, if the
+[21:16] asset value is, let's say, $10,000, and
+[21:19] your exposure factor is 50%, then expect
+[21:22] to lose $5,000 if that specific threat
+[21:25] happens.
+[21:27] Now, in order to get to the bottom of
+[21:28] those Excel sheets that top management
+[21:30] uses and expects and really loves, we
+[21:33] need to think in term of
+[21:35] yearly loss and revenue. So, we need to
+[21:37] scale these numbers until the end of the
+[21:40] calendar year or fiscal year, because
+[21:43] that's where the bottom line is going to
+[21:45] be drawn.
+[21:46] And in order to determine how much would
+[21:48] we lose due to an asset being exposed to
+[21:50] a threat each year, well, what else do
+[21:52] we need? You guessed it. We need to know
+[21:54] how often that threat happens during an
+[21:57] entire year. It kind of makes sense,
+[21:59] right, if you take it step by step.
+[22:01] How many fires, how many data breaches,
+[22:03] how many lost laptops, how many failed
+[22:05] hard drives and power sources, how many
+[22:07] failed switches and routers do you
+[22:08] expect to have an entire year? This
+[22:10] means ARO, annual rate of occurrence.
+[22:14] Now, finally, now that we know how much
+[22:16] we can lose when a threat happens, and
+[22:18] we know how often it happens in a year,
+[22:21] let's calculate the bottom line ALE, or
+[22:24] annual loss expectancy. How much do you
+[22:27] expect to lose of an asset's value
+[22:30] during an entire year?
+[22:33] ALE is going to be made up of single
+[22:35] loss expectancy, so how much we lose
+[22:37] when it happens once, multiplied by how
+[22:40] many times it happens during a year.
+[22:42] Kind of makes sense, right? Which is the
+[22:44] annual rate of occurrence, ARO. So, we
+[22:46] have all the numbers in here. I hope
+[22:48] this makes a lot of sense. Remember that
+[22:50] ALE, annual loss expectancy, is SLE,
+[22:54] single loss expectancy, times ARO,
+[22:57] annual rate of occurrence. The exam is
+[22:59] most certainly going to ask you about
+[23:01] it.
+[23:02] Well, once we've identified risks, what
+[23:05] else is there to do? Take action, of
+[23:07] course, do something about them.
+[23:10] Your options and actions at this point
+[23:12] fall under the umbrella called risk
+[23:14] response. More specifically, if you want
+[23:17] to minimize the risk, we can call them
+[23:19] risk mitigation actions.
+[23:21] Now, you might be wondering, well, what
+[23:22] else is there to do, right? I've
+[23:24] identified risk, let's kill it with
+[23:26] fire, let's get rid of it. That's not
+[23:29] always possible.
+[23:30] When it is possible, addressing your
+[23:32] risks with the purpose of minimizing
+[23:34] them by installing security controls is
+[23:37] called risk mitigation.
+[23:39] The purpose of security controls is to
+[23:41] reduce the risk to an acceptable level.
+[23:43] Another thing you could do is to, well,
+[23:46] stop doing it. Don't implement security
+[23:48] controls, but instead avoid doing the
+[23:50] risky actions or using the those risky
+[23:53] assets.
+[23:54] If you have a vulnerable server,
+[23:55] especially if it's accessible from the
+[23:57] internet, one cheap solution, very cheap
+[24:00] solution, is to just pull the plug on
+[24:01] it. Simply decommission it. Disconnect
+[24:04] it from the network. This is risk
+[24:06] avoidance. Sometimes it is feasible,
+[24:08] sometimes it is not. It has a much
+[24:11] larger benefit than simply risk
+[24:12] mitigation.
+[24:14] If risk mitigation reduces the risk to
+[24:15] an acceptable level, risk avoidance
+[24:17] reduces it to zero. Awesome, right? Yes,
+[24:21] but that's not something you can do with
+[24:23] your critical assets because if you can
+[24:25] decommission them, well, then you don't
+[24:27] have a business anymore, right? So, as
+[24:30] good as risk avoidance might sound, that
+[24:32] is rarely a truly useful option.
+[24:36] Another thing you could do instead of
+[24:38] buying security controls is to make it
+[24:39] somebody else's problem.
+[24:42] Sounds good, right?
+[24:44] If this server is breached, how about
+[24:46] you take the blame for it? Somebody else
+[24:48] takes the blame for it. What? You don't
+[24:50] want to do it? Then, okay, how about if
+[24:52] I give you some money for your trouble,
+[24:54] and you take the blame for it if the
+[24:56] server is breached. Is that okay now?
+[24:59] Great, we have a deal. Well, what you
+[25:01] just did is purchase insurance. Okay?
+[25:05] You can purchase insurance for security
+[25:07] as well, but be very careful. Someone
+[25:09] else or some other company might be the
+[25:11] one responsible, liable for a loss, and
+[25:14] they might or not pay you back
+[25:17] handsomely, but the reputation that
+[25:19] you're losing, that's completely on you.
+[25:22] No client whose personal data was
+[25:24] compromised will ever give a damn when
+[25:26] you tell them, "You know, it wasn't
+[25:28] actually my fault. There was this other
+[25:30] company that was handling your data."
+[25:32] No, they're not going to care. They were
+[25:34] your client, then they're going to see
+[25:36] you as the one fully responsible. And
+[25:39] that's officially called risk
+[25:41] transference, transferring the risk to
+[25:43] some other entity.
+[25:45] Another approach is, and I know this
+[25:47] this kind of like sounds like a like the
+[25:49] lazy way out, is called risk acceptance.
+[25:52] Just accept it, right? We have this
+[25:55] risk, and we're going to just live with
+[25:57] it. That's it, meeting adjourned. It
+[26:00] might be the lazy way out, but more
+[26:02] often than not, it is the final stage in
+[26:05] the risk mitigation business and
+[26:07] process. Remember when we said that
+[26:09] security is a process, it's a
+[26:10] never-ending process, and there comes a
+[26:12] time when investments in additional
+[26:14] security controls simply don't make
+[26:16] sense anymore because they become too
+[26:17] expensive, or risk has already been
+[26:20] reduced to an acceptable level. That's
+[26:22] when risk acceptance comes into play.
+[26:24] Right? It's the moment when you just say
+[26:26] stop and decide that you will live with
+[26:28] the residual risk. Somewhat of a special
+[26:31] case in these approaches is called risk
+[26:33] deterrence. Deterrence happens when you
+[26:36] decide to reduce the likelihood of risk
+[26:39] happening by implementing techniques
+[26:41] that discourage potential attackers from
+[26:44] carrying out their attacks.
+[26:46] It might be as simple as installing a
+[26:47] security camera or a warning banner. Uh
+[26:51] the risk is still there, the
+[26:52] vulnerability is still there, but you
+[26:53] could at least hope that the likelihood
+[26:55] of an attack being carried out is much
+[26:57] lower because some attackers might be
+[27:00] discouraged before they even attempt
+[27:01] something nasty. It's the cheap way out,
+[27:04] and you also get what you pay for. And
+[27:06] finally, the last and hopefully the one
+[27:08] approach that will never happen is risk
+[27:10] rejection. That's living in denial.
+[27:14] We know that risk is there. We just
+[27:16] choose to pretend it's not. We just hope
+[27:19] it's never going to happen to us. Uh we
+[27:22] don't invest in anything. We don't even
+[27:23] check to see if the risk is there later
+[27:25] on because God forbid if we find
+[27:27] something.
+[27:28] I don't have to tell you why this is
+[27:30] bad, but I might warn you that it might
+[27:32] be bad for you if an attack ever reaches
+[27:34] a court of law. That's when it would be
+[27:36] really bad to admit that you chose to
+[27:39] ignore actual facts related to security
+[27:41] risks, uh especially if they lead to a
+[27:44] breach. And just in case at this point
+[27:45] it's not clear already, the risks we're
+[27:48] left with after implementing security
+[27:50] measures, it's called residual risk. The
+[27:53] risk we had before implementing those
+[27:54] security measures is called total risk,
+[27:57] which means that the security controls
+[27:58] were will address specifically the
+[28:00] difference between total and residual
+[28:03] risk.
+[28:04] And there's also something called an
+[28:06] inherent or starting risk. That's the
+[28:09] risk that is already in the environment,
+[28:12] not necessarily in the natural
+[28:13] environment. It might be the in the
+[28:15] supply chain or in the type of business
+[28:17] that you're conducting.
+[28:19] Uh that's already there before you start
+[28:21] implementing anything, and it's
+[28:23] In most cases, it's It has nothing to do
+[28:25] with you. It's not your fault. It's just
+[28:26] the the area or the industry that you're
+[28:29] you're active in. Uh sometimes it's
+[28:31] enough to choose to be active in a
+[28:33] specific business or area of the city,
+[28:35] let's say, in order to inherit such
+[28:37] inherent or starting risk.
+[28:40] Now, let's talk about choosing security
+[28:41] controls. Now, you know the risks. You
+[28:43] know what security controls should be
+[28:45] implemented, at least at a high level,
+[28:47] but how do you choose one security
+[28:49] control over another? Is the firewall
+[28:51] from Cisco better? Should you choose the
+[28:53] one from Check Point? How about the one
+[28:55] from Fortinet? Which licensing package?
+[28:58] What security features do you actually
+[28:59] need?
+[29:01] Most people would simply jump to the
+[29:02] cost of the control. That's only going
+[29:05] to work if you're deciding between two
+[29:06] resellers with the same product, but if
+[29:08] it's about different products, you need
+[29:10] to take these differences into
+[29:11] consideration. It's basically a simple
+[29:13] cost-benefit analysis. And for the
+[29:15] benefits, you should be looking at the
+[29:17] real benefits that apply to you, to your
+[29:19] environment, not the ones on the
+[29:21] marketing PowerPoint slides and data
+[29:23] sheets.
+[29:24] Also, no security through obscurity
+[29:26] means that you should not rely on
+[29:27] obscure, niche, untested, unvalidated
+[29:31] security solutions thinking that, "Well,
+[29:33] an attacker is not going to know what
+[29:35] this obscure Chinese firewall is and
+[29:38] because nobody ever uses it, so I'm I'm
+[29:40] safe." Okay? No, you're not. You're
+[29:42] actually as unsafe as you can be because
+[29:45] running unvalidated security controls
+[29:48] means that you cannot validate their
+[29:50] effectiveness, either.
+[29:52] There's a comparison here that I
+[29:54] sometimes make in security trainings
+[29:56] where I when it comes to encryption, the
+[29:59] uneducated students might think that
+[30:01] inventing your own encryption algorithm
+[30:03] to protect data is the safest way to do
+[30:05] it because if nobody knows that
+[30:07] algorithm, then nobody can crack it.
+[30:09] Wrong. Validated solutions are those who
+[30:12] have passed the scrutiny of the entire
+[30:14] security market over many, many years of
+[30:18] many, many companies and specialists,
+[30:20] even competitors trying to disprove the
+[30:23] efficiency of algorithm invented by one
+[30:25] or the other.
+[30:27] Using something that is well-known,
+[30:28] well-tested, well-demonstrated to be
+[30:31] foolproof as much as possible or up to
+[30:33] this point in present is always the best
+[30:36] choice. So, no. Security through
+[30:38] obscurity is actually no security at
+[30:40] all.
+[30:41] And most importantly, controls should be
+[30:43] measurable. Actually, everything that
+[30:45] you do should be measurable because you
+[30:47] need some metrics to evaluate the
+[30:49] success of what you're doing. You're
+[30:51] installing a firewall. How do you know
+[30:52] if it's doing what it's supposed to be
+[30:54] doing? By defining some metrics,
+[30:56] monitoring tools, measuring the behavior
+[30:58] of it, and comparing the results with
+[31:01] your expected and acceptable thresholds.
+[31:05] Now, since there are a lot of security
+[31:06] controls, there are going to be a lot of
+[31:08] metrics. Now, at a minimum, we can focus
+[31:11] on things like ensuring that the control
+[31:13] doesn't cost more than the protected
+[31:15] asset. We already talked about this. We
+[31:17] ensure that it actually hinders or makes
+[31:19] the attack more difficult, that it has
+[31:21] as few dependencies as possible, that it
+[31:24] shouldn't be a single point of failure,
+[31:26] that it should work in an as much as
+[31:28] possible automated manner, so it doesn't
+[31:30] require constant human supervision to do
+[31:32] its job,
+[31:34] that it should provide security measures
+[31:36] against tampering, illegal access, and
+[31:38] so on. You could probably add more to
+[31:40] this list easily as the earth These are
+[31:42] really some common sense expectations.
+[31:46] As for the categories of security
+[31:48] controls, you'll find a lot of
+[31:49] classifications out there. People don't
+[31:51] seem to decide on single classification
+[31:53] method as some of these categories
+[31:56] overlap. So, depending on your
+[31:57] perspective, a control might be in two
+[31:59] categories at once, which is, well,
+[32:01] okay.
+[32:02] Nevertheless, long story short, most
+[32:04] common categories you'll encounter are
+[32:06] first, managerial or administrative
+[32:09] controls. Most importantly, these are
+[32:11] not technical controls, so
+[32:14] what is it if it's not technical? Well,
+[32:16] it's anything related to security
+[32:17] policies, internal processes, employee
+[32:20] training, and so on. Yes, these are
+[32:22] security controls as well, but
+[32:24] non-technical. Of course, then we have
+[32:26] technical controls, sometimes also
+[32:28] called logical controls, too.
+[32:31] These are IT resources, hardware or
+[32:33] software that we implement, configure,
+[32:36] well, to help us improve our security
+[32:37] posture. Any security device like a
+[32:40] firewall, an IPS, anti-malware solution,
+[32:44] access control software, encryption, any
+[32:46] IT related term is a technical control.
+[32:49] And finally, we have physical controls
+[32:51] which we use to protect real-world
+[32:53] objects, assets, or areas in a company.
+[32:56] Uh things such as doors, fences, lights,
+[32:59] security guards, even dogs, the badges
+[33:03] that you're using to access the office,
+[33:04] alarms, all those are physical controls.
+[33:08] Now, considering the way the security
+[33:09] controls act or function uh or the way
+[33:12] they work, we have another
+[33:13] classification. It makes a lot of sense,
+[33:15] so hopefully it's not something that you
+[33:17] will need to learn by heart.
+[33:19] So, let's see what these categories are.
+[33:21] First, we have preventative controls or
+[33:23] preventive controls, I don't know.
+[33:25] English is my second language, please
+[33:26] correct me if I'm wrong. I'm not
+[33:28] teaching you English, I'm teaching you
+[33:30] security. Preventative controls, let's
+[33:32] say, are those that will prevent an
+[33:36] attack.
+[33:37] Pretty obvious. Okay, so anything that
+[33:39] stops an attacker is a preventative
+[33:41] control. A door stops an attacker or
+[33:44] better yet, the lock on that door. A
+[33:47] barrier can also stop cars. A firewall
+[33:50] stops connections from the outside. An
+[33:52] endpoint security suite stops the
+[33:54] execution of malicious code on a
+[33:56] machine. You probably get the point
+[33:58] here.
+[33:59] Then, we have deterrent controls,
+[34:02] deterrent, not detergent. Okay? These
+[34:04] don't stop the attack by themselves, but
+[34:07] instead discourage the attacker from
+[34:09] carrying out their intentions. A lot of
+[34:11] the administrative controls that we
+[34:14] talked about a minute ago are deterrent
+[34:17] also. Policies, warning banners should
+[34:19] act as deterrents. Also, fences and
+[34:22] locks and lighting and security guards
+[34:24] should be a deterrent as well.
+[34:26] But wait, weren't those already
+[34:28] preventative?
+[34:30] Weren't those also physical controls?
+[34:32] Yes and yes.
+[34:34] And they're also deterrent controls.
+[34:36] What do you think
+[34:38] detective controls do?
+[34:40] They detect intrusions and attackers
+[34:43] specifically. Not stopping, just
+[34:45] detecting. Alarms, motion sensors,
+[34:48] uh CCTV, uh network intrusion detection
+[34:51] systems are all detective controls. Of
+[34:52] course, some of these are also
+[34:54] deterrent, like CCTV. Sometimes it's
+[34:56] enough to install some cheap camera
+[34:58] cases, well, fake cameras outside of the
+[35:01] building without connecting them to
+[35:03] anything to give the illusion of a CCTV
+[35:06] monitored area, in which case those
+[35:08] cameras are only deterrent controls, not
+[35:10] detective, of course.
+[35:11] Corrective controls are those that we
+[35:13] employ to bring back a system to a
+[35:15] working state after an attack happened
+[35:17] or after a disruptive incident. Even
+[35:21] rebooting a computer is often a
+[35:23] corrective measure. Even anti-malware
+[35:25] can be considered corrective if given
+[35:27] the permission to automatically
+[35:28] disinfect malicious files. Also, even a
+[35:31] simple door that closes automatically
+[35:33] after someone has passed through is a
+[35:36] corrective control as it allows it to
+[35:38] fail back to a secured state.
+[35:41] So, yeah. You do need to to use a bit of
+[35:43] imagination here.
+[35:45] Next up, we have recovery controls.
+[35:47] They're somewhat of an upgrade on what
+[35:49] we just talked about with corrective
+[35:50] controls.
+[35:51] Uh with recovery controls, we repair, we
+[35:54] restore functionality. And the most
+[35:56] common examples here revolve around the
+[35:58] concept of a data backup. And in fact,
+[36:01] any feature that allows us to benefit
+[36:03] from high availability or to recover
+[36:06] after an incident is a recovery control.
+[36:09] Recovering data from backups is the most
+[36:11] obvious example here. And finally,
+[36:13] directive controls are those who direct
+[36:16] or encourage compliance.
+[36:18] Posted notes around the office,
+[36:20] motivational posters even, instructions
+[36:23] received from the reception or from a
+[36:25] security guard, exit signs, awareness
+[36:28] programs, colors on the walls of the
+[36:30] floor that points to a specific
+[36:32] department. These are directive
+[36:34] controls.
+[36:36] Obviously, I hope, up to this point,
+[36:38] it's not enough to do things right only
+[36:40] the first time, but you need to make
+[36:42] sure you're still compliant later on.
+[36:44] So, this is where the
+[36:46] idea and the topic of ongoing risk
+[36:48] management becomes important.
+[36:50] Once you implement security controls,
+[36:52] you also need to check them from time to
+[36:53] time to see if the environment changes,
+[36:57] to see what you should be doing when
+[36:59] users come and go, when applications
+[37:01] change, when the type of traffic in the
+[37:03] network changes, when the configurations
+[37:05] of your systems change. Sometimes your
+[37:08] even your security policies might change
+[37:10] radically, right? Somebody has to tell
+[37:12] the security controls about this, as
+[37:14] well, about all these changes that they
+[37:16] might not be performing so well in an
+[37:18] ever-changing environment while they're
+[37:20] still running a 5-year-old
+[37:21] configuration.
+[37:23] We also need to be able to evaluate our
+[37:25] risk management processes from time to
+[37:27] time. Are they getting better at
+[37:29] identifying and mitigating risks or
+[37:31] worse? Or we just don't know because
+[37:33] nobody evaluates them anymore.
+[37:36] And guess what? There's also a way to
+[37:38] evaluate how well you evaluate your
+[37:41] security controls. We call this the risk
+[37:44] maturity model. So, it's kind of like in
+[37:46] which grade you are in understanding and
+[37:49] implementing those best practices.
+[37:52] Uh speaking of the RMM, the risk
+[37:54] maturity model, it has five levels.
+[37:56] There's the first level, the ad hoc,
+[37:59] which is more or less chaotic effort. Uh
+[38:02] this is where companies start with
+[38:04] little to inconsistent security efforts.
+[38:06] Basically, all they do is put out fires
+[38:08] with whatever they find at hand, but not
+[38:10] trying to prevent them in the first
+[38:12] place. Of course, metaphorically
+[38:13] speaking about fires.
+[38:15] Then there's the initiative, preliminary
+[38:18] effort. Companies at this stage have
+[38:20] started to recognize the importance of
+[38:22] risk management. They begin to put some
+[38:24] basic structures in place, but these
+[38:26] efforts are still in the early stages
+[38:28] and not fully developed.
+[38:30] In the next defined stage, by this point
+[38:32] the company has established some clear
+[38:34] risk management processes. They have
+[38:37] roles, they have responsibilities
+[38:38] related to security. Everyone should
+[38:40] know what what they are as a job role
+[38:43] and what they should be doing according
+[38:44] to it. And there's a defined approach to
+[38:47] managing risks.
+[38:49] Next, we have integrated level. This is
+[38:51] when security becomes a seamless aspect
+[38:54] of all operations. It's not just a
+[38:56] separate process, but it is integrated,
+[38:58] as the name says, into the daily
+[39:00] activities of the company. So, security
+[39:02] is part of the company culture, if you
+[39:04] want to put it that way.
+[39:06] Um they get invited at happy hours and
+[39:08] team buildings, too.
+[39:10] And finally, optimized, the last and
+[39:13] next level here, the holiest of all
+[39:15] grails of risk maturity. This is where
+[39:17] an organization not only has
+[39:19] well-established risk management
+[39:21] processes, but also continually refines
+[39:24] and improves
+[39:25] uh these processes. So, people have a
+[39:27] lot of free time on their hands, right?
+[39:30] The focus is on being proactive rather
+[39:32] than reactive. We all know it's better
+[39:34] to be proactive, but few of us really,
+[39:36] really are.
+[39:37] Now, finally, don't forget that risk
+[39:39] management has to address time as well.
+[39:42] Things happen over time. Security
+[39:44] measures, algorithms, protocols get
+[39:46] deprecated in time. Products reach end
+[39:49] of life, end of sale, end of support. As
+[39:52] part of a risk management process, you
+[39:54] need to plan for these events because
+[39:56] using unsupported software or hardware
+[39:58] can leave you vulnerable to attacks.
+[40:02] Lastly, let's address risk frameworks.
+[40:04] They are the risk management for dummies
+[40:07] book. If you don't know where to start
+[40:09] or if you're not confident that if you
+[40:11] do it on your own with no guidance or
+[40:13] supervision, you'll do it right,
+[40:15] a risk framework is exactly what you
+[40:17] need. It is the high-level guideline
+[40:19] that explains how you should be
+[40:21] assessing risks, how you should be
+[40:22] addressing them, and how you should be
+[40:24] keeping an eye on them down the line.
+[40:26] Now, a very, very common framework is
+[40:28] the one from NIST, actually called RMF,
+[40:31] Risk Management Framework. Officially,
+[40:33] it's freely available as publication SP,
+[40:37] which stands for special publication
+[40:39] 800-37.
+[40:42] You can search for it online. It's the
+[40:43] most common risk framework that you will
+[40:45] encounter in the world of information
+[40:47] security.
+[40:48] It has six phases that work in a cycle,
+[40:51] the prepare phase, where you get your
+[40:52] risk management game face on, understand
+[40:55] what's at stake, and gather your
+[40:56] resources,
+[40:57] the categorize phase, where you sort
+[41:00] your risks, identify and classify them
+[41:02] based on impact and likelihood, the
+[41:04] select phase, select what? Controls,
+[41:08] security controls, of course. Pick the
+[41:10] right ones to protect your assets.
+[41:12] Then, of course, we have the implement
+[41:13] phase, where we implement those security
+[41:15] controls. Next, we have the assess phase
+[41:19] of your implementation. This is where
+[41:20] you should evaluate how well your
+[41:22] safeguards are holding up against the
+[41:24] risks.
+[41:25] Then, you refine and end up in the
+[41:27] authorized phase of risk management.
+[41:30] It's also where your security controls
+[41:31] have passed the assessments. They become
+[41:34] authorized and perhaps like a building
+[41:36] block of your risk management plan.
+[41:38] And finally, the monitor phase,
+[41:41] uh keep an eagle eye on things, right?
+[41:43] Regularly check if your safeguards are
+[41:45] still doing their job.
+[41:47] Now, officially, NIST SP 800-37
+[41:51] is focused on the federal environment,
+[41:54] but nobody's stopping you from applying
+[41:55] it to your commercial environment, of
+[41:57] course. But, for your commercial needs,
+[41:59] we actually have another one called the
+[42:00] Cybersecurity Framework. It has five
+[42:03] phases, pretty obvious ones. Identify
+[42:06] phase, understand your assets, risks,
+[42:08] and vulnerabilities. Next, protect them,
+[42:11] safeguard your systems and data.
+[42:13] Uh third, continuously detect, monitor
+[42:15] for threats and changes. Fourth, respond
+[42:19] when needed, have a plan to manage your
+[42:21] security incidents. And fifth, have a
+[42:24] plan to recover for when either the
+[42:26] detection or the response have failed.
+[42:29] All right? There are many more risk
+[42:31] frameworks out there, COSO, ISACA,
+[42:34] OCTAVE, FAIR, TARA, just to mention a
+[42:37] few. You probably don't need to remember
+[42:38] those.
+[42:40] Probably.

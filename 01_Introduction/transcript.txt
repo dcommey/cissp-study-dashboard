@@ -1,0 +1,84 @@
+[00:09] Everyone, welcome to this training and welcome  
+[00:11] back if this is not the first time 
+we see each other in a training.
+[00:15] This is CISSP, the Certified Information 
+Systems Security Professional  
+[00:20] certification - I usually forget what the 2 S-es 
+stand for! - and it’s been my largest project  
+[00:23] so far simply because CISSP in itself, is a huge 
+exam with a huge amount of information involved.  
+[00:29] I mean, it says “information” in the exam title 
+and as generic as it sounds, it somehow manages  
+[00:36] to cover all aspects, forms, shapes of storing, 
+moving and working with information at all levels.  
+[00:44] We’re going to cover so many topics, so many 
+technologies that… At least from my experience,  
+[00:50] I don’t think I’ve ever encountered so 
+much stuff to learn for one single exam.
+[00:56] So, this might come as a surprise for you, 
+but that’s the great part about the exam!  
+[01:00] The not-so-great aspects of CISSP and, of course, 
+this is just my personal opinion which should not  
+[01:06] matter at all, but given this disclaimer, CISSP 
+is a painfully theoretical certification. There  
+[01:13] is very little pressure for you to master any 
+practical skills of implementing security, like  
+[01:19] doing a network scan or writing an access list. 
+But you will be able to contribute to any design,  
+[01:25] policy-related or architectural discussion 
+involving these concepts. In order words,  
+[01:31] you will be entitled to have an opinion 
+on ANY security-related discussion,  
+[01:36] there just shouldn’t be anything out there 
+that could surprise you. At least for a while,  
+[01:42] because things change and evolve.
+ 
+Another downside that I’ve seen people  
+[01:46] somewhat complaining about is the fact that CISSP 
+might give you the feeling that you’re a “Jack of  
+[01:52] all trades, master of none”. It doesn’t mean that 
+it will apply to you, your mileage, experience and  
+[01:58] expectations might vary, but as far as subjective 
+statements go, this might be one to look out for.
+[02:05] Also, this training was designed in a more 
+descriptive manner so that it will be easier for  
+[02:10] you to access it audio-only, like if you want you 
+can listen to it in your car, during your commute,  
+[02:16] or while you’re running or walking your dog. 
+And I will try to publish it as a podcast  
+[02:21] as well - I’ve never done this before, 
+I hope it works the way I expect it to.
+[02:25] One more thing - I’m recording this AFTER 
+I’ve created the entire training and I must  
+[02:29] say - wow - just by looking back at how much work 
+and time and effort and missed hours which I could  
+[02:36] have spent with my boy who went from 2 years 
+old to 4 years old while I was working on this,  
+[02:41] that’s how long it took me, looking at how 
+much sweat and neurons went into creating this,  
+[02:46] I REALLY hope you’ll find this useful. 
+If you know my previous trainings,  
+[02:51] I will try to cover everything you need to know, 
+and I will try to explain everything so that it's  
+[02:56] easy to understand, no matter what your background 
+looks like or even if English is not your native  
+[03:01] language, just like in my case. And I try to 
+make it fun and pleasant to watch especially  
+[03:08] with CISSP which has a somewhat bad reputation for 
+being an exam where the study materials out there,  
+[03:15] especially the videos, are - sorry to say this 
+- but wow, they’re boring! Ask anyone who has  
+[03:22] studied from official materials or other video 
+trainings on this. Go ahead and try them yourself  
+[03:27] if you want to. I really hope this training is 
+going to be the exception that you’re looking for,  
+[03:31] the training that will make you love to start 
+the next episode in the playlist. And yeah,  
+[03:38] free forever, as promised from the very beginning. 
+No paywalls, not promoting bootcamps or anything  
+[03:43] like it. But if you want to buy me a coffee 
+(or 3, which has become the daily dose lately),  
+[03:49] check out some ways to do so in the episode or 
+video description. I would really appreciate it.
+[03:54] So see you in the next episode and hope to see 
+you at the end of the playlist as well! Good luck!

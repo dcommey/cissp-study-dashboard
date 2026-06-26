@@ -1,0 +1,1738 @@
+[00:08] All right, so here we go. Let's start
+[00:10] with a security 101, the basics, the
+[00:13] very basics of security that we need to
+[00:15] be able to understand what's coming our
+[00:17] way.
+[00:18] We all like to say that security is
+[00:21] important, and we've gotten so used to
+[00:24] saying this that we don't even give it
+[00:27] too much thought about its basic
+[00:28] concepts. When we hear security in IT,
+[00:31] we immediately jump to firewalls,
+[00:33] antivirus solutions, multi-factor
+[00:36] authentication. So, we we tend to think
+[00:37] about solutions before we even get a
+[00:39] chance to identify the problem. So, why
+[00:43] is security important? In our world,
+[00:46] important means something that we cannot
+[00:49] live without, or without which our lives
+[00:53] would be somewhat worse for some reason.
+[00:56] It might not actually be our lives at
+[00:58] risk here, even though that's a pretty
+[01:00] important and valid concern for security
+[01:02] as well.
+[01:03] Even for security in IT, and we're going
+[01:05] to cover those corner cases, too, as
+[01:08] well. But, the bottom line here is that
+[01:10] without security, our businesses, our
+[01:12] technology, and the way businesses and
+[01:15] technology help our lives could not
+[01:18] happen. So, what exactly is it that
+[01:20] we're protecting? Well, it is data.
+[01:23] Right? Even when you say IT, you're
+[01:26] basically saying information technology.
+[01:28] So, it's technology that it's there to
+[01:30] serve your data.
+[01:33] We are where we are in the present, our
+[01:36] current technological advancements in
+[01:38] every field have led us here because of
+[01:42] knowledge, information, data. So, yeah,
+[01:45] data is at the core of everything,
+[01:47] including security.
+[01:49] The manufacturing process in a company
+[01:51] is data. Its customer list is data. The
+[01:54] employee salaries are data. The code
+[01:56] that a
+[01:57] uh software development company builds
+[02:00] is also data. Your online shopping
+[02:02] habits, your social media, your instant
+[02:05] messaging apps, your Insta, your memes,
+[02:08] it's all data. Some are a bit cheesier
+[02:10] than others, but still data.
+[02:12] We're nothing without our data. We
+[02:14] invented computers to manage our data.
+[02:17] We are using computers to create,
+[02:19] manage, and sometimes waste our lives
+[02:21] away, of course, with useless data, but
+[02:23] it's all data. Now, I probably should
+[02:26] stop saying data for a while.
+[02:28] So, that's our mission, should we choose
+[02:29] to accept it. What am I saying? You've
+[02:31] already accepted it, right? So, let's
+[02:33] see how
+[02:34] impossible it gets.
+[02:37] Well, what is security?
+[02:39] Security is essential in the IT world
+[02:41] because it makes sure that everything
+[02:43] else in IT is working correctly. This,
+[02:45] in turn, means that the business is
+[02:47] working correctly, or at least it's not
+[02:49] working incorrectly because of some
+[02:52] security or technology reason. There are
+[02:54] a lot of reasons why a business might
+[02:56] not work correctly. It's important to
+[02:58] remember that security exists to help
+[03:01] the business, not the other way around.
+[03:04] Security is not the main focus. It is
+[03:06] never the main purpose of a business,
+[03:09] and in some companies, it's seen like a
+[03:11] black hole that constantly eats up
+[03:14] money, but it's rather a support system.
+[03:18] And by the way, the black hole analogy
+[03:20] is only for those businesses that
+[03:21] haven't been breached yet, or haven't
+[03:23] found about the breach yet.
+[03:26] Now, when we decide to start securing
+[03:27] our systems, we need to consider a few
+[03:30] things, actually a lot of things. Uh we
+[03:32] have to identify what needs protection
+[03:34] and how much it will cost us to protect
+[03:36] it. The cost of security can be all over
+[03:38] the place. It depends on many factors,
+[03:40] including the size of the business, uh
+[03:42] the value of the assets that need
+[03:44] protection, and sometimes it's pretty
+[03:46] difficult to evaluate that. What do we
+[03:48] have and how much does it cost? It might
+[03:51] not be so simple to answer this,
+[03:53] especially when we're talking about
+[03:54] something that we have created, like
+[03:57] intellectual property.
+[03:59] What is simple is that you should not
+[04:01] ever spend more on security than the
+[04:04] protected asset is worth. You're not
+[04:07] buying a bike chain that costs more than
+[04:09] the bike, right?
+[04:11] However, investing in security is still
+[04:14] crucial because
+[04:16] the consequences of a breach
+[04:18] are going to be much more costly than
+[04:20] whatever investment you might have had
+[04:23] to take out of your pocket beforehand.
+[04:26] Security is not something you can set up
+[04:28] once and forget about it. Even though,
+[04:30] unfortunately, that's exactly what many
+[04:32] companies are doing because they only
+[04:34] see it as a requirement, uh a checklist,
+[04:36] a nuisance sometimes. It's an ongoing
+[04:39] process that requires constant attention
+[04:42] and maintenance. And just like any other
+[04:44] process, it needs some tender loving
+[04:47] care from time to time, some regular
+[04:48] updates, and adjustments to stay
+[04:51] effective. It's all about being
+[04:52] proactive and keeping your defenses up
+[04:55] to date to prevent any potential
+[04:57] threats, especially those that you know
+[04:59] nothing about.
+[05:02] So, security in general has three goals
+[05:04] or topics, let's say that it focuses on.
+[05:07] You've definitely heard about these
+[05:08] before. We call them the CIA triad, made
+[05:12] up of confidentiality, integrity, and
+[05:15] availability. You might find them
+[05:17] displayed in a triangle, and it's
+[05:18] actually more than just a shape. It's a
+[05:20] way to suggest that if you choose a
+[05:21] point inside of that triangle, the
+[05:24] closer you get to one of the edges or
+[05:26] one of the vertices, the more you
+[05:28] distance yourself from the others.
+[05:30] In other words, unlike Pokemons, you
+[05:33] cannot catch them all. You cannot have
+[05:35] them all, the best of all worlds, at the
+[05:37] same time.
+[05:39] First, we're talking about
+[05:41] confidentiality, which is also the first
+[05:42] idea that comes into most people's minds
+[05:45] when you think about security. For most
+[05:48] people, securing something means hiding
+[05:50] something, right? And since we're not
+[05:52] very good at hiding stuff in the digital
+[05:54] realm, or better said, computers are
+[05:56] really good at finding hidden stuff, we
+[05:59] don't really hide data at all. By the
+[06:01] way, the that would be something called
+[06:03] security through obscurity, which is a
+[06:06] big, big no-no in uh in the IT world.
+[06:09] Uh that's not security. That's just
+[06:11] wishful thinking, okay? So, we're not
+[06:13] hiding data, but we're encrypting it.
+[06:16] We're allowing data to be read,
+[06:18] accessed, or we plan for the unforeseen
+[06:20] circumstances when the data might be
+[06:22] accessed. But, in an encrypted form, we
+[06:25] can make sure that nobody outside those
+[06:27] who have the decryption key will be able
+[06:30] to make use of it. Still,
+[06:31] confidentiality isn't always just about
+[06:33] encryption. How else could you hide some
+[06:35] data? Well, let's think about it for a
+[06:37] second. Instead of hiding or encrypting
+[06:40] the data, how about not letting anyone
+[06:43] enter the room or the area where the
+[06:46] data is stored,
+[06:47] which means that authentication systems,
+[06:50] regardless of how they're implemented,
+[06:52] uh with passwords, biometrics,
+[06:53] multi-factor authentication, doesn't
+[06:55] matter, they are also a tool for
+[06:57] ensuring confidentiality.
+[07:00] Not every piece of information that you
+[07:02] own needs to be confidential. Some of
+[07:05] them are designed not to be, like
+[07:07] publicly accessible information on your
+[07:09] public website.
+[07:10] So, while confidentiality sounds good,
+[07:13] it's definitely something that should
+[07:14] not be applied all over the place
+[07:16] without good reason.
+[07:19] Also, don't always think that it's you
+[07:21] against them, right? The good guys
+[07:23] against the hackers. Sometimes,
+[07:26] breaches of confidentiality can happen
+[07:28] by complete accident. Somebody shared a
+[07:30] document with too many people
+[07:32] uh or made it public, or left it
+[07:33] somewhere in public. So, it's not
+[07:35] necessarily intentional, but proper
+[07:36] authentication systems combined with
+[07:38] encryption can minimize the damage of
+[07:40] these things if and when they happen.
+[07:44] Next we have integrity. This is about
+[07:45] how reliable the data that we're
+[07:47] accessing is.
+[07:49] Because if we cannot rely on the
+[07:51] correctness, the validity, the integrity
+[07:55] basically of the data, that data is not
+[07:57] useful to us or to anybody. If you
+[07:59] cannot trust the data, it's not useful
+[08:01] data.
+[08:02] It's just crap, junk data, which nobody
+[08:04] can use or not even need actually.
+[08:07] So, what use is a
+[08:09] payroll Excel file with the wrong
+[08:12] salaries?
+[08:14] What use is a database with bogus random
+[08:17] credit card numbers?
+[08:19] Completely useless.
+[08:21] So, to keep data intact, we use a
+[08:23] variety of controls and measures. Access
+[08:26] to data must be restricted and we need
+[08:28] to check and double-check um the data
+[08:31] across all the stages
+[08:34] from storage to processing. We're
+[08:37] talking about things like encryption to
+[08:39] protect the data from prying eyes,
+[08:41] hashing to verify that data hasn't been
+[08:43] tampered with, and very strong solid
+[08:46] authentication measures coupled with
+[08:48] authorization methods to ensure that
+[08:51] only the right people get access.
+[08:53] And also, it's not just about
+[08:54] technology. People play a huge role,
+[08:57] too. Training is crucial because human
+[08:59] error can lead to breaches of integrity.
+[09:02] And let's not forget about policies and
+[09:03] procedures, right? They're the rule
+[09:05] books that everyone needs to follow to
+[09:07] keep data safe.
+[09:09] Integrity and confidentiality are two
+[09:11] sides of the same coin. We doubt
+[09:13] integrity, confidentiality is at risk
+[09:16] because if data can be changed without
+[09:18] permission, it's not really secret
+[09:20] anymore.
+[09:22] And it's also useless. Without
+[09:23] confidentiality, integrity is at risk
+[09:26] because if unauthorized people can see
+[09:28] the data, they might find ways to change
+[09:31] it or even duplicate it and use it as a
+[09:32] replacement for the original.
+[09:35] And finally, the third pillar is
+[09:37] availability. This one is the one that
+[09:39] baffles most people. Why on earth is
+[09:42] security concerned with availability?
+[09:44] First, availability means being able to
+[09:46] use and access the data. It almost
+[09:49] sounds counterintuitive since we have
+[09:51] confidentiality, which should deny
+[09:53] access, and integrity, which should not
+[09:56] allow you or someone else to make random
+[09:58] changes to the data. So, why are we
+[10:00] aiming for availability? Why do we want
+[10:03] to make it so, well, available?
+[10:06] Don't make it available. Keep it locked
+[10:08] down, right? That should be the
+[10:10] approach. Well, some people understand
+[10:12] availability as in publicly available.
+[10:15] Uh accessible for all, free and
+[10:17] unrestricted, which is not correct. From
+[10:19] a security perspective, availability
+[10:21] actually means that the data that we're
+[10:22] securing must be stored in such a way
+[10:25] and managed by such systems in place so
+[10:27] that whenever we need the data, or
+[10:30] better said, when authorized people need
+[10:32] the data and authorized entities need
+[10:35] the data because you might be talking
+[10:36] about machines and servers and
+[10:38] applications that access it,
+[10:40] then the data is readily available,
+[10:43] which means it can be used and accessed,
+[10:47] of course. If I store my encrypted data
+[10:50] on a server, but the server is not
+[10:52] connected to any network or is it
+[10:54] powered off for some reason or because
+[10:57] some hardware component has failed,
+[11:00] I've lost availability and I've lost
+[11:02] everything related to that data. The
+[11:04] data is now unusable to me
+[11:07] and its level of security almost doesn't
+[11:10] matter anymore because it's as if the
+[11:12] data doesn't exist anymore. So, what use
+[11:15] are any security methods if my data is
+[11:17] not available?
+[11:19] Similarly, if I have some very
+[11:20] sensitive, let's say, paper documents,
+[11:23] all right?
+[11:23] Uh I could lock them down in a safe,
+[11:27] drop the safe in a hole in the ground,
+[11:29] destroy the key, pour concrete over it,
+[11:32] and then plant some daisies.
+[11:34] Is the data in the vault now secure?
+[11:37] Confidential?
+[11:39] Sure, it is. Nobody can access it.
+[11:42] Is the data fulfilling the integrity
+[11:44] requirement?
+[11:46] Sure, it does. Nobody can change it.
+[11:49] Is the data available?
+[11:51] No. Nobody can access it. Not even
+[11:53] authorized people. Not even myself. So,
+[11:55] to keep this promise, there are several
+[11:57] things that we need to do.
+[11:59] We have to set up controls that allow
+[12:02] only authorized users to get in. And we
+[12:04] need to make sure that the systems that
+[12:06] store the data perform well, even if
+[12:09] there's a lot of demand, like a bunch of
+[12:11] people trying to access the data at the
+[12:12] same time. Even if there are failures
+[12:14] along the path that we have to take to
+[12:16] access the data, like broken wires or
+[12:19] faulty equipment or
+[12:22] fiber cuts. We also need to be ready to
+[12:24] bounce back quickly if something goes
+[12:26] wrong, like having backups ready to go
+[12:28] in case the data is lost or or the
+[12:31] system has a failure.
+[12:33] All right. So, access control and
+[12:34] redundancy are both critical, let's say,
+[12:37] approaches
+[12:38] that help us ensure availability.
+[12:40] Now, threats to availability are all
+[12:42] around us, and that's exactly why
+[12:43] information security is concerned with
+[12:45] availability, actually. They can be as
+[12:47] simple as a as a power outage, which of
+[12:49] course makes you unable to access your
+[12:51] data, or as complex as a cyber attack,
+[12:54] which is shutting down your services,
+[12:56] like a denial-of-service attack,
+[12:58] DoS, all right? Or cyber attacks that
+[13:01] destroy your data, in which case you
+[13:02] either stop the attack before it happens
+[13:05] or you restore the data from some
+[13:06] backup. Human mistakes can also lead to
+[13:09] downtime. Actually, it might even be the
+[13:12] number one cause of downtime all over
+[13:14] the world, right? Human mistakes.
+[13:17] And that's why we have change control,
+[13:19] we have change management, maintenance
+[13:21] windows, backups, rollback scenarios,
+[13:23] and all that, even automation. We will
+[13:25] cover all of these in separate chapters,
+[13:27] don't worry.
+[13:29] Some other concepts related to security,
+[13:30] and remember we're just scratching the
+[13:32] surface here, just setting up the stage,
+[13:35] right?
+[13:36] Uh start with the opposite of CIA,
+[13:39] right? Confidentiality, integrity, and
+[13:40] availability, which is DAD. Disclosure,
+[13:44] alteration, and destruction. Kind of
+[13:47] sounds like an evil robot, right? DAD.
+[13:50] Uh now, these, as you can guess, are the
+[13:52] threats to the CIA triad, or the CIA
+[13:55] triad from the upside down or from the
+[13:57] dark side, depending on which movies
+[13:58] you're watching.
+[14:00] Uh it is also possible to have excessive
+[14:02] security measures that can actually work
+[14:04] against productivity or usability of
+[14:07] your systems. The key is to find a
+[14:09] balance where security measures are
+[14:10] strong enough to protect the data, but
+[14:12] not so overwhelming,
+[14:14] and uh
+[14:16] not at a level that incurs so much of an
+[14:19] overhead
+[14:21] so that they frustrate legitimate users
+[14:24] and make it a a pain in the butt to
+[14:26] access even the most common data. But
+[14:29] still, as a rule of thumb, if it's easy
+[14:31] for you to access the data, it's at
+[14:34] least a bit easier for an attacker as
+[14:36] well. Another concept here is
+[14:38] authenticity. This concept combines
+[14:41] integrity, which ensures that
+[14:42] information is accurate and unaltered,
+[14:45] with origin validation, which verifies
+[14:47] the source of the data. Now,
+[14:50] authenticity, in short, means that the
+[14:51] data is trustworthy and that it comes
+[14:54] from a verified source.
+[14:57] This kind of gets translated to
+[14:59] something like uh in order to trust the
+[15:01] data, you need to trust the source that
+[15:03] generated the data, right? That's that's
+[15:06] uh what authenticity basically boils
+[15:08] down to.
+[15:09] This makes a lot more sense when talking
+[15:11] about online identities. And now, we're
+[15:13] not talking about your social media
+[15:15] identity, but about digital identities
+[15:17] that can be proven with digital
+[15:19] signatures and digital certificates. And
+[15:21] also makes sense in your day-to-day
+[15:23] lives. The person that is telling you a
+[15:25] piece of information carries a lot of
+[15:27] weight in the decision that you make to
+[15:29] either trust or not trust that
+[15:31] information. I'm sure you can agree with
+[15:34] this.
+[15:35] Now, the concept here is
+[15:36] non-repudiation. The principle that
+[15:39] ensures that a person cannot deny having
+[15:42] performed their actions. In the digital
+[15:45] realm, this again involves using digital
+[15:47] signatures or audit trails
+[15:49] uh that provide evidence of someone's
+[15:51] actions, making it impossible for them
+[15:53] to claim they didn't do something.
+[15:56] Of course, this also relies on the
+[15:58] ability of the security system to attach
+[15:59] some sort of unique identifier or
+[16:02] signature to each identity so that any
+[16:05] traces left by that identity would be
+[16:07] impossible to forge, cover up, or even
+[16:10] duplicate by someone else. Hence, you
+[16:13] get non-repudiation.
+[16:15] Now, the concept is defense-in-depth.
+[16:17] I'm sure you've heard about this before.
+[16:18] Very common concept. It's about having a
+[16:21] layered approach to security
+[16:24] where multiple controls and safeguards
+[16:27] are put in place to protect your
+[16:29] information. If one layer fails, others
+[16:31] are there to catch the threat, much like
+[16:33] having multiple doors with locks in a
+[16:35] building. In a computer network, you
+[16:37] might have an edge or a perimeter
+[16:39] firewall. Beyond that, you might have
+[16:40] some internal firewall which manages
+[16:42] traffic flows between departments or
+[16:44] towards the data center. You might also
+[16:46] have some continuous monitoring,
+[16:48] intrusion detection, or working systems.
+[16:51] And ultimately, you also have security
+[16:52] software installed on the actual
+[16:54] workstations or servers. Each layer in
+[16:56] this chain adds to the resiliency of
+[16:59] your network from outside or inside
+[17:02] threats.
+[17:04] Finally, subjects, objects, and groups.
+[17:06] In security terminology, a subject is an
+[17:09] active entity like a user. So, something
+[17:11] or someone performing some sort of an
+[17:14] action.
+[17:15] That something or someone accesses
+[17:18] objects, which are passive entities like
+[17:21] files or databases or websites. So, long
+[17:25] story short, we always have subjects
+[17:27] accessing objects. And yes, these roles
+[17:30] might not be set in stone and they might
+[17:32] change like they do in peer-to-peer
+[17:35] networks where the role of the server
+[17:38] and the client might change, all right?
+[17:41] Uh groups are generally collections of
+[17:43] subjects that share the same access
+[17:46] rights to objects.
+[17:48] So, it's not a group in the general
+[17:49] definition of a group like a set of
+[17:51] items that have some arbitrary common
+[17:53] property. But, since we're talking about
+[17:55] security, a group it doesn't even matter
+[17:57] what it is a group of. They might be
+[17:59] users, servers, workstations, mobile
+[18:01] devices, anything. A group will contain
+[18:03] subjects that contain the same access
+[18:06] rights. So, that's what they all have in
+[18:09] common.
+[18:10] Uh most security best practices indicate
+[18:12] that security policies should be
+[18:14] designed for and applied to groups, not
+[18:18] to individual subjects. And those groups
+[18:21] should mirror the requirements of a
+[18:22] specific, let's say, department, perhaps
+[18:25] a job role that multiple people have, or
+[18:27] any other grouping method that makes
+[18:29] sense for your purposes and your
+[18:30] business.
+[18:32] Triple A or AAA is a concept that you
+[18:35] will definitely encounter sooner or
+[18:36] later in security.
+[18:38] It's not about batteries, mind you, but
+[18:40] it stands for authentication,
+[18:42] authorization, and accounting. What does
+[18:45] this have to do with anything? Well, in
+[18:47] the context of information security, the
+[18:49] AAA framework, along with the
+[18:52] identification and auditing, we're going
+[18:54] to talk about these later on.
+[18:56] Uh
+[18:57] so, it's actually like five terms hidden
+[18:59] in there.
+[19:00] Forms a structure for managing user
+[19:02] access and tracking their actions within
+[19:05] a system.
+[19:06] Now, if this still doesn't make it any
+[19:08] clearer, let's break these down into
+[19:11] separate concepts. First of all, we have
+[19:14] identification.
+[19:16] Uh any authentication system starts with
+[19:18] this.
+[19:19] This is where you as a user claim to
+[19:21] have a certain identity. For example,
+[19:24] you say, "I am Andrew." It's like
+[19:26] telling the security guard at the
+[19:27] entrance just who you are. That's it.
+[19:30] Next, we have authentication. This is
+[19:32] about, well, proving your claim. It's
+[19:35] not enough just to say that you're
+[19:36] Andrew. Half the world population can do
+[19:39] it. Uh you you also have to show some
+[19:41] proof. All right, you might show your ID
+[19:43] card. You might enter some password to
+[19:45] prove, "Yes, I am really Andrew, because
+[19:47] only Andrew should know this password or
+[19:49] should have this ID or should have this
+[19:51] fingerprint or this private key."
+[19:54] Right? It's a security guard checking
+[19:55] your ID to make sure it matches the
+[19:57] let's say guest list. All right.
+[19:59] Uh next comes authorization.
+[20:02] Once your identity is confirmed, you get
+[20:05] specific permissions depending on who
+[20:07] you are. Uh these permissions define
+[20:09] what you can and cannot do within that
+[20:11] system. If you're Andrew, maybe you have
+[20:13] access to certain files, let's say
+[20:15] Andrew's files, or areas in the
+[20:17] building, or maybe you get to remain in
+[20:19] the lobby and perhaps gain permission to
+[20:20] access only the restroom. Okay?
+[20:23] Auditing. Uh this is the process of
+[20:26] logging and monitoring all your actions.
+[20:28] Whatever you do as Andrew once you've
+[20:31] authenticated is recorded and stored in
+[20:33] a database. Everything that you do, like
+[20:35] entering a room or accessing a file or
+[20:37] making changes to a file on a server, is
+[20:40] recorded.
+[20:42] Finally, accounting. Uh this involves
+[20:44] keeping track of all your activities and
+[20:46] reviewing the logs to ensure that
+[20:48] everything is in order. The keyword here
+[20:50] is that you're also accountable for your
+[20:52] actions and need to have a system in
+[20:54] place that can provide proof of this
+[20:56] accountability.
+[20:58] And you don't get to repudiate those
+[21:00] actions, either. Hence, non-repudiation,
+[21:02] the last concept here. All these go
+[21:04] inside the definition of triple A.
+[21:07] Now, on the topic of a security
+[21:08] perimeter, for a long, long time,
+[21:11] uh when we talked about security, we
+[21:13] used to refer to perimeter security.
+[21:16] That is security implemented between two
+[21:19] zones, by definition, whatever those
+[21:21] zones might be, with different levels of
+[21:23] trust.
+[21:25] It kind of makes sense, right? If I
+[21:26] trust zone A more than I trust zone B,
+[21:29] it means that I need to have some sort
+[21:30] of security policy between A and B, so
+[21:33] that no monkey business will happen when
+[21:35] crossing that border.
+[21:37] For example, I'm probably not going to
+[21:39] allow monkeys from the less trusted zone
+[21:41] B to jump the fence into zone A and do
+[21:45] monkey business in there. On the other
+[21:46] hand, I might allow some monkeys, or for
+[21:49] some specific purposes, to move from
+[21:50] zone A to zone B, simply because I trust
+[21:53] those monkeys in zone A more than I
+[21:56] trust those in zone B.
+[21:58] And again, a long, long time ago, like
+[22:00] Star Wars says,
+[22:01] uh the default definition of zones A and
+[22:04] B was inside and outside of your company
+[22:09] or of your network. In other words, what
+[22:11] is ours versus what is not ours, what we
+[22:14] trust versus what we do not trust, us
+[22:17] versus them. A lot of inequality and
+[22:19] hate in cybersecurity for a long time.
+[22:23] So, most security policies were
+[22:24] implemented on the edge or perimeter of
+[22:27] the network. Hence, the name of security
+[22:29] perimeter.
+[22:30] It was pretty easy to abstract security
+[22:32] this way. We trust what's inside because
+[22:34] that's our network, our people, our
+[22:36] devices, our monkeys. We trust
+[22:38] ourselves, and we don't trust the wild,
+[22:40] wild web outside or the entire internet,
+[22:42] for that matter. And that's where we
+[22:44] implemented firewalls, IPSs, and that's
+[22:47] where we terminated VPNs in there, as
+[22:49] well as uh whatever public services
+[22:51] might be accessible from the outside,
+[22:53] and life was good and simple. But, in
+[22:56] this new reality, the perimeter still
+[22:59] exists, but it's no longer a single
+[23:02] well-defined boundaries. Now a
+[23:04] collection of smaller distributed
+[23:08] let's say perimeters, micro perimeters
+[23:11] around each user, around each device,
+[23:14] each application, each data that is
+[23:16] stored somewhere. So security is no
+[23:18] longer about keeping the bad guys out of
+[23:20] zone A or out of the inside of the
+[23:23] network. It's about ensuring that every
+[23:25] interaction, no matter where it happens,
+[23:28] is secure.
+[23:30] Well, some concepts still apply today,
+[23:32] but some don't. For example, we still
+[23:33] apply the concept of security between
+[23:35] zones, but maybe we have more than two
+[23:37] zones, right? We might have zones mapped
+[23:39] to different departments.
+[23:41] And it makes sense to have security
+[23:42] policies
+[23:43] um custom security policies between any
+[23:46] two departments in the in a company
+[23:48] that might try to communicate. We might
+[23:50] trust them all, but not equally, or we
+[23:53] know for sure that some departments
+[23:54] should never ever communicate with
+[23:56] others.
+[23:57] Uh we might have up different zones
+[23:59] inside of our data center as well, where
+[24:01] all the apps are running. Sometimes
+[24:02] security policies are implemented as one
+[24:05] zone per app or per storage entity,
+[24:07] which makes it very, very granular and
+[24:10] specific when deciding who gets to
+[24:12] access which resource or which app.
+[24:14] We might also have zones that map onto
+[24:16] different customers, especially if we're
+[24:18] the kind of business that serves
+[24:19] multiple customers. Maybe we're
+[24:21] providing a managed service or hosting
+[24:23] services. Or in most cases, if not all
+[24:26] of them, those customers need very
+[24:28] strong security and separation between
+[24:30] them. So we need strong security
+[24:32] policies so that no data leakage happens
+[24:35] between two customers that have no
+[24:36] business talking with each other.
+[24:39] Uh even though all of them might be
+[24:41] hosted on the same shared
+[24:42] infrastructure.
+[24:44] And we could keep going here with more
+[24:45] examples, but the bottom line here is
+[24:47] that we need to understand that when
+[24:49] designing security policies, we need to
+[24:51] decide whether we create zones and
+[24:54] policies mapped to physical resources or
+[24:57] logical entities like user groups, apps,
+[25:00] departments, and so on. Finally, fast
+[25:03] forward to the present, due to how smart
+[25:07] attacks have become and how good have
+[25:08] hackers become at hiding their own
+[25:10] traces,
+[25:11] some people thought, you know, with all
+[25:13] the advanced persistent threats out
+[25:15] there, APTs, with how many attack
+[25:17] vectors we have, with the fact that we
+[25:19] now have a mobile workforce, and a lot
+[25:22] of people are working from home, fingers
+[25:24] crossed, I hope in 5 years this won't
+[25:25] change. Um with the fact that businesses
+[25:28] are now hybrid as in on premises and in
+[25:31] some cloud environments or even cloud
+[25:33] native, right? That perimeter that we
+[25:36] had before, not only doesn't feel so
+[25:38] secure anymore, but we're actually
+[25:39] having a hard time defining where that
+[25:43] ancient perimeter is today.
+[25:47] Where does it end? Is it still at the
+[25:49] edge of your local network? But your
+[25:51] local network is now extended to all
+[25:53] those remote workers and their homes and
+[25:55] cloud environments, and it has permanent
+[25:57] connections to those.
+[25:59] Where critical resources are running,
+[26:00] especially in clouds, right? So, where
+[26:02] is that perimeter now? Well, there's no
+[26:05] short answer to this, unfortunately.
+[26:07] When we talk about governance in the
+[26:09] context of security, we're acknowledging
+[26:11] that security isn't just a technical
+[26:14] issue. It's a business-wide concern, and
+[26:16] not just because it costs money that
+[26:19] come from budgets that need to be
+[26:20] approved, but because security is there
+[26:22] to support the mission of the business,
+[26:24] to make sure that the business exists
+[26:26] today and has a pretty good chance of
+[26:28] existing tomorrow, too.
+[26:31] So, security governance should also be
+[26:32] about making informed decisions that
+[26:34] affect the entire company, not just the
+[26:36] IT department.
+[26:38] Governance means high-level
+[26:40] decision-making about where to focus
+[26:43] your security efforts and resources.
+[26:44] It's kind of like a like a steering
+[26:46] wheel for your security, a general
+[26:48] direction. It's not just a task for the
+[26:50] IT team, it requires involvement from
+[26:52] the top executives who understand the
+[26:54] business implications and who are able
+[26:56] to provide approvals when investments
+[26:58] are required.
+[27:00] Now, to make these decisions,
+[27:02] governance has to rely on continuous
+[27:03] feedback from a lot of sources. Internal
+[27:05] sources, this is where we look at the
+[27:07] company's current security measures,
+[27:09] what we currently have. We actively
+[27:11] search for potential threats in here to
+[27:13] understand what might be a good secret
+[27:16] solution to invest in.
+[27:18] And we also look at external sources.
+[27:20] Means keeping up to date with industry
+[27:22] standards, understanding what security
+[27:24] solutions vendors offer. They always
+[27:27] come up with new stuff, how they change
+[27:29] over time, how some
+[27:31] how some of them become obsolete over
+[27:33] time. That's important, too. They become
+[27:35] under sale at some point and then of
+[27:36] support and you end up unprotected. And
+[27:40] staying aware of any emerging threats
+[27:42] out there.
+[27:43] We also have regulatory compliance and
+[27:45] this is often referred to as third-party
+[27:47] governance,
+[27:49] which can also dictate certain security
+[27:50] requirements depending on where you
+[27:52] live. And even though people groan and
+[27:55] roll their eyes when they hear the word
+[27:57] regulations, it is a very good thing
+[28:00] because in absence of these regulations,
+[28:02] some companies wouldn't even have any
+[28:04] kind of security plan in place at all.
+[28:07] Speaking of balancing security,
+[28:11] let's start with security function. The
+[28:12] security function within a company
+[28:14] is that aspect that involves
+[28:16] understanding and managing that
+[28:18] company's security posture.
+[28:20] Understanding is about knowing where you
+[28:22] stand in terms of security and risks.
+[28:24] And managing is making informed
+[28:26] decisions based on that knowledge. Now,
+[28:28] in short, it's the balance between
+[28:31] knowing what you have and knowing what
+[28:33] you should be doing. So, here's how it
+[28:34] works.
+[28:35] We just start with security and risk
+[28:38] assessments. This is about taking stock
+[28:40] of your current security measures and
+[28:42] identifying potential risks. It's a
+[28:44] health checkup for your company's
+[28:46] security.
+[28:47] After
+[28:48] we get the result of our risk
+[28:50] assessment, we need to measure, monitor,
+[28:53] and compare.
+[28:54] So, you need to constantly measure your
+[28:56] security performance, monitor for any
+[28:58] anomalies, and compare your metrics
+[29:01] against something like industry
+[29:03] standards or your own past performance
+[29:05] because the outliers in these
+[29:07] measurements will show you where things
+[29:09] aren't working well or where additional
+[29:11] measures are required. Next, evaluate
+[29:14] your actions. Asking like, "Do we
+[29:17] benefit from doing this? Or would this
+[29:19] other thing give us better results? Or
+[29:21] is it worth protecting these assets at
+[29:23] all?" These questions help you decide
+[29:26] what is the value of your security
+[29:27] actions because they need to have value.
+[29:30] Security measures, they require people
+[29:33] to implement them.
+[29:34] They cause downtime when they're
+[29:36] implemented. So, obviously, we're not
+[29:38] going to do something if it's not
+[29:40] totally worth it.
+[29:41] Sometimes, it's also important to
+[29:42] consider whether it's time to stop doing
+[29:44] certain practices that aren't delivering
+[29:46] results, are outdated, or have been
+[29:49] there since nobody knows when and nobody
+[29:51] knows why we keep doing them like in the
+[29:52] like in the monkey experiment.
+[29:55] Security also needs business alignment.
+[29:57] Every security measure should align with
+[29:58] the business objectives simply because,
+[30:00] as we said before, security exists
+[30:02] because we need the business to exist.
+[30:05] So, it's a straightforward direct
+[30:06] relationship where the business dictates
+[30:09] the security needs. This means creating
+[30:11] business cases for each new change to
+[30:13] ensure that it supports the company's
+[30:15] goals.
+[30:17] So, how do we approach security? Well,
+[30:18] in a very generic description,
+[30:21] we have either the top-down or the
+[30:23] bottom-up approach.
+[30:25] In the top-down approach, which is also
+[30:26] the most common strategy, decisions are
+[30:28] made at the executive level and then
+[30:30] implemented throughout the organization.
+[30:32] It ensures that security measures are in
+[30:34] line with company's vision and strategy.
+[30:36] Well, of course, they are since they're
+[30:38] coming in from the top, but you can
+[30:41] probably see where this is going. It
+[30:42] strongly depends on the security
+[30:44] decision makers to translate those
+[30:46] business ideas into actual security
+[30:48] measures. Without this deep level of
+[30:50] understanding, the road to bad security
+[30:52] is always paved with good intentions.
+[30:56] And the other approach is the bottom-up
+[30:57] one, a bit less common, but this
+[30:59] approach involves ideas and feedback
+[31:01] coming in from all levels of the
+[31:03] organization, which can lead to very
+[31:06] smart, innovative solutions, but can
+[31:08] also create a lot of chaos where many
+[31:10] ideas are pointing in many directions at
+[31:12] the same time, and often they either
+[31:14] contradict each other or simply not
+[31:17] feasible to implement them all.
+[31:18] Sometimes the company ends up in a
+[31:20] constant state of analysis paralysis,
+[31:24] where no decision is ever finalized. So,
+[31:26] for this method to work, it requires a
+[31:28] deep understanding of issues and
+[31:29] solutions at management level, and this
+[31:32] level of understanding is often
+[31:33] nonexistent. In my experience, this type
+[31:37] of approach also has another downside.
+[31:39] Sometimes companies simply don't have
+[31:41] the brainpower or the skills necessary
+[31:43] to translate engineering and technical
+[31:45] requirements into a business case. I'm
+[31:48] sure you've encountered this before. So,
+[31:50] an idea that would otherwise benefit the
+[31:52] company would go unnoticed or rejected
+[31:55] simply because nobody was able to
+[31:57] explain it
+[31:58] adequately to the manager or to the CEO.
+[32:01] So, the responsibility for managing
+[32:03] security, as you can probably guess,
+[32:05] extends all the way to the top in a
+[32:06] company. Everyone is responsible for
+[32:08] security, but obviously only a few
+[32:10] people at the top are actually
+[32:12] responsible for managing security at a
+[32:14] company level, or company-wide.
+[32:16] Officially, we have the role of the
+[32:19] Chief Information Security Officer,
+[32:20] CISO, which can sometimes overlap with
+[32:23] that of the Chief Information Officer,
+[32:25] CIO, and that is the main role of
+[32:27] security management. So, remember this
+[32:29] one. Well, what is a CISO paid to do?
+[32:31] Well, they define the security policies
+[32:33] for the company, or at least put the
+[32:34] last signature on those documents. They
+[32:36] decide on the rules and the guidelines
+[32:38] that govern how the company protects its
+[32:40] information.
+[32:41] They also assign responsibilities for
+[32:43] the security tasks within the company to
+[32:45] individuals or to departments and job
+[32:47] roles depending how big the company is.
+[32:50] They are also responsible for
+[32:51] establishing security testing
+[32:53] procedures, which is a complicated way
+[32:55] of saying that they are responsible for
+[32:57] conducting checks that prove that
+[32:58] security measures are okay, that have
+[33:01] been implemented, they're effective, and
+[33:03] that can withstand potential attacks.
+[33:06] The CISO should also take part in
+[33:08] creating the security education
+[33:09] policies, which are basically just
+[33:11] trainings, right? And educate employees
+[33:14] about security best practices. A CISO
+[33:17] should at least decide which topics
+[33:18] should be security awareness trainings
+[33:20] cover, but maybe they should not be the
+[33:22] ones actually
+[33:23] writing and delivering them.
+[33:26] Also on the topic of policies, the CISO
+[33:27] should help develop the risk assessment
+[33:29] policies because understanding potential
+[33:31] risks is absolutely necessary for a
+[33:34] company to be prepared, and we need the
+[33:36] CISO's brain in there to decide how this
+[33:38] risk assessment process should look
+[33:40] like. We're going to talk more about
+[33:41] risk assessment later on.
+[33:44] Also, don't forget that in the
+[33:45] cybersecurity business, management
+[33:47] approval is essential for any
+[33:49] security-related action, and remember
+[33:51] this one for the exam as well. Doesn't
+[33:53] matter if you're making policies, if
+[33:55] you're implementing policies, if you're
+[33:56] conducting an assessment, a pen test, or
+[33:58] making any type of investment, there's
+[34:00] always a huge requirement to have
+[34:02] management approval before any any other
+[34:05] step. Remember this one.
+[34:07] And it's actually not a bad idea, if you
+[34:08] think about it, to have management
+[34:10] approval for everything because
+[34:12] there is also the issue of liability. If
+[34:14] a data breach happens,
+[34:16] the management is ultimately
+[34:18] accountable. And don't look at me cuz
+[34:20] I'm saying this with a smile on my face,
+[34:22] but let's be honest here.
+[34:25] Having somebody else to bear the
+[34:27] responsibility for any repercussions
+[34:29] that may arise from such incidents,
+[34:32] it's actually a good thing because you
+[34:35] probably don't want to be a security
+[34:37] advisor or just a security analyst who's
+[34:40] going to be ultimately responsible for
+[34:42] the entire security of the entire
+[34:43] company, right? You don't have that type
+[34:45] of high-level overview and you shouldn't
+[34:47] have that type of high-level
+[34:49] responsibility and accountability,
+[34:50] either. Now, don't look relieved.
+[34:54] Uh it's not like management won't look
+[34:56] for those responsible
+[34:57] >> [laughter]
+[34:58] >> implementing a
+[35:00] a crappy or
+[35:02] misimplementing or a security measure in
+[35:04] the first place. They are obviously
+[35:05] going to go on a witch hunt against
+[35:07] those who were slacking and allowed the
+[35:09] attack to happen.
+[35:11] Most likely that's going to happen.
+[35:13] Uh you're not really off the hook. So,
+[35:15] for any decisions that you make or
+[35:16] recommendations that you make, you're
+[35:18] still ultimately responsible for those
+[35:20] specific recommendations.
+[35:22] Oh, and by the way, CISO, CIO, these are
+[35:25] mostly CISSP certified people, just in
+[35:28] case you were wondering or in case you
+[35:30] already needed some motivation to go on
+[35:32] with the training. Uh if you would enjoy
+[35:34] a job like this, then keep going.
+[35:36] Security planning, this is broken down
+[35:38] into three main types. First, we have
+[35:41] strategic planning. This is the
+[35:43] long-term vision of security where
+[35:45] you're looking at years into the future
+[35:47] and you pretend like you know what
+[35:49] you're doing and you have some crystal
+[35:50] ball that will tell you how your company
+[35:52] and the world around it will look like
+[35:55] in a couple of years in the future.
+[35:57] Anyway, besides subjective assumptions,
+[35:59] it's about setting broad goals and
+[36:01] directions based on the company's
+[36:03] objectives and how we can somehow, to
+[36:05] our best, anticipate the way technology
+[36:08] and the threats will go.
+[36:10] Uh then we have tactical planning. This
+[36:13] is the uh medium-term approach
+[36:16] focusing on the coming months or the
+[36:17] next year. It's a bit more detailed than
+[36:19] strategic planning. This is also why it
+[36:21] involved developing specific programs,
+[36:23] not so not just broad ideas, but
+[36:25] specific programs and initiatives to
+[36:27] improve security based on that strategic
+[36:28] plan.
+[36:29] Going one level extra deeper, we find
+[36:32] operational planning. This is the
+[36:33] short-term day-to-day management of
+[36:35] security. It's about the immediate
+[36:37] actions and and responses to what is
+[36:40] burning right now, critical right now.
+[36:42] So, it's more the reactive type of
+[36:44] planning out of the three.
+[36:46] And for security to be effective, you
+[36:48] need to have processes because people
+[36:50] will not simply act the way they should.
+[36:52] So, if a process is not written in the
+[36:54] DNA, then it needs to be written in some
+[36:57] Word document, and this helps people
+[36:59] take action, and people need to know
+[37:01] what they should be doing. Well, those
+[37:04] processes include at least the
+[37:06] following. We have risk assessments.
+[37:09] These are the processes for identifying
+[37:11] and evaluating risks. We use these to
+[37:14] determine what needs to be done, what
+[37:16] needs to be protected. So, inventory
+[37:18] assessments are part of this as well.
+[37:21] Other processes involve personnel
+[37:23] management, which is managing the flow
+[37:25] of people in and out of the company.
+[37:27] We're talking here about people being
+[37:29] hired and people leaving the company,
+[37:30] not people going in and out of the
+[37:31] building, right? Okay. So, for these
+[37:33] flows, we need to make sure that access
+[37:36] rights are granted appropriately and
+[37:38] revoked when no longer needed. This
+[37:41] applies both to a guest leaving the
+[37:42] building and to a person leaving the
+[37:44] company after working there for 10
+[37:45] years. Now, uh processes involving the
+[37:48] supply chain are required, too, because
+[37:51] an insecure supply chain can expose you
+[37:54] to threats from third-party vendors and
+[37:57] service providers.
+[37:58] A vulnerability in the supply chain
+[38:01] of the company where you buy your
+[38:03] hardware and software from is a
+[38:05] vulnerability that you're bringing into
+[38:07] your own company.
+[38:09] And it suddenly stops being the vendor's
+[38:10] problem as it becomes your problem. Or
+[38:13] at least this is how it looks like from
+[38:15] your point of view. Somewhat on the same
+[38:16] line, we also have business partner
+[38:19] integration processes, how we talk, how
+[38:21] we exchange data, how we share
+[38:23] information with external parties,
+[38:25] other companies, and even our customers.
+[38:27] We find here service level requirements,
+[38:30] SLR's, and service level agreements,
+[38:32] SLA's, with partners to ensure that
+[38:35] security expectations are clear,
+[38:37] measurable, and met. Of course, SLR's
+[38:40] and SLA's
+[38:42] can and do cover more than just security
+[38:44] aspects, but that's still a big part.
+[38:47] Security roles. Now, since we already
+[38:49] introduced the CIO and the CISO, you can
+[38:52] probably assume that those are not the
+[38:54] only roles involved in the security
+[38:55] function of a company.
+[38:57] In the realm of information security,
+[38:58] there are several roles that contribute
+[39:00] to the overall security posture.
+[39:02] However, it is important to note that
+[39:04] not every role is mandatory, and some
+[39:06] may overlap or be less clearly defined
+[39:09] depending on the company. Some might
+[39:11] look like they were invented just to
+[39:13] create an artificial position for the
+[39:14] CEO's son-in-law. I will not cover all
+[39:17] of them, but only those that you might
+[39:18] encounter in the exam.
+[39:20] First, the top or senior management. Of
+[39:22] course, not an invented role, but vital
+[39:25] because this role involves overseeing
+[39:27] the security strategy.
+[39:28] This is where security usually starts,
+[39:30] and this is where it sometimes ends
+[39:32] without being implemented due to lack of
+[39:33] management buy-in.
+[39:35] They're the decision makers who need to
+[39:37] be convinced to prioritize security
+[39:39] initiatives and to allocate money
+[39:41] effectively. Then we have the security
+[39:43] professionals or security technicians.
+[39:45] They're often the front-line defenders
+[39:47] because they have to implement and
+[39:48] manage the security measures. They also
+[39:50] have to monitor and respond to
+[39:52] incidents, and they also have to stay
+[39:54] both late and up-to-date on the latest
+[39:56] threats and technologies. We like it
+[39:59] when they're proactive, but they also
+[40:01] need to be paid well, otherwise some
+[40:02] other company will pay them better.
+[40:04] Hint, hint. Now, strictly speaking about
+[40:07] data oriented roles, we have a couple
+[40:10] here that will definitely
+[40:12] come up in the exam. We have the asset
+[40:14] owner, is the person responsible for the
+[40:16] security and the use of a particular
+[40:19] data asset. They own that data and they
+[40:22] make decisions about how the data is
+[40:24] protected and who needs to have access
+[40:25] to it.
+[40:26] The data custodian is typically more
+[40:29] technical position. The data custodian
+[40:32] manages and maintains the systems that
+[40:34] store, process, and backup the data
+[40:36] assets, ensuring that they are stored
+[40:38] securely and that we are using proper
+[40:40] access controls to access the data.
+[40:42] So, in other words, they're concerned
+[40:44] with everything around the data, which
+[40:47] helps it to be durable, reliable,
+[40:49] available, and so on. The data user is
+[40:52] obviously anyone who uses the data. I
+[40:54] know the explanation sounds dumb, but be
+[40:55] careful. It needs to be within the scope
+[40:57] of their role. So, it's basically the
+[40:59] user that should access the data.
+[41:01] If a hacker accesses it, they're not the
+[41:04] user, at least not by definition. You
+[41:05] can probably expect that a security
+[41:07] policy will not take into account
+[41:08] attackers as valid users of company
+[41:11] data.
+[41:12] Uh users must follow the security
+[41:13] policies that protect the data they
+[41:15] access, including the acceptable use
+[41:17] policies, AUPs.
+[41:19] This is also where we find the security
+[41:21] auditor.
+[41:22] It doesn't necessarily mean that he or
+[41:24] she is part of the company. Uh they
+[41:26] could be a third party, but it's a role
+[41:27] that says how well your company security
+[41:29] looks like. They also evaluate what
+[41:31] policies you may or may not have in
+[41:33] place, how compliant or how
+[41:34] non-compliant your the your company
+[41:36] might be uh with regulations and so on,
+[41:39] depending on the nature of the audit.
+[41:40] And by the way, audit is a very generic
+[41:42] term. Some companies call a simple
+[41:44] device inventory in their network and
+[41:46] audit.
+[41:47] Or when they count the active users in
+[41:50] Microsoft 365, they call that an audit.
+[41:52] Your mileage may vary drastically on the
+[41:54] meaning of the word audit. Nevertheless,
+[41:57] in a security audit, this is the person
+[41:59] that should identify weaknesses and
+[42:01] recommend improvements uh for the nasty
+[42:03] bits. Also, a penetration test can be
+[42:05] considered an audit as well, because
+[42:07] it's completely useless without a report
+[42:09] at the end that lists whatever was
+[42:11] scanned and what the findings actually
+[42:13] were.
+[42:14] So, the question remains, how do you
+[42:16] begin designing and then implementing
+[42:18] security because it's a complicated
+[42:19] business. And there are a lot of things
+[42:21] to put down on paper before you start
+[42:23] actually doing something. Now, at some
+[42:24] point people realized that this is a lot
+[42:26] more complicated when it has to be
+[42:28] designed from scratch, like everything
+[42:29] else, by the way. And each and every
+[42:32] company, each and every industry doing
+[42:34] this from scratch is going to take a lot
+[42:36] of time, and there's going to be a lot
+[42:37] of inconsistent results.
+[42:39] Because they all have their own specific
+[42:41] needs and quirks. So, designing
+[42:42] something from scratch is never easy.
+[42:44] Well, this is why some people thought,
+[42:46] "You know what? Let's gather all the
+[42:47] good ideas in one place, in one
+[42:49] document, and then whoever wants to
+[42:51] start designing security policies could
+[42:53] just start from our document or
+[42:54] blueprint." Now, of course, later on,
+[42:57] they can just go crazy with it, right?
+[42:58] Do whatever they want with it, adapt it,
+[43:00] change it, delete chunks of it if they
+[43:01] want, burn it to a crisp if they feel
+[43:04] so, or if it doesn't apply to their use
+[43:05] case, but at least we have a starting
+[43:07] point. They call the starting point a
+[43:09] security framework. And this completely
+[43:12] fake story happened more than once,
+[43:14] which means that we ended up with a
+[43:16] bunch of security frameworks. So, the
+[43:18] choice is yours.
+[43:20] Here are some important cybersecurity
+[43:21] frameworks and standards, and I'm sure I
+[43:23] don't need to tell you why you should
+[43:25] know about them.
+[43:26] Uh ISACA COBIT. This is a framework
+[43:30] designed for managing and governing
+[43:32] enterprise IT environments. Very, very
+[43:34] broad in nature. It helps companies
+[43:36] design IT goals that align with business
+[43:39] objectives. It also describes tools for
+[43:41] managing resources and risk. It's
+[43:43] probably the most popular one since it's
+[43:45] so generic. Anybody can use it. Uh NIST
+[43:47] 800-53.
+[43:49] It's a publication that provides a
+[43:51] catalog of security and privacy
+[43:53] controls, but for federal information
+[43:55] systems. Now, nobody stops you from
+[43:57] implementing federal standards in your
+[43:59] own company, or even in your own home.
+[44:01] It might even be a very good idea. It's
+[44:03] actually a good idea, but I'm mentioning
+[44:05] it here so that you know where it comes
+[44:07] from.
+[44:08] CIS benchmarks, these are best practice
+[44:11] standards for security configurations.
+[44:14] For some environments, they are
+[44:15] implemented as actual benchmarks, hence
+[44:17] the name. So, they are providing live
+[44:19] applications and scripts that you can
+[44:20] run and they can perform a security
+[44:21] checkup for a specific environment for
+[44:23] you. For example, the last CIS benchmark
+[44:26] that I ran was for Docker, the container
+[44:28] technology. It's a lengthy script that
+[44:30] starts talking with your Docker server
+[44:32] and looks for a bunch of stuff.
+[44:34] Is your connection to the server secured
+[44:35] TLS? Do you have containers that are
+[44:37] running as root? Do you have containers
+[44:39] that are running with no resource limits
+[44:41] and so on? At the end, it compiles all
+[44:43] these findings, shows you a summary,
+[44:45] gives you pointers on how to fix them,
+[44:46] and provides you a score as well, kind
+[44:48] of like a grade of how well you did. So,
+[44:51] the CIS benchmarks are probably not the
+[44:53] first tool that you would use when
+[44:55] starting designing security policies,
+[44:57] but are a great
+[44:58] tool for checking if things are working
+[45:00] and are configured as expected later on.
+[45:03] Actually, they might also be good when
+[45:06] you have no idea where to start from, as
+[45:08] they are at least address all the
+[45:09] pressing issues. NIST RMF, the risk
+[45:12] management framework. This one
+[45:13] integrates security, privacy, and cyber
+[45:15] supply chain risk management into the
+[45:18] system development life cycle, where you
+[45:20] are actually developing new products.
+[45:23] So, that's what it's useful for.
+[45:25] NIST CSF, the cybersecurity framework,
+[45:28] helps companies in understanding and
+[45:29] reducing cybersecurity risks, as well as
+[45:32] protecting networks and data. So, as the
+[45:34] name says, it is strictly on cyber
+[45:36] security.
+[45:37] ISO 27000 related standards, maybe
+[45:41] recognize 27001. This
+[45:45] series of standards actually includes
+[45:47] information security standards at every
+[45:49] level. Many companies who process
+[45:51] sensitive data or personally
+[45:53] identifiable data need to be compliant
+[45:55] with these standards. ITIL, this is a
+[45:58] set of detailed practices for IT service
+[46:00] management and gives you a lot of
+[46:02] guidance to service delivery. It's not
+[46:04] necessarily focused on security, even
+[46:06] though that one is addressed as well,
+[46:08] but more broadly addresses the entire IT
+[46:11] environment in a company and the IT
+[46:12] services that you might be providing to
+[46:14] outsiders.
+[46:16] Just to get this out of the way, there
+[46:18] are two concepts here that we need to
+[46:19] clarify, especially when talking about
+[46:21] who is responsible or liable for uh when
+[46:23] discussing security. And when you are
+[46:25] the one responsible, there are two types
+[46:28] of homework that you need to do to cover
+[46:31] your butt. First, there is due
+[46:33] diligence. This is where you need to be
+[46:35] able to prove that you thoroughly
+[46:37] researched and gathered all the
+[46:38] necessary information. You did your
+[46:40] homework, you were proactive, and you
+[46:42] made sure that you have a well-built
+[46:43] plan that covers all aspects of
+[46:45] security. Bad things can still happen,
+[46:47] of course, but being able to prove due
+[46:50] diligence shows that you weren't
+[46:51] unprepared, at least. Now, on the other
+[46:54] hand, we have due care, which is the
+[46:55] action phase where you put your plan
+[46:57] into practice. So, once you identify the
+[47:00] risks and you have plans in place, due
+[47:02] care is a continuous effort to implement
+[47:04] those plans. It's about maintaining and
+[47:06] updating security policies, applying
+[47:08] patches, enforcing policies, running
+[47:10] audits, monitoring everything
+[47:12] continuously from a security
+[47:13] perspective. Again, bad things can still
+[47:16] happen, but it's one thing to have a
+[47:19] data breach because of a misconfigured
+[47:20] firewall which was never audited or
+[47:23] checked, and it's a completely different
+[47:24] thing from a liability perspective when
+[47:26] the breach happened because of a
+[47:28] zero-day vulnerability which you simply
+[47:30] could not have predicted or protected
+[47:32] against.
+[47:34] So, I hope you see the difference here.
+[47:35] One is about knowing, the other is about
+[47:37] doing. You need to be able to prove them
+[47:39] both. Some regulations even specify
+[47:41] exactly that, due care and due
+[47:43] diligence. So, it's not always just
+[47:45] about covering your butt, but also about
+[47:47] being compliant.
+[47:49] All right. So, we mentioned a lot of
+[47:50] times already security policies. Let's
+[47:52] focus on them for a moment.
+[47:54] Security policies are the highest
+[47:56] abstraction for describing security.
+[47:57] It's the most generic thing that covers
+[47:59] everything security related in a
+[48:01] company. A security policy specifies
+[48:03] what are the specific business needs
+[48:05] that need to be addressed from a
+[48:06] security standpoint. What needs to be
+[48:09] protected, who's in charge of security,
+[48:10] but also how it affects all the other
+[48:12] employees. While IT departments usually
+[48:14] lead the charge, every employee has a
+[48:17] role to play in security simply because
+[48:19] every employee can break security.
+[48:22] A security policy also needs to cover
+[48:24] how security is enforced and
+[48:26] implemented, not just on paper, but
+[48:28] through a combination of technology,
+[48:29] processes, people, and sometimes even
+[48:32] rewards and punishments. We use
+[48:34] firewalls, encryption, and regular
+[48:36] audits to enforce our policies, but
+[48:38] training and awareness programs ensure
+[48:40] everyone is up to date,
+[48:41] so they matter, too. Policies also need
+[48:43] to cover compliance requirements. We
+[48:45] adhere to laws and regulations like
+[48:47] GDPR, HIPAA, and others. Compliance is
+[48:50] isn't just about avoiding fines,
+[48:52] it's about protecting our reputation and
+[48:55] maintaining trust. And finally, risk is
+[48:58] a part of any business. We assess
+[49:00] potential threats and decide where to
+[49:02] allocate resources, balancing security
+[49:04] with functionality and cost.
+[49:06] And sometimes we decide that we simply
+[49:08] won't do anything about a specific risk.
+[49:10] And by the way, that is called risk
+[49:11] acceptance, not laziness or something
+[49:13] else. Risk acceptance is a valid option,
+[49:15] and it happens almost every time. The
+[49:17] security policy might not be just one
+[49:20] document depending on how your company
+[49:21] is structured. Maybe you want one
+[49:23] security policy per department, maybe
+[49:25] one for regular employees and one for
+[49:26] managers, maybe one for all employees
+[49:29] and another one for subcontractors and
+[49:30] partners. It's up to you. Last thing
+[49:33] here, an AUP, acceptable use policy, is
+[49:36] another type of security policy example.
+[49:37] Here, it outlines how employees can use
+[49:40] company resources, the computers, the
+[49:42] internet, the company servers,
+[49:44] the mobile phones they might give you,
+[49:46] the office Wi-Fi, the printers, and so
+[49:48] on. And yes, this has a lot to do with
+[49:49] security. It's a clear set of rules
+[49:52] everyone must follow to keep our digital
+[49:54] environment safe.
+[49:56] There are more pieces of possible
+[49:58] documents that can surface as part of a
+[50:00] security policy. Often these are merged
+[50:02] into more generic documents, but here
+[50:04] they are, just a couple of them.
+[50:06] We have standards documents. Think of
+[50:08] standards as rule books. These are
+[50:11] established by some higher up
+[50:13] authoritative bodies and provide a model
+[50:15] that the company must follow.
+[50:17] Standards help us make sure we can
+[50:19] communicate with each other. So even
+[50:21] networking protocols are standards.
+[50:23] Uh that business processes are safe,
+[50:25] that a minimum level of quality is
+[50:26] guaranteed in everything that we do, and
+[50:28] of course, at least a minimum level of
+[50:29] security. Basically, whatever fires up
+[50:32] in your brain whenever you think about
+[50:34] standards, that's pretty much it in the
+[50:36] context of security as well.
+[50:38] Baselines are more of a concept than a
+[50:40] specific document. Though sometimes for
+[50:42] things that don't really change that
+[50:43] much, baselines can be documented as
+[50:45] well. From a security standpoint,
+[50:47] baselines can be a starting point. They
+[50:49] are the minimum security controls that
+[50:51] we set for our systems so that we can
+[50:54] have a consistent level of security
+[50:55] across all platforms. It's probably not
+[50:57] going to be enough. There's going to be
+[50:59] a lot of fine-tuning that's going to be
+[51:01] required, but having a minimum level of
+[51:03] security for everything that we spin up
+[51:05] in our network is already a pretty good
+[51:07] starting point.
+[51:09] Uh these include things like every
+[51:11] workstation might have an anti-malware
+[51:12] solution, or every newly deployed
+[51:14] servers must must block all management
+[51:16] traffic coming in from data interfaces,
+[51:19] or every host-based firewall must block
+[51:21] all connections from the outside by
+[51:23] default, stuff like that.
+[51:26] Then we have guidelines and
+[51:27] recommendations. While standards are
+[51:29] mandatory, guidelines are, hmm, let's
+[51:31] say advisory. In our context here,
+[51:34] guidelines and recommendations mean
+[51:35] pretty much the same thing. Not Not
+[51:37] being mandatory doesn't mean that they
+[51:39] should be ignored, mind you, but we can
+[51:41] cherry-pick them. They're flexible and
+[51:43] can be adapted to fit our unique needs.
+[51:46] Next, security procedures are the
+[51:48] step-by-step instructions that put our
+[51:50] policies into action. Security
+[51:51] procedures detail the how-tos for tasks
+[51:55] such as configuring firewalls,
+[51:56] responding to incidents, and updating
+[51:58] software, making changes to the network,
+[52:00] and so on.
+[52:01] On the same lines, we also have SOPs,
+[52:03] standard operating procedures, which are
+[52:05] detailed written instructions which make
+[52:07] our daily jobs standardized and
+[52:09] predictable. They are the playbooks or
+[52:11] scripts for what you do every day. Not
+[52:13] everything can have an SOP, you might be
+[52:15] thinking, "I don't have something like
+[52:16] this in my job." And if you do, well,
+[52:19] congratulations. You have a job that is
+[52:20] probably not easily replaced by
+[52:22] automation and or AI. But some jobs do.
+[52:26] And also, any deviation from the SOP
+[52:29] requires management intervention and
+[52:31] approval and punishment.
+[52:34] Kidding. [laughter]
+[52:36] Next, threat modeling.
+[52:39] The concept of threat modeling is part
+[52:42] of something called threat hunting and
+[52:44] represents what we call the efforts of
+[52:46] staying one step ahead of cyber threats.
+[52:49] It's basically the research and
+[52:50] preparation that you're doing before an
+[52:52] attack or breach actually has a chance
+[52:55] to happen. It's the security work that
+[52:56] you do when there is silence, when
+[52:58] things are good. Now, to do this
+[53:00] properly, threat modeling has to be
+[53:02] proactive. It does not make sense any
+[53:04] other way. And sometimes it's quite
+[53:05] difficult to be proactive. It's It's one
+[53:08] thing to investigate a specific breach
+[53:10] because you know exactly where you need
+[53:11] to start and have a pretty good
+[53:13] understanding about what you're about to
+[53:14] discover or at least what you're looking
+[53:16] for. But looking for threats in absence
+[53:19] of any proof, it's not only technically
+[53:21] more difficult as it requires a lot of
+[53:24] research, imagination, and creativity,
+[53:27] but it's also much more difficult to
+[53:28] explain to top management. What do you
+[53:31] mean you're looking for a breach that
+[53:32] hasn't happened? Are you crazy? This is
+[53:35] Is this what I'm paying you for?
+[53:37] Unfortunately, this happens a lot.
+[53:40] Now, to categorize threats, especially
+[53:42] since we're not talking yet about
+[53:43] specific threats, but more like
+[53:44] categories, you can of course use
+[53:46] whatever you want, but we also have
+[53:48] something called the STRIDE framework.
+[53:51] STRIDE stands for S for spoofing. These
+[53:53] are impersonation threats of a user or a
+[53:56] device. Uh tampering, threats that
+[53:59] perform unauthorized changes to data.
+[54:01] Repudiation, the threat of being able to
+[54:03] deny the performance of an action, thus
+[54:06] hiding nasty actions or even worse
+[54:07] blaming them or someone else.
+[54:09] Information disclosure, this means
+[54:11] exposure of confidential information.
+[54:13] Basically, that's what data breaches
+[54:15] are.
+[54:16] Denial of service, know about this. This
+[54:18] is the interruption of service
+[54:19] availability. And the threat of
+[54:21] elevation of privilege, which is the
+[54:23] unauthorized gain of elevated access
+[54:26] rights.
+[54:27] Another threat modeling methodology is
+[54:29] called PASTA. Kind of easier to
+[54:31] remember. It's a seven-stage threat
+[54:33] modeling methodology that is focused on
+[54:35] risk. Now, at stage one, we have
+[54:37] definition of objectives, DO, for risk
+[54:40] analysis. In our first stage, we define
+[54:43] what's
+[54:44] what we're protecting and why. It's
+[54:46] about setting clear objectives for our
+[54:47] risk analysis, such as focusing on
+[54:49] protecting customer data or on ensuring
+[54:51] service availability. At stage two, we
+[54:54] have definition of the technical scope,
+[54:56] DTS, where we outline the technical
+[54:58] boundaries. This includes the systems,
+[55:00] the network, and the data which are
+[55:02] included in the scope of our threat
+[55:03] analysis. At stage three, we have
+[55:05] application decomposition and analysis,
+[55:08] ADA. Here, we break down applications
+[55:10] into their to understand how they work
+[55:12] and interact. It's a deep dive into the
+[55:14] architecture, data flows, and
+[55:16] functionality of your applications in
+[55:18] order to understand their inner workings
+[55:20] and where weaknesses might be found. At
+[55:23] stage four, we have threat analysis, TA,
+[55:26] where we identify potential threats by
+[55:28] focusing on the adversaries and the
+[55:30] methods they might use to attack our
+[55:32] assets. Stage five is for weaknesses and
+[55:35] vulnerability analysis, WVA.
+[55:38] So, after identifying threats, we now
+[55:41] analyze our weaknesses and
+[55:42] vulnerabilities. It's a self-assessment
+[55:44] to find where we're most susceptible to
+[55:47] attack.
+[55:49] At stage six, there's attack modeling
+[55:51] and simulations, AMS. In this stage, we
+[55:54] simulate attacks based on the threats
+[55:55] and vulnerabilities we've identified.
+[55:57] It's a proactive measure to test our
+[55:59] defenses and response plans. And
+[56:00] finally, at stage seven, there's risk
+[56:03] analysis and management, RAM,
+[56:06] where we analyze the risks associated
+[56:07] with the threats and vulnerabilities we
+[56:09] identified. We then try to manage and
+[56:11] mitigate those risks by applying
+[56:13] appropriate security controls.
+[56:16] Wait a second. You said this one is easy
+[56:18] to remember, right? Yeah, the acronym is
+[56:20] easy to remember, not the stages. Don't
+[56:22] shoot the teacher.
+[56:25] Another very important aspect of threat
+[56:27] modeling is prioritization of your
+[56:29] findings or threats. And whenever we
+[56:31] need to classify, sort, or group using
+[56:33] any criteria, findings that we cannot
+[56:35] predict, this classification process is
+[56:37] always going to be influenced by a lot
+[56:39] of subjectivity. Still, we need to
+[56:41] prioritize threats, and sometimes
+[56:42] subjectivity might even work in our
+[56:44] favor because at the end of the day, the
+[56:46] prioritization that you're performing
+[56:48] has to match your needs, your
+[56:49] environment, your company, or
+[56:51] everything. There's no one-size-t-shirt
+[56:54] that fits all.
+[56:55] One way of prioritizing threats is by
+[56:57] using what's called a probability versus
+[56:59] damage scale. We evaluate threats based
+[57:01] on how likely they are to occur and on
+[57:03] how much damage they could cause. In
+[57:05] other words, we classify them by how bad
+[57:08] threats are, right? See the subjectivity
+[57:10] here.
+[57:11] Uh we could represent this in some sort
+[57:13] of a traffic light model. We just have a
+[57:15] traffic light. We characterize threats
+[57:16] into three levels. Uh high, red,
+[57:19] immediate action required, threats that
+[57:21] pose a significant risk.
+[57:23] Medium, yellow, require attention soon,
+[57:25] and they could easily escalate to high
+[57:27] if left unchecked. And low, green,
+[57:29] pretty obvious at this point, something
+[57:31] that you need to monitor regularly, but
+[57:33] doesn't require immediate action.
+[57:35] And yet another system, in case you have
+[57:36] room for one more,
+[57:38] it's called the DREAD system, D R E A D
+[57:41] system is only for assessing the
+[57:43] severity of threats. So, it's about five
+[57:45] criteria that we use and that can cause
+[57:47] us to decide that a threat is serious.
+[57:51] It stands for damage potential, how much
+[57:53] harm could a threat cause,
+[57:55] reproducibility,
+[57:57] whew, managed to pronounce this one, how
+[57:59] easily can the threat be replicated?
+[58:02] If it's too hard to prepare the
+[58:03] environment for it, it's less likely
+[58:05] that it will happen right away.
+[58:07] Exploitability,
+[58:08] how much effort is required to launch
+[58:10] the attack, similar to the point above,
+[58:13] affected entities, how many systems or
+[58:15] users will be impacted, and
+[58:17] discoverability, how easy it is for the
+[58:19] threat to be discovered. We did briefly
+[58:22] mention the supply chain before, but
+[58:24] it's also worth mentioning here that
+[58:27] there are also risks to be detected,
+[58:29] evaluated, and mitigated within the
+[58:30] supply chain. So, not only under our own
+[58:32] roof, so to say. That's because
+[58:35] computers, devices, networks, cloud
+[58:37] services that a company uses are not
+[58:40] produced nor delivered by a single
+[58:42] entity.
+[58:43] You might be selling software, but
+[58:44] you're not building the computers that
+[58:46] are used to develop the software, or the
+[58:48] computers that your clients will use to
+[58:50] run the software. So, no matter what
+[58:51] kind of final product you assemble, be
+[58:54] it physical or virtual, you will rely on
+[58:56] components from multiple third-party
+[58:58] vendors.
+[58:59] And even if you get a component from one
+[59:00] vendor, the pieces inside of that
+[59:02] component might be produced by someone
+[59:04] else. iPhone screens are made by
+[59:06] Samsung. Yeah.
+[59:08] So, there's a very intricate history of
+[59:10] sourcing and assembly in this long and
+[59:12] complicated chain
+[59:14] until you end up with the actual product
+[59:17] in your hand or software on your machine
+[59:19] is called the supply chain. Well, the
+[59:22] process known as supply chain risk
+[59:24] management has a single purpose, to make
+[59:26] sure that all the supply chain links are
+[59:29] reliable and trustworthy. How do we do
+[59:31] this? Great question. By analyzing the
+[59:33] supply chain and determining, for
+[59:35] example, if vendors disclose their
+[59:38] security practices and security
+[59:39] requirements to business partners. Do
+[59:41] they have proper auditing in place? Each
+[59:43] handoff in the supply chain should be
+[59:45] well documented, managed, and audited.
+[59:47] You might not be able to audit the
+[59:49] supplier on your own, nor should you
+[59:51] have the certifications to do so, but
+[59:54] the supplier should be able to provide
+[59:56] you with proof that their processes are
+[59:58] sound, reliable, and have been audited,
+[01:00:01] not just once, but periodically with
+[01:00:03] positive results.
+[01:00:04] Also, your own supply chain should be
+[01:00:06] secure as well. It's not just about
+[01:00:08] making sure that what you're buying is
+[01:00:10] secure, it's also about making sure that
+[01:00:12] in the process of bringing the groceries
+[01:00:14] home, so to say, uh they are not exposed
+[01:00:17] to additional risks.
+[01:00:18] Software and hardware might have
+[01:00:20] vulnerabilities introduced in them after
+[01:00:22] the production process has finished.
+[01:00:24] Maybe the place where you're storing
+[01:00:26] your software or your source code can be
+[01:00:29] compromised. Maybe the warehouse where
+[01:00:31] your employee laptops are stored is not
+[01:00:33] a secure place. Those are all
+[01:00:35] vulnerabilities that have nothing to do
+[01:00:37] with any of your software or hardware
+[01:00:39] providers, so you don't have anyone else
+[01:00:42] that you can blame.
+[01:00:43] Lastly, consider external factors, too,
+[01:00:46] as risks. Supply chain stability and
+[01:00:48] resource availability might be very
+[01:00:50] serious issues. Uh security is also
+[01:00:53] about availability, remember? If you're
+[01:00:55] relying on a vendor for components,
+[01:00:57] materials, or devices, do they have any
+[01:00:59] surplus materials that they can use to
+[01:01:01] cover your needs for continuity during
+[01:01:03] supply chain disruption? If you don't
+[01:01:05] have an infinite amount of a certain
+[01:01:07] resource, like accessories or spare
+[01:01:09] parts, why should you assume that a
+[01:01:11] supplier or distributor would have an
+[01:01:14] infinite supply, too?
+[01:01:16] Everything is finite in this world,
+[01:01:18] right? Apart from the universe and human
+[01:01:19] stupidity.
+[01:01:22] >> ability.

@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A fire alarm is triggered in a high-security facility, causing the main electrical transformer to shut down. The smart-card reader systems controlling the physical entry doors lose power and immediately unlock, allowing occupants to exit safely but also exposing the building to unauthorized entry. Meanwhile, the database server housing sensitive research data undergoes an orderly shutdown to prevent data corruption. How should a CISSP evaluate these two distinct system designs?",
+    "options": [
+      "Both systems failed open, which prioritizes human life but introduces excessive risk to logical assets.",
+      "The smart-card readers failed open to prioritize physical safety, while the database server failed secure to preserve logical confidentiality and integrity.",
+      "The smart-card readers failed secure to prevent physical breaches, while the database server failed open to maintain database availability.",
+      "Both systems failed secure, illustrating that safety and security are always in alignment."
+    ],
+    "correctIndex": 1,
+    "explanation": "Human safety is the absolute highest priority in security design. Under power loss, physical exit doors must 'fail open' to ensure occupants can escape, even if it temporarily compromises physical security. Conversely, logical systems (such as databases containing sensitive data) should 'fail secure' (or close down in a controlled state) to protect the confidentiality and integrity of the data from unauthorized access or corruption. Therefore, the smart-card system failed open, and the database server failed secure."
+  },
+  {
+    "question": "An organization is seeking to assess and systematically improve its software security posture. The security manager wants a model that specifically breaks down security activities into governance, design, implementation, verification, and operations, rather than focusing on general software engineering processes. Which framework is best suited for this task?",
+    "options": [
+      "Capability Maturity Model Integration (CMMI)",
+      "OWASP Software Assurance Maturity Model (SAMM)",
+      "Agile Software Development Manifesto",
+      "System Development Life Cycle (SDLC) Waterfall Model"
+    ],
+    "correctIndex": 1,
+    "explanation": "The OWASP Software Assurance Maturity Model (SAMM) is a security-specific maturity framework designed to help organizations formulate and implement a strategy for software security. It defines five core business functions: Governance, Design, Implementation, Verification, and Operations. While CMMI measures general software process maturity, OWASP SAMM is specifically tailored to software security assurance."
+  },
+  {
+    "question": "A web application developer implements client-side JavaScript code to validate user input on a registration form, ensuring that no special characters commonly used in SQL injection attacks (like single quotes or semicolons) can be submitted. Despite this, the database is compromised via a SQL injection attack. What is the primary cause of this compromise?",
+    "options": [
+      "The developer should have used a compiled language rather than JavaScript to perform the client-side validation.",
+      "Client-side input validation is easily bypassed because an attacker can submit requests directly to the server, ignoring the client-side code entirely.",
+      "The application lacked a runtime environment like the JVM to isolate the SQL database from the web server.",
+      "SQL injection can only be prevented using physical security controls, not logical input validation."
+    ],
+    "correctIndex": 1,
+    "explanation": "Client-side validation is a useful tool for user experience and reducing server load by checking simple mistakes before transmission, but it cannot be trusted for security because attackers can easily bypass client-side code (e.g., by using tools like curl or proxy interceptors to send malicious requests directly to the server). Input validation must always be performed on the server side (server-side validation) to ensure that logical security controls are enforced before processing user input."
+  },
+  {
+    "question": "During a critical incident, the development team needs to deploy an emergency patch to resolve a newly discovered remote code execution vulnerability in a production system. To ensure the integrity of the software and prevent introducing secondary flaws, which change management path should they follow?",
+    "options": [
+      "Bypass change management entirely to minimize the window of exposure, deploying the patch directly to production.",
+      "Submit a request control ticket, test the patch in an isolated environment, perform regression testing, and verify the patch in release control before deploying.",
+      "Deploy the patch to production first, then document the changes in change control to maintain backward compatibility.",
+      "Perform User Acceptance Testing (UAT) in the production environment directly using real-world user traffic."
+    ],
+    "correctIndex": 1,
+    "explanation": "Even for emergency patches, change management processes must be maintained to prevent introducing new vulnerabilities or breaking existing application integrity. The correct process involves Request Control (getting approval), Change Control (analyzing, testing in an isolated environment, and performing regression testing to ensure other components aren't broken), and Release Control (verifying the final code, checking for debug hooks or hardcoded accounts, and performing UAT before deploying)."
+  },
+  {
+    "question": "A software architecture team is designing an enterprise application that must run across diverse operating systems and hardware platforms. They require the application code to run within a secure, isolated sandbox environment that handles memory management and exception handling to prevent application crashes from compromising the host system. Which runtime mechanism best supports these requirements?",
+    "options": [
+      "Direct execution of assembly code (using instructions like add and jmp) directly on the host CPU.",
+      "Running raw source code through a scripting interpreter line-by-line without sandboxing.",
+      "Compiling the application into an intermediate bytecode format executed within a virtual machine runtime, such as the JVM or CLR.",
+      "Deploying the application as a single OS-specific compiled binary with direct memory access."
+    ],
+    "correctIndex": 2,
+    "explanation": "Virtual machines and runtime environments, such as the Java Virtual Machine (JVM) in the JRE, or the Common Language Runtime (CLR) in the .NET framework, execute intermediate bytecode within a managed, isolated environment (a sandbox). This sandbox controls memory access, handles exceptions gracefully, and prevents errors from compromising the host operating system, while also providing cross-platform portability."
+  }
+]

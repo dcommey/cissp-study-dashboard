@@ -1,0 +1,1135 @@
+[00:07] buffer overflows. Okay, so now we have a
+[00:10] pretty good understanding about malware,
+[00:12] but it's not the only danger out there.
+[00:15] Uh, one of the reasons why we are so
+[00:16] concerned with software development good
+[00:18] practices is because the very reason why
+[00:21] we design our software with a security
+[00:23] mindset from the very beginning is to
+[00:25] create software that can withstand
+[00:27] application level attacks. And these are
+[00:29] the attacks that are targeting the
+[00:31] vulnerabilities in our code. Probably
+[00:34] the most common vulnerability out there
+[00:37] is the buffer overflow. It's a very
+[00:39] generic term as there are actually many
+[00:42] many attacks that target this type of
+[00:44] vulnerability, but in essence they
+[00:46] target situations where the program
+[00:48] allocates a specific zone in its memory
+[00:50] for storing a specific type of data.
+[00:52] like for example your username when
+[00:54] you're logging into a website or the uh
+[00:57] profile photo that you're uploading. We
+[01:00] all know that programs need to store
+[01:01] data in memory first before they can
+[01:03] process it. You might think that this is
+[01:05] basic stuff, but the application needs
+[01:07] to check whether the username that
+[01:09] you're providing can be stored in that
+[01:11] allocated memory space or buffer. Like
+[01:14] when you're going on a trip, you need to
+[01:15] make sure that all your clothes and
+[01:17] gadgets fit in the suitcase that you're
+[01:19] planning to bring or the big screen TV
+[01:22] that you just bought can fit through the
+[01:24] bedroom door. Okay, we are so used to
+[01:28] making these common sense checks in real
+[01:30] life that sometimes we forget to do them
+[01:32] in computer science. Now coming back to
+[01:35] our buffer overflow discussion. If the
+[01:37] app does not properly check to see if
+[01:39] your provided input can fit in its
+[01:41] buffer, then the app is simply going to
+[01:43] start writing to that buffer. In many
+[01:45] cases, it will just start writing to
+[01:47] that buffer from the first bite and then
+[01:50] to the second and then the third bite
+[01:51] and will keep keep writing your input to
+[01:54] that location until your input is done.
+[01:58] Well, what happens if you provide a
+[01:59] username that is 20 characters in length
+[02:03] and the buffer can only store 15? Now,
+[02:05] buffer overflow is going to happen. So
+[02:07] the buffer will fill up with the 15
+[02:09] characters that it can store and the
+[02:12] remaining five characters will end up
+[02:13] being written or better said overridden
+[02:17] on top of honestly you don't even know
+[02:21] on top of what on top of some other
+[02:23] memory area that just happens to come up
+[02:26] after the buffer's location. With all
+[02:28] memory dynamically allocated, you just
+[02:31] don't always know where the next memory
+[02:33] location is going to be or what the next
+[02:35] memory location is going to store. You
+[02:37] might end up just breaking an app,
+[02:39] crashing it because you've just randomly
+[02:41] overwritten some of its logic or its uh
+[02:44] its useful data in memory. Or if you're
+[02:46] a smart hacker, you might end up
+[02:48] overwriting some area in the program's
+[02:50] memory that stores either the actual
+[02:52] program's instructions or some location
+[02:55] that points to where the program's
+[02:56] instructions are located. Why is that
+[02:59] important? Well, because if you're
+[03:01] overwriting your program's code with
+[03:03] whatever is being provided by an
+[03:05] attacker, and we're not just talking
+[03:07] about, let's say, five extra characters
+[03:10] here. We're talking about providing
+[03:11] executable code, shell code, SQL code in
+[03:15] the overflowed part of the buffer. Then
+[03:17] the app is going to start executing the
+[03:19] attacker's code instead of its own. This
+[03:21] already starts to sound pretty bad
+[03:23] because if you're able to tell an app to
+[03:25] do whatever you want, so not what the
+[03:27] app was designed to do, you can tell it
+[03:29] to make you an admin, show you old user
+[03:32] accounts, make transactions for you,
+[03:34] change prices in a database, access
+[03:37] restricted information in the database,
+[03:38] or even interact with other services
+[03:40] that the app uses on a regular basis and
+[03:42] allow those services to act on your
+[03:44] behalf. You could install a backdoor, a
+[03:46] key logger, you could alter the
+[03:48] integrity of the data stored by the app.
+[03:50] You could tell it to bypass
+[03:52] authentication altogether or DRM checks.
+[03:54] And yes, this is a method used to crack
+[03:56] license software as well. And you can
+[03:58] perhaps even tell it to launch a shell
+[04:00] for you. And once you have a shell on
+[04:03] that machine, well, you can do anything.
+[04:05] So, here's how bad things can get just
+[04:07] because a programmer forgot to check the
+[04:09] length of an input. A special case of
+[04:11] overflows are integer overflows. Integer
+[04:14] overflows are caused by those situations
+[04:16] where a math operation like an addition,
+[04:18] even an x + one, causes a value to go
+[04:21] beyond the maximum possible value that
+[04:23] can be stored in the allocated memory of
+[04:25] the variable according to its type. So
+[04:28] if we had an 8 bit integer, we would be
+[04:30] able to store values ranging from all
+[04:32] zeros, eight zeros, eight bits, all
+[04:35] zeros to all ones. Now with eight bits
+[04:39] this means that we can store anything
+[04:41] between 0 and 255 that is 256 values.
+[04:45] What happens when the app tries to add
+[04:47] one to the max to 255?
+[04:50] Well, it depends. First of all, the app
+[04:53] should not allow you to do so. But if it
+[04:54] does and the integer that is holding the
+[04:57] value is unsigned that is it does not
+[04:59] have any kind of positive or negative
+[05:01] number information it will roll back to
+[05:04] zero just like going beyond the last
+[05:06] possible value on your car's odometer or
+[05:08] basically any mechanical counter. This
+[05:11] is most likely unwanted behavior. Nobody
+[05:14] would expect to add one and get a
+[05:16] smaller number or even zero. So this
+[05:20] will cause an app to behave erratically.
+[05:22] Another situation is when the integer
+[05:24] type is signed. That is it allocates the
+[05:27] first bit for the sign value. And if the
+[05:30] first bit is one, we consider the rest
+[05:31] of the bits to represent a negative
+[05:33] number. So below zero. If it's zero,
+[05:36] we're considering it a positive number.
+[05:38] So in our 8 bit example, we would only
+[05:40] get to half of the maximum value since
+[05:42] we only have seven bits left for the
+[05:44] actual value. Which means that we could
+[05:46] represent numbers between minus 128 and
+[05:50] positive plus 127.
+[05:53] Well, in this case, if you are at 127,
+[05:57] which is 1 0 and 7 1's, and you add one,
+[06:01] what's going to happen? It will
+[06:03] overflow. Basically, it will try to
+[06:05] represent the number 128, which is one
+[06:08] followed by seven zeros like a normal
+[06:10] odometer. Unfortunately, that's not
+[06:13] interpreted as 128 because we have a
+[06:16] signed integer. Instead, it is going to
+[06:18] be processed as minus 128.
+[06:21] Now, imagine having 127 burgers in an
+[06:24] online shopping cart. You add one more
+[06:27] and you end up with minus 128 burgers
+[06:30] and then you have to pay minus 128 the
+[06:34] price of a burger, which could mean that
+[06:36] you have to receive the that amount of
+[06:37] money. Now, of course, this is a
+[06:39] funnyish theoretical example, although I
+[06:42] would bet that some burger joints, if
+[06:44] they have online ordering websites,
+[06:46] chances are a few of them would fall for
+[06:48] this trick. But the idea here is again
+[06:51] that it's if not properly checked, the
+[06:53] normal behavior of the app might allow
+[06:56] attackers to bring it to some very
+[06:58] awkward states with unforeseen
+[07:00] consequences. Race conditions, time of
+[07:03] check, time in views, and privilege
+[07:05] escalations. Now, we could potentially
+[07:07] talk a lot about application attacks.
+[07:09] It's wonderful to understand how code
+[07:12] works and how to think like a machine
+[07:14] and then like a hacker. But it's not the
+[07:16] purpose of this training. Which means
+[07:17] that we will just glance over a couple
+[07:19] of apps
+[07:21] just so that you get a clear picture of
+[07:23] what they mean, what they do, and a bit
+[07:26] of understanding about how they can be
+[07:28] exploited. Race conditions are another
+[07:31] very generic type of vulnerability.
+[07:33] Normally a program should behave in a
+[07:35] deterministic manner. That is we should
+[07:37] always know what the execution path is
+[07:40] going to be. We should be able to
+[07:41] predict the output from any given input.
+[07:44] Any software is running tasks in
+[07:46] parallel. All of them do it. My computer
+[07:49] is running over 8,000 threads right now.
+[07:52] Even though I'm only actively seeing
+[07:53] just a few apps running. Server software
+[07:56] also runs multiple threads because
+[07:57] they're designed to serve multiple users
+[07:59] at the same time. Sometimes when
+[08:01] multiple threads try to access or change
+[08:03] the same resource, let's say a database
+[08:05] or a file, errors might happen. A race
+[08:08] condition is a situation where the
+[08:10] execution of multiple threads is not
+[08:12] controlled, cannot be predicted.
+[08:15] Thus, the outcome of the execution is
+[08:17] unknown. Basically, it's like the
+[08:19] threads or the operations are racing
+[08:21] each other to an imaginary finish line
+[08:23] and we don't know which one is going to
+[08:25] reach that finish line first. Now don't
+[08:28] get me wrong, it's okay to have multiple
+[08:30] threads running at the same time, but as
+[08:32] a rule, whenever those threads are using
+[08:34] shared resources, they need to employ
+[08:37] some sort of locking mechanism, mutex,
+[08:40] semaphore, just like a traffic stop for
+[08:43] multiple cars using the same
+[08:45] intersection in order to make sure that
+[08:47] the resource being accessed at the same
+[08:49] time from multiple threads does not lose
+[08:51] integrity.
+[08:53] A specific case of race condition is
+[08:55] called the time of check time of use TOC
+[08:57] TOU. This happens when two threads are
+[09:00] both checking the state of resource and
+[09:02] they are taking some actions depending
+[09:04] on that state. The programming and
+[09:07] design error here is that unless both
+[09:09] the check and the change are executed as
+[09:12] one single atomic indivisible operation.
+[09:16] Then depending on which thread manages
+[09:18] to execute the change first, the second
+[09:21] might act on false information. Let me
+[09:23] give you an example here. Say you have a
+[09:25] bank account with $100 in it. Also
+[09:28] assume that two ATMs with two valid
+[09:29] credit cards are attempting to extract
+[09:32] $100 from the same account all at the
+[09:34] same time. Now, depending on the order
+[09:37] of operations, you might not run into a
+[09:39] race condition. If ATM1 checks the
+[09:42] account, sees that there's $100 in it,
+[09:44] takes the money, and then the second ATM
+[09:46] performs a check, no problem there. ATM2
+[09:48] will see zero on the account, and will
+[09:50] not withdraw anything. But what if both
+[09:52] ATMs try to check and withdraw from the
+[09:54] account at the same time? We might have
+[09:56] ATM1 checking the account, sees $100,
+[09:59] makes a note that the withdrawal can be
+[10:01] done. ATM2 then comes in and makes the
+[10:04] same check. Still $100, still okay to
+[10:06] withdraw. They both decide that the
+[10:08] account has sufficient money. And it
+[10:10] does, but only for one transaction, not
+[10:12] for both. So ATM1 goes ahead and makes a
+[10:15] withdrawal. And then ATM2 goes and
+[10:16] executes the withdrawal as well. It
+[10:18] might get an error. It might end up with
+[10:20] a negative balance. Either way, it's not
+[10:22] what the expected behavior was at the
+[10:25] time of check for ATM2 because the user
+[10:27] of ATM2 saw that the operation should
+[10:30] succeed. So that's time of check, time
+[10:32] of use. Checking and using a resource
+[10:35] should happen in a single atomic
+[10:38] indivisible operation and it should be
+[10:40] executed in an all or nothing manner.
+[10:42] The ATM is just an example but race
+[10:44] conditions can happen all the time with
+[10:47] disk access, hardware resource access,
+[10:49] network access, databases and so on. One
+[10:52] last example here is privilege
+[10:53] escalation. A very generic term, not a
+[10:56] specific type of attack and
+[10:57] vulnerability. It's more like a
+[10:59] technique used by hackers when they have
+[11:01] managed to compromise a user account on
+[11:03] a system. That user account might not
+[11:05] have enough privileges for the attack to
+[11:07] act on their objectives. So, the
+[11:09] attacker will try to exploit some other
+[11:11] vulnerability to gain higher level
+[11:13] privileges on that system. And by the
+[11:15] way, we're not just talking about user
+[11:17] accounts on systems like Windows or
+[11:19] Linux or Mac OS. User accounts in web
+[11:21] apps are also a target. You might be
+[11:23] wondering, how on earth can an attacker
+[11:25] escalate their privileges if they just
+[11:27] compromised a simple user? I mean,
+[11:29] couldn't a simple user do it as well if
+[11:31] it weren't that easy? Well, yes and no.
+[11:34] Obviously, it's not just as simple as a
+[11:37] rightclick and run as admin or prefixing
+[11:40] commands with pseudo. Hackers use known
+[11:43] vulnerabilities with existing exploits
+[11:45] to escalate privileges. one of many
+[11:47] methods is to dump password hashes and
+[11:49] crack them offline or use rainbow tables
+[11:52] or just use buffer overflows. The
+[11:55] important idea is that the regular user
+[11:57] is just a temporary foothold for the
+[11:59] hacker, a point of entry into the app or
+[12:01] the system from where they can try
+[12:03] exploiting other vulnerable components.
+[12:05] Which brings us to a discussion about
+[12:07] injecting code. SQL injection is about
+[12:11] hiding SQL queries and user input in an
+[12:13] attempt to compromise the database
+[12:15] behind the web app by tricking the app
+[12:17] into executing the user's SQL queries
+[12:19] instead of the predefined ones. If
+[12:21] internally an app's SQL queries are
+[12:23] built using simple string manipulation,
+[12:26] an attacker could potentially introduce
+[12:28] characters in their user input fields
+[12:30] that when processed as part of the SQL
+[12:33] query would change the nature of the SQL
+[12:36] query and then introduce new queries.
+[12:39] And by queries, I don't mean just select
+[12:41] statements, but it might also include
+[12:42] update, delete, and drop statements. Now
+[12:45] of course such an attack is nothing like
+[12:47] executing the query in SQL management
+[12:49] studio for example. So in most cases the
+[12:52] attacker will not see the actual result
+[12:54] of the query but they might try to
+[12:55] deduce it by looking at how the app
+[12:57] behaves. SQL injection is also used as a
+[13:00] reconnaissance method in which the
+[13:02] attacker first tries to determine how
+[13:04] the code is written and how vulnerable
+[13:06] the app is to SQL injection. So it
+[13:09] involves a lot of trial and error and
+[13:11] without being able to see the exact data
+[13:13] returned by the query or the rows
+[13:15] affected. This is sometimes called blind
+[13:18] SQL injection. There are many methods
+[13:20] for performing blind SQL injection or
+[13:23] for testing if such an attack is even
+[13:25] possible. Some of them even use queries
+[13:27] with conditions that are guaranteed to
+[13:29] return no values. If the attacker sees
+[13:31] that after a query the app returns a
+[13:33] blank page, that's good news. It means
+[13:35] that it might be vulnerable to SQL
+[13:37] injection. So more advanced queries
+[13:39] might also be possible. Some other
+[13:41] methods rely on timing because some SQL
+[13:44] implementations allow delays to be
+[13:46] implemented in their queries. For
+[13:48] example, the wait for delay function in
+[13:50] Microsoft SQL. If you send one of those
+[13:53] queries with a 10-second parameter and
+[13:55] the app responds after exactly 10 plus
+[13:58] seconds, there you go. It got executed.
+[14:01] So a more advanced SQL injection has
+[14:03] much better chances to work. Other types
+[14:05] of SQL injection can be used to bypass
+[14:08] authentication. If a simple query
+[14:09] matching a given username and a password
+[14:11] is used to log into an app and if the
+[14:14] input fields are not sanitized, it's
+[14:16] quite easy to send instead of a valid
+[14:18] username a string like closing quote
+[14:21] minus minus dash dash or followed by an
+[14:24] expression that is always true such as
+[14:26] one equals 1 and the comment marker.
+[14:29] Basically, this makes the select
+[14:30] statement select all users from the
+[14:32] table users where the name is anything
+[14:35] or one equals 1 which returns all the
+[14:38] users because 1 equals 1 is always true.
+[14:41] The password is completely ignored due
+[14:43] to the beginning of the comment string
+[14:45] following the username which practically
+[14:47] cuts the query right after the username
+[14:49] commenting out anything related to the
+[14:51] password check. Code injection and other
+[14:54] vulnerabilities. SQL injection is
+[14:57] actually a more specific type of generic
+[14:59] code injection, which means providing
+[15:01] executable code as inputs to fields that
+[15:03] are not designed to receive executable
+[15:05] code. This isn't to say that you should
+[15:08] devise a method to forbid users from
+[15:10] providing executable code because this
+[15:12] is going to be almost impossible. But
+[15:14] instead, be prepared for it. Don't just
+[15:17] blindly execute whatever comes in.
+[15:18] Validate that input. Sanitize it. Check
+[15:20] it for size, format, expected content.
+[15:23] Remove unwanted characters that might
+[15:25] indicate a script or an SQL query in
+[15:28] there. Don't start working with that
+[15:29] input before carrying out your due
+[15:32] diligence. Executable code can be
+[15:34] provided right within the URL using URL
+[15:37] encoding or in a text field using B 64
+[15:40] encoding. Apps and services that
+[15:42] interact with their clients or other
+[15:43] apps using XML or JSON payloads might
+[15:46] also be vulnerable in case an attacker
+[15:48] attempts to send a crafted payload on
+[15:50] those channels. Buffer overflows are
+[15:52] often designed to overwrite a program's
+[15:54] memory with code that when executed
+[15:57] opens up a back door, launches a shell,
+[16:00] or just downloads additional malware.
+[16:02] Even command line code like Bash,
+[16:04] PowerShell, or CMD can be injected into
+[16:07] apparently harmless web pages. Let's say
+[16:09] you have a web app that acts as the
+[16:11] front end for managing a physical or
+[16:13] virtual system, its users, its processes
+[16:15] and so on. Whatever commands you're
+[16:17] providing in there might be pushed
+[16:19] literally to the executing operating
+[16:21] system and executed by its command
+[16:23] interpreter. Even commands that create
+[16:25] privilege users, download malware, or do
+[16:27] all kinds of nasty stuff. Insecure
+[16:30] object references are another type of
+[16:31] programming error where a reference to
+[16:34] an external resource like a file, a path
+[16:37] on the disk or another user ID or any
+[16:40] other resource that is outside the
+[16:42] permission scope of the current user is
+[16:44] being accessed simply by knowing its
+[16:47] address or its ID. When programmers
+[16:50] implement this kind of weakness, they
+[16:52] usually consider that it's quite
+[16:54] unlikely that any user will be able to
+[16:56] guess a resource identifier that does
+[16:58] not belong to them, even though they
+[17:00] might be right sometimes. It might be
+[17:02] quite unlikely, but it doesn't mean it's
+[17:04] impossible. So, if you're hiding
+[17:06] resources by thinking that nobody's
+[17:08] going to guess their identifiers, that's
+[17:10] not security. That is security through
+[17:12] obscurity, which is a big no no in this
+[17:14] field. So application wise, always check
+[17:17] permissions when a user or any other
+[17:18] entity attempts to access some other
+[17:21] resource. Directory traversal is another
+[17:24] issue often found in weekly configured
+[17:26] web servers. As you know, the web server
+[17:29] is just another application running as a
+[17:31] background service on a Windows or Linux
+[17:33] machine. That web server has one or more
+[17:36] web apps configured which are returned
+[17:39] to any visitors contacting that web
+[17:41] server. This means that for a specific
+[17:43] location on the disk, the web server is
+[17:45] able to read any files stored at that
+[17:47] location. Normally, that location should
+[17:50] be the root of the web app, but nothing
+[17:52] else other than the root of that web
+[17:53] app. In other words, as long as the
+[17:55] visitors of the website are requesting
+[17:58] to access files and folders that are
+[18:00] within the app's web scope and their own
+[18:03] authorization policy. Remember that
+[18:05] insecure object references that we just
+[18:07] talked about? So as long as the request
+[18:09] is legitimate, the web server will
+[18:11] return the correct file from the web
+[18:13] app's structure. Now the problem is what
+[18:15] if a client requests a file from the
+[18:18] same machine as the web server but
+[18:20] outside its web app files. You might
+[18:22] think well you should not allow web
+[18:24] clients to request files outside of the
+[18:26] web app. And you would be right. You
+[18:29] would also need to remember and consider
+[18:30] this corner case if you are the web app
+[18:32] developer and or the CIS admin of that
+[18:35] server. If you forget about this or if
+[18:37] you just install the web server as the
+[18:39] root user, god forbid, but we all know
+[18:41] it's so much easier and tempting that
+[18:43] way, then clients accessing the web app
+[18:46] might request something like Etsy
+[18:47] password or Etsy shadow instead of index
+[18:50] html and the web server would just
+[18:52] comply. So, what are the solutions for
+[18:55] directory traversal? Well, in one word,
+[18:58] the same old solution as before.
+[19:00] Sanitize the input. Figure out before
+[19:02] it's too late that a user is trying to
+[19:04] access a file outside the web app. Don't
+[19:06] allow the user to go up in the directory
+[19:08] tree the hierarchy. So filter out
+[19:10] anything that looks like dot dot slash
+[19:12] or a path including variations. For
+[19:14] example, URL encodings that include
+[19:16] those patterns. Other methods would
+[19:18] include whitelisting allowed characters
+[19:20] and only accepting input that aders to
+[19:22] this white list. Canonicalize paths
+[19:25] which means normalizing paths to prevent
+[19:28] traversal. So remove anything unexpected
+[19:30] from those paths. They if they should
+[19:32] look like a path then they should look
+[19:33] like a specific type of path. And if you
+[19:35] really need to accept paths from a user,
+[19:38] convert relative paths to absolute path
+[19:40] so that you know exactly for sure where
+[19:43] the path is pointing to. A somewhat
+[19:46] closely related attack to directed
+[19:48] traversal is the file inclusion attack.
+[19:50] This happens whenever a web server
+[19:52] running a web app is trying to access an
+[19:54] external file to load it or execute it
+[19:56] and the web app might be tricked into
+[19:58] either loading a different file from the
+[20:00] same system in which case it's called a
+[20:02] local file inclusion LFI or another file
+[20:05] located at some other remote location
+[20:07] and we call this remote file inclusion
+[20:09] RFI. As for the impact well with LFI
+[20:13] attackers can read sensitive files,
+[20:15] passwords, configuration files, execute
+[20:17] arbitrary code. with RFI remote uh
+[20:21] malicious code from external servers can
+[20:23] be downloaded and can compromise your
+[20:24] application. Cross-ite scripting and
+[20:27] cross-ite request forgery. Now cross-ite
+[20:29] scripting also abbreviated sometimes XSS
+[20:33] is another type of coding injection
+[20:35] attack but this time it involves the
+[20:36] clients more than the server. With
+[20:38] cross-ite scripting, the target of the
+[20:40] attack is to inject an attacker's own
+[20:43] HTML or JavaScript code into the web app
+[20:46] so that the code will be executed on
+[20:48] some other victim client machine. You
+[20:50] might be wondering how how is this even
+[20:51] possible since two different clients of
+[20:53] the same web app aren't even aware of
+[20:55] each other. Well, you actually have two
+[20:57] methods for performing cross-ite
+[20:58] scripting. First, reflected cross-ite
+[21:01] scripting happens on websites when the
+[21:03] content provider by a user is reflected
+[21:06] back to them, shown back to them. Think
+[21:08] about a status update on a profile page,
+[21:11] for example, on a on a job search
+[21:12] website. You might update your profile
+[21:14] to say underneath your picture, open for
+[21:17] work or something similar. You submit
+[21:19] this text and right away you see the
+[21:22] same text under your profile picture
+[21:25] once you save that that settings page.
+[21:27] So the content is reflected back to you.
+[21:30] Now where is the attacker in the attack
+[21:31] in this scenario? Think about it this
+[21:33] way. When you submit that status update,
+[21:35] you're sending an HTTP request to the
+[21:38] web server. That request has a payload
+[21:40] which includes the exact status update.
+[21:42] Of course, that's how all websites work
+[21:44] and that's how your browser is sending
+[21:46] information to them. The tricky
+[21:47] situation happens when you realize that
+[21:49] the request that your browser is sending
+[21:51] could also be crafted by an attacker and
+[21:53] the payload could be hidden encoding in
+[21:56] in the URL itself. A URL which you might
+[21:59] receive or over email, over instant
+[22:02] messaging, social media, perhaps from a
+[22:04] so-called head hunter who wants to share
+[22:06] an awesome job opportunity with you. You
+[22:08] check the link, you see that it points
+[22:10] to that valid job site that you're
+[22:12] using. So you click it, you end up on
+[22:15] the correct website, secure connection
+[22:16] and all. But guess what? The URL also
+[22:19] had a payload embedded which included
+[22:21] the operation to update your status on
+[22:22] that website. And the status update
+[22:25] isn't just a simple status text, but
+[22:26] HTML code with JavaScript in it. The
+[22:29] website accepts your request with your
+[22:31] payload and then reflects it back to you
+[22:33] and your browser. What does your browser
+[22:36] do when it sees JavaScript? It executes
+[22:38] it. What does JavaScript code do?
+[22:41] whatever the attacker wants. They could
+[22:44] alter the web page you're on and capture
+[22:46] your username and password. They could
+[22:48] redirect you to an attacker's website.
+[22:49] They could steal session information.
+[22:51] The possibilities are endless. On the
+[22:54] other hand, we also have stored cross-ey
+[22:55] scripting or persistent cross-ite
+[22:57] scripting. The idea is kind of similar
+[22:59] except that we're making use of the
+[23:01] website's database to store the
+[23:02] malicious content. So again, imagine a
+[23:06] message board, a forum, or just a review
+[23:08] page for a product on a random online
+[23:10] shopping website. Whatever users post in
+[23:14] there, they love the product, they hate
+[23:16] the product, it's shown back to all
+[23:17] future users visiting that same
+[23:19] product's review page, so everyone can
+[23:21] see whatever an attacker posts in there.
+[23:24] Well, if the attacker posts some HTML
+[23:26] code with the script tag in it, it adds
+[23:29] some JavaScript in it. And if the web
+[23:31] app doesn't sanitize this input, then
+[23:33] the JavaScript code will be executed by
+[23:35] everyone who happens to visit the same
+[23:37] web page afterwards. There's also
+[23:39] cross-ite request forgery abbreviated
+[23:41] CSRF, which is somewhat related to
+[23:44] reflected cross-ite scripting, and it's
+[23:46] about exploiting the trust relationship
+[23:48] that a website and a user has over an
+[23:51] active radio authenticated session. CSRF
+[23:54] is like someone else pulling the strings
+[23:56] on your account, making the website you
+[23:58] are logged into do things you never
+[24:00] intended, like moving your money around
+[24:03] or changing your password. So, for
+[24:05] example, let's say you're logged into
+[24:06] your favorite shopping site and at the
+[24:08] same time you click on a seemingly
+[24:10] harmless link on a different site. Boom.
+[24:13] without realizing it. You just sent a
+[24:16] command to the shopping site which is
+[24:18] running in another tab to buy a lifetime
+[24:21] supply of I don't know toilet paper. You
+[24:24] didn't want that, did you? That's
+[24:26] because the sneaky link had a hidden
+[24:28] command and since you were logged into
+[24:30] the shopping site already. The shopping
+[24:33] site thought that it was really you who
+[24:35] wanted all that toilet paper in the
+[24:36] request. So while a website has an
+[24:39] active session with you, there's nothing
+[24:41] stopping your browser from issuing any
+[24:42] valid commands to that website. Be it by
+[24:45] yourself from your own actions or as a
+[24:48] result of a malicious link. SSRF or
+[24:51] server side request forgery exploits
+[24:53] another trust relationship. This time
+[24:55] one between the web server or the web
+[24:57] app and another app or third party
+[25:00] service or API. This can happen when a
+[25:02] web app expects the user to provide a
+[25:04] URL to download some content from. If
+[25:07] that URL delivers malicious payloads,
+[25:09] those payloads could be executed by the
+[25:11] victim server. One more thing to mention
+[25:13] here, a lot of these attacks are
+[25:15] targeted at stealing the user sessions.
+[25:18] Remember those friends and relatives who
+[25:20] had their Facebook accounts hacked and
+[25:22] started sending weird messages to all
+[25:23] their friends. They either had their
+[25:25] password compromised or their session
+[25:27] compromised because the session
+[25:29] information after authentication acts
+[25:31] like a password for all your
+[25:32] interactions with that website. Every
+[25:34] Facebook click, every message you send
+[25:36] on Messenger, and every heart that
+[25:38] you're sending on Instagram is an HTTP
+[25:40] request that carries with it session
+[25:42] information. If that session information
+[25:44] ends up in the wrong hands, then wrong
+[25:46] things will happen with your name on
+[25:49] them. So, what are the security controls
+[25:53] that we can use to at least detect, if
+[25:55] not mitigate or stop completely, the
+[25:57] attacks that we talked about? First of
+[25:59] all, and if you've followed any of my
+[26:00] recorded or live training sessions
+[26:02] before, you absolutely know what I'm
+[26:03] going to say next. The root of all evil
+[26:06] is lack of proper input validation.
+[26:09] Everything you do with an app is input.
+[26:11] Every click, every button, every
+[26:13] message, status update, file upload,
+[26:16] even every network packet that the app
+[26:18] receives is input. We need input for an
+[26:21] app to be useful. But that's also where
+[26:23] the nasty stuff goes into. Validating
+[26:26] input is just what it sounds like.
+[26:28] Checking whatever the app is receiving
+[26:30] and determining if it's acceptable from
+[26:32] a usability perspective, that is if it's
+[26:34] something that the app can work with,
+[26:36] but also from a security perspective,
+[26:37] making sure it's not malicious. Doing
+[26:39] input validation always and properly
+[26:42] would leave security specialists without
+[26:44] a job because you would avoid any
+[26:46] injection attacks. You would never end
+[26:48] up with malware. You would avoid any
+[26:50] buffer overflows or application errors.
+[26:52] You could partially even avoid denial of
+[26:54] service attacks. Basically, you would be
+[26:56] in security heaven. This is why you
+[26:58] might not be surprised to find out that
+[26:59] input validation is one of the most
+[27:01] difficult tasks in cyber security and in
+[27:04] application development. But how do you
+[27:06] do it? Well, you either specify what's
+[27:09] acceptable or you specify what's not
+[27:11] acceptable. So, you either use a white
+[27:13] list, also known as allow list, or you
+[27:16] apply a blacklist, also called a
+[27:18] denialist approach. Now, which one is
+[27:20] better? You know what I usually say in
+[27:22] these cases, like in most situations in
+[27:24] life, it depends. The most efficient
+[27:27] approach would obviously be a white list
+[27:29] or an allow list. You know exactly that
+[27:30] you expect a username using ASKI
+[27:32] characters. ASI is the character set of
+[27:35] mostly what you can type on a regular
+[27:37] keyboard. Let's say of at most 15
+[27:40] characters. No other monkey business
+[27:42] allowed in there. You know, you should
+[27:44] expect an age. So, anything between
+[27:47] three and 99 should be fine. Although my
+[27:50] toddler played with his first keyboard
+[27:52] when he was 2 years old, so this might
+[27:54] require some finetuning. But what does a
+[27:56] whitelist approach look like when users
+[27:59] upload office documents? What about zip
+[28:02] archives or encrypted zip archives? How
+[28:05] about when they post URLs and message
+[28:07] boards or when an app's API receives a
+[28:10] registration request? Can you think of
+[28:13] all the whitelisted inputs of all
+[28:14] possible inputs? Trick question. There's
+[28:17] no other answer apart from a big no. In
+[28:20] some cases, block listing might be
+[28:23] better. For example, you know for sure
+[28:25] that you won't accept any characters
+[28:27] that might be interpreted as a script by
+[28:29] the browser or as part of an SQL query.
+[28:32] So, a denial list of whatever makes
+[28:34] sense for HTML or SQL would be pretty
+[28:38] easy to build. What if those characters
+[28:40] are in a different character set? You
+[28:43] need to account for these two. What if
+[28:45] they are URL encoded, something that
+[28:47] browsers and web servers decode
+[28:49] automatically? What if they're URL
+[28:51] encoded seven times in a row? What if
+[28:54] they're B 64 encoded? What if they're
+[28:56] encrypted and a reflected cross-ey
+[28:58] scripting attack delivers a script that
+[29:00] decrypts them dynamically and you never
+[29:03] get to see the malicious code in it? So,
+[29:05] I'm asking this again. Are you sure you
+[29:07] are aware of everything you should be
+[29:09] protecting against? There are a lot of
+[29:11] smart effects out there which take
+[29:13] advantage of use cases that the
+[29:15] programmers of the app did not account
+[29:16] for like parameter pollution which is
+[29:20] simply adding the same parameter twice
+[29:22] to the same HTTP request. Is the app
+[29:24] designed to process something like this?
+[29:26] Is it even going to be aware that the
+[29:28] parameter is duplicated or is it simply
+[29:31] going to perform input validation on the
+[29:32] first occurrence and let the second
+[29:34] malicious one pass by unhindered?
+[29:38] Obviously, we cannot cover here the
+[29:40] entire fauna of application attacks and
+[29:43] mitigation methods. Similarly, web
+[29:45] developers cannot account for all
+[29:46] possible attacks out there or at least
+[29:48] not efficiently. The more important
+[29:50] cases they will try to address, the
+[29:52] bigger the chances that they will screw
+[29:53] up somewhere. That's why dedicated
+[29:55] solutions were invented. Just like
+[29:57] network firewalls that block and filter
+[29:59] traffic for regular applications and
+[30:01] normal network communications, we have
+[30:03] now web application firewalls which are
+[30:05] placed in front of web servers and are
+[30:07] layer 7 aware. That is they are able to
+[30:10] analyze from a firewalls perspective not
+[30:12] just IP addresses and ports but they can
+[30:14] see inside HTTP requests and replies,
+[30:17] payloads, security negotiations, inputs
+[30:20] sent to the app, breach attempts,
+[30:22] uploaded files. They can even detect SQL
+[30:24] injection attempts.
+[30:26] Similarly, we have firewalls dedicated
+[30:28] for databases, database firewalls. Even
+[30:30] though often this functionality is
+[30:32] embedded in that of web application
+[30:34] firewalls. On top of that, with SQL
+[30:37] injection still being one of the top
+[30:39] threats out there, databases should be
+[30:41] protected from the app's perspective
+[30:43] using parameterized queries and stored
+[30:46] procedures. fancy terms, but basically a
+[30:49] parameterized query means that whatever
+[30:51] query the apps need to make its
+[30:54] structure is prepared first inside the
+[30:56] app as a functional object and then
+[30:59] additional parameters obtained as inputs
+[31:01] are passed as arguments to this object.
+[31:04] Since we're not doing simple string
+[31:06] replacements anymore, there is no risk
+[31:08] of an input altering the intended nature
+[31:10] of that SQL query. Store procedures work
+[31:13] pretty much the same way except that
+[31:15] they are stored on the database server
+[31:16] itself, not in the web app. This means
+[31:19] that with a stored procedure, the app
+[31:21] doesn't send the entire query to the
+[31:22] database. Instead, it simply calls a
+[31:24] stored procedure by its name and
+[31:27] provides its parameters, leaving the
+[31:29] database engine to assemble the
+[31:31] resulting query. No risk of SQL
+[31:33] injection here either since the database
+[31:35] engine doesn't perform simple string
+[31:37] replacements and knows exactly what it
+[31:40] is supposed to execute. On a more
+[31:43] personal approach, as in when working
+[31:45] with personally identifiable
+[31:46] information, there are many features
+[31:48] that can be enabled on databases to keep
+[31:51] PII away from prying eyes. Just to
+[31:54] mention too, we have data minimization
+[31:56] which doesn't store the sensitive parts
+[31:58] of the data at all or replaces them with
+[32:00] something unusable like the last four
+[32:02] digits of the credit card. Another one
+[32:04] is tokenization which replaces the PII
+[32:07] data with randomly generated tokens that
+[32:09] act as keys, foreign keys on a different
+[32:12] database and allow users with the right
+[32:15] permissions to view the entire data set.
+[32:17] For the rest of the users, they can only
+[32:19] see the tokens, but not what they hide,
+[32:21] unless they receive access to the token
+[32:23] database as well. Security controls for
+[32:27] apps. On the topic of code security,
+[32:29] most of the controls here revolve around
+[32:31] best practices when working with code.
+[32:33] It's worth mentioning that code signing
+[32:35] has become a best practice as well as it
+[32:37] ensures using digital signatures that
+[32:39] the code that you're about to execute
+[32:41] comes from a trusted source. Also, all
+[32:44] the code that you're installing nowadays
+[32:45] from the App Store, Windows Store,
+[32:47] whatever store is always signed. Both
+[32:49] Windows and Mac OS give you warnings
+[32:51] when you try to run an app code that is
+[32:54] unsigned or that is coming from unknown
+[32:56] sources. Code signing works exactly the
+[32:58] same way as email signing and website
+[33:00] certificates. It relies on PKI, public
+[33:03] key infrastructure, and on the ability
+[33:05] of the customer to validate on its own
+[33:07] the validity of the certificate bundled
+[33:09] with the app. Just like you should
+[33:12] always be careful when running someone
+[33:13] else's code, you should also be careful
+[33:15] when you're importing someone else's
+[33:17] code in your developing app. You might
+[33:20] be tempted to just bring in entire
+[33:21] chunks of code that solve whatever
+[33:23] issues you might have from GitHub,
+[33:25] random blogs, Reddit, import libraries
+[33:29] downloaded from who knows where. You
+[33:31] reuse examples from public SDKs, blindly
+[33:34] adding codes generated with generative
+[33:36] AI and so on. Everybody does it, but you
+[33:40] have to do it right. Always check the
+[33:42] trustworthiness of a library source.
+[33:44] Don't rely completely on SDK bundled
+[33:46] examples and skeleton apps because those
+[33:49] are there for teaching purposes, not to
+[33:51] be used in production, as in most cases,
+[33:53] they don't even have a minimal security
+[33:55] level built into them. Also, keep an eye
+[33:58] on where your code might end up after
+[34:00] you've developed it or during the
+[34:02] development of your app. Development
+[34:04] teams use code repositories like Git or
+[34:08] versions of Git to store version keep
+[34:11] track of changes, bugs, and resolutions
+[34:13] to their code. Sometimes these are
+[34:15] public or more available than they
+[34:17] should be. So be careful what kind of
+[34:19] secrets, if any, you might have
+[34:21] accidentally forgotten in there. Open
+[34:23] source software is by definition open.
+[34:25] So its source code is always visible and
+[34:27] available. Many people use this as an
+[34:30] argument for the security of open source
+[34:32] projects. Since everybody can see the
+[34:34] source code, chances are there isn't
+[34:36] anything malicious in there. Otherwise,
+[34:37] people and tools would detect it. You
+[34:40] might agree or disagree with this, but
+[34:42] consider the fact that many open source
+[34:43] projects are not funded in any way, and
+[34:46] people work on them out of passion and
+[34:48] dedication. Unfortunately, neither
+[34:50] passion nor dedication pay the bills.
+[34:52] So, support might abruptly end on an
+[34:55] open- source project. And yes, the open
+[34:57] source community is trustworthy, but
+[34:59] only up to a point. Nobody's getting
+[35:01] paid to triple check the code for bugs
+[35:03] and vulnerabilities. One more thing
+[35:05] here, security should not be designed as
+[35:08] if the app is a monolith that never
+[35:10] changes. Take into account that an
+[35:13] application might be running on more
+[35:14] than one server or even in a hybrid
+[35:17] onrem and cloud environment. Consider
+[35:19] that the app should be able to scale up
+[35:21] by adding more computing resources of
+[35:23] the same instance or scale out by adding
+[35:26] more computing instances. And to keep
+[35:28] costs low, the app should be elastic
+[35:31] enough to adapt to dynamic
+[35:32] circumstances. Automatically provision
+[35:34] more resources when needed and
+[35:36] automatically deprovision extra
+[35:38] infrastructure when not needed. Can your
+[35:40] security policy address these changes in
+[35:43] real time? Coding best practices.
+[35:47] Obviously, this has not been a training
+[35:49] about programming. So, having a topic
+[35:51] about best practices when coding is only
+[35:54] going to scratch the surface of the art
+[35:55] of programming. Nevertheless, coding is
+[35:58] a very complex topic made even more
+[36:00] complex by the multitude of programming
+[36:02] languages, designs, styles, paradigms,
+[36:06] frameworks. Here's a few common
+[36:08] denominators that you should be aware
+[36:10] of. First of all, comments might seem
+[36:13] trivial, but they are extremely valuable
+[36:15] for code maintenance. Don't make them
+[36:17] obvious. Don't just copy paste what the
+[36:19] code does and call it an explanation.
+[36:21] Give some insight. Mention any
+[36:22] assumptions and important cases that are
+[36:24] being addressed. Also, don't forget to
+[36:26] remove the comments from any version of
+[36:28] your code that ends up being published
+[36:29] or delivered to the end users. If an
+[36:31] attacker tries to deconstruct your code,
+[36:33] sometimes comments might show up,
+[36:36] especially if they're part of web pages
+[36:37] or scripts. You don't want to help
+[36:39] hackers understand how your code works
+[36:41] when they're looking for flaws to
+[36:43] exploit. Handling errors is another
+[36:45] topic for heated discussion in
+[36:46] development teams. Generally, your apps
+[36:49] should handle any type of errors
+[36:51] regardless of how and when they happened
+[36:53] so that the app never ends up in an
+[36:55] unexpected or crashed state. You should
+[36:58] try to control the types of errors or
+[36:59] exceptions generated as much as
+[37:02] possible. So when you can try to handle
+[37:04] each error individually, unknown errors
+[37:06] and exceptions can still be treated in a
+[37:09] catch all type of error handling code,
+[37:11] but you have to build that catch all.
+[37:14] Those are the errors that say unexpected
+[37:15] error without giving any hints. Still,
+[37:18] they don't crash the app. From a
+[37:20] security perspective, if left
+[37:21] unattended, an app might provide a whole
+[37:23] bunch of details in an error when it
+[37:25] happens. That is very useful behavior
+[37:27] during development and testing but
+[37:29] absolutely undesired behavior when the
+[37:31] app reaches production and its end users
+[37:33] providing too much information in an
+[37:35] error like which module failed because
+[37:37] of which input what was the stack trace
+[37:40] of the function calls that led to that
+[37:42] error and even what were the memory
+[37:44] contents when the error happened makes
+[37:46] it extremely valuable source of
+[37:49] information for attackers who might make
+[37:51] it a habit of causing your app to crash
+[37:54] to reach an error state knowing that
+[37:56] they will learn a lot from those
+[37:58] messages about the inner workings of the
+[38:00] app and how it can be exploited. Don't
+[38:02] forget about SQL errors too. By default,
+[38:05] most SQL engines will try to generate an
+[38:07] error with the entire query that caused
+[38:09] it, trying to pinpoint exactly the place
+[38:12] where the error happened or where the
+[38:13] query was unable to execute. If an
+[38:15] attacker sees this, it's a gold mine.
+[38:17] They learn the structure of the
+[38:18] database, the structure of the queries,
+[38:20] and how input is validated, if it is
+[38:23] validated at all.
+[38:25] Another recommendation is to not
+[38:27] hardcode credentials in your code like
+[38:29] keys or passwords. Do I need to say more
+[38:32] about this? Okay, here it goes. Do not
+[38:34] hardcode credentials in your code. No
+[38:37] exceptions.
+[38:38] Finally, and I say finally only because
+[38:40] it's time to wrap up at some point,
+[38:42] otherwise we could go on for an entire
+[38:44] course about this. Be careful how your
+[38:46] app manages your computer's resources.
+[38:49] They are not unlimited. High resource
+[38:51] usage can cause low performance not just
+[38:53] for your app but for other apps as well
+[38:56] even if they're running in a virtualized
+[38:57] or containerized environment on cloud
+[38:59] environments. A resource hungry app
+[39:01] might actually cause hungry cloud admins
+[39:04] when the cloud bill comes at the end of
+[39:06] the month.
+[39:08] But from a security perspective, high
+[39:10] CPU usage might cause specific
+[39:12] instructions to never get executed or
+[39:14] parts of the application to time out,
+[39:17] which if you did not account for
+[39:19] resource starvation when I said you
+[39:21] should in error management might bring
+[39:23] your app to an unknown, inconsistent,
+[39:25] and possibly insecure state. Memory is
+[39:28] also important, not just CPU. Watch out
+[39:30] for memory leaks, that is memory
+[39:33] allocations that are used by the app and
+[39:35] never or too late released. Not only
+[39:38] this exhausts memory resources, you can
+[39:40] run out of memory, but in case the app
+[39:42] or the machine it's running on is
+[39:44] compromised, its memory contents might
+[39:46] become available to the attacker. Add to
+[39:49] this the fact that the memory usually
+[39:50] stores all data in clear text. You
+[39:52] probably don't want that stuff becoming
+[39:54] public knowledge. Also, on the topic of
+[39:56] memory, lots of applications crash due
+[39:58] to null pointer exceptions. What's that?
+[40:01] Long story short, a pointer is a memory
+[40:04] address that stores another address in
+[40:07] it. You might have a pointer that stores
+[40:09] the location of whatever buffer you're
+[40:11] using to temporarily store the input
+[40:13] from your users. Whenever the app tries
+[40:15] to access that location through the
+[40:17] pointer, we call this pointer
+[40:19] dreerencing. Nothing bad so far.
+[40:22] Something bad though happens when that
+[40:23] pointer points to the value of zero.
+[40:26] Like the memory address of zero or a
+[40:29] null value. Normally an app crashes if
+[40:32] this happens. And again, you don't want
+[40:33] this because who knows what an attacker
+[40:36] could learn from this and from any error
+[40:38] messages that manage to get generated.
+[40:40] Null pointers can happen due to
+[40:42] programming errors, due to integer
+[40:44] overflows, buffer overflows, unvalidated
+[40:47] inputs, and other exploits. A common
+[40:49] approach is to try to crash an app's
+[40:51] authentication and security mechanisms
+[40:53] with a null pointer exception in an
+[40:55] attempt to leave the app in a fail open
+[40:57] state in which the security policy
+[40:59] doesn't apply anymore or at least until
+[41:01] the security module starts back up. But
+[41:05] that fail open window might be just
+[41:07] enough for an attacker. The end. Wow. I
+[41:11] mean, how did you manage to reach this
+[41:13] point? I'm just as excited as you are.
+[41:16] Perhaps even more. This was the biggest
+[41:18] training guide I ever built so far, and
+[41:20] it's probably not going to be the
+[41:22] biggest ever if I ever get a chance to
+[41:24] create one for Ethical Hacker or CCIE.
+[41:28] But wow. I mean, let's just have 5
+[41:31] seconds of silence in honor of your
+[41:33] brain cells, your time, and your
+[41:35] patience.
+[41:37] 1 2 3 4 5 Thank you. You are awesome for
+[41:44] reaching this point. you deserve this
+[41:46] break and I hope you enjoyed it. Uh,
+[41:49] CISSP is a big thing. It's an adventure
+[41:52] through so many aspects of IT and
+[41:55] security and even though it's a purely
+[41:57] theoretical certification, which is
+[41:59] probably the only downside of it, apart
+[42:01] from the exam price,
+[42:03] if you have the necessary patience and
+[42:06] perseverance to overcome it, I hope you
+[42:08] can say that this was a pretty
+[42:10] interesting ride. Leave me a comment, a
+[42:14] coffee, or constructive criticism,
+[42:16] whatever you feel right now. Take a
+[42:18] break now. Go out, smell the roses, the
+[42:20] rain, the dog, the night, whatever is
+[42:24] out there. Kiss your girlfriend, wife,
+[42:26] or partner for being patient and
+[42:28] allowing you to study and grow. Be
+[42:31] grateful and amazed for the world you
+[42:33] were born in and for the opportunities
+[42:35] it holds. Good luck on your career and
+[42:38] see you next time in another completely
+[42:40] free certified breakfast training. See
+[42:43] you next time.

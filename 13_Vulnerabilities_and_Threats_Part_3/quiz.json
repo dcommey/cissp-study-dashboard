@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A security manager is reviewing a cloud host hosting multiple virtual machines for different client departments. A vulnerability scanner flags a high-severity flaw in the hypervisor that could allow an attacker in one guest OS to execute code directly on the physical host or access memory from neighboring guest VMs. What represents this risk and the best mitigations?",
+    "options": [
+      "Shadow IT; restrict all users to a non-persistent thin client.",
+      "VM Sprawl; conduct a proof of concept (POC) configuration audit.",
+      "VM Escaping; apply immediate hypervisor patches and isolate workloads based on data classification levels.",
+      "Configuration drift; execute declarative ARM templates to reconstruct the container runtimes."
+    ],
+    "correctIndex": 2,
+    "explanation": "VM Escaping occurs when an attacker breaches the logical isolation provided by the hypervisor to access the host OS or neighboring virtual machines. Applying patches to the hypervisor is the primary technical control. Isolating VMs with different classification levels onto separate physical hosts (sandboxing workloads) mitigates the impact of escape exploits."
+  },
+  {
+    "question": "An audit of a large corporate virtualization environment reveals that over 35% of running virtual machines are undocumented, have no assigned owners, and have not received software patches for over nine months. Most of these VMs were deployed by developers for short-term testing or Proof of Concepts (POCs). Which administrative control would be most effective in preventing this condition in the future?",
+    "options": [
+      "Enforcing a strict VM lifecycle management policy that requires formal approvals and automatic expiration dates for all VM creations.",
+      "Deploying a centralized Software-Defined Storage (SDS) fabric using a thin client model.",
+      "Configuring the virtual networks with a declarative software-defined network (SDN) controller.",
+      "Restricting developer access to non-persistent VDI environments."
+    ],
+    "correctIndex": 0,
+    "explanation": "The scenario describes VM Sprawl, which is the uncontrolled deployment of virtual machines without formal asset tracking or decommissioning. An administrative VM lifecycle management policy—requiring approval, owner tracking, and automated expiration/decommissioning schedules—directly targets the root cause of sprawl."
+  },
+  {
+    "question": "A healthcare provider discovers that several remote nurses have been uploading sensitive patient files to a public, unapproved generative AI engine and a personal Dropbox account to assist with drafting report summaries. From a governance perspective, how should a CISSP classify this risk, and what is the best combination of controls to remediate it?",
+    "options": [
+      "Configuration drift; implement declarative IaC templates on public AWS servers.",
+      "Shadow IT; implement administrative policies prohibiting unapproved tools, and deploy logical DLP (Data Loss Prevention) and CASB controls to block unauthorized uploads.",
+      "VM escaping; utilize non-persistent VDI thin clients to host the generative AI service.",
+      "Service-Oriented Architecture (SOA) vulnerability; force all APIs to require multi-factor authentication (MFA)."
+    ],
+    "correctIndex": 1,
+    "explanation": "Shadow IT is the deployment of software, services, or hardware without IT's knowledge or approval. Uploading patient records to unapproved cloud tools breaches confidentiality and compliance (e.g., HIPAA). The best remediation is a combination of administrative policies (prohibiting unapproved tools) and logical/technical controls (DLP and CASBs to detect and block unauthorized data transfers)."
+  },
+  {
+    "question": "An enterprise web application deployed across multiple cloud environments starts experiencing random connection failures. Investigation reveals that several web servers in one cloud region have minor configuration differences (drift) because local administrators logged in directly to troubleshoot a previous issue. How should the team prevent this 'configuration drift' using Infrastructure as Code (IaC)?",
+    "options": [
+      "Adopt an immutable infrastructure model where direct server modifications are prohibited, and any configuration changes are applied by destroying and redeploying servers via IaC templates.",
+      "Force all servers to utilize type 2 hypervisors on persistent storage disks.",
+      "Use an Interface Definition Language (IDL) to rebuild the service mesh service by service.",
+      "Implement physical locks on the cloud provider's dataservers."
+    ],
+    "correctIndex": 0,
+    "explanation": "Configuration drift occurs when servers that should be identical deviate over time due to manual updates, localized troubleshooting, or patching inconsistencies. The best way to prevent drift is to enforce an immutable infrastructure model: treat servers like 'cattle' rather than 'pets.' If changes are needed, update the declarative IaC code, destroy the old servers, and redeploy new ones. Direct human modification of running servers should be blocked."
+  },
+  {
+    "question": "A call center moves its entire workstation fleet of 1,500 thick clients to a centralized Virtual Desktop Infrastructure (VDI) hosted in a public cloud, allowing employees to connect using thin clients. During a regional internet outage, all call center agents are immediately unable to access their desktops. What represents the primary risk in this migration, and what is the best architectural mitigation?",
+    "options": [
+      "The threat of VM sprawl; implement non-persistent desktops with local RAM caching.",
+      "The VDI cluster represents a single point of failure for system availability; implement redundant network connections with diverse geographic paths.",
+      "Compliance risk from shadow IT; run the desktop VMs on type 2 hypervisors.",
+      "Exposure of data in transit over HTTP; require all thin clients to use unencrypted L2TP tunnels."
+    ],
+    "correctIndex": 1,
+    "explanation": "Centralizing workstations into a VDI host creates a single point of failure for system availability. If the network path connecting users to the VDI cluster (or the cloud host itself) fails, all users lose access to their workstations. Mitigate this by ensuring high availability of network paths, such as using redundant internet service providers (ISPs) with geographically diverse routing paths."
+  }
+]

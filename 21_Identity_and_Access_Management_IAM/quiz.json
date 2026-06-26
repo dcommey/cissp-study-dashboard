@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A facility manager is evaluating biometric access control systems for a new high-security research laboratory. The manager wants to select a system that provides the best balance between security (preventing unauthorized access) and user convenience (minimizing the rate at which authorized employees are incorrectly blocked). Which biometric metric should the manager prioritize, and what value indicates the highest quality device?",
+    "options": [
+      "Crossover Error Rate (CER) / Equal Error Rate (EER); a lower value represents a more accurate device.",
+      "False Acceptance Rate (FAR); a higher value represents a more secure device.",
+      "False Rejection Rate (FRR); a higher value represents a more convenient device.",
+      "Biometric standard deviation; a value closest to 1.0 represents the highest quality."
+    ],
+    "correctIndex": 0,
+    "explanation": "The Crossover Error Rate (CER) — also known as the Equal Error Rate (EER) — is the point where the False Acceptance Rate (FAR) and the False Rejection Rate (FRR) intersect. It is the primary metric used to compare biometric device accuracy. A lower CER/EER indicates a more accurate system that minimizes both false rejections and false acceptances, balancing security and convenience."
+  },
+  {
+    "question": "During a security audit, it is noted that users accessing a sensitive corporate database are prompted to enter their primary Active Directory domain password and are then required to enter a 4-digit Personal Identification Number (PIN). From a CISSP perspective, does this authentication challenge constitute Multi-Factor Authentication (MFA)?",
+    "options": [
+      "Yes, because it requires two distinct steps (password and PIN) to gain access.",
+      "No, because both credentials belong to the same factor category (something you know). It is a form of two-step verification (2SV), not MFA.",
+      "Yes, because the password is logical and the PIN represents a physical control.",
+      "No, because it does not utilize a physical USB token or smart card."
+    ],
+    "correctIndex": 1,
+    "explanation": "Multi-Factor Authentication (MFA) requires presenting credentials from at least two distinct factor categories: something you know (e.g., password, PIN), something you have (e.g., smart card, hardware token), or something you are (e.g., fingerprint). Because a password and a PIN both fall under the 'something you know' category, this is a two-step verification (2SV) system, not true MFA."
+  },
+  {
+    "question": "A Chief Information Security Officer (CISO) is presenting a business case for a centralized Single Sign-On (SSO) solution. From a risk management perspective, what is the primary security trade-off associated with implementing centralized SSO?",
+    "options": [
+      "SSO increases password complexity requirements, which reduces user compliance.",
+      "SSO reduces password exposure risks and simplifies account revocation, but increases the security impact of a single compromised credential.",
+      "SSO eliminates the need for multi-factor authentication, but requires physical smart cards on all endpoints.",
+      "SSO increases the crossover error rate (CER) of logical access control interfaces."
+    ],
+    "correctIndex": 1,
+    "explanation": "Single Sign-On (SSO) improves user convenience and reduces the risk of password fatigue (preventing users from writing down multiple passwords or using weak ones). However, the primary risk of SSO is that a single compromised credential allows an attacker to access all federated resources the user has permissions for, significantly increasing the blast radius of a breach."
+  },
+  {
+    "question": "A company is integrating its internal directory services with a third-party SaaS benefit portal using SAML. To simplify administration, the IT department wants to avoid manually pre-creating accounts for thousands of employees on the SaaS portal. Which federated identity feature should the security manager recommend to automate account creation during a user's initial login?",
+    "options": [
+      "LDAP directory replication",
+      "Just-In-Time (JIT) provisioning",
+      "Active-Passive load balancing",
+      "Multi-Factor Authentication (MFA) with SMS challenges"
+    ],
+    "correctIndex": 1,
+    "explanation": "Just-In-Time (JIT) provisioning is a feature in federated identity systems (like SAML or OpenID Connect) that automatically creates a user account on the target application (Service Provider) during the user's first login attempt, using identity attributes passed in the security assertion. This eliminates the need for manual pre-provisioning of accounts by administrators."
+  },
+  {
+    "question": "A security review reveals that an employee who recently transferred from the Finance department to the Marketing department still retains access privileges to the Finance database. This issue has occurred with multiple transferred employees over the past year. What security problem is described, and what control should the organization implement?",
+    "options": [
+      "Rejection rate; enforce biometric palm scans on all workstations.",
+      "Privilege creep; implement a strict deprovisioning and role review policy during employee transfers.",
+      "Access exposure; publish SPF, DKIM, and DMARC records in DNS.",
+      "Non-repudiation; mandate that all users sign the acceptable use policy (AUP) on each transfer."
+    ],
+    "correctIndex": 1,
+    "explanation": "Privilege creep occurs when user accounts accumulate excessive privileges over time as their roles and responsibilities change. To prevent this, organizations must establish a deprovisioning policy for employee role changes to ensure old privileges are revoked, and perform regular, structured account access reviews to enforce the principle of least privilege."
+  }
+]

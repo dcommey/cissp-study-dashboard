@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A government contractor is designing an access control structure for a system containing highly sensitive defense data. The security policy mandates that information clearance levels and data classification labels must be defined and enforced centrally, and that individual data files' creators or owners must not be able to override these policies to grant unauthorized access. Which access control model should the contractor implement?",
+    "options": [
+      "Discretionary Access Control (DAC)",
+      "Mandatory Access Control (MAC)",
+      "Role-Based Access Control (RBAC)",
+      "Attribute-Based Access Control (ABAC)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Mandatory Access Control (MAC) restricts access to objects based on subject clearance levels and object classification labels assigned centrally by an administrator. In a MAC model, users (even the owner or creator of a file) have no discretion to modify security labels or grant access to others who lack the required clearance. This makes it suitable for highly sensitive or classified environments. DAC, in contrast, allows owners to manage permissions, which introduces security risks."
+  },
+  {
+    "question": "An enterprise network uses Kerberos for Single Sign-On (SSO). An employee logs in to their workstation in the morning and successfully authenticates. During the day, they attempt to access a shared file server for the first time. What sequence of ticket exchanges occurs to grant access to the file server?",
+    "options": [
+      "The workstation presents the user's cleartext password to the file server, which verifies it against the KDC database.",
+      "The workstation sends its Ticket-Granting Ticket (TGT) to the Ticket-Granting Service (TGS), receives a service ticket (ST), and presents the ST to the file server.",
+      "The workstation sends an AS-REP request to the local SAM database, receives an NTLM hash, and passes the hash to the file server.",
+      "The workstation uses OpenID Connect (OIDC) to exchange JSON Web Tokens (JWT) directly with the file server."
+    ],
+    "correctIndex": 1,
+    "explanation": "In Kerberos, the initial login authenticates the user to the KDC's Authentication Service (AS), which issues a Ticket-Granting Ticket (TGT). When the user attempts to access a specific resource (like a file server) during the day, the workstation sends the TGT to the KDC's Ticket-Granting Service (TGS) to request a service ticket (ST) for that resource. The workstation then presents the ST to the file server. This prevents passwords from ever traveling over the network."
+  },
+  {
+    "question": "A company's web application database is compromised, and the attacker extracts the table containing user password hashes. The database administrator reveals that the hashes were generated using SHA-256 without salting. What is the primary risk to these user credentials, and what remediation should the security team implement?",
+    "options": [
+      "The SHA-256 hash is a symmetric algorithm that can be easily decrypted. The team must switch to AES encryption.",
+      "Attackers can conduct rapid offline lookups using precomputed rainbow tables. The team must implement salting (adding unique random characters to each password before hashing).",
+      "Attackers can perform Pass-the-Hash (PTH) attacks directly on the web portal. The team must disable the LSASS process.",
+      "Attackers can perform online password spraying attacks. The team must configure Active-Passive load balancing."
+    ],
+    "correctIndex": 1,
+    "explanation": "Unsalted password hashes are highly vulnerable to offline lookup attacks using precomputed databases of hashes called rainbow tables. By adding a unique, random string of characters (a salt) to the password before it is hashed, the resulting hash is randomized. This renders general precomputed rainbow tables useless, as an attacker would have to compute a new table for every possible salt value."
+  },
+  {
+    "question": "A network manager wants to secure administrative access to core switches and routers. The security policy mandates that all commands executed by administrators must be authorized and audited, and that the entire communication session (including usernames and passwords) must be encrypted in transit. Which AAA protocol should the manager deploy?",
+    "options": [
+      "RADIUS, because it encrypts the entire session using UDP port 1812.",
+      "TACACS+, because it runs over TCP port 49, separates AAA functions, and encrypts the entire packet body.",
+      "Kerberos, because it uses the AS-REP protocol to roast credentials.",
+      "LDAP, because it replicates Active Directory databases via SAML assertions."
+    ],
+    "correctIndex": 1,
+    "explanation": "TACACS+ is designed for administrative device management. It runs over TCP port 49, encrypts the entire packet body (except the header), and separates authentication, authorization, and accounting. This allows for command-by-command authorization and auditing. In contrast, standard RADIUS runs over UDP, encrypts only the password field, and combines authentication and authorization, making it less suitable for administrative command control."
+  },
+  {
+    "question": "During an active incident response investigation, the Security Operations Center (SOC) discovers that an attacker has compromised a domain controller and extracted the hash of the KRBTGT Kerberos service account. What is the immediate risk to the Active Directory domain?",
+    "options": [
+      "The attacker can perform a Pass-the-Hash (PTH) attack to bypass the workstation GUI.",
+      "The attacker can forge a Golden Ticket, granting them indefinite administrative access to all systems and resources in the domain.",
+      "The attacker can perform AS-REP Roasting against the local SAM database.",
+      "The attacker can reverse the KDC encryption keys to retrieve all domain user passwords in cleartext."
+    ],
+    "correctIndex": 1,
+    "explanation": "The KRBTGT account is a special service account in an Active Directory domain that encrypts and signs all Kerberos Ticket-Granting Tickets (TGTs). If an attacker obtains the KRBTGT hash, they can forge their own TGTs (known as a Golden Ticket) for any user, including non-existent accounts, with arbitrary lifetimes. This grants them permanent, unmonitored administrative access to the entire domain."
+  }
+]

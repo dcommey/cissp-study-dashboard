@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A security engineer is designing a multi-level secure operating system for a military intelligence unit. The system must enforce confidentiality using the Bell-LaPadula model. According to the star (*)-Security Property of the Bell-LaPadula model, what is the restriction on writing data?",
+    "options": [
+      "A subject at a lower clearance level cannot write data to a higher classification level.",
+      "A subject at a higher clearance level cannot write data to a lower classification level (No Write Down).",
+      "A subject at any clearance level can write to any classification level, as long as auditing is enabled.",
+      "A subject can only write to objects that they own."
+    ],
+    "correctIndex": 1,
+    "explanation": "The star (*)-Security Property of the Bell-LaPadula model states 'No Write Down' (de-confinement). This prevents a subject with high clearance (e.g., Top Secret) from writing sensitive data to a lower classification file (e.g., Confidential), which would result in unauthorized data disclosure."
+  },
+  {
+    "question": "An enterprise financial system requires that bank account balances (Constrained Data Items) can only be modified through validated database transactions (Transformation Procedures) rather than by direct SQL queries from users. Additionally, the system must perform periodic reconciliations to verify that the transactions balance. Which security model is this architecture based on, and what is the verification process called?",
+    "options": [
+      "Bell-LaPadula model; simple security property",
+      "Clark-Wilson model; Integrity Verification Procedure (IVP)",
+      "Biba model; star integrity property",
+      "Brewer-Nash model; ethical wall"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Clark-Wilson model is designed for commercial integrity, requiring that users only modify Constrained Data Items (CDIs) through Transformation Procedures (TPs). The process of verifying that the CDIs are in a valid state is performed by an Integrity Verification Procedure (IVP)."
+  },
+  {
+    "question": "A consulting firm provides cybersecurity services to two competing multinational banks. To prevent conflicts of interest and ensure that consultants do not disclose proprietary strategy data from one competitor to another, the firm implements a system that dynamically blocks a consultant from accessing Bank B's data once they have opened a file belonging to Bank A. Which security model describes this implementation?",
+    "options": [
+      "Biba Model",
+      "Goguen-Meseguer Model",
+      "Brewer-Nash Model",
+      "Graham-Denning Model"
+    ],
+    "correctIndex": 2,
+    "explanation": "The Brewer-Nash model (also known as the Chinese Wall or Ethical Wall model) is designed to prevent conflicts of interest by dynamically restricting access. It groups competitors into conflict classes; once a subject accesses a security domain (e.g., Bank A), they are blocked from accessing competing domains (e.g., Bank B) in the same conflict class."
+  },
+  {
+    "question": "A systems administrator is reviewing security patches for speculative execution vulnerabilities. A recent threat report details an exploit that allows a malicious, unprivileged user-mode application to read the private memory contents of the operating system kernel. Which CPU vulnerability does this exploit describe, and what boundary does it violate?",
+    "options": [
+      "Meltdown; violates the boundary between user-mode applications and the operating system kernel.",
+      "Spectre; violates the boundary between different user-mode applications.",
+      "Buffer Overflow; violates the database transaction boundary.",
+      "Covert Channel; violates the physical security perimeter."
+    ],
+    "correctIndex": 0,
+    "explanation": "Meltdown is a speculative execution vulnerability that allows a non-privileged user-mode process to read operating system kernel memory, violating the boundary between user space and kernel space. Spectre violates the boundary between different user applications."
+  },
+  {
+    "question": "An organization is purchasing a next-generation firewall and wants a high level of assurance regarding the security of the product. The vendor provides a data sheet claiming their product is evaluated at EAL 4 under the Common Criteria. What does the EAL 4 rating signify?",
+    "options": [
+      "The product has been formally verified and proven to have zero vulnerabilities.",
+      "The product's design has been methodically designed, tested, and reviewed.",
+      "The product has only been functionally tested to ensure basic operation.",
+      "The product has an effective cryptographic key length of 256 bits."
+    ],
+    "correctIndex": 1,
+    "explanation": "Evaluation Assurance Levels (EALs) represent the thoroughness of the testing and evaluation process. EAL 4 signifies that the product has been methodically designed, tested, and reviewed, which is the highest level of assurance commonly achieved for general commercial products."
+  }
+]

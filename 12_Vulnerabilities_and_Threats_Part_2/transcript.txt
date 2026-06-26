@@ -1,0 +1,1276 @@
+[00:07] [music]
+[00:07] >> Applets, scripts, and caches in the
+[00:10] context of other sources for threats are
+[00:12] generically called mobile code, which is
+[00:15] a type of code that is sent from a
+[00:17] server to a client to perform some
+[00:19] action. And by saying this, I hope that
+[00:20] you already feel your security senses
+[00:23] tingling. Applets, specifically, are
+[00:26] mobile code objects that are sent from a
+[00:28] server to a client and that run on the
+[00:30] client system as small programs.
+[00:32] Basically, you you download the program
+[00:34] and then you execute it locally. Now,
+[00:36] what could possibly go wrong, right?
+[00:38] The purpose behind this devilish
+[00:40] invention is that applets can release
+[00:43] the processing burden to the client,
+[00:45] giving the user faster responses, not
+[00:47] having to wait for the server to make
+[00:48] some calculations and then come back to
+[00:50] you with a response, and can help
+[00:52] maintain the security and privacy of the
+[00:54] user's data since at least some data
+[00:56] doesn't even need to be sent to the
+[00:58] server anymore. Now, they don't really
+[01:01] sound that bad, do they? Well, two
+[01:05] historical examples of applet types are
+[01:07] Java applets and ActiveX controls, both
+[01:11] of which are no longer in use on the
+[01:13] web. So, that's how good they were, but
+[01:15] may still be encountered on legacy
+[01:17] systems. And who's to say that you
+[01:19] cannot encounter them while browsing
+[01:21] randomly on the web?
+[01:23] Another technology that used to be
+[01:24] popular for creating dynamic web pages
+[01:27] is uh Flash. Remember Flash? Was Flash.
+[01:32] Uh Flash was a problem, sorry, a
+[01:35] platform
+[01:37] used to create animations, games, ads,
+[01:40] oh my god, so many ads, and other
+[01:42] applications for the web. There was a
+[01:44] time when having an entire website made
+[01:46] in Flash was the the coolest thing ever.
+[01:49] Flash was widely used in the 2000s and
+[01:52] early 2010s, but it since then has been
+[01:55] deprecated and was discontinued by Adobe
+[01:58] completely in 2020.
+[02:00] Uh it had so many security issues and
+[02:03] vulnerabilities that they just killed it
+[02:05] completely. It also required a separate
+[02:09] plugin or player to run on browsers,
+[02:11] which added another layer of complexity
+[02:14] and risk. It wasn't supported by many
+[02:16] mobile devices,
+[02:17] uh which in hindsight was actually a
+[02:19] good thing, considering how mobile
+[02:21] devices looked like in the 2000s. And
+[02:24] Flash has been replaced by HTML5, CSS3,
+[02:27] JavaScript as the um
+[02:30] technologies nowadays for creating
+[02:31] dynamic web content, and that's exactly
+[02:33] what you will find all over the web
+[02:35] nowadays.
+[02:36] Another source of risk is embedded code,
+[02:38] which is mobile code that is embedded
+[02:40] into HTML documents and that runs on the
+[02:42] client system when the documents are
+[02:44] opened.
+[02:45] The most common example of embedded code
+[02:46] is JavaScript, which is widely used on
+[02:48] the web and supported by by all the
+[02:50] browsers out there. Actually, there's
+[02:52] probably not a single website out there
+[02:54] nowadays that doesn't have some sort of
+[02:55] JavaScript in it, at least for tracking
+[02:57] purposes.
+[02:58] The JS engine is supposed to run the
+[03:01] code in a sandbox, which means that it
+[03:03] can only access web-related resources
+[03:06] and not mess up with your files or
+[03:08] settings or other programs.
+[03:10] Uh the engine is also supposed to
+[03:11] enforce something called the same-origin
+[03:13] policy, which means that it can only
+[03:15] access content from the same website
+[03:17] that served the JavaScript code. So, it
+[03:19] should not be allowed to make random
+[03:22] requests to other websites that you
+[03:24] might have opened at the same time in
+[03:25] the same browser.
+[03:26] This might not sound like something
+[03:29] terribly interesting right now, but
+[03:30] later on when we'll talk about web
+[03:31] attacks, cross-site scripting, and
+[03:33] cross-site request forgery, this is
+[03:36] going to make a lot more sense. And
+[03:37] don't worry, we will reiterate these
+[03:38] concepts as you probably will have long
+[03:40] forgotten that we talked about
+[03:42] JavaScript in this random episode.
+[03:45] Both embedded code and applets can also
+[03:48] introduce security risks to the client,
+[03:51] such as allowing remote code injection,
+[03:53] containing malicious activity, or
+[03:55] exploiting vulnerabilities or
+[03:56] misconfigurations. Application caches
+[03:59] are another source of vulnerabilities.
+[04:01] These are different types of local
+[04:04] caches, starting with those managed by
+[04:06] the operating system, like the DNS
+[04:08] cache, the ARP cache, Address Resolution
+[04:11] Protocol cache, temporary internet files
+[04:13] maintained by the browser. Normally,
+[04:15] caching is good because it speeds up
+[04:17] data access and the user experience
+[04:18] overall, but caches can also be
+[04:20] corrupted or manipulated by hackers to
+[04:23] redirect you to malicious sites or to
+[04:24] execute harmful code on your device. For
+[04:27] example, hackers can use techniques like
+[04:29] uh split response attack or DOM
+[04:31] cross-site scripting to
+[04:33] inject malicious content into your
+[04:35] temporary internet files cache. A split
+[04:37] response attack is when a hacker
+[04:39] intercepts a response from a web server
+[04:41] and splits it into two parts, one part
+[04:43] that contains the expected content, and
+[04:45] another part that contains the malicious
+[04:47] content. The hacker then sends the first
+[04:49] part to your browser, which displays it
+[04:51] normally, and then sends the second part
+[04:53] after a delay, which is stored in your
+[04:55] cache. The next time you visit the same
+[04:58] site or a site that uses the same cached
+[05:00] content, the malicious content will be
+[05:02] loaded from your cache and executed on
+[05:04] your browser.
+[05:05] A DOM cross-site scripting, Document
+[05:08] Object Model, attack is when a hacker
+[05:11] exploits a vulnerability in a web page
+[05:13] that allows them to inject malicious
+[05:14] code into the Document Object Model,
+[05:17] DOM, of the page.
+[05:18] The DOM is a representation of the
+[05:20] structure of the web page, and most
+[05:21] importantly, JavaScript can manipulate
+[05:23] it. When you are on websites that move
+[05:26] stuff around, show you or hide buttons,
+[05:28] display tables, expand lists, and so on,
+[05:31] that's JavaScript code manipulating the
+[05:33] Document Object Structure, or DOM, of
+[05:35] the web page.
+[05:36] Some DOM cross-site scripting attacks
+[05:38] can access and modify your cached files
+[05:41] and use them for malicious purposes,
+[05:43] such as stealing your cookies or
+[05:44] credentials, redirecting you to phishing
+[05:46] sites, or replacing cached files with
+[05:48] malware.
+[05:50] So, how can you protect yourself from
+[05:51] these threats? Well, there are some best
+[05:53] practices that you can follow as a user
+[05:55] or as a web developer. As a user, you
+[05:57] should always keep your browser updated.
+[05:59] That's common sense. You should also be
+[06:01] careful about what websites you visit
+[06:03] and what links you click on. You should
+[06:06] also consider adjusting your browser
+[06:07] settings to limit the size and duration
+[06:09] of your cache, disable preloading of
+[06:11] contents, uh delete cookies and caches
+[06:14] upon exit. If this does not sound
+[06:17] convenient at all, welcome to the world
+[06:19] of security, where you can either choose
+[06:21] security
+[06:22] or usability, but not both at the same
+[06:24] time.
+[06:25] As a developer, you should use secure
+[06:27] protocols like TLS to encrypt
+[06:29] communication between your server and
+[06:30] your client. Uh you should also um use
+[06:33] secure coding practices and avoid
+[06:36] vulnerabilities like DOM cross-site
+[06:37] scripting or injection attacks on your
+[06:38] site.
+[06:39] Uh you should also use headers or meta
+[06:42] tags to control how your content is
+[06:44] cached by your browser or by the proxies
+[06:46] that you administer. For example, you
+[06:48] can use the Cache-Control header or the
+[06:50] meta HTTP-EQUIV tag to specify whether
+[06:54] your content can be cached, for how
+[06:56] long, and by whom.
+[06:57] You can also use the Expires header to
+[07:00] specify when your content becomes stale
+[07:02] and needs to be refreshed from the
+[07:04] server.
+[07:06] On the server side, there are a lot of
+[07:07] things to talk about, and we will do
+[07:09] exactly that much later, but for now,
+[07:11] let's just crash the servers for a bit.
+[07:14] And for that scratchable surface, uh
+[07:16] let's start by talking a bit about data
+[07:18] flow. Now, a data flow is a set of paths
+[07:21] that dictate how data moves between
+[07:23] different processes
+[07:25] inside the same computer, between
+[07:27] different devices on the same network,
+[07:29] uh or even between different networks.
+[07:31] So, it's exactly what it sounds like.
+[07:33] It's the path that data takes from when
+[07:35] going from A to B.
+[07:36] A correctly managed data flow avoids
+[07:39] delays, avoids errors. It might even be
+[07:41] able to reconverge over alternative
+[07:43] paths in case of malfunction.
+[07:45] It can help avoid or at least contain
+[07:47] security breaches, and also it can
+[07:50] present by itself an added security
+[07:52] risk, because where data lives, even for
+[07:54] a fraction of a second while it's being
+[07:56] transmitted, that's where the hackers
+[07:58] will try to hit.
+[08:00] The problem of data flow, as generic and
+[08:02] subjective as it may sound,
+[08:04] uh applies to many network devices, such
+[08:06] as routers and switches, but also to
+[08:08] network applications and services, or
+[08:10] servers, to be more generic. And in the
+[08:13] virtualized and containerized worlds,
+[08:15] data flow issues are even more complex
+[08:17] because you don't really see the path.
+[08:19] It's all in software. Yes, there's going
+[08:21] to be a lot of lot to talk about uh
+[08:23] securing data flows or data in transit.
+[08:26] And you can probably think right now
+[08:28] about a couple of things, such as access
+[08:29] control, encryption, traffic inspection,
+[08:32] traffic sanitization, which is cleaning
+[08:34] traffic from junk and potentially
+[08:36] malicious payloads, and so on. But we'll
+[08:38] leave those for an entirely much more
+[08:40] detailed topic later on.
+[08:43] Uh but still, speaking of a specific
+[08:44] data flow is only relevant when there
+[08:46] are multiple paths that data can take
+[08:48] from A to B. Otherwise, if there's only
+[08:50] one path, then there's only one path.
+[08:54] >> [laughter]
+[08:54] >> Okay, it might transport good flows, bad
+[08:56] flows, but that's it. That's the only
+[08:58] path that we have. So, one of the
+[09:00] important data flow control techniques
+[09:01] in such situations is implementing load
+[09:04] balancing. When we're talking about
+[09:06] servers, load balancing is having a
+[09:08] team, or officially called a cluster of
+[09:10] servers, working together to serve a
+[09:13] larger group of customers sending in a
+[09:16] larger number of requests.
+[09:17] This means distributing the network
+[09:19] traffic or balancing the traffic across
+[09:22] multiple network links and devices, so
+[09:24] that no one single device or link gets
+[09:26] overloaded or underloaded. It also helps
+[09:28] with availability, so that when one
+[09:30] device or network path fails,
+[09:32] communication doesn't stop. Uh there are
+[09:34] different ways to do load balancing,
+[09:36] which are called load balancing
+[09:37] algorithms or distribution algorithms.
+[09:39] When a new request comes in and we need
+[09:41] to choose a link or a servers to send it
+[09:43] to,
+[09:44] we could, for example, just choose a
+[09:45] server at random. That would work. It
+[09:48] would be better than nothing. We could
+[09:50] also perform something called round
+[09:52] robin, which is choosing the next server
+[09:54] for each new request that comes in, each
+[09:56] and every one in turn, like um or
+[09:59] choosing the uh the least busy server,
+[10:02] and we have to define what busy actually
+[10:03] means,
+[10:05] or the least congested link, or the one
+[10:08] with the least amount of connections.
+[10:10] It's up to you.
+[10:11] When dealing with servers, it's
+[10:13] sometimes difficult to correctly choose
+[10:15] the right balancing algorithm because,
+[10:17] well, not all requests are equal.
+[10:20] One might take a server a millisecond to
+[10:23] process, another one might take the
+[10:24] server 5 seconds of CPU time. And in the
+[10:27] meantime, it would be a mistake to
+[10:29] think, "Oh, that server only got one
+[10:31] request in the past 3 seconds. Here,
+[10:33] have 10 more."
+[10:35] On the other hand, the server might take
+[10:37] a lot to process because it's waiting in
+[10:39] turn for another service, like a
+[10:41] database to respond, as the request
+[10:43] demands. In that case, the server seems
+[10:45] slow to respond, but it's not actually
+[10:48] busy. It's just waiting, right? So, how
+[10:51] is an internal load balancer going to
+[10:52] know about what's going on inside each
+[10:55] and every server's heart and soul?
+[10:58] However, uh load balancing uh is not
+[11:02] enough to protect your data flow from
+[11:03] malicious attacks. Actually, it doesn't
+[11:05] really do much about protecting your
+[11:07] data. Uh we might be improving
+[11:09] availability, but we're doing nothing
+[11:10] for our confidentiality or integrity.
+[11:13] Still, one of the most common and
+[11:14] dangerous attacks is denial-of-service
+[11:16] DOS. DOS attacks uh flood your network
+[11:19] with fake or excessive requests, making
+[11:21] it impossible for real users to access
+[11:23] your service.
+[11:24] Load balancing can help alleviate the
+[11:26] effects of a denial-of-service simply
+[11:28] because there isn't just a single server
+[11:30] that might be easily overwhelmed with
+[11:32] too many requests, or because the load
+[11:34] balancer might be able to filter some of
+[11:36] those bogus connections before they
+[11:38] reach the end servers and overwhelm
+[11:40] them. But still, a correctly performed
+[11:43] denial-of-service, most likely a
+[11:45] distributed denial-of-service, should be
+[11:47] able to put almost any server farm to
+[11:50] its knees.
+[11:52] Parallel computing is another way of
+[11:54] doing many operations at the same time
+[11:57] in parallel, instead of one after
+[12:00] another in a serial manner.
+[12:01] Now, to do this, you need multiple
+[12:03] brains or processing units. It might be
+[12:05] as simple as a CPU with multiple cores,
+[12:08] or multiple CPUs in the same computer,
+[12:10] or even multiple computers connected
+[12:11] through a high-speed network. But
+[12:14] parallel computing is not just about
+[12:15] doing more in less time. It's not that
+[12:17] easy, unfortunately. They also involve
+[12:20] breaking down a big problem into smaller
+[12:22] pieces, and then sending each piece to a
+[12:24] different processor. This is based on
+[12:26] the idea that some problems are easier
+[12:28] to solve if you divide before you
+[12:30] conquer them, at least some, if not all
+[12:33] of them.
+[12:34] And while this might sound nice and
+[12:36] efficient, it's actually very, very
+[12:37] difficult to implement, especially in
+[12:39] programs that were not designed from
+[12:41] very beginning to run in such a
+[12:43] distributed manner.
+[12:44] There are different types of parallel
+[12:46] processing. The first distinction is
+[12:47] between symmetric multiprocessing SMP
+[12:51] and asymmetric multiprocessing or AMP.
+[12:54] SMP or symmetric multiprocessing systems
+[12:57] are made up of computers using uh the
+[12:59] same skills and resources controlled by
+[13:01] a single operating system. They share a
+[13:03] common data bus, basically a network.
+[13:06] They share memory and they work together
+[13:08] on tasks. They are like beefed-up single
+[13:11] computers, but split apart, distributed.
+[13:14] AMP systems or asymmetric
+[13:16] multiprocessing systems each have their
+[13:18] own data bus and memory.
+[13:20] Uh members of an AMP system can operate
+[13:22] independently or in collaboration with
+[13:24] other systems. There isn't the same
+[13:26] level of cohesion as SMP. They're great
+[13:28] for batch processing where multiple
+[13:30] tasks can be executed by different
+[13:32] computers without the need to correlate
+[13:34] results or translate one's output into
+[13:37] another one's input.
+[13:38] Also, since they are asymmetric, they
+[13:40] are good for tasks where the end result
+[13:43] does not need to be synchronized among
+[13:45] multiple nodes. So, they don't have to
+[13:47] wait for each other to finish before
+[13:49] moving on.
+[13:50] They also have MPP systems or massively
+[13:53] parallel processing systems that can
+[13:55] have thousands of processors, each or
+[13:57] every couple of them with their own
+[13:59] operating system or memory. They have a
+[14:02] leader or coordinator that assigns them
+[14:04] a a big task that needs to be solved,
+[14:07] and the leader breaks down the task into
+[14:08] smaller parts and distributes them to
+[14:10] other processors for execution.
+[14:13] The processors return their results to
+[14:14] the leader, who combines them and
+[14:16] returns them to the requester.
+[14:19] MPP systems are very powerful and
+[14:22] expensive, and they're used for very
+[14:24] large complex or computationally
+[14:25] intensive problems.
+[14:28] Another interesting one is grid
+[14:29] computing. Uh it's not the grid from
+[14:32] Tron. It's a bit less awesome than that.
+[14:35] Uh but it's a way of using a large
+[14:37] number of computers, initially with no
+[14:38] dedicated connection to each other, to
+[14:40] work on a specific processing goal. Uh
+[14:43] the nodes can join and leave the grid at
+[14:45] any time, depending on their
+[14:46] availability, how busy they are, or how
+[14:48] much they just feel like working that
+[14:50] day.
+[14:51] Uh for example, you might have a laptop
+[14:52] that joins the grid when you're not
+[14:54] using it and leaves the grid when you
+[14:55] need it for your own work during work
+[14:57] hours. Uh the grid can use your laptop's
+[14:59] processing power to do some calculations
+[15:01] for a bigger project, such as searching
+[15:03] for alien signals, folding proteins,
+[15:06] helping develop medicine, or predicting
+[15:07] weather.
+[15:09] Grid computing also depends on a central
+[15:10] core of servers that manages the
+[15:12] projects, uh distributes the work, and
+[15:14] collects the results. So, it needs some
+[15:16] sort of centralized control. Uh even
+[15:18] though grid computing, by definition,
+[15:21] is extremely distributed, these central
+[15:23] servers are vulnerable to attacks,
+[15:25] overloading them with denial-of-service,
+[15:27] or just um various failures, which could
+[15:30] affect the whole grid. If the central
+[15:32] servers go down, the nodes may not be
+[15:34] able to communicate with each other or
+[15:36] get new work or submit their completing
+[15:38] work, and um new nodes cannot join the
+[15:41] grid anymore. Alternatively, if the
+[15:43] servers are compromised, they could send
+[15:45] malicious instructions to the nodes or
+[15:47] use them for nasty purposes.
+[15:49] You might think that you're looking for
+[15:51] aliens in uh SETI@home when instead
+[15:54] you're crypto mining for some hacker.
+[15:56] Your CPU or GPU will sound like it's
+[15:58] preparing for takeoff in both
+[15:59] situations.
+[16:00] Uh peer-to-peer or P2P technologies are
+[16:03] similar to grid computing, but with some
+[16:05] differences. Peer-to-peer technologies
+[16:06] are distributed applications that share
+[16:09] tasks and workloads among peers, but
+[16:11] there is no central authority or
+[16:13] management system in peer-to-peer.
+[16:14] Everyone is equal. The peers communicate
+[16:17] directly with each other, which also
+[16:18] made P2P more focused on distribution or
+[16:21] sharing of information than on actual
+[16:23] computing being done on those tasks. The
+[16:26] highly distributed and decentralized
+[16:27] nature of P2P technologies
+[16:30] may encourage and enable piracy or
+[16:32] illegal distribution of copyrighted
+[16:33] materials, especially because there's no
+[16:35] central authority, but that doesn't mean
+[16:37] that they cannot be used for
+[16:38] constructive purposes as well.
+[16:41] Industrial control systems are the brain
+[16:44] of the industrial world. They can
+[16:45] monitor and control complex systems in
+[16:48] factories, power plants, water plants,
+[16:51] uh refineries, you get the idea.
+[16:53] Anything that makes you think about
+[16:54] industry when you hear the word.
+[16:57] ICSs are known as operational technology
+[16:59] or OT, and keep this term in mind. They
+[17:02] are different from information
+[17:03] technology or IT, which is what we
+[17:05] usually have for our personal or
+[17:07] business computing needs.
+[17:08] ICSs are designed for specific purposes,
+[17:11] and they often use specialized hardware
+[17:13] or software. They're not compatible with
+[17:15] the so-called regular or traditional IT
+[17:17] systems. Well, some of them are
+[17:19] compatible, and that's where the
+[17:20] problems begin because they might be
+[17:22] subjected to the same type of attacks as
+[17:25] your quote-unquote traditional IT
+[17:27] systems.
+[17:28] The simplest type of ICS is something
+[17:30] called a PLC, which is a programmable
+[17:33] logic controller. A PLC is essentially a
+[17:35] small computer that can be programmed to
+[17:37] execute some basic logic instructions
+[17:40] based on relatively simple inputs, and
+[17:42] of course, it can return outputs,
+[17:43] otherwise it would be useless.
+[17:45] A PLC, being a simple computer,
+[17:48] is usually event-driven, which means
+[17:50] that it is designed to wait and react to
+[17:53] some change in its inputs so that it can
+[17:56] generate a specific output. It doesn't
+[17:59] really have any advanced intelligence.
+[18:00] It might have some complex logic
+[18:02] pre-programmed in it, but generally it's
+[18:04] just a very predictable
+[18:06] black box that is always listening or
+[18:08] monitoring inputs.
+[18:10] Another type of ICS is called DCS, which
+[18:12] is a distributed control system.
+[18:14] Uh DCSs are used to control industrial
+[18:17] processes that are distributed over an
+[18:18] area, such as a plant or a large
+[18:20] factory. A DCS consists of a network of
+[18:23] sensors, controllers, actuators,
+[18:27] operating terminals that communicate
+[18:29] with each other, and all of them with a
+[18:31] central monitoring station. The central
+[18:33] station can send commands to the local
+[18:35] controllers and receive data from them,
+[18:37] so it allows humans to control, but also
+[18:39] monitor the system. DCS can be analog or
+[18:42] digital, depending on the type of
+[18:43] process or device that it controls.
+[18:46] The third type is SCADA, which stands
+[18:48] for supervisory control and data
+[18:50] acquisition.
+[18:52] Not a very revealing name for what it
+[18:54] does. So, SCADA systems are used to
+[18:57] monitor and control industrial processes
+[19:00] that span over large geographic areas,
+[19:03] such as an entire power grid for a city,
+[19:05] or its water network.
+[19:07] So, to summarize, a PLC is used to
+[19:09] control a single device in a stand-alone
+[19:11] manner. A DCS is used to interconnect
+[19:14] several PLCs with a limited physical
+[19:17] range for centralized control. A SCADA
+[19:19] system is used to interconnect multiple
+[19:21] DCSs and individual PLCs over large
+[19:25] geographical areas. And that's probably
+[19:28] all you need to know at this point.
+[19:31] All right. So, we had to briefly discuss
+[19:33] previously distributed systems when
+[19:35] talking about SCADA or grid computing.
+[19:37] But there are a couple more that we need
+[19:38] to cover, so here it goes.
+[19:41] Now, just to be clear, a distributed
+[19:42] system is a collection of individual
+[19:44] systems that work together to support,
+[19:47] well, something, some task, usually to
+[19:50] provide the resource or a service.
+[19:53] Uh for example, think how Google handles
+[19:56] billions of search queries every day or
+[19:58] I don't know, maybe every second. It
+[20:00] uses thousands of servers distributed
+[20:03] across the world to process your request
+[20:05] and to store your data and to deliver
+[20:07] those results back to you users.
+[20:10] Uh distributed systems have many
+[20:11] advantages over centralized systems. Of
+[20:13] course, they're more resilient, more
+[20:15] reliable, can offer better performance,
+[20:17] can scale very well because that's how
+[20:20] and why they were designed in the first
+[20:22] place.
+[20:23] However, you also have a couple of
+[20:24] challenges with distributed systems such
+[20:26] as, of course, complexity because the
+[20:28] system involves many components
+[20:31] with different characteristics.
+[20:33] Uh they're also a bit tougher to
+[20:34] coordinate because the system needs to
+[20:37] synchronize and manage the activities
+[20:39] and the states of all the components
+[20:42] that make up that distributed system. It
+[20:44] also needs to ensure constantly that the
+[20:46] data is correct, is up-to-date, is
+[20:49] synchronized across all components
+[20:51] because they need the data to work with
+[20:53] and because when you're hiding the
+[20:56] distributed nature from your clients or
+[20:58] customers' eyes, they will expect their
+[21:01] data to always be available and
+[21:02] consistent, no matter where they're
+[21:05] interacting with your system from, in
+[21:07] which location over the world, perhaps.
+[21:09] Now, clients don't care where they're
+[21:11] connecting from and how long it takes
+[21:13] you internally to replicate that data to
+[21:15] the other end of the world. And last but
+[21:17] not least, the more complex and
+[21:19] widespread a system is, the harder it is
+[21:22] to secure and the larger the attack
+[21:24] surface becomes.
+[21:26] Since we're here, it's worth mentioning
+[21:27] blockchain, which is a special type of
+[21:30] distributed system that uses
+[21:31] cryptography to create secure,
+[21:34] immutable, or in other words,
+[21:36] unchangeable,
+[21:38] records of events or transactions. In
+[21:41] other words, a blockchain is a secure
+[21:43] record of things that happen.
+[21:46] A blockchain is composed of blocks, as
+[21:49] the name says, that are linked together,
+[21:51] hence the name of blockchain.
+[21:54] They're linked together by hashes and
+[21:56] timestamps so that each new block is
+[21:58] always cryptographically connected to
+[22:01] the previous one.
+[22:03] If you apply transitivity here,
+[22:05] then each block is connected to all its
+[22:08] previous blocks.
+[22:09] Each block contains a set of
+[22:11] transactions that are verified by a
+[22:13] network of nodes and is resistant to
+[22:15] tampering because any change in one
+[22:17] block would invalidate all subsequent
+[22:19] blocks that came after it. So, that's
+[22:21] why we can trust it. A blockchain can
+[22:23] also be distributed across multiple
+[22:25] nodes that store copies of this ledger
+[22:29] and all of them can participate in
+[22:31] validating new blocks that enter the
+[22:33] network.
+[22:34] The main advantage of blockchain is that
+[22:36] it can enable cheaper, transparent
+[22:38] transactions
+[22:40] without intermediaries or any central
+[22:42] authorities. And when I say
+[22:43] transactions, it doesn't necessarily
+[22:45] involve money,
+[22:47] any decision, any action like asking for
+[22:49] a signature or a consent that gets
+[22:52] recorded in some way. Every consent that
+[22:55] you give can be such a transaction.
+[22:57] Notice I did not say that it enables
+[22:59] faster transactions because though it
+[23:01] has many advantages, including the fact
+[23:03] that it's used for cryptocurrencies, it
+[23:05] does face some scalability and
+[23:07] efficiency issues. Some might even say
+[23:09] that it increases global warming because
+[23:11] of all the energy consumption spent
+[23:13] while while mining for crypto,
+[23:16] something that would not have happened
+[23:18] if blockchain wasn't invented, but then
+[23:20] let me be the devil's advocate here.
+[23:22] It's not blockchain's fault, it's
+[23:24] because of the way people decided to use
+[23:26] it, spending energy to create virtually
+[23:28] nothing. But we digress. How do these
+[23:31] distributed systems communicate and
+[23:33] coordinate with each other? How do they
+[23:36] handle different languages, different
+[23:38] platforms, different locations?
+[23:40] There are many answers or there is no
+[23:43] simple answer to this question depending
+[23:44] on the level of at which you're planning
+[23:46] to give the answer, but strictly talking
+[23:48] about let's say something as something
+[23:51] such as distributed applications. That's
+[23:53] where we find something called an
+[23:55] interface definition language, IDL. An
+[23:58] IDL, just like the name says, is a
+[24:00] language that defines the interface
+[24:01] between the client and the server in
+[24:03] distributed systems. This also allows
+[24:05] objects to communicate even when they
+[24:07] are in various locations or are using
+[24:10] different programming languages.
+[24:12] Ideally, you should not even have to
+[24:15] care about the programming languages
+[24:17] that are involved. Uh there are many
+[24:19] examples of IDLs or frameworks for
+[24:21] distributed systems such as remote
+[24:23] procedure calls, RPCs,
+[24:26] uh the common object request broker
+[24:28] architecture, CORBA,
+[24:30] and the distributed component object
+[24:32] model, DCOM. Just remember them by their
+[24:35] names. Shouldn't be necessary to know
+[24:38] any more than that, at least not for the
+[24:40] exam.
+[24:41] Now, since distributed systems includes
+[24:43] members that may be distributed
+[24:45] geographically,
+[24:47] uh they have a larger potential attack
+[24:49] surface than that of a single system.
+[24:51] So, keep in mind the potential
+[24:52] vulnerabilities of each member in a
+[24:54] distributed system as well as those that
+[24:56] might be exposed by their communications
+[24:58] network. Many distributed systems rely
+[25:00] on the public internet to work, to
+[25:02] communicate, and the internet is where
+[25:04] they there be dragons.
+[25:07] Another issue that we need to consider
+[25:08] when dealing with distributed systems is
+[25:10] data sovereignty.
+[25:11] Data sovereignty is the concept that
+[25:14] once information is stored as digital
+[25:16] files, it is subject to the laws of the
+[25:19] country where the storage device is
+[25:21] located. For example, think of how you
+[25:23] can store your data on a cloud service
+[25:25] provider such as Google Drive or
+[25:26] Dropbox. You might think that your data
+[25:28] is safe and secure, but do you know
+[25:30] where your data is physically located?
+[25:32] Do you know what laws apply to your data
+[25:34] depending on where it is located or to
+[25:36] your business if you're in the business
+[25:38] of processing data like all businesses
+[25:41] are?
+[25:43] All right, next, high performance
+[25:45] computing. Now, high performance
+[25:46] computing or HPC solutions are usually
+[25:49] made up of many computers that work
+[25:52] together to solve a bigger problem or to
+[25:54] perform some complex task. Well,
+[25:55] obviously, not just one but many large
+[25:58] problems with many tasks. Now, it's not
+[26:00] it's not the first time you're hearing
+[26:02] this, I know.
+[26:03] Uh with HPC, these computers are
+[26:06] connected by a network that allows them
+[26:07] to communicate and share data for the
+[26:10] computations that they need to do. Of
+[26:12] course, the network has to be very fast
+[26:14] and reliable because any delay or error
+[26:16] can affect the performance of the whole
+[26:18] system or the integrity of the system.
+[26:20] If we have high performance computing
+[26:21] but low performance data transfer, well,
+[26:25] then we don't really have high
+[26:26] performance computing now, do we? HPC
+[26:29] systems usually also need a lot of
+[26:31] storage space to store all the data they
+[26:32] process. So, we're not just scaling the
+[26:34] processing power, the storage has to be
+[26:36] fast and secure, too. And it can be
+[26:38] either local, meaning that it's attached
+[26:39] to computers in the system, or remote,
+[26:41] meaning it's located somewhere else and
+[26:43] accessed in shared but controlled manner
+[26:45] by everyone in the HPC cluster over the
+[26:48] network. In real life, there will
+[26:50] be most likely a combination of both
+[26:52] storage models.
+[26:54] So, why do we need HPC systems? Well,
+[26:56] there are many applications that require
+[26:58] this to function properly. For example,
+[27:00] scientific studies that involve
+[27:01] simulating the weather, the climate, the
+[27:04] universe, proteins, or human body,
+[27:07] industrial research that involves
+[27:09] designing new products and materials,
+[27:12] medical analysis that involves
+[27:13] diagnosing diseases, finding cures,
+[27:16] developing vaccines, stuff like that.
+[27:18] You probably use some of these
+[27:19] applications every day without even
+[27:20] realizing it. For example, when you use
+[27:23] your mobile device or its apps, you are
+[27:25] using some sort of an HPC systems that
+[27:27] powers the cloud and all the apps in
+[27:29] there. When you see IoT devices such as
+[27:31] smart speakers, thermostats, cameras,
+[27:33] you are using HPC systems that process
+[27:35] the data from these devices and provide
+[27:38] services based on them. Uh when you
+[27:40] watch streaming media, you are using HPC
+[27:42] systems that deliver the content to your
+[27:44] device in high quality and low latency.
+[27:46] When you use voice assistants like Siri,
+[27:49] Alexa,
+[27:50] or Google, you are using HPC systems
+[27:53] that understand your speech and respond
+[27:55] to your commands. Generative AI as well,
+[27:58] you're eating up a whole lot of
+[28:00] performance computing resources uh to
+[28:03] answer your your queries. One special
+[28:05] mention here somewhat related to HPC
+[28:07] here are also regarding real-time
+[28:10] operating systems or RTOS.
+[28:13] Uh these are designed to handle data as
+[28:15] it arrives with minimal delay. We find
+[28:18] these in factories, assembly lines,
+[28:21] financial transaction apps like those
+[28:23] used in stock markets, and in many other
+[28:25] places.
+[28:26] Real-time operating systems are
+[28:27] extremely efficient and usually not
+[28:30] designed for general purposes. That is,
+[28:31] they are designed for a single category
+[28:33] of task as latency needs to be kept at a
+[28:35] minimum. So, it is high performance but
+[28:38] perhaps not in the generic way of a
+[28:40] beefy computer. It just performs really
+[28:42] well, almost close to real time. Now,
+[28:45] having systems with limitations like
+[28:48] these also implies that we cannot add
+[28:50] security on top of them. So, since
+[28:52] there's just no room in the real-time
+[28:54] operating system for additional
+[28:56] operations. So, no security operations,
+[28:59] either.
+[29:00] That also makes them extremely
+[29:01] vulnerable to denial of service attacks
+[29:04] because with real-time operating
+[29:06] systems, you don't even need to crash
+[29:08] a real-time operating system, you just
+[29:10] need to delay it perhaps just by a few
+[29:12] milliseconds to crash the entire, let's
+[29:15] say, assembly line, perhaps.
+[29:18] Internet of Things or Internet of
+[29:20] Threats. If you're not new to this area,
+[29:22] you probably get the joke. Smart devices
+[29:25] are all those nice gadgets that let you
+[29:27] customize them with apps and some use
+[29:29] machine learning to do cool stuff. They
+[29:31] include phones, tablets, cameras, TVs,
+[29:34] fitness trackers, many more inventions
+[29:36] out there. You probably have some of
+[29:37] these in your pocket or on your wrist or
+[29:39] in your home right now.
+[29:41] And IoT stands for Internet of Things,
+[29:43] which is a fancy way of saying that
+[29:45] these smart devices can talk to each
+[29:47] other and to the internet. And nowadays
+[29:49] we don't even call a device smart if it
+[29:51] cannot communicate over some sort of
+[29:53] network.
+[29:54] IoT devices are fun, can do a lot of
+[29:57] nice things like automate, remote
+[29:58] control, process things like you know,
+[30:00] home appliances for music, light,
+[30:02] security, temperature, sensors and so
+[30:04] on.
+[30:05] For example, you can use your phone to
+[30:06] turn on your smart thermostat, your
+[30:09] smart fridge can order milk when you run
+[30:11] out. And even though nobody would ever
+[30:13] want their milk ordered automatically by
+[30:15] their fridge, we'll still use this as a
+[30:18] valid example. Now, leaving the joke
+[30:20] aside, you might be wondering what about
+[30:22] security. And if you do, you're among
+[30:24] the very few who ask these kinds of
+[30:26] questions. And this is probably not
+[30:28] going to make any headlines, but many
+[30:31] IoT devices are not very secure.
+[30:33] Unfortunately, people don't really care
+[30:35] about this. And well, if customers don't
+[30:37] care, why should the vendors care?
+[30:39] They are designed to be easy to use.
+[30:42] Take them out of the box and it does
+[30:43] magic.
+[30:44] Uh fun to use by anyone. And most of the
+[30:47] population out there doesn't have
+[30:48] degrees in computer science, so they are
+[30:50] more than happy to buy a gadget that
+[30:52] simply works.
+[30:54] They often have weak passwords,
+[30:57] maybe no encryption, very weak
+[30:58] encryption ciphers,
+[31:00] outdated software with known
+[31:02] vulnerabilities or even backdoors.
+[31:04] Uh what makes matters worse is that many
+[31:06] IoT devices might not even be
+[31:08] upgradeable by the end user, making you
+[31:10] become stuck forever with the
+[31:11] vulnerabilities that were inside the
+[31:13] device when you bought it. This makes
+[31:15] them easy targets for hackers who can
+[31:17] use them to access your network or spy
+[31:19] on you. So easy to exploit a device when
+[31:21] finding out its vulnerabilities is just
+[31:23] a Google search away.
+[31:25] So, how can you protect yourself and
+[31:27] your network from IoT threats? First,
+[31:29] buy smart. Doesn't mean buy in bulk or
+[31:32] on Black Friday, but instead choose IoT
+[31:35] devices
+[31:36] from reputable vendors who care about
+[31:39] security
+[31:40] and update the products regularly. I
+[31:42] know, easier said than done, especially
+[31:44] when you see the price tag of similar
+[31:46] products that do exactly the same thing
+[31:47] from other Chinese vendors who sell it
+[31:50] for a fraction of the same price.
+[31:52] Another one is to change the default
+[31:53] passwords and settings of your IoT
+[31:55] devices and use strong encryption if
+[31:57] possible. And if it it is possible, it
+[31:59] might still not be enough due to the
+[32:00] fact that many of them have known
+[32:03] vulnerabilities.
+[32:05] So, additionally,
+[32:06] monitor your network activity and look
+[32:08] for any suspicious or unusual behavior
+[32:10] from your IoT devices. Again, easier
+[32:13] said than done. Not everyone has IPS
+[32:16] level monitoring in their homes, but
+[32:19] some of the
+[32:20] not the cheapest possible home routers
+[32:23] out there actually do have some
+[32:24] intrusion detection built into them. So,
+[32:26] maybe don't buy the cheapest router.
+[32:28] Ultimately, the best method would be to
+[32:30] isolate your IoT devices from your main
+[32:32] network using a separate VLAN in your
+[32:35] home or your business with or without a
+[32:37] firewall or at least on a separate SSID
+[32:40] that doesn't have access to the rest of
+[32:41] the network, only to the internet. This
+[32:43] way, even if they get compromised, they
+[32:45] won't affect the other devices of your
+[32:47] and your and your stored personal data
+[32:49] on your local network.
+[32:51] Now, of course, your privacy and the
+[32:53] data of the compromised devices will
+[32:55] still be breached, but at least the
+[32:57] threat is contained. It also means that
+[32:59] you might have a hard time accessing and
+[33:01] sharing things to and from those devices
+[33:03] if your home computers are located on a
+[33:04] different network or VLAN. So, yeah.
+[33:07] You you just cannot have them both,
+[33:09] security and usability
+[33:11] at a maximum. Smart devices and IoT are
+[33:13] not just for personal use, they're also
+[33:15] used in many businesses for various
+[33:17] purposes such as environmental control,
+[33:19] inventory management, asset tracking,
+[33:22] parking spots management and so on.
+[33:25] Sensors can be used to monitor and
+[33:27] control some aspects of your business,
+[33:29] environmental conditions for example,
+[33:30] when you're working with food and
+[33:32] refrigerators or medicine for example,
+[33:35] if you're in those businesses,
+[33:37] how much energy you're wasting in your
+[33:39] buildings, product quality like
+[33:41] automatically inspecting things that you
+[33:43] produce on an assembly line and so on.
+[33:45] Now, even very simple use cases like for
+[33:48] example, you can use sensors to turn on
+[33:50] the AC when it gets too hot. Well,
+[33:52] that's a very basic example. Or to
+[33:54] detect smoke or a gas leak before they
+[33:56] cause a a fire or an explosion. Edge
+[33:59] computing is more or less the new way of
+[34:02] designing networks, especially those
+[34:04] made up of sensors, where the data from
+[34:06] those sensors needs to be processed and
+[34:09] when processing needs to be done as
+[34:10] close as possible to the source of the
+[34:12] data to save bandwidth and to minimize
+[34:14] the transmission of useless data. In
+[34:16] edge computing, each edge device or each
+[34:19] sensor has its own intelligence and
+[34:20] processing power. Not much, but just
+[34:23] enough so it doesn't have to send all
+[34:24] the data to a central server or the
+[34:26] cloud.
+[34:27] It does some local processing of data
+[34:30] and only sends relevant, sometimes even
+[34:32] partially processed, data to the to the
+[34:35] central app or aggregation service. Can
+[34:37] also summarize data and sometimes it
+[34:39] doesn't send any data at all if it
+[34:41] determines it's just noise, perhaps, or
+[34:45] changed since last time it communicated,
+[34:47] but that's normally an exception. You
+[34:49] normally would would want to have an
+[34:50] overview of what's happening in your
+[34:52] network at least for monitoring
+[34:53] purposes, even if you don't collect all
+[34:55] the data.
+[34:57] Uh edge computing in IoT can be used for
+[34:58] a lot of stuff like security systems,
+[35:00] cameras, self-driving cars, smart
+[35:03] agriculture, weather predictions and
+[35:05] more.
+[35:06] For example, you can use edge computing
+[35:07] to run a facial recognition on your
+[35:09] cameras without sending your images to
+[35:11] the cloud. Or you can have sensors
+[35:13] deployed in the field in agriculture
+[35:14] that only reports when harsh conditions
+[35:17] are detected like dry soil, too much
+[35:19] humidity, high temperature and such.
+[35:21] On a very similar topic, fog computing
+[35:24] is very similar as it uses sensors, IoT
+[35:26] devices or even edge devices to collect
+[35:28] data.
+[35:29] And then it sends those to a central
+[35:30] location within the network for
+[35:32] processing. The fog computing location
+[35:35] is like an intermediate,
+[35:37] let's say mini cloud that is closer to
+[35:39] the devices than to the real cloud.
+[35:42] Now, if it's still not 100% clear, in
+[35:45] short, edge computing does processing on
+[35:47] the devices themselves, while fog
+[35:49] computing does processing on a central
+[35:51] location next to the edge, but still
+[35:54] locally in the local network. Both edge
+[35:56] and fog computing can use sensors,
+[35:58] embedded devices and generic IoT
+[36:00] devices. If an exam is going to ask you
+[36:02] about these two, it's more likely that
+[36:05] it's going to ask you about them both at
+[36:07] the same time since they are so similar,
+[36:10] so you're probably not going to be asked
+[36:11] about the differences between the two.
+[36:14] All right, and some other types of
+[36:16] systems. We call an embedded system a
+[36:19] small computer that is added to a larger
+[36:21] system such as a car, a fridge or even,
+[36:24] let's say, an espresso machine
+[36:25] to make it smarter. Basically, it's what
+[36:27] we call the smart part in an otherwise
+[36:30] not so smart device.
+[36:32] An embedded system usually has a very
+[36:34] specific function and it may not look
+[36:36] like a typical computer at all. For
+[36:39] example, an embedded system may have a
+[36:40] microcontroller, which is a tiny chip
+[36:43] that can execute very simple
+[36:44] instructions, or an FPGA, that's a field
+[36:47] programmable gate array, which is a
+[36:50] flexible device that can be programmed
+[36:52] by the user to perform different tasks,
+[36:54] again a small chip, or even a general
+[36:56] purpose CPU.
+[36:57] Some examples of embedded systems that
+[36:59] you might have heard of are Raspberry
+[37:01] Pi, Arduino. A Raspberry Pi is a small
+[37:04] computer that can run an operating
+[37:06] system and do many things that a regular
+[37:07] computer can do such as browsing the
+[37:09] web, playing games, running server
+[37:11] applications, controlling robots. Some
+[37:13] people even use them as security devices
+[37:15] for traffic or DNS filtering or even VPN
+[37:18] concentrators or media servers for your
+[37:20] home. So, Raspberry Pi isn't exactly the
+[37:22] by the book definition of an embedded
+[37:24] system with limited functionality. It's
+[37:26] a bit more than that.
+[37:28] Arduino is a simpler device that can run
+[37:30] small programs written in C++, and
+[37:33] interact with sensors, motors, lights,
+[37:36] basically anything that can be
+[37:37] interacted with electronically.
+[37:39] Embedded systems are also widely used in
+[37:41] industrial, medical, military and other
+[37:43] applications that require anything to be
+[37:45] automated, remotely controlled or
+[37:47] monitored.
+[37:48] However, embedded systems also can have
+[37:50] a lot of security risks, as you can
+[37:52] probably guess, because they are often
+[37:54] designed to be cheap and simple to use
+[37:56] and focused on a single purpose that
+[37:58] they must serve, they may not have
+[38:01] enough security features or even none at
+[38:03] all to protect them from hackers or from
+[38:06] finding one day that your smart device
+[38:08] has been running malware for years,
+[38:10] perhaps, or not even finding out ever.
+[38:13] If an embedded system
+[38:15] is connected to the internet, not
+[38:16] necessarily directly even, it becomes
+[38:18] automatically vulnerable to remote
+[38:20] attacks. For example, hackers could take
+[38:22] over a car's entertainment or even uh
+[38:25] driving safety systems and cause it to
+[38:27] crash. Or malware could infect an
+[38:30] embedded system and use it as part of a
+[38:32] botnet to launch a distributed
+[38:33] denial-of-service attack on other
+[38:35] targets or send spam. Or you might be
+[38:38] spied on your own home network through
+[38:40] your smart indoor camera, quote unquote,
+[38:43] security system. So, yeah, we have the
+[38:45] same security issues that we have with
+[38:47] traditional computers connected to the
+[38:48] internet, except now that we have the
+[38:50] same issues
+[38:51] on much crappier hardware and software
+[38:54] and worse support and lack of updates
+[38:57] and bad security awareness generally in
+[39:00] the population.
+[39:01] Also, it's worth mentioning that in
+[39:03] general, when we talk about embedded
+[39:05] systems, IoT, stuff like that, they are
+[39:08] in many cases considered to be static
+[39:09] systems. Static systems are systems that
+[39:12] don't change because they are used for
+[39:13] specific purposes that don't, well,
+[39:15] change.
+[39:16] Don't need much variation or
+[39:18] customization.
+[39:19] I know, it sounds primitive, but it's
+[39:21] actually not a bug, it's a feature.
+[39:22] Having a system that cannot be changed
+[39:24] by its users
+[39:25] increases its security up to a point.
+[39:28] Think about ATMs, airport check-in
+[39:30] terminals, ticket machines,
+[39:32] large screens that help you locate
+[39:34] stores in a shopping mall.
+[39:36] These systems provide a limited and
+[39:38] temporary environment for the users to
+[39:40] perform certain tasks. And when the user
+[39:42] is done, the system resets itself to the
+[39:44] original state and deletes any changes
+[39:46] or data from the previous session. This
+[39:48] way, the system is ready for the next
+[39:50] user and doesn't have any unwanted
+[39:51] leftovers. From a security perspective,
+[39:54] it's good. They're great because they
+[39:56] actually throw away all the previous
+[39:58] input,
+[39:59] including uh input that might have been
+[40:01] malicious.
+[40:02] Uh also from a security perspective, a
+[40:04] vulnerability in a static system is a
+[40:05] big reason to worry because it might not
+[40:07] be so simple or even possible to
+[40:09] uh change the vulnerable software on the
+[40:11] device, not to mention that it's going
+[40:12] to be downright impossible to install
+[40:14] some additional security features on it.
+[40:17] Some examples of static systems that you
+[40:18] might have encountered are some smart
+[40:20] TVs, some gaming console, mobile
+[40:22] devices. These systems have a static
+[40:24] operating system that that is fixed and
+[40:27] cannot be changed by the user. The user
+[40:28] can only install or use applications
+[40:30] that are approved by the vendor or their
+[40:33] respective app stores.
+[40:34] The applications may also have limited
+[40:36] functionality or access to the system
+[40:38] resources, so that you cannot trick an
+[40:41] Xbox into playing PlayStation games or
+[40:44] into running an arbitrary code, even
+[40:46] though the hardware is definitely
+[40:47] capable of doing so.
+[40:49] Actually, the security measures in place
+[40:51] are there especially since the hardware
+[40:52] of all these devices is more than
+[40:54] capable of running anything you throw at
+[40:56] it. If it weren't, you wouldn't have a
+[40:58] security issue in the first place. One
+[41:01] term that you should be aware of is
+[41:03] cyber-physical systems. I know, it
+[41:05] sounds very sci-fi-ish, but it's
+[41:08] actually nothing new. It's still about
+[41:10] the same old embedded systems, but these
+[41:12] are systems that somehow combine
+[41:14] technology with a physical world. So, it
+[41:16] can be anything ranging from simple
+[41:18] light, temperature, or presence sensors,
+[41:20] like those used in collision avoidance
+[41:22] in vehicles, uh to systems that
+[41:24] influence the environment by controlling
+[41:26] a robot or an assembly line or a medical
+[41:28] surgery procedure.
+[41:30] And of course,
+[41:31] uh they suffer from the very same
+[41:33] limitations like all the other embedded
+[41:34] systems, static, simple, low power,
+[41:37] especially if running on batteries.
+[41:40] Another category of embedded systems are
+[41:42] sometimes called specialized devices. I
+[41:44] know, uh
+[41:45] pretty much all of them are specialized
+[41:46] devices, right? And each of us is is is
+[41:49] special in their own way due to the
+[41:51] definition of an embedded system,
+[41:53] uh but we do have a few that are more
+[41:56] let's say more special than others, and
+[41:58] those are vehicles and drones.
+[42:01] Uh with vehicles, we find embedded
+[42:02] systems everywhere, from the
+[42:04] entertainment system in your car to
+[42:06] driving safety functions, uh such as I
+[42:09] don't know, adaptive cruise control,
+[42:11] lane keeping assist, blind spot
+[42:13] detection, self-parking, all the way to
+[42:15] autonomous self-driving. I don't think I
+[42:17] need to tell you this that the security
+[42:20] of the embedded systems that drive a
+[42:21] self-driving car
+[42:23] is of utmost importance. Same goes with
+[42:25] drones, uh be it military or hobby ones,
+[42:29] those are still systems that don't carry
+[42:31] a lot of computing power, and sometimes
+[42:33] they rely on vulnerable protocols or
+[42:35] encryption algorithms to be controlled
+[42:36] remotely and to transmit data back to
+[42:38] the user because they need to make
+[42:40] compromises in their performance to
+[42:42] allow their very limited battery to be
+[42:44] used for flight and recording.
+[42:46] So, bottom line, why are we concerned
+[42:48] with security when it comes to embedded
+[42:50] systems? Well, embedded systems, as we
+[42:52] just said, may have limited battery,
+[42:54] memory, CPU resources, which make them
+[42:57] difficult to run complex security
+[42:59] algorithms. For example, encryption and
+[43:01] authentication may consume too much
+[43:03] power or too much memory, which can
+[43:04] reduce the performance or lifetime of
+[43:06] the system.
+[43:08] So, a vendor might just decide to skip
+[43:09] implementing all that. Embedded systems
+[43:11] may be difficult or impossible to
+[43:13] upgrade, which means that they also may
+[43:15] not receive the latest or even any
+[43:17] security patches.
+[43:19] Some embedded systems may not even have
+[43:20] a user interface or a network connection
+[43:22] that you as a regular user can use,
+[43:24] which makes them impossible to access.
+[43:26] This leaves them vulnerable to known
+[43:28] exploits, and it makes them vulnerable
+[43:30] from now until forever because hackers
+[43:33] that
+[43:33] uh know that once a vulnerability is
+[43:35] detected, it's always going to be there
+[43:38] since the systems cannot be patched.
+[43:40] They may use outdated or insecure
+[43:42] protocols or Wi-Fi standards, which make
+[43:45] them easy to intercept or manipulate.
+[43:47] For example, some embedded systems may
+[43:48] use WEP, WEP, or WPA encryption for
+[43:52] Wi-Fi, which is very common still in the
+[43:54] IoT world, uh and can be cracked easily.
+[43:57] Or they may use HTTP instead of HTTPS
+[44:00] for web communication, which can expose
+[44:02] their data to eavesdropping or
+[44:03] tampering.
+[44:05] Also, embedded systems may have poor
+[44:07] credential management, which makes them
+[44:09] easy to compromise. Some systems may use
+[44:11] static credentials like hard-coded
+[44:13] passwords or keys that are shared among
+[44:16] multiple devices or users. Some devices
+[44:18] may even allow a smart engineer to
+[44:20] reverse engineer the passwords or the
+[44:22] encryption keys right from within the
+[44:23] devices themselves. Or they may use weak
+[44:26] credentials such as default passwords or
+[44:28] predictable keys that are easy to guess
+[44:30] or at least easy to brute force.

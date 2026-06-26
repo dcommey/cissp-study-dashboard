@@ -1,0 +1,57 @@
+[
+  {
+    "question": "During an active security incident, a security operations center (SOC) analyst detects that a external attacker is exfiltrating intellectual property from a compromised internal database. The database administrator suggests launching a retaliatory denial-of-service (DoS) attack against the attacker's command-and-control (C2) server. What is the most appropriate course of action?",
+    "options": [
+      "Launch the retaliatory DoS attack immediately to disrupt the exfiltration session.",
+      "Obtain approval from the CISO and CEO to proceed with the counter-attack.",
+      "Focus on isolating the database server, updating firewalls to block the C2 IP, and mitigating the incident impact.",
+      "Redirect the database connection to a local honeynet and perform active port scans against the C2 server."
+    ],
+    "correctIndex": 2,
+    "explanation": "Incident management best practices dictate that organizations must focus on containment, isolation, and mitigation, rather than launching counter-attacks (hacking back). Counter-attacks are often illegal, carry significant liability risks, and are usually ineffective because attackers route traffic through compromised, innocent third-party systems."
+  },
+  {
+    "question": "A network architect is designing a security monitoring architecture for a corporate network where all outbound web traffic is encrypted using TLS. The architect plans to deploy a Network-Based IDS (NIDS) to detect web-based malware downloads. What primary limitation does the NIDS face in this scenario, and what control remediates it?",
+    "options": [
+      "The NIDS will degrade the CPU and RAM performance of client endpoints; deploy host-based firewalls to offload traffic.",
+      "The NIDS cannot inspect the encrypted payloads of TLS sessions; deploy an in-line TLS decryptor at the network boundary.",
+      "The NIDS will generate false positives due to STP routing loops; configure VLAN-based port mirroring on core switches.",
+      "The NIDS cannot parse TCP reset (RST) flags; implement dynamic ARP inspection on layer 2 switches."
+    ],
+    "correctIndex": 1,
+    "explanation": "Because TLS traffic is encrypted, a NIDS cannot inspect payloads for malware signatures in transit. Deploying an in-line TLS decryptor (often integrated into a Next-Generation Firewall or UTM device) allows the network to decrypt, inspect, and re-encrypt the traffic, resolving this limitation. Endpoint performance impact applies to HIDS, not NIDS. STP loops and ARP spoofing are unrelated to payload inspection."
+  },
+  {
+    "question": "An e-commerce website experiences a Distributed Denial of Service (DDoS) attack where a botnet floods the web servers with TCP SYN packets. The web servers are unable to handle legitimate customers because their connection queues are saturated with half-open sessions. Which mitigation technique should the security operations team enable on the web servers to address this specific attack?",
+    "options": [
+      "Dynamic ARP Inspection (DAI)",
+      "SYN Cookies",
+      "Spanning Tree Protocol (STP)",
+      "Unicast Reverse Path Forwarding (uRPF)"
+    ],
+    "correctIndex": 1,
+    "explanation": "SYN Cookies mitigate TCP SYN flood attacks by encoding connection state information into the TCP sequence number sent back in the SYN-ACK packet. This allows the server to avoid allocating local memory resources to keep track of half-open connections. Dynamic ARP inspection protects against ARP spoofing, STP prevents network loops, and uRPF prevents IP spoofing but does not prevent state table exhaustion from legitimate-looking SYN packets."
+  },
+  {
+    "question": "An employee wants to exfiltrate proprietary source code. Knowing that the corporate network uses a Unified Threat Management (UTM) appliance with Data Loss Prevention (DLP) to inspect outbound uploads, the employee password-protects the source code inside an encrypted RAR archive and uploads it to personal webmail via HTTPS. Why did the gateway DLP fail to block this transfer?",
+    "options": [
+      "DLP software can only inspect UDP-based file transfers.",
+      "The TLS decryptor cannot inspect files that are locally encrypted and password-protected prior to transmission.",
+      "The UTM appliance only runs signature-based NIDS, which lacks application-level awareness.",
+      "The AUP prevents the gateway from decrypting traffic destined for public webmail services."
+    ],
+    "correctIndex": 1,
+    "explanation": "A TLS decryptor can inspect standard HTTPS sessions by performing a man-in-the-middle decryption. However, if a file is encrypted locally (e.g., inside a password-protected RAR or ZIP file) *before* it is transmitted, the decryptor will only see the outer encrypted file wrapper and cannot decrypt or inspect the inner file contents. DLP can monitor TCP, UTM can inspect applications, and AUP dictates the monitoring rules rather than creating technical inspection bypasses."
+  },
+  {
+    "question": "A network administrator investigates a denial-of-service condition on an internal file server. The administrator discovers that the server is flooded with millions of ICMP echo replies, saturating its network link. Further analysis shows that an attacker sent ICMP echo requests to the subnet's broadcast address, spoofing the file server's IP address as the source. What type of attack occurred?",
+    "options": [
+      "Fraggle Attack",
+      "Smurf Attack",
+      "Teardrop Attack",
+      "Land Attack"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Smurf attack is an ICMP-based amplification attack where the attacker sends ICMP echo requests to a network's broadcast address with a spoofed source IP set to the victim's address. This causes every host on the subnet to reply to the victim, flooding it with traffic. A Fraggle attack is similar but uses UDP. A Teardrop attack uses overlapping fragments to crash the reassembly driver. A Land attack spoofs packets where the source and destination IP and port are set to the victim's own IP and port."
+  }
+]

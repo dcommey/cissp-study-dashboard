@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A network engineer is configuring a site-to-site IPsec VPN to connect a branch office to headquarters across the public internet. The corporate security policy mandates that both the data payload and the original IP headers (such as internal source and destination IP addresses) must be encrypted in transit. Which IPsec configuration mode should the engineer implement?",
+    "options": [
+      "Transport mode, which encrypts only the payload and retains the original IP header in cleartext.",
+      "Tunnel mode, which encrypts both the payload and the original IP header, encapsulating the original packet inside a new outer IP packet.",
+      "Generic Routing Encapsulation (GRE) mode, which replaces TCP with UDP for routing.",
+      "Link layer mode, which utilizes MAC flooding to create temporary virtual channels."
+    ],
+    "correctIndex": 1,
+    "explanation": "In IPsec tunnel mode, the entire original IP packet (payload and original header) is encrypted, and a new outer IP header is prepended to route the packet between the VPN gateways. This hides internal network topology (such as private subnet addresses) from observers on the internet. Transport mode, in contrast, only encrypts the payload, leaving the original header in cleartext, which does not meet the policy requirement."
+  },
+  {
+    "question": "An administrator notes that a switch's performance has severely degraded, and an IDS alert indicates a high volume of traffic containing randomized source MAC addresses. Shortly after, the administrator observes that unicast frames destined for specific corporate servers are being broadcast to all ports on the local VLAN. What type of attack is occurring, and what switch-level mechanism has been compromised?",
+    "options": [
+      "MAC Cloning, bypassing switch port security using sticky MAC addresses.",
+      "ARP Spoofing, exploiting gratuitous ARP to inject garbage routes.",
+      "MAC Flooding, overflowing the Content Addressable Memory (CAM) table, forcing the switch to flood all frames.",
+      "VLAN Hopping, using IEEE 802.1Q tags to bypass logical VLAN boundaries."
+    ],
+    "correctIndex": 2,
+    "explanation": "MAC flooding is an attack that sends a massive volume of frames with spoofed, random source MAC addresses to the switch. The switch attempts to learn these addresses, quickly overflowing its CAM (Content Addressable Memory) table. Once the CAM table is full, the switch cannot look up valid port destinations and 'fails open,' forwarding all incoming unicast frames to all ports on the VLAN (similar to a hub). This allows an attacker to sniff traffic on that segment."
+  },
+  {
+    "question": "A remote employee attempts to establish a site-to-site IPsec VPN connection from behind a home router performing Port Address Translation (PAT). The connection repeatedly fails when using IPsec Authentication Header (AH) but succeeds when using Encapsulating Security Payload (ESP) with NAT Traversal (NAT-T) enabled. What is the primary reason the AH protocol fails in this environment?",
+    "options": [
+      "AH does not support AES encryption, which is required by PAT routers.",
+      "AH encrypts the TCP port numbers, preventing the PAT router from modifying them.",
+      "AH authenticates the entire packet, including the outer IP header. Since NAT/PAT modifies the source IP address and port numbers in the header, the AH integrity check fails.",
+      "AH relies on GRE tunneling, which is blocked by standard home Internet Service Providers (ISPs)."
+    ],
+    "correctIndex": 2,
+    "explanation": "The IPsec AH protocol provides packet integrity and authentication by hashing the entire packet, including the IP header. When a NAT/PAT device modifies the source IP address or port in the header, the receiving VPN gateway's hash check fails, invalidating the packet. NAT-T solves this by encapsulating ESP packets in UDP port 4500, which can pass through NAT since ESP does not authenticate the outer IP header."
+  },
+  {
+    "question": "A security auditor recommends separating corporate finance workstation traffic from guest Wi-Fi traffic. The network administrator decides to implement VLAN segmentation on their managed switches but does not configure any routing interfaces between the finance VLAN and the guest VLAN. How does this configuration enhance security?",
+    "options": [
+      "It encrypts all finance traffic at Layer 2 using the standard IEEE 802.1Q tag.",
+      "It separates the networks into distinct broadcast domains, restricting ARP broadcasts to their respective VLANs and preventing direct Layer 2/3 routing without a gateway.",
+      "It disables the switches' CAM tables, forcing the use of static IP addressing.",
+      "It prevents MAC cloning by enforcing sticky MAC address learning on the guest VLAN."
+    ],
+    "correctIndex": 1,
+    "explanation": "VLANs logically segment a physical switch into separate broadcast domains. Without a Layer 3 routing device (router or Layer 3 switch) configured to route between the VLANs, hosts in the finance VLAN and the guest VLAN cannot communicate. This limits the lateral spread of malware, prevents unauthorized access, and improves performance by isolating Layer 2 broadcast traffic (like ARP)."
+  },
+  {
+    "question": "A healthcare provider needs to establish a direct network interconnection with a federal insurance agency's database system. To manage security exposure, the organization's governance team must define the security risks, technical specifications, and security requirements of the connection. Which of the following documents must be established between the two organizations to formally define these technical specifications?",
+    "options": [
+      "Acceptable Use Policy (AUP)",
+      "Memorandum of Understanding (MOU)",
+      "Interconnection Security Agreement (ISA)",
+      "Service Level Agreement (SLA)"
+    ],
+    "correctIndex": 2,
+    "explanation": "An Interconnection Security Agreement (ISA) is a formal document that specifies the technical security requirements, parameters, and risk controls for connecting two networks or systems belonging to different organizations (common in connections involving federal entities). While a Memorandum of Understanding (MOU) documents the general agreement and expectations, it is not legally binding and does not contain the detailed technical specs defined in an ISA."
+  }
+]

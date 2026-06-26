@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A security technician is decommissioning 50 corporate laptops that contain highly sensitive proprietary source code. The laptops contain soldered-on Solid State Drives (SSDs). The technician proposes using a high-grade degausser on the laptops to ensure the data is unrecoverable before recycling the hardware. Is this proposal correct?",
+    "options": [
+      "Yes, degaussing is the most efficient method to sanitize SSDs without destroying the physical silicon chips.",
+      "No, degaussing is only effective on magnetic media. SSDs use flash memory and must be physically destroyed or cryptographically erased to ensure sanitization.",
+      "Yes, but only if the laptops are turned on and connected to a power source during degaussing.",
+      "No, because degaussing will make the plastic casing of the laptops toxic and unsafe for recycling."
+    ],
+    "correctIndex": 1,
+    "explanation": "Degaussing uses a powerful magnetic field to scramble the magnetic structure of disks, which works only on magnetic media (e.g., hard drives, backup tapes). Solid State Drives (SSDs) store data using flash memory (semiconductors) and are unaffected by degaussing. For SSDs, physical destruction (shredding, crushing) or a cryptographic erase are the appropriate sanitization methods."
+  },
+  {
+    "question": "A database contains millions of Personally Identifiable Information (PII) records. The Chief Marketing Officer (CMO) defines the data classification level and dictates the access control policy. The database administrator (DBA) is tasked with executing weekly backups, maintaining security logs, and configuring user permissions in accordance with the CMO's policies. How are the CMO and DBA classified?",
+    "options": [
+      "Both are classified as data custodians.",
+      "The CMO is the data controller, and the DBA is the data processor.",
+      "The CMO is the data owner, and the DBA is the data custodian.",
+      "The CMO is the system owner, and the DBA is the data administrator."
+    ],
+    "correctIndex": 2,
+    "explanation": "In CISSP governance, the Data Owner (typically a senior manager or executive, like the CMO) is ultimately responsible for the data and defines its classification and access policy. The Data Custodian (typically IT staff or DBAs) is delegated the technical responsibility to implement and maintain the controls (e.g., performing backups, securing media, configuring access controls)."
+  },
+  {
+    "question": "A security architect wants to implement a Data Loss Prevention (DLP) system that can inspect outbound data transfers even when employees use encrypted VPN tunnels or HTTPS websites to upload files from their laptops. Which type of DLP system should the architect implement?",
+    "options": [
+      "A network-based DLP, because it monitors all traffic at the company's internet edge.",
+      "An endpoint-based (host-based) DLP, because it resides on the client device and can inspect data in clear text before it is encrypted and sent over the network.",
+      "A CASB gateway, because it acts as a firewall between the user and all cloud services.",
+      "A pattern-matching network proxy, because it can decrypt VPN headers at the packet level."
+    ],
+    "correctIndex": 1,
+    "explanation": "Endpoint-based (host-based) DLP solutions run as software agents directly on client systems. This allows them to monitor file operations and inspect data in clear text before the host operating system encrypts it for transmission (e.g., via HTTPS or VPN). Network-based DLPs cannot decrypt proprietary VPN tunnels or encrypted web traffic without a complex SSL interception proxy."
+  },
+  {
+    "question": "An organization stores large quantities of backup data in a public cloud storage environment. The data is encrypted using keys managed by the organization. When the backups reach their retention limit, the company wants to ensure the cloud-hosted data is completely sanitized and cannot be read by the cloud provider or other tenants, without having physical access to the media. What is the most efficient and secure method?",
+    "options": [
+      "Request the cloud provider to degauss the specific SAN hard drives in the cloud data center.",
+      "Write a script to overwrite the cloud storage blocks multiple times with random patterns (clearing).",
+      "Perform a cryptographic erase by securely destroying the encryption keys.",
+      "Re-image the virtual servers hosting the backup application."
+    ],
+    "correctIndex": 2,
+    "explanation": "In cloud environments, customers do not have physical access to the storage disks, which are shared among multiple tenants. A cryptographic erase (deleting the decryption keys) is the most efficient and secure sanitization method. Once the key is destroyed, the encrypted data in the cloud becomes mathematically unrecoverable, regardless of how many redundant copies exist."
+  },
+  {
+    "question": "A security analyst is applying the NIST SP 800-53 security baseline to a new industrial control system (ICS) that is completely air-gapped from all corporate networks and the internet. The baseline requires implementing a web application firewall (WAF) and automated patch management. The analyst decides to exclude these specific controls from the implementation plan because they are technically unfeasible and unnecessary in an air-gapped environment. What baseline customization technique did the analyst use?",
+    "options": [
+      "Scoping",
+      "Tailoring",
+      "Imaging",
+      "Downgrading"
+    ],
+    "correctIndex": 0,
+    "explanation": "Scoping is the process of customizing a security baseline by selecting or excluding specific controls based on the technology, system type, or operational environment (e.g., excluding network perimeter controls like a WAF for an air-gapped system). Tailoring is the broader process of aligning baseline controls with the organization's mission and threat model."
+  }
+]

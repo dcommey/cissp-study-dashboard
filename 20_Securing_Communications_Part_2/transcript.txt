@@ -1,0 +1,1285 @@
+[00:08] All right, VPNs.
+[00:10] Think of a virtual private network, or a
+[00:12] VPN, as you'd think of a secret tunnel.
+[00:16] The idea is to connect two things. Those
+[00:19] things might be two computers, they
+[00:21] could be a computer to a network, or
+[00:23] even one entire network to another. And
+[00:25] that connection could happen over an
+[00:27] untrusted network, like internet.
+[00:30] We don't trust the internet because it's
+[00:31] a wild, wild web out there. We also have
+[00:33] a lot of great security benefits with
+[00:35] VPNs, such as access control, who can go
+[00:38] in and out, authentication, proving you
+[00:40] are who you say you are,
+[00:42] confidentiality, keeping the
+[00:44] communication secret, and integrity,
+[00:46] which is making sure the data stays
+[00:48] reliable and not tampered with.
+[00:50] Many VPNs use encryption, and most
+[00:52] people think that VPN automatically
+[00:54] means encryption, but encryption is not
+[00:56] strictly necessary for a connection to
+[00:58] be labeled as a VPN.
+[01:00] The actual meaning of the word private
+[01:01] in VPN is not there to suggest privacy,
+[01:04] but private in the sense of having a
+[01:06] dedicated communication channel that you
+[01:09] control, that is private to you. It
+[01:11] doesn't mean that it's hidden or
+[01:13] encrypted in any way, at least not by
+[01:15] the definition standards.
+[01:17] Now, one of the most common VPN types on
+[01:19] service provider networks are MPLS VPNs,
+[01:22] which have nothing to do with
+[01:24] encryption, but with privately
+[01:26] connecting remote sites of the same
+[01:28] client and advertising its private
+[01:30] routes within this private network. So,
+[01:33] if we're talking on a big scale for
+[01:35] multiple remote VPN clients, this is
+[01:37] where we find VPN concentrators. Uh
+[01:40] these are dedicated devices or firewalls
+[01:42] with dedicated VPN functionality,
+[01:45] designed to aggregate and handle
+[01:46] multiple simultaneous connections.
+[01:48] Usually, we call concentrator a device
+[01:50] that is used by many remote users that
+[01:52] use VPN clients to connect, or sometimes
+[01:55] even in larger enterprise environments
+[01:57] where there is a type of a
+[02:00] hub and spoke or star type of topology
+[02:03] with the HQ at the center and tens,
+[02:06] hundreds, or thousands of remote,
+[02:07] so-called spokes or offices that connect
+[02:11] to that central location over dedicated
+[02:13] VPN lines.
+[02:14] It might be worth pointing out that if
+[02:16] we implement an encrypted VPN, the data
+[02:18] being transmitted is protected only
+[02:20] while it is inside the VPN tunnel, which
+[02:23] is between your VPN devices. So, data is
+[02:26] unprotected within the source network,
+[02:29] safe and secure between the border VPN
+[02:31] devices, and then unprotected again once
+[02:34] it reaches the destination LAN. An
+[02:36] encrypted VPN doesn't necessarily mean
+[02:39] end-to-end encryption, especially if
+[02:41] it's a site-to-site VPN.
+[02:44] On a technical and protocol level, VPNs
+[02:46] can operate in two ways, transport mode
+[02:48] and tunnel mode. And I'm warning you,
+[02:50] this is the simplest possible
+[02:52] explanation for this. In reality, the
+[02:54] way VPNs work, how all the protocols
+[02:56] involved work, and how they interact
+[02:58] with each other,
+[02:59] that stuff for some security vendors out
+[03:02] there is content for an entire
+[03:04] certification exam. So, we're just
+[03:06] scratching the surface here because
+[03:08] CISSP is not all about the technical
+[03:10] intricacies, but more about how
+[03:12] technologies are supposed to be used and
+[03:14] where, unfortunately. So, we have
+[03:17] transport mode VPNs, which are tunnels
+[03:19] that end at the individual hosts being
+[03:23] connected. With IPsec, this is a very
+[03:25] common protocol suite used with VPNs,
+[03:28] transport mode only encrypts the
+[03:30] payload, keeping the original message
+[03:31] header untouched. If we were to encrypt
+[03:34] the header as well, like the IP address
+[03:36] and port and session information, then
+[03:38] devices along the way would not be able
+[03:40] to understand what to do with these
+[03:42] packets, so we need at least some IP
+[03:45] information in clear text to correctly
+[03:47] route the packets. This transport mode
+[03:49] VPNs is also known as a host-to-host VPN
+[03:52] for two reasons. First, because the
+[03:54] communication stays encrypted while in
+[03:56] transit between the hosts, is the
+[03:58] closest thing that we get to end-to-end
+[03:59] encryption. And the real reason why we
+[04:02] call it host-to-host is because it
+[04:03] doesn't encrypt the header, so it's best
+[04:06] used within a trusted network between
+[04:09] computers, not between networks. If you
+[04:12] need to cross untrusted networks, then
+[04:15] tunnel mode is the way to go.
+[04:17] So, in tunnel mode, IPsec gets a little
+[04:19] more protective and encrypts both the
+[04:21] payload and the message header. But
+[04:23] wait, didn't we say that we cannot
+[04:24] encrypt the headers without losing
+[04:26] routing information? You are correct,
+[04:28] and it does this by encapsulating the
+[04:31] entire original packet and then adding
+[04:33] its own temporary IPsec header that is
+[04:36] used to route the packets to the other
+[04:38] end of the VPN. Obviously, since we're
+[04:40] losing the original IP header, we need
+[04:43] to add a new one, hence the tunnel term
+[04:45] that suggests that the original
+[04:47] information is now tunneled inside the
+[04:49] new one.
+[04:51] This allows us to link two networks
+[04:53] across the internet, and this is uh
+[04:55] called a site-to-site VPN, or to allow
+[04:58] remote clients to connect into an office
+[05:01] network across the internet, and we call
+[05:03] this, you guessed it, remote access
+[05:05] VPNs.
+[05:06] Also, on the topic of how VPNs are
+[05:08] configured to protect certain types of
+[05:10] traffic, we have a few more to cover.
+[05:12] Uh some VPNs offer an always-on feature,
+[05:15] which means that they automatically
+[05:16] connect to the VPN service whenever a
+[05:18] network link is active. This way, you
+[05:20] don't have to worry about forgetting to
+[05:21] turn on the VPN and sending unprotected
+[05:23] traffic. This is mostly a requirement
+[05:25] for enterprise environments. You can
+[05:27] also configure a VPN to activate only
+[05:29] when you're using a public internet
+[05:30] link, such as a Wi-Fi hotspot, rather
+[05:33] than your home or office network. This
+[05:36] can help you save bandwidth and improve
+[05:37] performance, since you don't need to use
+[05:39] the VPN when you're already on a trusted
+[05:41] network.
+[05:42] A full tunnel VPN sends all your traffic
+[05:45] over the VPN link, even if you're not
+[05:48] trying to access locations that are
+[05:49] normally accessible only through the
+[05:51] VPN, like your internal company servers.
+[05:53] This means that you can only access the
+[05:55] internet through your company network,
+[05:58] and not directly from your device. This
+[06:00] can improve the security of your network
+[06:03] and your device, since all your traffic
+[06:05] is filtered by the network security
+[06:07] infrastructure.
+[06:09] You could have full tunnel VPNs
+[06:10] configured not just for providing access
+[06:12] to internal resources, but simply to
+[06:14] protect the network traffic and
+[06:15] activities of all your remote employees.
+[06:18] A split tunnel VPN, on the other hand,
+[06:19] allows you to access both the internet
+[06:21] and your company's network at the same
+[06:23] time, using the same VPN connection, by
+[06:25] simply choosing to encrypt only the
+[06:27] traffic for those destinations that need
+[06:30] the VPN. In other words, if you can get
+[06:32] to the destination without jumping on
+[06:34] the VPN, then you will simply not send
+[06:36] the traffic over the VPN and just
+[06:38] connect to that destination directly.
+[06:40] For example, you can use your browser to
+[06:42] visit a website on the internet while
+[06:44] using your email client, which is
+[06:46] connected through the VPN to your
+[06:47] company's email server. This can be
+[06:49] convenient, since you don't have to
+[06:50] switch between different connections,
+[06:52] but you're less protected. Who knows
+[06:54] what websites you could think about
+[06:56] visiting when you're at home and not in
+[06:57] the office.
+[06:59] Now, if you pause to think about it for
+[07:01] a second here, basically, the difference
+[07:02] between full tunnel and split tunnel
+[07:04] VPNs lies in the way you intend to use
+[07:06] the VPN connection, as there are two use
+[07:09] cases.
+[07:10] Uh VPNs can be used as a method for
+[07:12] accessing private, normally
+[07:13] inaccessible, networks or resources,
+[07:16] but also VPNs can be used simply as a
+[07:18] method to hide or to encrypt and make
+[07:21] private your network traffic.
+[07:24] So, how do VPNs actually create the
+[07:26] tunnels between the devices and the VPN
+[07:28] servers? What are the rules and
+[07:29] standards? These are the VPN protocols,
+[07:32] and there are a bunch of them.
+[07:34] PPTP stands for Point-to-Point Tunneling
+[07:38] Protocol, and it's one of the oldest and
+[07:41] simplest VPN protocols. It's based on
+[07:43] the dial-up Point-to-Point Protocol,
+[07:44] PPP, and it works at data link layer of
+[07:47] the OSI model. It uses TCP port 1723
+[07:52] to establish a tunnel, and it supports
+[07:54] some authentication protocols, such as
+[07:56] PAP, CHAP, EAP, and MS-CHAP version 2.
+[07:59] PPTP is not very secure because it does
+[08:01] not encrypt tunnel negotiation process,
+[08:03] which means that not only it exposes
+[08:05] your IP address and username and
+[08:07] password to attackers, but it also has
+[08:09] known vulnerabilities and can be easily
+[08:12] blocked or broken by firewalls. So, PPTP
+[08:14] is considered obsolete, and you should
+[08:16] know about it, but you should not use
+[08:18] it.
+[08:19] L2TP stands for Layer 2 Tunneling
+[08:21] Protocol, and it's a combination of PPTP
+[08:24] and Cisco's L2F, Layer 2 Forwarding
+[08:27] Protocol.
+[08:28] It also works at data link layer of the
+[08:30] OSI model, and it can support any Layer
+[08:33] 3 networking protocol. L2TP uses UDP
+[08:36] over port 1701
+[08:39] to create the tunnel.
+[08:41] L2TP does not have its own encryption
+[08:43] mechanism, so here's another great
+[08:45] example of an unencrypted VPN,
+[08:47] but it can use other encryption
+[08:49] protocols, such as IPsec, to secure the
+[08:51] data. In many operating systems, you'll
+[08:53] find this as L2TP/IPsec.
+[08:57] L2TP can also use different
+[08:59] authentication protocols, such as IEEE
+[09:01] 802.1X, which allows L2TP to use any AAA
+[09:05] server on the network, such as RADIUS or
+[09:07] TACACS+,
+[09:08] and it's compatible with most operating
+[09:10] systems.
+[09:11] SSH, which is Secure Shell, is also a
+[09:14] VPN protocol, though this might come as
+[09:16] a surprise for some of you,
+[09:18] uh perhaps. Its purpose is to was to
+[09:21] replace Telnet and other insecure remote
+[09:24] access protocols. It works over TCP port
+[09:27] 22, and it encrypts both the
+[09:29] authentication process and the data
+[09:30] exchange, so it's pretty okay.
+[09:33] SSH is also a very flexible tool, as it
+[09:35] can be used to encrypt other protocols,
+[09:37] such as SFTP or SCP, uh similar to how
+[09:41] TLS operates. And when used as a VPN
+[09:44] protocol, it only works in transport
+[09:46] mode, which means that it only encrypts
+[09:48] the data, and it does not add any extra
+[09:50] IP headers. Note right here, a simple
+[09:55] rule to remember is that if the S in the
+[09:58] name of a secure protocol is a prefix
+[10:01] like SFTP,
+[10:04] then the encryption is provided by SSH.
+[10:07] If the S in the name is a suffix like
+[10:10] HTTPS,
+[10:12] then the encryption is provided by TLS.
+[10:15] Hope this helps you.
+[10:17] Moving forward, OpenVPN
+[10:20] is a VPN protocol that is based on TLS,
+[10:22] formerly SSL.
+[10:24] It's an open-source protocol and
+[10:26] supports both UDP and TCP and is
+[10:29] compatible with all operating systems.
+[10:31] It's also one of the most popular VPN
+[10:33] protocols, but it requires a third-party
+[10:35] app to set up and use, so most operating
+[10:38] systems don't have built-in support for
+[10:39] it, even though compatibility is not an
+[10:42] issue. OpenVPN is slowly transitioning
+[10:45] to other open-source solutions such as
+[10:48] WireGuard or Tailscale. Have a look into
+[10:51] those, they're really easy to configure
+[10:53] and very efficient VPN protocols as
+[10:55] well.
+[10:56] Since we're talking about OpenVPN, SSL
+[10:59] VPNs or TLS VPNs are a type of VPNs that
+[11:01] run on top of the TLS protocol. Some
+[11:04] vendors have proprietary software that
+[11:06] does this, like Cisco Secure Client,
+[11:08] formerly known as AnyConnect, or
+[11:11] Fortinet's FortiClient, but they are
+[11:13] generally popular because SSL VPN is
+[11:15] also able to work without specialized
+[11:17] client software to be installed on a
+[11:19] device.
+[11:20] Instead, SSL VPNs can be accessed using
+[11:22] just your web browser, which is
+[11:24] extremely convenient, but also limiting
+[11:26] for some apps and use cases.
+[11:29] Finally, IPsec stands for Internet
+[11:31] Protocol Security and it's actually a
+[11:33] collection of protocols, not just one.
+[11:35] It can be used as an add-on for IPv4 and
+[11:38] it's a built-in feature in IPv6. It only
+[11:41] works on IP networks and it offers both
+[11:44] authentication and encryption. As we
+[11:45] said before, it can also work together
+[11:48] with L2TP as L2TP IPsec.
+[11:51] We also just said that IPsec is not a
+[11:53] protocol, but a collection. So, the
+[11:55] protocols that actually make up IPsec
+[11:57] are as follows.
+[11:59] AH, which stands for Authentication
+[12:02] Header.
+[12:03] This is responsible for verifying the
+[12:05] integrity and the origin of the data,
+[12:07] which is the main authentication
+[12:09] function for IPsec. Notice that we did
+[12:11] not say anything about encryption, and
+[12:13] that's because AH only authenticates, it
+[12:16] doesn't encrypt anything. Again, there
+[12:18] are a lot of non-encrypting VPNs out
+[12:20] there.
+[12:21] ESP,
+[12:23] no, not that ESP,
+[12:25] uh stands for Encapsulating Security
+[12:28] Payload and, like an episode of Friends,
+[12:32] that's the one with encryption.
+[12:34] >> [laughter]
+[12:35] >> And actually, with encryption comes
+[12:37] naturally uh integrity as well.
+[12:40] ESP usually uses AES encryption, which
+[12:44] is good and can work with or without AH
+[12:47] because it does have some limited
+[12:49] authentication capabilities as well. ESP
+[12:51] can work in either transport mode or
+[12:54] tunnel mode, which encrypts the entire
+[12:55] packet.
+[12:57] HMAC stands for Hash-based Message
+[13:00] Authentication Code and it's the main
+[13:02] hashing or integrity mechanisms used by
+[13:05] IPsec.
+[13:06] HMAC adds a secret key along with the
+[13:09] original content to generate the hash,
+[13:11] so it's basically a hash function with
+[13:14] an additional secret key.
+[13:16] This makes it more secure than a simple
+[13:18] hash function without any secret key.
+[13:21] IPComp stands for IP Payload Compression
+[13:25] and it's a well, surprise, compression
+[13:28] tool used by IPsec to reduce the size of
+[13:31] the data before ESP encrypts it. Pretty
+[13:34] obvious.
+[13:35] IKE, just like the South Park character,
+[13:38] stands for Internet Key Exchange and
+[13:41] it's the method that manages the keys
+[13:43] for IPsec, the secret values that are
+[13:45] used to encrypt and decrypt data.
+[13:48] IKE actually consists of other protocols
+[13:50] as well,
+[13:51] two of them being Oakley and SKEME,
+[13:54] uh both in uh upper case because they're
+[13:56] acronyms, which are used to generate and
+[13:59] exchange the keys, similar to what
+[14:01] happens in Diffie-Hellman, if you heard
+[14:03] about that one,
+[14:04] and another one of them being ISAKMP,
+[14:06] which is a protocol that manages the
+[14:08] keys that have been generated and
+[14:10] exchanged by Oakley and SKEME.
+[14:13] Another concept here is the Security
+[14:15] Association or SA. That's an agreement
+[14:17] between two endpoints about how to
+[14:19] authenticate and encrypt data.
+[14:21] An SA includes things such as the
+[14:23] destination address, key, crypto
+[14:26] algorithm to be used, the authentication
+[14:28] algorithm, and key lifetime. Each IPsec
+[14:31] VPN connection uses two SAs, one for
+[14:33] sending and one for receiving encrypted
+[14:35] data. Notice we said that the endpoint
+[14:38] is part of the SA. This means that each
+[14:41] IPsec VPN has two independent and
+[14:44] encrypted communication channels, which
+[14:46] also means that IPsec can support
+[14:48] multiple VPNs from each host at the same
+[14:51] time. Pretty nifty stuff.
+[14:54] All right, also on the topic of securing
+[14:56] networks, let's see what we can do at
+[14:58] layer two or at the switching layer. As
+[15:00] you surely know by now, a switch is a
+[15:02] device that connects multiple hosts on a
+[15:03] network and forwards data packets
+[15:05] between them. A switch is a layer two
+[15:07] device in the OSI stack, which is the
+[15:09] data link layer.
+[15:11] However, some switches can also operate
+[15:13] at higher layers such as layer three and
+[15:15] four, so they can perform routing
+[15:17] functions in addition to switching
+[15:19] functions. Still, regardless of the
+[15:21] actual switch capabilities as a
+[15:23] standalone device, when we say just
+[15:25] switching, we always refer to layer two
+[15:27] switching. A switch can be either
+[15:30] unmanaged or managed. An unmanaged
+[15:32] switch has no configuration options and
+[15:34] works out of the box according to the
+[15:36] standard TCP/IP and internet protocols,
+[15:39] so you just start plugging cables into
+[15:41] it and you're done. Everyone who sticks
+[15:43] a cable into that switch can communicate
+[15:45] with everyone else who has done the
+[15:46] same.
+[15:47] They have no configurable security
+[15:48] features whatsoever, but they might have
+[15:51] some built-in features such as the
+[15:52] ability to negotiate the link speed, to
+[15:55] prioritize packets in a basic manner
+[15:57] like QoS, to mitigate switching loops,
+[16:00] to avoid floods, to detect faulty wiring
+[16:03] and such. In short, the basic
+[16:05] functionality they implement is limited
+[16:06] those features that do not require any
+[16:08] involvement from a human admin, but
+[16:11] they're nice to have.
+[16:12] Consequently, they're not completely
+[16:14] dumb switches. It's just that you don't
+[16:17] get to configure anything because there
+[16:19] is no management interface.
+[16:21] A managed switch, on the other hand, has
+[16:23] configuration options. It might have a
+[16:25] GUI, a graphical user interface, um
+[16:28] accessible through a browser or just a
+[16:30] command line accessible over Telnet,
+[16:32] SSH, or a direct cable uh serial
+[16:35] connection.
+[16:36] The management management interface
+[16:38] allows you to configure things such as
+[16:40] VLANs, MAC-based access lists,
+[16:43] authentication methods, many many more
+[16:45] features depending on the switch model.
+[16:47] They might even provide you with some
+[16:49] telemetry and traffic statistics.
+[16:51] Now, a switch does four main things with
+[16:54] packets or frames. Learning is how a
+[16:56] switch looks at the incoming traffic and
+[16:59] learns the MAC address of the devices
+[17:01] connected to its ports to create an
+[17:02] internal database of which MAC address
+[17:05] was seen on which port. That internal
+[17:07] database is called a CAM table, which
+[17:11] stands for Content Addressable Memory,
+[17:13] an unfortunate acronym
+[17:16] easily confused with MAC, which are
+[17:18] actually stored in it.
+[17:20] You might think that it was supposed to
+[17:22] be called a MAC table, but it is Content
+[17:24] Addressable Memory due to the way it is
+[17:26] structured in memory. It's not a typical
+[17:29] memory where you provide an address and
+[17:32] you receive the content stored at that
+[17:33] address, but instead you provide the
+[17:35] content as in the MAC address and you
+[17:38] get the address where that content is
+[17:40] located. In our case, the address is the
+[17:42] port on which it was learned. If you did
+[17:46] not know this,
+[17:47] now you can be fun at parties.
+[17:49] Next, forwarding is how a switch sends
+[17:53] data packets to the correct destination
+[17:55] port based on the MAC address. How does
+[17:58] it know where to send it? Well, it
+[18:00] learns in the learning phase and then
+[18:02] uses the CAM table to make the
+[18:04] forwarding decision.
+[18:06] Dropping is how a switch drops,
+[18:09] >> [laughter]
+[18:09] >> discards data packets that are not
+[18:12] needed. They might be uh unneeded
+[18:15] because they are duplicated,
+[18:17] uh they might have an abnormal
+[18:19] structure, they might be corrupted, they
+[18:21] might be coming in from the wrong ports
+[18:23] like the same port where the destination
+[18:25] should be, or they might be dropped for
+[18:27] security reasons.
+[18:29] Lastly, flooding is how a switch
+[18:31] broadcasts data packets to all ports
+[18:34] when the destination MAC address is
+[18:35] unknown, all ports in the same VLAN.
+[18:38] It's the only thing that a switch can do
+[18:41] if it doesn't know where destination is
+[18:43] located. It just sends the packets on
+[18:45] all ports at once, which belong to the
+[18:47] same VLAN.
+[18:49] Long story short, when a switch knows
+[18:52] where the destination is, it sends the
+[18:54] traffic to that port specifically. It
+[18:56] switches the traffic to that port.
+[18:58] When it doesn't know where the
+[18:59] destination is, perhaps because it did
+[19:01] not see any previous traffic coming in
+[19:03] from that device to learn from it, then
+[19:05] it floods the traffic onto each and
+[19:07] every port. This makes sure that the
+[19:09] destination receives the packet as long
+[19:11] as it is on and on the same network.
+[19:15] The interface cards of all other hosts
+[19:17] that receive the flooded packets will
+[19:19] simply discard them when they see that
+[19:21] the destination MAC address does not
+[19:23] match their own.
+[19:26] VLANs. Virtual LAN or VLAN
+[19:29] is nothing more than a logical grouping
+[19:31] of switch ports,
+[19:33] a subset of all the ports on a switch,
+[19:36] let's say. When you create a VLAN on a
+[19:38] switch and you just add some of the
+[19:40] switches' ports to it, devices that
+[19:42] connect to those ports in that VLAN
+[19:44] behave as if they just got their own
+[19:46] separate switch, their own separate
+[19:48] network. So, if I create VLAN 100 on a
+[19:50] switch and add three devices to it,
+[19:53] those three devices will be able to talk
+[19:55] just to each other because they all
+[19:57] belong to VLAN 100.
+[19:59] If then I create VLAN 200 on a switch
+[20:02] and add five devices to it, those five
+[20:04] devices will be able to talk just to
+[20:06] each other.
+[20:07] The three devices in VLAN 100 will not
+[20:09] be able to talk to the five devices on
+[20:11] VLAN 200. They won't even know about
+[20:14] each other. They won't even know that
+[20:15] they exist even if they are all
+[20:18] connected to the same switch. We also
+[20:20] sometimes say that a VLAN is a broadcast
+[20:22] domain. That's a network segment where
+[20:24] devices can communicate with each other
+[20:26] without needing a router.
+[20:28] More literally, a broadcast domain is
+[20:31] the entire set of destinations that a
+[20:33] broadcast message usually can reach. And
+[20:35] if you're thinking, "Why do I care about
+[20:36] broadcast?" think again. Before any
+[20:39] unicast communication can happen,
+[20:41] there's going to be an ARP, address
+[20:42] resolution protocol, broadcast. If that
+[20:45] ARP broadcast cannot reach your intended
+[20:47] destination, then no unicast will happen
+[20:50] either. So, yes, broadcast domains are
+[20:52] not just related to broadcast, but are
+[20:55] one method of stating that a certain set
+[20:57] of devices can reach each other over
+[21:00] layer two protocols.
+[21:02] By default, all switch ports are part of
+[21:05] a single VLAN and on most switch vendors
+[21:07] that VLAN is called VLAN one, which
+[21:09] means that they are also in the same
+[21:11] broadcast domain. However, you can
+[21:13] create different VLANs and assign switch
+[21:15] ports to them, so you can create
+[21:17] multiple broadcast domains on the same
+[21:18] switch.
+[21:20] We generally use VLANs to separate
+[21:21] network traffic and to limit access to
+[21:23] network resources. For example, VLANs
+[21:25] can be used to separate user traffic and
+[21:27] management traffic or internal company
+[21:30] traffic from guest traffic from the
+[21:32] Wi-Fi network in the building lobby.
+[21:34] This is good for security, but also for
+[21:35] performance.
+[21:37] Now, if you're wondering, "What does
+[21:38] performance have to do with all this
+[21:40] discussion about VLANs?" It does
+[21:42] because, as you remember, a VLAN is a
+[21:44] broadcast domain, which means that if
+[21:46] you send a broadcast, a message
+[21:48] addressed to everyone in the network, it
+[21:50] reaches only the devices in your own
+[21:51] VLAN.
+[21:53] And we have many protocols that rely on
+[21:55] broadcasts like ARP, uh device discovery
+[21:57] protocols like CDP and LLDP, multicast
+[22:01] traffic, and so on. Allowing these to
+[22:03] roam over the entire network without any
+[22:05] boundaries floods the network along with
+[22:08] all the switches, all the links, and all
+[22:10] the interface cards with a lot of
+[22:11] useless traffic and useless packets.
+[22:14] That's a waste of processing power and
+[22:16] network bandwidth.
+[22:17] Most networks also have a management
+[22:19] VLAN, which means that it is used only
+[22:21] for remote access and configuration of
+[22:23] the devices, like networking devices,
+[22:25] servers, storage devices, and so on.
+[22:27] Uh this is also called an out-of-band
+[22:30] management, sometimes even if it is over
+[22:32] the same links as regular user traffic.
+[22:35] Other VLANs are used for user traffic,
+[22:37] which can be divided into different
+[22:39] departments or functions.
+[22:41] VLANs are also a form of network
+[22:43] segmentation,
+[22:45] which means that they isolate network
+[22:47] traffic between segments. For a packet
+[22:49] to jump from one VLAN to another, you
+[22:52] actually need a layer three device, a
+[22:54] layer three switch or a router, because
+[22:56] VLANs are usually mapped to separate
+[22:58] subnets and you need routes between the
+[23:00] subnets.
+[23:01] So, simply by not defining
+[23:05] a route between VLANs, you prevent
+[23:07] unauthorized access, malware spreading,
+[23:10] or data leakage. And it's cheap. You
+[23:12] just define the VLANs directly onto the
+[23:14] switches, and even the cheapest managed
+[23:16] switches support them.
+[23:17] Ethernet trunks.
+[23:19] We just learned that we can define VLANs
+[23:21] at the switch level, and we can have as
+[23:23] many as we want, around 4,000 actually.
+[23:27] But one VLAN is most likely not going to
+[23:29] be hosted just on a single switch,
+[23:31] unless that entire switch holds your
+[23:33] entire business.
+[23:34] You might have an entire floor in your
+[23:36] office building, a department with
+[23:37] hundreds or thousands of workers and
+[23:39] devices. You're obviously going to need
+[23:41] more than one switch to cover all of
+[23:43] that.
+[23:44] So, how do we extend this VLAN business
+[23:46] between switches? Or how does VLAN
+[23:48] information transfer between switches?
+[23:50] Because VLANs are defined on locally on
+[23:53] each switch in turn. So, how do
+[23:55] different switches know about the same
+[23:57] VLANs? Or how do they treat traffic from
+[24:00] from the same VLANs?
+[24:02] Well, for this we have the trunk ports,
+[24:04] which is a special type of port on a
+[24:06] switch that can connect to another
+[24:08] switch and can carry traffic from
+[24:10] multiple VLANs.
+[24:11] It's not a special hardware type of
+[24:13] port. Making a port a trunk is just a
+[24:15] configuration setting on a switch. Well,
+[24:17] in real life we tend to prefer higher
+[24:20] bandwidth ports to connect switches as
+[24:22] they aggregate traffic from many devices
+[24:24] from multiple networks, but it's not a
+[24:25] requirement for trunk ports to be high
+[24:27] bandwidth. With trunk ports, a host on
+[24:30] VLAN 100 on switch one
+[24:33] can communicate with a host on VLAN 100
+[24:36] on switch two or three or four, even
+[24:38] though they are on different physical
+[24:40] switches.
+[24:42] So, what exactly happens inside of a
+[24:43] trunk port? Well, to be able to connect
+[24:45] VLAN 100 on one switch with the same
+[24:48] VLAN 100 on another switch,
+[24:50] what do you think needs to happen?
+[24:52] You're right. We need to attach the VLAN
+[24:55] 100 information to the actual data
+[24:58] packets, like adding a sticker or a
+[25:00] label to each packet that travels over
+[25:03] that inter-switch link. This way, when
+[25:06] one switch sends a packet tagged with
+[25:08] VLAN 100, the receiving switch receives
+[25:12] the packet along with the VLAN 100 tag
+[25:15] and knows exactly to which VLAN that
+[25:17] packet belongs to.
+[25:19] VLAN tags are implemented as special
+[25:21] bits that are added to the Ethernet
+[25:23] frame header at layer two again to
+[25:25] indicate which VLAN the frame belongs
+[25:27] to. A VLAN tag is defined by the IEEE
+[25:30] .1Q or 802.1Q standard, and it consists
+[25:35] of 32 bits, that is four bytes of data.
+[25:38] The first 16 bytes contain the uh
+[25:41] hexadecimal number of 8100, which tells
+[25:45] switches that the frame is a VLAN frame.
+[25:48] The last 12 bits contain the actual VLAN
+[25:50] number, which has valid values since
+[25:53] there are 12 bits from 1 to 4,094.
+[25:58] Switches actually have one more traffic
+[26:00] function on top of the other four that
+[26:02] we mentioned, and that is duplicating
+[26:04] the traffic from one or more ports onto
+[26:08] another port. In some vendor, this is
+[26:10] called port mirroring, which is
+[26:11] self-descriptive enough. Uh Cisco calls
+[26:14] it SPAN, S P A N, switch port analyzer.
+[26:17] That's an acronym which is not so
+[26:19] self-descriptive, but explains why we
+[26:21] what we use it for.
+[26:22] These functions are useful because we
+[26:25] might need a copy of the traffic to
+[26:27] perform some packet capture using a tool
+[26:29] like Wireshark, or we might need to
+[26:31] analyze the traffic for intrusions in an
+[26:34] IDS or perhaps simply for traffic
+[26:36] statistics. In any of these situations,
+[26:38] it's much easier to work with a copy of
+[26:40] all the traffic rather than with the
+[26:42] original one. For example, if you're
+[26:44] only analyzing the traffic, working with
+[26:46] a copy of it eliminates the requirements
+[26:48] for the analysis device to be directly
+[26:51] in the traffic path, which simplifies
+[26:53] your network topology and avoids
+[26:55] unnecessary single points of failure. If
+[26:58] the switch does not support mirroring
+[26:59] features, there are devices called
+[27:02] inline taps uh available, too. These are
+[27:05] devices that are inserted between switch
+[27:07] ports directly onto the cable, and they
+[27:09] split the data packets into two streams.
+[27:12] One stream goes to the original
+[27:14] destination, and the other stream goes
+[27:16] to another segment where probably your
+[27:18] monitoring device is located. Obviously,
+[27:21] both these features can be abused by
+[27:23] hackers trying to intercept network
+[27:25] traffic. Actually, if you think about
+[27:26] it, a tap device is kind of like a small
+[27:29] hub in a on the on the wire. MAC
+[27:32] flooding is a type of an attack that
+[27:34] exploits a switch's learning function.
+[27:36] As you know, a switch learns the MAC
+[27:38] addresses of all the devices connected
+[27:40] to it, to its ports, and forwards
+[27:43] packets to the correct port based on the
+[27:45] destination MAC address. MAC flooding
+[27:47] works by sending a large number of fake
+[27:50] packets with random source MAC addresses
+[27:53] to a switch. The switch will try to add
+[27:55] each new MAC address to its CAM table,
+[27:58] and the CAM table, like all things in
+[28:00] this world except for stupidity, is
+[28:02] limited.
+[28:04] When it's full,
+[28:05] the switch will just drop the old
+[28:07] entries and replace them with the new
+[28:09] ones, which are just garbage. This means
+[28:11] that the switch will lose the
+[28:12] information about the real MAC addresses
+[28:15] of the devices on the network, uh will
+[28:17] fill its memory with garbage, and will
+[28:19] not be able to forward packets to the
+[28:21] correct ports. Instead, the switch will
+[28:23] flood all data packets to all ports
+[28:26] constantly, hoping that they will reach
+[28:28] their destination. Of course, they will
+[28:30] reach their destination, but this will
+[28:32] never happen for the garbage data. It
+[28:34] also means that anyone on the network
+[28:36] can now see and capture the real and
+[28:39] useful data packets, which is bad for
+[28:41] both network security and performance.
+[28:43] MAC cloning means changing the MAC
+[28:45] address of a device to impersonate
+[28:47] another device on the network, or simply
+[28:50] to pretend that you are a new client
+[28:52] since it's also a type of spoofing. A
+[28:54] hacker could do this by first
+[28:55] eavesdropping on the network and
+[28:57] on the network traffic and then finding
+[28:59] out the which MAC addresses belong to
+[29:01] some of the devices already connected
+[29:03] and trusted by the network. Then they
+[29:05] would spoof or clone the MAC address on
+[29:08] their own device to make it look like
+[29:10] one of the authorized devices. Depending
+[29:12] on how well security measures are
+[29:14] implemented, this might be enough to
+[29:15] bypass some security measures,
+[29:18] uh such as simple MAC filtering or port
+[29:20] security that are based on the MAC
+[29:22] address. Many airports or hotels have
+[29:24] restricted Wi-Fi networks that are
+[29:26] secured solely on the basis of allowed
+[29:29] MAC addresses recorded during the
+[29:31] authentication process. You might have
+[29:33] encountered hotels that tell you to
+[29:34] disable the MAC address randomization
+[29:36] feature on your smartphone when
+[29:39] connecting to their Wi-Fi. If they asked
+[29:41] you to do this, it means that they track
+[29:43] you based on your MAC address. To avoid
+[29:46] the risks of MAC cloning, some switches
+[29:48] can be configured to monitor MAC address
+[29:50] usage starting from the first time they
+[29:52] are seen on a network from their initial
+[29:54] interaction with the DHCP server. So, an
+[29:57] impersonator is immediately discovered,
+[29:59] and some intrusion detection devices can
+[30:01] continuously monitor ARP and MAC
+[30:03] information traveling over the network.
+[30:06] Going up to layer three, NAT stands for
+[30:09] network address translation,
+[30:11] and it's a way to map multiple private
+[30:13] IP addresses inside a local network to
+[30:16] one or more public IP addresses before
+[30:19] going out into the internet. NAT can
+[30:21] help you hide the identity of your
+[30:23] internal clients,
+[30:25] hide the design of your private network,
+[30:27] and can save costs on public IP
+[30:29] addresses. Since with NAT, your entire
+[30:31] company can now just use one or two
+[30:33] public IP addresses, no matter how many
+[30:35] internal users you have. Almost no
+[30:37] matter. The entire idea behind NAT is to
+[30:40] avoid the requirements of assigning a
+[30:42] public IP address to each and every
+[30:43] device that needs to connect to the
+[30:45] internet.
+[30:46] NAT works by replacing or translating,
+[30:49] since it's in the name, an IP address
+[30:52] with another. Depending on which IP
+[30:53] address is being translated and on the
+[30:55] direction of the traffic that this is
+[30:57] happening, we have either source NAT or
+[31:00] destination NAT. The most common one is
+[31:02] source NAT, where the source IP address
+[31:05] of your internal clients are replaced
+[31:07] with the IP address of your NAT device's
+[31:10] public interface whenever requests are
+[31:13] coming in from the network and are going
+[31:15] out to the internet. Basically, you're
+[31:17] replacing a source private IP address
+[31:19] with a public IP address, and you use
+[31:21] that public IP address as the source for
+[31:23] all the packets that travel over the
+[31:25] internet.
+[31:26] This is especially useful when you use
+[31:28] RFC 1918 private IP addresses
+[31:31] internally, which are not routable over
+[31:33] the internet. As we just said, this is
+[31:35] one of the main reasons behind this
+[31:36] translation, the fact that it allows
+[31:38] clients that only have a private IP
+[31:40] address to go out and communicate over
+[31:42] the internet where only public IP
+[31:44] addresses are allowed and destination
+[31:46] NAT is a term not often encountered
+[31:48] because people tend to call it either
+[31:50] port forwarding or load balancing. Of
+[31:53] course, there is the possibility of
+[31:55] doing destination NAT without involving
+[31:56] ports, destination PAT, port address
+[31:59] translation, but it's not very common. A
+[32:01] device that does destination NAT would
+[32:04] have to be configured in such a way so
+[32:05] that packets arriving at its public
+[32:08] interface with public destination IP
+[32:10] addresses
+[32:11] would have those public IPs translated,
+[32:14] replaced with private IP addresses, and
+[32:16] then the packets would be routed onto an
+[32:19] internal private network. So, as you can
+[32:21] see, this is what happens in a load
+[32:23] balancer. Another use case for
+[32:25] destination NAT is when two or more
+[32:27] networks merge and there is an IP subnet
+[32:30] overlap between the two.
+[32:32] In that case, destination NAT can save
+[32:34] the day by pretending that the
+[32:36] destinations actually have different IP
+[32:38] addresses so that proper routing can
+[32:40] still occur until the packets actually
+[32:42] reach the destination network, thus
+[32:44] avoiding routing confusion along the way
+[32:46] with multiple networks that share the
+[32:48] same IP address space.
+[32:50] Also, remember that internal hosts
+[32:52] become hidden behind the NAT device from
+[32:54] the internet's perspective because if
+[32:57] private IP addresses cannot be routed
+[32:58] over the internet, they also cannot be
+[33:00] addressed from the internet. So, they
+[33:02] cannot be placed in the destination IP
+[33:05] address field of packets routed over the
+[33:07] internet. A private IP address cannot be
+[33:10] a destination on the internet. This way,
+[33:12] nobody from the internet can address
+[33:14] your internal clients, nobody can
+[33:16] initiate communication with them, which
+[33:18] is also great for security reasons.
+[33:21] NAT restricts incoming traffic to only
+[33:23] those packets that are coming in
+[33:26] as responses to your internal clients'
+[33:29] requests, blocking most intrusion
+[33:31] attempts from the internet. In other
+[33:33] words, if traffic from the internet is
+[33:35] detected but wasn't specifically
+[33:37] requested by an internal client over an
+[33:40] active connection initiated by an
+[33:42] internal client, it's automatically
+[33:44] dropped.
+[33:45] This requires, of course, that the NAT
+[33:47] device to keep track and remember all
+[33:49] active connections for all active hosts
+[33:51] in the private network behind it.
+[33:53] Otherwise, it would be chaos on that
+[33:55] public interface, lots and lots of
+[33:57] requests going in going in and out, but
+[33:59] without knowing to which internal client
+[34:01] they belong to. You can implement NAT on
+[34:03] pretty much any server running Windows,
+[34:04] Linux. It's basically just a layer four
+[34:06] service, so it can be implemented on any
+[34:08] device that has at least two network
+[34:10] interface cards. They could also be
+[34:12] virtual, by the way. And perhaps a
+[34:14] routing capability, but most commonly
+[34:16] it's implemented on an
+[34:17] internet-connected router or firewall.
+[34:20] For virtual computing environments like
+[34:23] VMware ESXi, Nutanix, KVM, Xen, or any
+[34:27] virtualized solutions, we also have
+[34:29] virtual NAT services. Actually, just
+[34:31] installing something like VMware
+[34:33] Workstation, like Oracle VirtualBox, or
+[34:35] even Docker, will automatically
+[34:37] configure NAT services for the virtual
+[34:39] networks on your system. Next, PAT. It's
+[34:42] an extension of NAT and stands for port
+[34:45] address translation, and it's a
+[34:46] variation of NAT that uses the port
+[34:49] numbers in the transport layer to
+[34:51] distinguish between different sessions
+[34:53] from different clients and maps them to
+[34:55] different port numbers on the public IP
+[34:57] address.
+[34:58] PAT works by appending a port number to
+[35:00] the IP address of your internal clients,
+[35:02] forming what is called a socket. A
+[35:05] socket is a combination of an IP address
+[35:07] and a port number that identifies a
+[35:09] specific communication session.
+[35:11] PAT then replaces the socket of your
+[35:13] internal clients with the socket of your
+[35:15] proxy server's public interface in
+[35:18] outbound requests.
+[35:20] PAT then keeps track of this mapping
+[35:22] between the internal and external
+[35:23] sockets and forwards the data packets
+[35:25] accordingly. Long story short, PAT does
+[35:28] exactly what NAT did with IP addresses,
+[35:31] except that it now takes into
+[35:32] consideration port numbers as well.
+[35:35] With PAT,
+[35:36] you can use one single public IP address
+[35:38] for up to 65,536
+[35:42] simultaneous communications from your
+[35:44] internal clients, saving a lot of costs
+[35:47] on public IP address leasing. However,
+[35:50] you probably should stop at a few
+[35:52] thousands due to hardware limitations.
+[35:54] PAT works with both TCP and UDP, it
+[35:57] really doesn't care. So, any app that
+[35:59] uses these protocols can work with NAT
+[36:01] and or PAT.
+[36:03] There are a few exceptions like some
+[36:04] weird protocols that encode the port
+[36:06] numbers and the endpoint as part of the
+[36:08] payload, so not just in the header, in
+[36:11] which case NAT would break communication
+[36:13] because it only changes data in the
+[36:14] packet header, it doesn't do anything to
+[36:16] the payload. Some protocols that
+[36:18] traditionally break or cause issues with
+[36:21] NAT or PATs include IPsec, internet
+[36:25] protocol security. Protocols like AH and
+[36:28] ESP,
+[36:29] uh authentication header and
+[36:30] encapsulating security payload, can
+[36:32] break when passed through NAT. IPsec AH
+[36:36] authenticates the entire packet,
+[36:38] including the header, since NAT modifies
+[36:40] the IP header, changing the source
+[36:42] destination IP, this invalidates the
+[36:45] authentication. ESP, on the other hand,
+[36:47] encrypts the payload, which might hide
+[36:49] the port numbers, and NAT cannot modify
+[36:51] that information like IP addresses or
+[36:53] port numbers within encrypted packets.
+[36:56] Yeah, IPsec can also be used with
+[36:57] something called NAT-T, NAT traversal,
+[37:00] to encapsulate IPsec packets with UDP,
+[37:03] which can then pass through NAT and have
+[37:05] their headers modified in any way by
+[37:07] anyone without bothering the IPsec
+[37:09] payload inside. So, it's like tunneling
+[37:11] the tunneling protocol. FTP, file
+[37:13] transfer protocol, uses separate control
+[37:15] and data connections, and this is why
+[37:17] sometimes you hear that FTP uses two
+[37:19] ports, TCP 20 and 21. In active mode,
+[37:23] the server attempts to establish a
+[37:24] connection back to the client. Yes, you
+[37:27] heard that right, it's that weird, uh
+[37:29] which is most likely blocked by NAT. FTP
+[37:32] also embeds IP addresses in its control
+[37:34] messages. The solution to this is called
+[37:37] passive mode FTP, which lets the clients
+[37:39] initiate session to the server like
+[37:41] normal protocols do, duh, or using an
+[37:45] FTP-aware NAT device that modifies the
+[37:47] embedded IP addresses. That can also
+[37:49] help. Another uh problematic protocol is
+[37:52] SIP, a session initiation protocol,
+[37:55] commonly used for VoIP. Uh it embeds IP
+[37:58] addresses in the payload for call setup,
+[38:00] and NAT can interfere with proper
+[38:02] routing as it has no visibility inside
+[38:04] the payload. This is mitigating using a
+[38:06] session border control, SBC, or
+[38:09] implementing SIP-aware NAT over an
+[38:12] application layer gateway. The STUN,
+[38:15] TURN, or ICE protocols can help, too,
+[38:18] which are methods for detecting over
+[38:20] which public IP addresses RTP is running
+[38:24] even behind NAT.
+[38:26] H.323
+[38:28] for video conferencing, like SIP, it
+[38:31] embeds IP addresses and ports in its
+[38:33] payload. NAT can disrupt call setup and
+[38:36] data flow, so you need an H.323-aware
+[38:38] NAT or using a gateway that can handle
+[38:41] NAT traversal.
+[38:42] PPTP, point-to-point tunneling protocol,
+[38:45] uses the GRE, generic routing
+[38:47] encapsulation protocol, to carry tunnel
+[38:49] data. NAT devices often struggle to
+[38:52] track GRE connections because GRE lacks
+[38:56] port numbers. Uh you could use L2TP or
+[38:59] OpenVPN instead of PPTP as they are more
+[39:01] NAT-friendly. Multicast protocols, for
+[39:04] example, IGMP or PIM, are generically
+[39:07] not handled well by NAT as it is
+[39:09] designed for unicast IP traffic,
+[39:11] one-to-one, while multicast is
+[39:13] one-to-many. There isn't really a
+[39:15] solution to this as multicast generally
+[39:18] requires careful handling, and it's
+[39:20] often not used in NAT-heavy environments
+[39:23] without specific design considerations.
+[39:26] Peer-to-peer protocols and many P2P
+[39:28] applications such as BitTorrent require
+[39:30] direct peer-to-peer communication, which
+[39:32] can be problematic under NAT as it
+[39:34] blocks inbound connections.
+[39:36] A solution to this can be UPnP,
+[39:39] universal plug and play, or NAT-PMP, NAT
+[39:42] port Mapping Protocol, uh that can help
+[39:44] open ports dynamically. And any
+[39:46] protocols using broadcast or link layer
+[39:49] addresses, like DHCP or ARP, can
+[39:52] struggle when passed over NAT. Uh
+[39:54] fortunately, these protocols are
+[39:56] generally not expected to cross NAT
+[39:58] boundaries as they are used only within
+[40:00] local networks. Lastly, there is, uh
+[40:03] from a configuration standpoint, static
+[40:05] NAT, which is a one-to-one mapping
+[40:07] between private and public IP addresses,
+[40:09] which is really NAT without any of its
+[40:11] benefits.
+[40:13] >> [laughter]
+[40:13] >> And dynamic NAT, when we map a pool a
+[40:15] pool of private IP addresses onto a pool
+[40:18] of public IP addresses, or just one. One
+[40:21] is also a potential pool. On the IP
+[40:24] addressing topic, uh APIPA, A P I P A,
+[40:27] stands for Automatic Private IP
+[40:29] Addressing, and it's a way to assign an
+[40:31] IP address to a host when the DHCP
+[40:33] server is not available or fails, or
+[40:36] there simply isn't one.
+[40:37] APIPA works by giving each system that
+[40:40] fails to get an IP address from the DHCP
+[40:42] server an IP address from the range of
+[40:45] 169.254.
+[40:47] something.something.
+[40:49] You might have seen these addresses on
+[40:50] some occasions when you fail to get an
+[40:52] IP address from a network, especially
+[40:54] with badly configured public hotspots.
+[40:57] The purpose of APIPA is to somehow allow
+[40:59] the systems to still communicate with
+[41:01] other systems that have APIPA addresses
+[41:03] in the same local network, but of course
+[41:05] not outside the network. If you're not
+[41:07] getting IP configuration information,
+[41:09] then you don't get a gateway, you cannot
+[41:11] communicate outside of the network, so
+[41:13] obviously none of the other benefits
+[41:14] apply.
+[41:16] APIPA is not directly related to
+[41:18] security, but it's important to
+[41:20] understand that
+[41:21] in most cases, um if you see a system
+[41:24] that has an APIPA address instead of a
+[41:26] valid network address, that means that
+[41:28] there is a problem with the DHCP server
+[41:30] or the network connection. It could be a
+[41:32] simple issue such as a bad cable or a
+[41:34] power outage. It could be a sign of a
+[41:36] malicious attack on the DHCP server, so
+[41:38] you should be able to tell the
+[41:39] difference between an APIPA address and
+[41:41] other types of IP addresses. Also, you
+[41:43] get an APIPA address if DHCP server is
+[41:46] out of uh available IP addresses, so it
+[41:48] cannot allocate a new address to you.
+[41:50] Finally, the loopback address is a
+[41:52] special type of IP address that is used
+[41:54] to test that the networking stack of an
+[41:56] operating system is working.
+[41:58] A loopback address is purely uh
+[42:00] software. It's an IP address that
+[42:02] connects back to your system over TCP/IP
+[42:04] without any network hardware.
+[42:07] Uh loopback address works by creating a
+[42:08] software interface that simulates a
+[42:10] network connection. This allows the
+[42:12] system to send and receive data packets
+[42:14] to and from itself using the TCP/IP
+[42:16] stack, but without involving any
+[42:18] external network devices.
+[42:21] You probably know that the most common
+[42:22] loopback address is 127.0.0.1,
+[42:25] but perhaps you did not know that the
+[42:27] entire 127 network and class is designed
+[42:30] for loopback use. Yep, we just wasted an
+[42:33] entire class A address space for
+[42:36] something that only really required a
+[42:38] single IP address. We were young and
+[42:40] naive back then.
+[42:42] Third-party connectivity is another term
+[42:45] that you might find in the exam, and
+[42:46] it's it's about connecting your network
+[42:48] to another entity's network, uh like a
+[42:50] provider, a partner, or a customer. Like
+[42:52] all internetwork connections, this can
+[42:54] bring risks of compromised data leakage,
+[42:57] so it requires careful planning as well
+[42:59] as uh clear agreements and expectations
+[43:01] between the parties involved.
+[43:03] Where this differs from regular
+[43:05] internetwork connections is where the
+[43:06] other party is completely out of your
+[43:08] control.
+[43:09] Now, before the interconnection happens,
+[43:11] you should perform a risk assessment to
+[43:12] identify the potential threats and
+[43:14] vulnerabilities
+[43:15] that may arise from the connection. You
+[43:17] should also establish at least an MOU,
+[43:19] Memorandum of Understanding, which is a
+[43:21] document that outlines the agreement or
+[43:24] intention between the parties.
+[43:26] Uh it is not legally binding, but it's
+[43:28] about setting the right expectations. If
+[43:31] the connection involves US federal
+[43:33] parties, an ISA, Interconnection
+[43:36] Security Agreement, is a document that
+[43:38] defines the security risks and technical
+[43:40] requirements of the link between the
+[43:41] networks. Third-party connectivity can
+[43:44] be achieved in a number of ways, direct
+[43:47] linking of IT environments, which is
+[43:49] nothing more than just connecting the
+[43:51] networks using physical cables or
+[43:53] logical connections such as a
+[43:54] site-to-site VPN or an SD-WAN.
+[43:57] Uh this option provides the highest
+[43:58] level of connectivity and performance,
+[44:00] but also the highest level of risk and
+[44:02] exposure. Extranet servers, which
+[44:04] involve hosting servers on a separate
+[44:06] network that can be accessed by the
+[44:08] parties via VPN, for example. So, the
+[44:11] server becomes a central point of
+[44:13] exchanging information. It's better
+[44:15] because there is a no risk of direct
+[44:17] communication between the two networks,
+[44:19] but pretty limited on as the the way of
+[44:21] exchanging information this way could be
+[44:23] a bit cumbersome.
+[44:25] Cloud solutions means using a cloud
+[44:27] service provider to create a shared
+[44:29] private cloud between the parties. The
+[44:31] advantage here is that you can have a
+[44:33] much more complex infrastructure in that
+[44:35] shared cloud environment, and both
+[44:36] parties can also benefit from better and
+[44:38] more secure features.
+[44:41] Finally, WAN technologies, Wide Area
+[44:43] Network, are the methods that we use to
+[44:45] connect networks over large geographical
+[44:48] distances, hence the name wide area.
+[44:51] That's between cities, across a country,
+[44:54] between countries, even between
+[44:55] continents.
+[44:57] A while ago, WAN technologies were a
+[44:58] big, complex, and very separate topic
+[45:00] about many technologies involved, so
+[45:03] many that there used to be a dedicated
+[45:05] expert-level CCIE certification from
+[45:07] Cisco only for service provider
+[45:09] professionals.
+[45:11] Nowadays, though, WAN is migrating
+[45:13] towards an extended LAN using the same
+[45:15] protocols and technologies as your local
+[45:17] network, and they are running as an
+[45:19] overlay network directly over the
+[45:21] internet. You might have heard the term
+[45:23] SD-WAN, Software-Defined WAN, and that's
+[45:26] exactly what it is, a software solution
+[45:28] that gives you WAN connectivity, but
+[45:31] uses the same internet infrastructure as
+[45:33] everyone else, but of course is
+[45:35] protected. And we still use it for data,
+[45:37] voice, video communication between
+[45:39] remote sites and users, such as branch
+[45:42] offices, customers, partners, or even
+[45:44] home employees.
+[45:46] But still,
+[45:47] you might be asked on the exam day about
+[45:49] dedicated and non-dedicated WAN
+[45:51] technologies. Dedicated WANs provide a
+[45:53] constant and exclusive connection
+[45:55] between two endpoints, like a branch and
+[45:57] the HQ. Non-dedicated WAN technologies
+[46:00] require a connection to be established
+[46:01] before data transmission can occur, and
+[46:03] can be used to connect to any real
+[46:05] system that uses the same technology.
+[46:08] For the sake of history, dedicated WAN
+[46:10] technologies included some ancient
+[46:11] protocols, such as um ATM, I think it's
+[46:15] Asynchronous Transfer Mode, or Frame
+[46:18] Relay, leased lines, point-to-point
+[46:21] links,
+[46:22] fiber optic solutions. Of course, we
+[46:24] still have fiber optic networks, but not
+[46:26] so many are dedicated nowadays.
+[46:28] Dedicated WAN technologies are often
+[46:30] used for mission-critical or sensitive
+[46:32] applications that require consistent
+[46:34] communication.
+[46:36] Non-dedicated WAN technologies include
+[46:38] modems, DSL, ISDN, remember that one? Uh
+[46:42] and more traditional satellite
+[46:43] connections. These were lower-cost, more
+[46:47] flexible connections, but they also were
+[46:48] slower, less reliable, less secure.
+[46:51] Non-dedicated WAN connections were often
+[46:54] used for backups, uh backup links,
+[46:56] temporary or low-priority applications.
+[46:59] Still, it's worth noting as far as
+[47:01] satellite technologies are involved that
+[47:03] Starlink nowadays works amazingly well
+[47:06] and can even be used as a primary
+[47:07] connection method.

@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A security operations team is deploying a system of decoy virtual machines that simulate the organization's demilitarized zone (DMZ). The systems are intentionally configured with known vulnerabilities and populated with fake customer records. The primary goal is to distract attackers from real networks and capture their attack tools. What is this security mechanism called, and what legal constraint must the team review?",
+    "options": [
+      "Honeypot; they must ensure they do not perform man-in-the-middle decryption.",
+      "Honeynet; they must ensure they do not actively entice or encourage illegal actions (avoiding entrapment).",
+      "Sandbox; they must check if the file hashes are uploaded to the cloud database.",
+      "Unified Threat Management (UTM); they must comply with the Acceptable Use Policy (AUP)."
+    ],
+    "correctIndex": 1,
+    "explanation": "A honeynet is a network of decoy systems (honeypots) designed to attract and analyze attackers. While deploying decoys is legal, security teams must be careful not to actively encourage or entice users to commit illegal acts, which could lead to claims of entrapment or violation of local laws. Sandboxing is for isolating applications, and UTM is a security gateway appliance."
+  },
+  {
+    "question": "An IT director wants to secure corporate laptops against unauthorized software installations and shadow IT. The director wants to implement a control where only corporate-approved software packages can run on the endpoints, and all other applications are blocked by default. Which control provides the highest level of security for this requirement?",
+    "options": [
+      "An application deny list (blacklist)",
+      "An application allow list (whitelist)",
+      "Signature-based anti-malware scanning",
+      "Device posture validation"
+    ],
+    "correctIndex": 1,
+    "explanation": "An application allow list (whitelist) is the most secure approach because it blocks all executables by default, only allowing software that is explicitly approved to run. A deny list (blacklist) allows all applications to run except those explicitly blocked, which is less secure because new or unlisted malicious programs will bypass it. Posture validation checks system state before connection but does not enforce execution limits."
+  },
+  {
+    "question": "A security auditor recommends that the organization secure its audit logs so that a hacker who compromises a domain controller cannot modify or delete the local log files to hide their activities. Which technology should the security team implement to guarantee the integrity and non-repudiation of these logs?",
+    "options": [
+      "Flow-based NetFlow sampling",
+      "WORM (Write Once, Read Many) storage",
+      "SOAR playbooks and runbooks",
+      "Centralized Syslog-ng over UDP"
+    ],
+    "correctIndex": 1,
+    "explanation": "WORM (Write Once, Read Many) storage prevents data from being deleted, overwritten, or modified once it has been written. Saving central logs to WORM storage ensures their integrity for forensic investigations even if host systems are compromised. NetFlow sampling gathers traffic statistics, SOAR playbooks automate response, and standard Syslog over UDP does not prevent local log deletion or guarantee transport delivery."
+  },
+  {
+    "question": "A Security Operations Center (SOC) is deploying a SOAR platform to automate its response to malware alerts. The team writes a detailed procedural document outlining how to verify the alert, isolate the host, and notify owners. They then translate this document into a series of automated scripts that the SOAR platform executes dynamically. What are the document and the automated script called, respectively?",
+    "options": [
+      "Runbook and Playbook",
+      "Playbook and Runbook",
+      "Baseline and Standard",
+      "Threat Feed and Access Control List (ACL)"
+    ],
+    "correctIndex": 1,
+    "explanation": "In security automation, a playbook is the procedural document describing the step-by-step workflow for verifying and responding to an incident. A runbook is the technical translation of the playbook into automated scripts or workflows that the SOAR platform runs. Baselines and standards are governance documents, and threat feeds provide indicators of compromise."
+  },
+  {
+    "question": "A security analyst wants to map the techniques used by an advanced persistent threat (APT) group against the organization's current defenses. The analyst needs to reference a comprehensive, non-sequential database of observed threat actor behaviors, tactics, and procedures (TTPs). Which framework should the analyst consult?",
+    "options": [
+      "The Cyber Kill Chain",
+      "The MITRE ATT&CK Matrix",
+      "ISO 27002",
+      "Unified Threat Management (UTM)"
+    ],
+    "correctIndex": 1,
+    "explanation": "The MITRE ATT&CK matrix is a globally accessible, non-linear knowledge base of adversary tactics, techniques, and procedures (TTPs) based on real-world observations. The Cyber Kill Chain is a linear, sequential model of attack phases. ISO 27002 is a security control standard, and UTM is a security gateway appliance."
+  }
+]

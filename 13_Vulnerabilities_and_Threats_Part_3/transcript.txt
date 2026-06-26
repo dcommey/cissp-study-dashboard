@@ -1,0 +1,1219 @@
+[00:08] All right, so let's continue with the
+[00:10] topic of vulnerabilities and threats.
+[00:12] This time digging a little bit deeper
+[00:14] into the software aspects of this issue
+[00:17] because well, software is what makes
+[00:19] hardware work,
+[00:21] be useful and be vulnerable, too.
+[00:25] Now, let's start this software adventure
+[00:27] with microservices.
+[00:30] Uh microservices are a way of building
+[00:33] applications. In most cases, many times
+[00:35] it's about web applications, but that's
+[00:37] just one of the possible options.
+[00:39] By breaking them down into smaller and
+[00:42] simpler components that can communicate
+[00:45] with each other.
+[00:46] They're like the LEGO bricks of
+[00:48] technology because they can be combined
+[00:50] and reused to create different complex
+[00:52] solutions. Unfortunately, unlike LEGO
+[00:55] bricks, they don't really snap together
+[00:57] that easily. It's usually a bit of a
+[00:59] pain in the butt to make them talk also
+[01:01] securely with each other, but
+[01:03] nevertheless, the comparison sounds nice
+[01:05] for marketing purposes.
+[01:07] And one of the ideas behind
+[01:09] microservices is also the one behind the
+[01:11] Unix philosophy, which is about building
+[01:14] simple, compact, clear, and modular
+[01:17] code. In other words, you should build
+[01:20] pieces of code that do simple things,
+[01:22] but they do them really, really well.
+[01:25] Think of how Linux command line
+[01:26] utilities work. Simple, but effective.
+[01:30] Translated into the world of
+[01:31] microservices, this transforms the old
+[01:35] monolithic way of building applications
+[01:37] into smaller components that act like
+[01:40] black boxes. You know exactly what
+[01:42] inputs they should receive and what
+[01:44] outputs they should produce. Their
+[01:46] behavior is very predictable and
+[01:49] thoroughly tested to be reliable. And
+[01:51] that all that's left to do is to make
+[01:54] sure that these services can discover
+[01:56] each other and talk to each other. So,
+[01:58] it's about snapping those Lego bricks
+[02:01] together. And of course, from a
+[02:02] development perspective, you need to
+[02:04] architect the application from the very
+[02:07] beginning as a microservices-oriented
+[02:10] one, as it's not something that you can
+[02:12] really patch on later or at a later date
+[02:15] without breaking down the entire
+[02:17] application and rebuilding it.
+[02:19] Microservices are based on an older
+[02:21] idea, which was called service-oriented
+[02:24] architecture, SOA, which is a way of
+[02:27] designing software using independent and
+[02:30] modular services that perform specific
+[02:32] tasks. As you can see, the ideas are
+[02:35] quite similar, but unlike services in
+[02:37] SOA, which were designed to map to
+[02:39] business logic like here's the storage,
+[02:42] and here's the invoicing application,
+[02:44] and here's the HR application, and so
+[02:46] on,
+[02:47] microservices are focused on
+[02:48] functionality of a much smaller scale.
+[02:52] It might be such a small thing that it
+[02:53] doesn't map to an entire business
+[02:55] process, but it takes multiple
+[02:56] microservices to do so. A microservice
+[02:59] might be as simple as a piece of code
+[03:01] that copies files from one place to
+[03:04] another, or a small engine that scans
+[03:06] invoices and extracts customer
+[03:08] information, but others can be more
+[03:10] complex on the level of entire
+[03:12] standalone applications or database
+[03:14] engines.
+[03:16] Some examples of microservices that can
+[03:17] find in regular web applications might
+[03:19] be, for example, the front end of a web
+[03:21] application. That's what the users see
+[03:23] and interact with when they connect to
+[03:25] the app. It's the app's interface, uh
+[03:28] what the user browser loads. In most
+[03:30] cases, the the front end microservice is
+[03:33] going to be a web server hosting the
+[03:34] website itself or some API endpoint.
+[03:37] Another one could be the authentication
+[03:38] microservice. Many apps use such a
+[03:40] microservice to verify the identity of
+[03:42] users who want to access an application.
+[03:44] It might rely on other services like
+[03:46] RADIUS or some external multi-factor
+[03:49] authentication provider, and other
+[03:51] external user databases.
+[03:53] Another one might be a payments
+[03:55] microservice. This could be a service as
+[03:57] well for payment transactions for users
+[03:59] to want to buy something from your app.
+[04:02] Those you usually rely on connections to
+[04:04] global payment processors. Database,
+[04:06] very important. This one needs to be a
+[04:08] service as well with special
+[04:09] consideration for storage in this case
+[04:11] as this needs to be very persistent and
+[04:13] durable. It's worth paying attention to
+[04:16] how storage is handled in database
+[04:18] services as typically microservices
+[04:20] should be designed to be
+[04:22] as stateless as possible and not to rely
+[04:25] on persisting local storage at all. This
+[04:28] is great because it allows us to destroy
+[04:30] and recreate microservices at any time,
+[04:33] move them around, scale them up when
+[04:35] more processing power is needed, but you
+[04:37] have to design them so that no databases
+[04:39] are lost in this in this process. We
+[04:41] want the service itself to be stateless
+[04:43] and ephemeral, not the data that it has
+[04:46] to work with.
+[04:48] Another microservice might be something
+[04:49] like image processing or document
+[04:51] processing. When users upload images to
+[04:54] social media or they submit their
+[04:56] documents in an HR app, some little
+[04:58] service in the back end will process
+[05:00] their input. These services could also
+[05:02] implement by themselves or in other
+[05:05] chained microservices some security
+[05:08] functions as well since all input coming
+[05:10] in from the users must be validated,
+[05:12] sanitized, and subjected to some checks
+[05:14] in order to avoid bringing in malware or
+[05:17] allowing a denial of service.
+[05:19] Anyway, microservices are important
+[05:21] because in theory at least, they are
+[05:23] faster to develop and deploy. They're
+[05:25] also enable more innovation, more
+[05:27] experimentation if that's what you're
+[05:29] aiming for as developers can try out new
+[05:31] ideas and features without affecting the
+[05:33] whole system. If you have a
+[05:34] microservices based app, then upgrading
+[05:36] a component should be much much easier.
+[05:39] Let's say I want to upgrade the
+[05:40] authentication system of the app and add
+[05:43] multi-factor authentication to it, MFA.
+[05:45] Doing so in a monolithic app where
+[05:48] everything is in one big project and one
+[05:50] big chunk of code would require opening
+[05:53] up the entire source code, making some
+[05:54] changes, recompiling the entire app,
+[05:57] subjecting the entire application to a
+[05:59] huge batch of manual or automated tests
+[06:01] to make sure you did not break anything,
+[06:04] going back to development when bugs are
+[06:06] found, and finally redeploying the
+[06:07] entire application or at least a
+[06:09] complicated installation of a very risky
+[06:11] patch. Now, with microservices, you just
+[06:14] redeploy the authentication service
+[06:15] using the new and improved version. Code
+[06:18] changes are minimal and confined only to
+[06:20] that specific affected module.
+[06:22] Uh the rest of the app does not care
+[06:24] that you upgraded the authentication
+[06:25] module as long as nothing changed in the
+[06:28] way it was supposed to interact with
+[06:30] that module. You could even do a limited
+[06:33] test environment and see how it works.
+[06:34] And if, God forbid, you end up in
+[06:36] production on authentication still
+[06:38] doesn't work as it should, it's not that
+[06:41] big of a problem. In in a matter of
+[06:42] seconds, you can just roll back to the
+[06:44] previous version of the authentication
+[06:45] service, and everything will work as it
+[06:48] did before the change, allowing you to
+[06:50] work on fixing the changes.
+[06:52] Well, fingers crossed.
+[06:54] Now, before moving forward, let's just
+[06:56] call them by their names. Realistically,
+[06:59] what we're talking about here in 90 plus
+[07:02] percent of the cases out there
+[07:04] is going to be about, you guessed it,
+[07:06] containers. Docker, perhaps, but not
+[07:08] strictly necessary. There are other
+[07:10] technologies like Podman, Cri-o,
+[07:12] Containerd, LXC, RKT, Rocket, and even
+[07:16] more. And Kubernetes for orchestration.
+[07:19] We use containers to package and
+[07:21] modularize an app, and we use Kubernetes
+[07:24] to orchestrate those components as one,
+[07:27] to scale them, to check them for for
+[07:29] their health, for resource management,
+[07:32] for restarting failed components, and so
+[07:34] on.
+[07:35] In a word, orchestration.
+[07:37] So, microservices have a lot of
+[07:39] benefits. Agility.
+[07:41] You allow developers to work on
+[07:42] different parts of the application
+[07:44] independently and in parallel, reducing
+[07:47] the development time, also by avoiding
+[07:50] unnecessary clashes between different
+[07:51] teams working on the same big project.
+[07:54] So, here's an advantage for the
+[07:55] developers as well.
+[07:57] Another one is scalability.
+[07:58] Microservices allow each service to be
+[08:00] scaled up or down according to the
+[08:02] demand, improving the performance of the
+[08:04] application and avoiding situations
+[08:06] where our site becomes unresponsive
+[08:08] during Black Friday.
+[08:10] And diversity. Not DEI, but
+[08:13] microservices allow
+[08:15] each service to be implemented using any
+[08:18] technology out there.
+[08:20] Any language, any framework, or any
+[08:21] platform, depending on the best fit for
+[08:23] the problem. The users don't care what
+[08:25] language you use to develop your app or
+[08:28] even a specific piece of the app.
+[08:30] Similarly, one app module doesn't care
+[08:32] about the language that you use to
+[08:34] develop another module, as long as it
+[08:36] knows how to talk to it and it responds
+[08:38] accordingly.
+[08:40] You could have a single app written in
+[08:42] many programming languages as you can
+[08:44] think of. Again, because each and every
+[08:46] microservice is an island of its own, a
+[08:49] completely independent component. You
+[08:51] could use to do or develop in whatever
+[08:54] language or technology you feel
+[08:55] comfortable with.
+[08:57] You might have a traditional Linux app,
+[08:58] but its components might be written one
+[09:00] in C, one in Java, another one in .NET,
+[09:03] another one in Python, the front end
+[09:05] might be Angular JS and whatnot. It
+[09:08] doesn't matter as you design them to
+[09:10] communicate with each other.
+[09:12] There are also downsides to
+[09:14] microservices, like all things in life,
+[09:15] of course. They are more complex. The
+[09:18] system architecture becomes more complex
+[09:20] as there are more moving pieces, more
+[09:23] moving parts in there to manage and
+[09:25] coordinate, instead of just one single
+[09:27] piece of software.
+[09:28] Developers need to design very clear and
+[09:30] consistent interfaces for how services
+[09:33] discover and talk to each other, using
+[09:35] protocols such as HTTP or messaging
+[09:37] systems such as Kafka or RabbitMQ.
+[09:41] And
+[09:42] the more moving parts you need to have
+[09:45] up and running for the app to work, the
+[09:47] more moving parts can break and go
+[09:50] wrong. Also, microservices can increase
+[09:53] the security risks of the system as
+[09:55] there are more entry points for the
+[09:57] attacker to exploit. And there's also a
+[09:59] virtual communication network between
+[10:01] the microservices, which is called a
+[10:02] service mesh, or sometimes not even
+[10:05] that, it just might be a virtual switch
+[10:07] that needs securing as well. Not to
+[10:10] mention that developers need to
+[10:12] implement proper security measures for
+[10:14] each service, such as encryption,
+[10:16] authentication, authorization, logging,
+[10:18] monitoring, and that's for each and
+[10:20] every microservice out there, not just
+[10:22] for the application as a whole.
+[10:24] And testing. Testing also gets a level
+[10:26] up in difficulty as there are more
+[10:28] scenarios now and dependencies to
+[10:31] consider. A whole lot of more things
+[10:33] that can go wrong and need to be tested.
+[10:36] And finally, here's one that you won't
+[10:37] find in any official training out there.
+[10:40] Not all applications should be converted
+[10:43] to microservices. And I'm I I will stand
+[10:46] behind the statement. It's It's mine.
+[10:49] You don't have to agree with it, but
+[10:52] Kubernetes is not a solution for all the
+[10:55] apps out there. If there's a new
+[10:57] technology out there, it doesn't mean
+[10:58] that it's a one solution that fits all.
+[11:01] Microservices are not for everyone and
+[11:03] not for every use case. Not every
+[11:05] problem is a nail when you're holding an
+[11:08] expensive hammer.
+[11:09] Let's talk a bit about infrastructure as
+[11:11] code. Honestly, I really, really love
+[11:13] this stuff. This is my my midlife crisis
+[11:16] love affair.
+[11:17] By the way, my wife is very happy about
+[11:19] this. If If infrastructure as code is
+[11:21] your midlife crisis, by all means, go
+[11:24] have fun.
+[11:26] Actually, my my midlife crisis also
+[11:28] demands a Tesla, but that's a different
+[11:30] story. And I know it's not the best car
+[11:32] out there, but I still want one.
+[11:34] Okay, enough rambling. Infrastructure as
+[11:37] code is a way of managing infrastructure
+[11:40] as if it were software code. I know
+[11:44] that's basically an explanation that
+[11:46] adds nothing new. So, let me put it
+[11:48] another way.
+[11:49] You abstract the actual infrastructure
+[11:53] into code files describing how your
+[11:55] infrastructure should look like. What
+[11:57] kind of virtual machines you should
+[11:58] have, what kind of storage, networking
+[12:01] to connect them, what apps are running
+[12:03] in there, what users you're defining,
+[12:05] what permissions they should have, what
+[12:07] databases you're going to use,
+[12:09] everything goes inside a declarative
+[12:12] code file. An immutable architecture is
+[12:16] a concept that is related to IAC,
+[12:18] infrastructure as code. It means that a
+[12:20] server, including its configuration,
+[12:22] never changes once it is deployed. If
+[12:25] there is a need to update, modify, fix,
+[12:27] or otherwise
+[12:28] alter, change something, a new and
+[12:31] updated server is going to be deployed
+[12:32] to replace the previous one.
+[12:34] Once the new server is validated, the
+[12:36] old server is decommissioned. Now, when
+[12:38] you talk about servers, we usually refer
+[12:40] to virtual machines or containers,
+[12:41] right? So, it's all in the software
+[12:43] world. But, still, going back to this
+[12:45] concept, why would I destroy
+[12:48] valid resources that I have, valid
+[12:50] virtual machines and containers and
+[12:52] whatnot, when I only want to make some
+[12:54] changes? Why all this, quote-unquote,
+[12:57] waste?
+[12:58] Because there's something known as
+[13:00] configuration drift. Identical servers
+[13:03] tend to become slightly different over
+[13:05] time. It's kind of like entropy.
+[13:08] Even if, in theory, they have been
+[13:10] updated to the same versions, maybe it's
+[13:12] the order in which those updates were
+[13:13] performed. Maybe one server crashed a
+[13:15] few times before and corrupted some
+[13:17] files. Maybe an admin logged in and made
+[13:19] some unique changes to a single machine
+[13:21] out of 10 that should have been
+[13:23] identical. And this is where bugs start
+[13:25] to appear. Actually, immutable images
+[13:28] stop being immutable when they are
+[13:30] launched, right? Because you start
+[13:32] changing things, you start writing
+[13:33] stuff, logs and caches and so on. And
+[13:35] so, if we can, we prefer to actually
+[13:38] destroy and recreate those systems from
+[13:40] scratch instead of tweaking existing
+[13:42] deployments.
+[13:43] Fortunately, cloud providers,
+[13:45] especially, are very friendly to this
+[13:47] approach. Unfortunately, with
+[13:49] infrastructure as code, we have a way to
+[13:50] do this automatically with no mistakes
+[13:52] and typos as often as needed.
+[13:55] You will find the idea of immutable
+[13:56] infrastructure sometimes in analogies
+[13:58] like pets versus cattle or snowflakes
+[14:01] versus phoenixes.
+[14:03] With pets, when something goes wrong,
+[14:06] everyone jumps to the rescue, right? You
+[14:08] have a pet,
+[14:09] they get sick, right? You you take them
+[14:12] to the doctor, you nurse them back to
+[14:14] health.
+[14:15] And we do the same with servers.
+[14:17] However, if a server is treated like
+[14:19] cattle, when something goes wrong, it is
+[14:22] replaced immediately. No hard feelings.
+[14:24] If a server has a unique configuration,
+[14:26] then it's a snowflake, and it always
+[14:28] requires dedicated management time and
+[14:30] effort, which is a waste of time and
+[14:32] adds a lot of complexity and room for
+[14:33] error. By contrast, if you have to build
+[14:36] a server from scratch, then if you need
+[14:38] to make some changes, you can just
+[14:39] create a new server based on updated
+[14:41] components. In a completely unattended
+[14:43] and automated process, kind of like a
+[14:45] phoenix rising from the ashes. I know,
+[14:46] this one is a pretty weird. Pets versus
+[14:48] cattle was a more
+[14:50] down-to-earth analogy.
+[14:52] Now, speaking of down-to-earth, among
+[14:54] some real-life examples of
+[14:56] infrastructure as code tools, we find
+[14:58] the famous Terraform alongside Ansible,
+[15:01] Chef, Puppet, CloudFormation from AWS,
+[15:05] ARM templates and Bicep from Azure and
+[15:08] many, many others.
+[15:10] Another thing you should know is the
+[15:11] fact that many of the infrastructure as
+[15:13] code tools out there, Terraform
+[15:14] especially, are declarative in nature.
+[15:17] What does declarative mean? Well, it
+[15:19] means that instead of writing a bash,
+[15:21] PowerShell or Python scripts that
+[15:23] connects to the cloud environment and
+[15:24] starts deploying infrastructure piece by
+[15:26] piece, line by line, instruction by
+[15:28] instruction, you only provide Terraform
+[15:30] with a configuration that represents the
+[15:32] end state of your desired
+[15:34] infrastructure.
+[15:35] So, instead of telling it exactly what
+[15:37] to do, step by step, you're basically
+[15:39] telling it what you intend to have at
+[15:42] the end of the day.
+[15:43] And then you let the tool figure out not
+[15:45] just the necessary steps to be taken to
+[15:47] reach that desired state, but also the
+[15:49] order in which they should be executed.
+[15:51] Which infrastructure elements, if any,
+[15:54] will be created, changed, or destroyed,
+[15:57] and the order in which all of this will
+[15:58] happen. Basically, it's like telling
+[16:00] Terra- Terraform, or a tool like
+[16:02] Terraform, "This is what I want. I don't
+[16:04] care how you do it. I don't care how
+[16:06] much of this is already deployed. Do
+[16:09] what you must. Just get it done before I
+[16:11] come back from my lunch break."
+[16:13] In contrast to declarative code, we have
+[16:16] procedural code in which each line,
+[16:18] instruction, or function call is
+[16:21] executed step by step, following the
+[16:23] exact program flow that you have in your
+[16:24] code file. This is exactly how most
+[16:26] scripting and programming languages
+[16:28] work. What you code is what gets
+[16:30] executed procedurally in the exact order
+[16:33] of your code statements. This does not
+[16:35] happen with declarative code.
+[16:38] Virtualization is nothing new in the
+[16:40] technology world, and I hope it's
+[16:42] nothing new for you as well. The basics
+[16:44] of defining virtualization refer to the
+[16:47] ability of running multiple operating
+[16:49] systems, or instances, or applications
+[16:52] on a single, possibly hardware device.
+[16:55] For example, you can run Windows and
+[16:57] Linux on the same computer, or run
+[16:59] different versions of the same software
+[17:00] on different virtual machines. This way,
+[17:02] you can use the best operating system or
+[17:04] application for your specific needs, or
+[17:07] the best combination of, let's say,
+[17:09] library versions without having to buy
+[17:11] multiple devices or deal with
+[17:12] compatibility issues.
+[17:14] Now, this is like the, uh, let's say
+[17:17] default definition of virtualization.
+[17:19] That's because nowadays it's not just
+[17:21] about virtual machines, so it's not just
+[17:23] about virtualizing computing power.
+[17:26] There's also virtual networking and
+[17:28] virtual storage. These are entire
+[17:30] concepts by themselves with a huge
+[17:32] amount of technology and implementation
+[17:33] variation between them. Still, just to
+[17:36] keep a long story very short, virtual
+[17:37] networking can be found starting from
+[17:39] virtual switches, virtual routers, and
+[17:41] virtual firewalls implemented between
+[17:43] virtual machines, sometimes even and
+[17:45] implemented as virtual machines, all the
+[17:47] way up to software-defined networking or
+[17:49] SDN.
+[17:50] Uh with SDN, we attempt to rethink the
+[17:52] way we do networking by moving all the
+[17:54] routing, switching, and security logic
+[17:57] and decision-making into a centralized,
+[18:00] let's say, brain of the network, leaving
+[18:03] traffic to be forwarded as fast as
+[18:04] possible by dumb, simple, but very fast
+[18:07] switches who simply obey the rules
+[18:09] enforced by the central brain. That's
+[18:12] SDN, and it allows us a huge amount of
+[18:15] flexibility and uh potential to
+[18:17] reconfigure our network in just a couple
+[18:19] of clicks, or even without clicks if you
+[18:21] properly automate it.
+[18:23] Uh on the other hand, we also have
+[18:25] software-defined storage, which is a way
+[18:26] of storing data that is not dependent on
+[18:28] specific hardware devices. Instead, SDS
+[18:31] uses software to control how and where
+[18:34] data is stored, regardless of the type
+[18:37] or brand of the hardware.
+[18:39] This makes SDS a lot more flexible than
+[18:41] traditional storage.
+[18:43] With software-defined storage, you don't
+[18:44] have to worry about the
+[18:46] uh details of your storage hardware. You
+[18:48] can use any kind of hardware you want or
+[18:50] you happen to have lying around as long
+[18:52] as it is compatible with the uh
+[18:54] software-defined storage software.
+[18:57] You can also scale up or down your
+[18:59] storage capacity as you need without
+[19:01] affecting the performance or the
+[19:02] availability of your data.
+[19:04] Uh you can also customize the storage
+[19:05] devices for each application or
+[19:07] workloads, such as provisioning them
+[19:08] with encryption, compression,
+[19:10] replication,
+[19:12] deduplication, backups, or assigning
+[19:15] different types of storage services
+[19:17] depending on the application needs.
+[19:19] Like faster storage for frequently
+[19:21] accessed or slower storage for, you
+[19:23] know, application data or files that are
+[19:26] readily being read. Also, you can pull
+[19:29] different storage in different locations
+[19:31] and on different servers and make it
+[19:32] look like a contiguous, huge, highly
+[19:35] available storage entity that is
+[19:37] accessed and used as a single logical
+[19:39] storage. One implementation of this is
+[19:41] vSAN, for example. To create and manage
+[19:43] these virtual environments, especially
+[19:45] when it comes to virtual machines, you
+[19:46] need a software called a hypervisor. It
+[19:48] might sound like a specialized kind of
+[19:50] software, but in essence, a hypervisor
+[19:52] is a smallish operating system that
+[19:56] takes care of VM access to the hardware
+[19:58] resources available on the underlying
+[20:00] physical machine.
+[20:02] The hypervisor also takes care of
+[20:04] isolation for the virtual machines so
+[20:06] that applications that run inside those
+[20:07] VMs could be fooled into thinking that
+[20:10] they are the only applications running
+[20:13] on an entire, perhaps, physical server.
+[20:15] Even though in reality there's going to
+[20:17] be a bunch of apps sharing the same
+[20:18] memory, the same CPU, the same network
+[20:20] interface cards, same storage devices,
+[20:22] but they don't have to know about this,
+[20:24] okay?
+[20:25] Uh this helps us control not only
+[20:27] resource allocation, but it's a
+[20:28] tremendous use when it comes to
+[20:30] security, as well.
+[20:32] There are two types of hypervisors out
+[20:33] there,
+[20:34] type one and type two. I know, amazingly
+[20:37] creative. Type one hypervisor is
+[20:40] installed directly on the hardware
+[20:42] without any other host operating system.
+[20:44] So, the type one hypervisor is the only
+[20:47] operating system on that machine up
+[20:49] until the moment when you start
+[20:50] deploying actual virtual machines. This
+[20:52] makes it faster and more efficient
+[20:54] because there are no additional layers
+[20:55] that might induce overhead. Type one
+[20:58] hypervisors are usually used for server
+[21:00] virtualization where you need to run
+[21:01] many virtual servers on a few physical
+[21:03] servers. Some examples of type one
+[21:05] hypervisors are uh VMware or Broadcom
+[21:08] ESXi and Microsoft Hyper-V Server.
+[21:13] Type two hypervisor is installed on top
+[21:16] of another host OS like a regular
+[21:18] application. This makes it much easier
+[21:20] to install, of course, but it's also
+[21:22] slower and will incur additional costs
+[21:24] related to licensing of the underlying
+[21:26] OS.
+[21:27] And you have to take care from an
+[21:28] administrative and security point of
+[21:30] view of the underlying OS as well.
+[21:33] Type two hypervisors are usually used
+[21:35] for desktop virtualization where you
+[21:37] need to run different OSes on your,
+[21:39] let's say, personal computer or some
+[21:40] test lab environment. Some examples of
+[21:43] type two hypervisors are VMware
+[21:45] Workstation, Oracle VirtualBox,
+[21:47] Parallels for Mac,
+[21:49] and Hyper-V, again, and many more.
+[21:52] Speaking of virtualization, going up in
+[21:54] scale, we find cloud computing,
+[21:57] which is a term that means the delivery
+[21:59] of services over the internet such as
+[22:03] storage, computing, networking,
+[22:05] software, and so on. Cloud computing is
+[22:08] based on virtualization, but it also
+[22:10] adds some features such as scalability,
+[22:13] elasticity, high availability, and
+[22:15] pay-per-use.
+[22:17] With cloud computing, you don't have to
+[22:19] worry about managing your own hardware
+[22:21] or software. You just access them
+[22:22] remotely over the internet from any
+[22:25] device with an internet internet
+[22:26] connection.
+[22:27] Some examples of cloud computer
+[22:28] providers are, as you surely already
+[22:30] know, Amazon Web Services AWS, Microsoft
+[22:32] Azure, Google Cloud Platform GCP, and
+[22:35] Oracle Cloud Infrastructure OCI.
+[22:38] Private clouds can also be managed using
+[22:40] solutions from VMware, Xen, Red Hat, and
+[22:43] many more. We mentioned elasticity and
+[22:45] scalability in cloud computing. There is
+[22:47] a fine line when talking about the
+[22:49] differences between these two. So,
+[22:51] elasticity and scalability.
+[22:53] Elasticity means that the virtual
+[22:55] virtualized systems can expand or
+[22:58] contract their resource allocation
+[23:01] based on whatever your current needs
+[23:03] are. For example, if you have a virtual
+[23:05] server that runs a web application, you
+[23:07] may want to increase its CPU and memory
+[23:09] allocation when there's a lot of traffic
+[23:11] on your website
+[23:13] like during Black Friday. And you may
+[23:14] want to decrease its resources when
+[23:16] there's less traffic. Okay? This way you
+[23:19] you can optimize your performance and
+[23:20] your cost.
+[23:22] Now, scalability is a term that
+[23:24] describes how virtualized systems can
+[23:25] handle more workloads without
+[23:27] compromising performance. That's the key
+[23:30] difference. Scalability means increasing
+[23:32] without compromise, not just the ability
+[23:35] to increase.
+[23:37] For example, if you have a web
+[23:38] application that needs to
+[23:39] serve more users or customers, you may
+[23:42] want to add more virtual servers to
+[23:43] distribute the load and increase your
+[23:45] capacity. And usually this will happen
+[23:47] behind a load balancer. This way you can
+[23:49] maintain the same end user experience
+[23:51] without sacrificing speed or
+[23:53] reliability.
+[23:55] Virtualizing apps and desktops. Now,
+[23:57] sometimes you don't need to virtualize
+[23:58] the entire machines and operating
+[24:00] systems, but only the applications.
+[24:02] Uh you can do this by encapsulating
+[24:05] and isolating them right where they're
+[24:06] running on top of the operating system.
+[24:09] The isolation has two benefits. First,
+[24:11] it isolates apps among themselves, so
+[24:14] they don't interfere with each other and
+[24:16] from modifying the OS as well. For
+[24:18] example, you can run a Windows
+[24:20] application on a Linux OS uh without
+[24:22] having to install Windows or dual boot
+[24:25] your system. The application will think
+[24:26] that it's running on Windows, but it's
+[24:28] actually running on a virtual
+[24:29] representation of Windows created by a
+[24:31] software virtualization tool. The tool
+[24:33] that does this also intercepts and any
+[24:35] changes made by the software to the host
+[24:37] operating system, such as any writing
+[24:39] files, modifying registry entries, or
+[24:42] altering system settings.
+[24:44] Uh these changes are stored in a file
+[24:46] managed by the virtual software and do
+[24:48] not affect the host OS.
+[24:50] This brings us to the second benefit,
+[24:51] which is that the software can run
+[24:53] without installing anything on host OS
+[24:56] and can be easily removed or restored by
+[24:58] deleting or copying the file
+[25:00] uh with the changes.
+[25:02] The isolation can also make apps more
+[25:04] portable and also allows you to
+[25:05] instantiate them on demand the ultimate
+[25:08] point where your clients request access
+[25:11] to an app, not only they receive access
+[25:13] to it, but they also receive access to a
+[25:15] unique instance of that app created just
+[25:17] for them.
+[25:19] Uh Citrix, VMware, Microsoft, they all
+[25:21] have solutions for application
+[25:22] virtualization.
+[25:24] And yes, there's more. There's also
+[25:25] something called virtual desktop, which
+[25:28] leads us to a discussion about virtual
+[25:29] desktop infrastructure or VDI for short.
+[25:32] So, what is a virtual desktop? Well,
+[25:33] it's a way of running your desktop or in
+[25:35] fact your workstation OS on a remote
+[25:37] server instead of on your local device.
+[25:41] Why would you want to do that? Because
+[25:43] it can save you money, time, and
+[25:44] headaches. Let's explain how.
+[25:47] So, imagine you have a bunch of desktops
+[25:49] and laptops that are slow, and many of
+[25:51] them lack updates, are prone to viruses.
+[25:53] Some are in the office, some are working
+[25:55] remotely, and they're exposed to a lot
+[25:57] of risk, and you can almost never have
+[25:59] them configured in a uniform manner. You
+[26:01] want to upgrade them, but you don't have
+[26:02] the budget or the IT staff to do so.
+[26:05] What do you do?
+[26:06] Well, one solution, not necessarily the
+[26:08] cheapest one, but a valid one, would be
+[26:11] to use virtual desktop infrastructure,
+[26:12] VDI, also known as virtual desktop
+[26:15] environment, like VDE.
+[26:17] Uh with VDI, you can host your desktop
+[26:20] OS on a central server and access it
+[26:22] from any device, including mobile
+[26:23] devices, and from anywhere. The office,
+[26:26] your home, the coffee shop. You don't
+[26:28] need to worry about the performance or
+[26:30] the security of your end devices because
+[26:31] all the heavy lifting is done by the
+[26:33] server. You only need a device capable
+[26:35] of running some sort of a remote desktop
+[26:37] software. That's it. In the above
+[26:40] scenario, all that the user sees and
+[26:42] interacts with on their desk is one of
+[26:45] those two types of devices. It could be
+[26:48] a generic computer. It doesn't even
+[26:50] matter what type of hardware it has,
+[26:52] since the only thing that it does is to
+[26:54] perform a remote desktop-like connection
+[26:56] to a virtual machine in your data
+[26:57] center. And that machine becomes the
+[26:59] user's desktop. The second type of
+[27:01] device the user could have is a pretty
+[27:03] dumb terminal. In other words, a client
+[27:05] that looks like a computer with a
+[27:08] display, keyboard, and mouse, network
+[27:09] connection, but that's pretty much it.
+[27:11] All that it has is a very simple CPU
+[27:14] with a little bit of memory and perhaps
+[27:15] a single app that the user can interact
+[27:17] with that allows them to create a remote
+[27:19] desktop connection over the internet
+[27:21] work. Nothing else. No other apps, no
+[27:23] inputs, no security risks. And this is
+[27:25] what we call a thin client. We also have
+[27:28] or had thick clients,
+[27:31] uh not so common nowadays, which were
+[27:33] similar to some old iPads or Android
+[27:35] tablets. You did have access to a
+[27:37] limited set of apps, but it wasn't
+[27:39] really a desktop and all your productive
+[27:41] tasks were still done through the remote
+[27:43] desktop connection.
+[27:44] So, that's the story on the client side.
+[27:46] Now, on the data center side, where the
+[27:48] virtual desktops are actually running as
+[27:50] VMs with VDI, you can choose between two
+[27:52] types of virtual desktops, persistent
+[27:55] and non-persistent.
+[27:57] Persistent virtual desktops are like
+[27:59] your own physical desktops or laptops.
+[28:01] You can customize them however you like,
+[28:03] and they will stay the same every time
+[28:05] you log in, even if you log off and shut
+[28:07] them down. Uh you have your own
+[28:09] wallpaper, your own icons, files, and
+[28:11] settings. Everything persists uh between
+[28:13] reboots. Non-persistent virtual desktop,
+[28:16] you guessed it, are like rented VMs.
+[28:19] They're identical upon startup and
+[28:21] static for all users. If you make any
+[28:23] changes, you can make them, but the
+[28:25] changes
+[28:26] uh that happen will be gone when you log
+[28:29] out. You cannot leave any choices
+[28:30] behind. You might be wondering why the
+[28:32] heck would I want a computer that
+[28:35] doesn't store data, doesn't persist
+[28:37] data.
+[28:38] Well, there are machines for very
+[28:39] specific tasks or for company users that
+[28:41] only need to access a very limited set
+[28:43] of internal web apps, for example. In
+[28:45] other words, for tasks that don't
+[28:47] require data persistence. Still, why
+[28:49] would you want to know all this VDI
+[28:52] business? Because it can give you more
+[28:54] control and security of your desktops.
+[28:57] You can access higher level of
+[28:59] processing and storage if a user needs
+[29:01] them and run software and services that
+[29:03] are beyond your devices capacity, which
+[29:06] you cannot do with regular desktops and
+[29:09] laptops. Uh one user needs a desktop
+[29:11] with 1 TB of RAM, a big problem with the
+[29:14] user has a dedicated workstation or a
+[29:16] laptop, but not that difficult if it's a
+[29:18] VM in a data center. You can also let
+[29:20] users use personally owned devices
+[29:23] without increasing the risk. From a
+[29:25] management perspective, this is
+[29:27] administration heaven. Everything is in
+[29:29] one place, easy to update all the
+[29:31] computers in the company, easy to scan
+[29:33] them for malware, easy to perform DLP,
+[29:35] data loss prevention, easy to destroy
+[29:38] and rebuild them from scratch a desktop
+[29:40] when something goes very wrong like when
+[29:42] malware is detected.
+[29:44] Uh the bad thing about VDI is a large
+[29:46] upfront investment because instead of
+[29:48] 2,000 laptops, now you need a data
+[29:50] center able to run and store 2,000
+[29:52] virtual machines. And don't forget that
+[29:54] the data center on your or your
+[29:56] connection to the data center, which
+[29:58] could also be a cloud, can become a
+[30:00] single point of failure. If everyone is
+[30:02] using the internet to connect to their
+[30:04] desktops hosted in Amazon's cloud and
+[30:06] your internet connection fails, the
+[30:08] entire company goes home. So, be careful
+[30:11] with this kind of single point of
+[30:13] failure.
+[30:14] Now, let's talk about virtualization
+[30:16] security for a bit. Now, when talking
+[30:18] about virtualization security, we could
+[30:20] go back all the way to ancient history
+[30:23] and start reiterating through all the
+[30:25] security principles that have ever been
+[30:27] invented because they all apply to
+[30:29] virtual environments as well. We're not
+[30:31] going to do that. We have an entire
+[30:33] video series, this one, mind you, about
+[30:35] general security principles. So,
+[30:36] instead, let's focus on just a couple of
+[30:38] issues that occurred only in virtualized
+[30:40] environments. We'll start with a simple
+[30:42] question. How many virtual machines do
+[30:44] you have in your company?
+[30:46] Do you know?
+[30:48] Are you now looking for reasons for why
+[30:50] you should not care?
+[30:52] Well, you should because having too many
+[30:54] virtual machines can lead to a problem
+[30:56] called VM sprawl. VM sprawl is when you
+[30:59] have more virtual machines than you need
+[31:01] or are you aware of.
+[31:03] It's VMs gone wild, out of control, like
+[31:06] your Steam library or whatever you buy
+[31:08] to feel good.
+[31:10] And just like your huge Steam library,
+[31:12] it's a waste of space, money, and
+[31:14] resources. VM sprawl can happen when
+[31:16] people start creating new virtual
+[31:17] machines for every new project,
+[31:19] application, test, demo, POC, curiosity,
+[31:22] and so on without any clear process
+[31:24] behind them and without deleting the old
+[31:26] ones.
+[31:28] Without a clear policy or process for
+[31:30] creating, managing, and retiring virtual
+[31:32] machines,
+[31:33] there is no documentation and no life
+[31:36] cycle to those machines. And in most
+[31:37] cases, it's enough for some time to
+[31:39] pass, a few months perhaps, for people
+[31:42] forget what those VMs were supposed to
+[31:44] be doing in the first place, especially
+[31:45] if they're called like VM07-X
+[31:48] new.
+[31:50] Okay?
+[31:51] Uh you might be wondering what's
+[31:52] stopping the IT department from cleaning
+[31:54] up old unused VMs from time to time.
+[31:56] Well, in a large infrastructure with
+[31:59] many people deploying VMs for many, many
+[32:01] purposes, if this process is not
+[32:03] documented and subjected to some
+[32:04] approvals, then after some time, someone
+[32:06] in IT will look over those VMs and will
+[32:08] say, "Honestly,
+[32:10] I have no idea what those VMs are doing,
+[32:12] but better not touch them because we
+[32:14] risk breaking something. Better leave
+[32:16] that machine in there. Who knows who it
+[32:19] belongs to and how important it is or he
+[32:22] or she is."
+[32:24] Fast forward a couple of years, and
+[32:25] there you go, you're paying for VMs
+[32:27] eating up your resources without even
+[32:28] knowing why.
+[32:30] This is bad not only because of the cost
+[32:32] and the complexity of it all, but it
+[32:34] also exposes you to security and
+[32:36] compliance risks.
+[32:37] Compliance risks because your VMs are
+[32:39] most likely created without any approval
+[32:41] process and security risks because well,
+[32:43] if you create a VM and you forget about
+[32:45] it, and it keeps on running in there for
+[32:47] months or years,
+[32:49] obviously nobody updates it anymore.
+[32:51] It's a hacker's dreamland. And since
+[32:53] they're running within your
+[32:54] infrastructure, any vulnerability in
+[32:56] those long forgotten VMs can help, quote
+[32:59] on quote, attackers pivot to the rest of
+[33:01] your internal network.
+[33:03] Another risk when it comes to
+[33:04] virtualization is called VM escaping.
+[33:07] That's when a software within a guest OS
+[33:09] is able to breach the isolation
+[33:12] provided by the hypervisor and can
+[33:14] access data from other VMs.
+[33:16] Yikes. Now, you can see this all sounds
+[33:19] pretty generic. It's like saying, "You
+[33:21] know, there's a risk that the front-end
+[33:23] server will get compromised and will
+[33:25] attack the back-end server." It doesn't
+[33:27] really say anything about the type of
+[33:29] the attack itself, but it is possible,
+[33:32] just like in the physical world, where a
+[33:33] vulnerability or even a misconfiguration
+[33:35] on the hypervisor might allow this. It
+[33:37] sounds dangerous and it is. Just think
+[33:40] about the implications of such exploits
+[33:42] in the public cloud infrastructure of
+[33:44] major cloud providers, where hundreds of
+[33:47] clients share resources on the same
+[33:48] physical servers.
+[33:50] And somewhat fortunately, all you can do
+[33:53] in there is to keep your hypervisors up
+[33:55] to date and perhaps do a configuration
+[33:56] review from time to time, just to be
+[33:58] sure.
+[33:59] Another problem is called shadow IT.
+[34:01] This is when a department or just a
+[34:03] single individual deploys some piece of
+[34:05] new software or hardware without the
+[34:07] knowledge or permission of senior
+[34:08] management or of the IT department. It
+[34:11] usually happens because of other
+[34:13] restrictions put in place through
+[34:15] security policies, which people
+[34:16] sometimes try to circumvent.
+[34:19] And it also happens because in many
+[34:20] companies there is just too much
+[34:22] bureaucracy between a user and the
+[34:24] equipment they need or the software they
+[34:26] need, and the process is very difficult
+[34:29] and time-consuming. So, people are
+[34:30] looking for shortcuts all the time.
+[34:33] Sometimes shadow IT even happens because
+[34:35] users are not aware of or they're not
+[34:37] satisfied with the existing IT solutions
+[34:39] provided by the company. Example of this
+[34:41] could range from bringing a small
+[34:43] computer or a router from home,
+[34:45] installing unlicensed applications,
+[34:47] installing additional access points if
+[34:49] you don't like how the Wi-Fi is working
+[34:50] in your office, and even storing
+[34:52] configuration files and company files in
+[34:54] services such as Dropbox just because
+[34:56] it's so convenient, or uploading such
+[34:58] sensitive files to
+[35:01] you know, AI engines, generative AI
+[35:03] engines. You should not get any
+[35:05] confidential data from your company.
+[35:08] Apart from convenience, shadow IT pretty
+[35:10] much has only downsides. You get an
+[35:12] inconsistent IT infrastructure, you
+[35:14] don't really have any visibility and
+[35:15] accountability of your IT operations
+[35:18] related to shadow IT,
+[35:19] and it brings a lot of risks to security
+[35:22] and compliance. Basically, all shadow IT
+[35:24] components are the are a let's say no
+[35:27] man's land type of security zone where
+[35:29] anything goes and your security policies
+[35:31] have no power in that realm.
+[35:34] What's worse is that those components
+[35:37] are usually under the security team's
+[35:38] radar, and they don't even know that
+[35:41] there's an additional attack surface
+[35:42] there.
+[35:43] We also need to address officially
+[35:45] containers. Some people would say that
+[35:46] containerization is the next stage in
+[35:49] the evolution of virtualization, the
+[35:51] same virtualization that you might have
+[35:52] in your data center, and the same one
+[35:54] you find in public cloud providers.
+[35:56] It is somehow and somehow it isn't an
+[36:00] evolution of virtualization. This is
+[36:03] mainly because at least for now, we have
+[36:05] good use cases for VMs, and we have good
+[36:08] use cases for containers,
+[36:10] and none is going to replace the other
+[36:11] one anytime soon.
+[36:14] As you know, with virtual machines, we
+[36:16] have a hypervisor, and we know that it
+[36:17] might be either a type one or type two.
+[36:20] On top of this hypervisor, we run our
+[36:22] virtual machines, and we have complete
+[36:23] isolation in place because each virtual
+[36:25] machine runs its own independent and
+[36:27] completely isolated operating system.
+[36:31] You can mix and match Windows and Linux
+[36:32] VMs on the same host. It's great for
+[36:34] resource utilization. It's great for
+[36:36] management. You have quite a lot of
+[36:37] flexibility with VMs. Move them around,
+[36:40] scale them up and down, and so on.
+[36:42] So, why do we need something else or
+[36:43] what can we improve here?
+[36:46] Well, the main idea behind containers is
+[36:48] to eliminate the operating system from
+[36:50] within the virtual machine itself.
+[36:52] Actually, we're not eliminating the OS
+[36:54] completely because apps cannot run
+[36:57] without an OS. We need the OS to provide
+[36:59] drivers and access to hardware resources
+[37:01] and such.
+[37:02] But, what if we're only running Linux
+[37:05] applications in all our virtual
+[37:07] machines?
+[37:08] Would it not be simpler to just have one
+[37:10] single Linux OS
+[37:12] that all applications share and use?
+[37:14] Because at the end of the day, all the
+[37:16] apps need is just a kernel. And if the
+[37:19] app needs runtime environments,
+[37:22] libraries, and any other attachments, we
+[37:24] can just bundle them along with the app.
+[37:27] We don't really need to run one instance
+[37:28] of the same operating system for each
+[37:30] and every application that we have like
+[37:32] like we do with virtual machines.
+[37:34] So, this is how we got to containers.
+[37:36] Instead of the hypervisor, we now have
+[37:38] an operating system that is running a
+[37:39] container engine. It could be Docker, it
+[37:41] could be something like Rocket,
+[37:43] Containerd, Cri-o, LXC, Hyper-V. It
+[37:46] really doesn't matter since containers
+[37:47] are pretty standardized nowadays and
+[37:49] they
+[37:50] don't really care on which container
+[37:52] engine they're running, which is also
+[37:53] great.
+[37:54] Now,
+[37:55] what the container engine does is it
+[37:57] takes care of resource allocation and
+[37:59] isolation for the apps running on top of
+[38:01] it. These isolation boxes are called
+[38:04] containers and all the containers
+[38:06] can access the kernel functions from the
+[38:08] same underlying OS on the host.
+[38:11] One OS, multiple isolated apps. That's
+[38:14] the story behind containers.
+[38:17] This also makes containers blazingly
+[38:19] fast. While a VM could take anywhere
+[38:21] from 20 seconds to more than 20 minutes
+[38:23] to boot up.
+[38:24] A container does not take longer than
+[38:26] the application inside of it to start,
+[38:28] which sometimes can be less than a
+[38:29] second, especially for microservices.
+[38:31] They are easy to orchestrate. You can
+[38:33] use tools such as Kubernetes to monitor
+[38:35] the resource usage, scale the number up
+[38:37] or down when needed. Uh they can be
+[38:40] rebuilt automatically when one fails.
+[38:42] You can push staggered updates to your
+[38:43] deployments and slowly upgrade all your
+[38:45] containers without disrupting the
+[38:47] service that your users access. There's
+[38:50] a lot you can do with containers.
+[38:52] And since you can probably guess,
+[38:54] there's also a limitation here. Having
+[38:56] all containers on a server use one
+[38:58] single OS, be it Windows or Linux, means
+[39:01] that all your apps on that server must
+[39:03] be compatible with the OS. So, you have
+[39:05] to decide beforehand if your host, your
+[39:07] server, will host either Linux or
+[39:09] Windows containers because it cannot
+[39:12] host both types, at least not at the
+[39:14] same time. You did not have this
+[39:16] limitation with virtual machines. You
+[39:18] could just as easily run as many Windows
+[39:20] and Linux VMs on the same physical host.
+[39:23] But, it is a problem. It's a It is a
+[39:24] limitation with containers.
+[39:27] Another interesting one is called
+[39:28] function as a service, sometimes called
+[39:30] serverless architecture.
+[39:33] It's a cloud computing concept where you
+[39:35] just bring the code, usually just a
+[39:37] small piece of code that does a very
+[39:39] specific task. The code should get some
+[39:41] inputs, should generate some outputs,
+[39:43] hence the name function. And the cloud
+[39:45] service provider takes care of spinning
+[39:47] up, managing, monitoring, and destroying
+[39:50] the infrastructure needed to run your
+[39:51] code.
+[39:53] It's called serverless not because it
+[39:54] does not run on servers. Obviously, it
+[39:56] does. It's not magic. Uh of course, it
+[39:59] runs on servers, but the cloud provider
+[40:01] keeps those servers hidden behind the
+[40:03] curtain. That's because the purpose of
+[40:05] the service is to provide you with a
+[40:06] place where you can bring your own code
+[40:08] and run it.
+[40:10] That's it. So, it's You could just call
+[40:12] it running code as a service, if you
+[40:14] want. You don't care about the hardware.
+[40:17] You don't care about the compute or
+[40:19] storage resources that get allocated to
+[40:21] you. Don't care about redundancy. Don't
+[40:23] care about resiliency. You don't care
+[40:25] about updating an operating system, the
+[40:27] runtime needed by your app. It just
+[40:29] works. And yes, it does come with a lack
+[40:31] of visibility and a lack of flexibility.
+[40:34] You can only run on on platforms and
+[40:37] versions and
+[40:39] runtimes that are offered by the cloud
+[40:42] provider, but sometimes that's exactly
+[40:44] what you need.
+[40:45] All the cloud providers nowadays support
+[40:47] it. Amazon Web Services Lambda, Google
+[40:50] Cloud Functions, Microsoft Azure
+[40:52] Functions, IBM Cloud Functions, and
+[40:54] Oracle Cloud Functions. And you're
+[40:56] thinking,
+[40:57] "Wait, isn't this the same thing as
+[40:59] PaaS, Platform as a Service? Doesn't the
+[41:01] definition of Platform as a Service
+[41:03] state that you just bring the code and
+[41:05] the cloud provider provides the rest?"
+[41:08] Well, yes, with the exception that with
+[41:10] serverless computing, you are only
+[41:12] billed for as long as your code runs.
+[41:16] So, as an example, let's say you have a
+[41:17] website or a web app where users can
+[41:19] upload photos. You might have a small
+[41:22] function in your web app that compresses
+[41:24] and resizes the photos uploaded by users
+[41:27] to an acceptable format. The function
+[41:29] could be hosted in a Function as a
+[41:31] Service service and connected to the
+[41:34] trigger or the event of a user uploading
+[41:36] a photo. When the photo gets uploaded,
+[41:39] the container quickly spins up to run
+[41:40] your code and processes the photo.
+[41:42] Remember, spinning up a container
+[41:44] usually takes less than a second, so
+[41:45] there's virtually no overhead there.
+[41:48] Once the container is up, your code
+[41:49] runs, the photo is processed, saved to
+[41:52] some other storage, another event is
+[41:54] fired to let you know that the photo is
+[41:55] processed, and when the code ends
+[41:57] execution,
+[41:59] uh the container is destroyed.
+[42:01] And you are only billed, you're only
+[42:02] paying for the time it took your
+[42:04] container to run. So, yeah, writing
+[42:06] efficient code can actually save you
+[42:07] real money with Function as a Service.
+[42:10] And yes, you can write even entire apps
+[42:12] only so-called functions. You could have
+[42:14] a front end, a middleware layer running
+[42:16] as functions. The back end though,
+[42:18] especially if it relies on a database,
+[42:20] might be a hosted database service. So,
+[42:22] that's not something that should be
+[42:23] running in a function as a service
+[42:25] environment because a database still
+[42:26] needs to be hosted somewhere else. But
+[42:28] still, the most dynamic app components
+[42:31] can be migrated to cloud functions.
+[42:34] Many companies that work with IoT,
+[42:36] Internet of Things, use function as a
+[42:38] service to process events coming in from
+[42:39] smart IoT devices and sensors. So, this
+[42:42] is another use case for you.

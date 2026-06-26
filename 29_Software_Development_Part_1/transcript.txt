@@ -1,0 +1,1086 @@
+[00:08] Software development. Now, software
+[00:11] development is a complex task. And just
+[00:14] to take this out of the way, when we say
+[00:16] software development, if you're not in
+[00:17] this field in any way and this sounds
+[00:19] weird to you, think of software
+[00:21] development as programming.
+[00:23] It's as simple as that. Even if this
+[00:25] oversimplification might offend some
+[00:27] developers out there, but for the sake
+[00:29] of just having a definition on top of
+[00:31] which we can build some security
+[00:32] concepts, just think of software
+[00:34] development as programming.
+[00:36] Now, developers are first concerned with
+[00:38] creating working applications. And
+[00:40] unfortunately, sometimes security is
+[00:42] mostly an afterthought or something that
+[00:44] is patched on top of an insecure but
+[00:47] working app. In some projects, at some
+[00:50] point in the development where the app
+[00:52] is already in a proof of concept state,
+[00:55] some smartass comes in and asks that all
+[00:58] data needs to be encrypted at rest and
+[00:59] in transit. Authentication needs to use
+[01:02] two factors and so on. This is important
+[01:04] especially when apps handle sensitive
+[01:06] data and interact with the public
+[01:08] because weak applications become attack
+[01:10] vectors, which create potential security
+[01:13] risks to entire companies and to their
+[01:16] data.
+[01:17] Ultimately, attacks target
+[01:19] vulnerabilities and vulnerabilities are
+[01:21] just faults in some software system that
+[01:24] has been developed at some point.
+[01:27] Software development and security.
+[01:29] Security controls should be introduced
+[01:31] into the system development life cycle
+[01:33] from the very beginning. That is, you
+[01:35] should not write code at all if it's not
+[01:38] designed with security in mind.
+[01:40] Otherwise, we, or worse, others looking
+[01:43] for them, will find vulnerabilities in
+[01:45] our code. They will happen due to bad
+[01:48] coding practices such as the creation of
+[01:50] backdoors or default accounts or
+[01:52] unsanitized inputs. These can create
+[01:54] buffer overflow vulnerabilities. They
+[01:56] can allow user to bypass privileges or
+[01:59] even authentication entirely. Can reveal
+[02:02] sensitive data. They can lead to a
+[02:04] denial of service and so on. So, we need
+[02:06] another approach to the development
+[02:08] process. Not only for the functional
+[02:11] requirements. That is, we don't just
+[02:13] want a working application, but also to
+[02:16] make sure it complies with security
+[02:18] standards. Security should be integrated
+[02:20] into every stage of the development.
+[02:23] Funny enough, even if writing insecure
+[02:25] code just to have something that works,
+[02:27] something to show to your boss, to your
+[02:29] client, sounds easier. It's much easier
+[02:32] to write that code securely from the
+[02:34] very beginning instead of patching
+[02:37] security afterwards on a piece of code
+[02:39] that was not designed with security in
+[02:40] mind.
+[02:41] In the world of software development,
+[02:43] programming languages are the, well,
+[02:46] languages and the tools that developers
+[02:48] use to build application code, which in
+[02:50] turn, when executed, results in what we
+[02:53] can all access, download, and enjoy,
+[02:55] applications.
+[02:57] There are a lot of languages out there.
+[02:59] The choice comes down to many things.
+[03:01] How easy it is to write code, how
+[03:02] comfortable each developer is with each
+[03:05] language, how well is the language
+[03:06] tailored to a specific use case,
+[03:09] how religiously attached is a developer
+[03:12] to his or her preferred programming
+[03:14] language, and the list keeps going. And
+[03:16] also, it depends on how they are
+[03:19] designed and how much is taken care of
+[03:21] in the background versus how much is
+[03:24] left for the developer to decide. They
+[03:27] each have their own security
+[03:28] considerations.
+[03:30] At the most fundamental level, computers
+[03:32] operate in binary code, a sequence of
+[03:35] ones and zeros, which translate into
+[03:37] simple instructions that can be executed
+[03:39] directly by the CPU. This is known as
+[03:42] machine language and is the language of
+[03:44] the CPU.
+[03:45] The CPU can do simple stuff. Basic math,
+[03:48] moving bytes around, comparing numbers,
+[03:51] reading and writing to memory, jumping
+[03:53] to specific locations to execute the
+[03:55] next instruction or to read some data,
+[03:57] and so on. But it can do all these
+[03:59] simple things really, really fast. Most
+[04:02] basic instructions in the CPU take only
+[04:04] one CPU cycle. These cycles are what we
+[04:07] are measuring when talking about CPU
+[04:09] frequencies or speed. 5 GHz means 5
+[04:13] billion cycles per second. In a very,
+[04:17] very, very theoretical approach, this
+[04:20] could mean at least 5 billion
+[04:22] instructions or math operations every
+[04:24] second. And that's just for one CPU
+[04:27] core. Actually, from a statistical
+[04:29] perspective,
+[04:31] CPU architectures have evolved up to the
+[04:32] point where a simple instruction can
+[04:34] even be executed in somehow less than
+[04:37] one cycle because CPUs now have
+[04:40] prediction features and instruction
+[04:42] pipelines. So, if the required circuits
+[04:44] are available, the CPU can actually
+[04:46] perform more than one instruction in one
+[04:48] cycle in different parts of the
+[04:50] instruction pipeline.
+[04:51] This prediction happens with a certain
+[04:53] margin of error because the CPU has to
+[04:55] predict what the next instruction might
+[04:57] be in order to prepare it,
+[04:59] but it's more often right than wrong.
+[05:02] This also has a downside as this
+[05:05] predictability was exploited by the
+[05:07] Spectre and Meltdown attacks. But we
+[05:10] digress here.
+[05:12] Now, this machine language is specific
+[05:15] to each CPU chipset and is generally
+[05:17] human unfriendly. We like to see the big
+[05:20] picture. Computers like to see details.
+[05:22] So, a first step above machine language
+[05:24] is assembly language, which uses short
+[05:27] text instructions like ADD for add, JMP
+[05:30] for jump, and so on
+[05:32] to represent a CPU's basic instructions.
+[05:35] I remember from my college days how one
+[05:37] of the homeworks was to perform a large
+[05:39] number multiplication in assembler.
+[05:42] It took me around 30 to 50 lines of
+[05:45] code. And that's just for one
+[05:47] multiplication operation on large
+[05:49] numbers, indeed.
+[05:51] Now, if we always had to write 30 lines
+[05:54] of code for every large number
+[05:56] multiplication, we probably would not
+[05:58] have anything resembling Netflix,
+[06:00] internet banking, or Fortnite.
+[06:03] So, developers typically like more
+[06:05] high-level languages like Python, C++,
+[06:08] Ruby, Java, .NET, Golang, Node.js, and
+[06:12] so on. These languages resemble a bit
+[06:15] more the human language and the way
+[06:17] humans are used to handle data.
+[06:19] We can also use objects that resemble
+[06:21] real-life entities, function names, who
+[06:24] can tell the code to repeat sections,
+[06:26] check for conditions, create
+[06:27] connections, expose APIs, open files,
+[06:30] and so on. Now, of course, it it is
+[06:33] closer to human language, but it's it's
+[06:35] far from being trivial. Oh, and by the
+[06:37] way, higher-level programming languages
+[06:39] offer some degree of portability across
+[06:41] different operating systems and CPU
+[06:43] architectures. Remember that assembler
+[06:46] instructions had to be written
+[06:48] specifically for each CPU, while Python,
+[06:51] Java, or C++ code can easily be moved
+[06:54] and recompiled on different computers
+[06:56] and CPU architectures without major
+[06:57] changes to the code, if if any.
+[07:01] At the end of the day, these high-level
+[07:02] programming languages are also
+[07:04] translated into low-level CPU
+[07:06] instructions simply because that's the
+[07:07] only language the CPU knows how to
+[07:10] execute. But in order to transform,
+[07:12] let's say, Python or Java code into
+[07:13] machine code, we have two main options,
+[07:16] compilation or interpretation. Compiled
+[07:19] languages,
+[07:20] such as C, Java, C#, require the use of
+[07:24] a compiler program to transform the
+[07:26] source code into an executable file.
+[07:29] These executables are then given to the
+[07:32] users who run them on their machines. An
+[07:34] executable file is nothing more than an
+[07:36] operating system specific wrapper around
+[07:39] machine code. It is OS specific because
+[07:42] the OS must decide what to do with it
+[07:43] and how to execute it, and it contains
+[07:46] machine code because, again, that is the
+[07:48] only truly executable code out there.
+[07:51] Sometimes reverse engineering is
+[07:53] possible, which means that sometimes,
+[07:55] with a lot of skill and perhaps even
+[07:58] more luck than skill,
+[08:00] you can decompile these executables back
+[08:03] into their original source code, or
+[08:05] something that looks like it, except for
+[08:08] function, object, or variable names,
+[08:10] perhaps,
+[08:11] or to an intermediate assembly language,
+[08:13] which is useful for a lot of stuff.
+[08:16] For example, we reverse engineer malware
+[08:18] to analyze it and to figure out what it
+[08:20] does. Now, in some cases, it can be used
+[08:23] for finding bugs and during software
+[08:26] testing, for finding vulnerabilities,
+[08:29] and for cracking software and games.
+[08:31] Some programming languages depend on
+[08:33] runtime environments for code execution
+[08:35] across different systems. The Java
+[08:37] Virtual Machine, or JVM, is a good
+[08:39] example, allowing the execution of
+[08:41] compiled Java code on any system where
+[08:44] the JVM is installed. JVM is part of the
+[08:47] JRE, Java Runtime Environment, which is
+[08:51] something that you probably heard about
+[08:52] before or had to install on your system
+[08:55] before.
+[08:56] .NET has the CLR, Common Language
+[08:58] Runtime, as well.
+[09:00] Runtimes are like small virtual
+[09:03] environments, wrappers around the
+[09:05] running application that provide
+[09:06] additional benefits like running the
+[09:08] code in an isolated environment like a
+[09:10] sandbox, so that if if it's compromised,
+[09:13] it's not going to destroy the entire
+[09:15] system. Better security, better
+[09:17] isolation, better memory management
+[09:19] since it cannot go beyond the limits of
+[09:21] that constrained environment, and also
+[09:23] exception handling.
+[09:25] And we also have interpreted languages
+[09:27] like Python, JavaScript, Bash,
+[09:29] PowerShell.
+[09:31] Some of these are called scripting
+[09:32] languages, and that's because most
+[09:34] scripting languages are interpreted.
+[09:37] The code looks pretty much same as the
+[09:38] code of compiled languages, but instead
+[09:40] of distributing the compiled executable,
+[09:43] you distribute the code directly.
+[09:46] When you run these programs, an
+[09:48] interpreter on your system executes the
+[09:50] high-level language instructions and
+[09:51] translate them almost one by one into
+[09:54] machine code that is immediately
+[09:56] executed. This way you can see and
+[09:58] understand and follow the execution of
+[10:00] the original code but line by line and
+[10:03] you can make changes to it on the fly
+[10:05] without having to build or recompile
+[10:06] anything.
+[10:08] Now which one is better? Well,
+[10:09] performance-wise compiled code is
+[10:11] usually faster than interpreted code.
+[10:13] From a security standpoint, uh it's
+[10:15] pretty tough to say. You might think
+[10:18] that compiled code is uh safer because
+[10:20] it's more difficult to modify and to add
+[10:23] malware to it.
+[10:24] But [snorts] viruses do that all the
+[10:26] time. Even worse, if malware code is
+[10:28] added to an executable without a proper
+[10:30] antivirus and a known signature, you
+[10:32] cannot ever figure out that there is
+[10:34] malware in there.
+[10:35] On the other hand, interpreted code is
+[10:38] visible. It's harder to hide some
+[10:40] malicious code in it in plain sight.
+[10:42] >> [snorts]
+[10:42] >> But anyone having access to the code can
+[10:44] change it.
+[10:46] Developers often use libraries which can
+[10:49] be open source or proprietary and they
+[10:51] offer pre-written code for common
+[10:53] functions. In other words, libraries
+[10:56] help developers avoid reinventing the
+[10:58] wheel every time they need to use it.
+[11:01] Do you need some code to connect to
+[11:03] object storage in AWS? There's a library
+[11:05] for that. Do you need a code to
+[11:07] implement digital certificates in your
+[11:09] app? There's a library for that.
+[11:11] >> [gasps]
+[11:11] >> Security-wise, developers have to be
+[11:13] careful which libraries they are using
+[11:15] because they are basically adding
+[11:17] someone else's code to their own app.
+[11:19] And depending on where you found that
+[11:21] code, it might add vulnerabilities or
+[11:23] backdoors to your app as well. When you
+[11:26] know that the code works, it's pretty
+[11:28] easy to be lazy and not review it.
+[11:31] Object-oriented programming is a special
+[11:33] type of approach in programming
+[11:34] languages where instead of treating the
+[11:36] entire code as a huge procedural piece,
+[11:39] the program is abstracted into objects
+[11:41] that interact with each other. These
+[11:43] objects are nothing more than logical
+[11:46] constructs that try to represent the
+[11:48] real world as closely as possible
+[11:50] directly into your code. For example, in
+[11:52] a mobile app, the user would be an
+[11:54] object. The currently rendered page on
+[11:57] another object. The server or cloud
+[11:59] storage that the app accesses would also
+[12:01] be represented as an object and so on.
+[12:04] This abstraction helps us humans and
+[12:06] only us. Honestly, computers don't give
+[12:08] a crap about our objects, only about
+[12:10] machine-level instructions. But by using
+[12:13] objects, we can represent the
+[12:14] interactions inside the app in a way
+[12:16] that is much natural and easier to
+[12:18] design and follow by humans.
+[12:20] Errors can be found easier this way as
+[12:22] well. From a security standpoint, each
+[12:25] object should be similar to a black box.
+[12:28] It should be a self-contained
+[12:29] environment and we should only be
+[12:30] concerned with its inputs, outputs,
+[12:33] or in other words, its interface or the
+[12:36] way it is supposed to interact with the
+[12:38] outside world.
+[12:39] An action that an object can perform or
+[12:41] it can be told to perform is called a
+[12:44] method. And objects belong to classes.
+[12:46] For example, multiple objects
+[12:48] representing users would all belong to
+[12:50] the same user class since they are all
+[12:52] built the same way, they have the same
+[12:55] methods and interact with the rest of
+[12:56] the app in the same way. So the class
+[12:59] becomes like a template, a blueprint for
+[13:01] the actual instantiated objects.
+[13:05] Software flaws. There is absolutely no
+[13:07] software out there that is completely
+[13:09] bug-free. That's a given. You could also
+[13:12] say that there's no piece of code that
+[13:14] is vulnerability-free, only code whose
+[13:17] vulnerabilities haven't been discovered
+[13:19] yet. Most of computer security actually
+[13:22] revolves around this concept. Code will
+[13:24] fail. Code has bugs. Vulnerabilities
+[13:27] exist. So let's see how we can detect,
+[13:29] mitigate, contain them.
+[13:32] Because basically that's what all
+[13:34] security controls do. They just dance
+[13:36] around errors and vulnerabilities.
+[13:39] So let's see a couple of ways to
+[13:40] minimize these failures.
+[13:42] First of all, I'll start with what I
+[13:44] like to call the root of all evil, input
+[13:47] validation or lack of proper input
+[13:49] validation.
+[13:51] I said this in other training sessions
+[13:52] as well that this is actually the root
+[13:55] of all evil. If we were able to find a
+[13:57] way to perform flawless, perfect input
+[14:01] validation, the market for security
+[14:04] professionals and security solutions out
+[14:06] there would crash and burn. Why is that?
+[14:09] Well, pretty much every single type of
+[14:11] vulnerability has an exploitation method
+[14:14] that relies on some sort of input.
+[14:17] Denial-of-service, buffer overflows,
+[14:19] malware, rootkits, SQL injection,
+[14:22] cross-site scripting, every single
+[14:24] attack out there
+[14:26] apart from social engineering and
+[14:28] physical attacks
+[14:30] relies on some type of user or attacker
+[14:33] interaction which in turn means
+[14:36] malicious input sent to the app,
+[14:38] malicious input that you failed to
+[14:40] detect as being malicious and is now
+[14:43] processed and thus allowed to exploit a
+[14:47] vulnerability. If you were able to
+[14:49] detect that the input was malicious in
+[14:51] the first place, also known as
+[14:52] performing proper input validation, then
+[14:54] all these security problems would be
+[14:56] gone.
+[14:58] So in a theoretical world,
+[15:00] proper input validation at all levels,
+[15:02] user interface, network APIs,
+[15:04] everywhere, could theoretically avoid
+[15:06] any kind of attacks, even unknown ones.
+[15:09] And by the way, input validation means
+[15:11] analyzing and accepting only input that
+[15:13] we know the application was designed
+[15:15] for, nothing else.
+[15:17] If you expect a person's name in an
+[15:19] input field on a webpage, make sure you
+[15:21] only accept the proper character set, a
+[15:23] fixed length, no code tags, no binary
+[15:26] data, and ideally you perform these
+[15:29] validations on both the client and the
+[15:31] server because the client checks can be
+[15:34] overridden by an attacker.
+[15:36] If you give the attacker the, let's say,
+[15:38] JavaScript code to check their own
+[15:40] inputs, the hacker can simply ignore
+[15:43] your code and not execute it.
+[15:45] And funnily enough, some attacks target
+[15:47] not the application but the input
+[15:49] validation functions themselves.
+[15:52] So be very careful how you make those
+[15:54] checks as well because in order to
+[15:56] figure out if you want to accept an
+[15:58] input or not, you still have to look at
+[16:00] it and load at least parts of it in
+[16:03] memory. Sometimes that's all it takes to
+[16:06] dig your own grave. Some inputs are
+[16:08] designed to crash the input validation
+[16:10] process and have it stuck in an infinite
+[16:12] loop.
+[16:13] Also, you might have heard that input
+[16:15] validation should always be performed on
+[16:16] the server side and not on the client
+[16:18] side. My advice,
+[16:21] do it in both places because on the
+[16:23] client side, perhaps it won't protect
+[16:25] you against real hackers,
+[16:27] but validating inputs on the client will
+[16:29] help keep your server load low when all
+[16:32] you need to reject are simple input
+[16:34] errors generated by regular users.
+[16:38] It might have happened to you as well.
+[16:39] You You copy and paste a name or an
+[16:42] address in a web form and you
+[16:44] accidentally paste in there a 10,000
+[16:46] character conversation text or book that
+[16:49] you just copied a while ago and you
+[16:51] forgot you had it in your clipboard.
+[16:53] That's just human error. Have your local
+[16:55] JavaScript code tell you that your input
+[16:57] is too big or it doesn't match the
+[16:59] required format. There is no need to
+[17:00] overload the server with that
+[17:03] junk.
+[17:04] Authentication issues come next. First
+[17:06] of all, design authentication so that
+[17:08] you authenticate according to the
+[17:10] sensitivity of what information you're
+[17:12] accessing.
+[17:13] An age verification can be a simple
+[17:15] yes-no prompt, but access to
+[17:17] confidential data should require strong
+[17:19] passwords and multi-factor
+[17:20] authentication.
+[17:22] If you can, it is recommended to use
+[17:23] your company's authentication system.
+[17:25] Don't reinvent the wheel and don't start
+[17:27] designing your own authentication
+[17:29] systems from scratch for a specific app.
+[17:32] Active Directory users or managed
+[17:34] identities in cloud environments are
+[17:35] much more secure, validated, true and
+[17:38] tested solutions than whatever you might
+[17:41] come up with.
+[17:43] And once authenticated, be careful with
+[17:45] session management.
+[17:46] Session IDs act as unique secret
+[17:49] identifiers following a successful
+[17:51] authentication. So a compromised session
+[17:52] ID can be similar to a compromised
+[17:55] account password, actually.
+[17:57] Store and transmit session data
+[17:58] securely. Make sure they expire sooner
+[18:01] than later.
+[18:02] Errors, or at least those that you are
+[18:04] aware of, are another important topic.
+[18:07] Software should be designed to produce
+[18:09] controlled errors based on exceptions in
+[18:12] your code. You might be wondering, "What
+[18:14] do you mean by that? Why should I design
+[18:16] my program to produce controlled errors?
+[18:20] Shouldn't I design it not to return
+[18:23] errors at all?"
+[18:25] But the idea here is to have exception
+[18:27] handling in your code. That is code that
+[18:29] is specifically designed to instruct
+[18:32] your program what to do next and what to
+[18:34] execute when an error happens.
+[18:37] You don't want to leave your app in an
+[18:38] unknown state following an error because
+[18:40] that state might be an insecure one. So
+[18:43] have code that react in a controlled
+[18:45] manner whenever your app cannot do
+[18:47] something when an outcome is unexpected.
+[18:51] Also on the topic of errors, you need to
+[18:53] tell the user when they're doing
+[18:54] something wrong or when the application
+[18:56] has a problem, obviously.
+[18:58] Detailed errors are very useful while
+[19:00] developing or testing your code because
+[19:01] they can tell you as a developer or as a
+[19:04] tester exactly where the problem lies.
+[19:07] But in a production application, you
+[19:08] should never provide more details than a
+[19:11] regular user needs because if that user
+[19:13] is an attacker, perhaps one that
+[19:15] intentionally caused that error and
+[19:18] you're displaying a stack trace with all
+[19:20] the function calls that lead to the
+[19:22] error, you've just given an attacker
+[19:24] details about the inner workings of your
+[19:26] app. And sometimes error can expose
+[19:28] sensitive information and flaws as well.
+[19:31] Logs, especially those related to
+[19:33] security events, are also important.
+[19:35] Logs are messages that are generated and
+[19:38] then stored locally or sent to some
+[19:39] remote storage location when a certain
+[19:41] event happens in an app. You could
+[19:43] perhaps log all webpage accesses to your
+[19:46] app, for example, but this would
+[19:48] generate a lot of mostly useless data.
+[19:51] Much better is to log events that might
+[19:53] indicate problems like failed
+[19:55] authentication attempts, input
+[19:57] validation that could not be performed
+[19:58] or failed. Those are usually scary.
+[20:01] Attempting to use expired session data.
+[20:04] Same user accessing the app from two
+[20:05] different IP addresses. Regular users
+[20:08] performing admin tasks and so on. It
+[20:10] also means that you need to investigate
+[20:12] those. Simply logging that information
+[20:14] and then forgetting about it until the
+[20:15] day when you run out of log disk space
+[20:18] is is similar to not logging anything at
+[20:20] all.
+[20:21] How your application fails is also a
+[20:23] matter of concern. But wait, you say.
+[20:26] If you know that the app will fail, how
+[20:28] about making it not fail? You are right,
+[20:31] my young Padawan, but what if your app
+[20:34] fails for some unforeseen reason? Some
+[20:36] vulnerability that you did not expect to
+[20:38] happen.
+[20:40] Maybe it fails because of your crappy
+[20:42] code with no attackers involved. So, you
+[20:44] need to plan for situations where
+[20:46] specific parts or modules in your app
+[20:49] will simply fail for whatever reason.
+[20:51] Since we don't know what or why will
+[20:54] fail, you cannot really predict much
+[20:56] about how the rest of the app will
+[20:57] behave
+[20:59] with a missing limb.
+[21:01] But in general and for security
+[21:03] purposes, we have two ways in which we
+[21:05] can try to protect the rest of the app.
+[21:07] That is when a component stops working,
+[21:10] the app can fail open or secure. Fail
+[21:14] open means letting the app bypass
+[21:16] security controls when they are not
+[21:18] available anymore. Fail secure means
+[21:20] locking down the app when security
+[21:22] controls are unavailable. Here is a fail
+[21:24] secure example. Blue screen of death. It
+[21:27] means that something failed miserably
+[21:29] without the OS being able to mitigate
+[21:31] it. What does the operating system do?
+[21:33] Stop everything right now because the
+[21:35] system might become too unpredictable to
+[21:38] proceed. Or if a firewall fails, should
+[21:41] we then start allowing all connections
+[21:43] from the outside? Hell no.
+[21:46] And here's a fail open example. Power
+[21:49] failure due to a fire in an office
+[21:51] building.
+[21:52] Automatic security doors need power.
+[21:55] Do you want them to be locked down or do
+[21:58] you want them to become open when they
+[22:00] lose power so that people can evacuate?
+[22:04] Well, does that mean that an attacker
+[22:05] could intentionally cut power to those
+[22:07] doors to bypass them? Yes.
+[22:10] Welcome to security. That's why it's a
+[22:12] profession and not just a checklist.
+[22:15] Software development life cycle.
+[22:17] When building software, project
+[22:19] management usually follows a life cycle
+[22:21] model so that everyone knows
+[22:24] what they should be working on and in
+[22:25] which phase in the big picture they
+[22:28] currently are.
+[22:29] A software development life cycle or
+[22:31] SDLC not only helps with good code
+[22:34] practices, but also with security
+[22:36] because
+[22:37] as we said before, security should be
+[22:39] embedded in software from the very
+[22:41] beginning, which also means that it
+[22:42] should be accounted for in each of the
+[22:44] SDLC phases. Speaking of, here are the
+[22:48] phases of a generic SDLC model. There
+[22:50] are many models. Some might differ
+[22:52] slightly, but
+[22:53] in general, phases align to these
+[22:56] descriptions. We first define the app
+[22:59] conceptually. What exactly do we want?
+[23:01] And we make sure that everyone wants the
+[23:03] same thing.
+[23:04] The most we can do from a security
+[23:05] perspective here is to list a very
+[23:07] high-level overview of what security
+[23:09] means for our app. And we can also
+[23:12] classify the type of data that the app
+[23:14] will process. Sensitive, personal,
+[23:16] medical, financial, pornography,
+[23:19] whatever, and so on.
+[23:21] Next, we have the functional
+[23:22] requirements. How the app should work,
+[23:24] what modules it should have and how they
+[23:26] should interact with each other. In
+[23:28] general, functional requirements focus
+[23:30] on each component and its inputs,
+[23:32] outputs, and what should happen between
+[23:34] the inputs and the outputs.
+[23:37] Then security control specifications.
+[23:39] These come next because at this point we
+[23:41] should have a pretty good understanding
+[23:42] of what our app should look like and
+[23:44] what kind of data it should process. So,
+[23:46] we focus here on authentication,
+[23:48] confidentiality, and integrity of data.
+[23:50] And we also we design components to
+[23:52] provide audit trails of who did what and
+[23:55] what happened inside the app.
+[23:58] The app as a whole is next reviewed on
+[24:00] paper because we don't have any code yet
+[24:02] and everyone pitches in to determine if
+[24:04] the components, the way they were
+[24:05] designed, play well together, match
+[24:08] customer expectations and best
+[24:09] practices.
+[24:10] Next, we actually code the app, of
+[24:12] course, keeping in mind that security
+[24:14] must be built into the app from the
+[24:16] beginning.
+[24:17] Code reviews happen here often and they
+[24:19] should happen as additional eyes can see
+[24:22] additional issues before they end up in
+[24:24] the shipped application.
+[24:26] Different levels of testing need to be
+[24:28] performed here as well, starting from
+[24:30] unit tests, which cover small modules
+[24:33] and pieces of code, and then going to
+[24:35] scenario-based testing, stress testing,
+[24:37] performance testing, and so on. Each
+[24:40] newly added feature should be
+[24:41] accompanied by a battery of regression
+[24:44] tests,
+[24:45] which means that at every step we should
+[24:48] rerun all the previous tests up to that
+[24:51] point so that we can be sure that the
+[24:53] new code that we just added does not
+[24:55] break some old code.
+[24:58] Once developers have enough of this
+[25:00] testing business, the app can be exposed
+[25:02] to a limited set of users to test it in
+[25:04] a close to real-life scenario. This is
+[25:07] sometimes called UAT, user acceptance
+[25:09] testing, or POC, proof of concept.
+[25:13] Finally, after all the testing is done
+[25:15] or the deadline comes or the money ends,
+[25:18] whichever comes first, the app is
+[25:20] delivered to the end users. This is when
+[25:23] the next phase begins, the maintenance
+[25:24] phase. Bug fixing, monitoring the app in
+[25:27] production, solving trouble tickets,
+[25:29] fixing security flaws, and integrating
+[25:31] updates all happen in this phase, which
+[25:34] as you can expect can be a very long
+[25:36] phase until the software ends
+[25:38] support or until the development company
+[25:41] becomes bankrupt or until the last
+[25:43] developers leave for a better job
+[25:47] if it was an in-house developed app,
+[25:48] whichever comes first.
+[25:51] Software development methodologies. So,
+[25:53] let's see a couple of development
+[25:54] methods and life cycles.
+[25:56] Let's talk about the
+[25:58] just code and hope for the best approach
+[26:00] or the chaos methodology. Obviously,
+[26:02] we're going to make a little fun of it.
+[26:04] Chaos is pretty much like winging it.
+[26:07] You dive into coding without much of a
+[26:09] plan, fix bugs when you stumble upon
+[26:11] them. The specs, well, they're kind of
+[26:13] made up along the way if they exist at
+[26:15] all.
+[26:16] Documentation is an afterthought,
+[26:19] definitely. And testing, well, hit or
+[26:21] miss.
+[26:22] Now, this might be okay if you're
+[26:24] working on something small and you just
+[26:26] need to get it out of the door. This is
+[26:28] also how we pretty much did our
+[26:30] programming homeworks in our college
+[26:32] days.
+[26:33] But for anything else, it's a recipe for
+[26:36] disasters and headaches. You'll end up
+[26:38] with code that is absolutely as
+[26:39] organized as a as a teenager's bedroom.
+[26:42] It's quick, it's dirty, it's it's not
+[26:45] the way to go
+[26:47] if you want something solid and reliable
+[26:49] in the long run.
+[26:51] The waterfall method is like following a
+[26:53] recipe for making a meal or dinner.
+[26:56] You've got all your steps laid out from
+[26:58] the get-go and you don't move on to the
+[27:00] next step until the one you're on is
+[27:02] totally done. Super straightforward. If
+[27:05] you've got everything mapped out just
+[27:06] right, you're golden.
+[27:08] Now, the upside, of course, it's easy to
+[27:10] understand and easy to follow. You just
+[27:12] follow the steps. But here's the catch,
+[27:14] it has to be planned to perfection. If
+[27:16] not, well, it's spaghetti code without
+[27:19] sauce.
+[27:20] You cannot just wing it. So, while it's
+[27:22] great when you nail the plan, it's
+[27:25] pretty rigid and can trip you up if
+[27:27] anything unexpected pops up.
+[27:29] Normally, this plan doesn't allow you to
+[27:32] go back, but some implementations accept
+[27:35] a one-step-back iteration when you
+[27:37] realize that what you did on the current
+[27:39] phase is too crappy to move on to the
+[27:41] next. So, it's not that much about
+[27:43] stepping back as it's about not leaving
+[27:45] the current step until you're done.
+[27:49] Agile is all about being quick,
+[27:51] responsive,
+[27:52] flexible, and focusing on what the
+[27:54] customer needs.
+[27:55] Making stuff bit by bit instead of all
+[27:58] at once. It's a set of values also and
+[28:01] principles that put the team and how
+[28:03] they work together.
+[28:04] The goal is to get a working product out
+[28:08] there as fast as possible, even if it's
+[28:10] the bare minimum at first.
+[28:13] Back in 2001, a bunch of smart folks
+[28:15] came up with the Agile Manifesto, which
+[28:17] is a basically a list of values and
+[28:19] principles that guide the whole Agile
+[28:21] thing. Long story short, it's about
+[28:23] people and how the way they work
+[28:25] together matters more than just
+[28:27] following a bunch of rules.
+[28:29] Another idea in this manifesto is that
+[28:31] it's better to have something that works
+[28:33] and gets the job done than to have tons
+[28:36] of paperwork. So, we are prioritizing
+[28:38] development,
+[28:39] but documentation not so much. This is
+[28:42] where we find the term MVP. No, not that
+[28:46] MVP, but instead they minimum viable
+[28:49] product. Finally, working with customers
+[28:52] is key and being able to switch gears
+[28:54] when needed is also important. This
+[28:56] might be super frustrating to
+[28:57] developers, of course, but that one is
+[28:59] not in the manifesto.
+[29:01] Agile can be a bit messy with complex
+[29:03] projects and sometimes it's hard to see
+[29:05] the finish line. Plus, there's a lot
+[29:08] riding on each team member, so everyone
+[29:09] has got to be on their top A game. Agile
+[29:12] isn't just one way of doing things. It's
+[29:14] more like a mindset. There are a bunch
+[29:17] of different methods like Scrum, Kanban,
+[29:20] extreme programming that put Agile into
+[29:23] action.
+[29:24] Scrum's probably the most popular one
+[29:26] with daily team huddles to figure out
+[29:28] what everyone is doing and how to get
+[29:30] past any roadblocks.
+[29:32] Of course, there's a lot more to cover
+[29:33] about this. There are even
+[29:34] certifications about Agile,
+[29:37] but this is neither the time nor the
+[29:38] certification exam for it.
+[29:42] The iterative method is about tackling a
+[29:45] project bit by bit. You don't have the
+[29:47] whole blueprint from start, you just
+[29:50] focus on one chunk at a time and improve
+[29:52] as you go.
+[29:53] It's great because you can see how far
+[29:55] you've come after each round and it's
+[29:56] perfect when you know exactly what you
+[29:58] need to build, but when you also might
+[30:01] want to add more features down the line
+[30:03] because realistically speaking, you
+[30:05] should expect requirements and
+[30:06] development conditions to change as time
+[30:08] goes by.
+[30:10] The iterative methodology does ask for a
+[30:12] bit more in term of the resources and if
+[30:15] you are the type who changes your mind a
+[30:17] lot, this might not be your cup of tea.
+[30:20] Also for tiny projects, it's probably
+[30:22] going to be overkill, but for the right
+[30:24] size project with a clear direction,
+[30:26] iterative can be a real winner.
+[30:28] The spiral method, it's a bit of mixing
+[30:31] up the waterfall and the iterative
+[30:33] styles.
+[30:35] You're not just going step by step or
+[30:37] round by round, you're doing a bit of
+[30:39] both. Think of it as releasing your work
+[30:41] progressively. It's a solid choice for
+[30:43] projects that are in it for the long
+[30:45] haul and where what you need might shift
+[30:49] over time. Plus by breaking it into
+[30:52] smaller pieces, you're less likely to
+[30:54] screw up big time.
+[30:55] The spiral can be a handful to keep
+[30:57] everything straight with all the moving
+[30:59] parts and with all the phases you've got
+[31:01] to juggle, it's not the simplest path to
+[31:03] take. So while it's great for adapting
+[31:06] to changes,
+[31:07] you've got to be on top of your game to
+[31:09] manage the spiral.
+[31:12] Another model that you should know about
+[31:13] is called the capability maturity model
+[31:16] or CMM.
+[31:17] The idea behind this is that the
+[31:21] software development process itself, so
+[31:23] not the software this time, but the
+[31:25] process for developing it, goes through
+[31:28] a number of phases depending on how
+[31:29] mature it is. We start small as small
+[31:32] company, but as we grow, so do our
+[31:34] processes including the ones for
+[31:35] software development. Thus we end up
+[31:38] with a couple of maturity levels called
+[31:40] as follows. Level one, initial. A bit of
+[31:43] a free for all. Everyone's working hard,
+[31:45] but it's all over the place with no real
+[31:48] plan.
+[31:49] Level two, repeatable. Things start to
+[31:51] get a bit more orderly. There's a basic
+[31:54] process in place and if you've done
+[31:56] something once, you can probably do it
+[31:58] again.
+[31:59] Level three, defined.
+[32:01] Now we're talking. There's a proper
+[32:03] process that everyone follows. It's all
+[32:05] written and official.
+[32:07] Level four, managed. This is where the
+[32:09] nerdy stuff comes in, numbers and data.
+[32:12] Teams now use numbers to measure
+[32:15] processes and use those to really get a
+[32:18] handle on what's happening in the
+[32:19] development process. This is where we
+[32:21] finally find
+[32:23] quality management. Actually, nowadays,
+[32:25] you will find this process as CMMI,
+[32:28] which is capability maturity model
+[32:31] integration. Integration because why not
+[32:34] just throw corporate buzzwords in there,
+[32:36] which calls this level four as
+[32:39] quantitatively managed.
+[32:41] Level five, optimizing. The top of the
+[32:44] ladder, it's about making things better
+[32:46] all the time. The teams got some awesome
+[32:49] processes in place.
+[32:50] More importantly, they're also following
+[32:52] those processes and they're always
+[32:54] looking for ways to improve them.
+[32:57] Downside of the CMM? Well, you need to
+[32:59] know this for the exam.
+[33:02] SAMM or software assurance maturity
+[33:05] model brought to you by the folks at
+[33:07] OWASP, the guys and girls with the web
+[33:10] application security advice,
+[33:12] is like a health checkup for your
+[33:14] software security. Here's how it breaks
+[33:16] down. So this is what you should have in
+[33:18] your software development process.
+[33:19] First, governance, where you set up the
+[33:22] rules of the game, you figure out your
+[33:24] strategy, what you're measuring and how
+[33:26] you're going to teach your team to play
+[33:28] by the rules.
+[33:30] Then design, the drawing board. You map
+[33:33] out what you need the software to do and
+[33:35] how to keep it safe from hackers.
+[33:38] Third, implementation. Not just about
+[33:40] slapping code together, you've got to
+[33:42] make sure it's secure.
+[33:44] Fourth, verification. The test drive.
+[33:47] You check, double check that everything
+[33:48] is working as it should and there are no
+[33:51] leaks. You use assessments here and
+[33:53] testing procedures.
+[33:55] Finally, operations. This is when the
+[33:57] application is live, but the work is not
+[33:59] over. You've got to keep an eye on the
+[34:01] application, manage any bugs, manage any
+[34:05] errors or issues that occur down the
+[34:06] line and keep everything running
+[34:08] smoothly.
+[34:09] So SAMM is something like your guide to
+[34:12] making sure your software is not just
+[34:14] good, but good and secure. It's about
+[34:15] being proactive, not just reactive and
+[34:18] that's a big deal in the software world.
+[34:21] Now as you can probably guess, the
+[34:22] models aren't here for you to memorize
+[34:24] every single detail about them, but at
+[34:26] the most and don't hold me responsible
+[34:28] for this, at the most
+[34:30] the exam is probably going to ask you
+[34:32] which of these are valid models or not.
+[34:35] I would highly doubt that any question
+[34:37] would ask you about the low level
+[34:39] details of each step in these models, so
+[34:41] don't come back to me and say you want
+[34:43] your coffee money back if you find such
+[34:45] a question in the exam.
+[34:47] Change and configuration management.
+[34:50] Now in general, configuration management
+[34:52] is what happens after some IT component
+[34:54] is deployed. It's a term that you will
+[34:56] find applied to software and
+[34:58] infrastructure. For example, when you're
+[34:59] deploying virtual machines and then you
+[35:01] start configuring them, that's going to
+[35:03] be configuration management. It can also
+[35:06] apply to software development in which
+[35:07] case it refers to what's happening after
+[35:09] the software is delivered and put up in
+[35:11] production. Change and configuration
+[35:13] management is a process in itself
+[35:15] because at some point you will have to
+[35:17] make changes to your software probably
+[35:19] for one of two reasons. First of all,
+[35:21] because maybe you detect some issues and
+[35:23] flaws, so you need to patch some
+[35:24] security holes and you need to provide
+[35:26] some updates. Secondly, because perhaps
+[35:28] the expectations of the client will
+[35:30] change when they start asking for
+[35:32] additional stuff. The customer will want
+[35:34] to integrate it with this and that and
+[35:36] maybe they will want this additional
+[35:38] type of report and maybe they will want
+[35:40] people to be able to access it on their
+[35:41] mobile phones and so on and you need to
+[35:43] make changes to the app.
+[35:46] So while you had a very nice process, a
+[35:48] very good up-to-date process for
+[35:50] developing the application in the first
+[35:52] place,
+[35:53] you shouldn't break that nice order when
+[35:54] you start making changes to it.
+[35:56] Those changes to an app should also
+[35:58] follow a very strict, rigorous and
+[36:00] thoroughly tested process that keeps you
+[36:02] safe from future flaws. As bonus, it
+[36:05] should also allow you to come back if
+[36:07] and when something goes bad.
+[36:09] Change management is also valuable from
+[36:11] a security standpoint. You need to be
+[36:13] able to check all the inputs, you need
+[36:15] to validate all permissions,
+[36:17] all the actions and when you start
+[36:18] making changes to an application, you
+[36:20] can break all that nice flow that you've
+[36:22] designed in the beginning. You can break
+[36:24] an application through its updates and
+[36:26] I'm not talking about the example with I
+[36:28] don't know Windows updates, which yes,
+[36:29] sometimes they break stuff, but we're
+[36:31] talking about updates that are performed
+[36:33] without a strong security mindset and
+[36:36] which can actually introduce new
+[36:37] vulnerabilities in your code.
+[36:40] Change management can be split up into
+[36:41] three different processes. The first one
+[36:43] is called request control. This is
+[36:45] basically the process from which every
+[36:47] change is born. This is where users, the
+[36:49] developers, the owners of the
+[36:50] applications request some sort of a
+[36:53] change. So it's basically like opening a
+[36:55] ticket to ask for something to be
+[36:57] implemented.
+[36:58] Obviously, a filtering process should
+[37:00] also happen here as in somebody,
+[37:02] probably a combination of developers and
+[37:04] managers,
+[37:05] should look at a cost-benefit analysis
+[37:09] and decide if it's worth doing. Is it
+[37:12] actually going to bring us more money,
+[37:14] more happiness, satisfaction, whatever?
+[37:16] And also, is it really a priority right
+[37:18] now because we might have a lot of other
+[37:20] unsolved issues in the backlog. Should
+[37:22] we focus on this new request right now
+[37:24] and just drop everything that we're
+[37:26] doing?
+[37:27] Then we have change control. This is
+[37:29] where we've decided that we actually
+[37:31] need to process the change and we first
+[37:33] start by analyzing the situation that
+[37:35] led to the change. I mean, what's the
+[37:37] case? What is the reason behind the
+[37:39] actual request? What is the user
+[37:41] actually trying to obtain by requesting
+[37:42] this change?
+[37:44] We're not going to start implementing
+[37:45] changes and dump them into production.
+[37:47] We're going to test them in a
+[37:49] development environment or a test
+[37:50] environment that will be thoroughly
+[37:52] documented, observed and ideally we'll
+[37:54] also perform some regression testing.
+[37:56] This means that also checking the
+[37:58] previous functionality of the app to
+[38:00] make sure everything still works as it
+[38:02] did before the change. If everything
+[38:04] looks fine, then we can proceed and push
+[38:06] it into production. This brings us to
+[38:07] the last phase, which is release
+[38:09] control. In a release control, we're
+[38:11] double-checking that everything is in
+[38:13] order and the code is ready to be
+[38:15] deployed in production.
+[38:16] This is where we make sure we did not
+[38:18] forget any debug messages in there, any
+[38:21] backdoors or any hardcoded developer or
+[38:23] admin accounts. And again, in an ideal
+[38:26] world, this is where acceptance testing
+[38:28] or UAT, user acceptance testing happens.
+[38:31] That involves making the changes
+[38:33] available in a blue-green deployment
+[38:35] scenario, making the change available to
+[38:37] just a couple of people, maybe just a
+[38:39] small department or a team, just to see
+[38:41] how it behaves and how well their
+[38:43] expectations are met. And even though
+[38:45] it's not officially mentioned here, I
+[38:47] would add that it's very important to
+[38:49] have some sort of version control
+[38:50] because
+[38:51] you're releasing an app in specific
+[38:53] versions. You need to keep track of
+[38:55] those changes in a very rigorously
+[38:57] defined versioning system so that users
+[38:59] know exactly which version they're
+[39:01] running, which version is compatible
+[39:03] with which one and from which versions
+[39:06] they can upgrade if you have any
+[39:08] backward compatibility issues. So all
+[39:10] those release notes that are usually
+[39:12] pushed with a new software release,
+[39:14] that's something you need to take care
+[39:15] of before pushing it into production.
+[39:27] >> [music]

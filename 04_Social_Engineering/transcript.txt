@@ -1,0 +1,792 @@
+[00:08] All right, everyone. Welcome back. We're
+[00:09] going to talk today about social
+[00:11] engineering, one of my favorite topics.
+[00:14] And social engineering is sometimes
+[00:16] called hacking the human because it
+[00:19] attacks weaknesses, not technical, but
+[00:22] human in nature. You don't find
+[00:25] firewalls in humans. There's no
+[00:26] encryption there. There's no solid
+[00:28] authentication systems. Nothing like
+[00:30] this is built into human nature, at
+[00:33] least not at the time of this recording.
+[00:35] Actually, all your firewalls and all
+[00:37] your security measures won't do anything
+[00:40] if people simply tell their passwords
+[00:43] over the phone to someone who claims
+[00:46] they are from IT support.
+[00:48] If they leave their laptops unlocked in
+[00:50] public areas. If they keep their
+[00:52] passwords posted on, well, Post-its.
+[00:56] So, let's see how the weakest link, the
+[00:58] human, can be hacked.
+[01:00] And we're going to start with the
+[01:02] fundamentals of social engineering. And
+[01:04] among the first terms that we need to
+[01:06] define is impersonation.
+[01:09] Now, impersonation means pretending to
+[01:11] be someone you're not. And that's the
+[01:14] basis of all social engineering out
+[01:16] there. Of course, this means lying.
+[01:18] But lying with a specific purpose, that
+[01:21] of convincing unknowing victims that you
+[01:24] are someone else.
+[01:26] Now, if you can convince the person in
+[01:28] front of you or at the other end of the
+[01:30] call or of the chat conversation that
+[01:32] you're someone else, half of the hacking
+[01:34] is already done.
+[01:36] Now, in order to do so, impersonation
+[01:38] takes advantage of some situations where
+[01:39] people are by default trusting. For
+[01:42] example, appearing likable and familiar.
+[01:45] Imagine meeting someone who seems like
+[01:47] an old friend, you'd naturally open up,
+[01:49] right? Social engineers use this trick.
+[01:52] They act friendly, ask about your
+[01:54] weekend, uh ask you the American
+[01:57] greeting of how are you today, and make
+[01:59] you feel comfortable.
+[02:01] Personally, I'm a bit of an introvert,
+[02:03] and this is off-putting for me. I
+[02:04] actually kind of hate it. But for a lot
+[02:07] of people, this is important. And before
+[02:09] you know it, they will be sharing
+[02:11] sensitive info like your Wi-Fi password
+[02:13] or your favorite pizza topping or
+[02:15] whatever your password reset security
+[02:18] questions are about.
+[02:20] Next, we have social proof and
+[02:22] consensus. Ever notice how crowded
+[02:25] restaurants already attract more
+[02:27] customers? It's because people assume
+[02:30] that if others like it, well, it must be
+[02:33] good or at least not that bad. And in
+[02:35] many cases, that's actually true. If
+[02:37] other people are doing something, it's
+[02:40] generally safe to go with the herd.
+[02:41] There's an old saying, when people don't
+[02:44] know what to do, they look around.
+[02:47] Social engineers exploit this by saying
+[02:49] things like, "All the other employees
+[02:51] have upgraded their antivirus. You're
+[02:53] the last one. When the report comes into
+[02:55] top management, you don't want to be the
+[02:56] only one who breached the security
+[02:58] policy, right?" Of course, this is all
+[03:00] made up. Online shopping works the same
+[03:02] way. Ever notice those websites that
+[03:04] say, "86 people are currently looking at
+[03:07] this product. It's going to sell out
+[03:09] soon." Or booking.com says that 97% of
+[03:13] all the properties in the area are
+[03:14] already reserved. Hurry up. Book it.
+[03:17] This might make you reach out for your
+[03:19] credit card just a bit sooner than
+[03:21] later. Another situation where people
+[03:23] are trusting is when they are facing
+[03:25] authority. In general, people tend to
+[03:27] obey figures of authority. You listen to
+[03:30] your doctor. You listen to a police
+[03:32] officer.
+[03:34] Uh you even listen to listen to a
+[03:35] security guard, right? If you depend on
+[03:37] them to actually gain access. You simply
+[03:39] comply. Now, social engineers can pose
+[03:42] as anyone, as experts like tech support
+[03:45] or government officials. They would say,
+[03:48] "I'm from IT. We need your password for
+[03:49] a security upgrade." Well, and there you
+[03:51] go. A lot of people hand it over just
+[03:53] like that.
+[03:54] Another way is by using artificial
+[03:58] scarcity or false urgency. Basically,
+[04:01] everything with a limited, quote
+[04:03] unquote, time offer sign. They create
+[04:05] urgency. Social engineers use the same
+[04:07] tactic. "Your account will be locked in
+[04:09] 24 hours unless you verify your
+[04:11] details." Panic mode activated. You'll
+[04:14] rush to comply, not realizing that it's
+[04:16] all fake, except for the links you're
+[04:18] clicking and the passwords that you're
+[04:20] providing.
+[04:21] There's also something called physical
+[04:23] social engineering. Social engineering
+[04:25] also has a physical component. So, yeah,
+[04:27] it's not always conducted using
+[04:29] technology. But sometimes technology
+[04:31] isn't even the end purpose of it. Here
+[04:33] are a couple of examples.
+[04:35] Dumpster diving. It literally means
+[04:38] digging through someone else's garbage
+[04:41] or trash, depending on your area. Of
+[04:43] course, you're not looking for banana
+[04:45] peels and milk cartons, but for
+[04:48] documents that have been thrown into
+[04:50] garbage. Receipts, internal memos,
+[04:53] printed emails, attendance lists,
+[04:56] printed Excel sheets, minute meetings,
+[04:58] drafts and previous versions of
+[05:00] contracts, papers with signatures on
+[05:02] them, invoices, email addresses, names
+[05:05] of people working for the company, all
+[05:07] kind of stuff that goes on paper in a
+[05:09] company and can end up in the trash can.
+[05:12] What makes it even easier is that the
+[05:14] garbage containers aren't usually in a
+[05:16] very secure location. And even if they
+[05:18] are, after the garbage gets picked up,
+[05:20] obviously, all bets are off from a
+[05:21] security standpoint.
+[05:23] Now, as far as I know, there's no such
+[05:25] thing as garbage security in any
+[05:28] company. That's why we have paper
+[05:29] shredders to destroy paper documents
+[05:32] before they're thrown out so they cannot
+[05:33] be reassembled and interpreted.
+[05:36] Uh just for fun, think about it for a
+[05:37] second. If someone were to look into
+[05:39] your garbage from your home for an
+[05:42] entire month, let's say, how much would
+[05:45] they know about you?
+[05:48] Now, scale this to a company of over
+[05:50] 1,000 people in an office building.
+[05:54] Another example of physical social
+[05:56] engineering is tailgating. That's simply
+[05:58] when you sneak inside of a building or
+[06:00] an area right after another authorized
+[06:03] person, before the door gets to close
+[06:06] behind them.
+[06:07] Now, they are unaware of this. You just
+[06:09] sneak in after them like a sneaky little
+[06:11] snake that you are, and you're in.
+[06:13] Pretty tough to mitigate unless you
+[06:15] actually rely on the authorized persons
+[06:17] being aware of what's going on behind
+[06:20] them and closing all the doors, even if
+[06:22] in most cases they close automatically,
+[06:24] especially if they lead to secure areas.
+[06:27] You can also mitigate this with security
+[06:29] guards. And guess what? There's also a
+[06:30] physical security control that aims to
+[06:33] prevent exactly this. It's called a
+[06:35] turnstile. And the funny-sounding one,
+[06:38] piggybacking, basically means shouting,
+[06:41] "Hold the door for me. Hold the door."
+[06:43] Game of Thrones, anyone? Yeah, so it's
+[06:46] when authorized people use their access
+[06:48] rights to allow unauthorized people to
+[06:51] enter secure areas.
+[06:53] Now, this can easily be abused. People
+[06:56] tend to be helpful. It might come as a
+[06:58] surprise to you, but people tend to be
+[07:00] helpful, right? If they see you carrying
+[07:01] a lot of stuff, struggling to open the
+[07:04] door while juggling with three boxes and
+[07:06] a backpack, they might help you out.
+[07:08] They might open the door for you. Uh if
+[07:10] you're wearing an orange vest, a hard
+[07:12] hat, and you're dressed like an
+[07:14] electrician, for example, a janitor, or
+[07:16] you act like a delivery person, a lot of
+[07:18] people would instantly trust your
+[07:21] clothes
+[07:22] without giving it a second thought.
+[07:25] There's a funny story here in a company
+[07:27] that I used to work at the beginning of
+[07:28] the COVID years. Um everybody was sent
+[07:31] home. We all took our devices,
+[07:33] computers, and monitors home with us.
+[07:35] And I I remember one rainy day, I went
+[07:38] to the office to grab a second monitor,
+[07:40] a pretty big one, to bring it home. It
+[07:42] was raining outside, and I had to walk
+[07:43] for like 3 minutes uh to my car in the
+[07:45] parking lot. So, I just put the monitor
+[07:48] in a huge black garbage bag to protect
+[07:52] it from rain. And I wanted to exit the
+[07:54] building. I got to the turnstiles. We
+[07:57] have them in the in the building access
+[07:59] area, and I realized that my badge was
+[08:01] somewhere in my in my backpack, which
+[08:03] was on my back. My hands were carrying a
+[08:05] huge monitor, and I asked the person at
+[08:07] the reception desk to open the door for
+[08:09] me because I couldn't reach my badge.
+[08:11] She did. Okay? I got out in an instant.
+[08:14] A minute later, on my way to the car, I
+[08:17] realized what the entire scene must have
+[08:18] looked from the outside. There's a
+[08:20] person wearing a mask. I was wearing a
+[08:22] mask. I was carrying a huge black bag in
+[08:26] which you could tell there was a monitor
+[08:28] or an entire computer trying to exit the
+[08:30] building without showing any ID or
+[08:33] working badge. I mean, if that's not how
+[08:35] you would picture a thief in children's
+[08:37] book, I don't know what better image you
+[08:39] could come up with. And no, the lady at
+[08:41] the reception did not know me
+[08:43] personally. I had been working there for
+[08:45] just a couple of weeks in a building of
+[08:46] over 1,000 people. So, yeah.
+[08:49] Fun times.
+[08:50] Now, for other methods for social
+[08:52] engineering, this time we're in the
+[08:54] realm of technology. Now, a very
+[08:56] effective way to persuade people to do
+[08:58] stuff is to present yourself as someone
+[09:00] they already trust. It does not have to
+[09:02] be face-to-face. It's actually better
+[09:04] for the attacker if it's not, obviously.
+[09:06] But often, this happens after an
+[09:08] attacker manages to compromise a valid
+[09:11] user account from the company. It might
+[09:13] be just the email address. But if you
+[09:15] receive an email from your boss, or
+[09:17] maybe even if you're a bit tech-savvy
+[09:19] and you check the digital signature,
+[09:20] even the email headers, nobody does
+[09:22] that, but let's just say that you do,
+[09:25] you will confirm that it came from your
+[09:27] boss, and you will trust that email.
+[09:29] Very few people will call to confirm
+[09:31] that they just received an email. Most,
+[09:33] they will just trust it, right? So,
+[09:35] compromising credentials of any kind is
+[09:37] a very useful and dangerous tool towards
+[09:40] social engineering.
+[09:42] Shoulder surfing. Another method is also
+[09:45] considered social engineering, even if
+[09:46] it doesn't really require interaction
+[09:48] with the victim or its shoulders.
+[09:51] Shoulder surfing means simply watching
+[09:53] someone else's screen. Now, over their
+[09:55] shoulder, perhaps, not necessarily.
+[09:58] That's why we have passwords shown as
+[10:00] asterisks. That's why we have privacy
+[10:03] screens and foils on our phones.
+[10:05] Uh that's why even configuration files
+[10:07] for network devices, let's say, employ
+[10:09] some very simple encryption. Not because
+[10:12] they're unbreakable, but because someone
+[10:15] might be watching your screen without
+[10:17] you knowing. For example, Cisco is using
+[10:19] type 7 encryption. You might know about
+[10:21] this. And keep in mind, shoulder surfing
+[10:23] does not always require the attacker to
+[10:25] be next to you. It feels too much to
+[10:27] call someone who's watching an attacker,
+[10:30] but well, you get the idea.
+[10:32] I can recall a lot of office buildings
+[10:34] where you could just look into the
+[10:36] people's screens on the ground floor
+[10:39] just by walking by outside the building
+[10:41] and have a look at side. Right? And I
+[10:43] have two more words for you, binoculars
+[10:46] and drones. Next up, we have another
+[10:49] method which is called the lunchtime
+[10:51] attack. It's an interesting one and it
+[10:53] doesn't require wrestling anyone for
+[10:55] their sandwich, but instead it's about
+[10:57] accessing unlocked computers in an
+[10:59] office, perhaps an open space, during
+[11:01] times when most employees are out of the
+[11:03] office, going out for a smoke, outside
+[11:06] on a fire drill, having lunch. That's
+[11:09] what screen savers and computer's lock
+[11:11] time out are for. Not for saving the
+[11:13] planet, mind you, nor the screen itself.
+[11:16] We're not saving the screen, but for
+[11:18] saving your confidential data in case
+[11:21] you leave your computer unattended for a
+[11:23] few minutes. And by the way, don't think
+[11:25] that an unattended can only be accessed
+[11:27] for stealing data. It can also be used
+[11:30] to send a social engineering attack.
+[11:32] Right? See the discussion a moment ago
+[11:33] about compromised credentials.
+[11:36] Now, what are the objectives of social
+[11:37] engineering? Well, just like any other
+[11:39] attack, the point is to gain access,
+[11:41] steal, or destroy data. You can perform
+[11:44] identity fraud by impersonating someone
+[11:46] else. You could steal their credentials
+[11:48] to act on their behalf and access other
+[11:51] restricted areas and so on.
+[11:54] Fraud is a very often encountered end
+[11:56] goal, like for example, creating uh fake
+[11:58] suppliers with fake invoices that allow
+[12:00] attackers to steal, well, real money.
+[12:03] Other methods for social engineering
+[12:05] include those that you are probably most
+[12:07] familiar with, like for example,
+[12:09] phishing with a p h, not an f.
+[12:12] Basically, phishing is about tricking
+[12:14] someone into accessing some malicious
+[12:16] destination, like a website, for
+[12:17] example, mostly for stealing
+[12:20] credentials. That's where the name comes
+[12:21] from, when you're fishing for
+[12:23] information.
+[12:24] Now, most people think about phishing
+[12:25] over email and yes, that is the most
+[12:27] common vector, but phishing can happen
+[12:29] over any medium and even face-to-face.
+[12:32] Sometimes the purpose of phishing isn't
+[12:34] information, but tricking the person
+[12:36] into doing something. For example,
+[12:38] installing malware. On insecure systems,
+[12:40] depending on what vulnerabilities are
+[12:42] present in the browser or the operating
+[12:44] system, it might be enough for the
+[12:46] person to simply visit a website in
+[12:48] order for the malicious code to get
+[12:50] downloaded. These are called drive-by
+[12:53] downloads since they are installed
+[12:55] without the user even being aware of the
+[12:57] installation process.
+[12:59] In the past, there have been
+[13:00] vulnerabilities identified where simply
+[13:02] receiving a malicious link in Outlook or
+[13:05] some messaging software was enough to
+[13:07] compromise the system due to
+[13:09] vulnerabilities in some previewing
+[13:11] engine that tried to display the page,
+[13:13] render the page with all its links, uh
+[13:16] and the links that were pointing to
+[13:17] malicious destinations without you even
+[13:19] having to click anything in the email
+[13:21] message.
+[13:23] Now, phishing in general is tough to
+[13:25] mitigate in a uniform and centralized
+[13:28] manner as there isn't an anti-phishing
+[13:31] firewall that you can install. Spam
+[13:33] filters and IPSs have some functionality
+[13:35] in this area that can help with this,
+[13:37] but there is no single best solution out
+[13:39] there. Your last line of defense, the
+[13:42] human user, is in this case also the
+[13:45] most efficient way of protecting
+[13:47] yourself from phishing attempts.
+[13:49] Careful what you open. Inspect the
+[13:51] email. If something looks fishy, then it
+[13:54] probably is. Don't open attachments that
+[13:57] you cannot confirm that are coming in
+[13:58] from valid users. Don't share your
+[14:01] credentials ever,
+[14:03] no matter the urgency or the reasons
+[14:04] behind the request.
+[14:06] Often companies conduct uh what are
+[14:08] called phishing campaigns that aim to
+[14:11] validate how well can users identify and
+[14:14] defend themselves against phishing.
+[14:16] Controlled, purposely built phishing
+[14:18] messages are sent to all users and then
+[14:20] statistics are being generated as to how
+[14:22] many users actually clicked or
+[14:24] downloaded the bogus files. Of course,
+[14:26] there isn't real malware behind those
+[14:28] links, but your boss will still know
+[14:31] that you failed miserably when you
+[14:33] clicked that phishing link.
+[14:35] When phishing attacks are more targeted,
+[14:37] we call them spear phishing. With spear
+[14:39] phishing, attackers don't just launch a
+[14:41] generic email spam against all
+[14:44] employees, but instead craft the
+[14:46] messages more carefully trying to
+[14:48] impersonate specific trustworthy people
+[14:50] from within the company and they target
+[14:52] the attack to one or more individuals.
+[14:55] The more specific the message is, the
+[14:57] better the chance of being trusted. If
+[14:59] the attacker can compromise email
+[15:01] accounts, that is even better for the
+[15:03] attacker because the source of those
+[15:05] phishing messages will be automatically
+[15:07] trusted. This is sometimes called BEC,
+[15:10] business email compromise.
+[15:12] Of course, each phishing attempt gets
+[15:14] better the more valid content you can
+[15:16] include in it. A fake email has much
+[15:18] better chances to be trusted if it
+[15:20] contains
+[18:04] valid discussion topics, valid employee
+[18:07] Another relatively new one is called
+[18:08] quishing or QR fishing.
+[18:11] Uh QR codes are basically links
+[18:14] that you cannot verify.
+[18:16] Ever thought about the fact that
+[18:17] whenever you're scanning a QR code,
+[18:19] you're basically blindly clicking a link
+[18:21] to who knows where?
+[18:23] Malicious links hidden in QR codes can
+[18:25] be all over the place, on ads or street
+[18:28] signs. Uh an interesting attack is to
+[18:30] stick a malicious QR code over places
+[18:32] where people usually expect to find QR
+[18:34] codes, like on menus on restaurant
+[18:37] tables or paid parking signs. Hoaxes are
+[18:41] another annoying category and while not
+[18:43] exactly malware, they still waste
+[18:45] resources, yours most likely, your time
+[18:47] and effort. Plus, you get to annoy your
+[18:49] friends.
+[18:51] Hoaxes are those messages that create
+[18:52] fake urgency, fake alerts about your
+[18:55] computer being infected or some virus
+[18:57] out there that is threatening everyone
+[18:58] unless you take action and perhaps
+[19:00] unless you forward this warning to all
+[19:02] your address book or unless you download
+[19:04] a specific miraculous software that is
+[19:07] the only software in the world able to
+[19:08] cure this malware from your computers.
+[19:11] Of course, it's all BS and at best, you
+[19:14] will just waste time. At worst, uh you
+[19:17] will get really infected by whatever
+[19:19] snake oil antivirus is being pushed to
+[19:21] your computer.
+[19:23] So, yeah, from a social engineering
+[19:25] point of view, hoaxes are examples that
+[19:26] prey on you being naive or not properly
+[19:29] researching something before taking
+[19:30] action.
+[19:32] Finally, email prepending is another
+[19:34] very, very simple form of social
+[19:36] engineering and it's based on adding
+[19:38] fake information to either the header of
+[19:40] an email or its body. Uh if it happens
+[19:43] in the body of the email, it can be as
+[19:44] simple as changing the subject line and
+[19:46] added a prefix of r e from reply or f w
+[19:50] for forward, um just to create the
+[19:52] illusion that this is a mail that was
+[19:55] part of a previous discussion where
+[19:56] perhaps you weren't involved up until
+[19:58] now.
+[19:59] This is often enough to make people
+[20:01] believe that what is being discussed in
+[20:03] the reply thread attached to the email,
+[20:05] which is of course fake.
+[20:07] Now, another type of prepending can be
+[20:10] done in email headers, which are
+[20:11] normally invisible to regular users in
+[20:14] email clients, but are processed by
+[20:16] email clients and filters including spam
+[20:18] filters. Some basic spam filters might
+[20:21] be tricked into believing that the email
+[20:22] has already been scanned and validated
+[20:25] by some anti-spam engine simply by
+[20:27] adding a header that says that, like
+[20:29] fake one of course. Perhaps even trying
+[20:31] to impersonate the way legitimate
+[20:33] well-known anti-spam solutions out there
+[20:35] mark their scanned emails.
+[20:38] Some other interesting methods for
+[20:39] stealing credentials include farming or
+[20:42] DNS farming involves DNS attacks as
+[20:45] well. So, it's a more technical social
+[20:47] engineering type of an attack and it's
+[20:48] about redirecting legitimate users to
+[20:51] fake websites using DNS.
+[20:53] More often than hacking the actual DNS
+[20:55] server, this happens when a computer is
+[20:57] compromised and its hosts file as well,
+[21:00] which is the first one that is checked
+[21:01] when a new DNS request is about to be
+[21:03] sent.
+[21:04] Users try to access a real legitimate
+[21:07] site but end up on a different address
+[21:09] often hosting a site that looks exactly
+[21:11] the same as the one they were trying to
+[21:12] access. They enter their credentials in
+[21:14] there, the credentials end up in a
+[21:16] hacker's database and this is how you
+[21:18] farm pH again user credentials.
+[21:21] This kind of an attack can also happen
+[21:23] by altering the DHCP, the Dynamic Host
+[21:26] Configuration Protocol configuration of
+[21:28] the host either through malware or by
+[21:31] installing and running a rogue DHCP
+[21:33] server in the same network. In this
+[21:35] case, providing hosts with fake DNS
+[21:37] information only requires that the fake
+[21:39] information is provided through that
+[21:41] rogue DHCP server, which in turn makes
+[21:44] hosts use a rogue DNS server, which can
+[21:47] serve them whatever fake information the
+[21:48] attacker or the server owner wants.
+[21:51] Typosquatting is an equally interesting
+[21:53] and kind of lame attempt at social
+[21:55] engineering. It means registering domain
+[21:59] names that look like real businesses,
+[22:01] but they have a slightly different
+[22:03] character like
+[22:05] Gaggle with a single O or Apple with a
+[22:09] single P, right? Instead of Apple or
+[22:12] Google.
+[22:13] Basically, hackers look at legitimate
+[22:15] domain names and try to figure out what
+[22:18] are the most common typos that people
+[22:21] make when typing that domain on their
+[22:23] keyboards. And a lot of people make
+[22:25] typos especially when typing on their
+[22:27] keyboards and especially when typing on
+[22:29] touchscreens.
+[22:30] Then, they register those domain names
+[22:32] and make them deliver malware, perform
+[22:34] farming and so on. You will see that
+[22:36] most large companies out there actually
+[22:38] buy these similar domains for themselves
+[22:41] just to keep them out of the reach of
+[22:43] other clowns out there.
+[22:45] The last one here is the watering hole
+[22:47] attack, which means finding out which
+[22:49] websites a company or a specific user in
+[22:51] that company regularly visits,
+[22:54] hacking those sites, installing malware
+[22:56] onto them with the intention of that
+[22:58] malware finding its way inside the
+[23:00] victim company. Think about the place
+[23:02] where a large business might use to
+[23:04] order pizza or flowers or whatever or
+[23:07] taxis. Those are most likely much easier
+[23:10] targets than your target business, but a
+[23:13] smart attacker can use them as a
+[23:15] delivery vector.
+[23:16] Influence campaigns. Now, think of these
+[23:19] as big organized efforts to change what
+[23:21] lots of people think about something,
+[23:23] legislation, elections, the outcome of a
+[23:26] trial and so on. Now, these campaigns
+[23:29] are often run by large companies or even
+[23:30] entire countries who want to make their
+[23:32] rivals look bad.
+[23:34] Often, these are based on disinformation
+[23:36] and propaganda. This is when false or
+[23:38] misleading information is spread on
+[23:39] purpose. The goal is to make people
+[23:41] believe something that isn't true or to
+[23:43] give them a one-sided story of course.
+[23:46] Fake news. You've probably heard this
+[23:47] term before and it falls within this
+[23:49] category as well. It's when stories that
+[23:52] aren't true are shared around as if they
+[23:55] were real news. It's incredible how
+[23:57] people still tend to think that if
+[23:59] something is on the internet or in a
+[24:01] meme, it must be true.
+[24:04] It might have had a better chance of
+[24:06] being true maybe 30 years ago if it was
+[24:08] on TV, but not now, right? Also, I'm
+[24:11] baffled but by how much misinformation
+[24:14] is transmitted and how easily people are
+[24:16] fooled by internet memes.
+[24:18] Just check out, I don't know, flat Earth
+[24:20] groups on forums. It's terrifying the
+[24:22] amount of ignorance that is around us,
+[24:24] but we digress.
+[24:26] Yes, influence campaigns have become one
+[24:28] of the top social engineering methods
+[24:30] nowadays, especially with so many
+[24:32] conflicts all over the globe,
+[24:34] influencing elections, influencing
+[24:35] public perspective. And that's even
+[24:38] without mentioning cancel culture. But
+[24:40] as I said before, we digress.
+[24:43] Now, since social engineering is a type
+[24:45] of an attack that exploits human
+[24:47] psychology and emotions to manipulate
+[24:49] people into performing actions or
+[24:51] revealing information to the attacker
+[24:54] and it can take a lot of shapes, there
+[24:56] is not going to be a magic one single
+[24:58] solution to mitigate it. Well, it might
+[25:01] be one. It could be just something like
+[25:04] use your brain, but that's just as
+[25:06] useful as calm down said to a spouse or
+[25:09] to a toddler.
+[25:11] So, what we can do is first of all,
+[25:14] educating users about the common types
+[25:16] and signs of social engineering attacks,
+[25:18] the potential consequences of falling
+[25:20] victim to them and the best practices to
+[25:22] avoid or respond to them.
+[25:25] Additional verification procedures.
+[25:27] People need to become comfortable
+[25:28] verifying the identity and legitimacy of
+[25:31] the sender before disclosing any
+[25:33] sensitive information or performing any
+[25:34] critical actions. This should be common
+[25:37] sense. Just think about how easily we
+[25:39] trust information that's coming in over
+[25:40] the phone or email simply because we see
+[25:43] and recognize a phone number and an
+[25:45] email address.
+[25:46] Ever stopped and thought just how
+[25:48] difficult would it be for someone to use
+[25:50] the same number or email address? It
+[25:52] might be a bit difficult, but far from
+[25:54] impossible, right? And as an old saying
+[25:57] says, hackers only need to be successful
+[26:00] once.
+[26:02] We as defenders need to be successful
+[26:04] every single time. So, additional
+[26:06] verification procedures can involve
+[26:08] simply asking more questions, requesting
+[26:10] a callback number or using a second
+[26:12] communication channel. The principle of
+[26:14] trust, but verify.
+[26:16] Also, having a clear statement of
+[26:18] allowed communications means defining
+[26:20] the policies and procedures for official
+[26:22] communication inside and outside the
+[26:24] company.
+[26:25] How can and how should we communicate
+[26:28] inside and outside the company? Should
+[26:29] an invoice be coming in over WhatsApp?
+[26:32] This can help users to recognize and
+[26:34] report any unauthorized or suspicious
+[26:36] communications that deviate from the
+[26:38] established norms or protocols.
+[26:41] Don't trust people blindly. I know,
+[26:43] you're not 5-year-olds, but it has to be
+[26:45] said because attackers might be
+[26:47] appealing to your emotions such as fear,
+[26:50] greed, curiosity, sympathy, urgency.
+[26:53] Always use critical thinking and common
+[26:55] sense when dealing with unknown or
+[26:57] untrusted people. Let's do it because
+[26:59] there simply isn't enough critical
+[27:01] thinking or common sense in the world.
+[27:04] People should report suspicious behavior
+[27:06] to the appropriate authorities about any
+[27:08] suspected or confirmed social
+[27:10] engineering attacks. Yes, you will be
+[27:12] the whistleblower, but reporting
+[27:14] suspicious behavior can help users to
+[27:16] prevent further damage and facilitate
+[27:18] investigation and remediation.
+[27:21] Uh check out with your HR department.
+[27:23] You most certainly have something that
+[27:24] might resemble or even be called the
+[27:26] whistleblower policy. Try to ignore the
+[27:29] name and think why it is actually
+[27:31] useful. And specifically for phishing,
+[27:33] we have phishing campaigns and
+[27:35] simulations. Now, this is a method for
+[27:37] testing the vulnerability and
+[27:38] preparedness of users against real
+[27:41] phishing attacks. By conducting phishing
+[27:43] campaigns, I can help users identify and
+[27:46] avoid phishing attempts and provide
+[27:47] feedback and training on how to improve
+[27:49] their security behavior. Also, don't
+[27:51] click on email instant messaging links.
+[27:54] Avoid opening or following any links in
+[27:56] emails or instant messages that are
+[27:58] unsolicited, unexpected or just
+[28:00] suspicious. Check the links or just use
+[28:03] saved bookmarks to access known web
+[28:05] locations. Don't just click links on
+[28:07] emails.
+[28:09] Don't open suspicious attachments
+[28:10] because this can help users to prevent
+[28:12] executing malicious files that may
+[28:14] infect their devices with malware or
+[28:16] perform unauthorized actions. Now, on
+[28:18] the topic of educating users into
+[28:20] recognizing what a suspicious attachment
+[28:23] actually looks like and what to look
+[28:25] for, well, that's the tough part.
+[28:28] Don't send sensitive information over
+[28:29] email or instant messages such as
+[28:31] password, credit card numbers, bank
+[28:33] account details or personal
+[28:34] identification numbers. Also, use your
+[28:36] brain
+[28:38] and try to think and answer why on Earth
+[28:40] would someone need this information in
+[28:41] the first place. You might add some more
+[28:43] to this list, but if it's all going to
+[28:46] be about building awareness and
+[28:47] educating users, since social
+[28:49] engineering is about hacking the human,
+[28:51] then mitigating is obviously going to be
+[28:53] about teaching humans about security.
+[28:57] Of course, we also need to monitor our
+[28:58] progress when it comes to social
+[29:00] engineering policies. One first step
+[29:02] here is to review the security training
+[29:04] materials periodically and make sure
+[29:07] they are up to date. Now, training
+[29:08] materials should not be just a static
+[29:11] set of documents. They need to evolve as
+[29:13] our business grows. Also, as the threats
+[29:15] evolve, so should our training.
+[29:17] We'll adjust the focus, the topics, the
+[29:19] techniques you use in our trainings to
+[29:22] address the latest security concerns,
+[29:24] keeping our content fresh and relevant.
+[29:27] Now, when personnel violate security
+[29:29] policies, what do we do? Well, first, we
+[29:32] must ensure that our personnel are not
+[29:34] just attending awareness training, but
+[29:37] are also absorbing the material somehow.
+[29:39] I know, this sounds like fantasy having
+[29:41] all your employees actively employed and
+[29:43] interested in company security training.
+[29:46] It's never going to happen, But, we
+[29:48] should not dismiss it simply for this
+[29:50] reason. Try to convince each manager and
+[29:52] team leader to motivate their direct
+[29:54] reports and verify their awareness by
+[29:57] assessing how well they understood the
+[29:59] training content. Regular evaluation of
+[30:02] access and activity logs also helps us
+[30:04] understand typical user behavior and
+[30:06] identify anomalies that may indicate
+[30:08] policy violations.
+[30:10] This needs to be done often because you
+[30:11] might not even be aware that a policy
+[30:14] violation has happened unless you look
+[30:16] in the logs or correlate information in
+[30:18] those logs.
+[30:19] Finally, when a violation occurs,
+[30:21] determine its cause and severity. You
+[30:24] need to respond appropriately and apply
+[30:26] the necessary countermeasures to prevent
+[30:28] future incidents. And just for a moment
+[30:30] here, coming back to the topic of
+[30:32] engaging personnel, making them
+[30:34] interested, concerned, aware of security
+[30:36] issues, consider ease of involvement.
+[30:39] Security is everyone's responsibility
+[30:41] and we want to make it easy for all
+[30:43] personnel to be involved in maintaining
+[30:45] it. Simple, clear instructions and
+[30:49] accessible resources, those are the key,
+[30:52] right? You might also consider
+[30:53] implementing something like gamification
+[30:55] or any reward system to make sure
+[30:57] security trainings are are being
+[30:59] followed by everyone else and and
+[31:01] they're more engaging. You could include
+[31:03] rewards and achievements for completing
+[31:05] training modules or recognizing
+[31:07] employees who constantly follow security
+[31:09] policies and best practices. It's up to
+[31:11] you, but never forget that you're
+[31:13] working and protecting humans first. So,
+[31:15] that's about it about social
+[31:17] engineering. Now, if you enjoy this
+[31:18] stuff, I would strongly encourage you to
+[31:20] look up on Kevin Mitnick's book, The Art
+[31:22] of Intrusion and The Art of Deception.
+[31:24] Or if reading is not really your thing,
+[31:26] a very good source of social engineering
+[31:28] ideas is a TV called show, The
+[31:30] Mentalist. You might enjoy it.

@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A critical power failure occurs at a secure government research laboratory during a storm. The facility contains a main vault holding classified physical files and several emergency escape routes equipped with magnetic locks. From a CISSP safety and governance perspective, how should these doors fail?",
+    "options": [
+      "Both the vault doors and the escape route doors must fail-secure (locked) to protect classified data.",
+      "The vault doors must fail-secure (locked) to protect the files, while the emergency escape doors must fail-safe (unlocked) to ensure human safety.",
+      "Both the vault doors and the escape route doors must fail-safe (unlocked) to ensure emergency personnel have full access.",
+      "The emergency escape doors must fail-secure (locked) to prevent unauthorized entry during the power outage."
+    ],
+    "correctIndex": 1,
+    "explanation": "In CISSP principles, human safety always takes absolute priority over asset protection. Vault doors, which do not trap humans, should fail-secure (locked) to protect assets. Emergency fire escape doors must fail-safe (unlocked/open) to allow occupants to evacuate safely."
+  },
+  {
+    "question": "A security architect is designing a network for a high-security environment and wants to implement a Zero Trust Architecture (ZTA). The architect proposes separating the network into extremely small, isolated zones (micro-segmentation) and requiring continuous authentication and policy validation for every request, regardless of whether it originates from inside or outside the network. Which tenet of Zero Trust does this support?",
+    "options": [
+      "Transitive Trust",
+      "Assume Breach / Never Trust, Always Verify",
+      "Fail-Soft",
+      "Security through Obscurity"
+    ],
+    "correctIndex": 1,
+    "explanation": "The core tenet of Zero Trust is 'Never trust, always verify' and 'Assume breach.' It assumes that threats exist both inside and outside the network, requiring validation for every transaction."
+  },
+  {
+    "question": "An audit committee is reviewing an organization's security posture. The CISO states that the network is secure because they have deployed a next-generation firewall, an intrusion prevention system (IPS), and an encryption gateway. The committee requests a copy of the weekly penetration testing reports and configuration audit logs. In terms of security design, what is the committee seeking?",
+    "options": [
+      "They are seeking to establish Trust in the security mechanisms.",
+      "They are seeking to establish Assurance that the security controls are functioning effectively.",
+      "They are seeking to implement a Fail-Open policy.",
+      "They are seeking to enforce Transitive Trust."
+    ],
+    "correctIndex": 1,
+    "explanation": "Trust is the presence of a security mechanism (e.g., CISO's deployment of firewalls/IPS). Assurance is the degree of confidence, verified through testing and auditing (e.g., penetration tests and logs), that the controls actually perform their jobs effectively."
+  },
+  {
+    "question": "A developer is deploying a third-party software library whose security history is unknown. To prevent this library from reading unauthorized system files, accessing memory regions of other applications, or communicating with unknown external hosts, the developer should configure which architectural control?",
+    "options": [
+      "Transitive Trust",
+      "Confinement (Sandboxing)",
+      "Fail-Soft",
+      "Input Validation"
+    ],
+    "correctIndex": 1,
+    "explanation": "Confinement (also known as sandboxing) restricts a program's execution environment, limiting the memory addresses, system resources, and network sockets it can access, thereby preventing it from compromising other applications."
+  },
+  {
+    "question": "An organization connects its internal ERP system to a partner company's network via a VPN. An attacker compromises a workstation on the partner's network, and because the VPN connection does not enforce access controls, the attacker is able to pivot and access the ERP system. What security risk does this exploit?",
+    "options": [
+      "Zero Trust",
+      "Fail-Secure",
+      "Transitive Trust",
+      "Air Gapping"
+    ],
+    "correctIndex": 2,
+    "explanation": "Transitive trust occurs when trust is extended across a chain (e.g., ERP trusts VPN, VPN trusts partner, therefore ERP trusts partner). If security controls are not enforced at each boundary, an attacker can exploit this transitive trust relationship to access restricted systems."
+  }
+]

@@ -1,0 +1,1382 @@
+[00:08] Okay, so it's time to cover physical
+[00:11] security as well. And you might not
+[00:13] expect this, but physical security is
+[00:15] the foundation of all other security
+[00:17] practices.
+[00:18] Uh it doesn't matter how well your
+[00:20] encryption works, how good your
+[00:22] authentication system is, how thoroughly
+[00:25] you monitor things like file integrity,
+[00:28] if the attacker gets inside of your data
+[00:30] center and leaves with a bunch of SSDs
+[00:33] in the backpack.
+[00:34] So, what exactly is something called a
+[00:36] secure facility? Now, to ensure physical
+[00:40] security, you need to start with a
+[00:41] secure facility plan that defines how
+[00:43] your security should look like. This
+[00:46] plan is going to be the lovechild of a
+[00:48] good risk assessment.
+[00:50] Another thing that you need to perform
+[00:51] is called a critical path analysis. This
+[00:54] is a process where you map the
+[00:56] relationships between your
+[00:58] mission-critical apps and processes, and
+[01:00] all these supporting elements that they
+[01:01] depend on. If you have an online
+[01:03] business, for example, you depend on the
+[01:05] server hardware, the storage, you depend
+[01:08] on electricity, you depend on the
+[01:10] building where the servers are hosted
+[01:12] in, the internet connection of that data
+[01:14] center, and so on.
+[01:16] Now, when doing this critical path
+[01:17] analysis, you'll notice that many of
+[01:19] these critical paths actually overlap.
+[01:22] Many processes will use the same, let's
+[01:25] say, internet connection, the same
+[01:27] servers, the same building, the same
+[01:28] personnel. This is, first of all, a good
+[01:30] thing as it improves efficiency. Now, on
+[01:33] the other hand, it can create single
+[01:35] points of failure
+[01:36] uh and more attractive targets for
+[01:38] attackers. For example, if you use the
+[01:40] same internet connection for voice,
+[01:43] video storage, virtual desktops,
+[01:45] production traffic, cloud infrastructure
+[01:47] access, and even some maybe internal
+[01:50] device management, then a single attack
+[01:52] on that connection can disrupt all of
+[01:54] them.
+[01:55] Now, a good secure facility plan should
+[01:57] have multiple layers of physical
+[01:59] security that overlap and even
+[02:01] complement each other. You want to
+[02:03] create something like an obstacle course
+[02:06] for attackers to go through if they want
+[02:08] to breach your facility. You want to
+[02:10] make it as hard as possible for them to
+[02:13] get in or out, perhaps, without being at
+[02:17] least detected, if not even stopped. You
+[02:20] want to use security mechanisms that
+[02:22] work in series rather than in parallel
+[02:25] to make it as difficult as possible to
+[02:26] breach your facility. Also, choosing the
+[02:29] right facility, the right site for your
+[02:31] business, is not always about the cost
+[02:33] or about the size of the building or how
+[02:35] nice the neighborhood is. The site
+[02:37] security involves many factors you need
+[02:39] to consider,
+[02:40] of course, the location and the quality
+[02:42] of the construction, proximity to other
+[02:44] buildings and other businesses. You may
+[02:46] also need to consider the weather
+[02:48] conditions, like how often something
+[02:50] like a flood or an earthquake or a
+[02:51] hurricane can happen, how many break-in
+[02:54] attempts happen in that area, and if you
+[02:57] have any emergency response personnel
+[02:59] available. For example, you might not
+[03:01] want to be next to a business that
+[03:02] attracts too much attention, noise, or
+[03:05] danger. You don't want to be too far
+[03:07] from the police, fire department, or
+[03:09] medical services. You don't want to have
+[03:11] weak entry points, such as windows and
+[03:13] doors that can be easily breached. You
+[03:15] don't want to have objects that can hide
+[03:17] intruders or attackers, like too much
+[03:19] vegetation.
+[03:20] You don't want to have a building that
+[03:22] cannot withstand uh extreme weather
+[03:24] conditions, as well. You also need to
+[03:26] think about how visible or hidden you
+[03:28] want your company to be. Do you want to
+[03:30] be easily accessed and recognized by our
+[03:32] customers or your partners, or do you
+[03:34] want to be discreet and secretive about
+[03:36] your business? Industrial camouflage,
+[03:39] it's actually called, is a technique to
+[03:41] mask or hide your actual operation or
+[03:43] facility by presenting a fake or some
+[03:46] alternative appearance. For example, you
+[03:48] might have a big data center, but you
+[03:49] might not want to put a big logo on it
+[03:52] stating who it belongs to or even the
+[03:54] fact that it is a data center. Now, in
+[03:56] general, while choosing the right secure
+[03:58] site is important, you also need to
+[04:00] fine-tune it for security as well.
+[04:02] There's an interesting principle called
+[04:04] CPTED, which means crime prevention
+[04:07] through environmental design, and is
+[04:10] about exactly what you guessed. It's
+[04:12] about how you design and place objects
+[04:14] around your building to improve
+[04:16] security.
+[04:17] One interesting principle here is called
+[04:19] natural access control. This is about
+[04:22] subtly guiding people entering and
+[04:25] leaving a building through placement of
+[04:27] pathways, fences, bollards, placement of
+[04:30] lights. The idea here is to make the
+[04:32] entrance point to a building obvious and
+[04:34] welcoming, of course, for authorized
+[04:36] people, but difficult and uninviting for
+[04:38] unauthorized people. Now, also to make
+[04:40] sure that people don't enter the
+[04:41] building using obscure entrances, but in
+[04:44] as much plain sight as possible.
+[04:47] Natural surveillance is another one.
+[04:49] This is the ability to be visible by
+[04:51] others. The idea here is to make the
+[04:54] area visible and transparent for
+[04:55] authorized people, but exposed if you're
+[04:58] not one of the authorized people. This
+[05:00] can be done using windows, lighting,
+[05:02] clean landscaping, cameras, even
+[05:05] benches. Yep, benches. If you encourage
+[05:08] people to sit around your building,
+[05:11] you get a decent level of free
+[05:13] surveillance. That is assuming that you
+[05:15] can find some people out there who don't
+[05:17] just stare at their smartphones while
+[05:19] seated.
+[05:20] Finally, natural territorial
+[05:22] reinforcement. This is about expressing
+[05:24] ownership over an area. This includes
+[05:26] sign, fences, gates, even color patterns
+[05:29] and art that display a specific area as
+[05:32] clearly belonging to somebody, to your
+[05:35] business.
+[05:36] Physical security, just like IT
+[05:38] security, is actually a more nuanced
+[05:41] term and has subcategories for physical
+[05:44] security. We still have administrative
+[05:46] controls, technical controls, and
+[05:47] physical controls, just like we had in
+[05:49] IT.
+[05:50] Administrative physical security
+[05:52] controls are the policies, the
+[05:54] procedures, the personnel that govern
+[05:56] the security of your company or a
+[05:58] facility against unauthorized entry.
+[06:01] This includes things like facility
+[06:02] construction and selection, site
+[06:05] management, building design, awareness
+[06:07] training, emergency response, anything
+[06:09] that's a policy.
+[06:11] Next, technical physical security
+[06:13] controls are the electronic devices that
+[06:15] monitor and control the access to your
+[06:17] building and to specific equipment
+[06:18] rooms. Uh they include things like
+[06:21] building access controls, intrusion
+[06:22] detection, alarms on doors and windows,
+[06:25] cameras, of course, uh HVAC, power,
+[06:28] elevator access, fire alarms and fire
+[06:31] suppression, and so on. Anything that is
+[06:33] automated and helps with physical
+[06:35] security.
+[06:36] Now, purely physical security controls
+[06:39] are the barriers that prevent or delay
+[06:42] the access to your building. This
+[06:43] includes fencing, lighting, locks, even
+[06:46] the type of material that you're using
+[06:48] for a building, for a fence or a wall.
+[06:50] Man traps fall into this category as
+[06:52] well, guard dogs, security guards, and
+[06:55] so on.
+[06:56] Now, when designing physical security
+[06:57] for your facility, you need to follow a
+[06:59] logical order of operations. As we said
+[07:01] before, you need to have multiple layers
+[07:04] of security that work in series rather
+[07:07] than in parallel.
+[07:08] The logical order would be as follows. A
+[07:11] lot of D's in this list. Deter. Use
+[07:16] signs, fences, lights, cameras, guards,
+[07:18] dogs, or other means to discourage
+[07:21] attackers from even attempting to access
+[07:23] your building.
+[07:24] Deny. Well, here we have locks, doors,
+[07:27] windows, vaults, safes, anything that
+[07:28] physically prevents the attackers from
+[07:30] accessing your building.
+[07:31] Detect. We do this with sensors, alarms,
+[07:34] cameras, monitors, logs to discover any
+[07:37] unauthorized access attempts or even
+[07:39] detect breaches that already happened.
+[07:41] Delay. For this, we use walls, gates,
+[07:44] man traps, cable locks, bollards to slow
+[07:46] down attackers from reaching their
+[07:48] target or at least give you some time to
+[07:50] decide whether it's a threat or not.
+[07:52] You would think that a wall would much
+[07:54] better deny rather than delay, right?
+[07:58] Speaking of decisions, the determine
+[08:00] part is done with cameras, monitors,
+[08:02] guards, dogs. Careful how you smell
+[08:05] around them.
+[08:06] In order to assess a situation, to
+[08:09] decide if it's a danger or not. And
+[08:11] finally, decide, right? Use policies,
+[08:13] procedures, guards, whatever you need to
+[08:16] use to respond to the incident and take
+[08:18] appropriate actions.
+[08:20] There are a couple more factors that we
+[08:21] need to consider because physical
+[08:23] security is not just about protecting
+[08:24] the front door. Remember that we should
+[08:26] protect against availability failures,
+[08:28] too.
+[08:29] Equipment failure. That's uh one of the
+[08:31] most common threats to the availability
+[08:33] of your IT systems and your business as
+[08:35] a whole. You need to plan for equipment
+[08:37] failure. It's not a matter of if, but of
+[08:39] when. You need backups, spare parts, or
+[08:42] really strong and painful expensive SLAs
+[08:44] with your vendors.
+[08:46] Now, to prepare for equipment failure,
+[08:48] you need to consider a couple of things,
+[08:49] which are also important acronyms for
+[08:52] you to remember.
+[08:53] First, uh not an acronym, but how
+[08:55] important is the asset or the process to
+[08:57] your company. Okay, fine. This one is
+[09:00] not an acronym, but still, how much
+[09:02] impact will it have if it stops working?
+[09:05] Okay, if it does not have that much of
+[09:07] an impact, maybe it doesn't need that
+[09:09] much protection. Pretty obvious.
+[09:12] Next, we have the allowable interruption
+[09:14] window, AIW. How long can you tolerate
+[09:16] the interruption of the process without
+[09:18] causing significant damage? This
+[09:20] interruption is considered temporary and
+[09:22] doesn't require any data recovery.
+[09:25] Another one is SDO, service delivery
+[09:27] objective. What is the minimum level of
+[09:29] service or performance that you need to
+[09:31] maintain for the asset or for the
+[09:33] affected process during that
+[09:35] interruption? Perhaps it is not
+[09:37] acceptable to have complete downtime,
+[09:39] but it's okay and acceptable to function
+[09:41] at a reduced capacity. Another one is
+[09:44] the maximum tolerable downtime or
+[09:47] maximum tolerable outage. So, it would
+[09:49] be MTD or MTO. What is the maximum
+[09:52] amount of time that you can afford to
+[09:54] have the asset or the process completely
+[09:57] unavailable, offline. Notice that MTD is
+[10:00] about how long you can last without the
+[10:02] critical resource and still be able to
+[10:04] recover, for example, from backups. AIW,
+[10:08] the allowable interruption window, is a
+[10:10] type of interruption that does not
+[10:11] require recovery. So, obviously, the AIW
+[10:14] is going to be much shorter than the
+[10:16] MTD. Now, specifically for hardware, we
+[10:18] have different types of metrics. And
+[10:20] these are mean time to failure, MTTF.
+[10:23] This is the expected typical functional
+[10:26] lifetime of the device.
+[10:28] You should schedule all devices to be
+[10:29] replaced before their MTTF expires. How
+[10:32] do you know this? Well, this is
+[10:34] statistically determined by the vendor
+[10:36] by monitoring how many devices fail in a
+[10:40] relatively short time span and then
+[10:42] extrapolating this information to a
+[10:44] longer time interval. It's a little
+[10:46] better than a crystal ball,
+[10:49] >> [laughter]
+[10:49] >> but not by much. If If Apple tells you
+[10:53] that the the phone they launched 2 weeks
+[10:55] ago has an MTTF of 10 years, you are
+[10:58] more than allowed to have your doubts
+[11:01] about the statement, of course.
+[11:03] Mean time to repair, MTTR, this is the
+[11:06] average time required to perform a
+[11:08] repair on the device. Not all devices
+[11:11] can be repaired, of course, but this
+[11:13] also applies to a server, for example,
+[11:15] where the power supply has failed. You
+[11:17] will not repair the power supply, you
+[11:19] will replace it, but it is considered
+[11:22] that you, quote unquote, repair the
+[11:24] server this way. Obviously, you should
+[11:26] have an alternative solution on or a
+[11:28] spare device to fill in for the duration
+[11:30] of the repair time. Mean time between
+[11:32] failures, MTBF, this is an estimation of
+[11:35] the time between the first and any
+[11:36] subsequent failures. MTTF and MTBF are
+[11:39] pretty similar, so vendors often publish
+[11:41] just one of them, whichever looks better
+[11:44] on the data sheet.
+[11:45] Also, on the physical side, we need to
+[11:49] think about protecting the cable
+[11:50] infrastructure because that's where the
+[11:52] sensitive data travels through.
+[11:54] Now, the cable plant, remember this
+[11:57] term, includes all the cables and the
+[11:59] intermediary devices that make up your
+[12:01] network. This in turn includes the
+[12:02] demarcation point or MDF, that's the
+[12:05] main distribution frame,
+[12:06] not to be confused with the other MDF,
+[12:08] which stands for medium-density
+[12:10] fiberboard, type of wood product that
+[12:12] should you should never use for network
+[12:13] cabling.
+[12:14] These terms, demarcation point or MDF,
+[12:17] refer to where the cable from the
+[12:19] provider enters the building and
+[12:21] connects to the internal cable plant.
+[12:24] Sometimes, the point of entry,
+[12:25] especially for data centers, is called
+[12:27] the meet-me room, where your network
+[12:30] meets and takes out to dinner the
+[12:33] provider's network. The equipment room
+[12:35] is the main wiring closet for the
+[12:37] building, where you'll find the
+[12:38] networking equipment, routers, switches,
+[12:40] servers, firewalls, and so on.
+[12:42] Backbone distribution system, this
+[12:45] provides connections between the
+[12:46] equipment room and everything else,
+[12:48] including connections with other floors
+[12:50] with high-speed connections, usually
+[12:51] fiber optics.
+[12:52] Wiring closet, this is the connection
+[12:54] point for a floor or a section of a
+[12:57] large building. It also connects the
+[12:59] backbone distribution system and the
+[13:00] horizontal distribution systems. The
+[13:02] wiring closet is sometimes called the
+[13:04] intermediate distribution frame or IDF
+[13:07] or simply just the telecommunication
+[13:09] room. Horizontal distribution system,
+[13:11] since we just mentioned them, this is
+[13:12] the connection between the wiring closet
+[13:14] and the rest of the work areas, the
+[13:16] actual desks with Ethernet sockets and
+[13:18] access points. It includes cabling,
+[13:20] patch panels, and wall sockets.
+[13:23] Wiring closets are also used to house
+[13:25] wiring for other cable stuff in a
+[13:26] building, such as alarm systems, circuit
+[13:29] breakers, telephone lines,
+[13:31] IP and non-IP systems, including
+[13:34] security cameras, or anything that
+[13:35] probably has their own separate network.
+[13:38] Now, of course, the wiring closet should
+[13:40] be an area as clean as possible. I've
+[13:42] seen companies using the wiring closet
+[13:44] to store toilet paper, food, alcohol,
+[13:47] bicycles, electric scooters, junk
+[13:50] equipment, and so on. Don't do it. It's
+[13:52] called a wiring closet, not a hoarder's
+[13:54] closet. Server rooms and data centers
+[13:57] are the next level after wiring closets,
+[13:59] and they are less human-friendly, but
+[14:01] more equipment-friendly. A server room
+[14:03] is often not optimized for workers, but
+[14:05] for housing equipment. For example, it
+[14:07] may have very low temperatures, lights
+[14:09] are designed to be useful, but not
+[14:10] pleasant, and stacks of equipment which
+[14:13] do not make it easy to navigate around.
+[14:16] It also must have fire detection and
+[14:18] extinguishing systems, some of which can
+[14:20] kill any fire, and careful, even any
+[14:22] human unlucky enough to be in the room.
+[14:25] The server room should be somewhere in
+[14:26] the middle of the building, as it is
+[14:28] usually the most secure area, especially
+[14:29] when it comes to natural disasters.
+[14:32] Larger data centers might be separate
+[14:34] buildings on their own, right next to
+[14:35] your offices, or located completely in
+[14:37] another location off over very large
+[14:40] distances. It might be
+[14:42] your data center, it might be
+[14:45] space that is leased from another data
+[14:47] center provider, or it might just be a
+[14:49] set of equipment racks that belong to
+[14:52] you, hosted in a larger multi-tenant
+[14:54] data center, where multiple customers
+[14:56] share the same space and infrastructure.
+[14:58] Both server rooms and data centers
+[15:00] should have strong physical access
+[15:02] controls against unauthorized human
+[15:03] access, so you could encounter smart
+[15:05] card readers, biometric locks, intrusion
+[15:08] detection systems, or physical
+[15:09] intrusions, that is.
+[15:11] Speaking of authentication methods for
+[15:13] physical security, here are a couple of
+[15:15] them worth mentioning. First, you have
+[15:17] badges. Some badges are simple, like a
+[15:20] name tag that says, "Hello, my name is
+[15:22] Bob." These are called dumb cards
+[15:24] because they don't do anything except
+[15:26] show your name.
+[15:27] They're good for visitors or guests who
+[15:29] don't need access to anything. Other
+[15:31] badges are more complex, like a smart
+[15:33] card or a token device.
+[15:35] They're called smart cards because they
+[15:36] have a chip inside them that can store
+[15:38] and process information. They can also
+[15:40] communicate with card readers using
+[15:42] RFID, NFC, or even Bluetooth, not that
+[15:45] often, actually.
+[15:46] They're good for employees or
+[15:48] contractors who need access to specific
+[15:50] sections of the building.
+[15:52] Smart cards are often used as a form of
+[15:54] multi-factor authentication, which means
+[15:56] you need more than one thing to prove
+[15:58] your identity. For example, you may need
+[16:00] to insert your smart card into a reader
+[16:02] and enter a PIN or scan your
+[16:04] fingerprint. This way, someone steals
+[16:06] your smart card, they cannot use it
+[16:08] without knowing your PIN or stealing
+[16:11] your finger.
+[16:12] Magnetic stripe cards are another type
+[16:15] of badge that you might have seen
+[16:17] before. They look like credit cards and
+[16:19] they have a black magnetic stripe on the
+[16:21] back that can store some data.
+[16:24] Possibly the least secure type card, but
+[16:27] still widely used, as they can be easily
+[16:28] cloned.
+[16:30] Detecting intrusions, IDSs can be, by
+[16:33] definition, logical or physical. Logical
+[16:35] IDSs are the ones people are used to
+[16:38] hearing about when talking about
+[16:39] monitoring the network for intrusion
+[16:41] attempts.
+[16:42] We'll focus on physical IDSs here, which
+[16:44] are also called burglar alarms, because
+[16:47] they can scare away burglars with
+[16:50] loud noises or flashing lights. They can
+[16:53] also record evidence of the intrusion,
+[16:55] such as video footage, log entries, and
+[16:57] it can also notify security personnel.
+[16:59] Physical IDSs uh rely on sensors, which
+[17:03] are devices that detect changes in the
+[17:04] environment, such as opening a door,
+[17:06] breaking a window, or simply someone
+[17:09] moving inside of a room while the room
+[17:10] should be unoccupied. These last ones
+[17:13] are often called motion detectors, and
+[17:15] they come in a variety of technologies
+[17:16] for detecting movement, like infrared,
+[17:19] ultrasonic, microwave, photoelectric,
+[17:22] and so on.
+[17:23] Also, here you might find the term
+[17:25] digital motion detector. Those are
+[17:27] basically smart cameras that analyze the
+[17:30] images of a monitored area and detect
+[17:32] any significant changes. For example, it
+[17:34] might notice if a person walks into the
+[17:36] room, if an object is moved, or if a
+[17:38] specific car plate number is passing in
+[17:40] front of it.
+[17:42] Sensors of any kind are usually paired
+[17:43] with alarm systems. We have multiple
+[17:45] types of alarms, depending on how loud
+[17:48] they sound.
+[17:49] >> [gasps]
+[17:49] >> Deterrent alarms are not just audible,
+[17:52] but they make it harder for intruders to
+[17:54] continue their evil deeds by locking
+[17:57] doors, shutting down windows, activating
+[18:00] traps. Well, maybe not Tomb Raider-y,
+[18:03] Indiana Jones type of traps, but well,
+[18:06] wouldn't that be awesome?
+[18:08] Repellant uh alarms are, well,
+[18:11] repellant, simply annoying. They make it
+[18:13] unpleasant for intruders
+[18:15] uh to stay on the premises by sounding
+[18:17] sirens, bells,
+[18:18] very, very loudly and by turning on the
+[18:21] lights. Of course, this also exposes the
+[18:23] presence of the intruder to anyone in
+[18:25] the vicinity.
+[18:26] Notification alarms don't make any noise
+[18:29] or show any signs locally, but they
+[18:30] record data and notify authorities about
+[18:33] the incident. They can even send log
+[18:35] files or video recordings to security
+[18:37] guards
+[18:38] or the police. Also, they're sometimes
+[18:40] called silent alarms. Of course, among
+[18:42] the most common physical security
+[18:45] controls are surveillance cameras. They
+[18:48] should be positioned to watch exit and
+[18:50] entry points, valuable assets, public
+[18:52] areas, such as parking lots or walkways.
+[18:55] They should also be coordinated with the
+[18:57] design of the facility, so that they
+[18:58] have clear lines of sight and avoid
+[19:01] blind spots.
+[19:02] They should record what they see, either
+[19:04] locally or in some cloud, preferably
+[19:07] local cloud environment. They can record
+[19:09] either non-stop or they can be
+[19:11] configured to record only when specific
+[19:13] events happen, like persons or cars are
+[19:15] detected in certain areas or specific
+[19:18] movement.
+[19:19] Also, be careful where you store the
+[19:21] recorded data. It might be easier to
+[19:23] just purchase a cloud storage account
+[19:25] and dump everything in there, but think
+[19:26] about the fact that a smart intruder who
+[19:28] knows about this might first cut your
+[19:31] internet connection, so no video traces
+[19:33] of the intrusion will be recorded. In
+[19:35] that case, it might be a better idea to
+[19:37] record on a local server, locked down in
+[19:39] your own server room or data center.
+[19:42] Also, don't laugh, but a real security
+[19:44] measure is made up of dummy or decoy
+[19:47] cameras. They look like real cameras,
+[19:50] but they they don't actually record
+[19:51] anything. They're just empty cases.
+[19:53] They're good for places that don't need
+[19:55] high security levels, but you want to
+[19:57] scare away potential intruders. Also,
+[19:59] empty cases are really really cheap.
+[20:02] Some cameras can detect objects such as
+[20:04] faces, devices, or even weapons. Uh they
+[20:07] can also recognize individuals and track
+[20:08] their motion across the monitored area.
+[20:11] They can even analyze a walking pattern
+[20:13] or or gait as a form of biometric
+[20:15] identification. This is called gait
+[20:17] analysis.
+[20:18] g a i t gait, okay? Obviously, this can
+[20:22] provide a lot of false results, of
+[20:24] course, but you should know that it's
+[20:26] there. It's possible even if you're
+[20:28] probably not going to find gait analysis
+[20:29] in many places except for certification
+[20:31] exams.
+[20:32] Well, access control with physical
+[20:34] security controls becomes very important
+[20:36] because these controls can either be the
+[20:39] first or the last line of defense
+[20:41] against unauthorized entry. Abusing uh
+[20:44] access or violating the access security
+[20:45] policy can be something as simple as
+[20:48] leaving a door open, holding the door,
+[20:51] bypassing locks, pretending to be
+[20:52] someone else, tailgating, or
+[20:54] piggybacking.
+[20:56] When we say bypassing locks, we refer to
+[20:58] the use of lock picks, key card clones,
+[21:01] or any other hacking devices like the
+[21:03] Flipper Zero and other gadgets.
+[21:05] Impersonation can be done with fake or
+[21:08] stolen ID, and sometimes it's enough to
+[21:10] look like you belong there to trick
+[21:11] someone into giving you access. For
+[21:13] example, pretending you're from building
+[21:15] management or you're delivering a
+[21:16] package or pizza while looking busy and
+[21:19] in a hurry, perhaps wearing a reflective
+[21:21] vest or safety equipment, that might
+[21:24] just be enough. When's the last time you
+[21:25] asked a maintenance worker in your
+[21:27] office building for an ID? Tailgating
+[21:30] means sneaking after an authorized but
+[21:33] unaware person before the door closes.
+[21:36] While piggybacking doesn't involve pigs
+[21:39] nor insults, but instead requires you to
+[21:41] trick someone into letting you in either
+[21:44] by having them hold the door for you or
+[21:46] by using their own credentials and
+[21:48] access cards to give you access as well.
+[21:50] There are a lot of social engineering
+[21:52] techniques that focus on this type of
+[21:53] intrusion, and most of the time they're
+[21:55] really really easy to implement,
+[21:57] unfortunately. Uh actually, many people
+[22:00] consider it a nice gesture to hold the
+[22:01] door for you, so you don't even have to
+[22:03] swipe your badge. Nobody even feels
+[22:06] hacked or socially engineered.
+[22:08] Nevertheless, we always need an audit
+[22:10] trail,
+[22:12] an access log to record who accessed
+[22:14] what and when. Possibly not why, that's
+[22:17] a task for incident investigators. We
+[22:20] can create these access logs manually by
+[22:22] employing security guards who check IDs
+[22:25] and
+[22:26] and times, or they can be generated
+[22:28] automatically by the systems that manage
+[22:30] these smart cards. Of course, then you
+[22:32] will need some way to map those smart
+[22:34] cards to actual people when you assign
+[22:36] smart cards to them, so at least some
+[22:37] level of human manual intervention is
+[22:40] still most likely to be required. Also,
+[22:42] let's talk about why media storage is
+[22:44] important from a physical security
+[22:46] standpoint. Media storage is not just
+[22:48] about keeping your media devices in a
+[22:50] safe place, but also about protecting
+[22:52] them from theft and corruption. Uh you
+[22:54] don't want someone to steal your media
+[22:56] and access your sensitive data or plant
+[22:58] some malware on it and ruin your system.
+[23:01] You also don't want your media to get
+[23:02] damaged by things like fire, water,
+[23:04] magnets,
+[23:06] rats, whatever you whatever physical
+[23:08] threats you might have in your
+[23:09] environment. So, how do you store your
+[23:12] media uh safely? Well, there are
+[23:14] different types of media that require
+[23:16] different levels of protection. Uh first
+[23:18] of all, blank media. These are media
+[23:20] devices that have not yet been used,
+[23:22] such as new hard drives, new USB master
+[23:24] devices. You might think they're not
+[23:26] important, but you still have to make
+[23:27] sure that an external hard drive or for
+[23:29] example, which you know for sure it it's
+[23:31] supposed to be empty and clean of
+[23:33] malware, is actually clean. Otherwise,
+[23:35] if someone were to tamper with this
+[23:37] empty media, it might not be so empty
+[23:39] the next time you try to use it, and you
+[23:41] might accidentally introduce malware in
+[23:43] your systems. Next, we have reusable
+[23:45] media. These are media devices that can
+[23:47] be used multiple times, such as thumb
+[23:49] drives, flash memory cards, portable
+[23:51] hard drives. Very convenient and handy,
+[23:54] but also very risky. They can contain
+[23:56] your personal work or data that you
+[23:58] don't want anyone else to see or steal.
+[24:01] They can also have data remnants that
+[24:03] can be recovered by someone else after
+[24:04] you format them. Those remnants can be
+[24:07] completely destroyed using specialized
+[24:08] secure deletion solutions that overwrite
+[24:10] them with either random meaningless data
+[24:12] or just binary zero. Or you just destroy
+[24:15] the device. Installation media.
+[24:17] Uh these are media devices that contain
+[24:18] software that can be installed to your
+[24:20] system, operating system disks or
+[24:22] application CDs or image ISOs for
+[24:25] software installations or even OVA OVF
+[24:28] files for virtual appliances. They can
+[24:30] be infected by malware that can
+[24:32] compromise any systems that the software
+[24:34] gets installed to. Good advice here
+[24:37] would be to use integrity checks to make
+[24:38] sure that the installation package that
+[24:40] you're planning to run hasn't been
+[24:41] compromised. So, check its hash. Make
+[24:44] sure it's the same package as you
+[24:45] initially downloaded. As you can see,
+[24:47] when talking about securing media, we're
+[24:49] actually talking about just the media,
+[24:50] not necessarily the data on it. So,
+[24:53] security measures here would include you
+[24:55] storing them in a locked cabinet or safe
+[24:57] and having a media librarian or
+[24:59] custodian who manages the access to the
+[25:01] cabinet, and you should always use a
+[25:03] check-in check-out process to track who
+[25:06] takes and returns the media. Boring
+[25:08] boring job, I know, but it has to be
+[25:10] done. Also, special care and
+[25:11] consideration should be given to
+[25:13] evidence storage because it can help you
+[25:14] solve problems, prevent crimes, protect
+[25:17] yourself from lawsuits. That's because
+[25:19] evidence storage is about preserving
+[25:20] data that can be used as evidence in
+[25:23] case of an incident. When an incident
+[25:25] happens, you want to know what caused
+[25:27] it, how it happened, who did it, and
+[25:29] after the trial is over, how to prevent
+[25:31] it from happening again. That's where
+[25:33] evidence storage comes in handy. Now,
+[25:35] having this information a data store, a
+[25:38] very importantly trustworthy data store,
+[25:41] can help you perform root cause analysis
+[25:43] and can help you deal with cybercrime
+[25:45] events, which are becoming more frequent
+[25:47] and sophisticated. When a cybercrime
+[25:48] event occurs, you want to have evidence
+[25:51] to prove your innocence, identify the
+[25:53] culprit, and seek justice, right? That's
+[25:55] why you need to retain logs, audit
+[25:57] trails, and other records of digital
+[25:58] events.
+[26:00] You may also need to retain image copies
+[26:02] of drives or snapshots of virtual
+[26:04] machines for future comparison. This can
+[26:06] be related to internal corporate
+[26:08] investigations or to a law
+[26:10] enforcement-based forensic analysis. How
+[26:12] do you store your evidence securely?
+[26:14] Well, there are some best practices that
+[26:16] you should follow. Use a dedicated
+[26:18] storage system, first of all. You don't
+[26:20] want to mix your evidence with your
+[26:22] regular data because that can compromise
+[26:24] it. There are even specialized storage
+[26:26] solutions called WORM storage, uh write
+[26:29] once read many, that are designed so
+[26:32] that once you've written data in it,
+[26:34] it's logically impossible for someone
+[26:36] else to change it. It's actually
+[26:38] impossible for you as well to change it,
+[26:40] thus ensuring not only integrity but
+[26:42] reliability if needed to be presented as
+[26:44] evidence. Also, you want to potentially
+[26:46] keep your storage system offline when
+[26:48] not actively having new data sets
+[26:50] transferred to it. This means that you
+[26:52] could disconnect the storage system from
+[26:53] any network when you're not adding new
+[26:55] evidence to it. Uh you also don't want
+[26:57] to allow any internet connectivity to
+[26:59] and from your storage system because
+[27:01] that can be a source of compromise in
+[27:03] itself.
+[27:04] And as a general rule, you shouldn't
+[27:06] have dedicated storage directly exposed
+[27:08] to the internet for any reasons anyway.
+[27:12] And you want to track all activities on
+[27:15] your evidence storage systems, such as
+[27:17] who accesses it, uh when they access it,
+[27:20] what they do on it, and why they do it.
+[27:22] You want to use logs or audit trails to
+[27:24] record and monitor all actions on your
+[27:26] storage system. This way you can ensure
+[27:28] that only authorized users can access
+[27:30] your evidence and that they follow
+[27:31] proper procedures. Finally, don't forget
+[27:33] to hash your data. This way you can make
+[27:35] sure that it wasn't tampered with, and
+[27:37] you can get a warning when and if
+[27:39] tampering occurs.
+[27:42] Protecting work areas like your office,
+[27:44] your desk, is hopefully going to be a
+[27:45] topic with a lot of stuff that falls
+[27:47] into the common sense area for you. And
+[27:50] you'll probably say, "Well, obviously,
+[27:51] who doesn't do that?" Well, you'd be
+[27:53] surprised.
+[27:54] First of all, let's talk about why we
+[27:56] need restricted work area security.
+[27:59] Here, the answer is simple. Not all
+[28:01] areas are created equal. Some areas
+[28:03] contain more valuable or important
+[28:05] assets than others. For example, the
+[28:07] server room and their wiring closets are
+[28:09] more sensitive than the restrooms or
+[28:11] even your office. Sorry for placing
+[28:13] these two in the same sentence, but it's
+[28:15] true. How do we design for this
+[28:17] imbalance? There are many methods, but
+[28:18] the basics rely on application of the
+[28:21] security in depth principle. This means
+[28:23] that we should arrange our areas in a
+[28:25] way that the more sensitive areas are
+[28:28] located in the center of our facility,
+[28:30] surrounded by less sensitive areas. This
+[28:32] creates layers of protection that
+[28:35] require increased level of authorization
+[28:38] to gain access into the more restrictive
+[28:40] areas. For example, you can have a lobby
+[28:42] area that is open to almost everyone, a
+[28:44] work area that is accessible only to
+[28:46] employees, and a server room that is
+[28:49] accessible only to network
+[28:51] administrators and security staff with
+[28:53] access from within the work area.
+[28:55] Next, use walls or partitions to
+[28:57] separate work areas. Divide them based
+[28:59] on how similar or different they are.
+[29:02] This works against shoulder surfing,
+[29:04] that is, having your colleague peek from
+[29:06] behind your shoulder at your screen,
+[29:08] eavesdropping on your conversations, and
+[29:10] so on. Usually, open areas will be
+[29:12] allocated to an entire department and
+[29:14] only to that department, so that there
+[29:15] are no inconvenient situations where
+[29:18] peeking over someone else's shoulder
+[29:19] would reveal sensitive information from
+[29:21] other departments.
+[29:23] All the workers in the same department
+[29:25] should more or less have a similar type
+[29:27] of need to know of department-related
+[29:29] data.
+[29:31] Another good habit for protecting work
+[29:32] areas is to use a clean desk policy.
+[29:35] This means that we should instruct our
+[29:37] workers to clean off their desks at the
+[29:40] end of each day. Don't leave on your
+[29:42] desk sensitive information such as
+[29:44] passwords, financial records, medical
+[29:46] information, or any confidential
+[29:48] materials. Place them into a lockable
+[29:50] desk drawer or a file cabinet at the end
+[29:52] of each day, or just take them with you
+[29:54] if you're allowed to. Leaving electronic
+[29:57] equipment on the desk falls into the
+[29:58] same clean desk policy. Don't leave
+[30:00] running laptops or work phones in plain
+[30:02] sight on your desk where anyone could
+[30:04] access them after hours.
+[30:06] As far as visitors are concerned, make
+[30:09] sure you have some way to track them and
+[30:11] their whereabouts, or at least where
+[30:13] they should have access.
+[30:14] You should decide whether you need an
+[30:16] escort for visitors and what other forms
+[30:19] of visitor control you should implement.
+[30:21] This includes basic physical security
+[30:22] tools such as badges that only unlock
+[30:24] specific locks, video cameras, written
+[30:27] logs, and security guards. A good idea
+[30:29] would be to make sure that nobody
+[30:31] without a visible ID ever leaves the
+[30:33] building without leaving their guest
+[30:35] badge at the reception, thus risking
+[30:37] visitors taking their guest passes home
+[30:39] with them intentionally or accidentally.
+[30:42] And since we're talking about physical
+[30:43] controls, let's not forget that the
+[30:45] physical world is strongly affected by
+[30:47] environmental factors as well. For
+[30:49] example, power, which is the lifeblood
+[30:52] of our IT systems, can experience
+[30:54] fluctuations such as surges, spikes,
+[30:57] sags, or outages. Power events like
+[31:00] these can cause damage to our equipment
+[31:02] and consequently to our data. How can we
+[31:04] avoid this? Well, we could use surge
+[31:07] protectors. These are devices that
+[31:09] protect the equipment from power
+[31:10] overloads. They have fuses that react
+[31:13] when there's too much power coming in
+[31:14] from the wall outlet. This cuts off the
+[31:16] power and prevents damage to our
+[31:18] equipment. These only work against power
+[31:20] overloads, not power underloads or
+[31:23] outages.
+[31:24] They also stop the power completely,
+[31:25] which can cause data loss or corruption
+[31:28] if the equipment is not gracefully shut
+[31:29] down and there is no battery backup that
+[31:31] kicks in automatically.
+[31:33] Another solution against the
+[31:34] fluctuations is to use power
+[31:36] conditioners. They can also protect
+[31:38] against power line noise by filtering
+[31:40] it. Noise is the unwanted interference
+[31:43] or distortion in an electrical signal.
+[31:46] Generally, against noise either caused
+[31:49] by electromagnetic interference or radio
+[31:51] frequency interference, remember to use
+[31:53] grounding and shielded cables, or even
+[31:56] fiber optics where possible since those
+[31:58] don't carry electrical signals and thus
+[32:00] are immune to electrical noise.
+[32:03] Another convenient solution is to use
+[32:04] UPSs, uninterruptible power supplies,
+[32:07] devices that protect the equipment from
+[32:09] power loss or disconnection from the
+[32:10] power grid. They have self-charging
+[32:13] batteries that can supply backup power
+[32:15] in case of a power outage, and most UPSs
+[32:17] also provide surge protection and power
+[32:20] conditioning in addition to battery
+[32:22] power.
+[32:23] There are many types of UPSs, but just
+[32:24] to mention two of them, we first have
+[32:26] double conversion UPSs that work by
+[32:29] storing the power from the wall outlet
+[32:31] in a battery and then feeding that power
+[32:33] to our equipment from the battery. This
+[32:36] protects against fluctuations and noise
+[32:38] since you're sending a clean type of
+[32:40] electrical current directly from the
+[32:42] battery. And we have line interactive
+[32:44] UPSs where the battery is not in use
+[32:47] under normal conditions, but when there
+[32:49] is a power outage, it automatically
+[32:51] switches to use the battery to provide
+[32:53] power. This is most likely the type of
+[32:55] UPS that you will find in most offices
+[32:57] or maybe even in your home.
+[32:59] In many cases, the purpose of a UPS is
+[33:01] not necessarily to continue doing
+[33:04] business as usual while on batteries,
+[33:07] but to allow sufficient time to
+[33:09] gracefully shut down all the equipment
+[33:11] in case you don't recover immediately
+[33:13] from the outage. The UPS batteries are
+[33:16] not designed for long-term usage. To
+[33:18] continue doing business during the
+[33:20] blackout, you will need a generator.
+[33:23] So, generators can generate electricity
+[33:26] from other sources of energy such as
+[33:27] gas, diesel, or any other type of
+[33:30] energy. Generators are used when we need
+[33:33] to keep working for a longer, not
+[33:36] necessarily very long, time
+[33:38] uh despite a brownout or a blackout,
+[33:40] which are long periods of low or no
+[33:43] voltage. Generators can turn on
+[33:45] automatically when they detect a power
+[33:47] failure uh until the normal power is
+[33:49] restored, or we can safely shut down our
+[33:51] equipment without data loss or
+[33:53] corruption.
+[33:54] However, generators require, of course,
+[33:57] a fuel tank that needs to be refilled
+[33:58] and maintained to ensure reliability.
+[34:01] They also take some time to start. It's
+[34:03] not going to be milliseconds, okay? And
+[34:05] warm up before they can provide
+[34:07] consistent power, so the switch to a
+[34:08] generator will not be instantaneous like
+[34:11] in the case of a UPS. Therefore, we
+[34:13] should use generators in combination
+[34:15] with UPSs to provide continuous and
+[34:17] clean power to our equipment in case of
+[34:20] a power outage. UPSs can provide backup
+[34:22] power for a short period of time,
+[34:24] perhaps until the generators are ready
+[34:26] to take over.
+[34:27] Also, and this should be common sense,
+[34:30] uh when discussing any type of backup
+[34:32] power solution, always consider what
+[34:34] systems are critical versus those that
+[34:37] can be powered off at any time. Don't
+[34:39] waste power in UPS batteries and
+[34:41] generator fuel for useless power hungry
+[34:44] devices. You don't need to keep the
+[34:45] entire building up and running with all
+[34:47] its air conditioning, coffee machines,
+[34:49] and all its workstations on.
+[34:52] Uh you don't need to keep the car
+[34:53] chargers in the parking lot on during an
+[34:56] outage, just the critical devices.
+[34:59] And finally, here are some of the common
+[35:02] terms associated with power issues. We
+[35:04] briefly mentioned a couple of them
+[35:06] already. We have a fault. This is when
+[35:09] we have a brief loss of power, which
+[35:11] most likely will restart affected
+[35:12] devices.
+[35:14] A blackout is when we have a complete
+[35:15] loss of power because there's a grid
+[35:18] failure or natural disaster.
+[35:20] A sag, it's when we have a temporary low
+[35:23] voltage, perhaps due to a high demand or
+[35:26] a faulty device or connection. A
+[35:28] brownout, this is when we have a
+[35:30] prolonged low voltage, usually due to an
+[35:33] insufficient power supply. A spike is
+[35:36] when we have a sudden high voltage, like
+[35:38] from a lightning strike. A surge is when
+[35:41] we have a prolonged high voltage,
+[35:43] probably because of excess supply. This
+[35:45] is something that often happens nowadays
+[35:48] in residential areas where there are a
+[35:50] lot of houses
+[35:51] and uh they're using photovoltaic
+[35:53] systems and uh solar panels and are also
+[35:56] injecting the extra power back into the
+[35:57] grid, so there's just too much power and
+[36:00] has nowhere to go.
+[36:01] And then inrush, this is when we have an
+[36:04] initial surge of power at the exact
+[36:06] moment when you connect to a power
+[36:08] source. Now, all of these can damage
+[36:10] your electronics, so keep them all in
+[36:12] mind.
+[36:14] Next, environmental factors like
+[36:16] temperature and humidity. Why do we care
+[36:18] about them? Again, because too hot or
+[36:20] too cold, too dry or too wet can also
+[36:23] kill your equipment and your data with
+[36:25] it. The optimal temperature in the data
+[36:27] center, according to industry standards,
+[36:29] is between 59 and 89° Fahrenheit, which
+[36:32] is between 15 and 32° C.
+[36:36] Too much heat causes overheating of
+[36:38] power and processing components and
+[36:40] causes them to first start thermal
+[36:43] throttling and then causes them to shut
+[36:46] down. Too small temperature can cause
+[36:48] ice build-up and low conductivity.
+[36:51] It's also very costly to maintain a very
+[36:53] low temperature, especially if you don't
+[36:54] live in a very cold area. Even if you
+[36:56] do, your data center should be pretty
+[36:58] well isolated from the outside
+[37:00] environment for this to matter too much.
+[37:02] The first thing about ensuring optimal
+[37:04] temperature is having the right airflow.
+[37:07] For this, almost all electronic
+[37:08] equipment uses fans, either fans that
+[37:11] are directly connected to the heat sink
+[37:12] on our devices such as CPU, the memory
+[37:15] modules, video cards, or they might be
+[37:17] part of the chassis of the server or
+[37:20] mounted on the rack itself. Actually, we
+[37:22] find fans in all these places. Fans
+[37:24] usually pull hot air out of the device
+[37:27] and allow it to be replaced by cooler
+[37:29] air uh from outside of the device.
+[37:32] In many devices, we also have fans that
+[37:34] bring cool air inside of the chassis,
+[37:37] like forcefully bringing in uh cool air
+[37:39] inside of it. This is done firstly for
+[37:41] better airflow efficiency, and secondly
+[37:43] to avoid building up negative pressure
+[37:46] inside of the chassis, which in turn
+[37:48] would cause it to suck air from each
+[37:50] opening, thus bringing in dust, too. For
+[37:53] larger
+[37:57] server rooms and data centers, we need
+[37:59] hot and cold aisles. This means
+[38:01] arranging the server racks in lines,
+[38:03] rows separated by aisles, so that in
+[38:06] certain aisles, the devices on both
+[38:08] sides blow hot air, which is captured by
+[38:10] air intake vents on the ceiling, and
+[38:13] from other aisles, cold air More recent
+[38:16] data center cooling solutions have
+[38:17] emerged, including immersive cooling,
+[38:19] which requires submerging
+[38:21] heat-generating devices, servers most
+[38:23] likely, in a special nonconductive oil.
+[38:26] It's actually liquid. It also requires
+[38:29] stripping the servers of any fans, heat
+[38:31] sink, and everything else related to air
+[38:33] cooling, and then updating the BIOS to
+[38:35] make sure the server doesn't complain
+[38:37] loudly when it finds itself booting up
+[38:39] without any moving fans.
+[38:41] It's a bit of a hassle to manage an
+[38:42] immersive cooling solution, but they
+[38:44] make no noise, cooling efficiency is
+[38:46] incredible, and some say it even
+[38:48] increases the lifespan of the hardware.
+[38:50] Humidity is also a concern in the data
+[38:52] center, and the optimal humidity range
+[38:54] is between 40 and 60 relative humidity,
+[38:57] according to industry standards.
+[38:59] Too little humidity in air can cause
+[39:01] static electricity to build up, which
+[39:03] can damage electronics. Too high
+[39:05] humidity can cause corrosion and even
+[39:08] short circuits, which, you guessed it,
+[39:10] can damage electronics. Finally, water.
+[39:13] Obviously, water and electricity don't
+[39:15] get along well, and neither do water and
+[39:18] electronic devices. At a minimum, locate
+[39:20] the server rooms away from any water
+[39:23] source or transport pipes in the
+[39:25] building. We don't want to have a
+[39:26] plumbing leak that can cause a flood in
+[39:29] our data center. If a flood happens, at
+[39:31] least it should happen someplace else,
+[39:33] not in the data center, okay? We should
+[39:35] also avoid placing the equipment near
+[39:37] windows, doors, or vents that uh that
+[39:40] could potentially be broken and can let
+[39:42] rain in a storm or just outside moisture
+[39:45] in. Water detection sensors should be
+[39:47] installed as well.
+[39:49] All right, next up we have fire. First
+[39:51] of all, fire can cause injuries or
+[39:53] deaths to personnel due to burns or
+[39:55] smoke inhalation, but fire can also
+[39:57] cause damage to equipment. Now, even
+[39:59] worse, you can even damage equipment by
+[40:01] starting the actual suppression
+[40:03] materials. So, the fire extinguishing
+[40:06] methods that we used to put out the fire
+[40:08] itself can be the ones that damage the
+[40:11] center. There were many situations where
+[40:14] a data center where just a very small
+[40:16] fire started was more or less completely
+[40:19] destroyed the entire data center not by
+[40:21] the tiny fire, but by the extinguishing
+[40:24] agents that started firing like crazy.
+[40:26] In order for fire to burn, it requires
+[40:29] three items: heat, oxygen, and fuel. So,
+[40:32] fire suppression methods and substances
+[40:35] actually try to cut off the supply of at
+[40:36] least one of these three items in order
+[40:38] to put out the fire. We have several
+[40:40] classes of extinguishers, and yes, if
+[40:42] you're rolling your eyes at now, you
+[40:44] need to know about this, trust me. And
+[40:46] when I say trust me, I'm saying it as a
+[40:48] person who has been through the exam.
+[40:51] >> [gasps]
+[40:51] >> Okay, so we have the following fire
+[40:53] extinguishing classes.
+[40:55] A for fires with common combustibles
+[40:57] such as paper, wood, cloth. It uses
+[41:00] water or soda acid to suppress the fuel
+[41:03] supply.
+[41:04] B is for fires with liquids such as
+[41:06] gasoline, oil, alcohol. It uses CO2
+[41:09] carbon dioxide,
+[41:11] Halon or alternate gas options or soda
+[41:14] acid to reduce the oxygen supply again.
+[41:16] C is for fires involving electrical
+[41:18] equipment including computers in a data
+[41:21] center. It uses CO2, Halon, and other
+[41:24] gas options to reduce the oxygen supply.
+[41:26] D is for fires involving metals such as
+[41:29] magnesium, sodium, potassium. It uses a
+[41:32] dry powder to interfere with the
+[41:34] chemistry of combustion of combustion.
+[41:37] And K is for fires involving cooking
+[41:40] media such as fats, grease, oil. It uses
+[41:43] an alkaline mixture to cause
+[41:45] saponification, which is a process that
+[41:46] turns fats into soap. Long story short,
+[41:50] don't use water for B and K. You
+[41:52] probably know that you should not pour
+[41:53] water over a burning pan in the kitchen,
+[41:56] right? That's because water will
+[41:58] evaporate quickly, thus causing a tiny
+[42:00] explosion or better said expansion of
+[42:03] the flammable liquid,
+[42:05] which is going to spread it all over the
+[42:06] place. And while it's bad in the
+[42:08] kitchen, it's even worse in a data
+[42:10] center. There are many types of fire
+[42:11] detection systems
+[42:13] that are designed for different
+[42:14] situations. We could be looking just at
+[42:16] the temperature and trigger suppression
+[42:19] when a specific temperature is reached.
+[42:20] It's the most common type of detector,
+[42:22] and you probably saw these in office
+[42:23] buildings or hotel rooms. They have a
+[42:25] plastic or a glass vial usually with
+[42:28] something red in it that melts and
+[42:31] shatters at a specific temperature. When
+[42:33] it breaks, the sprinkler head releases
+[42:36] water. If the sensor is a bit smarter,
+[42:38] we could also be looking at the rate of
+[42:40] rise in temperature, not just the
+[42:42] absolute value.
+[42:43] We also have flame detectors, which
+[42:45] detect the infrared energy of the
+[42:47] flames. These might detect the danger a
+[42:49] bit too late.
+[42:50] Uh smoke detectors, another common type
+[42:52] that can detect smoke by its light or
+[42:54] radiation obstruction or reduction
+[42:57] across an air gap. Basically, if it
+[42:59] cannot see clearly, it's probably smoke
+[43:02] or someone is using a powder-based
+[43:04] deodorant spray.
+[43:06] And we also have incipient smoke
+[43:08] detectors that can detect the presence
+[43:10] of chemicals that are normally
+[43:11] associated with the very early stages of
+[43:13] fire. It's like when you smell that your
+[43:15] neighbor is preparing for a barbecue,
+[43:18] but there's no smoke or flame just yet.
+[43:20] Your nose is a pretty good detector.
+[43:23] Fire suppression using water is another
+[43:25] topic that somehow finds itself in
+[43:27] pretty much every security exam, at
+[43:29] least those I've been through when the
+[43:31] discussion focuses on physical security.
+[43:33] Long story short, we have four types of
+[43:35] systems based on water. We have wet
+[43:37] pipe. It's a system of pipes that are
+[43:39] always full of water like the pipes
+[43:41] leading to your water taps or to your
+[43:43] toilet. It releases the water when
+[43:46] triggered by a sensor. It's simple,
+[43:48] reliable, but if a pipe breaks, then you
+[43:51] know what can happen. A lot of water
+[43:53] damage, which you cannot blame on your
+[43:54] neighbor upstairs. Also, if you're
+[43:57] really unlucky during winter, it can
+[43:59] cause freezing if it's not designed
+[44:01] properly. It can also freeze inside the
+[44:04] pipe and can make it burst. Ice
+[44:06] increases the volume of water.
+[44:09] So, if you have a wet pipe, you also
+[44:10] have a dry pipe. And you guessed it,
+[44:12] it's pipes without water, but sometimes
+[44:15] they contain pressurized gas to keep the
+[44:17] water away and also to help reduce the
+[44:19] fire in the first stage. It first
+[44:21] releases the gas and then the water. It
+[44:24] is good in cold areas where wet pipe
+[44:26] systems can freeze or burst.
+[44:28] Another type is pre-action,
+[44:31] uh which is similar to the dry pipe
+[44:33] system, but with a two-stage detection
+[44:35] and release mechanism. It fills the
+[44:37] pipes with water only after the initial
+[44:39] stages of fire are detected, and then
+[44:41] releases water only after things start
+[44:44] looking really bad like when actual
+[44:46] flames are detected. It helps avoid
+[44:48] false alarms, but it's more expensive to
+[44:50] maintain. Also, you might be left with a
+[44:53] wet pipe if you stop the system after
+[44:55] its first phase. Finally, deluge is the
+[44:59] basically flooding the area with water.
+[45:00] Open all pipes at once, huge amounts of
+[45:02] water. It's efficient, but can cause the
+[45:05] most damage, so it's not exactly good
+[45:07] for data centers, but might be okay for
+[45:09] warehouses, for example.
+[45:11] It's not just water that we can use to
+[45:12] put out a fire, but special gases as
+[45:15] well like CO2 carbon dioxide. It reduces
+[45:18] the oxygen supply, and it is an
+[45:20] effective fire suppressant, but it's
+[45:22] risky to people. Note the lack of
+[45:24] oxygen. Actually, many other methods, as
+[45:27] you can probably remember, rely on
+[45:29] cutting off the oxygen supply, which is
+[45:31] obviously problematic for humans. And
+[45:33] the problem with CO2 is that a
+[45:35] concentration as little as 7%
+[45:38] can cause asphyxiation in humans.
+[45:41] Also, you cannot see it. You cannot
+[45:43] smell it. You cannot taste it. You don't
+[45:45] know it's there, so be very, very
+[45:47] careful with this.
+[45:48] Use it only when there are no people
+[45:50] around and where water is unacceptable
+[45:52] like engines, generators, along
+[45:54] flammable liquids, expensive
+[45:56] electronics, or industrial equipment.
+[45:58] Halon can be used as a suppression
+[46:00] material. It's efficient, but it becomes
+[46:02] toxic at high temperatures. It's also
+[46:04] not environmentally friendly. It's one
+[46:06] of those anti-ozone layer substances.
+[46:09] It has been outlawed in many countries,
+[46:11] but still trying to take it out of
+[46:12] circulation. Halon substitutes include
+[46:16] more ecologically friendly and less
+[46:17] toxic alternatives. FM-200 is an
+[46:21] example. It has similar benefits as
+[46:23] Halon, but without killing anyone. They
+[46:25] are more expensive than Halon,
+[46:27] obviously. You just cannot have them
+[46:30] all.
+[46:31] So, how to implement physical security?
+[46:33] It's about designing and implementing a
+[46:35] layered defense system. So, we will
+[46:37] cover some of physical security
+[46:38] controls. First, let's start with
+[46:40] signage. Signage is a simple but
+[46:43] effective way to deter unwanted
+[46:45] visitors, inform them of the rules, and
+[46:47] warn them of the consequences of
+[46:49] violating them. For example, you can use
+[46:51] signs to say things like no trespassing,
+[46:53] beware of dog, this facility is
+[46:56] protected by ninjas, or the boring ones
+[46:58] like no unauthorized access beyond this
+[47:00] point. You can also use signage to guide
+[47:03] authorized people into compliance or
+[47:05] adherence with safety precautions. For
+[47:06] example, you could use signs to say
+[47:08] things like wear a mask, wash your
+[47:10] hands. You can also implement signage
+[47:12] physically or digitally. It's obvious
+[47:14] where you can use physical signs, and
+[47:16] the answer is pretty much everywhere.
+[47:18] And it's also a common practice to
+[47:20] display warning banners on your network
+[47:23] connections for users who are connecting
+[47:25] over VPNs, accessing web portals, or
+[47:27] even for admins connecting over SSH and
+[47:30] RDP to your network devices. This is one
+[47:32] of the first thing you learn in the
+[47:34] courses like Cisco CCNA. The banner MOTD
+[47:38] commands, message of the day, on Cisco
+[47:40] iOS routers and switches. That's also
+[47:42] signage, even though it's arguably if
+[47:45] it's a physical control or not.
+[47:47] Other typical physical controls include
+[47:50] fences to keep intruders, humans, or
+[47:52] even animals away, casual trespassers or
+[47:55] professional burglars.
+[47:56] There are a lot of different fences, and
+[47:59] depending on the use case, you could use
+[48:00] different materials, various heights, or
+[48:03] even barbed wire fences, electrified
+[48:06] fences, and depending on how far into
+[48:07] the future watching this, you might want
+[48:09] to add force fields and lasers to your
+[48:12] fences.
+[48:13] Fences need gates, of course, something
+[48:16] my toddler is still learning while
+[48:19] building parking garages for his toys.
+[48:22] I know, without gates, it would be
+[48:24] really funny to see people coming to
+[48:26] work in the morning. Also, a gate is
+[48:28] where you implement your physical access
+[48:30] controls using keys, codes, cards,
+[48:32] biometrics, remote controls, locks,
+[48:35] alarms, cameras, or guards.
+[48:37] A turnstile is a device that allows one
+[48:41] person at a time to pass through a gate.
+[48:43] You see them in office buildings, public
+[48:45] attractions where you need to purchase a
+[48:46] ticket to get in, public
+[48:47] transportations. You probably know them.
+[48:50] Finally, an access control vestibule is
+[48:53] a small room connecting two areas with
+[48:55] different levels of security. The doors
+[48:58] lock automatically every time someone
+[48:59] enters or exits. It can also have
+[49:02] scanners or just cameras that identify
+[49:04] the captive person. You probably saw
+[49:05] these in movies and prisons or prisons
+[49:08] in movies, but you've probably found
+[49:10] them in airports as well. By the way,
+[49:13] you might know this vestibule under the
+[49:15] name of a man trap. It's the same thing,
+[49:17] but you know, we're moving away from
+[49:19] gender pronouns,
+[49:21] even though none were designed to catch
+[49:23] only men in the first place. So, there
+[49:25] you have it. Now, it's access control
+[49:28] vestibule.
+[49:41] >> Mhm.

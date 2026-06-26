@@ -1,0 +1,915 @@
+[00:09] DevOps, at least on paper, is the
+[00:11] ultimate team up in the tech world. It's
+[00:14] when the developers, and the folks who
+[00:15] write the code, the QA, the testers, and
+[00:19] the ops, the people who keep the
+[00:21] infrastructure lights on,
+[00:23] stop working in their own little worlds
+[00:25] and start working together in a
+[00:27] fantastic, dream-like, collaborative,
+[00:30] friendly, cooperative environment.
+[00:32] Laughter and irony aside, the whole idea
+[00:35] is to get things done faster, which has
+[00:37] been a requirement of all software
+[00:39] development ever since the term was
+[00:40] introduced.
+[00:42] Instead of dropping a big update once in
+[00:44] a blue moon, teams can roll out updates
+[00:47] as often as you post on social media,
+[00:49] which means a lot of
+[00:51] smart automation and coordination. Keep
+[00:53] in mind that this is what sales and
+[00:55] marketing promote. The real world might
+[00:57] not be so filled with rainbows and
+[00:59] unicorns.
+[01:01] When you're moving fast, you cannot
+[01:03] forget about the keeping things secure.
+[01:05] That's where DevSecOps come in. Uh the
+[01:08] DevOps with a security badge. It's all
+[01:10] about making sure that as you're
+[01:11] generating code, you're also keeping it
+[01:13] locked down tight. As you can probably
+[01:15] guess, all this talk is closely related
+[01:18] and often goes hand in hand with Agile
+[01:21] programming. Since it's about
+[01:23] collaboration,
+[01:24] it also means that it requires an
+[01:26] upgrade to the skill set of the
+[01:28] engineers. So, developers now need to be
+[01:30] aware of the infrastructure that their
+[01:32] app is being tested on and ultimately is
+[01:35] going to be running on. So, this is
+[01:37] where knowledge about containers,
+[01:38] Kubernetes, virtual machines, cloud
+[01:40] environments is going to become useful.
+[01:43] Thus, developers need to be comfortable
+[01:44] with that, while on the other side, the
+[01:47] operations people will need to learn a
+[01:49] couple of the skill sets that initially
+[01:51] were just in the realm of developers.
+[01:53] They're going to need to learn
+[01:55] automation. They're going to need to
+[01:56] learn how to write YAML file. They're
+[01:59] going to need to learn how to interact
+[02:01] with an API, to deploy a cloud
+[02:03] virtualized environment. They will need
+[02:05] to use some scripting skills, and so on.
+[02:08] That's the essence of DevOps.
+[02:11] Application programming interfaces.
+[02:13] Speaking of APIs, what are they?
+[02:17] Now, back in the old days, apps were
+[02:19] monoliths, which meant huge isolated
+[02:21] pieces of code that were shipped,
+[02:23] installed, updated, and ran as a whole.
+[02:25] Now, if you're shopping online, you
+[02:27] might think that you're interacting with
+[02:29] single app, when in fact that app
+[02:31] internally calls a number of different
+[02:33] other services, like stock management, a
+[02:35] user profile database, maybe a credit
+[02:38] card processing module, maybe a
+[02:40] newsletter engine, and so on.
+[02:42] These APIs are the behind-the-scenes
+[02:45] magic interfaces that let different web
+[02:47] services chat with each other. APIs are
+[02:50] basically special interfaces through
+[02:53] which apps send commands to each other,
+[02:55] so talk to each other, and control how
+[02:57] the apps behave. Since an API is by
+[03:00] definition a programmatic interface, it
+[03:02] usually means that special tools are
+[03:04] required to craft the messages accepted
+[03:06] by it. This also makes them a great
+[03:08] method for building applications that
+[03:10] talk to each other in a
+[03:11] machine-to-machine language.
+[03:14] So, if you're thinking about cloud
+[03:15] infrastructure, for example, let's take
+[03:17] AWS, Amazon Web Services. You could
+[03:19] deploy infrastructure in AWS by
+[03:21] connecting to the cloud console in your
+[03:23] browser, let's say at
+[03:25] console.aws.amazon.com,
+[03:28] and you could start clicking and
+[03:29] clicking in there, and you would deploy
+[03:31] the infrastructure. Similarly, you could
+[03:33] deploy the same infrastructure using the
+[03:35] AWS CLI, the command line interface,
+[03:38] which is a set of command line utilities
+[03:40] specially designed to interact with the
+[03:41] infrastructure inside AWS.
+[03:44] Also, you could use a specialized tool
+[03:45] like, let's say Terraform, which
+[03:47] processes a piece of code, and then
+[03:49] deploys the infrastructure according to
+[03:52] that code.
+[03:53] Similarly, you could also be doing this
+[03:54] even with a configuration management
+[03:56] tool that has the ability to deploy
+[03:58] infrastructure as well, like Ansible.
+[04:00] You could do it with the curl, cURL,
+[04:03] utility on Linux or macOS systems, and
+[04:05] you could do it with Postman.
+[04:07] You could do it in a number of ways
+[04:09] because
+[04:10] all these methods, all these tools,
+[04:11] actually do one single thing. They all
+[04:14] talk to the API of AWS, and they all
+[04:17] know how to craft and especially package
+[04:20] their messages so that the API of AWS
+[04:23] understands them and is able to process
+[04:25] them correctly and deploy the
+[04:26] infrastructure. Now, since APIs allow
+[04:29] access to an application, obviously that
+[04:31] access needs to be authenticated, and
+[04:32] not everybody should be able to use it,
+[04:34] just like your regular interfaces in our
+[04:36] apps, where you're asking for a username
+[04:39] and a password and maybe a second
+[04:40] factor. Well, the same security
+[04:42] principles should apply to APIs as well.
+[04:45] And normally, since interaction with
+[04:47] APIs is supposed to be automatic,
+[04:49] authentication usually happens using
+[04:51] temporary tokens or API keys, which
+[04:54] basically act as some kind of passwords.
+[04:57] Many APIs already rely on a single
+[04:59] authentication factor,
+[05:01] which makes them a bit more exposed and
+[05:03] risky when it comes to credential
+[05:05] compromise.
+[05:06] APIs also need to be very thoroughly
+[05:08] documented because the messages that an
+[05:10] application will accept will obviously
+[05:12] need to be strictly formatted in order
+[05:14] to be accepted, so only strict values
+[05:17] formatted in a strict way will be
+[05:19] acceptable.
+[05:20] Most APIs rely on standard syntax for
+[05:23] their requests and replies, and those
+[05:24] payloads are usually JSON or XML. What
+[05:27] exactly goes into those JSON or XML
+[05:30] queries? Well, that's what you need to
+[05:32] find out using the API's documentation.
+[05:35] Testing software.
+[05:37] I probably don't need to tell you what
+[05:39] software testing is important, right?
+[05:40] Well, just in case I need to tell you,
+[05:42] it's because through testing, you detect
+[05:44] bugs, flaws, unexpected behaviors that
+[05:48] not only would frustrate the app's
+[05:50] clients,
+[05:51] but might also open it up to potential
+[05:52] attacks as well. There's a lot to talk
+[05:55] about software testing, starting from
+[05:57] how testing is conducted, manually or
+[06:00] automatically,
+[06:01] by using scripts and automated
+[06:03] scenarios, going further to what is
+[06:05] exactly being tested, the interface, the
+[06:07] outputs, the performance, the response
+[06:09] time, the correctness of the result, and
+[06:12] so on. And finally, looking at what kind
+[06:15] of data constitutes a test. In general,
+[06:18] after you validate that the app behaves
+[06:20] as it should with valid input, you
+[06:22] should move on to invalid input and see
+[06:24] how the app behaves. Invalid input can
+[06:27] be provided, well, by mistake, of
+[06:28] course, by users,
+[06:30] and we don't want a simple user mistake
+[06:32] to break the app. It can also be
+[06:33] injected by an attacker attempting to
+[06:35] break the app or to find and exploit a
+[06:37] weakness in your code.
+[06:39] Designing proper test cases and their
+[06:41] respective inputs
+[06:42] is almost a form of an art because it
+[06:44] requires a lot of creativity. It's easy
+[06:46] to estimate what a valid input should
+[06:48] look like because that's the input the
+[06:49] app was designed for,
+[06:51] but it's so much harder to think of all
+[06:54] the possible invalid inputs that might
+[06:56] be provided to the app. Invalid inputs
+[06:58] can be about the wrong data type, like a
+[07:00] number instead of a name.
+[07:02] They might be the wrong length, a 5,000
+[07:05] character text instead of a name.
+[07:08] Might be made up of binary or
+[07:10] unprintable characters that should not
+[07:12] be found within a name field. It might
+[07:14] even be executable code, which again
+[07:16] should not be accepted and God forbid
+[07:19] executed on a server.
+[07:20] There might be no input at all. It might
+[07:23] be 5,000 requests in 1 second. It might
+[07:25] be an SQL statement. It might be a
+[07:27] negative value where a positive number
+[07:30] of items in a shopping cart is expected.
+[07:33] Or it might be the maximum allowable
+[07:35] integer value for the quantity field of
+[07:37] an item in the cart
+[07:38] followed by an addition of an extra
+[07:40] item, which will create an integer
+[07:42] overflow and result in a cart with minus
+[07:45] 4 billion pizzas to be ordered.
+[07:48] These are all called malformed inputs,
+[07:51] and your application should be designed
+[07:52] to handle them all.
+[07:54] As for the techniques for testing, in
+[07:56] theory, we have three of them: white
+[07:58] box, gray box, and black box testing.
+[08:01] And before talking about them, I should
+[08:02] warn you that in general,
+[08:04] testing should not be performed by or
+[08:07] only by the person who wrote the code.
+[08:09] Not just because developers consider
+[08:11] their code their
+[08:13] precious, flawless baby, even though
+[08:15] that's true as well, but because a fresh
+[08:17] pair of eyes who might have no knowledge
+[08:20] about the underlying code might be able
+[08:22] to see flaws from a completely new
+[08:23] perspective.
+[08:25] And speaking of how much tester knows
+[08:27] about the tested code, here are the
+[08:29] three testing approaches.
+[08:31] White box testing means that the tester
+[08:33] has access to the underlying code, knows
+[08:35] exactly how the app should behave,
+[08:37] and is able to pinpoint exactly in the
+[08:39] code why it's doing what it's doing.
+[08:42] The white box testing is also known as
+[08:45] clear box testing, glass box testing,
+[08:48] transparent box testing, and structural
+[08:51] testing.
+[08:52] Black box testing is the complete
+[08:53] opposite and relies on the fact that the
+[08:56] tester resembles a regular user with
+[08:58] regular expectations about what the app
+[09:00] should be doing, but without any
+[09:02] knowledge about how the app is designed
+[09:05] and coded. Black box testing is
+[09:07] sometimes also called
+[09:08] specification-based testing, closed box
+[09:11] testing, or opaque box testing. Finally,
+[09:15] gray box testing is somewhere in
+[09:16] between, where, just like in a black
+[09:18] box, we're looking at inputs and
+[09:20] outputs, but we might be using the
+[09:22] source code just to design proper test
+[09:24] cases, but not to analyze the program's
+[09:26] execution.
+[09:28] Code repositories. When writing
+[09:30] large-scale projects, apps, websites,
+[09:33] games, whatever you're developing, in
+[09:35] most cases, there will be a team of
+[09:37] developers in charge of each aspect of
+[09:39] the app.
+[09:40] These developers will be specialized in
+[09:42] different aspects of the developing app.
+[09:44] Some of them on the front end, some on
+[09:46] the design, others on the database
+[09:48] optimizations, back end communication,
+[09:51] middleware, graphics, user interactions,
+[09:55] localization, third-party integrations,
+[09:57] you name it. And still, the app itself
+[09:59] will be a collection of code files that
+[10:01] need to stick together or be compiled
+[10:04] together to get something functional.
+[10:06] Now, the problem here is where and how
+[10:09] we store the source code for the entire
+[10:11] app in development so that each
+[10:13] developer can safely work on their own
+[10:16] part of the code without clashing with
+[10:18] other developers' work. Then, also how
+[10:21] we can integrate all these separate
+[10:22] development efforts into one coherent
+[10:24] and functional app.
+[10:26] The answer here is in the title, code
+[10:29] repositories.
+[10:30] GitHub, Bitbucket, SourceForge, local
+[10:34] Git installation can act like code
+[10:36] repositories, but their role extends
+[10:39] beyond just a remote storage location
+[10:42] for a bunch of code files. They provide
+[10:44] collaboration, feedback, facilitate code
+[10:46] reviews, provide code versioning,
+[10:48] release management, and ultimately a way
+[10:51] to track and address those bugs.
+[10:53] They are also good uh methods for
+[10:55] sharing code. A lot of open-source
+[10:57] content can be found publicly available
+[10:59] on GitHub, which is free for you to use,
+[11:01] download, and even clone and continue
+[11:03] development on your own and maybe merge
+[11:06] your efforts back into the big project
+[11:08] if your contribution is really valuable
+[11:10] and accepted. Code repos have become
+[11:12] smarter over time, too. Now, you can
+[11:15] create something called a webhook, which
+[11:17] is like an alarm system for your let's
+[11:20] say GitHub repository. It's a way to set
+[11:22] up automatic notifications or actions
+[11:25] whenever certain things happen in your
+[11:27] repo. For example, you could have a hook
+[11:29] that sends you a message every time
+[11:30] someone pushes new code or creates a
+[11:32] pull request.
+[11:34] It's a handy way to automate tasks every
+[11:36] time your code changes. You could even
+[11:38] do something cooler like automatically
+[11:40] deploying a piece of infrastructure or
+[11:42] configure a set of virtual servers when
+[11:44] a new configuration is pushed into the
+[11:46] repo.
+[11:47] If your infrastructure is deployed using
+[11:48] code like with Terraform or Ansible, or
+[11:51] even get your program automatically
+[11:53] compiled and published as a new release
+[11:56] when a new production code is submitted.
+[11:58] And perhaps even the code gets to pass
+[12:00] in an automated battery of tests before
+[12:03] it gets pushed into production.
+[12:06] How cool and agile-ish is that?
+[12:09] From a security standpoint, there's a
+[12:11] huge risk involved with public
+[12:13] repositories, especially when they're
+[12:14] used during the development of a
+[12:15] project. During development, developers
+[12:18] might use temporary credentials
+[12:20] hard-coded in the app itself for
+[12:22] testing. If those credentials end up in
+[12:24] a public code versioning tool, they are
+[12:26] free for all. And don't rely on security
+[12:28] through obscurity here. Don't think,
+[12:30] "Who's going to find my little obscure
+[12:32] little project in there?" Well, robots,
+[12:35] crawlers, bots will do. Many of them are
+[12:37] designed especially for that, searching
+[12:40] and grabbing anything that looks like a
+[12:41] password, an API key, or any sensitive
+[12:44] information forgotten in public
+[12:45] repositories. I just found out the other
+[12:47] day a study saying that in 2023 alone,
+[12:51] over 12.8 million new secrets,
+[12:55] or passwords, were leaked publicly on
+[12:58] GitHub. I mean, wow, you don't even need
+[13:01] to be a hacker anymore. Sensitive
+[13:03] information is given for free.
+[13:06] If you want to have a little reading
+[13:07] fun, search on Google the state of
+[13:10] secret sprawl 2024, or any other year,
+[13:13] depending on when you're watching,
+[13:15] listening, or reading this.
+[13:17] Databases.
+[13:18] Apps need to work with data, otherwise
+[13:20] they have nothing to do. And data needs
+[13:23] to be stored in an organized manner so
+[13:25] that it is structured and easily
+[13:27] accessible when needed, in the right
+[13:28] format, and you don't spend a lot of
+[13:30] time looking for the proverbial needle
+[13:33] in a haystack. So, here come databases
+[13:35] to rescue.
+[13:37] And since for most applications, all
+[13:40] their data is stored in some sort of
+[13:41] database, that data becomes the juicy
+[13:44] stuff that attackers will try to get
+[13:46] their hands on when attempting to
+[13:47] exploit an app.
+[13:49] That is how database security becomes a
+[13:51] vital concern as well.
+[13:53] For most use cases, we have two types of
+[13:56] databases, relational and distributed. A
+[13:59] relational database is a hierarchy of
+[14:02] interconnected data points.
+[14:04] If this tells you absolutely nothing,
+[14:06] then a relational database is what most
+[14:08] people think about when speaking the
+[14:10] letters SQL, structured query language.
+[14:14] Distributed databases are, well,
+[14:15] distributed. Think of blockchain or DNS,
+[14:18] where multiple data points are stored in
+[14:20] multiple locations, but interconnected.
+[14:23] There's also the type of uh databases,
+[14:26] database engines called NoSQL, which
+[14:28] actually stands for not only SQL. Not
+[14:32] many people actually know that.
+[14:34] Which are not relational in nature
+[14:37] because they are not built with uh the
+[14:40] same type of back-end relationships and
+[14:43] joinabilities that relational databases
+[14:46] have, but they still can be queried in
+[14:48] an SQL-like manner.
+[14:51] NoSQL databases are usually used to
+[14:53] store so-called documents. Don't think
+[14:56] about documents like PDF or doc, but
+[14:58] instead documents as in sets of data,
+[15:02] usually abstracted as uh JSON
+[15:04] structures,
+[15:05] which can contain a multitude of values
+[15:07] and various data types. Uh NoSQL
+[15:09] databases can also be used uh for very
+[15:12] simple data stores, uh like a key-value
+[15:15] store, perhaps, but without the overhead
+[15:19] of relational databases' normalization
+[15:21] and such, NoSQL databases can be really
+[15:23] fast and can work very well with
+[15:25] specific types of data.
+[15:27] Now, back to relational databases. In a
+[15:29] relational database, information is
+[15:31] neatly organized into grids or tables,
+[15:33] much like the cells of a spreadsheet,
+[15:35] which is also why some people call Excel
+[15:37] files databases, especially if they're
+[15:39] huge.
+[15:40] We really don't like those people, by
+[15:42] the way. It's not the size that matters,
+[15:44] at least not here. And size is not what
+[15:46] makes or un-makes a database. Instead,
+[15:49] it's the relational part, the ability to
+[15:51] query specific related fields and how
+[15:53] they're organized internally. This is
+[15:55] the essence of relational databases,
+[15:57] where each table holds data that's
+[16:00] interconnected. Like a digital filing
+[16:02] system, where each drawer, table,
+[16:06] contains folders, which can be thought
+[16:08] of as rows, that are labeled with
+[16:11] various tags, let's call them columns.
+[16:14] So, if you need a specific document,
+[16:15] you'll ask for a specific drawer, a
+[16:18] specific folder, and a specific tag.
+[16:20] That's how a select statement works in
+[16:22] SQL as well. Basically, you're asking
+[16:24] for a specific field in a specific table
+[16:27] that belongs to a specific database.
+[16:30] In a typical business setting, uh you
+[16:32] might encounter a table for many, many
+[16:34] purposes, like for customer details,
+[16:36] another for the sales orders, another
+[16:39] for past transactions. Each of these
+[16:41] tables is a collection of data points
+[16:43] related to one another. For instance,
+[16:46] the customer table would not just list
+[16:48] names, but also contact details,
+[16:51] addresses, and perhaps preferences, and
+[16:53] the numerical IDs of those customers
+[16:56] will be found in the sales order table
+[16:58] and in the past transactions table. This
+[17:01] is what makes relational databases truly
+[17:03] powerful, their ability to link tables
+[17:05] together.
+[17:07] Now, let's dive a bit deeper. Each piece
+[17:09] of information in a table is an
+[17:11] attribute, and these attributes form the
+[17:14] columns of the table. So, if we're
+[17:15] looking at our customer table,
+[17:18] attributes would include the customer's
+[17:19] name, their city, their phone number.
+[17:22] Each customer's complete set of
+[17:23] information forms a row, okay, which in
+[17:27] database lingo is often called a record
+[17:30] or a tuple. The beauty of relational
+[17:32] databases lie in their flexibility. The
+[17:36] number of records can grow as new
+[17:38] customers are added, which is known as
+[17:41] the table's cardinality.
+[17:44] However, the number of attributes, or
+[17:46] number of columns, typically remains
+[17:48] constant, symbolizing the degree of the
+[17:51] table.
+[17:52] In a database, every record needs to be
+[17:54] uniquely identified. A user table needs
+[17:57] a unique user ID for each record. A
+[17:59] purchases table needs a unique
+[18:01] transaction ID.
+[18:03] These unique fields are called keys. A
+[18:06] record can have more than one key, but
+[18:09] it also should definitely have at least
+[18:11] one at a minimum. So, at least one piece
+[18:13] of information that uniquely identifies
+[18:16] that specific record.
+[18:17] We need to have these keys not just to
+[18:19] ensure the uniqueness of the information
+[18:21] in the table, but also because these
+[18:22] keys are the fields on which the tables
+[18:25] are joined whenever we need to
+[18:27] cross-reference information between
+[18:29] separate tables.
+[18:31] For example, you might have a customers
+[18:32] table. There's probably going to be a
+[18:35] customer ID in there, an email, an
+[18:37] address, a phone number, a country,
+[18:39] whatever information that is strictly
+[18:41] tied to that user.
+[18:42] Now, on another table, let's say a
+[18:44] purchases table, you would have a unique
+[18:46] purchase ID,
+[18:48] a list of items purchased, a total
+[18:50] price, a payment method, a delivery
+[18:53] address, and perhaps if the order was
+[18:55] successfully fulfilled or not.
+[18:57] Now, how do you tie this to the customer
+[18:59] who made each purchase? By adding a
+[19:01] customer ID field in the purchases table
+[19:05] as well. The same customer ID that
+[19:08] uniquely identifies a customer in the
+[19:10] customers table.
+[19:12] That way, when you join those two tables
+[19:14] on the customer ID field, you can
+[19:16] explicitly now tie each unique purchase
+[19:19] to a specific customer along with all
+[19:21] the details from both tables.
+[19:23] And that's exactly why we need keys, and
+[19:25] what we just described are primary keys.
+[19:28] A primary key
+[19:29] should be only one in a table, and it
+[19:32] should definitely be unique. That is,
+[19:34] you cannot have two records with the
+[19:36] same primary key in the same table.
+[19:38] The primary key is selected from a set
+[19:41] of candidate keys, which are also
+[19:43] potential unique identifiers. For
+[19:46] example, you might have an internally
+[19:48] generated customer ID, which is your
+[19:49] primary key, but you could just as well
+[19:52] use, let's say, the telephone number of
+[19:55] the customer or maybe their address,
+[19:57] even though, you know, many people could
+[19:59] live at the same address. Those have the
+[20:01] potential of being unique, but maybe are
+[20:03] not guaranteed to be. Customers working
+[20:05] in the same building might use the same
+[20:07] address and phone numbers might switch
+[20:10] owners. So, while they might be unique
+[20:12] as well, they're not really as good,
+[20:15] well, candidates for primary keys.
+[20:18] Even though we actually call them
+[20:20] candidate keys. So, yeah, let them think
+[20:22] they still have a chance, right?
+[20:25] Apart from candidate and primary keys,
+[20:28] we also have alternate keys. This one is
+[20:30] simple. If among the candidates only one
+[20:33] is selected as primary, then the
+[20:35] remaining ones are alternate keys.
+[20:37] Told you it's simple.
+[20:39] And we also have foreign keys, which are
+[20:42] fields that are primary keys in other
+[20:44] tables. So, if the customer table has a
+[20:47] customer ID as a primary key,
+[20:49] then the purchases table also has a
+[20:51] customer ID, which, from the purchases
+[20:54] table's perspective, is a foreign key.
+[20:57] So, foreign key is basically some other
+[21:00] table's primary key.
+[21:03] Database consistency. On the topic of
+[21:05] consistency in databases, normalization
+[21:08] means arranging the data into tables in
+[21:11] such a way that each one deals with one
+[21:14] single topic or concept. This helps
+[21:16] avoid having the same piece of
+[21:18] information in multiple places, which
+[21:20] can lead to confusion, mistakes,
+[21:22] conflicting information, and, at the
+[21:24] very least, duplicate information. By
+[21:26] doing this, you make sure that when you
+[21:28] update one piece of information, you
+[21:30] don't have to remember to update it in
+[21:31] several places. You only have one place
+[21:34] to go.
+[21:35] Long story short, as you may remember,
+[21:37] that normalization means avoiding
+[21:38] redundancy.
+[21:40] There are several so-called normal forms
+[21:43] in which databases can be arranged or
+[21:45] converted, but this is beyond the
+[21:47] purpose of this training. I still
+[21:49] remember those back from my college
+[21:50] days, and trust me, it's quite dull.
+[21:52] You're not missing out anything
+[21:54] spectacular.
+[21:55] If you want to know more, just Google
+[21:57] database normal forms, and Wikipedia
+[21:59] will help you just fine.
+[22:01] Also on the topic of consistency, there
+[22:03] is something called transaction-oriented
+[22:05] processing. This means that if a
+[22:06] specific change in a database requires
+[22:09] interaction or changes in multiple
+[22:11] tables, they should all be processed in
+[22:13] one single transaction that cannot be
+[22:15] executed partially. This means that it
+[22:18] has to be an all-or-nothing operation.
+[22:21] An example of an operation that needs to
+[22:22] be atomic, indivisible, is withdrawing
+[22:25] money from a bank account. Before
+[22:27] withdrawing, a check needs to be made to
+[22:29] see whether there is enough money in the
+[22:32] account. After the check passes, you can
+[22:34] withdraw the specific amount. Now, if
+[22:37] these two operations, the check and the
+[22:39] actual withdrawal of money, would not be
+[22:42] executed as an atomic operation, then
+[22:44] there would be the potential for a race
+[22:46] condition, where another check could be
+[22:49] performed right after the first one,
+[22:52] followed by another withdrawal.
+[22:54] So, if the account held $100 and two
+[22:57] users tried to withdraw $100 at the same
+[23:01] time,
+[23:02] and the order of operation would happen
+[23:04] to be
+[23:05] check for user one, check for user two,
+[23:08] withdraw for user one, and withdraw for
+[23:10] user two,
+[23:12] you could end up with a negative $100 in
+[23:15] the account. Both checks passed,
+[23:18] but they were unaware of each other, and
+[23:20] they were not part of atomic operations.
+[23:23] So, actually, there are more features of
+[23:25] relational databases that help with
+[23:26] these unwanted situations. We have these
+[23:28] atomic operations, which are just what
+[23:30] we described, where an entire
+[23:32] transaction needs to be executed from
+[23:34] the beginning to the end, not partially
+[23:36] and not interrupted.
+[23:39] There's also consistency, where a
+[23:40] database should never end up in an
+[23:42] inconsistent state, like having only
+[23:44] written partial data following a query.
+[23:48] There is isolation, closely related to
+[23:51] atomic operations, which says that
+[23:54] different transactions should not step
+[23:56] on each other's toes, especially when
+[23:59] they work with the same data on the same
+[24:00] tables. So, once you start a
+[24:02] transaction, finish it. Don't allow
+[24:04] another one to start. This way, we avoid
+[24:06] situations where
+[24:08] another transaction catches the database
+[24:10] in a bad state due to the fact that it's
+[24:12] in the middle of executing another
+[24:14] transaction.
+[24:15] And, yes, in case you're wondering, the
+[24:17] database engines can queue additional
+[24:19] operations. They are not simply rejected
+[24:22] if they happen to arrive at the same
+[24:23] time.
+[24:24] There's also durability. Don't lose
+[24:26] data. Make sure it it persists. This
+[24:29] also involves the underlying
+[24:30] infrastructure on which the database is
+[24:32] stored, of course, but from the
+[24:33] database's perspective, durability means
+[24:36] the ability to recover transactions or
+[24:38] to roll back to a previous stable state
+[24:41] in case a transaction fails in the
+[24:43] middle,
+[24:44] if there's a power loss or the database
+[24:46] engine crashes. Errors might happen, but
+[24:48] a durable database needs to make sure
+[24:50] that they won't destroy the data.
+[24:53] To remember what we just said easier,
+[24:55] remember that database engines must
+[24:57] follow an ACID
+[25:00] model. ACID. A, atomic. C, consistent.
+[25:03] I, isolated. D, durable.
+[25:06] Databases and data classification. We
+[25:08] need to make a short mention here about
+[25:10] data classification. As you remember
+[25:12] from a long, long time ago, when you
+[25:14] first started following this training,
+[25:16] one of the first tasks before even
+[25:19] thinking about securing data is
+[25:21] identifying critical and non-critical
+[25:23] data. In other words, we need to perform
+[25:25] data classification before any other
+[25:27] security controls can be effective. We
+[25:29] need to know what we need to protect.
+[25:32] And even if, up until this point, you
+[25:34] might have thought about this concept
+[25:36] along the lines of
+[25:38] well, so this Word document belongs to
+[25:40] this department and needs secret
+[25:41] clearance, while this Excel spreadsheet
+[25:43] is publicly hosted and requires no
+[25:45] clearance. Well, now we're talking about
+[25:48] databases, and it's pretty obvious that
+[25:50] we need to apply the same principles to
+[25:51] data inside of a database.
+[25:53] It's a bit more difficult to properly
+[25:55] classify and restrict access to data
+[25:57] inside of a database because
+[25:59] all data is in one place, and a smart
+[26:02] query might reveal it right away to the
+[26:05] wrong person. With files, it's a bit
+[26:07] easier, as you generally have different
+[26:09] storage locations and folders with
+[26:11] different permissions and access lists
+[26:13] applied directly onto the files and
+[26:15] folders, and you can easily separate the
+[26:17] secret stuff from the non-secret files.
+[26:20] But with databases, we need the database
+[26:23] engine
+[26:24] to be aware of these security
+[26:26] requirements. Now, we call these engines
+[26:29] multi-level security databases simply
+[26:31] because, well, not everything in a
+[26:32] database is treated equally, so it needs
+[26:34] to be compartmentalized.
+[26:37] Huh, managed to say that word from the
+[26:39] first attempt.
+[26:41] Compartmentalized
+[26:42] into multiple security levels.
+[26:45] Pretty self-explanatory. And when we
+[26:47] cannot do that, what we end up with is
+[26:50] called database contamination. That is
+[26:52] when data with different security levels
+[26:55] is incorrectly mixed, and you basically
+[26:57] lose control over who can access which
+[27:00] security level data.
+[27:01] We have even even more bad news here.
+[27:04] Some database systems don't support
+[27:06] multi-level security, so all you can do
+[27:08] is try to patch some sort of a front end
+[27:10] or query broker on top of it to filter
+[27:13] requests from users trying to reach data
+[27:16] that they have no business accessing.
+[27:18] Basically, you will be relying
+[27:19] completely on the application that
+[27:21] accesses the database to perform the
+[27:23] necessary access validation, which is
+[27:26] what happens in most web applications,
+[27:28] actually. Another method is to ensure
+[27:30] this multi-level security, regardless if
+[27:32] the database management system supports
+[27:34] it or not, is to use views, database
+[27:38] views. A view is just like a special
+[27:40] select query that can span multiple
+[27:43] tables,
+[27:44] and its purpose is to return the type of
+[27:45] data that a specific user should have
+[27:47] access to.
+[27:48] For example, you could have a table that
+[27:50] stores a lot of personally identifiable
+[27:52] information. Someone in your company who
+[27:54] needs to perform some queries on that
+[27:55] table for a statistical purposes
+[27:58] will need access to the table, but with
+[28:00] a view, you could give them access to a
+[28:03] restricted, sanitized version of that
+[28:05] table where the PII information is
+[28:07] stripped. So, the view acts like another
+[28:10] table that is dynamically generated when
+[28:12] needed. They are slower, but they can
+[28:14] solve this multi-level security issue
+[28:16] quite elegantly. Concurrency is another
+[28:19] issue, not just with multi-level
+[28:21] security databases, but with any place
+[28:23] or thing that stores data and can be
+[28:25] accessed by multiple people or
+[28:27] applications at the same time.
+[28:29] Concurrency is basically an integrity
+[28:31] protection mechanism. We either allow
+[28:33] multiple queries at the same time, and
+[28:34] we make sure they don't break the
+[28:36] database, or we just don't allow them.
+[28:38] Either way, consistency is always more
+[28:40] important than any performance-oriented
+[28:43] bells and whistles. Without consistency,
+[28:45] you might have one update overriding
+[28:48] what another update just did, basically
+[28:50] canceling the other update. Or if a
+[28:52] query doesn't fully execute, it might
+[28:54] leave the database in a partially
+[28:55] updated state, which is a corrupted
+[28:57] database.
+[28:58] How to ensure consistency? Well, the
+[29:00] hard way is to evaluate every request
+[29:03] pair to see what each is about to
+[29:05] affect, and then decide if they can be
+[29:08] safely executed at the same time. This
+[29:10] is difficult, costly, and sometimes
+[29:12] impossible due to the complexity of some
+[29:14] queries and some database schemas.
+[29:17] The easy way is to use locking
+[29:19] mechanisms. If I start making a change
+[29:21] to a database, I first put a lock on it,
+[29:23] or at least on the affected tables,
+[29:25] saying that from now on, I'm the only
+[29:27] one working with this database or or
+[29:29] tables. If you want to work with it,
+[29:32] too, you have two options. You wait for
+[29:34] me to release the lock,
+[29:36] or you give up. It's up to you.
+[29:38] Aggregation is another interesting
+[29:39] aspect of database security, and it's a
+[29:41] very generic term, but in most cases,
+[29:44] aggregating data means selecting data
+[29:47] from multiple sources and mashing them
+[29:49] up in a single result. A simple database
+[29:52] join is a type of aggregation. A count
+[29:55] function, an average function, they are
+[29:57] also aggregation functions. From a
+[29:59] security perspective, this can be
+[30:01] problematic sometimes as perhaps you
+[30:03] might have designed your security model
+[30:05] so that specific users don't have access
+[30:08] to specific table entries or specific
+[30:10] fields in them.
+[30:11] At the same time, if you don't consider
+[30:13] aggregation functions in your security
+[30:14] policy, you might found out that a
+[30:18] smart user is able to deduce a lot of
+[30:21] stuff from a combination of sum,
+[30:23] average, and count functions
+[30:25] without ever seeing the actual items
+[30:27] being added, averaged, or counted.
+[30:30] That's using low security data to deduce
+[30:32] high security information. Pretty smart.
+[30:35] And what we just described is also
+[30:37] called inference. So, inference becomes
+[30:40] a risk when using aggregation functions.
+[30:43] So, what's the defense against these
+[30:44] types of attacks? Well, be careful with
+[30:46] database permissions. If a user is able
+[30:49] to infer something, they can do it
+[30:50] because the security policy allows them
+[30:52] to. So, it's not even a policy violation
+[30:55] when that happens.
+[30:57] Knowledge-based systems.
+[30:59] What are knowledge-based systems? Well,
+[31:00] a manifestation, a result of
+[31:02] knowledge-based systems is what we call
+[31:04] today AI and machine learning.
+[31:07] While most computer-oriented advances
+[31:10] have been focused on speed, doing stuff
+[31:12] faster than a human being would be able
+[31:13] to do,
+[31:15] knowledge bases are somehow going the
+[31:17] opposite direction by trying to simulate
+[31:19] human thinking, human reasoning, even
+[31:21] human creativity.
+[31:23] At the simplest level, if we can even
+[31:25] call it that, are expert systems. They
+[31:28] are made up of a body of knowledge,
+[31:30] basically just raw data with a lot of
+[31:32] if-then statements targeted at covering
+[31:35] all possible decision trees,
+[31:37] and an inference engine which navigates
+[31:39] this if-then maze using a bit of fuzzy
+[31:43] logic starting from whatever input is
+[31:45] being provided. While all the decisions
+[31:47] in an expert system are static, they are
+[31:49] set in stone, we might also need some
+[31:52] systems capable of adapting, learning
+[31:54] from provided data or actual examples.
+[31:57] And that is machine learning, based on
+[31:58] models that are or can be constantly
+[32:01] updated. How do these updates happen?
+[32:03] Well,
+[32:05] we could do it through a supervised
+[32:06] method, where the analyst provides
+[32:08] inputs and also the desired solutions,
+[32:11] so the system learns what it should
+[32:13] behave like in the context of those
+[32:14] inputs, a kind of an
+[32:16] early childhood parenting,
+[32:18] and unsupervised learning, on the other
+[32:20] hand, is training on data sets which do
+[32:22] not contain the right answers, but
+[32:24] instead that data can be used for
+[32:27] classification, trends, and so on, not
+[32:29] necessarily problem-solving.
+[32:32] Finally, neural networks are the closest
+[32:35] things we can design that resembles the
+[32:37] human brain as far as decision-making
+[32:39] goes.
+[32:40] So, it only takes the goodish stuff of
+[32:43] the human brain, as opposed to a
+[32:46] knowledge-based system where a chain of
+[32:48] if-else rules are being parsed to reach
+[32:50] an answer.
+[32:51] In a neural network, the decision
+[32:53] results are fed into each other and at
+[32:55] the end produce a result that might not
+[32:58] be the most correct answer in the world,
+[33:00] but it's probably pretty close. And it
+[33:02] might be an acceptable answer is even to
+[33:04] problems never seen before, on which the
+[33:07] neural network has never been trained. I
+[33:09] know, I know, being confident in an
+[33:11] answer you know nothing about sounds a
+[33:14] bit like the Dunning-Kruger effect, but
+[33:16] the good part in a neural network is
+[33:19] that you can fine-tune it. With people,
+[33:22] not so much. I think it was Einstein who
+[33:24] said that it's easier to split an atom
+[33:27] than a prejudice. But we digress when
+[33:29] instead we should be
+[33:31] wrapping things up.
+[33:41] >> [music]

@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A business continuity coordinator is defining the recovery metrics for a critical patient portal in a hospital. The coordinator needs to set a target for the maximum acceptable time it should take for the IT team to restore the portal software and server operating systems to an operational state following an outage. Which metric should the coordinator define for this target?",
+    "options": [
+      "Recovery Point Objective (RPO)",
+      "Recovery Time Objective (RTO)",
+      "Work Recovery Time (WRT)",
+      "Maximum Tolerable Downtime (MTD)"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Recovery Time Objective (RTO) is the targeted duration of time within which a system, application, or service must be restored after a disruption to avoid unacceptable business consequences. RPO refers to the maximum acceptable data loss (in time). WRT is the time required to restore data and return to normal operating efficiency after the hardware is back online. MTD is the total maximum downtime allowed for the business process."
+  },
+  {
+    "question": "A banking organization requires a disaster recovery replication technique for its credit card processing database that supports an RPO of near zero. Every transaction committed at the primary database must be written synchronously and in real-time to a standby database at an off-site recovery center before the transaction is acknowledged to the client. Which technique should the organization deploy?",
+    "options": [
+      "Electronic vaulting",
+      "Remote journaling",
+      "Remote mirroring",
+      "Bulk database exporting"
+    ],
+    "correctIndex": 2,
+    "explanation": "Remote mirroring is a database backup and replication technique where transaction updates are written synchronously and in real-time to a duplicate database server at an off-site location, ensuring an RPO of near zero. Electronic vaulting involves bulk batch file transfers (often daily). Remote journaling involves sending transaction logs (often hourly). Bulk database exporting is a manual, non-real-time backup copy process."
+  },
+  {
+    "question": "A mid-sized logistics company is evaluating alternate disaster recovery processing sites. The company has a limited budget and can tolerate a recovery period of several weeks. They need a site that is equipped with basic utilities, power, and environmental controls (HVAC), but contains no pre-installed computing hardware, communications lines, or corporate data. Which recovery site type is most appropriate?",
+    "options": [
+      "Hot Site",
+      "Warm Site",
+      "Cold Site",
+      "Mobile Site"
+    ],
+    "correctIndex": 2,
+    "explanation": "A Cold Site is an alternate facility equipped with power, heating, ventilation, and air conditioning (HVAC) but containing no active computing hardware or network connections. It is the least expensive option but requires several weeks to procure and configure hardware before it can support operations. A Warm Site contains hardware but lacks data. A Hot Site is fully operational with pre-configured hardware and replicated data. A Mobile Site is a relocatable trailer or container."
+  },
+  {
+    "question": "An active-passive web server cluster relies on a heartbeat connection to monitor node health. During a network partition, the heartbeat link fails, but both nodes remain active and connected to the Internet. The standby node assumes the primary node has failed and attempts to take over, resulting in both servers writing conflicting transactions to the database. What is this scenario called?",
+    "options": [
+      "Split-brain scenario",
+      "Single point of failure (SPOF)",
+      "Fail-open failure",
+      "Heartbeat flooding"
+    ],
+    "correctIndex": 0,
+    "explanation": "A split-brain scenario occurs in a cluster when communication between the active and standby nodes is severed (e.g., heartbeat failure), leading both nodes to believe they are the sole active node. This causes them to attempt to access and write to the same shared resources (like a database) simultaneously, causing data corruption. SPOF is a single component whose failure downs the system. Fail-open allows access upon failure."
+  },
+  {
+    "question": "A CISO wants to validate the organization's disaster recovery technical capabilities. The CISO wants to relocate disaster recovery staff to the alternate hot site, restore systems from off-site backups, and verify that the systems can process transactions. However, the organization's primary production data center must remain fully operational and continue processing live user traffic. Which DRP test type should the CISO conduct?",
+    "options": [
+      "Structured Walk-Through",
+      "Simulation Test",
+      "Parallel Test",
+      "Full Interruption Test"
+    ],
+    "correctIndex": 2,
+    "explanation": "A Parallel Test involves activating systems at the alternate recovery site and running operations in parallel with the primary production site to verify that they function correctly. The primary site is not shut down and continues to process live traffic. A Structured Walk-Through is a tabletop discussion. A Simulation Test is localized and does not fully run parallel operations. A Full Interruption Test shuts down the primary production site."
+  }
+]

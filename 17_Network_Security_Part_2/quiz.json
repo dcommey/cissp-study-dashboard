@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A large financial enterprise is migrating its network infrastructure to support both IPv4 and IPv6 in a dual-stack configuration. During a security audit, it is discovered that while robust firewall rules and Access Control Lists (ACLs) are configured for IPv4, the IPv6 configuration remains at factory defaults. From a security governance perspective, what is the primary risk associated with this state?",
+    "options": [
+      "IPv6 traffic will automatically be encapsulated in IPv4 tunnels, bypassing existing network security logging mechanisms.",
+      "The default configurations for IPv6 may permit unauthorized traffic to bypass established IPv4 perimeter security controls, as the protocols run as independent instances.",
+      "The dual-stack operating system architecture runs both protocols within a single process, causing severe resource starvation on core firewalls.",
+      "IPv6 auto-configuration (SLAAC) will trigger IP address conflict storms, resulting in a network-wide denial of service."
+    ],
+    "correctIndex": 1,
+    "explanation": "In a dual-stack network, operating systems run IPv4 and IPv6 as completely separate instances (historically referred to as running 'like ships in the night'). Security policies, firewalls, and ACLs configured for IPv4 do not automatically apply to IPv6. If IPv6 is left at its default configurations (which are often open/permit any), attackers can leverage IPv6 traffic to bypass perimeter security controls, effectively neutralizing the organization's security posture."
+  },
+  {
+    "question": "An organization is implementing a zero-trust network architecture within its virtualized software-defined data center (SDDC). The security manager is tasked with isolating multi-tier applications and preventing lateral movement of potential threats without deploying additional physical firewall appliances. Which of the following architectures is the most appropriate recommendation?",
+    "options": [
+      "Implementing Classless Inter-Domain Routing (CIDR) to group application servers into classful network ranges.",
+      "Deploying Multiprotocol Label Switching (MPLS) to label-switch traffic between application tiers.",
+      "Implementing microsegmentation using Virtual Extensible LAN (VXLAN) overlays to define granular security policies down to individual workloads.",
+      "Enabling Dynamic ARP Inspection (DAI) on all virtual switch ports to block dynamic MAC address learning."
+    ],
+    "correctIndex": 2,
+    "explanation": "Microsegmentation divides the internal network into highly granular security zones (potentially down to a single application, service, or virtual machine workload). It uses network virtualization overlays like VXLAN, which supports up to 16 million virtual networks (compared to 4,096 traditional VLANs), to isolate traffic and apply strict access policies. This architecture stops lateral movement ('east-west' traffic) in a software-defined networking (SDN) environment without requiring physical firewall hardware."
+  },
+  {
+    "question": "A manufacturing company's Security Operations Center (SOC) detects a man-in-the-middle (MitM) attack where an unauthorized device on the local network is sending falsified ARP replies. The attack redirects traffic destined for the ERP server through the attacker's machine. The network contains a mix of Cisco, Juniper, and Dell switches. What switch-level configuration strategy should the security manager recommend to mitigate this threat across the entire enterprise?",
+    "options": [
+      "Enable Dynamic ARP Inspection (DAI) / Dynamic ARP Protection (DAP) paired with DHCP Snooping globally on all access switches.",
+      "Deploy host-based intrusion prevention systems (HIPS) and configure static ARP entries on all local endpoints.",
+      "Disable SSID broadcasting on all wireless access points and restrict access using MAC address filtering.",
+      "Migrate all wireless networks to WPA3-Personal and enforce Simultaneous Authentication of Equals (SAE)."
+    ],
+    "correctIndex": 0,
+    "explanation": "Dynamic ARP Inspection (DAI) — also referred to as Dynamic ARP Protection (DAP) by Juniper — is a switch-level security feature that mitigates ARP spoofing and poisoning attacks. It relies on DHCP Snooping to build a database mapping valid IP addresses to physical MAC addresses and switch ports. The switch intercepts and validates all ARP packets against this database, dropping invalid or fake ARP replies. This is the most scalable and effective administrative control for Layer 2 ARP-based attacks in a multi-vendor environment."
+  },
+  {
+    "question": "A routine remote-work security assessment reveals that many employees have Wi-Fi Protected Setup (WPS) enabled on their home routers, which are also configured with WPA2-Personal (PSK). From a risk management perspective, what is the most critical recommendation the security manager should make to secure remote access points?",
+    "options": [
+      "Instruct employees to disable WPA2 and use Wired Equivalent Privacy (WEP) for lower overhead.",
+      "Require employees to immediately disable WPS on all home routers and upgrade to WPA3-Personal with Simultaneous Authentication of Equals (SAE) where supported.",
+      "Mandate MAC address filtering on home routers to approve only company-issued laptop network interfaces.",
+      "Advise employees to hide their SSID broadcasts to make their home networks invisible to external scans."
+    ],
+    "correctIndex": 1,
+    "explanation": "Wi-Fi Protected Setup (WPS) contains a critical design vulnerability where its 8-digit PIN authentication can be brute-forced within hours by checking the first four digits and last three digits separately (reducing total combinations to 11,000). WPS must be disabled immediately. Upgrading to WPA3-Personal replaces pre-shared key (PSK) authentication with Simultaneous Authentication of Equals (SAE), which protects against offline dictionary attacks and password guessing by forcing active interaction for authentication."
+  },
+  {
+    "question": "An employee working inside a secure government facility tethers their corporate laptop to a personal smartphone's 5G cellular hotspot and establishes an outbound VPN connection. The facility employs strict perimeter security controls, including Deep Packet Inspection (DPI) firewalls and Data Loss Prevention (DLP) gateways. What is the primary governance and security risk of this scenario?",
+    "options": [
+      "Layer 4 transport encapsulation is compromised because cellular networks transmit UDP packets in cleartext.",
+      "Perimeter security controls (firewalls, DPI, DLP) are completely bypassed, neutralizing the organization's ability to detect data leakage or prevent malware ingress.",
+      "The corporate laptop's network interface card (NIC) is susceptible to physical damage due to the 5G signal strength.",
+      "The outbound connection will jam the facility's centralized wireless LAN controller (WLC) and thin access points."
+    ],
+    "correctIndex": 1,
+    "explanation": "Connecting a corporate laptop to a cellular network (such as a 5G hotspot) while connected to or present within the facility creates a dual-homed bridge. This action completely bypasses the corporate network's perimeter security controls, including firewalls, Deep Packet Inspection (DPI), proxy servers, and Data Loss Prevention (DLP). This eliminates the organization's visibility, enabling potential undetected data exfiltration and the ingress of malicious payloads directly onto the endpoint."
+  }
+]

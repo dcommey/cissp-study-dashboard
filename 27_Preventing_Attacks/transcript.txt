@@ -1,0 +1,1013 @@
+[00:08] Preventing attacks. Well, just knowing
+[00:11] about the things that could possibly
+[00:12] hurt you, about possible attacks, only
+[00:15] takes you halfway towards the end goal
+[00:17] of feeling and actually being protected.
+[00:20] The other half is about doing something
+[00:22] to protect against those known attacks.
+[00:26] Honeypots and honeynets are essentially
+[00:28] digital traps that you set up to
+[00:30] distract and or delay intruders.
+[00:33] A honeypot is a decoy computer, while a
+[00:35] honeynet is an entire network of such
+[00:37] decoy systems made to look like your
+[00:39] entire DMZ or your corporate network.
+[00:43] They're designed to look and act like
+[00:44] real systems, but don't contain any
+[00:46] valuable data. Actually, they usually
+[00:48] contain some data, but it's just bogus,
+[00:51] fake data. They can also be
+[00:53] intentionally configured with
+[00:54] vulnerabilities to attract intruders or
+[00:57] at least to make them look like a
+[00:59] low-hanging fruit next to the real
+[01:01] infrastructure. The idea is to divert
+[01:03] the attacker's attention away from your
+[01:05] real network and onto these decoy
+[01:07] systems so that you have time to analyze
+[01:09] the attack, maybe save a snapshot of the
+[01:11] tools that the attacker downloads onto
+[01:12] the compromised machines, and in general
+[01:15] to understand how the attack is
+[01:16] conducted. Uh not only do you honeypots
+[01:18] and honeynets help protect the live
+[01:20] environment, they also allow you to
+[01:22] observe an attacker and log each and
+[01:24] every action the attacker is making.
+[01:26] Honeypots usually log everything that is
+[01:28] happening on them and take periodic
+[01:29] snapshots of the disk so that later on
+[01:31] you get a chance to observe how the
+[01:33] attack unfolded and even capture the
+[01:35] attacker's tools. This could be very
+[01:37] valuable information about the
+[01:38] attacker's methods and possibly even
+[01:40] about who they are as the person behind
+[01:43] the attack. Honeypots and honeynets are
+[01:46] especially useful against zero-day
+[01:48] exploits as they can record the
+[01:49] attacker's action allowing you to
+[01:51] understand what's happening during an
+[01:52] attack for which neither you nor anyone
+[01:56] even has a signature yet. Moreover, if
+[01:58] an attacker compromises a honeypot, it
+[02:00] can easily be recreated since they're
+[02:02] mostly hosted on virtual systems and
+[02:04] tightly isolated from the real network.
+[02:07] Some honeypots are just standalone
+[02:08] applications that pretend to open a
+[02:09] bunch of ports and even to reply with
+[02:11] some bogus data. However, deploying
+[02:14] honeypots and honeynets raises certain
+[02:16] legal considerations. While it is legal
+[02:18] to trick attackers with these decoy
+[02:20] systems, it's illegal to actively
+[02:22] encourage illegal actions. It could be a
+[02:24] bit of a grayish area here depending on
+[02:26] where you live, so it's important to
+[02:28] understand what local laws might apply
+[02:30] to this. Talk to a lawyer first.
+[02:33] Another preventive measure is the use of
+[02:35] warning banners. These are messages that
+[02:37] inform users, including intruders, about
+[02:39] security policies and the consequences
+[02:40] of violating them.
+[02:42] Obviously, this is not a technical
+[02:44] control as the banner itself is nothing
+[02:46] more than a notice saying no trespassing
+[02:49] or hey, please don't hack me with the
+[02:51] additional well, if you do hack me,
+[02:53] we're going to hunt you down and shoot
+[02:55] toilet paper and eggs at your house.
+[02:57] Banners usually say that activities are
+[02:59] monitored and remind users of restricted
+[03:02] actions so that users cannot say that
+[03:04] they haven't been warned. They
+[03:05] discourage some hackers.
+[03:07] All right, security controls.
+[03:09] Malicious code or malware is any
+[03:11] software that can harm your system.
+[03:13] Viruses, worms, Trojans, spyware,
+[03:15] rootkits, you name it, all kinds of
+[03:16] nasty stuff.
+[03:18] The best way to protect yourself from
+[03:19] malware is to use something that detects
+[03:21] and even eliminates malware, which is
+[03:22] called, of course, anti-malware. So,
+[03:25] anti-malware software is either based on
+[03:27] signatures or behavior. Signatures are
+[03:30] small pieces of descriptive code,
+[03:32] basically just bytecode snippets that
+[03:34] describe a specific pattern of bytes in
+[03:36] an executable that, when detected inside
+[03:39] of a downloaded file or running program
+[03:41] in memory, indicate a specific type of
+[03:43] malware. Behavioral detection, on the
+[03:45] other hand, means looking at how a
+[03:47] specific app behaves in order to
+[03:48] determine if its behavior looks
+[03:50] malicious or not, even in the absence of
+[03:52] a signature. Behavioral detection sounds
+[03:54] better as it can potentially detect
+[03:56] malware for which there is no signature
+[03:58] yet, but on the other hand, it needs the
+[04:00] malware to act upon its objective in
+[04:02] order to detect it. In that case,
+[04:04] detection might come in too late after
+[04:07] the malware has successfully destroyed
+[04:09] or exfiltrated data.
+[04:11] Anti-malware signatures need to be
+[04:12] updated regularly, especially if
+[04:14] signature-based scanning is the only
+[04:15] type of scanning the solution can
+[04:17] perform, because attackers are always
+[04:19] creating new and modified versions of
+[04:22] malicious code to evade detection. This
+[04:24] is normally a process that you should
+[04:25] not leave in the hands of users.
+[04:27] Instead, make sure that group policies
+[04:29] or preconfigured anti-malware solutions
+[04:32] on the computers can update the
+[04:34] signatures automatically. Going one step
+[04:36] further, you could also implement
+[04:38] solutions for device posture validation
+[04:41] so that when devices attempt to connect
+[04:42] to the network, they are checked for
+[04:44] up-to-date operating system version,
+[04:47] patches, and even the version of the
+[04:48] anti-malware signature package itself.
+[04:51] There are also anti-malware solutions
+[04:52] that don't rely on a local database of
+[04:53] signatures, but instead on an internet
+[04:55] database to determine if a file is
+[04:57] malicious. And since it's much more
+[04:59] difficult to upload and scan remotely
+[05:01] each and every file,
+[05:02] and perhaps not even that secure,
+[05:04] these solutions instead calculate a hash
+[05:07] of the file to be scanned. The hash is
+[05:09] uploaded to the cloud, which is very
+[05:10] small, and then a verdict comes back.
+[05:13] That verdict might be we've seen this
+[05:15] file before, it's okay, or we've seen
+[05:17] this file before and it's malware, or we
+[05:19] haven't seen it before and we cannot
+[05:21] give a verdict. In which case, you might
+[05:23] have the option of actually uploading
+[05:25] the file itself to be scanned by one of
+[05:27] the
+[05:28] cloud engines available. virustotal.com
+[05:30] allows you to do this and it's also a
+[05:32] good example of why centralized database
+[05:34] is better than a local one. It's easier
+[05:36] to update, it's updated for everyone
+[05:37] using it, and it can also combine
+[05:39] information from multiple sources in one
+[05:41] place. I believe virustotal scans with
+[05:44] about 50 anti-malware engines or
+[05:46] something like that, which is huge.
+[05:48] Also, in case you're wondering, in the
+[05:50] past, anti-malware software was mainly
+[05:52] focused on viruses and it was called
+[05:54] antivirus software. But now,
+[05:55] anti-malware software can handle all
+[05:57] kinds of malicious code, so it's more
+[05:59] accurate to
+[06:00] anti-malware software. Another way to
+[06:02] prevent attacks is to make decisions on
+[06:04] what traffic or what applications are
+[06:06] allowed to run
+[06:07] by using allow lists or deny lists. Or
+[06:09] like you might encounter them in other
+[06:11] places, white lists and black lists.
+[06:13] This is a pretty broad concept and
+[06:15] you'll find it applied in many places in
+[06:17] IT security. It might be about blocking
+[06:20] or allowing traffic, apps that can be
+[06:22] installed, apps to access specific
+[06:24] resources, even for people and other
+[06:27] identities accessing resources, and even
+[06:29] for physical security. A door with a
+[06:31] physical key or key card or any kind of
+[06:33] access control method is basically
+[06:35] relying on a white list. Only approved
+[06:37] people, keys, or fingerprints, or cards
+[06:40] can enter. Everyone else is denied by
+[06:42] default. By the way, you can only use
+[06:44] one type of list, not both, and it
+[06:46] should be common sense why.
+[06:49] Let's just think about running
+[06:50] applications on a system.
+[06:52] Allow lists are more restrictive, but
+[06:53] also more secure. They only let you run
+[06:55] the applications that are on the list
+[06:57] and block everything else. Well, it's
+[06:59] secure, but it's annoying as hell.
+[07:02] Deny lists are more flexible, but also
+[07:05] more risky. They only block the
+[07:07] applications that are on the list and
+[07:09] let you run everything else. This way,
+[07:11] you can still run the applications that
+[07:13] you need or want, but you have to be
+[07:15] careful not to run any harmful
+[07:16] applications that are not on the list.
+[07:18] It's obviously impossible to deny every
+[07:20] possible malicious app, code, or
+[07:22] traffic, so this is where the risk is
+[07:24] coming from. A well-known example of an
+[07:26] allow list used to be Apple iOS, but
+[07:29] this is changing now at the time of this
+[07:31] recording,
+[07:32] which is the operating system for
+[07:34] iPhones and iPads. iOS only lets you
+[07:36] install and run applications from the
+[07:38] Apple App Store, which are reviewed and
+[07:41] approved by Apple. This makes iOS very
+[07:43] secure, but also very limited. Some
+[07:46] users try to bypass this restriction by
+[07:48] jailbreaking their iOS devices, which
+[07:51] gives them more freedom, but also more
+[07:52] risks. Jailbreaking is similar to
+[07:55] rooting, which is a way of gaining full
+[07:57] control over an Android device, but
+[07:59] jailbreaking is the official term for
+[08:00] Apple devices.
+[08:02] And a common example of
+[08:04] use of a deny list is to block games or
+[08:07] other distracting applications from
+[08:09] running on your system. This could in
+[08:10] theory help you focus on your work or
+[08:12] study and avoid wasting time. However, a
+[08:15] deny list can also be easily bypassed
+[08:17] with software that was not included on
+[08:18] it due to the block list being outdated.
+[08:22] Now, we did cover firewalls before, but
+[08:24] we'll mention them again because we're
+[08:25] talking about methods for fighting off
+[08:27] attacks. So, just recap, firewalls are
+[08:29] both preventive and technical
+[08:30] safeguards. One doesn't exclude the
+[08:32] other. They rely on access lists, which
+[08:34] specify which type of traffic is allowed
+[08:36] and everything else is denied by
+[08:38] default. It's kind of a white list or an
+[08:40] allow list. Actually, a firewall ACL
+[08:42] ends with an implicit deny rule,
+[08:44] something called a deny any or the deny
+[08:47] any any rule back from Cisco syntax
+[08:50] where ACLs specify either just a source,
+[08:52] deny any, or both the source and the
+[08:54] destination, deny any any. Traffic is
+[08:57] typically filtered based on IP
+[08:59] addresses, ports, and protocol numbers,
+[09:01] so up to layer four.
+[09:03] It's common to place firewalls at the
+[09:05] border of the network, allowing them to
+[09:07] monitor all incoming and outgoing
+[09:09] traffic, but firewalls can also be
+[09:11] implemented between subnets and between
+[09:13] departments of the same company, or even
+[09:15] within the data center to filter traffic
+[09:17] between virtual machines, that would be
+[09:19] east-west traffic, or how they
+[09:22] communicate with the outside world, that
+[09:24] being north-south traffic. Among other
+[09:27] default behaviors of firewalls,
+[09:29] we're also mentioning here blocking
+[09:32] directed broadcasts. Remember those
+[09:34] legacy ICMP attacks which relied on
+[09:36] directed broadcasts? Well, they're
+[09:38] legacy because
+[09:39] most firewalls nowadays block those
+[09:41] directed broadcasts by default without
+[09:44] needing an explicit configuration.
+[09:46] Another default behavior for firewalls
+[09:48] implemented at network edge is to block
+[09:50] private IP addresses from leaving your
+[09:52] network or from coming in as a source IP
+[09:54] address from the internet. If traffic
+[09:57] from the internet has a source IP
+[09:58] address in a private IP address range,
+[10:00] it's a spoofed address 100% and your
+[10:03] firewall should immediately block it as
+[10:05] this might mask an attack attempt.
+[10:08] Similarly, if a private IP address tries
+[10:10] to leave your local network, it won't
+[10:12] live long out there in the wild wild web
+[10:15] as private IP addresses are not routable
+[10:17] over the internet. So, the first ISP
+[10:19] router, the first provider edge router
+[10:21] that it hits will drop it in a second or
+[10:24] in a nano second or pico second. Also,
+[10:26] blocking ICMP from the outside is
+[10:29] recommended as many attackers use ICMP,
+[10:33] specifically the ping utility, to
+[10:34] discover systems or launch
+[10:36] denial-of-service attacks.
+[10:37] Firewalls have evolved over time and
+[10:39] what we have today are stateful
+[10:41] firewalls, which are able to follow the
+[10:43] connection streams and request-reply
+[10:45] chatter going through them.
+[10:47] We also have application firewalls that
+[10:49] control traffic going to or from a
+[10:50] specific application or service and they
+[10:53] are layer seven aware. For example, a
+[10:55] web application firewall, WAF, protects
+[10:57] a web server by inspecting all traffic
+[11:00] going to it from its clients and
+[11:02] blocking attacks such as SQL injection
+[11:05] and cross-site scripting.
+[11:06] Finally, next-generation firewalls,
+[11:08] NGFWs, or unified threat management
+[11:10] solutions, UTM devices
+[11:12] combine traditional firewall functions
+[11:15] with packet inspection, deep packet
+[11:17] inspection. They can filter malware, can
+[11:20] with anti-malware the actual network
+[11:21] traffic, detect files being transferred,
+[11:25] they can provide intrusion prevention,
+[11:26] and filter spam even or perform
+[11:28] decryption of encrypted traffic.
+[11:31] Sandboxing. Now, in simple terms,
+[11:33] sandboxing is like a protective bubble
+[11:35] around your applications, stopping them
+[11:38] from mingling with other applications.
+[11:40] It's also a technique commonly used by
+[11:41] anti-malware to test unknown files. If
+[11:44] an application starts acting
+[11:45] suspiciously, the sandbox will stop it
+[11:47] from infecting other applications or the
+[11:49] operating system. How is it this type of
+[11:52] bubble implemented? Well, what
+[11:54] application isolation mechanisms do we
+[11:56] have? Virtual machines and containers,
+[11:59] of course. Now, application developers
+[12:01] also find sandboxing quite handy,
+[12:04] especially when they want to test
+[12:05] applications. They use virtualized
+[12:07] techniques to create a virtual machine,
+[12:09] which then they can isolate from the
+[12:11] host machine and the network. This way
+[12:13] they can test the application within the
+[12:15] sandbox environment without affecting
+[12:17] anything outside virtual machine.
+[12:19] Like a dedicated playground where you
+[12:21] cannot hurt yourself or better yet, you
+[12:23] cannot hurt anyone else.
+[12:25] If you have kids, you know what I mean.
+[12:28] In a similar manner, many anti-malware
+[12:30] vendors use virtualization as a
+[12:31] sandboxing technique to observe the
+[12:33] behavior of malware. It's a controlled
+[12:35] environment to study a potentially
+[12:37] harmful executable file, understand its
+[12:39] behavior, and figure out how to create
+[12:42] an effective signature for it. Malware,
+[12:44] of course, evolved to detect sandboxes
+[12:46] or the fact that they are running in
+[12:48] virtualized environments and not on
+[12:49] physical real compromised computers.
+[12:52] They know how to look for specific
+[12:53] processes, drivers, or files on the disk
+[12:55] that indicate a virtual machine like
+[12:57] VMware tools that is installed or other
+[12:59] similar driver packages, for example.
+[13:01] That's not something anyone might find
+[13:03] on a physical PC. Some of them even
+[13:05] measure the timing, the time it takes to
+[13:07] execute specific operations that should
+[13:09] take longer in a VM,
+[13:11] monitor network traffic to detect a
+[13:13] hypervisor, or even delay their actions
+[13:15] to trick sandboxes that expect instant
+[13:17] behavior. Now, of course, sandboxes know
+[13:19] how to accelerate time, too. So, well,
+[13:21] you have the eternal
+[13:23] cat and mouse arms race game right
+[13:26] there.
+[13:27] Preventing attacks.
+[13:28] Logging and monitoring those logs can
+[13:31] help a lot to prevent incidents and
+[13:32] enable an effective response when
+[13:34] incidents happen.
+[13:36] Logs record events happening in our
+[13:38] network on each and every system.
+[13:40] Logging and monitoring is also vital for
+[13:42] detecting malicious events. It's also
+[13:44] great for re-tracing the steps after an
+[13:46] event has occurred to identify what
+[13:48] actually happened and sometimes even to
+[13:49] find out who was responsible for it.
+[13:52] For instance, event viewer on a
+[13:53] Microsoft Windows system,
+[13:55] it might record that a user accessed a
+[13:56] file or a remote network location at a
+[13:58] specific time.
+[14:00] If the identification and authentication
+[14:02] processes are secure, this is enough to
+[14:04] hold the user accountable for accessing
+[14:06] that file.
+[14:07] Sometimes logs are called audit logs
+[14:09] when auditing is more than just logging.
+[14:12] Logging records events, while auditing,
+[14:14] by definition at least, is about
+[14:16] inspecting an environment for
+[14:18] compliance.
+[14:19] So, logging is when you gather and store
+[14:21] information, while auditing is when you
+[14:23] process and actually use that
+[14:25] information in order to prove a specific
+[14:27] action, a responsible person, or the
+[14:29] status of a certain compliance rule.
+[14:32] There are several types of logs and this
+[14:34] is not by far a complete list, of
+[14:36] course. For example, security logs
+[14:39] include access to resources like files,
+[14:41] applications, web locations, especially
+[14:44] when they're related to the system's
+[14:45] audit policy.
+[14:46] They also log user activity when a user
+[14:49] is logged in, when they failed to log
+[14:51] in.
+[14:52] The security log is one of the primary
+[14:53] tools used to investigate unauthorized
+[14:56] activity and troubleshoot problems.
+[14:59] System logs record system events such as
+[15:02] when a new system starts or stops, when
+[15:05] services start or stop, or when system
+[15:07] configuration is modified. Basically,
+[15:09] these are messages generated by the
+[15:11] operating system itself, not any of its
+[15:13] components. Application logs record
+[15:16] information for specific applications.
+[15:18] What gets recorded is chosen by the
+[15:20] application developer, it's up to them.
+[15:22] The OS has no control over these.
+[15:25] Firewall logs, just like name says,
+[15:27] these logs can record events related to
+[15:29] any traffic that reaches a firewall,
+[15:31] including the action taken on that
+[15:33] traffic. Many people don't log allowed
+[15:35] traffic. First, because allowed traffic
+[15:38] generates a huge amount of logging. And
+[15:40] second, because, well, if we allowed it
+[15:43] intentionally in the first place, we're
+[15:45] probably aware of the fact that the
+[15:47] traffic
+[15:48] is going to be allowed. So, logging
+[15:50] might not provide any additional useful
+[15:52] insights. Instead, admins choose to
+[15:55] focus on dropped traffic. Why did we
+[15:58] drop it and what kind of traffic was it
+[16:00] so that it required the firewall to drop
+[16:02] it? That's interesting information. And
+[16:05] proxy logs, just like firewall logs,
+[16:07] they can record details about the
+[16:08] websites that users visit
+[16:10] and how much time they spend on these
+[16:12] sites.
+[16:13] Of course, a great amount of useful
+[16:14] information is logging what websites
+[16:16] user tried to access but get blocked.
+[16:19] It's useful both for troubleshooting
+[16:20] purposes, like when people complain
+[16:22] about applications not working, and also
+[16:24] determine if user education is required,
+[16:26] judging what kind of destinations, what
+[16:28] category of sites they are trying to
+[16:31] access.
+[16:32] Logging is typically a built-in feature
+[16:34] in the operating system and most
+[16:35] applications. While the information is
+[16:37] available, it's up to you to choose what
+[16:39] actually gets logged and further, what
+[16:42] to do with that information. If there's
+[16:43] nothing and nobody to look over those
+[16:46] logs and determine some actionable
+[16:47] insights from them, then it's useless
+[16:49] information that is just taking up
+[16:51] space.
+[16:52] Also, events from privileged accounts
+[16:54] should also be included in any logging
+[16:56] plan
+[16:57] to help detect attacks from malicious
+[16:59] insiders and to document any activity
+[17:02] that can change the security state of a
+[17:04] system in case an investigation is
+[17:05] required.
+[17:07] Speaking of investigations, logs can
+[17:09] also act as evidence to recreate the
+[17:11] events leading up to and during an
+[17:13] incident.
+[17:14] This is only effective if the logs
+[17:16] remain intact and unaltered, which is
+[17:18] not always easy to do.
+[17:20] Actually, let me put it this way. It's
+[17:22] easy to ensure that logs don't get
+[17:24] tampered with, but it's much more
+[17:25] difficult to prove that they haven't
+[17:27] been tampered with.
+[17:29] If attackers manage to modify the logs,
+[17:31] they can erase the traces,
+[17:33] making the log data worthless. So, we
+[17:34] need some way to protect log files from
+[17:36] unauthorized access.
+[17:38] There are dedicated storage services or
+[17:40] even dedicated devices that deal with
+[17:42] this kind of archival. They are found
+[17:44] under many names, a common one being
+[17:46] WORM, W O R M, write once, read many.
+[17:51] For long-term storage and tamper
+[17:52] protection,
+[17:53] there is WORM-type storage even in cloud
+[17:56] environments. Basically, a cloud WORM
+[17:58] storage is
+[17:59] buckets, not necessarily an object
+[18:01] storage, but something like a storage
+[18:03] entity
+[18:04] where you keep dumping or writing data,
+[18:06] but you can never delete or modify
+[18:09] something that's already in there. Now,
+[18:11] one surprising way of protecting log
+[18:12] data is to not store them on each and
+[18:15] every device because it's painfully
+[18:17] difficult to correlate all that
+[18:18] distributed data. So, much better option
+[18:21] would be to store copies of logs on some
+[18:23] central server or even a security
+[18:25] information and event management, a SIEM
+[18:28] system. Even if an attacker tampers with
+[18:30] the original files, the copied data
+[18:32] remains intact and archived long-term,
+[18:34] providing a reliable record of events.
+[18:37] Of course, limiting access to log files
+[18:39] is another way to keep them secure, just
+[18:41] like you would do with any other kind
+[18:43] of, well, sensitive data.
+[18:45] Oh, and don't forget that a SIEM should
+[18:47] not be used as a log storage device. We
+[18:50] use it to analyze logs and other events
+[18:52] in real time and to correlate those
+[18:54] events with additional information and
+[18:56] it's great for doing that, but in order
+[18:58] to keep being great at it, it's need to
+[19:01] not be overwhelmed with three-year-old
+[19:04] events.
+[19:05] Use another device for long-term storage
+[19:07] and archival and use a SIEM for recent
+[19:09] event correlations. Companies often
+[19:12] enforce policies for regular backups of
+[19:14] log files and long-term archiving. You
+[19:16] might want to keep archived log files
+[19:18] for a year, three years, or even
+[19:20] indefinitely in some cases due to
+[19:21] government regulations.
+[19:23] You need to implement security controls
+[19:25] like setting logs to read-only,
+[19:27] assigning access permissions, using
+[19:28] physical security controls to protect
+[19:30] whatever devices store them.
+[19:33] Those are all important steps in
+[19:34] ensuring log integrity. Still, sometimes
+[19:37] it's even more important to delete the
+[19:39] logs when they are no longer needed,
+[19:41] when there's a chance that they might be
+[19:43] storing sensitive information. Also,
+[19:45] don't just think that logs would store
+[19:47] sensitive information like bank accounts
+[19:49] or passwords or social security numbers.
+[19:52] No, they should be regarded as sensitive
+[19:54] data because if an attacker gets access
+[19:55] to them, they could learn a great deal
+[19:57] about the network, the devices in it,
+[19:59] even potential security issues. So, it's
+[20:01] not about protecting what logs store,
+[20:04] but what story they could tell a
+[20:07] potential attacker.
+[20:08] Preventing attacks through monitoring.
+[20:10] Now, monitoring is very important in a
+[20:12] company's security because this is what
+[20:14] makes it possible for us to have audit
+[20:16] trails or records of system activity.
+[20:18] Audit trails then allow us to
+[20:20] reconstruct the activity leading up to
+[20:22] security events and even what happened
+[20:23] during them. This can be incredibly
+[20:25] useful when investigating problems,
+[20:27] performance issues, user complaints,
+[20:29] attacks, breaches, even software bugs,
+[20:31] and any kind of potentially policy
+[20:33] violations.
+[20:34] Come to think of it, audit trails are
+[20:36] like a passive form of detective
+[20:38] security controls, much like CCTV or
+[20:41] security guards. They are also important
+[20:43] in legal proceedings, though you will
+[20:44] have to go through some hoops to have
+[20:46] your logs admitted in a court of law.
+[20:48] Another benefit of monitoring is
+[20:50] accountability because monitoring
+[20:52] records user activity in audit trail
+[20:55] logs, so we can now blame the right
+[20:58] users for their actions. Awesome.
+[21:01] Now, of course, this can also be a good
+[21:03] thing and can encourage good user
+[21:04] behavior. Who's a good user?
+[21:07] And compliance with the company's
+[21:09] security policy. If users are aware that
+[21:12] what they're doing is being recorded,
+[21:13] they are less likely to carry out nasty
+[21:15] activities or try to go around those
+[21:17] controls. They won't like it, but at
+[21:19] least you'll keep them in line with your
+[21:21] security policies. Another factor to
+[21:23] keep in mind in order to have correct
+[21:25] audit logs is the importance of accurate
+[21:27] and consistent timestamps in logs and
+[21:29] devices because you need to know exactly
+[21:31] when an event happened, and if the event
+[21:34] requires you to correlate information
+[21:35] from multiple sources, then all those
+[21:37] sources need to have correct time
+[21:39] settings, too. This can be achieved by
+[21:41] setting up an internal network time
+[21:42] protocol NTP server that is synchronized
+[21:45] with a trusted time source, like a
+[21:47] public NTP server. Your other systems
+[21:49] can then synchronize with NTP server.
+[21:52] Additionally, don't forget that you also
+[21:54] need a consistent time zone setting all
+[21:56] over the infrastructure. Some CM devices
+[21:59] and log storage appliances can perform
+[22:01] this event time normalization for you
+[22:04] based on the time when they received the
+[22:06] actual event, for example, very useful
+[22:08] for situations when the time your
+[22:10] devices might be a little off, but it's
+[22:12] much better to have correct time
+[22:13] settings on each and every device as you
+[22:15] might need to investigate those devices
+[22:17] individually, not just the logs they
+[22:19] generate.
+[22:20] Log analysis. Now, one thing to note is
+[22:23] that monitoring is not a one-time
+[22:25] activity that you just set it and forget
+[22:27] it, but a continuous process. Many
+[22:30] companies suddenly decide to start
+[22:32] paying attention to the logs in response
+[22:34] to an incident or suspected incident to
+[22:36] understand what happened. Well, in that
+[22:38] case, it might be too late. It doesn't
+[22:40] necessarily have to be a reactive
+[22:43] measure taken in response to an
+[22:44] incident, but more of an active
+[22:46] continuous task to uncover potential
+[22:48] issues that might not have happened yet,
+[22:50] but they are about to. So, manual log
+[22:53] analysis means admins opening up the log
+[22:55] files and looking for relevant data,
+[22:57] which can be tedious, time-consuming,
+[22:59] incredibly boring, and you're ever
+[23:01] hardly going to find any issues this
+[23:03] way.
+[23:04] Given the sheer volume of data that logs
+[23:06] generate, important details can easily
+[23:08] be missed, so the effort might already
+[23:10] be in vain. So, admins need automated
+[23:12] tools to analyze the log data. For
+[23:15] instance, some intrusion detection
+[23:16] systems, IDSs, also have a log
+[23:18] monitoring abilities to detect and
+[23:20] respond to malicious intrusions in real
+[23:22] time. They can help detect and track
+[23:24] attacks,
+[23:25] send alerts to administrators, and
+[23:27] record the attacker's access to
+[23:29] resources.
+[23:30] An IDS with IPS functionality can even
+[23:33] block some ports or install some dynamic
+[23:35] ACLs to stop the offending traffic, if
+[23:38] there's any. For a more efficient
+[23:39] approach to blocking offending traffic,
+[23:41] log analysis is often combined with
+[23:43] traffic analysis as well, either through
+[23:45] some network taps that look at the
+[23:47] actual traffic, or through NetFlow or
+[23:50] NetFlow similar protocols that send
+[23:53] traffic statistics back to the security
+[23:55] device straight from the switches or the
+[23:57] from the routers in the traffic path. Of
+[23:59] course, a security information and event
+[24:01] management seam, or security event
+[24:03] management SEM, or security information
+[24:06] management SIM, they use a bunch of
+[24:08] marketing terms for the same thing,
+[24:10] uh is a much better solution for this as
+[24:13] it gives you centralized logging and
+[24:15] real-time analysis of events happening
+[24:17] across a company's network. Some seam
+[24:20] systems can also gather data from
+[24:21] various other sources, like NetFlow
+[24:23] information or even packet captures from
+[24:25] within the network, just like we already
+[24:27] mentioned. It's worth mentioning here a
+[24:29] couple of techniques used in analyzing
+[24:31] logs or any kind of large data sets, uh
+[24:34] sampling or data extraction, involves
+[24:37] extracting specific elements from a
+[24:39] large data set to construct a meaningful
+[24:40] representation. It's often used with
+[24:43] traffic monitoring where storing and
+[24:45] processing each and every package in
+[24:46] order to create statistics or baseline
+[24:48] is too resource-intensive.
+[24:51] So, we choose to sample, let's say, one
+[24:53] out of 10 or one out of 100 packets. You
+[24:56] might find this feature with flow-based
+[24:57] protocols like NetFlow or IPFIX, and
+[25:00] it's called just like that, sampled
+[25:02] NetFlow. Of course, there's always a
+[25:04] risk that sample data may not accurately
+[25:07] represent the whole data, especially if
+[25:10] you're looking for attack signatures,
+[25:11] which might be just a couple of packets
+[25:13] that are easily missed if you're
+[25:14] sampling one out of n packets. Another
+[25:17] technique is called clipping, which
+[25:19] selects only events that exceed a
+[25:21] predefined threshold, which is known as
+[25:23] the clipping level, hence the name. For
+[25:25] instance, the system may ignore the
+[25:26] failed log-on attempts until they reach
+[25:28] a certain threshold, like over five
+[25:30] failed attempts in 1 minute, and then
+[25:33] only then it starts logging them as
+[25:35] events. So, with clipping, the system
+[25:36] raises an alarm for abnormal events only
+[25:38] if the baseline is exceeded. Syslog, as
+[25:41] described in RFC 5424, the syslog
+[25:45] protocol is used to send, well, logs
+[25:48] over a network. A centralized syslog
+[25:51] server receives these messages from
+[25:52] other devices. The protocol itself
+[25:54] doesn't say what the storage device
+[25:56] should do with those logs, but instead
+[25:58] it just defines how the messages should
+[26:00] be assembled, how they should look like,
+[26:03] and how they should be packaged and sent
+[26:05] to the syslog server.
+[26:07] Syslog is very old. It comes from the
+[26:08] Unix world and has developed extensions
+[26:11] over time, such as syslog-ng,
+[26:13] which extends the original syslog with
+[26:15] content-based filtering, additional
+[26:17] configuration options, adds support for
+[26:19] TCP for transport, and rsyslog, which,
+[26:23] on top of the syslog-ng benefits, allows
+[26:25] messages to be forwarded to other
+[26:27] destinations as well.
+[26:29] Automated incident response. Now,
+[26:31] incident response automation has evolved
+[26:33] a lot lately thanks to technologies such
+[26:35] as machine learning and AI.
+[26:37] We now have enriched tools under the
+[26:39] umbrella of security orchestration,
+[26:41] automation, and response, SOAR,
+[26:43] solutions. Now, traditionally, security
+[26:45] admins had to manually respond to each
+[26:47] alert issued by any of the many security
+[26:50] tools or devices in the network, and as
+[26:52] you know, anything manual takes time and
+[26:55] opens you up to errors. SOAR
+[26:57] technologies allow you to describe both
+[26:59] incident and potential responses to
+[27:02] them, what action needs to be taken
+[27:04] automatically, generally through the use
+[27:07] of something called a playbook or a
+[27:08] runbook. A playbook, at least by its
+[27:11] definition in this context, is a
+[27:13] document that describes how to verify an
+[27:15] incident and describes the response to
+[27:17] it. So, it provides a step-by-step guide
+[27:20] on how to handle a specific incident. A
+[27:22] runbook, on the other hand, translates
+[27:24] the playbook's data into an automated
+[27:26] tool. So, the runbook is the actual set
+[27:28] of instructions that is executed as a
+[27:30] script by the automated tool. If it
+[27:32] helps you remember, uh the runbook is
+[27:35] what you actually run. Actually, this
+[27:37] might not help you much if you also
+[27:39] think that a playbook is something that
+[27:41] you can actually play or play with, but
+[27:43] well, you decide.
+[27:45] Now, the definition of a playbook and a
+[27:46] runbook may vary. The exam might ask you
+[27:48] about them, but hopefully you won't ask
+[27:50] you about strict differences between
+[27:52] them. However, in the context of
+[27:54] incident response, a playbook is a
+[27:56] document that defines actions, and the
+[27:58] runbook is the document that implements
+[28:00] those actions. Let's leave it at this.
+[28:03] While SOAR technologies can respond to
+[28:05] attacks, the challenge lies in
+[28:07] documenting all possible attacks and
+[28:09] incidents along with their responses in
+[28:11] the playbooks, and then writing runbooks
+[28:14] to respond automatically to them.
+[28:16] Obviously, this is downright impossible,
+[28:17] so if the SOAR system fails because
+[28:19] conditions are not matched or actions
+[28:21] cannot be implemented for some reason,
+[28:23] playbooks can also serve as a manual
+[28:25] backup response strategy, allowing a
+[28:28] happily woken up admin at 3:00 a.m. to
+[28:30] complete those steps manually and
+[28:32] happily.
+[28:34] Now, since automation can be greatly
+[28:36] enriched by AI, let's talk a bit about
+[28:38] AI and machine learning because the
+[28:40] terms artificial intelligence and
+[28:41] machine learning are often used
+[28:43] interchangeably,
+[28:44] even if they're not same. There aren't
+[28:47] universally agreed-upon definitions of
+[28:49] these terms, but generally, machine
+[28:51] learning is a subset of artificial
+[28:53] intelligence.
+[28:54] Machine learning means that the system
+[28:56] can improve itself automatically through
+[28:58] experience or exposure to more and more
+[29:00] data sets and scenarios. On the other
+[29:03] hand, artificial intelligence enables
+[29:05] machines to perform tasks that we
+[29:07] previously thought required human
+[29:08] intelligence, or that humans can do
+[29:11] better. You can probably see how AI is a
+[29:13] much more generic term. For example, if
+[29:15] you think about the game of chess, a
+[29:17] machine learning algorithm needs to be
+[29:19] taught the rules of the game and played
+[29:21] repeatedly against itself, improving
+[29:23] with each game as it learns what
+[29:25] strategies work and what strategies
+[29:26] don't. In contrast, an AI system starts
+[29:29] with no knowledge of the game. It
+[29:31] doesn't know the rules or how to win,
+[29:33] but a separate algorithm that's outside
+[29:35] of the AI system enforces the rules. By
+[29:37] observing those rules, by using this
+[29:39] feedback, the AI system creates its own
+[29:42] algorithms, applying machine learning
+[29:44] techniques to teach itself winning
+[29:46] strategies. So, in short, a machine
+[29:48] learning system starts out with a set of
+[29:50] rules or guidelines, whereas an AI
+[29:52] system starts with nothing and learns
+[29:54] the rules over time, creating its own
+[29:56] algorithms based on these these rules. I
+[29:59] in the context of cybersecurity, think
+[30:00] of a behavioral based detection system
+[30:02] that relies on a baseline of normal
+[30:04] activities and traffic on a network. A
+[30:06] machine learning system would use this
+[30:08] baseline as a starting point and learn
+[30:10] from feedback that it's constantly
+[30:11] trained with about valid alarms and
+[30:14] false positives. An AI system, on the
+[30:16] other hand, starts without a baseline
+[30:18] and gradually creates its own baseline
+[30:20] based on the traffic it observes, but
+[30:22] also relying on feedback to learn if
+[30:24] alarms are valid or false positives.
+[30:27] Threat intelligence and threat hunting.
+[30:29] Now, another topic on incident response
+[30:31] is threat intelligence.
+[30:33] This is a proactive action that involves
+[30:35] the gathering of data on potential
+[30:37] threats before they manifest. Since
+[30:39] we're talking about attacks that haven't
+[30:40] happened yet, we need a lot of sources
+[30:43] to acquire information on current
+[30:44] threats, and it's often used by
+[30:45] companies to identify threats that
+[30:47] haven't hit them just yet. Understanding
+[30:49] the concept of a kill chain can be
+[30:51] helpful in this context. Originally used
+[30:54] in the military, a kill chain is a model
+[30:56] that describes the stages of an attack,
+[30:59] from identifying who or what is the
+[31:01] target to evaluating how effective a
+[31:05] certain attack would be. If any stage of
+[31:08] the attack chain fails, the attack will
+[31:10] not succeed.
+[31:11] The model has been adapted for
+[31:12] cybersecurity purposes.
+[31:14] For instance, Lockheed Martin's cyber
+[31:17] kill chain framework, you can Google
+[31:19] that,
+[31:20] uh includes seven stages of an attack:
+[31:22] reconnaissance, weaponization, delivery,
+[31:24] exploitation, installation, command and
+[31:26] control, and actions on objectives.
+[31:29] Disrupting any phase of the attack can
+[31:30] prevent the attacker from succeeding.
+[31:33] So, the phases are, just to give a
+[31:34] couple of more details here,
+[31:36] reconnaissance is when the attacker
+[31:37] gathers information about the target,
+[31:39] such as the network structure, employee
+[31:41] detail, or vulnerabilities to identify
+[31:44] potential entry points. Weaponization,
+[31:47] the attacker creates or chooses a
+[31:49] deliverable payload, such as malware or
+[31:51] an exploit, often combining it with a
+[31:54] delivery mechanism like a phishing
+[31:56] email.
+[31:57] Delivery is when the payload is
+[31:59] transmitted to the target through email,
+[32:01] a website, a removable media, or other
+[32:04] vectors.
+[32:05] Exploitation, when the attacker takes
+[32:07] advantage of vulnerabilities on the
+[32:09] target system to execute a payload.
+[32:11] Installation, when the attacker installs
+[32:13] the malware or the backdoors on the
+[32:15] compromised system to establish
+[32:17] persistence.
+[32:18] Command and control is when the attacker
+[32:20] establishes a communication channel to
+[32:22] control the compromised system remotely.
+[32:25] And finally, action on objectives, the
+[32:27] attacker achieves their goal, such as
+[32:29] data theft, system disruption, further
+[32:32] network infiltration, pivoting, any
+[32:34] other nasty business, whatever that
+[32:36] might be.
+[32:37] The MITRE ATT&CK matrix is another
+[32:40] useful tool for understanding potential
+[32:42] threats. This knowledge base or database
+[32:44] lists tactics, techniques, and
+[32:46] procedures, TTPs, uh which are used by
+[32:49] attackers. Unlike the kill chain model,
+[32:51] the tactics in the ATT&CK matrix are not
+[32:54] ordered, but instead, they act as a
+[32:56] database of observed TTPs. The matrix is
+[32:59] also a living document, updated
+[33:01] regularly to keep up with evolving
+[33:03] attack methods. Uh you should be able to
+[33:05] access it at attack.mitre.org,
+[33:08] but the web address may change, so maybe
+[33:10] just Google it.
+[33:11] Now, being able to properly document
+[33:13] yourself about threats means that you
+[33:15] need to get your information from
+[33:16] somewhere, ideally from some centralized
+[33:19] location where other people can get the
+[33:22] same info and where other people like
+[33:24] you can contribute to it if needed.
+[33:26] A threat intelligence feed is
+[33:28] essentially a continuous stream of raw
+[33:31] data related to threats on the internet.
+[33:33] Information in a threat intelligence
+[33:34] feed can include suspicious domains,
+[33:37] known malware file hashes, IP addresses
+[33:40] known to belong to hackers or that have
+[33:42] been used in previous attacks, byte
+[33:44] signatures that indicate malware,
+[33:46] traffic signatures that indicate
+[33:47] intrusions, and so on.
+[33:49] By comparing data in a threat feed or
+[33:52] whatever your firewall is seeing going
+[33:54] in and out, you can detect a domain name
+[33:56] or an IP address or a malicious website
+[33:58] in incoming or outgoing traffic. If you
+[34:00] do, it's clear that this is suspicious
+[34:03] and should be at least investigated if
+[34:05] not blocked immediately. Threat hunting
+[34:07] is the practice of actively seeking out
+[34:10] cyber threats in your network, rather
+[34:12] than waiting for network tools to detect
+[34:14] and report something suspicious.
+[34:16] The assumption here is that attackers
+[34:18] might be already present in the network
+[34:20] undetected.
+[34:21] For example, if a threat feed indicates
+[34:23] that a botnet has been launching several
+[34:24] DDoS attacks recently, then
+[34:26] administrators can look for specific
+[34:28] signs to identify computers joined to
+[34:30] this botnet, such as certain files or
+[34:32] specific network traffic, beaconing
+[34:34] traffic.
+[34:35] Once administrators know what to look
+[34:36] for, they can create scripts to search
+[34:39] for these indicators on all internal
+[34:41] computers or to send alerts for any
+[34:43] matching network traffic. These small
+[34:46] pieces of information that indicate that
+[34:48] a computer might have been compromised
+[34:50] are called, you guessed it, IOCs, or
+[34:54] indicators of compromise.

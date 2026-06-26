@@ -1,0 +1,1177 @@
+[00:08] Disaster recovery planning or DRP is the
+[00:12] technical implementation of what we call
+[00:14] in business language business continuity
+[00:16] planning or BCP.
+[00:18] It's about all the technical strategies
+[00:20] that we undergo to prevent disruptions
+[00:23] and to try to restore services after a
+[00:25] disaster happens. Note that at this
+[00:27] point we're not talking about prevent
+[00:30] preventing disasters, but instead about
+[00:31] what we can and we should do when such a
+[00:34] disaster happens.
+[00:36] So, when you see B in BCP and it stands
+[00:39] for business, think in business terms,
+[00:41] business processes, keeping the business
+[00:43] going. And when you see DRP, that's
+[00:45] about the actual technical steps that
+[00:47] somebody needs to take in order to
+[00:49] well, to keep having a business.
+[00:53] In many companies, a single team handles
+[00:56] both business continuity and disaster
+[00:58] recovery concerns. And in most
+[00:59] companies, people don't even know the
+[01:01] difference between the two.
+[01:03] Often, the attitude is along the lines
+[01:05] of, "Yeah, we're the guys who need to
+[01:07] make things work when there's a
+[01:08] disaster." But for the sake of the
+[01:10] discussion and official discipline terms
+[01:12] known as business continuity management
+[01:15] BCM, this is what covers both BCP and
+[01:19] DRP in crisis management. So, a disaster
+[01:22] recovery plan is designed to deal with
+[01:24] situations where certain things have
+[01:26] already hit the fan.
+[01:29] Think of a hurricane destroying your
+[01:30] main HQ or a fire. The moment IT suit
+[01:33] cannot support mission-critical
+[01:35] processes is when the DRP comes into
+[01:37] action to manage restoration and
+[01:39] recovery.
+[01:40] A disaster recovery plan should be able
+[01:42] to run almost on autopilot, keeping
+[01:44] decision-making during a disaster to a
+[01:46] minimum because people are known to not
+[01:48] make the best decisions when under
+[01:50] pressure. So, we should be trying to
+[01:52] minimize decision-making during the
+[01:54] incident by making all the decisions
+[01:56] beforehand and documenting them.
+[01:59] Personnel should be well trained in
+[02:00] their duties and responsibilities and
+[02:02] know the steps needed to get the company
+[02:03] back up and running as soon as possible.
+[02:07] Disasters can be natural or human-made.
+[02:09] Natural disasters like earthquakes,
+[02:11] floods, storms, and fires can occur
+[02:13] without warning. Just look at how bad
+[02:15] people still are at predicting the
+[02:16] weather, but can cause devastating
+[02:18] damage.
+[02:20] Human-made disasters include pandemics.
+[02:22] We all know about those, right?
+[02:24] And we know how bad it can be for
+[02:26] business operations by preventing people
+[02:28] from gathering in large numbers,
+[02:30] preventing them from going to the
+[02:31] office.
+[02:33] Wait. Were we talking about good stuff
+[02:34] or bad stuff? I mean, I absolutely love
+[02:36] not going to the office, but I
+[02:37] definitely don't wish for a pandemic for
+[02:39] this to happen.
+[02:41] But some of the common man-made
+[02:42] disasters include fires, acts of
+[02:45] terrorism, bombings or explosions, power
+[02:47] outages, network and infrastructure
+[02:49] failures, even strikes, theft, or
+[02:51] vandalism. Consequently, when planning
+[02:54] for potential disasters,
+[02:56] obviously you need to understand their
+[02:57] various forms to know what you should
+[02:59] prepare for, and you will need a plan
+[03:01] for each type of disaster and perhaps
+[03:02] for several levels of criticality of
+[03:05] each disaster.
+[03:07] One of the three goals of the CIA triad,
+[03:10] availability, depends on directly on how
+[03:13] resilient our systems are and how well
+[03:16] they tolerate faults.
+[03:18] At the individual device level, there is
+[03:20] no such thing as a device that never
+[03:22] breaks. It will break at some point. So,
+[03:24] each and every single device can be a
+[03:26] point of failure. At the service level
+[03:28] delivered by that device and others like
+[03:31] it, and at the company business level as
+[03:33] a whole, we need to think in terms of
+[03:35] fault tolerance so that a single failure
+[03:37] does not impact critical business
+[03:39] processes. A single point of failure,
+[03:41] SPOF, is any single element, be it
+[03:44] logical or physical, that can cause an
+[03:46] entire process to fail. The weakest link
+[03:49] in the chain, if you wish. But through
+[03:51] fault tolerance, we're trying to
+[03:53] eliminate single points of failure as
+[03:55] much as possible. So, remember, devices
+[03:58] will still fail, but as long as they're
+[04:00] not the only device capable of
+[04:02] delivering a specific functionality,
+[04:05] then we don't have a single point of
+[04:06] failure any longer.
+[04:08] Another important term here is
+[04:09] resilience, that refers to a system's
+[04:12] capacity to keep working at an
+[04:14] acceptable level even during an adverse
+[04:16] event, a cyber attack, a failure of some
+[04:19] kind, a misconfiguration, you name it.
+[04:21] Fault tolerance is the capability of a
+[04:23] system to endure one or more faults, one
+[04:26] or more components, but still continue
+[04:29] to function. How? Well, by adding
+[04:31] redundant components, of course. You
+[04:33] lose a power supply, that's okay, we
+[04:35] still have three more that we can rely
+[04:36] on until we replace the faulty one. You
+[04:38] lose a hard drive, that's fine, we have
+[04:40] another one with an exact mirror of the
+[04:42] data to keep working.
+[04:44] Finally, high availability refers to
+[04:46] using these redundant components to
+[04:48] allow a system to recover from a
+[04:50] failure. How effective are these
+[04:51] controls? Well, we have some numbers to
+[04:53] measure that, starting from the system
+[04:55] availability or uptime. You might have
+[04:57] encountered the term four nines or five
+[04:59] nines, that is 99.99%
+[05:02] or 99.999%
+[05:05] availability. For example, four nines
+[05:08] means that over an entire year, the
+[05:10] acceptable downtime is at most about 52
+[05:13] minutes.
+[05:14] For five nines, we can only tolerate the
+[05:16] downtime of a little more than five
+[05:18] minutes, and that's over an entire
+[05:20] calendar year.
+[05:22] With computer disks, and we're counting
+[05:24] SSDs here as well, a common way to add
+[05:27] fault tolerance is to use RAID, which
+[05:29] stands for redundant array of
+[05:30] independent disks or redundant array of
+[05:32] inexpensive disks, like there's
+[05:34] something inexpensive nowadays.
+[05:37] Which includes two or more disks, and
+[05:39] the purpose of most RAID configurations
+[05:42] is to have some sort of data mirroring
+[05:44] combined with parity striping
+[05:46] calculations, which use the wonders of
+[05:49] math to let the storage continue to
+[05:51] operate even after one or more of the
+[05:53] disks fail. Of course, it is assumed
+[05:56] that after the failed disk is replaced,
+[05:58] the data on it can be rebuilt from the
+[06:00] other functioning disks so that same
+[06:02] level of redundancy before the failure
+[06:04] is restored. Different RAID
+[06:06] configurations offer different levels of
+[06:08] fault tolerance and performance
+[06:10] benefits, depending on how many disks
+[06:11] you have and how much usable space you
+[06:13] want to have. For example, RAID 0
+[06:15] improves performance but doesn't provide
+[06:17] fault tolerance at all since it simply
+[06:20] does striping. That is, writing data to
+[06:23] a set of disks as if it was one large
+[06:25] disk. So, you have two disks in a RAID
+[06:28] 0, the OS will see a single large disk
+[06:31] made up of the total space of the two
+[06:33] disks.
+[06:34] Performance-wise, you get a chance to
+[06:37] write to both disks at the same time and
+[06:39] read from them both at the same time at
+[06:41] the expense of resiliency because if one
+[06:43] disk fails, the entire array fails.
+[06:46] Having the file system extended over one
+[06:48] or more disks
+[06:50] means that the other disks will not help
+[06:54] you recover anything. Any failed disk
+[06:56] means that the entire data is lost. So,
+[06:59] RAID 0 is actually worse for resiliency
+[07:02] because if with one single disk you run
+[07:04] the risk of failure and losing the data
+[07:07] if that disk fails, with two disks in
+[07:10] RAID 0, the risk is doubled as you lose
+[07:13] all your data if any of the two disks
+[07:15] fail.
+[07:16] Actually, it's multiplied, right? Same
+[07:18] goes for more than two if you're feeling
+[07:20] really, really lucky or dumb. RAID 1
+[07:23] gets better. It mirrors data across two
+[07:25] or more disks, so it provides fault
+[07:27] tolerance. You can also provide better
+[07:29] performance when reading data since you
+[07:30] can now read different sections of the
+[07:32] same file from two disks at the same
+[07:34] time. You also get resiliency because
+[07:37] all your data is mirrored, but you also
+[07:38] get only half of the usable space. The
+[07:41] disks need to be of the same capacity,
+[07:43] but you can only use half of it, or the
+[07:45] equivalent of one disk if you have two.
+[07:47] RAID 3 and 4 did not get a lot of
+[07:49] support. You almost certainly won't find
+[07:51] them implemented in real life, and the
+[07:52] exam is probably not going to ask you
+[07:54] about those.
+[07:55] RAID 5 uses striping with parity across
+[07:58] multiple disks. So, if you have four
+[08:00] disks, you can still lose any one of
+[08:02] them, and you get three out of four
+[08:04] disks of usable space, much better than
+[08:07] with RAID 1, where you would have
+[08:10] only use the capacity of two disks.
+[08:12] Uh RAID 6 adds an additional parity
+[08:14] disk, so you can now lose two disks and
+[08:17] still be able to rebuild the missing
+[08:18] data from whatever is stored on the
+[08:20] other disks and their parity
+[08:21] information.
+[08:23] RAID 10, or RAID 10, or RAID 1 + 0
+[08:27] combines mirroring and striping for
+[08:29] enhanced fault tolerance and
+[08:30] performance.
+[08:32] There are also many implementations of
+[08:34] triple parity protections, sometimes
+[08:36] called RAID Tech, but less often
+[08:39] encountered. Some implementations are
+[08:40] proprietary, made by the vendors of the
+[08:42] storage arrays.
+[08:44] It's important to remember that fault
+[08:45] tolerance is not the same thing as a
+[08:47] backup. While a RAID array can protect
+[08:49] against disk failure, it will not help
+[08:52] you recover data deleted or corrupted by
+[08:54] accident or malware. That's why regular
+[08:57] backups are crucial, even when using
+[08:59] RAID.
+[09:01] Okay, so we covered disks. What about
+[09:02] redundancy when it comes to entire
+[09:04] servers? With servers, we have failover
+[09:07] clusters, which require two or more
+[09:08] servers. If one server fails, another
+[09:11] one in the cluster can automatically
+[09:12] take over its load and start processing
+[09:14] requests instead of the failed one.
+[09:16] This process is known as failover.
+[09:18] You're failing over from the failed
+[09:21] device to a working replacement device.
+[09:24] Usually, the failover process is
+[09:25] initiated by the standby or the backup
+[09:28] server. It makes sense, right? The
+[09:29] failed one, well, failed. It cannot do
+[09:32] anything. So, when the inactive or the
+[09:34] standby server detects a failure on the
+[09:36] active one, it starts an automatic
+[09:38] failover to take over its
+[09:40] responsibilities.
+[09:41] How does it check whether the primary
+[09:43] one has failed? Well, usually failover
+[09:45] clusters have some sort of a heartbeat
+[09:47] mechanism like a ping going back and
+[09:49] forth, so that if a number of pings are
+[09:52] missed or haven't received a reply,
+[09:54] we're assuming that the primary device
+[09:56] has failed. This is also a situation
+[09:59] where you really need to take good care
+[10:01] of the communication network between the
+[10:02] cluster members because if you're
+[10:04] relying on such a heartbeat that has to
+[10:06] travel over a network, well, what if the
+[10:08] heartbeat network is the one that fails?
+[10:11] The standby server will think that the
+[10:12] primary server has failed, but maybe it
+[10:15] hasn't. Maybe it simply cannot answer
+[10:16] the heartbeat because of the network,
+[10:18] but otherwise works just fine.
+[10:20] The standby will come up and start
+[10:22] accepting and processing requests
+[10:24] without knowing that the primary server
+[10:26] is doing the exact same thing at the
+[10:28] exact same time. This situation can lead
+[10:31] to corruption in client sessions,
+[10:32] inconsistencies when writing to a
+[10:34] database, and much worse, especially if
+[10:37] that server is managing other resources
+[10:39] as well, and those resources start
+[10:41] receiving conflicting information. This
+[10:43] is called a split-brain scenario, and we
+[10:45] really don't like split brains. Oh, and
+[10:48] by the way, nobody says that a failover
+[10:50] cluster needs to have one single device
+[10:52] active at a certain point in time.
+[10:54] Since we already have multiple servers,
+[10:57] why not use them all at the same time?
+[10:59] Of course, for this you would need some
+[11:00] sort of a load balancer or another
+[11:03] reverse proxy in front of them to
+[11:05] distribute connections to each and every
+[11:07] active server, but it's still cluster.
+[11:10] In most cases, this isn't called a
+[11:11] failover cluster, but instead a
+[11:13] high-availability cluster or an
+[11:15] active-active cluster.
+[11:17] In this situation, you need to plan
+[11:18] ahead for what happens when you lose
+[11:20] some of the servers in the cluster. Yes,
+[11:23] you have additional working servers, but
+[11:25] those were already busy with their own
+[11:27] requests. Will they be able to handle
+[11:29] the additional load that is now coming
+[11:31] in from the failed servers.
+[11:33] Speaking of load balancers, if you have
+[11:35] one, those can implement health checks,
+[11:37] which are simple probes or packets sent
+[11:40] periodically to each server in the back
+[11:42] end, making sure that the server is
+[11:43] still up and running. If any server
+[11:45] fails, the load balancer can sense the
+[11:47] failure through these health checks and
+[11:49] stop directing traffic to that server,
+[11:51] hence fault tolerance.
+[11:53] Uh don't think of load balancers uh
+[11:55] necessarily as dedicated devices. They
+[11:57] can be as simple as a small engine X
+[11:59] virtual machine or container that
+[12:01] receives all requests and just
+[12:03] distributes them to the server back end.
+[12:05] If you're running your servers in the
+[12:07] cloud, you can use fault tolerant
+[12:08] services offered by the cloud provider.
+[12:11] In a cloud environment, you can deploy
+[12:12] resources in multiple data centers or
+[12:14] availability zones or availability
+[12:15] domains
+[12:17] or even different regions on different
+[12:18] continents. Some public cloud providers
+[12:20] have both local and global load
+[12:23] balancers that you can use. You also
+[12:24] easily scale resources as needed and
+[12:27] incorporate health checks uh that can
+[12:29] automatically restart servers that are
+[12:31] not functioning correctly, as many cloud
+[12:33] environments offer load balancers as a
+[12:35] service.
+[12:36] Not only can you scale resources
+[12:38] horizontally by adding more servers to
+[12:41] the pool to the back end if the load
+[12:42] increases, but in a completely
+[12:44] virtualized environment such as a
+[12:45] private or public cloud, you can also
+[12:47] scale up or scale vertically by
+[12:49] dynamically increasing the amount of RAM
+[12:51] or CPU cores allocated to an instance.
+[12:54] Witness the magic of virtualization and
+[12:56] automation. Also, what we talked about
+[12:58] here doesn't just apply to simple
+[13:00] servers. Firewalls, routers, and
+[13:02] switches, load balancers, storage
+[13:04] systems, even voice over IP gateways,
+[13:06] and wireless LAN controllers can be
+[13:08] deployed in clusters as well. It's
+[13:10] especially useful for those networking
+[13:11] devices that filter all traffic coming
+[13:14] in and going out of the network, which
+[13:16] are placed directly in the traffic path.
+[13:18] For those, we definitely don't want a
+[13:20] single device to be a single point of
+[13:23] failure.
+[13:24] Fault tolerance for power supplies or
+[13:26] PSUs, power supply units,
+[13:28] can be as simple as having multiple
+[13:30] power supplies, which most
+[13:32] enterprise-grade servers, appliances,
+[13:34] and networking devices already have. You
+[13:36] might even get a choice of how many PSUs
+[13:38] you're willing to purchase.
+[13:40] Fault tolerance for the actual source of
+[13:41] power can be achieved with a UPS,
+[13:43] uninterruptible power supply, or a
+[13:45] generator. A UPS provides battery power
+[13:48] for a short period of time, delivering
+[13:50] power for just a couple of minutes. The
+[13:52] purpose of a UPS is to give you power
+[13:54] long enough for the main power to come
+[13:56] back online to complete a normal,
+[13:59] elegant, and graceful shutdown of a
+[14:00] system, or until the generator is
+[14:03] powered on. So, don't ever rely on
+[14:05] battery power to keep our data center
+[14:07] up.
+[14:08] For generators, the length of time that
+[14:10] they can provide power depends on how
+[14:12] much fuel they have. Generators require
+[14:14] a steady fuel supply, commonly diesel
+[14:17] fuel, natural gas, or propane, so make
+[14:19] sure you have enough. Also, remember
+[14:21] that if high availability or fault
+[14:23] tolerance solutions are not implemented
+[14:25] or failed to work properly, or if the
+[14:28] fault tolerance system isn't fault
+[14:30] tolerant, you will have additional
+[14:32] issues on your hands.
+[14:34] We need to think from a security
+[14:35] perspective what actually happens when
+[14:37] things fail.
+[14:38] Trusted recovery means whether the
+[14:40] system is, after a failure, as secure as
+[14:43] it was before the failure occurred. That
+[14:45] is because systems can be designed to
+[14:47] fail in a fail secure state or a fail
+[14:51] open state. A fail secure system means
+[14:53] that on failure, it blocks all access.
+[14:57] A fail open system means that on a
+[14:59] failure, it allows all access. The
+[15:01] choice depends on whether security or
+[15:03] availability is more important after a
+[15:05] failure.
+[15:06] Now, you might think, "Why would I want
+[15:07] to allow traffic when my firewall
+[15:09] fails?" You probably don't want that,
+[15:11] even though there are firewall devices
+[15:13] out there that allow you to do just
+[15:15] that.
+[15:16] But, apply this concept to physical
+[15:17] security, for example. If a building
+[15:19] loses power completely, what do you want
+[15:21] your electronic locks to do?
+[15:24] Go to a fail-open state where everyone
+[15:26] can just freely move anywhere in the
+[15:27] building,
+[15:28] or fail to a fail-secure state where
+[15:31] every door becomes locked and people
+[15:32] might become trapped inside when there
+[15:34] might be a fire or an earthquake
+[15:36] happening at that very moment. Yeah,
+[15:39] there's no right answer to this,
+[15:40] unfortunately, but you have to make a
+[15:42] decision.
+[15:43] Performing recovery. When a disaster
+[15:45] happens, your disaster recovery plan
+[15:47] should immediately kick in and start
+[15:49] supporting recovery operations.
+[15:51] To recover the most important piece of
+[15:53] your business as efficiently as
+[15:54] possible, your DRP must be designed so
+[15:57] that the highest priority business units
+[16:00] are recovered first. Of course, this
+[16:02] requires you to know what those critical
+[16:04] business functions are beforehand. If
+[16:06] you previously conducted a business
+[16:08] impact analysis, a BIA, during your
+[16:11] business continuity planning, then that
+[16:13] would be an excellent place to start.
+[16:15] A BIA identifies vulnerabilities,
+[16:18] outlines strategies to minimize risk,
+[16:20] and results in a report that describes
+[16:22] the risks your business is facing. So,
+[16:24] it's exactly as the name says, an
+[16:26] analysis of the impact to your business
+[16:30] of a potential disaster. The BIA results
+[16:32] should be used as the basis for
+[16:34] prioritization because we need to know
+[16:36] what we should recover first. I know,
+[16:38] everybody's special, everybody's
+[16:39] important, every department is critical,
+[16:42] but some really are more important than
+[16:44] others.
+[16:46] The final result of the BIA should be a
+[16:48] checklist of items in a prioritized
+[16:50] order, each with its own risk and cost
+[16:52] assessment, and a corresponding set of
+[16:54] recovery objectives.
+[16:56] These objectives are measurable and
+[16:58] include the mean time to repair, MTTR,
+[17:01] maximum tolerable downtime, MTD,
+[17:03] recovery time objective, RTO, and
+[17:06] recovery point objective, RPO.
+[17:09] As an example, let's think of a
+[17:10] situation where we lose a file server
+[17:12] and all the data on it due to a hardware
+[17:14] failure. We also assume that this file
+[17:16] server had periodic backups of its data
+[17:20] stored offsite. Thus, we have the
+[17:22] following metrics.
+[17:23] The RPO, the recovery point objective.
+[17:26] This is the maximum acceptable amount of
+[17:29] data loss measured in time. It's
+[17:32] essentially the age of the files that
+[17:35] must be recovered from backup storage
+[17:37] for normal operations to resume after a
+[17:39] disaster.
+[17:40] For example, if your RPO is 2 hours,
+[17:43] then the system should be restored to a
+[17:45] point where it only loses data from the
+[17:48] past 2 hours at most.
+[17:50] Which also means that the last backup
+[17:52] should not be older than 2 hours.
+[17:55] Next, RTO, recovery time objective. This
+[17:59] is the targeted duration of time within
+[18:02] which the failed device or service must
+[18:05] be restored after a disaster in order to
+[18:08] avoid unacceptable consequences. It's
+[18:10] essentially the maximum acceptable
+[18:13] length of time that your application,
+[18:14] your service, your website, your
+[18:16] business can stay offline.
+[18:19] WRT, work recovery time. This is the
+[18:21] time taken to restore data after the
+[18:23] systems are up and running. This
+[18:25] includes transferring and restoring data
+[18:27] from backups. It's usually the time
+[18:29] needed to return to normal operating
+[18:30] efficiency. So, while the RTO of the
+[18:33] servers tells us that in a certain
+[18:35] amount of time the servers should be up
+[18:36] and running, we still need to take the
+[18:38] WRT into consideration because those
+[18:40] servers are useless without the data on
+[18:42] them.
+[18:43] And MTD, maximum tolerable downtime.
+[18:46] This is the total amount of time that a
+[18:49] business process can be disrupted
+[18:50] without causing irreparable harm to the
+[18:52] business and its users.
+[18:54] It's the ultimate deadline by which the
+[18:56] business must be fully functional again.
+[18:58] And it includes the RTO, WRT, and any
+[19:01] additional time needed.
+[19:03] When disaster strikes, the people who
+[19:05] are most likely to first notice the
+[19:07] emergency, such as your regular users,
+[19:09] the security guards, or technical
+[19:10] personnel, depending on the type of
+[19:12] disaster should be fully trained in
+[19:14] disaster recovery procedures and they
+[19:16] should know exactly how they should
+[19:17] respond.
+[19:19] In a crisis,
+[19:20] people's minds get a bit cloudy. Things
+[19:22] that normally seem like common sense
+[19:24] might be forgotten, they'll panic, and
+[19:27] on-the-spot decision-making is certainly
+[19:29] not a reliable approach. So, proper
+[19:30] training along with clear documentation
+[19:33] on disaster recovery responsibilities
+[19:35] can help against this chaos.
+[19:37] Crisis management deals with all forms
+[19:39] of crisis,
+[19:41] ranging from a let's say simple disaster
+[19:43] like a fire in the building's kitchen to
+[19:45] major events like a global pandemic or
+[19:47] wars. They may also cover events like a
+[19:50] public relations disaster, but among all
+[19:53] things that people usually choose to
+[19:54] believe that will never happen to them,
+[19:56] a PR disaster is sitting pretty high up.
+[20:00] If the budget allows, investing in a
+[20:02] crisis training for at least some key
+[20:04] employees can be vital because it
+[20:06] ensures that at least some employees
+[20:08] know what they're doing in case of an
+[20:11] emergency. Communication is also
+[20:13] important both internally and externally
+[20:15] during a disaster. If the company says
+[20:17] nothing to the outside world about its
+[20:19] recovery status, then the world might
+[20:21] assume the worst, and headlines will say
+[20:23] even worse things in an attempt to
+[20:25] attract clicks and readers.
+[20:27] Internal communication during a disaster
+[20:29] is also important so employees know what
+[20:31] is expected of them. In some cases, the
+[20:33] disaster itself has damaged the usual
+[20:36] communication channels like the network.
+[20:38] So, as as part of the DRP, we need to
+[20:40] figure out alternative means of
+[20:41] communication in advance.
+[20:43] When designing a disaster recovery plan,
+[20:45] it's important to remember that the goal
+[20:47] is to resume activity. It's not just
+[20:49] about restoring systems and powering up
+[20:51] some servers,
+[20:52] but to be able to actually resume the
+[20:54] activity, it might be best to have
+[20:56] separate recovery facilities ready or at
+[20:58] least for some critical work groups.
+[21:01] And there are several types of sites
+[21:03] commonly used in disaster recovery
+[21:04] planning. A cold site is a standby
+[21:07] facility that has the capacity to
+[21:09] act as an alternative site for a company
+[21:12] and its workforce and it's equipped with
+[21:14] the necessary electrical and
+[21:15] environmental support systems, but it
+[21:17] has no computing facilities or network
+[21:20] connections and of course no data.
+[21:22] Also, whatever electrical or
+[21:24] environmental controls it might have,
+[21:26] they are always turned off. Yes, the
+[21:28] heating is off too, but that's not why
+[21:30] it's a cold site. It has a low cost, but
+[21:34] also requires a lot of time to activate
+[21:36] the site and make it ready to support
+[21:38] your business.
+[21:39] A hot site on the other hand
+[21:41] is always ready to go. It's equipped
+[21:43] with servers, workstations, and network
+[21:45] connections. The devices are
+[21:46] pre-configured and most importantly
+[21:48] loaded with the necessary data so that
+[21:50] work can resume in as little time as
+[21:52] possible. Of course, it doesn't
+[21:54] necessarily mean that every single
+[21:55] workstation is synchronized with its
+[21:57] counterpart from main site, but there is
+[21:59] some sort of dedicated storage that is
+[22:01] always replicated and synced with the
+[22:03] primary site. A hot site sounds awesome.
+[22:06] Usually, awesome means hot anyway, but
+[22:08] of course, it's the most costly option
+[22:12] as not only it requires you to duplicate
+[22:14] your infrastructure and not use half of
+[22:17] it most of the time,
+[22:19] but also have an almost synchronous data
+[22:21] replication between the primary site and
+[22:23] the hot site for the necessary data of
+[22:25] your business to resume working to be
+[22:27] already waiting for you in there. Well,
+[22:29] in reality, it's probably not going to
+[22:31] be a complete synchronization
+[22:33] synchronous replication down to the
+[22:35] second, but having backups, let's say
+[22:38] every 24 hours replicated on the hot
+[22:40] sites or so, would still count as a hot
+[22:43] site. So, you would be able to resume
+[22:45] work using, well, yesterday's data,
+[22:47] which isn't today's data, but it's
+[22:49] obviously much better than no data and
+[22:51] no business at all. Warm sites are a
+[22:53] middle ground between hot and cold
+[22:55] sites. They have equipment, but they
+[22:57] don't have the data. So, a transfer and
+[22:59] a restore operation is required before
+[23:01] work can resume in a warm site. You need
+[23:03] to bring your data with you.
+[23:05] Finally, mobile sites are less common
+[23:07] alternatives, which typically consist of
+[23:09] mobile containers or easily relocatable
+[23:12] units, well, {quote} unquote easily.
+[23:14] Think of them as mobile data centers. Uh
+[23:17] mobile sites are usually configured as
+[23:18] cold sites or warm sites, but without
+[23:21] same capacity as a dedicated facility.
+[23:23] Of course, there's also the option of
+[23:25] keeping infrastructure ready and moving
+[23:27] the entire business in a cloud
+[23:28] environment when disaster strikes. Many
+[23:30] companies actually use a pay-per-use
+[23:32] cloud infrastructure as a disaster
+[23:34] recovery site. The same principles apply
+[23:37] here, too. It's costly to have the
+[23:38] infrastructure always ready because you
+[23:40] constantly have to pay for it even when
+[23:42] you're not using it. Data replication is
+[23:44] still an issue, but the cloud allows you
+[23:46] two main benefits. First, since all
+[23:48] resources are virtualized, you can keep
+[23:51] them in an off state, so your VMs and
+[23:54] apps will not cost you that much money.
+[23:56] Storage will still cost money because
+[23:57] you cannot shut down storage. Uh the
+[23:59] data still needs to be allocated, and
+[24:01] other resources might cost as well, like
+[24:03] VPN gateways, public reserved IP
+[24:06] addresses,
+[24:07] uh so you can reach your cloud-based DR
+[24:09] site, and so on. But still, it's a
+[24:11] cost-optimization solution.
+[24:13] Secondly, again, since everything is
+[24:14] virtualized in the cloud, you could
+[24:15] easily automate and spin up the
+[24:17] requested infrastructure, perhaps in a
+[24:19] matter of minutes. Uh using tools that
+[24:21] automate cloud infrastructure as code,
+[24:23] like Terraform, ARM, or Bicep templates
+[24:26] in Azure, CloudFormation for AWS, or any
+[24:29] tool that allows you to run a single
+[24:30] script that auto-magically deploys your
+[24:33] entire infrastructure whenever you need
+[24:35] it, is a huge benefit. It does not solve
+[24:38] the problem of moving data or restoring
+[24:40] it from backups, but again,
+[24:42] it's much better than relocating and
+[24:44] installing physical devices. A special
+[24:46] mention here should be made for mutual
+[24:48] assistance agreements, MAAs,
+[24:50] or reciprocal agreements,
+[24:53] which are another option. In theory,
+[24:56] MAAs, where two organizations promised
+[24:58] to assist each other in the event of a
+[25:00] disaster by sharing computer facilities
+[25:02] or other resources. This seems very
+[25:05] cost-effective and it doesn't require to
+[25:08] maintain expensive additional sites.
+[25:09] It's a you scratch my back, I'll scratch
+[25:12] your back, and we split the cost kind of
+[25:13] relationship. However, MAAs are not so
+[25:16] widely used.
+[25:18] Why? Because they can be difficult to
+[25:20] enforce. And if the companies that
+[25:22] decide to cooperate are close by, it
+[25:24] could mean that they are vulnerable to
+[25:26] the same threats or they might be
+[25:28] suffering from the same disaster. It's
+[25:30] also a problem of confidentiality
+[25:31] because companies need to store their
+[25:33] data in someone else's storage
+[25:34] appliances.
+[25:36] Recovering database data. Now, speaking
+[25:38] of restoring or moving data to alternate
+[25:40] sites, a data or a database recovery
+[25:42] procedure should definitely be part of
+[25:44] your disaster recovery plans. Otherwise,
+[25:46] if you have backups that you cannot
+[25:47] restore from, then you don't have
+[25:49] backups.
+[25:50] There are three main techniques used to
+[25:52] create off-site copies of database
+[25:54] content. First, we have electronic
+[25:56] vaulting, which is simply dumping a
+[25:58] database into a backup file and moving
+[26:01] that backup to remote site using some
+[26:03] bulk transfer methods. This remote
+[26:06] location could be a dedicated
+[26:07] alternative recovery site or another
+[26:09] off-site location of the same company.
+[26:12] Like any backup, you are limited by how
+[26:13] often these backups occur. So, if you
+[26:15] want a better RPO, recovery point
+[26:17] objective, you need more frequent
+[26:19] backups.
+[26:20] Remote journaling still transfers data
+[26:22] to a remote location, but it does it
+[26:24] more frequently.
+[26:26] Usually once every hour or sometimes
+[26:28] even more. Unlike electronic vaulting,
+[26:30] remote journaling transfers copies of
+[26:33] the database transaction logs containing
+[26:36] the transactions that occurred since the
+[26:37] previous bulk transfer. So, we're not
+[26:39] copying the entire database over and
+[26:41] over or one or more times every hour,
+[26:44] just whatever changed in the meantime,
+[26:46] and that's stored in the transaction
+[26:48] log.
+[26:49] Remote mirroring is the best and the
+[26:51] most expensive database backup solution.
+[26:53] You know the saying, if you want it
+[26:55] good, fast, and cheap,
+[26:57] you've got to pick only two.
+[27:00] So, with remote mirroring, a live
+[27:02] database server is maintained at the
+[27:05] backup site, which receives real-time
+[27:07] updates of the database from the
+[27:09] production environment at the primary
+[27:11] site. This is synchronous replication
+[27:13] that allows you to switch to the second
+[27:15] site instantly,
+[27:17] and your data will already be there,
+[27:18] up-to-date.
+[27:20] Cloud-based services include redundancy
+[27:23] capabilities as a built-in feature. If
+[27:25] you operate databases in a public cloud,
+[27:27] consider investigating these options.
+[27:29] They are easy and hassle-free to enable.
+[27:31] The methods are pretty much the same as
+[27:33] with on-prem databases, but they will
+[27:35] add additional costs because of the
+[27:37] cloud environment. And because the cloud
+[27:39] environment takes care of the
+[27:40] replication solution, the actual
+[27:42] replication, and the storage consumed.
+[27:45] So, how do you create a disaster
+[27:47] recovery plan? Well, as you can guess,
+[27:50] it first requires planning.
+[27:53] It's not a simple task, and the plan
+[27:55] itself should not be static. The plan
+[27:57] should be developed over time with
+[27:59] multiple reviews and revisions because
+[28:00] threats and the nature of your business
+[28:02] constantly change.
+[28:04] In your disaster recovery plan, you
+[28:05] might consider including various types
+[28:07] of documents for different audiences.
+[28:09] This could include an executive summary
+[28:12] with a high-level overview of the plan,
+[28:14] department-specific plans, technical
+[28:16] guides for IT personnel, checklists for
+[28:18] individuals on the disaster recovery
+[28:20] team, and so on. Depending on how many
+[28:22] people you allocate to the project and
+[28:23] how much they like writing and reading.
+[28:26] Uh the plan should contain instructions
+[28:28] for essential personnel to follow
+[28:30] immediately upon recognizing that a
+[28:32] disaster is in progress or even about to
+[28:34] happen. A DRP should also contain a list
+[28:36] of personnel to contact in the event of
+[28:38] a disaster, both internally responsible
+[28:41] teams and external affected parties.
+[28:43] Double-check this with the legal
+[28:44] department for privacy concerns, and
+[28:46] also because you may need to comply with
+[28:48] special policies depending on the type
+[28:49] of business or the type of data that
+[28:52] your company handles, especially if your
+[28:53] company just suffered from a data
+[28:54] breach.
+[28:56] Backups. Your DRP should address the
+[28:58] backup policy, especially the technical
+[29:00] documents for the IT people.
+[29:02] This is one of the most important
+[29:03] aspects of disaster recovery because
+[29:05] without data in some backup, there
+[29:07] really isn't much of anything else to
+[29:09] recover.
+[29:10] Depending on how critical your business
+[29:11] is, your requirements of how sensitive
+[29:14] your data and your customers are,
+[29:16] you might use one of these three backup
+[29:19] strategies. Full backups, as the name
+[29:21] suggests, store a complete copy of all
+[29:23] data. Once a full backup is complete,
+[29:25] the data is tagged as being archived.
+[29:27] This is sometimes implemented with
+[29:29] something known as a archive bit, which
+[29:32] says whether that specific piece of data
+[29:34] or that specific file needs to be backed
+[29:36] up or not. One for a yes, zero for no.
+[29:40] So, once a full backup is completed, the
+[29:42] archive bit on every file is set to zero
+[29:44] because they've already been backed up.
+[29:46] So, on the next backup interval, if they
+[29:48] haven't changed, they won't be backed up
+[29:50] again. If you need to restore your full
+[29:52] data, you only need to restore the most
+[29:54] recent full backup. Another approach is
+[29:56] incremental backups, which store only
+[29:58] those files that have been modified
+[30:00] since the most recent full or
+[30:02] incremental backup. So, we're backing up
+[30:04] only the delta from the last backup.
+[30:07] Once an incremental backup is complete,
+[30:09] the archive bit on all backed up files
+[30:11] is set to zero, so that's how we know on
+[30:14] the next backup to only back up the new
+[30:16] files.
+[30:17] If you make a full backup on Monday, and
+[30:19] on Tuesday you make an incremental
+[30:20] backup, you'll capture all the changes
+[30:22] since Monday. Then on Wednesday, if you
+[30:24] make another incremental backup, you'll
+[30:26] capture all the changes since Tuesday.
+[30:28] Same on Thursday, you capture all
+[30:30] changes since Wednesday, and so on.
+[30:32] If you need a full restore of data, you
+[30:34] need to restore the last full backup and
+[30:36] all the incremental backups that were
+[30:38] made since then. Finally, differential
+[30:41] backups store all files that have been
+[30:43] modified since the most recent full
+[30:45] backup and only from the last full
+[30:48] backup. So, every time you back up, you
+[30:51] will duplicate all the files since the
+[30:53] last full backup. So, if you make a
+[30:55] backup full backup on Monday and on
+[30:58] Tuesday you make a differential backup,
+[31:00] you'll capture all the changes since
+[31:01] Monday, obviously. But then, on
+[31:04] Wednesday's incremental backup, you'll
+[31:06] capture all the changes since Monday
+[31:08] again, including those already backed up
+[31:11] a day ago on Tuesday. Same on Thursday,
+[31:14] you capture all the changes between
+[31:15] Monday and Thursday, and so on. Every
+[31:18] single time you back up all changes
+[31:20] since the last full backup.
+[31:22] Unlike full and incremental backups, the
+[31:24] differential backup process does not
+[31:26] change the archive bit. That's why we
+[31:28] keep backing the same data over and
+[31:30] over, right? Since the last full backup.
+[31:33] The benefit of this approach is that you
+[31:35] only have to restore one full and the
+[31:38] last differential backup. That's it. The
+[31:40] storage of backup media is also
+[31:42] important, with copies of the data
+[31:44] needed in at least one offsite location
+[31:47] to provide redundancy should the primary
+[31:48] location be affected. One common
+[31:51] strategy is to store backups in a
+[31:52] geographically redundant cloud service,
+[31:54] allowing the company to retrieve the
+[31:56] backups from any location after a
+[31:58] disaster.
+[31:59] However, despite their importance,
+[32:01] backups are often the most neglected
+[32:03] measure known to companies. And if
+[32:05] companies don't neglect making backups,
+[32:07] they surely neglect testing them and
+[32:09] actually verifying whether anything
+[32:11] usable can retrieved from them in a
+[32:13] timely manner.
+[32:14] There's also an unwritten backup rule
+[32:16] called the 3-2-1 rule, which every
+[32:18] sysadmin should know. The 3-2-1 backup
+[32:20] strategy says that you should have three
+[32:22] copies of your data, your production
+[32:24] data, and two backup copies on two
+[32:27] different media, like disk and tape or
+[32:29] disk on the cloud, or at least on two
+[32:31] different storage appliances, with one
+[32:33] copy offsite for disaster recovery. So,
+[32:36] that's the 3-2-1 rule.
+[32:38] Now, regardless of the backup solution
+[32:40] media or the method you choose, there
+[32:43] are several common issues with backups
+[32:44] that you need to address. For instance,
+[32:46] backup and restoration activities can
+[32:48] significantly affect the performance of
+[32:50] a network because you'll be transferring
+[32:51] a huge amount of data. On network side,
+[32:54] these transfers are called elephant
+[32:56] flows, and you should prepare for them
+[32:59] when doing traffic inspection, for
+[33:00] example. And it's not only the network
+[33:02] that's going to be affected, but
+[33:04] productivity as well, because for hours
+[33:06] and hours, and sometimes even days in a
+[33:07] row, those backups will keep restoring,
+[33:10] and people won't be able to use that
+[33:11] data until the restoration process is
+[33:13] done. So, it's generally best to
+[33:15] schedule at least the backups during low
+[33:17] peak periods, such as overnight or
+[33:19] weekends. I said at least the backups
+[33:21] because the restorations are probably
+[33:23] not going to be ever scheduled at any
+[33:24] other time other than ASAP. Over time,
+[33:28] the volume of backup data will increase
+[33:30] because we're all producing more and
+[33:32] more data, which means that the backup
+[33:34] and restoration processes will take
+[33:36] longer and consume more space on the
+[33:38] backup media. So, you need to plan for
+[33:39] enough storage space to handle a
+[33:41] reasonable amount of growth over time.
+[33:44] With periodic backups, there's always
+[33:45] potential for data loss up to the length
+[33:48] of the period between backups. You first
+[33:50] have to be aware of this risk, and if
+[33:52] it's not acceptable, then you may want
+[33:54] to consider some form of real-time
+[33:55] continuous backup or synchronous
+[33:57] replication,
+[33:58] storage array clustering, mirroring,
+[34:00] something that ensures that there is no
+[34:02] minimal data loss when restoring data.
+[34:05] It's also important to be selective
+[34:07] about what information you include in
+[34:09] backups. You probably don't need to
+[34:10] store the entire Windows installation
+[34:12] folder in a backup, unless it's a full
+[34:14] disk backup. However, if your recovery
+[34:16] time objective RTOs require the rapid
+[34:19] recovery, the storage cost of
+[34:21] maintaining many copies of the operating
+[34:23] system may be justified because you
+[34:24] don't have to waste time with the OS
+[34:26] installation before restoring the useful
+[34:28] data.
+[34:29] And since we're mentioning what
+[34:30] information you're storing in there,
+[34:31] you're probably going to store sensitive
+[34:33] data as well. This means that any
+[34:35] security controls that you use to
+[34:37] protect your production data should
+[34:38] apply in an equal manner to backup data
+[34:41] and its appliances as well. Not simply
+[34:43] because it is the same data, but often
+[34:45] overlooked in backups. And it's might be
+[34:48] a good idea to encrypt those backups,
+[34:50] too. Lastly, regularly test your
+[34:53] recovery processes. Don't just rely on
+[34:55] the backup software reporting a
+[34:56] successful backup. Attempt recovery to
+[34:59] detect any potential issues from time to
+[35:00] time.
+[35:02] Training and testing in DRPs. Now, just
+[35:04] like a business continuity plan, a
+[35:05] disaster recovery plan requires proper
+[35:07] training
+[35:08] for all involved personnel. How much you
+[35:11] want this training to cover will depend
+[35:12] on an individual's role in the recovery
+[35:14] process and their position in the
+[35:16] company.
+[35:17] The training plan could include
+[35:18] orientation training for new employees,
+[35:20] initial training for employees taking on
+[35:22] a new disaster recovery role for the
+[35:24] first time,
+[35:25] detailed refresher training for other
+[35:27] disaster recovery team members, and
+[35:29] brief awareness refresher for all other
+[35:31] employees. It might go without saying,
+[35:33] but a disaster recovery plan also needs
+[35:36] to be fully documented and updated as
+[35:37] changes happen. Treat your disaster
+[35:39] recovery plan as a sensitive document,
+[35:42] only providing access to people on a
+[35:43] need-to-know basis. That's because the
+[35:45] DRP might describe your internal
+[35:47] security controls, your critical
+[35:49] infrastructure resources, your single
+[35:51] points of failure. It's a document that
+[35:53] describes how you react in the face of a
+[35:55] threat, including a cyber attack. You
+[35:57] don't want to give your defense plans to
+[35:59] the attacker, right?
+[36:01] Key disaster recovery team members and
+[36:02] senior management should have access to
+[36:04] the entire plan and understand the
+[36:06] high-level implementation details. Also,
+[36:09] while it should be stored securely,
+[36:11] remember that a disaster might render
+[36:14] your internal network unavailable. So,
+[36:16] yes, you might need to go old-school on
+[36:18] this and print some copies of the plan
+[36:21] at both the primary and the alternative
+[36:24] sites. And always keep the most current
+[36:26] copy. You don't want to be the one
+[36:28] answering the question of "Where is your
+[36:30] DRP?" with "Well, it was on the server
+[36:33] that we just lost." Testing your
+[36:35] disaster recovery plan on a regular
+[36:37] basis is also important to determine if
+[36:38] it's actually useful or not. The types
+[36:40] of tests you conduct will depend on your
+[36:43] recovery facilities, your company
+[36:44] culture, yes,
+[36:46] and how many people you can take away
+[36:47] from their jobs to run such a test.
+[36:50] There are five main types of tests.
+[36:52] A read-through test is very
+[36:54] straightforward. Gives everyone on a DR
+[36:56] team copies of the disaster recovery
+[36:59] plans to review. It refreshes knowledge,
+[37:01] gives you an opportunity to update any
+[37:03] obsolete information, helps you identify
+[37:05] situations where key personnel have left
+[37:07] the company without reassigning their
+[37:09] disaster recovery responsibilities.
+[37:11] "Who's responsible for this?" "It says
+[37:13] Tom." "Where's Tom?" "Well, he's at his
+[37:17] third company after leaving us 5 years
+[37:19] ago."
+[37:19] Another one is a structured walk-through
+[37:22] or a table-top exercise. It's like a
+[37:24] role-playing game for a disaster
+[37:26] scenario, but it's much less fun than
+[37:28] the Pandemic board game or any other
+[37:30] RPG.
+[37:31] But the team members refer to their
+[37:33] copies of the disaster recovery plan and
+[37:35] discuss the appropriate responses to a
+[37:38] specific imagined or simulated disaster.
+[37:41] "This is what I would do. This is what
+[37:43] you would do. Oh goody, what an awesome
+[37:44] exercise. Let's go grab lunch."
+[37:47] Simulation tests are similar to
+[37:49] structured walk-throughs, but involve
+[37:51] testing some of the response measures.
+[37:54] This may involve interrupting
+[37:56] non-critical business processes and
+[37:57] using some operational personnel,
+[38:00] and then we'll see how quickly we can
+[38:01] bring those processes back online or if
+[38:04] we need to send people back home because
+[38:05] we just broke the network.
+[38:07] Parallel tests involve relocating
+[38:09] personnel to the alternate recovery site
+[38:12] and implementing site activation
+[38:13] procedures.
+[38:15] The employees at the site perform their
+[38:16] disaster recovery responsibilities just
+[38:18] as they would in an actual disaster, but
+[38:20] in a more
+[38:22] relaxed manner.
+[38:24] Nothing is interrupted at the main site
+[38:26] and nobody is really stressed.
+[38:28] Full interruptions tests are similar to
+[38:31] parallel tests, but involve actually
+[38:33] shutting down operations at the primary
+[38:35] site and shifting them to the recovery
+[38:37] site. These tests are carried out by
+[38:39] people who definitely haven't slept a
+[38:41] single hour the night before, scared to
+[38:43] the bone that they are tasked with
+[38:46] bringing down the entire company network
+[38:49] and then fixing it back up.
+[38:51] And lack of sleep comes with a good
+[38:53] reason as there is a significant risk
+[38:55] involved during the reverse process to
+[38:57] restore operations.
+[38:58] But just think how good you'll feel if
+[39:00] it all works fine.
+[39:03] After any disaster recovery operations
+[39:05] or other security incidents, it's
+[39:07] important to have a lessons learned
+[39:09] session. This allows everyone involved
+[39:12] in the incident response effort to
+[39:14] reflect on their roles, how well they
+[39:15] responded, what they should have done
+[39:18] better, who or what was useless, and so
+[39:20] on.
+[39:21] I know it may sound like a let's point
+[39:24] fingers and publicly shame people stage
+[39:26] in the DRP.
+[39:27] It sometimes is, unfortunately, because
+[39:30] people just love to put the blame on
+[39:32] someone else.
+[39:34] But it definitely should not be, at
+[39:35] least not if the exam asks you about it.
+[39:38] NIST SP special publication 800-61
+[39:43] provides a series of questions to guide
+[39:45] the lessons learned process.
+[39:47] Uh the way you respond to these
+[39:49] questions can provide valuable insights
+[39:51] into how well the company is doing in
+[39:53] its incident response program and can
+[39:55] definitely help you improve it. The
+[39:56] questions, taken directly from NIST
+[39:58] publication, are as follows: exactly
+[40:00] what happened and at what time,
+[40:03] how well did staff and the management
+[40:05] perform in dealing with the incident,
+[40:07] were the documented procedures followed,
+[40:08] are they adequate, what information was
+[40:11] needed sooner,
+[40:12] were there any steps or actions taken
+[40:14] that might have inhibited the recovery,
+[40:17] what would the staff and management do
+[40:18] differently the next time a similar
+[40:20] incident occurs? How could information
+[40:22] sharing with other organizations have
+[40:24] been improved? What corrective actions
+[40:26] can prevent similar incidents in the
+[40:27] future? What indicators should be
+[40:29] watched for in the future to detect
+[40:31] similar incidents?
+[40:33] What additional tools or resources are
+[40:34] needed to detect, analyze, and mitigate
+[40:36] future incidents?
+[40:38] See? Finger pointing. Sorry.

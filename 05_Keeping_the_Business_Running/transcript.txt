@@ -1,0 +1,1056 @@
+[00:08] Welcome back everyone. In this episode,
+[00:10] we're going to be talking about keeping
+[00:12] the business running.
+[00:13] Well, keeping a business running is
+[00:15] actually much more complicated than you
+[00:17] might think at first sight. I mean,
+[00:19] shouldn't the business keep itself
+[00:21] running? Isn't that the main goal of a
+[00:23] well-built business to be
+[00:26] self-sufficient so that everyone
+[00:27] involved can sustain themselves?
+[00:30] Well, you are almost right in general
+[00:32] and you are completely right in a very
+[00:34] specific situation. That is when
+[00:36] businesses are running as they should
+[00:39] with no interference, with no incident,
+[00:41] with no disasters or threats. But, what
+[00:44] a boring world would ours be without
+[00:47] danger and unknown outcomes? Well, the
+[00:50] unknown is knocking on your door. That's
+[00:52] when you won't be so sure that the
+[00:54] business can keep itself running.
+[00:58] And because in a business environment,
+[00:59] we need to put business names onto every
+[01:01] new idea regardless of how much we lack
+[01:03] imagination, here comes BCP, business
+[01:06] continuity planning.
+[01:09] BCP is all about analyzing our risks and
+[01:11] then developing plans, procedures, and
+[01:13] policies for when those risks might give
+[01:15] us a headache.
+[01:17] In other words, BCP is planning not for
+[01:19] business continuity but for when
+[01:23] something really hits the fan. I'm
+[01:25] kidding. We're still going to call it
+[01:26] business continuity.
+[01:28] And the problem with business continuity
+[01:29] usually surfaces when there isn't enough
+[01:32] of something for the business to keep
+[01:34] going.
+[01:35] Maybe we don't have all our IT assets
+[01:37] available or working, all our data.
+[01:40] >> [snorts]
+[01:40] >> We don't have all our servers. Maybe we
+[01:42] don't have all the connectivity points
+[01:44] that our apps or services require. Maybe
+[01:46] we don't have internet access or God
+[01:48] forbid, we don't have backups or we
+[01:50] don't have our employees.
+[01:52] That's when a proper plan for those
+[01:54] scenarios will come in handy. Things are
+[01:56] great when you have all you need. But if
+[01:58] every single point that you need is a
+[02:00] single point of failure in itself, then
+[02:02] you've got a big problem because if one
+[02:05] element in the mechanism of your
+[02:06] business stops working and you don't
+[02:08] know how to work around it or recover
+[02:11] from that loss as soon as possible, then
+[02:13] the business go down.
+[02:15] That's the true opposite of resiliency
+[02:17] and that's exactly what any business
+[02:18] owner or business client does not want
+[02:21] to happen. So, how does this differ from
+[02:23] disaster recovery, you might ask. Isn't
+[02:26] thing?
+[02:27] Do we really need to add corporate lingo
+[02:29] to these technical terms as well? Well,
+[02:31] the difference is in perspective here
+[02:34] because
+[02:35] business continuity activities are
+[02:37] typically strategically focused at a
+[02:40] higher level. So, it's an overview and
+[02:42] they center themselves on business
+[02:44] processes and operations.
+[02:47] Disaster recovery plans, on the other
+[02:48] hand, tend to be more tactical, more
+[02:50] hands-on, more what exactly am I
+[02:53] supposed to be doing now? They describe
+[02:55] technical activities such as recovery
+[02:57] sites, recovery methods, and backups,
+[02:59] backup methods, and procedures,
+[03:01] schedules, fault tolerance, high
+[03:03] availability clustering, stuff like
+[03:04] that.
+[03:06] Now, who is going to be part of that
+[03:07] business continuity plan? Well,
+[03:10] operational departments first because
+[03:12] they are responsible for the core
+[03:14] services that the business provides to
+[03:16] its clients. So, operations people are
+[03:17] the first responsible.
+[03:19] Next, we have critical support services
+[03:21] such as the IT department, facilities
+[03:23] and maintenance personnel, anybody who
+[03:24] is responsible for the upkeep of systems
+[03:27] that support the operational
+[03:28] departments.
+[03:29] We also have corporate security teams,
+[03:31] which are also responsible for physical
+[03:33] security since they are quite often the
+[03:35] first responders to an incident and are
+[03:37] also responsible for the physical
+[03:39] safeguarding of the assets.
+[03:42] And finally, we have the senior
+[03:44] executives and other key individuals who
+[03:47] are essential on paper, at least, but
+[03:50] nevertheless essential when a decision
+[03:52] needs to be made or assumed. Like in any
+[03:55] mixed team environment, each team member
+[03:57] can bring a unique perspective to the
+[03:59] BCP process, but will also bring in
+[04:02] individual biases.
+[04:03] Now, this democracy in the
+[04:05] decision-making process around BCP is a
+[04:07] great thing because different
+[04:08] perspectives will bring more value to
+[04:10] this decision process. Unfortunately, a
+[04:13] big problem here is the fact that when
+[04:15] everyone has an equal voice, everyone
+[04:17] will think or speak out loud that they
+[04:20] consider their department the most
+[04:22] critical one.
+[04:23] So, here's where the executive aren't so
+[04:25] useless after all. Sometimes, the
+[04:27] executive function has to be a
+[04:28] tie-breaking function. When you work on
+[04:31] a business continuity plan, you should
+[04:33] try to get a senior executive to be your
+[04:35] BCP team leader and close friend. This
+[04:38] way, everyone in the company will see
+[04:40] how important the BCP process is and
+[04:42] will be more willing to join in.
+[04:44] Besides, some laws and regulations might
+[04:47] ask for the senior leaders to be
+[04:48] involved in the planning process, and
+[04:50] their signature has to appear in
+[04:51] everything that you do anyway. If your
+[04:53] company is publicly traded, you can also
+[04:55] remind the executives that they might
+[04:57] get into real trouble if a disaster
+[04:59] happens and they didn't do enough to
+[05:01] prepare for it.
+[05:03] You might also need to persuade
+[05:04] management that BCP and DRP, that's
+[05:07] disaster recovery procedures, are not
+[05:09] optional expenses. Right? They have a
+[05:11] duty to the shareholders to make sure
+[05:13] that the business can survive any
+[05:15] crisis.
+[05:16] Other than the senior management, legal
+[05:19] and HR staff should be involved as well
+[05:21] since incidents can involve employee
+[05:23] information or even employee safety, not
+[05:25] to mention the legal repercussions that
+[05:27] might follow. PR is also useful as
+[05:30] specialized people need to be involved
+[05:32] when information, especially bad news,
+[05:35] need to be communicated to the affected
+[05:37] parties, which may involve the public,
+[05:39] the media, or business partners. Also,
+[05:41] you definitely want to communicate what
+[05:43] is happening to the public before the
+[05:45] media gets their hands on the news. At
+[05:47] least by presenting the information from
+[05:50] your point of view, you get a chance to
+[05:51] present it in a positive light.
+[05:54] Something that sensationalist journalism
+[05:56] would rarely do for you.
+[05:59] As you all know also well, everything
+[06:01] has a cost. And the problem is that
+[06:03] management might be reluctant to invest
+[06:05] in something like the BCP because they
+[06:07] might perceive it as an investment with
+[06:09] almost no guaranteed return. You might
+[06:12] not need it ever. So, when it comes to
+[06:14] asking for money and allocating budgets
+[06:16] for business continuity, we need to be
+[06:18] very careful where we make those
+[06:20] investments.
+[06:21] A BCP requires money in the following
+[06:23] phases. First and most obvious, it
+[06:25] requires an investment to actually
+[06:27] develop the BCP. Perhaps it won't
+[06:30] require any additional money at this
+[06:31] stage, but allocating people to the BCP
+[06:33] team and involving all the support staff
+[06:36] has a cost because those people won't be
+[06:38] fully available for other tasks as they
+[06:41] will be busy with planning and business
+[06:43] impact analysis, which is really
+[06:45] time-consuming. And don't expect them to
+[06:47] give 110% when you ask them to do boring
+[06:49] tasks. The next costly phase is testing
+[06:53] the BCP, maintenance, and personnel
+[06:55] training. This might require a bit of an
+[06:57] investment at a technical level, but
+[06:59] mostly it will be just the time and the
+[07:01] effort of your BCP team.
+[07:03] Finally, and hopefully never to happen,
+[07:05] the BCP implementation. This is probably
+[07:08] the only place where a manager will hope
+[07:10] they'll never see the implementation
+[07:11] phase because BCP implementation happens
+[07:14] only when a disaster actually happens.
+[07:17] When it does, expect to spend a lot of
+[07:20] money, resources, time, and effort in
+[07:22] recovering the business. Somewhat of a
+[07:25] silver lining here would be the fact
+[07:27] that if a disaster happens, the entire
+[07:29] company will be involved. Everybody will
+[07:31] be a lot more open to pitch in with
+[07:33] effort and expertise and approvals for
+[07:36] spending money. All that was going is
+[07:38] going to go a lot smoother.
+[07:40] And you'll encounter a lot less
+[07:42] resistance and complaints.
+[07:44] Now, of course, at this point, you
+[07:46] should have already done your homework
+[07:47] so that the money and resource
+[07:48] investments go to good use.
+[07:51] Notice that the most significant cost
+[07:53] when it comes to preparing for dealing
+[07:54] with a business continuity issue is the
+[07:56] matter of the personnel. Your employees
+[08:00] are one of the most significant
+[08:01] resources consumed by the BCP. So,
+[08:04] expect some resistance from middle and
+[08:07] senior management here during the
+[08:08] approval phases.
+[08:10] Nobody likes to lose workforce,
+[08:13] productivity, and opportunities,
+[08:14] especially if they don't fully
+[08:16] understand why this is happening to them
+[08:18] and why it needs to be done with their
+[08:20] people and their resources. So, prepare
+[08:23] to be called in meetings to defend the
+[08:24] business case or BCP to senior
+[08:26] management. I know nobody likes it, but
+[08:29] your certification is what makes you the
+[08:31] best and the most important person up to
+[08:33] this task.
+[08:34] Well, speaking about the legal side of
+[08:36] BCP, and by the way, it's not like
+[08:38] there's an illegal side to it.
+[08:41] But, depending on your industry, you
+[08:42] might have to follow some laws or
+[08:44] regulations that require you to do that
+[08:46] BCP. For example, if your company is
+[08:48] publicly traded, you have to be extra
+[08:50] careful with your business continuity
+[08:51] and how you implement it.
+[08:53] Or if you provide emergency services,
+[08:55] such as police, fire, medical, you also
+[08:58] have to be extra careful because, you
+[09:00] know, when something like a natural
+[09:02] disaster strikes, you're the one that is
+[09:04] supposed to be helping others, not the
+[09:06] one who should be crying for help. On
+[09:09] the other hand, having a good BCP can
+[09:11] also benefit your company even when the
+[09:13] skies are clear and disaster does not
+[09:15] strike. It can make your customers happy
+[09:17] and loyal simply by showing them that
+[09:19] you have sound procedures to continue
+[09:21] serving them, no matter what happens.
+[09:24] You could also use this to stand out
+[09:25] from your competitors and grow your
+[09:27] market share by having a strong and
+[09:29] documented business continuity plan. So,
+[09:32] if you're just a bit creative, hm, BCP
+[09:35] can actually bring some money into the
+[09:36] company.
+[09:37] That's why it's very important to
+[09:38] involve your legal counsel in the BCP
+[09:41] process. They can help you understand
+[09:42] and follow your legal, regulatory, and
+[09:45] contractual obligations, and you might
+[09:47] not even be aware of some of them. Legal
+[09:49] can also help you implement a plan that
+[09:51] meets those requirements while making
+[09:53] sure your company and its stakeholders
+[09:55] can survive any crisis.
+[09:57] One of the most important steps that you
+[09:59] need to start doing before bragging
+[10:00] about the nice BCP is the BIA, the
+[10:03] business impact analysis. The BIA helps
+[10:06] you find out what your company needs to
+[10:09] keep running and what could go wrong. In
+[10:11] other words, it helps you identify your
+[10:12] critical systems, those which if they
+[10:15] fail, the business fails as well.
+[10:17] It also helps you estimate what those
+[10:19] failures could be, where could they be
+[10:21] coming from, why and how would they
+[10:23] happen, but also how likely and how bad
+[10:25] those failures could be for your
+[10:27] business. The results of the BIA can
+[10:29] give you either some numbers or just
+[10:31] some prioritization order that can help
+[10:33] you decide how to use your business
+[10:35] continuity resources to deal with the
+[10:38] different risks that you face in your
+[10:40] area, your type of business, your
+[10:42] business relationships, basically
+[10:44] everywhere your business is more or less
+[10:46] exposed to risk.
+[10:48] And we have two ways of conducting the
+[10:50] BIA, or better said, we have two methods
+[10:52] of reporting our findings. First,
+[10:55] there's the quantitative impact
+[10:57] assessment. This helps you put numbers
+[11:00] or actual dollar values, risk
+[11:02] probabilities and percentages, and in
+[11:05] the end, the potential loss also in
+[11:07] dollar value. Uh this type of data often
+[11:10] shows options in terms of how much cash
+[11:12] they bring into the business and how
+[11:14] much cash we need to spend if something
+[11:16] goes wrong.
+[11:17] Second, qualitative impact assessments.
+[11:20] These look at non-numerical factors,
+[11:22] such as your reputation on the market,
+[11:24] the trust that your clients have in your
+[11:26] products, your infrastructure and the
+[11:27] way you process their sensitive data,
+[11:30] your stability in any context, and any
+[11:32] other subjective things. Now, this type
+[11:35] of data often results in levels of
+[11:37] priority, such as high, medium, and low,
+[11:40] which might sound awfully subjective,
+[11:43] but don't fall into this trap.
+[11:45] Quantitative assessments, those with
+[11:47] dollar values, are often very subjective
+[11:49] as well.
+[11:50] Uh would it help you if I were to tell
+[11:52] you that we expect a data breach attempt
+[11:54] to happen every year?
+[11:57] It might help you, but if you think
+[11:59] about it for a second, that's just
+[12:01] something that I pulled out of my shiny
+[12:03] bottom. Of course, I cannot know how
+[12:05] often a data breach happens. Nobody can
+[12:07] predict the future.
+[12:09] On the other hand, would it help you if
+[12:11] I were to tell you that the risk of a
+[12:12] data breach is medium?
+[12:15] Well, just by looking at the environment
+[12:17] that at similar companies like ours,
+[12:19] yeah. Honestly, yes, that's a little bit
+[12:22] helpful because now we know about risk,
+[12:25] and we know that we cannot ignore it. It
+[12:27] might happen in a month, in a year, or
+[12:29] never, but it is something that needs
+[12:32] prioritization, not being shoved under
+[12:34] the rug. So, you see, subjective
+[12:36] assessments aren't all that bad, after
+[12:38] all.
+[12:39] Speaking of priorities, once you
+[12:42] identify what is critical to your
+[12:43] business, you need to prioritize those
+[12:45] findings because that priority is
+[12:47] supposed to guide your efforts and
+[12:49] investments. You simply cannot address
+[12:51] all the critical resources at the same
+[12:53] time, and even if you could,
+[12:55] you won't need to address them all in
+[12:56] the same manner. That's why some
+[12:58] resources are more critical and higher
+[13:00] on the priority list than others. So, we
+[13:02] need to make a list of critical business
+[13:03] functions and rank them by importance.
+[13:05] For example, if our business is an
+[13:07] online retailer, we need to be able to
+[13:09] sell and deliver products online. Okay,
+[13:12] then, that's pretty obvious, but what
+[13:14] exactly do we need to be able to sell
+[13:16] and deliver our products online?
+[13:19] To make sure you don't forget anything,
+[13:20] a great way to divide the work of making
+[13:22] this list is to ask each team member to
+[13:24] list the the
+[13:25] for their department. Then we can
+[13:27] combine those lists into a master list
+[13:30] for the whole company. We also need to
+[13:32] get input from all parts of the company,
+[13:33] especially those not on the team, so we
+[13:36] don't miss on any critical priorities.
+[13:38] Another thing we need to do is to assign
+[13:39] the money value to each asset we have,
+[13:41] such as computers, equipment, and if you
+[13:43] can, data. These values will help us
+[13:46] later when we calculate the risks.
+[13:48] Another thing we need to do for BCPs to
+[13:52] measure how long we can afford to have a
+[13:54] function disrupted and how long it will
+[13:57] take us to repair or recover from it.
+[13:59] Now, we need to measure two things in
+[14:02] here. The maximum tolerable downtime,
+[14:05] MTD, and the recovery time objective, or
+[14:09] RTO, for each function.
+[14:12] The MTD is the longest period of time
+[14:15] that a business process can be disrupted
+[14:17] or completely offline without causing
+[14:19] harm to our business.
+[14:21] Or too much harm. The RTO is the time
+[14:25] needed to recover a function after a
+[14:27] disruption. We need to make sure our
+[14:29] RTOs are less than our MTDs, so we can
+[14:33] always recover in time and avoid harm.
+[14:36] Now, when data is involved, we also need
+[14:39] to measure the potential data loss that
+[14:41] might happen during the disruption. That
+[14:43] is the recovery point objective, or RPO.
+[14:46] The RPO is the point in time before the
+[14:49] incident where we can recover data from.
+[14:53] The last, the most recent point in time.
+[14:56] For example, if you back up our
+[14:57] databases every 15 minutes, our RPO is
+[15:01] 15 minutes in the past, meaning we might
+[15:03] lose up to 15 minutes of data after an
+[15:06] incident.
+[15:07] Or in other words, the most recent
+[15:09] recovery point for our data will be at
+[15:12] most 15 minutes in the past.
+[15:15] Now, for this to make a little bit more
+[15:18] sense, we can also depict the terms that
+[15:19] we just covered on a timeline. Consider
+[15:22] that at a certain point in time a
+[15:23] disaster happens, like we lose a server
+[15:26] for whatever reason. We spilled coffee
+[15:27] on it, a lot of coffee. Everybody in the
+[15:29] entire company spilled their coffee at
+[15:31] the same time on it. That's when our
+[15:33] time measurement starts.
+[15:35] So, from the moment of the great coffee
+[15:37] spill, as referenced in history books,
+[15:40] to the moment where the server is
+[15:42] replaced or repaired, that's the
+[15:44] recovery time objective or RTO. Now,
+[15:47] keep in mind that the recovery time only
+[15:49] addresses the server itself, not its
+[15:51] data or the way it was used before the
+[15:53] great flood of coffee.
+[15:56] Bringing in a new server might give you
+[15:58] bragging rights, but nobody will give a
+[16:00] crap about it because the new server is
+[16:02] completely useless. No operating system,
+[16:04] no VMs, no data on it, no configuration.
+[16:07] So, the workflows that were based on
+[16:09] that server, the business processes that
+[16:12] depended on it, still don't give a crap
+[16:14] about the fact that you just brought in
+[16:16] a brand new server because they still
+[16:17] don't work.
+[16:19] So, we need another time interval here.
+[16:21] From the moment we bring in this new
+[16:22] server to the moment when that server is
+[16:24] properly configured and given some data
+[16:27] to work with. That is the work recovery
+[16:30] time or WRT.
+[16:33] So, what we actually have right now is a
+[16:34] grand total of the RTO, recovery time
+[16:37] objective, which again was the time it
+[16:39] it took us to bring in a new server, and
+[16:42] the WRT, work recovery time, which was
+[16:45] the time it took us to install,
+[16:46] configure, and make that server useful.
+[16:49] Adding these two intervals makes up the
+[16:51] MTD or maximum tolerable downtime
+[16:55] because you will have downtime up to the
+[16:57] point when the server becomes useful
+[16:59] again.
+[17:00] Now, in order to bring the data back
+[17:02] onto the new server, we need a backup.
+[17:04] Depending on when that backup was last
+[17:06] made or depending on what point in time
+[17:08] we can recover data from,
+[17:11] that gives us the recovery point
+[17:13] objective or RPO. So, I hope this makes
+[17:16] a lot more sense right now.
+[17:18] Okay, so we're preparing for risks that
+[17:20] come from unforeseen events, disasters,
+[17:22] and attacks. But, what exactly are those
+[17:25] events?
+[17:27] Well, first we can think of risks as
+[17:28] belonging to two large categories,
+[17:30] natural risks and man-made risks.
+[17:34] Now, this might seem arbitrary. You
+[17:35] might ask, why just humans and nature?
+[17:38] Why don't we have
+[17:40] crocodile-made or raccoon-made risks?
+[17:43] Okay?
+[17:44] We don't because the idea is to split
+[17:47] these risks into categories that we
+[17:50] either cannot control or predict,
+[17:53] natural ones,
+[17:55] and those where the humans are involved,
+[17:57] simply because humans are, as of today,
+[18:00] the only agents on the planet that can
+[18:02] be instructed, warned, negotiated with,
+[18:06] blamed, held liable, and so on. So,
+[18:09] basically, we're splitting the risks
+[18:11] into the types of controls that can be
+[18:13] applied to mitigate them.
+[18:15] So, first, natural risks, those that
+[18:18] come from violent storms, hurricanes,
+[18:20] tornadoes, blizzards, lightning strikes.
+[18:23] You could probably name a few more.
+[18:25] Crashed UFOs, global extinction events.
+[18:27] You get the idea.
+[18:28] Earthquakes, mudslides, avalanches,
+[18:30] volcanic eruptions, pandemics. Okay,
+[18:32] I'll stop here.
+[18:34] Next, we have person-made or human-made
+[18:36] threats, which include events such as
+[18:39] terrorist acts, wars, civil unrest,
+[18:42] theft or vandalism, fires and
+[18:44] explosions, which in most cases don't
+[18:46] come from meteorites, but from human
+[18:48] negligence.
+[18:49] There could also be power outages,
+[18:51] building failures, like when the ceiling
+[18:53] just collapsed, transportation failures.
+[18:56] Not necessarily people cannot go to
+[18:57] work, but what if the delivery company
+[18:59] that delivers your products cannot,
+[19:01] well, deliver, okay?
+[19:03] Also, internet disruptions, service
+[19:05] provider outages, and in general, and I
+[19:08] really like this one, economic
+[19:10] difficulties.
+[19:12] >> [laughter]
+[19:13] >> Next, let's discuss likelihood and
+[19:15] impact. We covered these briefly in the
+[19:17] risk management discussion, but here's a
+[19:19] quick recap.
+[19:21] After we make a list of the events that
+[19:22] can threaten our company, we need to
+[19:24] figure out how likely they are to
+[19:26] happen. Some events are more likely than
+[19:28] others and some are downright impossible
+[19:30] to happen depending on where we are and
+[19:32] what we do.
+[19:34] Now, to compare the likelihood of
+[19:35] different events, we use a process
+[19:37] called annualization. This is just a
+[19:39] fancy name for an estimate of how many
+[19:41] times we expect to face an event in a
+[19:43] year. This number is called the annual
+[19:45] rate of occurrence, ARO.
+[19:47] We do this because we need to determine
+[19:49] an ARO for each event on our list. We
+[19:52] can use our corporate history or team's
+[19:54] experience, experts advice help us with
+[19:57] this, or we could just copy the AROs
+[20:00] from some other companies similar to
+[20:02] ours from the same region. For example,
+[20:04] we could ask meteorologists,
+[20:06] seismologists,
+[20:08] uh fire prevention professionals, and
+[20:10] other consultants give you their
+[20:12] opinions.
+[20:13] Actually, there is even a better source
+[20:15] for this information.
+[20:17] Can you guess it?
+[20:19] Yep, insurance companies. AROs are their
+[20:23] business. And once you know how often a
+[20:25] specific type of risk might happen,
+[20:27] let's put this in money language. More
+[20:30] specifically, two money-related numbers
+[20:32] are relevant here. How much we expect to
+[20:34] lose, again in money, when a single
+[20:37] incident happens, and how much we expect
+[20:39] to lose over the course of an entire
+[20:40] year due to that specific type of
+[20:43] incident happening over and over.
+[20:45] Those two numbers are SLE, single loss
+[20:48] expectancy, and ALE, annual loss
+[20:50] expectancy.
+[20:51] The annual number might seem redundant
+[20:53] here, but remember that most balance
+[20:55] sheets, P&Ls, and money-related
+[20:57] calculations from salaries to taxes to
+[21:00] company cars to stock performance are
+[21:02] usually calculated over an entire year.
+[21:04] So, we We to know how these specific
+[21:06] risks will impact the balance sheet at
+[21:08] the end of the calendar or fiscal year,
+[21:11] whenever we decide to draw the line.
+[21:13] So, how do we calculate SLE and ALE?
+[21:16] Well, this could be an easy to answer
+[21:18] interview question. You have all the
+[21:20] data already, so how do you calculate a
+[21:22] single loss expectancy? Well, you
+[21:23] multiply the asset value with an
+[21:25] additional factor, which is the exposure
+[21:27] factor or EF.
+[21:29] That exposure factor might be one, so
+[21:31] the asset value is exactly what we lose,
+[21:33] but it might be less than one. If a
+[21:35] disaster happened, you might not lose
+[21:37] the entire asset. Just like in an
+[21:38] example in the previous episode, if your
+[21:41] data center floods, will you lose the
+[21:44] entire set of servers in it? Some of
+[21:46] them? Yes. Okay, but probably those at
+[21:48] the bottom of the rack.
+[21:50] >> [laughter]
+[21:50] >> The others might have damaged power
+[21:51] supplies and others might not be
+[21:53] affected at all. So,
+[21:54] So, that's why we have that exposure
+[21:56] factor to take into account situations
+[21:59] where not the entire asset
+[22:01] is lost in case a specific risk
+[22:03] materializes.
+[22:05] Finally, how do we calculate the annual
+[22:06] loss expectancy? Again, pretty easy. We
+[22:10] now have the SLE and we need to multiply
+[22:12] it by what? Well, by how often the risk
+[22:15] happens over a year.
+[22:17] You could have two floods per year and
+[22:19] then the ARO or the annual rate of
+[22:21] occurrence would be two.
+[22:23] Uh you could estimate one flood every
+[22:24] five years and in that case the ARO
+[22:26] would be 0.2.
+[22:28] And it's easy to forget that money isn't
+[22:30] the only thing that you can lose. From a
+[22:31] qualitative point of view, you must
+[22:33] consider other impacts that
+[22:35] interruptions might have on your
+[22:36] business. For example, you might have to
+[22:38] consider loss of goodwill among your
+[22:40] client base. They don't trust you
+[22:42] anymore.
+[22:44] Uh you might also want to consider the
+[22:45] loss of employees who are writing up
+[22:48] resignation letters and moving to other
+[22:49] jobs after a prolonged downtime if they
+[22:52] feel like they don't have a stable
+[22:53] workplace anymore. They'll look
+[22:55] elsewhere. And also consider negative
+[22:58] publicity, which is the juiciest type of
+[23:00] publicity. The type of news headlines
+[23:02] that will be copied by news agencies and
+[23:04] shared over and over and taken out of
+[23:06] context when something shameful happens,
+[23:10] everybody wants to see it so that they
+[23:13] can feel better about their own lives
+[23:15] and about themselves. Yeah, people suck
+[23:17] like that.
+[23:19] So, how do we choose to prioritize
+[23:21] resources as part of our BCP? Well,
+[23:23] first, let's talk about the quantitative
+[23:26] approach. This approach focuses solely
+[23:28] on numbers and data. Since we just
+[23:30] learned how to calculate some numbers,
+[23:31] we start by listing all the risks and
+[23:33] ranking them by their annual loss
+[23:35] expectancy, ALE. That's a good starting
+[23:37] point. Protect that which hurts our
+[23:40] wallet the most. The ALE helps us
+[23:42] understand the potential financial
+[23:44] impact of each risk. Afterwards, we
+[23:46] prioritize the risks starting with the
+[23:48] highest ALE and work our way down.
+[23:52] We continue this process until we run
+[23:53] out of resources or we complete the
+[23:55] list, which is very unlikely to happen.
+[23:58] However, numbers aren't everything or
+[24:01] sometimes it's simply impossible to put
+[24:03] a number to a specific risk.
+[24:06] Uh you know, just know that it's there
+[24:08] and that it's bad. This is not a
+[24:10] superficial approach, by the way, as it
+[24:11] might seem, but a one where we consider
+[24:14] qualitative factors such as how people
+[24:16] feel about us, their trust in us, and
+[24:19] their overall happiness. These factors
+[24:21] are awfully subjective, of course, but
+[24:23] also vital for maintaining a positive
+[24:25] reputation and strong relationships. So,
+[24:27] why not take them into consideration as
+[24:30] well? This is the qualitative approach.
+[24:33] Now, to create a comprehensive priority
+[24:35] list, we might need to combine both
+[24:37] quantitative and qualitative factors
+[24:40] because real life is rarely all black or
+[24:42] white. This involves having a meeting
+[24:45] with a BCP team and senior management.
+[24:46] During this meeting,
+[24:48] we discuss and tweak the priority of
+[24:50] some risks based on some qualitative,
+[24:53] that is subjective, insights. This way,
+[24:55] our final priority list reflects both
+[24:58] the financial impact and the human
+[25:00] element.
+[25:02] Continuity planning. All right, so at
+[25:05] this point, we know that we have as part
+[25:07] of the BCP process two steps. The
+[25:10] scoping and planning part and the BIA
+[25:13] part. They are both focused on
+[25:16] prioritizing assets, but neither of them
+[25:18] is actually about doing something real
+[25:20] to protect those assets.
+[25:22] The next phase in BCP is called
+[25:25] continuity planning. This is where you
+[25:27] finally develop a strategy and have one
+[25:29] or more processes in place to protect
+[25:32] those critical assets. Sometimes,
+[25:34] instead of continuity planning, we call
+[25:35] it COOP, c o o p, continuity of
+[25:39] operations plan, which actually says it
+[25:41] right there. What's your plan for
+[25:44] keeping the business running when a
+[25:45] nasty event happens? So, in a BCP, as
+[25:48] part of continuity planning, we must
+[25:50] address a couple of aspects. First of
+[25:52] all, we need to make sure that our
+[25:54] people are safe and happy before,
+[25:58] during, and after an emergency. People
+[26:00] are the most important resource, more
+[26:02] important than anything else, even
+[26:04] money. We need to give them what they
+[26:06] need to do their jobs and to eat and
+[26:10] sleep. If they have to stay at work for
+[26:12] a long time, we should have some food
+[26:14] and water stored somewhere that we can
+[26:16] reach easily, and we should also check
+[26:18] the expiration dates once in a while,
+[26:20] unless we want to eat moldy crackers and
+[26:22] drink stale water.
+[26:23] Next, we need to think about our
+[26:26] buildings and facilities. Some of them
+[26:28] are essential for our business, like
+[26:30] offices, factories, warehouses, and so
+[26:33] on.
+[26:34] Actually, as someone who hopes to be
+[26:35] able to work from home until I retire, I
+[26:38] wouldn't put so much value on the actual
+[26:40] offices, but hey, let's just go with the
+[26:43] flow.
+[26:44] We need to protect them from the risks
+[26:46] we identified in our BIA.
+[26:48] Uh we can do this by making them
+[26:50] stronger, safer, like fixing the roof or
+[26:52] putting up shutters and walls, or we can
+[26:54] find another place to do our business if
+[26:56] something bad happens to our original
+[26:58] place.
+[26:59] Uh we have a chapter on that later. But
+[27:01] remember, uh finding another place is
+[27:04] part of DRP, not BCP. Don't get
+[27:06] confused. Finally, we need to think
+[27:08] about the infrastructure. This is the
+[27:10] stuff that makes our business work, like
+[27:12] computers, networks, software. We need
+[27:14] to protect them from the risks, too. We
+[27:17] can do this by adding some physical
+[27:18] security features, like I don't know,
+[27:20] fire extinguishers, backup power, or we
+[27:23] can have some extra systems or links
+[27:24] that can take over if the main ones
+[27:26] fail. This way, we have an
+[27:28] infrastructure that can keep our
+[27:30] business running smoothly, no matter
+[27:31] what. Or at least we can say that the
+[27:33] business does not die because of the
+[27:35] infrastructure.
+[27:36] So, let's make it happen. After we get
+[27:39] the green light from senior management,
+[27:41] nothing happens before that, we can
+[27:44] start putting our planning to action. We
+[27:46] should make a schedule that uses our
+[27:47] resources to achieve those goals,
+[27:49] depending on how much we need to change
+[27:50] and how serious we are about continuity
+[27:52] planning.
+[27:53] After we deploy our resources, we should
+[27:56] also design and implement a maintenance
+[27:57] program because we need to keep our plan
+[27:59] up to date when the business needs
+[28:01] change or the threat landscape changes,
+[28:03] which it always does.
+[28:06] Training and education are very
+[28:07] important for our plan's implementation.
+[28:10] We need to make sure that everyone in
+[28:11] the company knows about the plan and
+[28:13] that they have a pretty good idea about
+[28:15] what they need to do.
+[28:17] Everyone should at least get a brief
+[28:19] overview of the plan, a pretty good
+[28:20] idea, if not the entire plan.
+[28:23] You're probably going to discourage a
+[28:24] lot of people from even getting through
+[28:26] the introduction if you share a huge
+[28:27] document with everyone, so make sure you
+[28:29] pick your battles and your audience. So,
+[28:33] share at least a brief overview so that
+[28:35] people can get a bit of confidence that
+[28:37] we have thought about the possible risks
+[28:39] and how to deal with them if something
+[28:40] bad happens.
+[28:42] Of course, now people who have direct
+[28:43] BCP responsibilities don't get away with
+[28:46] it so easily, so they should get more
+[28:48] detailed training and even evaluation or
+[28:50] scoring on their specific tasks. They
+[28:52] should be able to do those tasks well
+[28:55] when disaster strikes. We need to be
+[28:57] able to rely on them. So, we should also
+[28:59] have at least one backup person for each
+[29:02] task in case somebody's hurt or cannot
+[29:04] get to work during an emergency or they
+[29:06] are just conveniently reminded about
+[29:08] their personal emergency when a company
+[29:11] emergency also happens.
+[29:13] Uh also don't forget about
+[29:14] documentation. It is as unpleasant as it
+[29:17] is useful. Having your BCP methodology
+[29:20] written down has many benefits. You can
+[29:22] probably guess them, but here they are.
+[29:24] Uh first, this is how you make sure that
+[29:26] we have a written document to follow in
+[29:28] an emergency even if the BCP team
+[29:30] leaders are not there to guide us.
+[29:32] Personal emergencies and all that. So,
+[29:35] when the personnel is not available
+[29:37] because of reasons. Second, it provides
+[29:39] a record of the BCP process that will be
+[29:42] useful for people in the far far future
+[29:45] uh who want to understand or change the
+[29:46] plan. I'm kidding. We're just talking
+[29:48] about other team members and whoever
+[29:51] comes after you after you resign or get
+[29:54] laid off. I know not many people tend to
+[29:56] think about the good of those who come
+[29:58] after. We just regard them as recipients
+[30:01] for Here we go. Take this. This is your
+[30:04] problem now.
+[30:05] >> [laughter]
+[30:06] >> Especially if you're being laid off.
+[30:07] That's probably going to be lasting on
+[30:09] your mind after a lot of words that need
+[30:11] censoring.
+[30:13] Third, it forces us to put our thoughts
+[30:16] on paper, the proverbial paper. It
+[30:18] doesn't really have to be real paper,
+[30:20] which can help us find and fix any
+[30:22] problems in the plan.
+[30:24] It also allows us to share our drafts
+[30:26] with others so we can get feedback on
+[30:29] it.
+[30:30] So, it's like a peer review, code
+[30:31] review, right? It just encourages you to
+[30:33] ask for someone else's opinion on the
+[30:35] plan. Well, to put this in motion or in
+[30:37] writing, we're going to need some
+[30:38] statements or documents to inform our
+[30:40] people about what the heck we've been
+[30:43] working on.
+[30:44] Uh these documents can vary widely
+[30:47] depending on the audience and on what
+[30:49] you're planning on sharing and on how
+[30:51] much you have to share, but here are
+[30:53] just a few.
+[30:54] For example, there's the continuity
+[30:56] planning goals or the more generic BCP
+[30:58] goals document. This should explain what
+[31:00] we want to achieve with continuity
+[31:02] planning. Some people in the BCP team
+[31:04] and senior management should have
+[31:06] thought about this already in the
+[31:07] beginning and these statements should
+[31:09] stay pretty much the same throughout the
+[31:10] plan.
+[31:12] Uh the simplest goal is very simple, to
+[31:14] keep our business running no matter
+[31:17] what. We might also have other goals
+[31:19] that are specific to our needs, like
+[31:21] keep the website up or keep the call
+[31:22] center running so that people can
+[31:24] complain when the website is down, stuff
+[31:26] like that.
+[31:27] Another one, another document, statement
+[31:29] of importance. My god, who comes up with
+[31:32] these names?
+[31:33] The statement of importance shows, and I
+[31:36] really hope you're ready for this big
+[31:37] reveal,
+[31:39] the statement of importance shows how
+[31:41] important the BCP is for our business.
+[31:45] Nobody is going to read that document.
+[31:48] Nobody.
+[31:49] So, if nobody's going to read it,
+[31:52] here's what you should tell people that
+[31:53] it's about. This is usually a letter to
+[31:55] our employees. It could be just a
+[31:57] company-wide email telling them why we
+[32:00] invested time and money in the BCP
+[32:02] process and asking them to cooperate in
+[32:04] the BCP implementation.
+[32:06] Now, many CEO-level emails often go
+[32:08] straight to the junk folder, right? No,
+[32:10] but here's where we need senior
+[32:11] executive support, right? If we can have
+[32:14] this letter signed by the CEO or someone
+[32:16] at that level, the plan will have more
+[32:18] influence as we try to make changes in
+[32:21] the company.
+[32:22] Another one, statement of priorities.
+[32:24] The statement of priorities comes from
+[32:26] the, you guessed it, the priority
+[32:28] identification phase of the business
+[32:30] impact assessment. It simply lists the
+[32:33] functions that are critical for our
+[32:35] business in order of importance. When we
+[32:37] list these priorities, we should also
+[32:39] say that it's a list of importance for
+[32:41] emergencies only.
+[32:43] It's not a list of salaries. It's not
+[32:46] about who gets fired first and last.
+[32:48] It's not about who goes on the company
+[32:50] retreat. Otherwise, the list might be
+[32:53] used for other purposes and cause
+[32:54] conflicts between people
+[32:56] because you know how people get whenever
+[32:58] they see their names on a list in a
+[33:00] specific order. It's just for
+[33:02] emergencies.
+[33:04] The next extremely interesting statement
+[33:06] is the statement of organizational
+[33:08] responsibility.
+[33:10] This one also comes from a senior-level
+[33:12] executive and can be part of the same
+[33:14] email as a statement of importance since
+[33:16] they both go to the junk folder anyway.
+[33:19] The statement of organizational
+[33:21] responsibility says that we expect
+[33:23] everyone involved with the company to do
+[33:24] everything they can to help with the BCP
+[33:26] process. Like that wasn't obvious
+[33:28] enough.
+[33:29] Don't you feel these documents are like
+[33:31] overkill and don't have real usable
+[33:33] value?
+[33:35] Am I the only one who thinks that?
+[33:37] Anyway.
+[33:38] Finally, the statement of urgency and
+[33:40] timing. You already guessed it. It
+[33:43] expresses how urgent it is to implement
+[33:45] a BCP.
+[33:46] Includes a schedule and a detailed
+[33:48] timeline to create a sense of urgency. I
+[33:50] mean,
+[33:51] come on, if it's that urgent, shouldn't
+[33:53] you be focusing on the actual plan? Now,
+[33:55] I'm kidding, of course.
+[33:58] There is one more thing that the BCP
+[33:59] documentation should address.
+[34:01] And that is where and how we will store
+[34:03] our data and how backups will be made
+[34:06] and stored.
+[34:07] Notice that up to this point, we only
+[34:10] assumed that something bad will happen.
+[34:14] That we will lose data and resources and
+[34:17] functionality. But, of course, the real
+[34:19] proactive effort here should be focused
+[34:21] on avoiding finding ourselves in a
+[34:24] situation like that. So, the plan should
+[34:26] also address ways in which, even if an
+[34:28] incident happens, the data might not
+[34:30] suffer so much or even not at all. One
+[34:33] of the biggest challenges here is
+[34:34] finding out what data is essential in
+[34:36] the first place. Some companies don't
+[34:38] use paper at all anymore, but some might
+[34:41] still rely on it. In which case, both
+[34:43] printed and digital records must be
+[34:46] taken into consideration.
+[34:48] Uh digital records may be scattered
+[34:49] among different IT systems, different
+[34:52] storage devices, different cloud
+[34:53] services, and let's not forget how vital
+[34:55] all the employees' laptops are,
+[34:57] especially those employees who do not
+[34:59] back up their files anyway.
+[35:01] Uh there's a small silver lining here.
+[35:03] That is, if you have a data
+[35:04] classification solution in your house,
+[35:05] or sometimes even just a DLP solution,
+[35:08] data loss prevention solution, if you
+[35:10] have any kind of security product that
+[35:12] is based on implementing security
+[35:14] policies at a file or a database level,
+[35:17] then probably a lot of the data
+[35:18] classification is already done for you,
+[35:20] or you did it beforehand. Now, again,
+[35:22] classification might not necessarily
+[35:24] match 100% with importance,
+[35:26] but they're most likely going to be
+[35:28] pretty closely related.
+[35:31] And another thing that the BCP should
+[35:32] address is a response guideline. This is
+[35:35] about knowing what to do in the very
+[35:38] first moments right after an emergency
+[35:40] happens. This is a document for the
+[35:42] first employees who notice an emergency
+[35:45] with the steps they should take. This is
+[35:47] also important because it will probably
+[35:49] be the catalyst for the BCP, the actions
+[35:53] that start the BCP implementation. The
+[35:56] BCP does not start on its own, right?
+[35:58] So, these guidelines should include how
+[36:00] to report an emergency, how to evacuate
+[36:03] personnel if necessary, how to contact
+[36:05] emergency services, how to activate the
+[36:07] rest of the BCP team if needed, and so
+[36:10] on.
+[36:11] And yes, maintenance from time to time.
+[36:15] The BCP documentation and the plan
+[36:17] itself are not set in stone. They need
+[36:19] to change like we change. Also, the BCP
+[36:22] team should not disappear after the plan
+[36:24] is done, but should participate in the
+[36:26] maintenance of the plan. It's also worth
+[36:28] mentioning that the plan needs to be
+[36:29] reviewed to make sure the people in it
+[36:31] are still available as well. If you
+[36:33] review it 3 years from now, you might
+[36:35] realize that half of the people
+[36:37] mentioned in it don't work for the
+[36:39] company anymore.
+[36:40] Uh you should also use versioning when
+[36:42] making changes to the plan. And it might
+[36:44] be counterintuitive, but it might be a
+[36:46] good idea to destroy or at least archive
+[36:49] older versions of the same plan
+[36:53] somewhere where they cannot be easily
+[36:55] found
+[36:56] as you replace them with the new ones so
+[36:58] people don't get confused or
+[37:00] accidentally use the wrong versions.
+[37:03] Finally, and this time I really mean it,
+[37:06] the BCP document should also explain how
+[37:08] to conduct exercises to make sure the
+[37:10] plan stays current and relevant.
+[37:13] Exercises also check that team members
+[37:15] get enough training to do their jobs in
+[37:17] a disaster. And this testing process is
+[37:19] very similar to the one for the disaster
+[37:21] recovery plan, right? So we'll we'll
+[37:23] talk about that one later as well.
+[37:30] >> [music]

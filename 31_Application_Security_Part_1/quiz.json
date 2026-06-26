@@ -1,0 +1,57 @@
+[
+  {
+    "question": "A security analyst is investigating a malware outbreak in an enterprise. The analyst notices that the malware infects both executable files and the master boot record (MBR) to ensure persistence upon system reboots. Furthermore, when the analyst attempts to run an antivirus scan, the malware intercepts the filesystem read calls and returns the original, uninfected bytes to the scanner. Which combination of malware types and techniques is this malware demonstrating?",
+    "options": [
+      "A multipartite virus using stealth techniques.",
+      "A polymorphic worm using logic bomb triggers.",
+      "A fileless trojan using heuristic evasion.",
+      "A ransomware agent using encrypted payload signatures."
+    ],
+    "correctIndex": 0,
+    "explanation": "A multipartite virus is designed to infect multiple targets (e.g., both executable files and the boot sector/MBR) to propagate. Stealth techniques involve the malware hiding its presence, such as by intercepting system calls (API/read calls) and returning fake clean data to antivirus scanners to evade detection."
+  },
+  {
+    "question": "A malware analyst runs a suspicious executable in an isolated virtual machine sandbox. The executable runs but performs no network calls, registry modifications, or file deletions. However, when the same file is accidentally executed on a physical employee workstation, it immediately opens a backdoor to a command and control server. What is the most likely reason for this difference in behavior?",
+    "options": [
+      "The malware uses a fileless script that only executes when base64 encoded.",
+      "The malware detects that it is running inside a virtual machine (VM) by checking for specific drivers or hypervisor artifacts and terminates or runs benignly to evade sandbox analysis.",
+      "The malware is a logic bomb that is triggered only by physical USB connection events.",
+      "The local antivirus software on the physical workstation updated its signature database, triggering the payload."
+    ],
+    "correctIndex": 1,
+    "explanation": "Modern malware often includes sandbox evasion techniques, such as VM detection. The malware queries the system for virtual machine drivers (e.g., VMware tools, VirtualBox guest additions), registry keys, or hardware delays. If a VM is detected, the malware alters its behavior (e.g., runs benignly or exits) to prevent the analyst from discovering its true payload."
+  },
+  {
+    "question": "An enterprise is hit by a ransomware attack that encrypts the main customer database. The attacker demands a ransom in cryptocurrency in exchange for the decryption key. The organization has an up-to-date, offline backup of the database from the previous evening. From a CISSP perspective, how should the organization respond, and what control classification is represented by their recovery method?",
+    "options": [
+      "Pay the ransom to ensure the data is decrypted quickly, representing a preventative administrative control.",
+      "Wipe the affected systems and restore the database from the offline backup, representing a recovery/corrective control.",
+      "Isolate the database server on a VLAN and run a polymorphic signature scan, representing a detective technical control.",
+      "Consult the user directory to identify the system owner and hold them liable for the incident, representing a deterrent physical control."
+    ],
+    "correctIndex": 1,
+    "explanation": "The correct response to ransomware is to wipe the infected systems and restore the database from clean, offline backups. This acts as a recovery or corrective control. Paying the ransom is strongly discouraged as it does not guarantee data recovery and funds further criminal activity."
+  },
+  {
+    "question": "A security administrator wants to protect public-facing web server files from unauthorized changes and defacement by external attackers. The administrator needs a tool that will monitor the files and alert the team immediately if any unauthorized modification occurs, without consuming heavy system resources. Which technology is best suited for this task, and how does it detect changes?",
+    "options": [
+      "Endpoint Detection and Response (EDR), which runs heuristic sandboxing on every web access attempt.",
+      "File Integrity Monitoring (FIM), which calculates and compares cryptographic hashes of the files against a known baseline.",
+      "User and Entity Behavior Analytics (UEBA), which tracks web server CPU cycles and RAM utilization.",
+      "A firewall policy that blocks all incoming FTP and RDP connections."
+    ],
+    "correctIndex": 1,
+    "explanation": "File Integrity Monitoring (FIM) is designed to track changes to critical files (like web assets or system configuration files). It does this by calculating cryptographic hashes of the files and comparing them against a trusted baseline hash. If the hashes do not match, it indicates the file has been modified and raises an alert."
+  },
+  {
+    "question": "A financial firm wants to upgrade its endpoint security architecture to protect against advanced persistent threats (APTs) and credential theft. The security team requires a solution that can trace file trajectories, quarantine suspicious workstations by virtually isolating them from the local VLAN, and analyze user account behaviors over time to identify anomalies. Which combination of technologies meets all of these requirements?",
+    "options": [
+      "Signature-based antivirus (AV) and port-based network access control (802.1X).",
+      "Endpoint Detection and Response (EDR)/Extended Detection and Response (XDR) and User and Entity Behavior Analytics (UEBA).",
+      "File Integrity Monitoring (FIM) and simple mail transfer protocol (SMTP) relays.",
+      "Logic bombs and a virtual machine sandbox."
+    ],
+    "correctIndex": 1,
+    "explanation": "EDR and XDR systems provide advanced endpoint monitoring, file trajectory tracing, and automated incident response (like quarantining hosts from the VLAN). UEBA complements this by analyzing user and entity behaviors over time to detect credential compromise and malicious insider activity."
+  }
+]
